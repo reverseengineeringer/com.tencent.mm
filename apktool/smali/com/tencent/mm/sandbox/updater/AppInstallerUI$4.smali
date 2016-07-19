@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic jSU:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
+.field final synthetic kso:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 181
-    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$4;->jSU:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
+    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$4;->kso:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,14 +43,14 @@
     const/4 v2, 0x2
 
     .line 185
-    const-string/jumbo v0, "!32@/B4Tb64lLpK4dsObr+ZXlbJd1YO/EjJD"
+    const-string/jumbo v0, "MicroMsg.AppInstallerUI"
 
     const-string/jumbo v1, "install dialog had been canceled"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 186
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$4;->jSU:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$4;->kso:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
 
     invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/AppInstallerUI;->e(Lcom/tencent/mm/sandbox/updater/AppInstallerUI;)Lcom/tencent/mm/ui/base/h;
 
@@ -58,7 +58,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$4;->jSU:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$4;->kso:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
 
     invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/AppInstallerUI;->e(Lcom/tencent/mm/sandbox/updater/AppInstallerUI;)Lcom/tencent/mm/ui/base/h;
 
@@ -71,7 +71,7 @@
     if-eqz v0, :cond_0
 
     .line 187
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$4;->jSU:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$4;->kso:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
 
     invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/AppInstallerUI;->e(Lcom/tencent/mm/sandbox/updater/AppInstallerUI;)Lcom/tencent/mm/ui/base/h;
 
@@ -81,14 +81,14 @@
 
     .line 189
     :cond_0
-    sget-object v0, Lcom/tencent/mm/sandbox/updater/i$a;->jUn:Lcom/tencent/mm/sandbox/updater/i;
+    sget-object v0, Lcom/tencent/mm/sandbox/updater/i$a;->ktO:Lcom/tencent/mm/sandbox/updater/i;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/sandbox/updater/i;->L(IZ)V
 
     .line 191
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$4;->jSU:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$4;->kso:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
 
     invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/AppInstallerUI;->b(Lcom/tencent/mm/sandbox/updater/AppInstallerUI;)I
 
@@ -97,18 +97,18 @@
     if-ne v0, v2, :cond_1
 
     .line 192
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$4;->jSU:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$4;->kso:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
 
     const/4 v1, 0x4
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sandbox/updater/h;->D(Landroid/content/Context;I)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sandbox/updater/h;->H(Landroid/content/Context;I)V
 
     .line 195
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/sandbox/updater/h;->aUa()V
+    invoke-static {}, Lcom/tencent/mm/sandbox/updater/h;->aYZ()V
 
     .line 196
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$4;->jSU:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$4;->kso:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
 
     invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/AppInstallerUI;->d(Lcom/tencent/mm/sandbox/updater/AppInstallerUI;)V
 

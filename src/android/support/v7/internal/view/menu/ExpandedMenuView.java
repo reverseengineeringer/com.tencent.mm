@@ -12,8 +12,7 @@ public final class ExpandedMenuView
   extends ListView
   implements f.b, m, AdapterView.OnItemClickListener
 {
-  private f iO;
-  private int ls;
+  private f jf;
   
   public ExpandedMenuView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -23,17 +22,12 @@ public final class ExpandedMenuView
   
   public final boolean c(h paramh)
   {
-    return iO.c(paramh, 0);
+    return jf.c(paramh, 0);
   }
   
   public final void d(f paramf)
   {
-    iO = paramf;
-  }
-  
-  public final int getWindowAnimations()
-  {
-    return ls;
+    jf = paramf;
   }
   
   protected final void onDetachedFromWindow()

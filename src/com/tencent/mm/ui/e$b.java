@@ -1,16 +1,16 @@
 package com.tencent.mm.ui;
 
-public final class e$b
+public final class e$b<K, T>
 {
-  public Object gB;
-  public int kkb;
-  public Object kkc;
+  public K gW;
+  public int kKj;
+  public T kKk;
   
-  public e$b(Object paramObject1, int paramInt, Object paramObject2)
+  public e$b(K paramK, int paramInt, T paramT)
   {
-    gB = paramObject1;
-    kkb = paramInt;
-    kkc = null;
+    gW = paramK;
+    kKj = paramInt;
+    kKk = null;
   }
   
   public final boolean equals(Object paramObject)
@@ -28,23 +28,23 @@ public final class e$b
           return false;
         }
         paramObject = (b)paramObject;
-        if (kkb != kkb) {
+        if (kKj != kKj) {
           return false;
         }
-        if (gB != null) {
+        if (gW != null) {
           break;
         }
-      } while (gB == null);
+      } while (gW == null);
       return false;
-    } while (gB.equals(gB));
+    } while (gW.equals(gW));
     return false;
   }
   
   public final int hashCode()
   {
-    int j = kkb;
-    if (gB == null) {}
-    for (int i = 0;; i = gB.hashCode()) {
+    int j = kKj;
+    if (gW == null) {}
+    for (int i = 0;; i = gW.hashCode()) {
       return i + (j + 31) * 31;
     }
   }

@@ -17,112 +17,111 @@ import android.widget.TextView;
 public class PagerTabStrip
   extends PagerTitleStrip
 {
-  private int eJ = fq;
-  private int eK;
-  private int eL;
-  private int eM;
-  private int eN;
-  private int eO;
-  private final Paint eP = new Paint();
-  private final Rect eQ = new Rect();
-  private int eR = 255;
-  private boolean eS = false;
-  private boolean eT = false;
-  private int eU;
-  private boolean eV;
-  private float eW;
-  private float eX;
-  private int eY;
+  private int ff = fM;
+  private int fg;
+  private int fh;
+  private int fi;
+  private int fj;
+  private int fk;
+  private final Paint fl = new Paint();
+  private final Rect fn = new Rect();
+  private int fo = 255;
+  private boolean fp = false;
+  private boolean fq = false;
+  private int fr;
+  private boolean fs;
+  private float ft;
+  private float fu;
+  private int fv;
   
   public PagerTabStrip(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    eP.setColor(eJ);
+    fl.setColor(ff);
     float f = getResourcesgetDisplayMetricsdensity;
-    eK = ((int)(3.0F * f + 0.5F));
-    eL = ((int)(6.0F * f + 0.5F));
-    eM = ((int)(64.0F * f));
-    eO = ((int)(16.0F * f + 0.5F));
-    eU = ((int)(1.0F * f + 0.5F));
-    eN = ((int)(f * 32.0F + 0.5F));
-    eY = ViewConfiguration.get(paramContext).getScaledTouchSlop();
+    fg = ((int)(3.0F * f + 0.5F));
+    fh = ((int)(6.0F * f + 0.5F));
+    fi = ((int)(64.0F * f));
+    fk = ((int)(16.0F * f + 0.5F));
+    fr = ((int)(1.0F * f + 0.5F));
+    fj = ((int)(f * 32.0F + 0.5F));
+    fv = ViewConfiguration.get(paramContext).getScaledTouchSlop();
     setPadding(getPaddingLeft(), getPaddingTop(), getPaddingRight(), getPaddingBottom());
-    setTextSpacing(getTextSpacing());
+    o(fD);
     setWillNotDraw(false);
-    fb.setFocusable(true);
-    fb.setOnClickListener(new View.OnClickListener()
+    fy.setFocusable(true);
+    fy.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        fa.setCurrentItem(fa.getCurrentItem() - 1);
+        fx.s(fx.gc - 1);
       }
     });
-    fd.setFocusable(true);
-    fd.setOnClickListener(new View.OnClickListener()
+    fA.setFocusable(true);
+    fA.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        fa.setCurrentItem(fa.getCurrentItem() + 1);
+        fx.s(fx.gc + 1);
       }
     });
     if (getBackground() == null) {
-      eS = true;
+      fp = true;
     }
   }
   
   final void a(int paramInt, float paramFloat, boolean paramBoolean)
   {
-    Rect localRect = eQ;
+    Rect localRect = fn;
     int i = getHeight();
-    int j = fc.getLeft();
-    int k = eO;
-    int m = fc.getRight();
-    int n = eO;
-    int i1 = i - eK;
+    int j = fz.getLeft();
+    int k = fk;
+    int m = fz.getRight();
+    int n = fk;
+    int i1 = i - fg;
     localRect.set(j - k, i1, m + n, i);
     super.a(paramInt, paramFloat, paramBoolean);
-    eR = ((int)(Math.abs(paramFloat - 0.5F) * 2.0F * 255.0F));
-    localRect.union(fc.getLeft() - eO, i1, fc.getRight() + eO, i);
+    fo = ((int)(Math.abs(paramFloat - 0.5F) * 2.0F * 255.0F));
+    localRect.union(fz.getLeft() - fk, i1, fz.getRight() + fk, i);
     invalidate(localRect);
   }
   
-  public boolean getDrawFullUnderline()
+  final int getMinHeight()
   {
-    return eS;
+    return Math.max(super.getMinHeight(), fj);
   }
   
-  int getMinHeight()
+  public final void o(int paramInt)
   {
-    return Math.max(super.getMinHeight(), eN);
-  }
-  
-  public int getTabIndicatorColor()
-  {
-    return eJ;
+    int i = paramInt;
+    if (paramInt < fi) {
+      i = fi;
+    }
+    super.o(i);
   }
   
   protected void onDraw(Canvas paramCanvas)
   {
     super.onDraw(paramCanvas);
     int i = getHeight();
-    int j = fc.getLeft();
-    int k = eO;
-    int m = fc.getRight();
-    int n = eO;
-    int i1 = eK;
-    eP.setColor(eR << 24 | eJ & 0xFFFFFF);
-    paramCanvas.drawRect(j - k, i - i1, m + n, i, eP);
-    if (eS)
+    int j = fz.getLeft();
+    int k = fk;
+    int m = fz.getRight();
+    int n = fk;
+    int i1 = fg;
+    fl.setColor(fo << 24 | ff & 0xFFFFFF);
+    paramCanvas.drawRect(j - k, i - i1, m + n, i, fl);
+    if (fp)
     {
-      eP.setColor(0xFF000000 | eJ & 0xFFFFFF);
-      paramCanvas.drawRect(getPaddingLeft(), i - eU, getWidth() - getPaddingRight(), i, eP);
+      fl.setColor(0xFF000000 | ff & 0xFFFFFF);
+      paramCanvas.drawRect(getPaddingLeft(), i - fr, getWidth() - getPaddingRight(), i, fl);
     }
   }
   
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
   {
     int i = paramMotionEvent.getAction();
-    if ((i != 0) && (eV)) {
+    if ((i != 0) && (fs)) {
       return false;
     }
     float f1 = paramMotionEvent.getX();
@@ -133,18 +132,18 @@ public class PagerTabStrip
     for (;;)
     {
       return true;
-      eW = f1;
-      eX = f2;
-      eV = false;
+      ft = f1;
+      fu = f2;
+      fs = false;
       continue;
-      if ((Math.abs(f1 - eW) > eY) || (Math.abs(f2 - eX) > eY))
+      if ((Math.abs(f1 - ft) > fv) || (Math.abs(f2 - fu) > fv))
       {
-        eV = true;
+        fs = true;
         continue;
-        if (f1 < fc.getLeft() - eO) {
-          fa.setCurrentItem(fa.getCurrentItem() - 1);
-        } else if (f1 > fc.getRight() + eO) {
-          fa.setCurrentItem(fa.getCurrentItem() + 1);
+        if (f1 < fz.getLeft() - fk) {
+          fx.s(fx.gc - 1);
+        } else if (f1 > fz.getRight() + fk) {
+          fx.s(fx.gc + 1);
         }
       }
     }
@@ -153,7 +152,7 @@ public class PagerTabStrip
   public void setBackgroundColor(int paramInt)
   {
     super.setBackgroundColor(paramInt);
-    if (!eT) {
+    if (!fq) {
       if ((0xFF000000 & paramInt) != 0) {
         break label27;
       }
@@ -161,7 +160,7 @@ public class PagerTabStrip
     label27:
     for (boolean bool = true;; bool = false)
     {
-      eS = bool;
+      fp = bool;
       return;
     }
   }
@@ -169,7 +168,7 @@ public class PagerTabStrip
   public void setBackgroundDrawable(Drawable paramDrawable)
   {
     super.setBackgroundDrawable(paramDrawable);
-    if (!eT) {
+    if (!fq) {
       if (paramDrawable != null) {
         break label24;
       }
@@ -177,7 +176,7 @@ public class PagerTabStrip
     label24:
     for (boolean bool = true;; bool = false)
     {
-      eS = bool;
+      fp = bool;
       return;
     }
   }
@@ -185,7 +184,7 @@ public class PagerTabStrip
   public void setBackgroundResource(int paramInt)
   {
     super.setBackgroundResource(paramInt);
-    if (!eT) {
+    if (!fq) {
       if (paramInt != 0) {
         break label24;
       }
@@ -193,46 +192,18 @@ public class PagerTabStrip
     label24:
     for (boolean bool = true;; bool = false)
     {
-      eS = bool;
+      fp = bool;
       return;
     }
-  }
-  
-  public void setDrawFullUnderline(boolean paramBoolean)
-  {
-    eS = paramBoolean;
-    eT = true;
-    invalidate();
   }
   
   public void setPadding(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     int i = paramInt4;
-    if (paramInt4 < eL) {
-      i = eL;
+    if (paramInt4 < fh) {
+      i = fh;
     }
     super.setPadding(paramInt1, paramInt2, paramInt3, i);
-  }
-  
-  public void setTabIndicatorColor(int paramInt)
-  {
-    eJ = paramInt;
-    eP.setColor(eJ);
-    invalidate();
-  }
-  
-  public void setTabIndicatorColorResource(int paramInt)
-  {
-    setTabIndicatorColor(getContext().getResources().getColor(paramInt));
-  }
-  
-  public void setTextSpacing(int paramInt)
-  {
-    int i = paramInt;
-    if (paramInt < eM) {
-      i = eM;
-    }
-    super.setTextSpacing(i);
   }
 }
 

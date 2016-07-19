@@ -13,8 +13,8 @@ final class ListLinkedInFriendUI$11
     if (paramDialogInterface != null) {
       paramDialogInterface.dismiss();
     }
-    ListLinkedInFriendUI.d(kOk);
-    ListLinkedInFriendUI.e(kOk);
+    ListLinkedInFriendUI.d(lnA);
+    ListLinkedInFriendUI.e(lnA);
   }
 }
 

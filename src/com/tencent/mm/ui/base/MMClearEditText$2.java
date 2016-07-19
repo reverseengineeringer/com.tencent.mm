@@ -14,7 +14,7 @@ final class MMClearEditText$2
   
   public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    MMClearEditText.b(kDr);
+    MMClearEditText.b(lcw);
   }
 }
 

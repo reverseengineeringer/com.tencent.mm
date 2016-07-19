@@ -1,10 +1,34 @@
 package com.tencent.mm.t;
 
-import com.tencent.mm.r.j;
+import com.tencent.mm.sdk.platformtools.v;
+import oicq.wlogin_sdk.tools.b;
 
-public abstract interface u$a
+final class u$a
+  extends b
 {
-  public abstract void c(int paramInt1, int paramInt2, String paramString, j paramj);
+  public u$a(u paramu) {}
+  
+  public final void e(int paramInt, String paramString1, String paramString2)
+  {
+    if (paramInt == 1) {
+      v.i("MicroMsg.WtloginMgr.Core", "[%s]%s", new Object[] { paramString1, paramString2 });
+    }
+    do
+    {
+      return;
+      if (paramInt == 2)
+      {
+        v.d("MicroMsg.WtloginMgr.Core", "[%s]%s", new Object[] { paramString1, paramString2 });
+        return;
+      }
+    } while (paramInt != 0);
+    v.w("MicroMsg.WtloginMgr.Core", "[%s]%s", new Object[] { paramString1, paramString2 });
+  }
+  
+  public final void p(int paramInt, String paramString)
+  {
+    e(paramInt, "", paramString);
+  }
 }
 
 /* Location:

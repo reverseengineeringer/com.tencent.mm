@@ -4,7 +4,7 @@ import android.util.Pair;
 
 public abstract interface TencentHttpClient
 {
-  public abstract Pair postSync(String paramString, byte[] paramArrayOfByte);
+  public abstract Pair<byte[], String> postSync(String paramString, byte[] paramArrayOfByte);
 }
 
 /* Location:

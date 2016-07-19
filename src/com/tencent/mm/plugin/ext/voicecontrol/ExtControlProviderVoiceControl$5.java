@@ -2,8 +2,8 @@ package com.tencent.mm.plugin.ext.voicecontrol;
 
 import com.qq.wx.voice.embed.recognizer.a;
 import com.qq.wx.voice.embed.recognizer.c;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ExtControlProviderVoiceControl$5
   implements c
@@ -13,20 +13,20 @@ final class ExtControlProviderVoiceControl$5
   public final void a(a parama)
   {
     if (parama == null) {
-      u.w("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "localVoiceControl onGetResult restult is null");
+      v.w("MicroMsg.ext.ExtControlProviderVoiceControl", "localVoiceControl onGetResult restult is null");
     }
     do
     {
       return;
-      u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "localVoiceControl use time2:%s,text: %s,name: %s", new Object[] { Long.valueOf(System.currentTimeMillis() - ExtControlProviderVoiceControl.b(dLR)), text, name });
-    } while (ay.kz(name));
-    ExtControlProviderVoiceControl.c(dLR);
-    ExtControlProviderVoiceControl.b(dLR, name);
+      v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "localVoiceControl use time2:%s,text: %s,name: %s", new Object[] { Long.valueOf(System.currentTimeMillis() - ExtControlProviderVoiceControl.b(dNy)), text, name });
+    } while (be.kf(name));
+    ExtControlProviderVoiceControl.c(dNy);
+    ExtControlProviderVoiceControl.b(dNy, name);
   }
   
-  public final void aF(int paramInt)
+  public final void aX(int paramInt)
   {
-    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "localVoiceControl onGetError:%s", new Object[] { Integer.valueOf(paramInt) });
+    v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "localVoiceControl onGetError:%s", new Object[] { Integer.valueOf(paramInt) });
   }
 }
 

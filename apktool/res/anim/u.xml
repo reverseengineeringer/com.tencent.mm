@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="1000" android:drawable="@drawable/vc" />
+    <item android:duration="1000" android:drawable="@drawable/vd" />
+    <item android:duration="1000" android:drawable="@drawable/ve" />
+    <item android:duration="1000" android:drawable="@drawable/vf" />
+    <item android:duration="1000" android:drawable="@drawable/vg" />
+    <item android:duration="1000" android:drawable="@drawable/vh" />
+    <item android:duration="300" android:drawable="@drawable/vi" />
+    <item android:duration="1000" android:drawable="@drawable/vj" />
+    <item android:duration="1000" android:drawable="@drawable/vk" />
+    <item android:duration="1000" android:drawable="@drawable/vq" />
+    <item android:duration="1000" android:drawable="@drawable/vp" />
+    <item android:duration="1000" android:drawable="@drawable/vo" />
+    <item android:duration="1000" android:drawable="@drawable/vn" />
+    <item android:duration="1000" android:drawable="@drawable/vm" />
+    <item android:duration="1000" android:drawable="@drawable/vl" />
+    <item android:duration="1000" android:drawable="@drawable/vl" />
+    <item android:duration="1000" android:drawable="@drawable/vm" />
+    <item android:duration="1000" android:drawable="@drawable/vn" />
+    <item android:duration="1000" android:drawable="@drawable/vo" />
+    <item android:duration="1000" android:drawable="@drawable/vp" />
+    <item android:duration="1000" android:drawable="@drawable/vq" />
+    <item android:duration="300" android:drawable="@drawable/vi" />
+    <item android:duration="1000" android:drawable="@drawable/vj" />
+    <item android:duration="1000" android:drawable="@drawable/vk" />
+    <item android:duration="1000" android:drawable="@drawable/vh" />
+    <item android:duration="1000" android:drawable="@drawable/vg" />
+    <item android:duration="1000" android:drawable="@drawable/vf" />
+    <item android:duration="1000" android:drawable="@drawable/ve" />
+    <item android:duration="1000" android:drawable="@drawable/vd" />
+    <item android:duration="1000" android:drawable="@drawable/vc" />
+</animation-list>

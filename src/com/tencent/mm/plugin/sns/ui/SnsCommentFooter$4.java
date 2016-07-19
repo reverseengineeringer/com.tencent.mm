@@ -13,14 +13,14 @@ final class SnsCommentFooter$4
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    SnsCommentFooter.g(hdG);
-    SnsCommentFooter.h(hdG).setVisibility(8);
-    SnsCommentFooter.h(hdG).onPause();
-    SnsCommentFooter.f(hdG).setImageResource(2130970038);
-    if (SnsCommentFooter.i(hdG) != null) {
-      SnsCommentFooter.i(hdG).aBL();
+    SnsCommentFooter.g(hst);
+    SnsCommentFooter.h(hst).setVisibility(8);
+    SnsCommentFooter.h(hst).onPause();
+    SnsCommentFooter.f(hst).setImageResource(2130838034);
+    if (SnsCommentFooter.i(hst) != null) {
+      SnsCommentFooter.i(hst).aEH();
     }
-    SnsCommentFooter.a(hdG, 0);
+    SnsCommentFooter.a(hst, 0);
     return false;
   }
 }

@@ -1,13 +1,13 @@
 package com.tencent.mm.plugin.sns.ui;
 
 final class SnsCommentDetailUI$2
-  implements au.a
+  implements ba.a
 {
   SnsCommentDetailUI$2(SnsCommentDetailUI paramSnsCommentDetailUI) {}
   
-  public final void aBK()
+  public final void aEG()
   {
-    SnsCommentDetailUI.m(hda);
+    SnsCommentDetailUI.m(hrN);
   }
 }
 

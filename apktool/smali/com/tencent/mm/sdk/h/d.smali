@@ -7,10 +7,10 @@
 .method public abstract a(Ljava/lang/String;[Ljava/lang/String;Z)Landroid/database/Cursor;
 .end method
 
-.method public abstract aVP()Z
+.method public abstract bbc()Z
 .end method
 
-.method public abstract cj(Ljava/lang/String;Ljava/lang/String;)Z
+.method public abstract cx(Ljava/lang/String;Ljava/lang/String;)Z
 .end method
 
 .method public abstract delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I

@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.account;
 
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.base.MMFormMobileInputView.a;
 import java.util.Map;
 
@@ -10,29 +10,29 @@ final class RegByMobileRegAIOUI$23
 {
   RegByMobileRegAIOUI$23(RegByMobileRegAIOUI paramRegByMobileRegAIOUI) {}
   
-  public final void Gs(String paramString)
+  public final void IH(String paramString)
   {
     String str;
-    if ((!ay.kz(paramString)) && (paramString.length() > 1))
+    if ((!be.kf(paramString)) && (paramString.length() > 1))
     {
       paramString = paramString.substring(1);
-      str = (String)RegByMobileRegAIOUI.d(kuT).get(paramString);
-      if (ay.kz(str))
+      str = (String)RegByMobileRegAIOUI.d(kUa).get(paramString);
+      if (be.kf(str))
       {
-        RegByMobileRegAIOUI.c(kuT).setText(kuT.getString(2131427717));
-        RegByMobileRegAIOUI.a(kuT, false);
+        RegByMobileRegAIOUI.c(kUa).setText(kUa.getString(2131233836));
+        RegByMobileRegAIOUI.a(kUa, false);
       }
     }
     for (;;)
     {
-      RegByMobileRegAIOUI.b(kuT);
+      RegByMobileRegAIOUI.b(kUa);
       return;
-      if ((kuT.ksO.get(RegByMobileRegAIOUI.c(kuT).getText()) == null) || (!((String)kuT.ksO.get(RegByMobileRegAIOUI.c(kuT).getText())).equals(paramString))) {
-        RegByMobileRegAIOUI.c(kuT).setText(str);
+      if ((kUa.kRW.get(RegByMobileRegAIOUI.c(kUa).getText()) == null) || (!((String)kUa.kRW.get(RegByMobileRegAIOUI.c(kUa).getText())).equals(paramString))) {
+        RegByMobileRegAIOUI.c(kUa).setText(str);
       }
-      RegByMobileRegAIOUI.a(kuT, true);
+      RegByMobileRegAIOUI.a(kUa, true);
       continue;
-      RegByMobileRegAIOUI.c(kuT).setText(kuT.getString(2131427718));
+      RegByMobileRegAIOUI.c(kUa).setText(kUa.getString(2131233838));
     }
   }
 }

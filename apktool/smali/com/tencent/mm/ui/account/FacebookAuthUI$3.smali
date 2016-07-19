@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ksk:Lcom/tencent/mm/ui/account/FacebookAuthUI;
+.field final synthetic kRs:Lcom/tencent/mm/ui/account/FacebookAuthUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 175
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$3;->ksk:Lcom/tencent/mm/ui/account/FacebookAuthUI;
+    .line 176
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$3;->kRs:Lcom/tencent/mm/ui/account/FacebookAuthUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,28 +40,28 @@
     .locals 5
 
     .prologue
-    .line 179
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$3;->ksk:Lcom/tencent/mm/ui/account/FacebookAuthUI;
+    .line 180
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$3;->kRs:Lcom/tencent/mm/ui/account/FacebookAuthUI;
 
-    const v1, 0x7f0b0ddd
+    const v1, 0x7f080134
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/account/FacebookAuthUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 180
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$3;->ksk:Lcom/tencent/mm/ui/account/FacebookAuthUI;
+    .line 181
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$3;->kRs:Lcom/tencent/mm/ui/account/FacebookAuthUI;
 
-    const v2, 0x7f0b0723
+    const v2, 0x7f080734
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/account/FacebookAuthUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 181
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$3;->ksk:Lcom/tencent/mm/ui/account/FacebookAuthUI;
+    .line 182
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$3;->kRs:Lcom/tencent/mm/ui/account/FacebookAuthUI;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$3;->ksk:Lcom/tencent/mm/ui/account/FacebookAuthUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$3;->kRs:Lcom/tencent/mm/ui/account/FacebookAuthUI;
 
     const/4 v4, 0x1
 
@@ -71,14 +71,14 @@
 
     invoke-static {v2, v0}, Lcom/tencent/mm/ui/account/FacebookAuthUI;->a(Lcom/tencent/mm/ui/account/FacebookAuthUI;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
 
-    .line 182
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$3;->ksk:Lcom/tencent/mm/ui/account/FacebookAuthUI;
+    .line 183
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$3;->kRs:Lcom/tencent/mm/ui/account/FacebookAuthUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/FacebookAuthUI;->d(Lcom/tencent/mm/ui/account/FacebookAuthUI;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$3;->ksk:Lcom/tencent/mm/ui/account/FacebookAuthUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$3;->kRs:Lcom/tencent/mm/ui/account/FacebookAuthUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/FacebookAuthUI;->c(Lcom/tencent/mm/ui/account/FacebookAuthUI;)Landroid/content/DialogInterface$OnCancelListener;
 
@@ -86,20 +86,22 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
-    .line 183
+    .line 184
     new-instance v0, Lcom/tencent/mm/modelsimple/h;
 
-    sget v1, Lcom/tencent/mm/modelsimple/h;->caS:I
+    sget v1, Lcom/tencent/mm/modelsimple/h;->bUB:I
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/modelsimple/h;-><init>(I)V
 
-    .line 184
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 185
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    const/4 v2, 0x0
 
-    .line 185
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
+
+    .line 186
     return-void
 .end method

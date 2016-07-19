@@ -1,31 +1,14 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.d.a.is;
-import com.tencent.mm.d.a.is.a;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.ix;
 import com.tencent.mm.sdk.c.c;
 
 final class ChatFooterCustom$a
-  extends c
+  extends c<ix>
 {
-  public ChatFooterCustom$a(ChatFooterCustom paramChatFooterCustom)
+  private ChatFooterCustom$a(ChatFooterCustom paramChatFooterCustom)
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    paramb = (is)paramb;
-    switch (aEK.aou)
-    {
-    }
-    for (;;)
-    {
-      return false;
-      kRP.e(1005, paramb);
-      continue;
-      kRP.e(1006, paramb);
-    }
+    kum = ix.class.getName().hashCode();
   }
 }
 

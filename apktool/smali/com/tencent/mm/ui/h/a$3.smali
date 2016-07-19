@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/h/a;->a(Lcom/tencent/mm/ui/h/a$a;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/ui/h/a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,20 @@
 
 
 # instance fields
-.field final synthetic lBR:Lcom/tencent/mm/ui/h/a;
+.field final synthetic maX:Lcom/tencent/mm/ui/h/a;
+
+.field final synthetic maY:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/h/a;)V
+.method constructor <init>(Lcom/tencent/mm/ui/h/a;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 168
-    iput-object p1, p0, Lcom/tencent/mm/ui/h/a$3;->lBR:Lcom/tencent/mm/ui/h/a;
+    .line 340
+    iput-object p1, p0, Lcom/tencent/mm/ui/h/a$3;->maX:Lcom/tencent/mm/ui/h/a;
+
+    iput-object p2, p0, Lcom/tencent/mm/ui/h/a$3;->maY:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,103 +41,50 @@
 
 # virtual methods
 .method public final run()V
-    .locals 4
+    .locals 3
 
     .prologue
-    .line 173
-    sget-object v0, Lcom/tencent/mm/ui/h/a$c;->lBU:Lcom/tencent/mm/ui/h/a$c;
+    .line 344
+    iget-object v0, p0, Lcom/tencent/mm/ui/h/a$3;->maX:Lcom/tencent/mm/ui/h/a;
 
-    .line 175
-    iget-object v1, p0, Lcom/tencent/mm/ui/h/a$3;->lBR:Lcom/tencent/mm/ui/h/a;
-
-    iget-object v1, v1, Lcom/tencent/mm/ui/h/a;->lBL:Lb/a/d/i;
-
-    if-nez v1, :cond_1
-
-    .line 176
-    sget-object v0, Lcom/tencent/mm/ui/h/a$c;->lBV:Lcom/tencent/mm/ui/h/a$c;
-
-    .line 192
-    :cond_0
-    :goto_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/h/a$3;->lBR:Lcom/tencent/mm/ui/h/a;
-
-    iget-object v1, v1, Lcom/tencent/mm/ui/h/a;->gWl:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    const/16 v2, 0x3f2
-
-    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/sdk/platformtools/aa;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v0
-
-    .line 193
-    iget-object v1, p0, Lcom/tencent/mm/ui/h/a$3;->lBR:Lcom/tencent/mm/ui/h/a;
-
-    iget-object v1, v1, Lcom/tencent/mm/ui/h/a;->gWl:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/platformtools/aa;->sendMessage(Landroid/os/Message;)Z
-
-    .line 195
-    return-void
-
-    .line 178
-    :cond_1
-    new-instance v1, Lb/a/d/c;
-
-    sget-object v2, Lb/a/d/j;->meb:Lb/a/d/j;
-
-    const-string/jumbo v3, "https://api.twitter.com/1.1/account/verify_credentials.json"
-
-    invoke-direct {v1, v2, v3}, Lb/a/d/c;-><init>(Lb/a/d/j;Ljava/lang/String;)V
-
-    .line 179
-    iget-object v2, p0, Lcom/tencent/mm/ui/h/a$3;->lBR:Lcom/tencent/mm/ui/h/a;
-
-    iget-object v2, v2, Lcom/tencent/mm/ui/h/a;->lBK:Lb/a/e/b;
-
-    iget-object v3, p0, Lcom/tencent/mm/ui/h/a$3;->lBR:Lcom/tencent/mm/ui/h/a;
-
-    iget-object v3, v3, Lcom/tencent/mm/ui/h/a;->lBL:Lb/a/d/i;
-
-    invoke-interface {v2, v3, v1}, Lb/a/e/b;->a(Lb/a/d/i;Lb/a/d/c;)V
-
-    .line 182
-    :try_start_0
-    invoke-virtual {v1}, Lb/a/d/c;->boJ()Lb/a/d/g;
+    invoke-static {}, Lcom/tencent/mm/ui/h/a;->boZ()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 183
-    iget v1, v1, Lb/a/d/g;->cwi:I
+    iget-object v2, p0, Lcom/tencent/mm/ui/h/a$3;->maY:Ljava/lang/String;
 
-    const/16 v2, 0xc8
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/h/a;->a(Lcom/tencent/mm/ui/h/a;Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eq v1, v2, :cond_0
+    .line 345
+    return-void
+.end method
 
-    .line 184
-    sget-object v0, Lcom/tencent/mm/ui/h/a$c;->lBV:Lcom/tencent/mm/ui/h/a$c;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    goto :goto_0
+    .prologue
+    .line 349
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 186
-    :catch_0
-    move-exception v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 187
-    const-string/jumbo v1, "MicroMsg.Twitter"
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    const-string/jumbo v2, "request error."
+    move-result-object v1
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-array v3, v3, [Ljava/lang/Object;
+    move-result-object v0
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    const-string/jumbo v1, "|mark"
 
-    .line 188
-    sget-object v0, Lcom/tencent/mm/ui/h/a$c;->lBV:Lcom/tencent/mm/ui/h/a$c;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

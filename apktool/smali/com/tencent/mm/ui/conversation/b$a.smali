@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public cHk:Landroid/widget/TextView;
+.field public cEo:Landroid/widget/TextView;
 
-.field public czS:Landroid/widget/ImageView;
+.field public cui:Landroid/widget/ImageView;
 
 
 # direct methods

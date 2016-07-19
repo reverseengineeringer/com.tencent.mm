@@ -13,8 +13,9 @@ import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.view.ViewGroup;
-import com.tencent.mm.compatible.h.b;
+import com.tencent.mm.compatible.i.b;
 import com.tencent.mm.compatible.util.c;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.tools.r;
 import com.tencent.mm.ui.widget.SwipeBackLayout;
 import com.tencent.mm.ui.widget.SwipeBackLayout.a;
@@ -23,38 +24,38 @@ public abstract class o
   extends g
 {
   String className;
-  public j koJ = new j()
+  public j kNN = new j()
   {
-    protected final void aNa() {}
-    
-    public final boolean aZY()
+    protected final void N(View paramAnonymousView)
     {
-      return o.this.aZY();
+      o.this.N(paramAnonymousView);
     }
     
-    protected final String amX()
+    public final void aAK()
     {
-      return o.this.amX();
+      o.this.aAK();
     }
     
-    public final void ayk()
+    protected final void aQL() {}
+    
+    protected final String apN()
     {
-      o.this.ayk();
+      return o.this.apN();
     }
     
-    protected final boolean baL()
+    protected final boolean bfX()
     {
       return false;
     }
     
-    protected final View baY()
+    public final boolean bfr()
     {
-      return o.this.baY();
+      return o.this.bfr();
     }
     
-    protected final void dealContentView(View paramAnonymousView)
+    protected final View bgi()
     {
-      o.this.dealContentView(paramAnonymousView);
+      return o.this.bgi();
     }
     
     protected final String getClassName()
@@ -67,9 +68,9 @@ public abstract class o
       return o.this.getLayoutId();
     }
   };
-  protected ActionBarActivity kqm;
-  public boolean kqn = false;
-  public SwipeBackLayout kqo;
+  protected ActionBarActivity kPr;
+  public boolean kPs = false;
+  public SwipeBackLayout kPt;
   
   public o() {}
   
@@ -78,164 +79,198 @@ public abstract class o
     super(true);
   }
   
-  protected static void aNa() {}
+  protected static void aQL() {}
   
-  public void Gj(String paramString)
+  public void Ah(String paramString)
   {
-    koJ.Gj(paramString);
+    kNN.Ah(paramString);
   }
   
-  public void Gk(String paramString)
+  public final void D()
   {
-    koJ.Gk(paramString);
+    View localView;
+    if (bgq())
+    {
+      localView = kNN.cJf;
+      ViewGroup localViewGroup = (ViewGroup)localView.getParent();
+      if (localViewGroup == null) {
+        break label101;
+      }
+      kPt = ((SwipeBackLayout)LayoutInflater.from(y()).inflate(2130904513, localViewGroup, false));
+      localViewGroup.removeView(localView);
+      localViewGroup.addView(kPt);
+    }
+    for (;;)
+    {
+      kPt.addView(localView);
+      kPt.cPr = localView;
+      kPt.iX(true);
+      kPt.mhZ = new SwipeBackLayout.a()
+      {
+        public final void aEs()
+        {
+          o.this.aEs();
+        }
+        
+        public final void aQQ()
+        {
+          bgr();
+        }
+        
+        public final void onCancel()
+        {
+          bgs();
+        }
+      };
+      return;
+      label101:
+      kPt = ((SwipeBackLayout)LayoutInflater.from(y()).inflate(2130904513, null));
+    }
   }
   
-  public final void Gl(String paramString)
+  public void Iy(String paramString)
   {
-    koJ.Gl(paramString);
+    kNN.Iy(paramString);
   }
   
-  public boolean VC()
+  public final void Iz(String paramString)
   {
-    return koJ.VC();
+    kNN.Iz(paramString);
+  }
+  
+  public void N(View paramView) {}
+  
+  public boolean Xk()
+  {
+    return kNN.Xk();
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
   {
-    koJ.a(paramInt1, paramInt2, paramInt3, paramOnMenuItemClickListener);
+    kNN.a(paramInt1, paramInt2, paramInt3, paramOnMenuItemClickListener);
   }
   
   public final void a(ActionBarActivity paramActionBarActivity)
   {
-    kqm = paramActionBarActivity;
-  }
-  
-  public final void a(String paramString, MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener, int paramInt)
-  {
-    koJ.a(2, paramString, paramOnMenuItemClickListener, null, paramInt);
+    kPr = paramActionBarActivity;
   }
   
   public final void a(boolean paramBoolean, r paramr)
   {
-    koJ.a(paramBoolean, paramr);
+    kNN.a(paramBoolean, paramr);
   }
   
-  public boolean aCH()
+  public void aAK() {}
+  
+  public void aEs() {}
+  
+  public boolean aFD()
   {
     return true;
   }
   
-  public void aNg() {}
-  
-  public boolean aZY()
-  {
-    return false;
-  }
-  
-  public String amX()
+  public String apN()
   {
     return "";
   }
   
-  public final Activity ara()
+  public final Activity aur()
   {
-    return koJ.kpc;
+    return kNN.kOg;
   }
-  
-  public void ayk() {}
   
   public void b(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
   {
-    koJ.a(paramOnMenuItemClickListener, 0);
+    kNN.a(paramOnMenuItemClickListener, 0);
   }
   
-  public final void bC(boolean paramBoolean)
+  public final void bd(boolean paramBoolean)
   {
-    koJ.a(true, -1, paramBoolean);
+    kNN.bd(paramBoolean);
   }
   
-  public View baY()
+  public boolean bfr()
+  {
+    return false;
+  }
+  
+  public View bgi()
   {
     return null;
   }
   
-  public final boolean bbg()
+  public final boolean bgq()
   {
-    if ((c.bU(19)) && (b.oU())) {
-      return aCH();
+    if ((c.cm(19)) && (b.nm())) {
+      return aFD();
     }
     return false;
   }
   
-  public void bbh() {}
+  public void bgr() {}
   
-  public void bbi() {}
+  public void bgs() {}
   
-  public void dealContentView(View paramView) {}
+  public final void bp(boolean paramBoolean)
+  {
+    kNN.a(true, -1, paramBoolean);
+  }
   
   public void finish()
   {
     super.finish();
-    int i = getActivity().getIntent().getIntExtra("MMActivity.OverrideEnterAnimation", -1);
-    int j = getActivity().getIntent().getIntExtra("MMActivity.OverrideExitAnimation", -1);
+    int i = y().getIntent().getIntExtra("MMActivity.OverrideEnterAnimation", -1);
+    int j = y().getIntent().getIntExtra("MMActivity.OverrideExitAnimation", -1);
     if (i != -1) {
-      koJ.kpc.overridePendingTransition(i, j);
+      kNN.kOg.overridePendingTransition(i, j);
     }
-  }
-  
-  public FragmentActivity getActivity()
-  {
-    if (koJ.kpc != null) {
-      return koJ.kpc;
-    }
-    return super.getActivity();
   }
   
   public abstract int getLayoutId();
   
-  public final void hg(boolean paramBoolean)
+  public final void hE(boolean paramBoolean)
   {
-    koJ.hg(paramBoolean);
+    kNN.hE(paramBoolean);
   }
   
-  public final void hh(boolean paramBoolean)
+  public final void hF(boolean paramBoolean)
   {
-    koJ.b(true, -1, paramBoolean);
+    kNN.b(true, -1, paramBoolean);
   }
   
-  public final void hl(boolean paramBoolean)
+  public final void hJ(boolean paramBoolean)
   {
-    koJ.b(false, 2, paramBoolean);
+    kNN.b(false, 2, paramBoolean);
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    koJ.a(getActivity().getBaseContext(), (ActionBarActivity)getActivity());
+    kNN.a(y().getBaseContext(), (ActionBarActivity)y());
   }
   
   public void onCreateOptionsMenu(Menu paramMenu, MenuInflater paramMenuInflater)
   {
-    if (!koJ.onCreateOptionsMenu(paramMenu)) {
+    if (!kNN.onCreateOptionsMenu(paramMenu)) {
       super.onCreateOptionsMenu(paramMenu, paramMenuInflater);
     }
   }
   
   public View onCreateView(LayoutInflater paramLayoutInflater, ViewGroup paramViewGroup, Bundle paramBundle)
   {
-    setHasOptionsMenu(true);
-    return koJ.cMt;
+    A();
+    return kNN.cJf;
   }
   
   public void onDestroy()
   {
     super.onDestroy();
-    koJ.onDestroy();
+    kNN.onDestroy();
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
   {
-    if (koJ.onKeyDown(paramInt, paramKeyEvent)) {
+    if (kNN.onKeyDown(paramInt, paramKeyEvent)) {
       return true;
     }
     return super.onKeyDown(paramInt, paramKeyEvent);
@@ -243,142 +278,104 @@ public abstract class o
   
   public boolean onKeyUp(int paramInt, KeyEvent paramKeyEvent)
   {
-    if (koJ.onKeyUp(paramInt, paramKeyEvent)) {
+    if (kNN.onKeyUp(paramInt, paramKeyEvent)) {
       return true;
     }
     return super.onKeyUp(paramInt, paramKeyEvent);
   }
   
-  public boolean onOptionsItemSelected(MenuItem paramMenuItem)
+  public final boolean onOptionsItemSelected(MenuItem paramMenuItem)
   {
-    return koJ.onOptionsItemSelected(paramMenuItem);
+    return kNN.onOptionsItemSelected(paramMenuItem);
   }
   
   public void onPause()
   {
     long l = System.currentTimeMillis();
-    u.ae(2, className);
+    u.ao(2, className);
     super.onPause();
-    if (kqn) {
-      kqn = false;
+    if (kPs) {
+      kPs = false;
     }
     for (;;)
     {
-      com.tencent.mm.sdk.platformtools.u.v("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN MMActivity onPause:" + (System.currentTimeMillis() - l));
+      v.v("MicroMsg.INIT", "KEVIN MMActivity onPause:" + (System.currentTimeMillis() - l));
       return;
-      koJ.onPause();
+      kNN.onPause();
     }
   }
   
-  public void onPrepareOptionsMenu(Menu paramMenu)
+  public final void onPrepareOptionsMenu(Menu paramMenu)
   {
-    koJ.onPrepareOptionsMenu(paramMenu);
+    kNN.onPrepareOptionsMenu(paramMenu);
     super.onPrepareOptionsMenu(paramMenu);
   }
   
   public void onResume()
   {
     long l = System.currentTimeMillis();
-    u.ae(1, className);
+    u.ao(1, className);
     super.onResume();
-    com.tencent.mm.sdk.platformtools.u.v("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN MMActivity super.onResume " + (System.currentTimeMillis() - l));
-    koJ.onResume();
-    com.tencent.mm.sdk.platformtools.u.v("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN MMActivity onResume :" + (System.currentTimeMillis() - l));
+    v.v("MicroMsg.INIT", "KEVIN MMActivity super.onResume " + (System.currentTimeMillis() - l));
+    kNN.onResume();
+    v.v("MicroMsg.INIT", "KEVIN MMActivity onResume :" + (System.currentTimeMillis() - l));
   }
   
   public void onStart()
   {
-    koJ.onStart();
+    kNN.onStart();
     super.onStart();
   }
   
-  public void onViewCreated(View paramView, Bundle paramBundle)
+  public void rR(int paramInt)
   {
-    if (bbg())
+    kNN.rR(paramInt);
+  }
+  
+  public void rS(int paramInt)
+  {
+    kNN.rS(paramInt);
+  }
+  
+  public void rV(int paramInt)
+  {
+    kNN.rV(paramInt);
+  }
+  
+  public final void rY(int paramInt)
+  {
+    j localj = kNN;
+    j.a locala = localj.rX(2);
+    if ((locala != null) && (kOI != paramInt))
     {
-      paramView = koJ.cMt;
-      paramBundle = (ViewGroup)paramView.getParent();
-      if (paramBundle == null) {
-        break label102;
-      }
-      kqo = ((SwipeBackLayout)LayoutInflater.from(getActivity()).inflate(2131363277, paramBundle, false));
-      paramBundle.removeView(paramView);
-      paramBundle.addView(kqo);
-    }
-    for (;;)
-    {
-      kqo.addView(paramView);
-      kqo.setContentView(paramView);
-      kqo.io(true);
-      kqo.setSwipeGestureDelegate(new SwipeBackLayout.a()
-      {
-        public final void aNg()
-        {
-          o.this.aNg();
-        }
-        
-        public final void aNh()
-        {
-          bbh();
-        }
-        
-        public final void onCancel()
-        {
-          bbi();
-        }
-      });
-      return;
-      label102:
-      kqo = ((SwipeBackLayout)LayoutInflater.from(getActivity()).inflate(2131363277, null));
+      kOI = paramInt;
+      localj.F();
     }
   }
   
-  public void qb(int paramInt)
+  public void rZ(int paramInt)
   {
-    koJ.qb(paramInt);
-  }
-  
-  public void qc(int paramInt)
-  {
-    koJ.qc(paramInt);
-  }
-  
-  public void qf(int paramInt)
-  {
-    koJ.qf(paramInt);
-  }
-  
-  public final void qh(int paramInt)
-  {
-    j localj = koJ;
-    j.a locala = localj.qg(2);
-    if ((locala != null) && (kpE != paramInt))
-    {
-      kpE = paramInt;
-      localj.G();
-    }
-  }
-  
-  public void qi(int paramInt)
-  {
-    j localj = koJ;
+    j localj = kNN;
     if (paramInt == 0) {}
     for (boolean bool = true;; bool = false)
     {
-      kpb = bool;
-      localj.bbb();
+      kOf = bool;
+      localj.bgl();
       return;
     }
   }
   
-  public final void setScreenEnable(boolean paramBoolean)
-  {
-    koJ.setScreenEnable(paramBoolean);
-  }
-  
-  public void startActivity(Intent paramIntent)
+  public final void startActivity(Intent paramIntent)
   {
     super.startActivity(paramIntent);
+  }
+  
+  public final FragmentActivity y()
+  {
+    if (kNN.kOg != null) {
+      return kNN.kOg;
+    }
+    return super.y();
   }
 }
 

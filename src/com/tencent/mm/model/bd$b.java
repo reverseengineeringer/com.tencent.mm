@@ -1,6 +1,6 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.r.c.a;
+import com.tencent.mm.t.c.a;
 
 public abstract interface bd$b
 {

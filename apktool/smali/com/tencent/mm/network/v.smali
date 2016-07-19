@@ -17,29 +17,29 @@
 
 # virtual methods
 .method public final reportKV(JLjava/lang/String;ZZ)V
-    .locals 8
+    .locals 9
 
     .prologue
     .line 15
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tw()Lcom/tencent/mm/sdk/platformtools/ad;
 
-    move-result-object v7
+    move-result-object v0
 
-    new-instance v0, Lcom/tencent/mm/network/v$1;
+    new-instance v1, Lcom/tencent/mm/network/v$1;
 
-    move-object v1, p0
+    move-object v2, p0
 
-    move v2, p4
+    move v3, p4
 
-    move-wide v3, p1
+    move-wide v4, p1
 
-    move-object v5, p3
+    move-object v6, p3
 
-    move v6, p5
+    move v7, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/network/v$1;-><init>(Lcom/tencent/mm/network/v;ZJLjava/lang/String;Z)V
+    invoke-direct/range {v1 .. v7}, Lcom/tencent/mm/network/v$1;-><init>(Lcom/tencent/mm/network/v;ZJLjava/lang/String;Z)V
 
-    invoke-virtual {v7, v0}, Lcom/tencent/mm/sdk/platformtools/ab;->r(Ljava/lang/Runnable;)I
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ad;->t(Ljava/lang/Runnable;)I
 
     .line 29
     return-void

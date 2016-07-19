@@ -3,8 +3,8 @@ package com.tencent.mm.plugin.sight.encode.a;
 import android.media.MediaCodec;
 import com.tencent.mm.c.b.c.a;
 import com.tencent.mm.plugin.sight.base.a;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.nio.ByteBuffer;
 
 final class d$3
@@ -14,94 +14,109 @@ final class d$3
   
   public final void B(int paramInt1, int paramInt2)
   {
-    u.w("!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk=", "on rec error, %d, %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    v.w("MicroMsg.SightAACEncoderJB", "on rec error, %d, %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
   }
   
   public final void d(byte[] arg1, int paramInt)
   {
     int i = 1;
-    gAq.gzW.sendEmptyMessage(0);
-    if (!gAq.gAi) {}
+    gGS.gGy.sendEmptyMessage(0);
+    if (!gGS.gGK) {}
     for (paramInt = 1;; paramInt = 0)
     {
       d locald;
       if (paramInt == 0)
       {
-        locald = gAq;
-        gAj += 128;
-        if (gAq.gAj > 8000)
+        locald = gGS;
+        gGL += 128;
+        if (gGS.gGL > 8000)
         {
-          u.w("!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk=", "error pcm duration %d", new Object[] { Integer.valueOf(gAq.gAj) });
+          v.w("MicroMsg.SightAACEncoderJB", "error pcm duration %d", new Object[] { Integer.valueOf(gGS.gGL) });
           paramInt = i;
         }
       }
       for (;;)
       {
-        boolean bool = gAq.gAk;
+        boolean bool = gGS.gGM;
         if (paramInt == 0)
         {
-          locald = gAq;
-          paramInt = gAq.gzU;
-          if (0L == gAb) {
-            gAb = System.nanoTime();
+          locald = gGS;
+          paramInt = gGS.gGw;
+          if (0L == gGD) {
+            gGD = System.nanoTime();
           }
-          if (gzY != null) {
+          if (gGA != null) {
             break label270;
           }
-          u.w("!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk=", "send audio to encoder error, encoder is null, end:" + bool);
+          v.w("MicroMsg.SightAACEncoderJB", "send audio to encoder error, encoder is null, end:" + bool);
         }
         for (;;)
         {
           locald.z(paramInt, bool);
           if (bool) {}
-          synchronized (gAq.gAm)
+          synchronized (gGS.gGO)
           {
-            if (gAq.gAn != null)
+            if (gGS.gGP != null)
             {
-              u.i("!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk=", "do aac stop callback");
-              gAq.gAn.awn();
-              gAq.gAn = null;
-              gAq.gAl = true;
-              gAq.gAo.removeCallbacks(gAq.gAp);
-              gAq.gAo.post(gAq.gAp);
+              v.i("MicroMsg.SightAACEncoderJB", "do aac stop callback");
+              gGS.gGP.ayL();
+              gGS.gGP = null;
+              gGS.gGN = true;
+              gGS.gGQ.removeCallbacks(gGS.gGR);
+              gGS.gGQ.post(gGS.gGR);
               return;
+              label270:
+              Object localObject2;
               try
               {
-                label270:
-                Object localObject2 = gzY.getInputBuffers();
-                gAc = gzY.dequeueInputBuffer(-1L);
-                if (gAc < 0) {
-                  continue;
+                localObject2 = gGA.getInputBuffers();
+                for (;;)
+                {
+                  i = gGA.dequeueInputBuffer(100L);
+                  gGE = i;
+                  if (i >= 0) {
+                    break;
+                  }
+                  v.i("MicroMsg.SightAACEncoderJB", "no input available, drain first");
+                  locald.z(paramInt, false);
                 }
-                localObject2 = localObject2[gAc];
-                ((ByteBuffer)localObject2).clear();
-                ((ByteBuffer)localObject2).put(???);
-                ((ByteBuffer)localObject2).position(0);
-                gAd = ???.length;
-                gAe = System.nanoTime();
-                gAe -= gAd / a.gwR / 1000000000;
-                if (gAd == -3) {
-                  u.e("!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk=", "Audio read error");
-                }
-                gAf = ((gAe - gAb) / 1000L);
-                u.v("!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk=", "queueing " + gAd + " audio bytes with pts " + gAf + ", end:" + bool);
-                if (!bool) {
-                  break label509;
-                }
-                u.i("!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk=", "EOS received in sendAudioToEncoder");
-                gzY.queueInputBuffer(gAc, 0, gAd, gAf, 4);
               }
               catch (Throwable ???)
               {
-                u.e("!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk=", "_offerAudioEncoder exception");
+                v.e("MicroMsg.SightAACEncoderJB", "_offerAudioEncoder exception " + ???.getMessage());
               }
-              continue;
-              label509:
-              gzY.queueInputBuffer(gAc, 0, gAd, gAf, 1);
+              if (gGA == null)
+              {
+                v.w("MicroMsg.SightAACEncoderJB", "send audio to encoder error, encoder is null, end:" + bool);
+              }
+              else if (gGE >= 0)
+              {
+                localObject2 = localObject2[gGE];
+                ((ByteBuffer)localObject2).clear();
+                ((ByteBuffer)localObject2).put(???);
+                ((ByteBuffer)localObject2).position(0);
+                gGF = ???.length;
+                gGG = System.nanoTime();
+                gGG -= gGF / a.axP() / 1000000000;
+                if (gGF == -3) {
+                  v.e("MicroMsg.SightAACEncoderJB", "Audio read error");
+                }
+                gGH = ((gGG - gGD) / 1000L);
+                v.v("MicroMsg.SightAACEncoderJB", "queueing " + gGF + " audio bytes with pts " + gGH + ", end:" + bool + ", enqueue:" + gGE);
+                if (bool)
+                {
+                  v.i("MicroMsg.SightAACEncoderJB", "EOS received in sendAudioToEncoder");
+                  gGA.queueInputBuffer(gGE, 0, gGF, gGH, 4);
+                }
+                else
+                {
+                  gGA.queueInputBuffer(gGE, 0, gGF, gGH, 1);
+                }
+              }
             }
             else
             {
-              u.w("!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk=", "aac stop callback is null");
+              v.w("MicroMsg.SightAACEncoderJB", "aac stop callback is null");
             }
           }
         }

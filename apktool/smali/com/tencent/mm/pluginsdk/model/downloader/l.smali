@@ -7,14 +7,14 @@
 .method public abstract a(Lcom/tencent/mm/pluginsdk/model/downloader/d;)J
 .end method
 
-.method public abstract cG(J)I
+.method public abstract cV(J)I
 .end method
 
-.method public abstract cH(J)Lcom/tencent/mm/pluginsdk/model/downloader/e;
+.method public abstract cW(J)Lcom/tencent/mm/pluginsdk/model/downloader/e;
 .end method
 
-.method public abstract cI(J)Z
+.method public abstract cX(J)Z
 .end method
 
-.method public abstract cJ(J)Z
+.method public abstract cY(J)Z
 .end method

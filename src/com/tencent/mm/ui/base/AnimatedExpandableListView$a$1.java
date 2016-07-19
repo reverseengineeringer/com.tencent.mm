@@ -10,9 +10,9 @@ final class AnimatedExpandableListView$a$1
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    AnimatedExpandableListView.a.b(kBI, hfB);
-    kBI.notifyDataSetChanged();
-    kBH.setTag(Integer.valueOf(0));
+    AnimatedExpandableListView.a.b(laO, hus);
+    laO.notifyDataSetChanged();
+    laN.setTag(Integer.valueOf(0));
   }
   
   public final void onAnimationRepeat(Animation paramAnimation) {}

@@ -91,7 +91,7 @@
     return-object v0
 
     :cond_1
-    new-instance v0, Lct/cb;
+    new-instance v0, Lct/by;
 
     const-string/jumbo v1, "channelId"
 
@@ -99,7 +99,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, p1, v1}, Lct/cb;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Lct/by;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -2,13 +2,13 @@ package com.tencent.mm.c.b;
 
 public final class g$a
 {
-  public int anV = 0;
+  public int acr = 0;
   public byte[] buf;
   
   public g$a(byte[] paramArrayOfByte, int paramInt)
   {
     buf = paramArrayOfByte;
-    anV = paramInt;
+    acr = paramInt;
   }
 }
 

@@ -1,13 +1,15 @@
 package com.tencent.mm.ui.account.mobile;
 
 import android.content.Intent;
+import com.tencent.mm.a.e;
 import com.tencent.mm.compatible.util.d;
 import com.tencent.mm.model.ag;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.v;
+import com.tencent.mm.modelsimple.t;
 import com.tencent.mm.plugin.a.a;
+import com.tencent.mm.plugin.a.b;
 import com.tencent.mm.pluginsdk.g;
-import com.tencent.mm.r.j;
+import com.tencent.mm.t.j;
 
 final class MobileLoginOrForceReg$4
   implements Runnable
@@ -16,14 +18,14 @@ final class MobileLoginOrForceReg$4
   
   public final void run()
   {
-    MobileLoginOrForceReg.a(kyq, ((v)aoT).CE());
-    ag.bAw.H("login_user_name", kwj);
-    com.tencent.mm.loader.stub.b.deleteFile(d.bur + "temp.avatar");
-    Intent localIntent = a.coa.ak(kyq);
+    MobileLoginOrForceReg.a(kXx, ((t)acZ).CR());
+    ag.btA.E("login_user_name", kVq);
+    e.deleteFile(d.biR + "temp.avatar");
+    Intent localIntent = a.cjo.ag(kXx);
     localIntent.addFlags(67108864);
-    kyq.startActivity(localIntent);
-    com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + getClass().getName() + ",R200_600," + ah.fd("R200_600") + ",4");
-    kyq.finish();
+    kXx.startActivity(localIntent);
+    b.lm(ah.ty() + "," + getClass().getName() + ",R200_600," + ah.fq("R200_600") + ",4");
+    kXx.finish();
   }
 }
 

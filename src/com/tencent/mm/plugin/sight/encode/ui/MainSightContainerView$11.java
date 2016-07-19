@@ -11,8 +11,8 @@ final class MainSightContainerView$11
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b.ay(gCA.getContext());
-    gCA.n(true, true);
+    b.av(gJb.getContext());
+    gJb.q(true, true);
   }
 }
 

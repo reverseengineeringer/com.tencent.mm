@@ -11,7 +11,7 @@ final class NotifyReceiver$a$1
   public final void run()
   {
     ah.hold();
-    MMAppMgr.hk(true);
+    MMAppMgr.hI(true);
   }
 }
 

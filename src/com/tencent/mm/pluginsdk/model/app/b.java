@@ -1,6 +1,6 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-import com.tencent.mm.d.b.d;
+import com.tencent.mm.e.b.d;
 import com.tencent.mm.sdk.h.c.a;
 import java.lang.reflect.Field;
 import java.util.Map;
@@ -8,80 +8,84 @@ import java.util.Map;
 public final class b
   extends d
 {
-  protected static c.a aot;
+  protected static c.a bjR;
   
   static
   {
     c.a locala = new c.a();
-    ceD = new Field[16];
-    blR = new String[17];
+    bZI = new Field[17];
+    aZx = new String[18];
     StringBuilder localStringBuilder = new StringBuilder();
-    blR[0] = "appId";
-    jYx.put("appId", "TEXT");
+    aZx[0] = "appId";
+    kyU.put("appId", "TEXT");
     localStringBuilder.append(" appId TEXT");
     localStringBuilder.append(", ");
-    blR[1] = "sdkVer";
-    jYx.put("sdkVer", "LONG");
+    aZx[1] = "sdkVer";
+    kyU.put("sdkVer", "LONG");
     localStringBuilder.append(" sdkVer LONG");
     localStringBuilder.append(", ");
-    blR[2] = "mediaSvrId";
-    jYx.put("mediaSvrId", "TEXT");
+    aZx[2] = "mediaSvrId";
+    kyU.put("mediaSvrId", "TEXT");
     localStringBuilder.append(" mediaSvrId TEXT");
     localStringBuilder.append(", ");
-    blR[3] = "mediaId";
-    jYx.put("mediaId", "TEXT");
+    aZx[3] = "mediaId";
+    kyU.put("mediaId", "TEXT");
     localStringBuilder.append(" mediaId TEXT");
     localStringBuilder.append(", ");
-    blR[4] = "clientAppDataId";
-    jYx.put("clientAppDataId", "TEXT");
+    aZx[4] = "clientAppDataId";
+    kyU.put("clientAppDataId", "TEXT");
     localStringBuilder.append(" clientAppDataId TEXT");
     localStringBuilder.append(", ");
-    blR[5] = "type";
-    jYx.put("type", "LONG");
+    aZx[5] = "type";
+    kyU.put("type", "LONG");
     localStringBuilder.append(" type LONG");
     localStringBuilder.append(", ");
-    blR[6] = "totalLen";
-    jYx.put("totalLen", "LONG");
+    aZx[6] = "totalLen";
+    kyU.put("totalLen", "LONG");
     localStringBuilder.append(" totalLen LONG");
     localStringBuilder.append(", ");
-    blR[7] = "offset";
-    jYx.put("offset", "LONG");
+    aZx[7] = "offset";
+    kyU.put("offset", "LONG");
     localStringBuilder.append(" offset LONG");
     localStringBuilder.append(", ");
-    blR[8] = "status";
-    jYx.put("status", "LONG");
+    aZx[8] = "status";
+    kyU.put("status", "LONG");
     localStringBuilder.append(" status LONG");
     localStringBuilder.append(", ");
-    blR[9] = "isUpload";
-    jYx.put("isUpload", "INTEGER");
+    aZx[9] = "isUpload";
+    kyU.put("isUpload", "INTEGER");
     localStringBuilder.append(" isUpload INTEGER");
     localStringBuilder.append(", ");
-    blR[10] = "createTime";
-    jYx.put("createTime", "LONG");
+    aZx[10] = "createTime";
+    kyU.put("createTime", "LONG");
     localStringBuilder.append(" createTime LONG");
     localStringBuilder.append(", ");
-    blR[11] = "lastModifyTime";
-    jYx.put("lastModifyTime", "LONG");
+    aZx[11] = "lastModifyTime";
+    kyU.put("lastModifyTime", "LONG");
     localStringBuilder.append(" lastModifyTime LONG");
     localStringBuilder.append(", ");
-    blR[12] = "fileFullPath";
-    jYx.put("fileFullPath", "TEXT");
+    aZx[12] = "fileFullPath";
+    kyU.put("fileFullPath", "TEXT");
     localStringBuilder.append(" fileFullPath TEXT");
     localStringBuilder.append(", ");
-    blR[13] = "msgInfoId";
-    jYx.put("msgInfoId", "LONG");
+    aZx[13] = "msgInfoId";
+    kyU.put("msgInfoId", "LONG");
     localStringBuilder.append(" msgInfoId LONG");
     localStringBuilder.append(", ");
-    blR[14] = "netTimes";
-    jYx.put("netTimes", "LONG");
+    aZx[14] = "netTimes";
+    kyU.put("netTimes", "LONG");
     localStringBuilder.append(" netTimes LONG");
     localStringBuilder.append(", ");
-    blR[15] = "isUseCdn";
-    jYx.put("isUseCdn", "INTEGER");
+    aZx[15] = "isUseCdn";
+    kyU.put("isUseCdn", "INTEGER");
     localStringBuilder.append(" isUseCdn INTEGER");
-    blR[16] = "rowid";
-    jYy = localStringBuilder.toString();
-    aot = locala;
+    localStringBuilder.append(", ");
+    aZx[16] = "signature";
+    kyU.put("signature", "TEXT");
+    localStringBuilder.append(" signature TEXT");
+    aZx[17] = "rowid";
+    kyV = localStringBuilder.toString();
+    bjR = locala;
   }
   
   public b()
@@ -89,7 +93,7 @@ public final class b
     field_netTimes = 0L;
   }
   
-  public final boolean aPA()
+  public final boolean aUi()
   {
     if (field_totalLen <= 0L) {}
     while (field_offset != field_totalLen) {
@@ -98,9 +102,9 @@ public final class b
     return true;
   }
   
-  protected final c.a ls()
+  protected final c.a ou()
   {
-    return aot;
+    return bjR;
   }
 }
 

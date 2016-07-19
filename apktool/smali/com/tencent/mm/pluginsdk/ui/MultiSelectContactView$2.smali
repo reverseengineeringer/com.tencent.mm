@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iHi:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+.field final synthetic jed:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 105
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$2;->iHi:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$2;->jed:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,7 +51,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$2;->iHi:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$2;->jed:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->c(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)Lcom/tencent/mm/ui/widget/MMEditText;
 
@@ -63,7 +63,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$2;->iHi:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$2;->jed:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->c(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)Lcom/tencent/mm/ui/widget/MMEditText;
 
@@ -76,7 +76,7 @@
     if-nez v0, :cond_0
 
     .line 110
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$2;->iHi:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$2;->jed:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->d(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)V
 

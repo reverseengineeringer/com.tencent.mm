@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static bxf:Lcom/tencent/mm/loader/stub/c;
+.field public static bph:Lcom/tencent/mm/loader/stub/c;
 
 
 # instance fields
-.field public final bxg:Landroid/content/SharedPreferences;
+.field public final bpi:Landroid/content/SharedPreferences;
 
 
 # direct methods
@@ -23,7 +23,7 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/loader/stub/c;-><init>(Landroid/content/SharedPreferences;)V
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/c;->bxf:Lcom/tencent/mm/loader/stub/c;
+    sput-object v0, Lcom/tencent/mm/loader/stub/c;->bph:Lcom/tencent/mm/loader/stub/c;
 
     return-void
 .end method
@@ -39,11 +39,11 @@
     if-nez p1, :cond_0
 
     .line 22
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v1
 
@@ -53,7 +53,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/loader/stub/c;->bxg:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/tencent/mm/loader/stub/c;->bpi:Landroid/content/SharedPreferences;
 
     .line 26
     :goto_0
@@ -61,19 +61,19 @@
 
     .line 24
     :cond_0
-    iput-object p1, p0, Lcom/tencent/mm/loader/stub/c;->bxg:Landroid/content/SharedPreferences;
+    iput-object p1, p0, Lcom/tencent/mm/loader/stub/c;->bpi:Landroid/content/SharedPreferences;
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final A(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public final x(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 33
-    iget-object v0, p0, Lcom/tencent/mm/loader/stub/c;->bxg:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/tencent/mm/loader/stub/c;->bpi:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/aq6" style="@style/MMSearchListNormalItem">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/alt" android:layout_width="@dimen/hz" android:layout_height="@dimen/hz" android:layout_marginRight="10.0dip" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/fr" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="{tip}" android:layout_weight="1.0" style="@style/MMFontTitleInList" />
+    </LinearLayout>
+</RelativeLayout>

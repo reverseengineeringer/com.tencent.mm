@@ -3,7 +3,7 @@ package com.tencent.mm.ui.bindqq;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 
 final class BindQQUI$10
   implements DialogInterface.OnClickListener
@@ -13,9 +13,9 @@ final class BindQQUI$10
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface = new Intent();
-    paramDialogInterface.putExtra("kintent_hint", kPv.getString(2131428229));
+    paramDialogInterface.putExtra("kintent_hint", loL.getString(2131235172));
     paramDialogInterface.putExtra("from_unbind", true);
-    c.a(kPv, "accountsync", "com.tencent.mm.ui.account.RegByMobileSetPwdUI", paramDialogInterface, 1);
+    c.a(loL, "accountsync", "com.tencent.mm.ui.account.RegByMobileSetPwdUI", paramDialogInterface, 1);
   }
 }
 

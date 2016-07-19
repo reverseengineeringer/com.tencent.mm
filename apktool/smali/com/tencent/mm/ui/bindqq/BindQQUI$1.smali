@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindqq/BindQQUI;->Gb()V
+    value = Lcom/tencent/mm/ui/bindqq/BindQQUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPv:Lcom/tencent/mm/ui/bindqq/BindQQUI;
+.field final synthetic loL:Lcom/tencent/mm/ui/bindqq/BindQQUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 87
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$1;->kPv:Lcom/tencent/mm/ui/bindqq/BindQQUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$1;->loL:Lcom/tencent/mm/ui/bindqq/BindQQUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 91
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$1;->kPv:Lcom/tencent/mm/ui/bindqq/BindQQUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$1;->loL:Lcom/tencent/mm/ui/bindqq/BindQQUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindqq/BindQQUI;->a(Lcom/tencent/mm/ui/bindqq/BindQQUI;)V
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hfZ:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
+.field final synthetic huP:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 676
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->hfZ:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
+    .line 678
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->huP:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,33 +40,33 @@
     .locals 1
 
     .prologue
-    .line 680
+    .line 682
     if-eqz p2, :cond_0
 
-    .line 681
-    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->hfY:Ljava/util/Set;
+    .line 683
+    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->eLI:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 685
+    .line 687
     :goto_0
     return-void
 
-    .line 683
+    .line 685
     :cond_0
-    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->hfY:Ljava/util/Set;
+    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->eLI:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     goto :goto_0
 .end method
 
-.method public final aCe()Z
+.method public final agI()Z
     .locals 1
 
     .prologue
-    .line 689
-    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->hfY:Ljava/util/Set;
+    .line 691
+    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->eLI:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
@@ -85,12 +85,12 @@
     goto :goto_0
 .end method
 
-.method public final aCf()V
+.method public final agJ()V
     .locals 2
 
     .prologue
-    .line 694
-    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->hfY:Ljava/util/Set;
+    .line 696
+    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->eLI:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -110,30 +110,30 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MMSlideDelView;
 
-    .line 695
+    .line 697
     if-eqz v0, :cond_0
 
-    .line 696
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMSlideDelView;->bcR()V
+    .line 698
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMSlideDelView;->biq()V
 
     goto :goto_0
 
-    .line 699
+    .line 701
     :cond_1
-    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->hfY:Ljava/util/Set;
+    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->eLI:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 700
+    .line 702
     return-void
 .end method
 
-.method public final aCg()V
+.method public final agK()V
     .locals 2
 
     .prologue
-    .line 704
-    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->hfY:Ljava/util/Set;
+    .line 706
+    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->eLI:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -153,20 +153,20 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MMSlideDelView;
 
-    .line 705
+    .line 707
     if-eqz v0, :cond_0
 
-    .line 706
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMSlideDelView;->bcQ()V
+    .line 708
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMSlideDelView;->bip()V
 
     goto :goto_0
 
-    .line 709
+    .line 711
     :cond_1
-    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->hfY:Ljava/util/Set;
+    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$1;->eLI:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 710
+    .line 712
     return-void
 .end method

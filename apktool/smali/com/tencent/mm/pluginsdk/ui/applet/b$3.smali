@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/pluginsdk/ui/applet/b;->fZ(Ljava/lang/String;)V
+    value = Lcom/tencent/mm/pluginsdk/ui/applet/b;->gm(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+.field final synthetic jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 199
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$3;->iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$3;->jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,13 +43,13 @@
     const/4 v3, 0x0
 
     .line 204
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$3;->iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$3;->jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/b;->iIa:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/b;->jeX:Lcom/tencent/mm/ui/base/h;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/h;->kCH:Landroid/widget/LinearLayout;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/h;->lbM:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f07108d
+    const v1, 0x7f1004ea
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -61,26 +61,26 @@
     if-eqz v0, :cond_1
 
     .line 206
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$3;->iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$3;->jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/b;->dsm:Lcom/tencent/mm/storage/k;
+    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/b;->dsC:Lcom/tencent/mm/storage/k;
 
-    iget-object v1, v1, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     const/4 v2, -0x1
 
-    invoke-static {v1, v3, v2}, Lcom/tencent/mm/q/b;->a(Ljava/lang/String;ZI)Landroid/graphics/Bitmap;
+    invoke-static {v1, v3, v2}, Lcom/tencent/mm/s/b;->a(Ljava/lang/String;ZI)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
     .line 207
     if-eqz v1, :cond_0
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$3;->iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$3;->jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/applet/b;->dsm:Lcom/tencent/mm/storage/k;
+    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/applet/b;->dsC:Lcom/tencent/mm/storage/k;
 
-    invoke-virtual {v2}, Lcom/tencent/mm/storage/k;->aWp()Z
+    invoke-virtual {v2}, Lcom/tencent/mm/storage/k;->bbC()Z
 
     move-result v2
 

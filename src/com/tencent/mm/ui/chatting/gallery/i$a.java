@@ -1,15 +1,15 @@
 package com.tencent.mm.ui.chatting.gallery;
 
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.storage.ai;
 
 public final class i$a
 {
-  public ag ask;
+  public ai aec;
   public int pos;
   
-  public i$a(ag paramag, int paramInt)
+  public i$a(ai paramai, int paramInt)
   {
-    ask = paramag;
+    aec = paramai;
     pos = paramInt;
   }
 }

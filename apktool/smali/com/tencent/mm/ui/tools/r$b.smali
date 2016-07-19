@@ -15,20 +15,20 @@
 
 
 # virtual methods
-.method public abstract Gd()V
+.method public abstract GA()V
 .end method
 
-.method public abstract Ge()V
+.method public abstract GB()V
 .end method
 
-.method public abstract Gf()V
+.method public abstract GC()V
 .end method
 
-.method public abstract Gg()V
+.method public abstract GD()V
 .end method
 
-.method public abstract kE(Ljava/lang/String;)Z
+.method public abstract ln(Ljava/lang/String;)Z
 .end method
 
-.method public abstract kF(Ljava/lang/String;)V
+.method public abstract lo(Ljava/lang/String;)V
 .end method

@@ -8,7 +8,7 @@ public abstract interface s$b
 {
   public abstract String a(int paramInt1, String paramString1, String paramString2, int paramInt2, Context paramContext);
   
-  public abstract void a(ag paramag, PString paramPString1, PString paramPString2, PInt paramPInt, boolean paramBoolean);
+  public abstract void a(ai paramai, PString paramPString1, PString paramPString2, PInt paramPInt, boolean paramBoolean);
 }
 
 /* Location:

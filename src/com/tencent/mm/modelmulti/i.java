@@ -1,60 +1,69 @@
 package com.tencent.mm.modelmulti;
 
+import com.tencent.mm.jni.platformcomm.WakerLock;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.network.e;
-import com.tencent.mm.network.o;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.x.a;
-import com.tencent.mm.protocal.x.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.platformtools.s;
+import com.tencent.mm.protocal.aa.a;
+import com.tencent.mm.protocal.aa.b;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.protocal.l;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
 
 public final class i
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  private final o bGh = new a();
+  private WakerLock aZr = new WakerLock(aa.getContext());
+  private d bkT;
+  private final com.tencent.mm.network.o bzs;
   
   public i()
   {
-    if ((ah.tD() != null) && (ah.tD().rn() != null))
+    aZr.lock(3000L, "NetSceneSynCheck");
+    bzs = new a();
+    if ((ah.tE() != null) && (ah.tE().ro() != null))
     {
-      String str = (String)ah.tD().rn().get(8195, null);
-      bGh.vA()).bVi = t.kA(str);
-      bGh.vA()).uin = tDuin;
-      bGh.vA()).netType = com.tencent.mm.protocal.i.cn(y.getContext());
-      bGh.vA()).iUN = com.tencent.mm.protocal.i.aTs();
-      u.d("MicroMsg.MMSyncCheck", "NetSceneSynCheck");
+      String str = (String)ah.tE().ro().get(8195, null);
+      bzs.vC()).bOJ = s.lj(str);
+      bzs.vC()).uin = tEuin;
+      bzs.vC()).netType = l.ci(aa.getContext());
+      bzs.vC()).jsk = l.aYp();
+      v.d("MicroMsg.MMSyncCheck", "NetSceneSynCheck");
       return;
     }
-    u.e("!44@/B4Tb64lLpK+IBX8XDgnvu5u9K1H+kdxmklhbC1aTkU=", "[arthurdan.NetSceneSynCheckCrash] Notice!!! MMCore.getAccStg() is null");
+    v.e("MicroMsg.NetSceneSynCheck", "[arthurdan.NetSceneSynCheckCrash] Notice!!! MMCore.getAccStg() is null");
   }
   
   public final int a(e parame, d paramd)
   {
-    anM = paramd;
-    return a(parame, bGh, this);
+    bkT = paramd;
+    int i = a(parame, bzs, this);
+    if ((i == -1) && (aZr.isLocking())) {
+      aZr.unLock();
+    }
+    return i;
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, com.tencent.mm.network.o paramo, byte[] paramArrayOfByte)
   {
-    paramArrayOfByte = (x.b)paramo.tX();
-    u.i("!44@/B4Tb64lLpK+IBX8XDgnvu5u9K1H+kdxmklhbC1aTkU=", "new syncCheck complete, selector=" + iVp);
-    if ((ah.rh()) && (!ah.tM()))
+    paramArrayOfByte = (aa.b)paramo.tY();
+    v.i("MicroMsg.NetSceneSynCheck", "new syncCheck complete, selector=" + jsM);
+    if ((ah.rg()) && (!ah.tN()))
     {
-      paramo = vAbBg;
-      if (t.J(paramo)) {
-        u.e("!44@/B4Tb64lLpK+IBX8XDgnvu5u9K1H+kdxmklhbC1aTkU=", "onGYNetEnd md5 is null");
+      paramo = vCbul;
+      if (s.P(paramo)) {
+        v.e("MicroMsg.NetSceneSynCheck", "onGYNetEnd md5 is null");
       }
-      bBg = paramo;
-      l.Be().a(iVp, 2, paramArrayOfByte.aTu());
+      bul = paramo;
+      m.Bd().a(jsM, 2, paramArrayOfByte.aYr());
     }
-    anM.a(paramInt2, paramInt3, paramString, this);
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+    aZr.unLock();
   }
   
   public final int getType()
@@ -62,11 +71,16 @@ public final class i
     return 39;
   }
   
-  public static final class a
-    extends com.tencent.mm.r.h
+  public final boolean vE()
   {
-    private final x.a bVv = new x.a();
-    private final x.b bVw = new x.b();
+    return true;
+  }
+  
+  public static final class a
+    extends com.tencent.mm.t.h
+  {
+    private final aa.a bOW = new aa.a();
+    private final aa.b bOX = new aa.b();
     
     public final int getType()
     {
@@ -78,17 +92,17 @@ public final class i
       return null;
     }
     
-    protected final h.c tW()
+    protected final k.c tX()
     {
-      return bVv;
+      return bOW;
     }
     
-    public final h.d tX()
+    public final k.d tY()
     {
-      return bVw;
+      return bOX;
     }
     
-    public final int vx()
+    public final int vz()
     {
       return 1;
     }

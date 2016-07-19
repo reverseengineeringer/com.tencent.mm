@@ -53,7 +53,7 @@
     move-result-object v0
 
     .line 32
-    const-string/jumbo v1, "!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0="
+    const-string/jumbo v1, "MicroMsg.InstallReceiver"
 
     const-string/jumbo v2, "action:[%s]"
 
@@ -61,10 +61,10 @@
 
     aput-object v0, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 33
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -80,11 +80,11 @@
 
     .line 34
     :cond_2
-    const-string/jumbo v0, "!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0="
+    const-string/jumbo v0, "MicroMsg.InstallReceiver"
 
     const-string/jumbo v1, "action is null or nil, or not the installed action"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -104,7 +104,7 @@
 
     .line 44
     :goto_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0="
+    const-string/jumbo v1, "MicroMsg.InstallReceiver"
 
     const-string/jumbo v2, "get referer:[%s]"
 
@@ -112,21 +112,21 @@
 
     aput-object v0, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 45
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
     .line 46
-    const-string/jumbo v0, "!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0="
+    const-string/jumbo v0, "MicroMsg.InstallReceiver"
 
     const-string/jumbo v1, "get referer is null or nil"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -135,25 +135,25 @@
     move-exception v1
 
     .line 42
-    const-string/jumbo v2, "!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0="
+    const-string/jumbo v2, "MicroMsg.InstallReceiver"
 
     const-string/jumbo v3, "%s"
 
     new-array v4, v6, [Ljava/lang/Object;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v1
 
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
     .line 50
     :cond_4
-    const-string/jumbo v1, "!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0="
+    const-string/jumbo v1, "MicroMsg.InstallReceiver"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -169,10 +169,10 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 51
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v1
 

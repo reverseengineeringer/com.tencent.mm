@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method public static Dx()V
+.method public static DN()V
     .locals 4
 
     .prologue
@@ -47,7 +47,7 @@
     .line 119
     new-instance v1, Landroid/content/ComponentName;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -67,7 +67,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 121
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -77,7 +77,7 @@
     return-void
 .end method
 
-.method public static a(Lcom/tencent/mm/modelstat/b;)V
+.method public static a(Lcom/tencent/mm/modelstat/d;)V
     .locals 4
 
     .prologue
@@ -94,7 +94,7 @@
     .line 95
     new-instance v1, Landroid/content/ComponentName;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -116,61 +116,61 @@
     .line 97
     const-string/jumbo v1, "rtType"
 
-    iget v2, p0, Lcom/tencent/mm/modelstat/b;->rtType:I
+    iget v2, p0, Lcom/tencent/mm/modelstat/d;->rtType:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 98
     const-string/jumbo v1, "beginTime"
 
-    iget-wide v2, p0, Lcom/tencent/mm/modelstat/b;->beginTime:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelstat/d;->beginTime:J
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     .line 99
     const-string/jumbo v1, "endTime"
 
-    iget-wide v2, p0, Lcom/tencent/mm/modelstat/b;->endTime:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelstat/d;->endTime:J
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     .line 100
     const-string/jumbo v1, "rtType"
 
-    iget v2, p0, Lcom/tencent/mm/modelstat/b;->rtType:I
+    iget v2, p0, Lcom/tencent/mm/modelstat/d;->rtType:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 101
     const-string/jumbo v1, "dataLen"
 
-    iget-wide v2, p0, Lcom/tencent/mm/modelstat/b;->cdg:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelstat/d;->bYg:J
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     .line 102
     const-string/jumbo v1, "isSend"
 
-    iget-boolean v2, p0, Lcom/tencent/mm/modelstat/b;->bLg:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/modelstat/d;->bEA:Z
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 103
     const-string/jumbo v1, "cost"
 
-    iget-wide v2, p0, Lcom/tencent/mm/modelstat/b;->cdi:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelstat/d;->bYi:J
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     .line 104
     const-string/jumbo v1, "doSceneCount"
 
-    iget-wide v2, p0, Lcom/tencent/mm/modelstat/b;->cdh:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelstat/d;->bYh:J
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     .line 105
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -180,12 +180,12 @@
     return-void
 .end method
 
-.method public static eb(I)V
+.method public static eI(I)V
     .locals 4
 
     .prologue
     .line 135
-    invoke-static {}, Lcom/tencent/mm/sdk/b/b;->aUo()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/b/b;->aZo()Z
 
     move-result v0
 
@@ -209,7 +209,7 @@
     .line 140
     new-instance v1, Landroid/content/ComponentName;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -234,7 +234,7 @@
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 143
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -250,7 +250,7 @@
     .line 86
     sget-object v0, Lcom/tencent/mm/modelstat/WatchDogPushReceiver;->className:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -261,7 +261,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -304,11 +304,11 @@
     if-nez p2, :cond_1
 
     .line 35
-    const-string/jumbo v0, "!44@/B4Tb64lLpKEPjPLln9Idp+6rq1MKr03FVcWSWrfMmw="
+    const-string/jumbo v0, "MicroMsg.WatchDogPushReceiver"
 
     const-string/jumbo v1, "onReceive intent == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 81
     :cond_0
@@ -324,7 +324,7 @@
     move-result v0
 
     .line 40
-    const-string/jumbo v1, "!44@/B4Tb64lLpKEPjPLln9Idp+6rq1MKr03FVcWSWrfMmw="
+    const-string/jumbo v1, "MicroMsg.WatchDogPushReceiver"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -340,7 +340,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 41
     if-ne v0, v5, :cond_4
@@ -357,27 +357,27 @@
 
     move-result v1
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    iput-wide v1, v0, Lcom/tencent/mm/network/a/a$a;->rtType:J
+    iput-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->rtType:J
 
     .line 44
     const-string/jumbo v1, "beginTime"
 
     invoke-virtual {p2, v1, v6, v7}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcom/tencent/mm/network/a/a$a;->beginTime:J
+    iput-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->beginTime:J
 
     .line 45
     const-string/jumbo v1, "endTime"
 
     invoke-virtual {p2, v1, v6, v7}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcom/tencent/mm/network/a/a$a;->endTime:J
+    iput-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->endTime:J
 
     .line 46
     const-string/jumbo v1, "isSend"
@@ -396,7 +396,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->ckk:J
+    iput-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->cfC:J
 
     .line 53
     :goto_1
@@ -406,7 +406,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->cdi:J
+    iput-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->bYi:J
 
     .line 54
     const-string/jumbo v2, "doSceneCount"
@@ -415,10 +415,10 @@
 
     move-result-wide v2
 
-    iput-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->ckl:J
+    iput-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->cfD:J
 
     .line 56
-    const-string/jumbo v2, "!44@/B4Tb64lLpKEPjPLln9Idp+6rq1MKr03FVcWSWrfMmw="
+    const-string/jumbo v2, "MicroMsg.WatchDogPushReceiver"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -448,9 +448,9 @@
 
     move-result-object v1
 
-    iget-wide v3, v0, Lcom/tencent/mm/network/a/a$a;->ckj:J
+    iget-wide v4, v0, Lcom/tencent/mm/network/a/a$a;->cfB:J
 
-    invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -460,9 +460,9 @@
 
     move-result-object v1
 
-    iget-wide v3, v0, Lcom/tencent/mm/network/a/a$a;->ckk:J
+    iget-wide v4, v0, Lcom/tencent/mm/network/a/a$a;->cfC:J
 
-    invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -472,9 +472,9 @@
 
     move-result-object v1
 
-    iget-wide v3, v0, Lcom/tencent/mm/network/a/a$a;->beginTime:J
+    iget-wide v4, v0, Lcom/tencent/mm/network/a/a$a;->beginTime:J
 
-    invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -484,9 +484,9 @@
 
     move-result-object v1
 
-    iget-wide v3, v0, Lcom/tencent/mm/network/a/a$a;->endTime:J
+    iget-wide v4, v0, Lcom/tencent/mm/network/a/a$a;->endTime:J
 
-    invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -494,46 +494,46 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 58
-    iget-wide v1, v0, Lcom/tencent/mm/network/a/a$a;->ckl:J
+    iget-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->cfD:J
 
-    cmp-long v1, v1, v6
-
-    if-eqz v1, :cond_2
-
-    iget-wide v1, v0, Lcom/tencent/mm/network/a/a$a;->rtType:J
-
-    cmp-long v1, v1, v6
+    cmp-long v1, v2, v6
 
     if-eqz v1, :cond_2
 
-    iget-wide v1, v0, Lcom/tencent/mm/network/a/a$a;->beginTime:J
+    iget-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->rtType:J
 
-    cmp-long v1, v1, v6
-
-    if-eqz v1, :cond_2
-
-    iget-wide v1, v0, Lcom/tencent/mm/network/a/a$a;->endTime:J
-
-    cmp-long v1, v1, v6
+    cmp-long v1, v2, v6
 
     if-eqz v1, :cond_2
 
-    iget-wide v1, v0, Lcom/tencent/mm/network/a/a$a;->endTime:J
+    iget-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->beginTime:J
 
-    iget-wide v3, v0, Lcom/tencent/mm/network/a/a$a;->beginTime:J
+    cmp-long v1, v2, v6
 
-    sub-long/2addr v1, v3
+    if-eqz v1, :cond_2
 
-    cmp-long v1, v1, v6
+    iget-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->endTime:J
+
+    cmp-long v1, v2, v6
+
+    if-eqz v1, :cond_2
+
+    iget-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->endTime:J
+
+    iget-wide v4, v0, Lcom/tencent/mm/network/a/a$a;->beginTime:J
+
+    sub-long/2addr v2, v4
+
+    cmp-long v1, v2, v6
 
     if-gtz v1, :cond_0
 
     .line 59
     :cond_2
-    const-string/jumbo v1, "!44@/B4Tb64lLpKEPjPLln9Idp+6rq1MKr03FVcWSWrfMmw="
+    const-string/jumbo v1, "MicroMsg.WatchDogPushReceiver"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -541,9 +541,9 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v3, v0, Lcom/tencent/mm/network/a/a$a;->ckl:J
+    iget-wide v4, v0, Lcom/tencent/mm/network/a/a$a;->cfD:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -553,9 +553,9 @@
 
     move-result-object v2
 
-    iget-wide v3, v0, Lcom/tencent/mm/network/a/a$a;->rtType:J
+    iget-wide v4, v0, Lcom/tencent/mm/network/a/a$a;->rtType:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -565,9 +565,9 @@
 
     move-result-object v2
 
-    iget-wide v3, v0, Lcom/tencent/mm/network/a/a$a;->beginTime:J
+    iget-wide v4, v0, Lcom/tencent/mm/network/a/a$a;->beginTime:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -577,9 +577,9 @@
 
     move-result-object v2
 
-    iget-wide v3, v0, Lcom/tencent/mm/network/a/a$a;->endTime:J
+    iget-wide v4, v0, Lcom/tencent/mm/network/a/a$a;->endTime:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -587,7 +587,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -599,7 +599,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->ckj:J
+    iput-wide v2, v0, Lcom/tencent/mm/network/a/a$a;->cfB:J
 
     goto/16 :goto_1
 
@@ -624,7 +624,7 @@
 
     if-ne v0, v1, :cond_6
 
-    invoke-static {}, Lcom/tencent/mm/sdk/b/b;->aUo()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/b/b;->aZo()Z
 
     move-result v1
 
@@ -688,7 +688,7 @@
     if-ne v0, v1, :cond_0
 
     .line 79
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->appenderFlush()V
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->appenderFlush()V
 
     goto/16 :goto_0
 .end method

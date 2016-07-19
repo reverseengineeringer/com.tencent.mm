@@ -4,7 +4,7 @@ import android.graphics.SurfaceTexture;
 import android.media.MediaPlayer;
 import android.view.Surface;
 import android.view.TextureView.SurfaceTextureListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class VideoTextureView$5
   implements TextureView.SurfaceTextureListener
@@ -13,37 +13,34 @@ final class VideoTextureView$5
   
   public final void onSurfaceTextureAvailable(SurfaceTexture paramSurfaceTexture, int paramInt1, int paramInt2)
   {
-    u.i("!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU=", "on texture available %d*%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-    iTe.bcZ();
-    VideoTextureView.a(iTe, new Surface(paramSurfaceTexture));
-    VideoTextureView.k(iTe);
+    v.i("MicroMsg.VideoTextureView", "on texture available %d*%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    jqr.biB();
+    VideoTextureView.a(jqr, new Surface(paramSurfaceTexture));
+    VideoTextureView.k(jqr);
   }
   
   public final boolean onSurfaceTextureDestroyed(SurfaceTexture paramSurfaceTexture)
   {
-    u.i("!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU=", "on texture destroyed");
-    VideoTextureView.a(iTe, null);
-    if (VideoTextureView.g(iTe) != null)
+    v.i("MicroMsg.VideoTextureView", "on texture destroyed");
+    VideoTextureView.a(jqr, null);
+    if (VideoTextureView.g(jqr) != null)
     {
-      VideoTextureView.g(iTe).stop();
-      VideoTextureView.g(iTe).release();
-      VideoTextureView.j(iTe);
+      VideoTextureView.g(jqr).stop();
+      VideoTextureView.g(jqr).release();
+      VideoTextureView.j(jqr);
     }
     return false;
   }
   
   public final void onSurfaceTextureSizeChanged(SurfaceTexture paramSurfaceTexture, int paramInt1, int paramInt2)
   {
-    u.i("!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU=", "on texture size changed");
-    if ((VideoTextureView.g(iTe) != null) && (VideoTextureView.i(iTe)) && (VideoTextureView.a(iTe) == paramInt1) && (VideoTextureView.b(iTe) == paramInt2)) {
-      VideoTextureView.g(iTe).start();
+    v.i("MicroMsg.VideoTextureView", "on texture size changed");
+    if ((VideoTextureView.g(jqr) != null) && (VideoTextureView.i(jqr)) && (VideoTextureView.a(jqr) == paramInt1) && (VideoTextureView.b(jqr) == paramInt2)) {
+      VideoTextureView.g(jqr).start();
     }
   }
   
-  public final void onSurfaceTextureUpdated(SurfaceTexture paramSurfaceTexture)
-  {
-    u.i("!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU=", "on texture updated");
-  }
+  public final void onSurfaceTextureUpdated(SurfaceTexture paramSurfaceTexture) {}
 }
 
 /* Location:

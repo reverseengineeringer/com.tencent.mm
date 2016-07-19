@@ -1,15 +1,16 @@
 package com.tencent.mm.console;
 
-import com.tencent.mm.sdk.platformtools.u;
+import android.content.Intent;
+import com.tencent.mm.platformtools.q;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class Shell$9
-  implements Runnable
+  implements Shell.a
 {
-  public final void run()
+  public final void j(Intent paramIntent)
   {
-    u.d("!24@/B4Tb64lLpLOIdMtS2bKaA==", "dkcrash begin tid:%d [%s]", new Object[] { Long.valueOf(Thread.currentThread().getId()), Thread.currentThread().getName() });
-    Object[] arrayOfObject = new Object[1];
-    throw new NullPointerException();
+    q.ciW = paramIntent.getIntExtra("flag", 0);
+    v.w("MicroMsg.Shell", "dkwt shell [%d]", new Object[] { Integer.valueOf(q.ciW) });
   }
 }
 

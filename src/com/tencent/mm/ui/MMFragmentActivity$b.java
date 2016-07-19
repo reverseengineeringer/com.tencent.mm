@@ -6,10 +6,10 @@ import android.nfc.NfcAdapter;
 
 final class MMFragmentActivity$b
 {
-  NfcAdapter kqE;
-  IntentFilter[] kqF;
-  String[][] kqG;
-  PendingIntent mPendingIntent;
+  NfcAdapter kPJ;
+  IntentFilter[] kPK;
+  String[][] kPL;
+  PendingIntent xZ;
   
   private MMFragmentActivity$b(MMFragmentActivity paramMMFragmentActivity) {}
 }

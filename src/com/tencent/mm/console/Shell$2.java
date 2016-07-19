@@ -1,16 +1,15 @@
 package com.tencent.mm.console;
 
-import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class Shell$2
-  implements Shell.a
+  implements Runnable
 {
-  public final void i(Intent paramIntent)
+  public final void run()
   {
-    int i = paramIntent.getIntExtra("level", 0);
-    u.w("!24@/B4Tb64lLpLOIdMtS2bKaA==", "kiro set Log.level=%d", new Object[] { Integer.valueOf(u.getLogLevel()) });
-    u.pp(i);
+    v.d("MicroMsg.Shell", "dkcrash begin tid:%d [%s]", new Object[] { Long.valueOf(Thread.currentThread().getId()), Thread.currentThread().getName() });
+    Object[] arrayOfObject = new Object[1];
+    throw new NullPointerException();
   }
 }
 

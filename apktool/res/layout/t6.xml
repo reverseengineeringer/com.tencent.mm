@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:gravity="center" android:id="@id/b03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="62.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/ja" android:textColor="@color/pg" android:id="@id/b04" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:text="@string/b2a" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <FrameLayout android:id="@id/b05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="111.0dip" android:layout_marginRight="30.0dip">
+        <com.tencent.mm.plugin.gesture.ui.widget.PatternLockView android:id="@id/b06" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</RelativeLayout>

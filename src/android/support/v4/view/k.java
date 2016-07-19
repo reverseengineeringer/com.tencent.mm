@@ -12,18 +12,18 @@ final class k
   private static final class a
     extends SingleLineTransformationMethod
   {
-    private Locale fu;
+    private Locale fQ;
     
     public a(Context paramContext)
     {
-      fu = getResourcesgetConfigurationlocale;
+      fQ = getResourcesgetConfigurationlocale;
     }
     
     public final CharSequence getTransformation(CharSequence paramCharSequence, View paramView)
     {
       paramCharSequence = super.getTransformation(paramCharSequence, paramView);
       if (paramCharSequence != null) {
-        return paramCharSequence.toString().toUpperCase(fu);
+        return paramCharSequence.toString().toUpperCase(fQ);
       }
       return null;
     }

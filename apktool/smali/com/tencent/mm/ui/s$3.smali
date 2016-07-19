@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic krb:Lcom/tencent/mm/ui/s;
+.field final synthetic kQi:Lcom/tencent/mm/ui/s;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 533
-    iput-object p1, p0, Lcom/tencent/mm/ui/s$3;->krb:Lcom/tencent/mm/ui/s;
+    .line 534
+    iput-object p1, p0, Lcom/tencent/mm/ui/s$3;->kQi:Lcom/tencent/mm/ui/s;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,15 +40,15 @@
     .locals 4
 
     .prologue
-    .line 536
+    .line 537
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 537
+    .line 538
     new-instance v1, Landroid/content/ComponentName;
 
-    sget-object v2, Lcom/tencent/mm/ui/d$e;->kjL:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/ui/d$e;->kJT:Ljava/lang/String;
 
     const-string/jumbo v3, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"
 
@@ -56,15 +56,15 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 538
+    .line 539
     const-string/jumbo v1, "tools_process_action_code_key"
 
     const-string/jumbo v2, "com.tencent.mm.intent.ACTION_START_TOOLS_PROCESS"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 539
-    iget-object v1, p0, Lcom/tencent/mm/ui/s$3;->krb:Lcom/tencent/mm/ui/s;
+    .line 540
+    iget-object v1, p0, Lcom/tencent/mm/ui/s$3;->kQi:Lcom/tencent/mm/ui/s;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/s;->c(Lcom/tencent/mm/ui/s;)Landroid/content/Context;
 
@@ -72,6 +72,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 540
+    .line 541
     return-void
 .end method

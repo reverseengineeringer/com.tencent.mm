@@ -1,72 +1,89 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.model.ag;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.c.e;
+import com.tencent.mm.e.a.jn;
+import com.tencent.mm.model.q;
+import com.tencent.mm.model.r;
+import com.tencent.mm.sdk.c.c;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ao;
-import com.tencent.mm.sdk.platformtools.ao.a;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.an;
+import com.tencent.mm.sdk.platformtools.an.a;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public final class a
-  implements ag
+  implements q
 {
-  private ao bbG = new ao();
-  private ao.a bbH = new b(this);
-  private List bbI = new ArrayList();
-  private e bbJ;
+  private an aZb = new an();
+  private an.a aZc = new an.a()
+  {
+    public final void bP(int paramAnonymousInt)
+    {
+      switch (paramAnonymousInt)
+      {
+      default: 
+        return;
+      case 0: 
+        v.v("MicroMsg.BackgroundPlayer", "call end");
+        kF();
+        return;
+      }
+      v.v("MicroMsg.BackgroundPlayer", "call start");
+      kG();
+    }
+  };
+  private List<r> aZd = new ArrayList();
+  private c aZe;
   
   public a()
   {
-    bbG.a(bbH);
-    bbG.dd(aa.getContext());
-    if (bbJ == null) {
-      bbJ = new c(this);
+    aZb.a(aZc);
+    aZb.dK(aa.getContext());
+    if (aZe == null) {
+      aZe = new c() {};
     }
-    com.tencent.mm.sdk.c.a.hXQ.a("RecordStateChange", bbJ);
+    com.tencent.mm.sdk.c.a.kug.d(aZe);
   }
   
-  public final void a(ah paramah)
+  public final void a(r paramr)
   {
-    if (paramah != null)
+    if (paramr != null)
     {
-      t.d("!44@/B4Tb64lLpI7uCMufYgkMolJsZYezO/Lsg5Y9fbkrg4=", "add callback : %s", new Object[] { paramah.toString() });
-      bbI.add(paramah);
+      v.d("MicroMsg.BackgroundPlayer", "add callback : %s", new Object[] { paramr.toString() });
+      aZd.add(paramr);
     }
   }
   
-  public final void b(ah paramah)
+  public final void b(r paramr)
   {
-    if (paramah != null) {
-      bbI.remove(paramah);
+    if (paramr != null) {
+      aZd.remove(paramr);
     }
   }
   
-  public final void mM()
+  public final void kF()
   {
-    if (bbI == null) {}
+    if (aZd == null) {}
     for (;;)
     {
       return;
-      Iterator localIterator = bbI.iterator();
+      Iterator localIterator = aZd.iterator();
       while (localIterator.hasNext()) {
-        ((ah)localIterator.next()).sH();
+        ((r)localIterator.next()).sX();
       }
     }
   }
   
-  public final void mN()
+  public final void kG()
   {
-    if (bbI == null) {}
+    if (aZd == null) {}
     for (;;)
     {
       return;
-      Iterator localIterator = bbI.iterator();
+      Iterator localIterator = aZd.iterator();
       while (localIterator.hasNext()) {
-        ((ah)localIterator.next()).sI();
+        ((r)localIterator.next()).sY();
       }
     }
   }

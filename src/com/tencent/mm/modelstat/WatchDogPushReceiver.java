@@ -6,9 +6,10 @@ import android.content.Context;
 import android.content.Intent;
 import com.tencent.mm.network.a.a.a;
 import com.tencent.mm.protocal.MMProtocalJni;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.b.b;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import junit.framework.Assert;
@@ -18,49 +19,49 @@ public class WatchDogPushReceiver
 {
   private static String className = "";
   
-  public static void Dx()
+  public static void DN()
   {
     Intent localIntent = new Intent();
     localIntent.setAction("com.tencent.mm.WatchDogPushReceiver");
-    localIntent.setComponent(new ComponentName(y.getPackageName(), getClassName()));
+    localIntent.setComponent(new ComponentName(aa.getPackageName(), getClassName()));
     localIntent.putExtra("type", 3);
-    y.getContext().sendBroadcast(localIntent);
+    aa.getContext().sendBroadcast(localIntent);
   }
   
-  public static void a(b paramb)
+  public static void a(d paramd)
   {
     Intent localIntent = new Intent();
     localIntent.setAction("com.tencent.mm.WatchDogPushReceiver");
-    localIntent.setComponent(new ComponentName(y.getPackageName(), getClassName()));
+    localIntent.setComponent(new ComponentName(aa.getPackageName(), getClassName()));
     localIntent.putExtra("type", 1);
     localIntent.putExtra("rtType", rtType);
     localIntent.putExtra("beginTime", beginTime);
     localIntent.putExtra("endTime", endTime);
     localIntent.putExtra("rtType", rtType);
-    localIntent.putExtra("dataLen", cdg);
-    localIntent.putExtra("isSend", bLg);
-    localIntent.putExtra("cost", cdi);
-    localIntent.putExtra("doSceneCount", cdh);
-    y.getContext().sendBroadcast(localIntent);
+    localIntent.putExtra("dataLen", bYg);
+    localIntent.putExtra("isSend", bEA);
+    localIntent.putExtra("cost", bYi);
+    localIntent.putExtra("doSceneCount", bYh);
+    aa.getContext().sendBroadcast(localIntent);
   }
   
-  public static void eb(int paramInt)
+  public static void eI(int paramInt)
   {
-    if (!com.tencent.mm.sdk.b.b.aUo()) {
+    if (!b.aZo()) {
       return;
     }
     Intent localIntent = new Intent();
     localIntent.setAction("com.tencent.mm.WatchDogPushReceiver");
-    localIntent.setComponent(new ComponentName(y.getPackageName(), getClassName()));
+    localIntent.setComponent(new ComponentName(aa.getPackageName(), getClassName()));
     localIntent.putExtra("type", 5);
     localIntent.putExtra("jni", paramInt);
-    y.getContext().sendBroadcast(localIntent);
+    aa.getContext().sendBroadcast(localIntent);
   }
   
   private static String getClassName()
   {
-    if (ay.kz(className)) {
-      className = y.getPackageName() + ".modelstat.WatchDogPushReceiver";
+    if (be.kf(className)) {
+      className = aa.getPackageName() + ".modelstat.WatchDogPushReceiver";
     }
     return className;
   }
@@ -68,7 +69,7 @@ public class WatchDogPushReceiver
   public void onReceive(Context paramContext, Intent paramIntent)
   {
     if (paramIntent == null) {
-      u.e("!44@/B4Tb64lLpKEPjPLln9Idp+6rq1MKr03FVcWSWrfMmw=", "onReceive intent == null");
+      v.e("MicroMsg.WatchDogPushReceiver", "onReceive intent == null");
     }
     int i;
     do
@@ -77,7 +78,7 @@ public class WatchDogPushReceiver
       {
         return;
         i = paramIntent.getIntExtra("type", 0);
-        u.d("!44@/B4Tb64lLpKEPjPLln9Idp+6rq1MKr03FVcWSWrfMmw=", "onReceive type:" + i);
+        v.d("MicroMsg.WatchDogPushReceiver", "onReceive type:" + i);
         if (i == 1)
         {
           paramContext = new a.a();
@@ -86,23 +87,23 @@ public class WatchDogPushReceiver
           endTime = paramIntent.getLongExtra("endTime", 0L);
           boolean bool = paramIntent.getBooleanExtra("isSend", false);
           if (!bool) {
-            ckk = paramIntent.getLongExtra("dataLen", 0L);
+            cfC = paramIntent.getLongExtra("dataLen", 0L);
           }
           for (;;)
           {
-            cdi = paramIntent.getLongExtra("cost", 0L);
-            ckl = paramIntent.getLongExtra("doSceneCount", 0L);
-            u.d("!44@/B4Tb64lLpKEPjPLln9Idp+6rq1MKr03FVcWSWrfMmw=", "onRecv: rtType:" + rtType + " isSend:" + bool + " tx:" + ckj + " rx:" + ckk + " begin:" + beginTime + " end:" + endTime);
-            if ((ckl != 0L) && (rtType != 0L) && (beginTime != 0L) && (endTime != 0L) && (endTime - beginTime > 0L)) {
+            bYi = paramIntent.getLongExtra("cost", 0L);
+            cfD = paramIntent.getLongExtra("doSceneCount", 0L);
+            v.d("MicroMsg.WatchDogPushReceiver", "onRecv: rtType:" + rtType + " isSend:" + bool + " tx:" + cfB + " rx:" + cfC + " begin:" + beginTime + " end:" + endTime);
+            if ((cfD != 0L) && (rtType != 0L) && (beginTime != 0L) && (endTime != 0L) && (endTime - beginTime > 0L)) {
               break;
             }
-            u.w("!44@/B4Tb64lLpKEPjPLln9Idp+6rq1MKr03FVcWSWrfMmw=", "onRecv: count:" + ckl + " rtType:" + rtType + " begin:" + beginTime + " end:" + endTime);
+            v.w("MicroMsg.WatchDogPushReceiver", "onRecv: count:" + cfD + " rtType:" + rtType + " begin:" + beginTime + " end:" + endTime);
             return;
-            ckj = paramIntent.getLongExtra("dataLen", 0L);
+            cfB = paramIntent.getLongExtra("dataLen", 0L);
           }
         }
       } while ((i == 2) || (i == 3) || (i == 4));
-      if ((i == 5) && (com.tencent.mm.sdk.b.b.aUo()))
+      if ((i == 5) && (b.aZo()))
       {
         if (paramIntent.getIntExtra("jni", 1) == 1)
         {
@@ -113,7 +114,7 @@ public class WatchDogPushReceiver
         return;
       }
     } while (i != 6);
-    u.appenderFlush();
+    v.appenderFlush();
   }
 }
 

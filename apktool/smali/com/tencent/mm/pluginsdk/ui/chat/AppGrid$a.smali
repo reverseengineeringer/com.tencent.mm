@@ -21,57 +21,91 @@
 
 
 # instance fields
-.field final synthetic iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+.field private jgA:I
 
-.field iJD:Ljava/util/List;
+.field private jgB:I
 
-.field private iJE:I
+.field private jgC:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/pluginsdk/model/app/f;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private iJF:I
+.field final synthetic jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
-.field private iJG:Ljava/util/Map;
+.field jgz:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/model/app/f;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;Landroid/content/Context;Ljava/util/List;Ljava/util/Map;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/model/app/f;",
+            ">;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/pluginsdk/model/app/f;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 162
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    .line 160
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 160
+    .line 158
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJG:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgC:Ljava/util/Map;
 
-    .line 163
-    iput-object p3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJD:Ljava/util/List;
+    .line 161
+    iput-object p3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgz:Ljava/util/List;
+
+    .line 162
+    iput-object p4, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgC:Ljava/util/Map;
 
     .line 164
-    iput-object p4, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJG:Ljava/util/Map;
-
-    .line 166
-    const/high16 v0, 0x42800000    # 64.0f
+    const/high16 v0, 0x42600000    # 56.0f
 
     invoke-static {p2, v0}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$b;->a(Landroid/content/Context;F)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJE:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgA:I
 
-    .line 167
+    .line 165
     const v0, 0x42553333    # 53.3f
 
     invoke-static {p2, v0}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$b;->a(Landroid/content/Context;F)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJF:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgB:I
 
-    .line 168
+    .line 166
     return-void
 .end method
 
@@ -83,26 +117,26 @@
 
     const/4 v5, 0x0
 
-    .line 433
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJG:Ljava/util/Map;
+    .line 439
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgC:Ljava/util/Map;
 
     if-nez v0, :cond_1
 
-    .line 434
-    const-string/jumbo v0, "!32@/B4Tb64lLpKWQsMgLfVFVLoALSSMxsuZ"
+    .line 440
+    const-string/jumbo v0, "MicroMsg.AppGrid"
 
     const-string/jumbo v1, "func[attachHarcodeServiceApp] harcodeServiceAppInfoMap null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 474
+    .line 480
     :cond_0
     :goto_0
     return-void
 
-    .line 438
+    .line 444
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJG:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgC:Ljava/util/Map;
 
     invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -110,21 +144,21 @@
 
     check-cast v0, Lcom/tencent/mm/pluginsdk/model/app/f;
 
-    .line 439
+    .line 445
     if-nez v0, :cond_2
 
-    .line 440
-    const-string/jumbo v0, "!32@/B4Tb64lLpKWQsMgLfVFVLoALSSMxsuZ"
+    .line 446
+    const-string/jumbo v0, "MicroMsg.AppGrid"
 
     const-string/jumbo v1, "func[attachHarcodeServiceApp] info null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 444
+    .line 450
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
@@ -134,25 +168,25 @@
 
     if-eqz v1, :cond_8
 
-    .line 446
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/model/app/f;->aPC()Z
+    .line 452
+    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/model/app/f;->aUk()Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
-    .line 447
+    .line 453
     iget-object v1, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
     const/4 v3, 0x4
 
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v4}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {v4}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v4
 
@@ -160,12 +194,12 @@
 
     move-result-object v1
 
-    .line 449
+    .line 455
     :goto_1
     if-eqz v1, :cond_4
 
-    .line 450
-    iget-object v3, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    .line 456
+    iget-object v3, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
     new-instance v4, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -173,11 +207,11 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 464
+    .line 470
     :goto_2
-    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v3}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
@@ -189,21 +223,21 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 466
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/model/app/f;->aPC()Z
+    .line 472
+    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/model/app/f;->aUk()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/model/app/f;->aPD()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/model/app/f;->aUl()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 467
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    .line 473
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->i(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/SharedPreferences;
 
@@ -211,16 +245,16 @@
 
     if-nez v1, :cond_3
 
-    .line 468
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    .line 474
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v3
 
@@ -230,9 +264,9 @@
 
     invoke-static {v1, v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->a(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;Landroid/content/SharedPreferences;)Landroid/content/SharedPreferences;
 
-    .line 470
+    .line 476
     :cond_3
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->i(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/SharedPreferences;
 
@@ -262,16 +296,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 471
-    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    .line 477
+    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto/16 :goto_0
 
-    .line 451
+    .line 457
     :cond_4
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->iJL:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->jgH:Ljava/lang/String;
 
     iget-object v3, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
@@ -281,18 +315,18 @@
 
     if-eqz v1, :cond_5
 
-    .line 452
-    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    .line 458
+    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v3, 0x7f040767
+    const v3, 0x7f0205bd
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_2
 
-    .line 453
+    .line 459
     :cond_5
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->iJN:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->jgJ:Ljava/lang/String;
 
     iget-object v3, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
@@ -302,18 +336,18 @@
 
     if-eqz v1, :cond_6
 
-    .line 454
-    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    .line 460
+    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v3, 0x7f040727
+    const v3, 0x7f0205bc
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto/16 :goto_2
 
-    .line 455
+    .line 461
     :cond_6
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->iJM:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->jgI:Ljava/lang/String;
 
     iget-object v3, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
@@ -323,30 +357,30 @@
 
     if-eqz v1, :cond_7
 
-    .line 456
-    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    .line 462
+    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v3, 0x7f040744
+    const v3, 0x7f0205bb
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto/16 :goto_2
 
-    .line 458
+    .line 464
     :cond_7
-    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v3, 0x7f040707
+    const v3, 0x7f0200a3
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto/16 :goto_2
 
-    .line 461
+    .line 467
     :cond_8
-    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v3, 0x7f040805
+    const v3, 0x7f02070b
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -364,14 +398,14 @@
     .locals 3
 
     .prologue
-    .line 172
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    .line 170
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->a(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->e(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
@@ -381,20 +415,20 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 173
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    .line 171
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->f(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->a(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->b(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
@@ -404,12 +438,12 @@
 
     sub-int/2addr v0, v1
 
-    .line 175
+    .line 173
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->b(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
@@ -422,8 +456,8 @@
     .locals 1
 
     .prologue
-    .line 153
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->mn(I)Lcom/tencent/mm/pluginsdk/model/app/f;
+    .line 151
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->nH(I)Lcom/tencent/mm/pluginsdk/model/app/f;
 
     move-result-object v0
 
@@ -434,7 +468,7 @@
     .locals 2
 
     .prologue
-    .line 196
+    .line 194
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -446,7 +480,7 @@
     .prologue
     const/4 v8, 0x0
 
-    const v7, 0x7f0b0e55
+    const v7, 0x7f0800ce
 
     const/4 v6, 0x1
 
@@ -454,29 +488,29 @@
 
     const/4 v5, 0x0
 
-    .line 204
+    .line 202
     if-nez p2, :cond_2
 
-    .line 205
+    .line 203
     new-instance v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;)V
 
-    .line 206
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    .line 204
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v0
 
-    const v2, 0x7f0a0500
+    const v2, 0x7f030036
 
     invoke-static {v0, v2, v8}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
-    .line 207
-    const v0, 0x7f070f61
+    .line 205
+    const v0, 0x7f10012d
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -484,54 +518,54 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
+
+    .line 206
+    const v0, 0x7f10012c
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgE:Landroid/view/View;
+
+    .line 207
+    const v0, 0x7f10012e
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
     .line 208
-    const v0, 0x7f070f60
+    const v0, 0x7f10012f
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJI:Landroid/view/View;
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     .line 209
-    const v0, 0x7f070f62
+    const v0, 0x7f100130
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgF:Landroid/view/View;
 
     .line 210
-    const v0, 0x7f070f63
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
-
-    .line 211
-    const v0, 0x7f070f64
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJJ:Landroid/view/View;
-
-    .line 212
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 217
+    .line 215
     :goto_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpKWQsMgLfVFVLoALSSMxsuZ"
+    const-string/jumbo v0, "MicroMsg.AppGrid"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -549,7 +583,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v3}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->a(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
@@ -563,58 +597,58 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 218
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    .line 216
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 219
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJJ:Landroid/view/View;
+    .line 217
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgF:Landroid/view/View;
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 220
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    .line 218
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 221
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJI:Landroid/view/View;
+    .line 219
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgE:Landroid/view/View;
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 222
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    .line 220
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 223
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJE:I
+    .line 221
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgA:I
 
     iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 224
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJE:I
+    .line 222
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgA:I
 
     iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 225
-    iget-object v2, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    .line 223
+    iget-object v2, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 227
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    .line 225
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->a(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v3}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->b(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
@@ -624,19 +658,19 @@
 
     add-int/2addr v2, p1
 
-    .line 228
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    .line 226
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v3}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->c(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$b;
 
     move-result-object v3
 
-    invoke-interface {v3, v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$b;->oA(I)I
+    invoke-interface {v3, v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$b;->qg(I)I
 
     move-result v3
 
-    .line 229
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    .line 227
+    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v4}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->g(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
@@ -644,17 +678,17 @@
 
     if-ge v2, v4, :cond_d
 
-    .line 230
+    .line 228
     packed-switch v3, :pswitch_data_0
 
-    .line 424
+    .line 430
     :cond_0
     :goto_1
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->mn(I)Lcom/tencent/mm/pluginsdk/model/app/f;
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->nH(I)Lcom/tencent/mm/pluginsdk/model/app/f;
 
     move-result-object v0
 
-    .line 425
+    .line 431
     if-eqz v0, :cond_1
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/model/app/g;->k(Lcom/tencent/mm/pluginsdk/model/app/f;)Z
@@ -663,16 +697,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 426
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    .line 432
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 429
+    .line 435
     :cond_1
     return-object p2
 
-    .line 214
+    .line 212
     :cond_2
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -684,24 +718,24 @@
 
     goto/16 :goto_0
 
-    .line 232
+    .line 230
     :pswitch_0
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v2, 0x7f03029e
+    const v2, 0x7f070220
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 233
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    .line 231
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f0b0e58
+    const v3, 0x7f0800c1
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -711,24 +745,24 @@
 
     goto :goto_1
 
-    .line 242
+    .line 240
     :pswitch_1
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v2, 0x7f030283
+    const v2, 0x7f07022a
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 243
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    .line 241
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f0b0e4e
+    const v3, 0x7f0800c9
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -736,13 +770,13 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 245
+    .line 243
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -768,8 +802,8 @@
 
     if-eqz v0, :cond_3
 
-    .line 246
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    .line 244
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     const/4 v2, 0x0
 
@@ -777,15 +811,15 @@
 
     goto :goto_1
 
-    .line 252
+    .line 250
     :catch_0
     move-exception v0
 
     goto :goto_1
 
-    .line 248
+    .line 246
     :cond_3
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     const/16 v2, 0x8
 
@@ -795,24 +829,24 @@
 
     goto :goto_1
 
-    .line 255
+    .line 253
     :pswitch_2
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v2, 0x7f030280
+    const v2, 0x7f070228
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 256
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    .line 254
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f0b008b
+    const v3, 0x7f0809e8
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -820,13 +854,13 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 258
+    .line 256
     :try_start_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -852,8 +886,8 @@
 
     if-eqz v0, :cond_4
 
-    .line 259
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    .line 257
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     const/4 v2, 0x0
 
@@ -861,15 +895,15 @@
 
     goto/16 :goto_1
 
-    .line 265
+    .line 263
     :catch_1
     move-exception v0
 
     goto/16 :goto_1
 
-    .line 261
+    .line 259
     :cond_4
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     const/16 v2, 0x8
 
@@ -879,24 +913,24 @@
 
     goto/16 :goto_1
 
-    .line 275
+    .line 273
     :pswitch_3
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v2, 0x7f030282
+    const v2, 0x7f070226
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 276
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    .line 274
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f0b0e50
+    const v3, 0x7f0800c8
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -906,24 +940,24 @@
 
     goto/16 :goto_1
 
-    .line 280
+    .line 278
     :pswitch_4
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v2, 0x7f03026e
+    const v2, 0x7f070224
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 281
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    .line 279
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f0b0e4d
+    const v3, 0x7f0800c5
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -933,38 +967,38 @@
 
     goto/16 :goto_1
 
-    .line 285
+    .line 283
     :pswitch_5
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v2, 0x7f03029f
+    const v2, 0x7f070222
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 284
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
+
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+
+    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
+
+    move-result-object v2
+
+    const v3, 0x7f0800c2
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 286
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
-
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
-
-    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
-
-    move-result-object v2
-
-    const v3, 0x7f0b0e56
-
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 288
     :try_start_2
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -990,8 +1024,8 @@
 
     if-eqz v0, :cond_5
 
-    .line 289
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJJ:Landroid/view/View;
+    .line 287
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgF:Landroid/view/View;
 
     const/4 v2, 0x0
 
@@ -999,15 +1033,15 @@
 
     goto/16 :goto_1
 
-    .line 295
+    .line 293
     :catch_2
     move-exception v0
 
     goto/16 :goto_1
 
-    .line 291
+    .line 289
     :cond_5
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJJ:Landroid/view/View;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgF:Landroid/view/View;
 
     const/16 v2, 0x8
 
@@ -1017,24 +1051,24 @@
 
     goto/16 :goto_1
 
-    .line 298
+    .line 296
     :pswitch_6
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v2, 0x7f0302a8
+    const v2, 0x7f070225
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 299
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    .line 297
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f0b0e57
+    const v3, 0x7f0800c7
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1042,13 +1076,13 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 301
+    .line 299
     :try_start_3
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1074,8 +1108,8 @@
 
     if-eqz v0, :cond_6
 
-    .line 302
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJJ:Landroid/view/View;
+    .line 300
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgF:Landroid/view/View;
 
     const/4 v2, 0x0
 
@@ -1083,15 +1117,15 @@
 
     goto/16 :goto_1
 
-    .line 308
+    .line 306
     :catch_3
     move-exception v0
 
     goto/16 :goto_1
 
-    .line 304
+    .line 302
     :cond_6
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJJ:Landroid/view/View;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgF:Landroid/view/View;
 
     const/16 v2, 0x8
 
@@ -1101,24 +1135,24 @@
 
     goto/16 :goto_1
 
-    .line 310
+    .line 308
     :pswitch_7
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v2, 0x7f030277
+    const v2, 0x7f070221
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 311
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    .line 309
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f0b0e51
+    const v3, 0x7f0800bd
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1128,24 +1162,24 @@
 
     goto/16 :goto_1
 
-    .line 314
+    .line 312
     :pswitch_8
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v2, 0x7f030296
+    const v2, 0x7f070044
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 315
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    .line 313
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f0b0e54
+    const v3, 0x7f0800cc
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1153,13 +1187,13 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 317
+    .line 315
     :try_start_4
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1185,8 +1219,8 @@
 
     if-eqz v0, :cond_7
 
-    .line 318
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    .line 316
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     const/4 v2, 0x0
 
@@ -1194,15 +1228,15 @@
 
     goto/16 :goto_1
 
-    .line 324
+    .line 322
     :catch_4
     move-exception v0
 
     goto/16 :goto_1
 
-    .line 320
+    .line 318
     :cond_7
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     const/16 v2, 0x8
 
@@ -1212,18 +1246,18 @@
 
     goto/16 :goto_1
 
-    .line 327
+    .line 325
     :pswitch_9
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v2, 0x7f030272
+    const v2, 0x7f070229
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 328
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    .line 326
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
@@ -1235,13 +1269,13 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 330
+    .line 328
     :try_start_5
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1267,8 +1301,8 @@
 
     if-eqz v0, :cond_8
 
-    .line 331
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    .line 329
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     const/4 v2, 0x0
 
@@ -1276,15 +1310,15 @@
 
     goto/16 :goto_1
 
-    .line 337
+    .line 335
     :catch_5
     move-exception v0
 
     goto/16 :goto_1
 
-    .line 333
+    .line 331
     :cond_8
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     const/16 v2, 0x8
 
@@ -1294,24 +1328,24 @@
 
     goto/16 :goto_1
 
-    .line 339
+    .line 337
     :pswitch_a
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v2, 0x7f030270
+    const v2, 0x7f070041
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 340
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    .line 338
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f0b158f
+    const v3, 0x7f08064d
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1319,13 +1353,13 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 342
+    .line 340
     :try_start_6
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1349,12 +1383,12 @@
 
     move-result v2
 
-    .line 343
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 341
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1378,50 +1412,50 @@
 
     move-result v0
 
-    .line 344
+    .line 342
     if-nez v2, :cond_9
 
     if-eqz v0, :cond_b
 
-    .line 345
+    .line 343
     :cond_9
-    iget-object v2, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 346
+    .line 344
     if-eqz v0, :cond_a
 
-    .line 347
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    .line 345
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
-    const v2, 0x7f0b0e23
+    const v2, 0x7f0800d5
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
     goto/16 :goto_1
 
-    .line 356
+    .line 354
     :catch_6
     move-exception v0
 
     goto/16 :goto_1
 
-    .line 349
+    .line 347
     :cond_a
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
-    const v2, 0x7f0b0e22
+    const v2, 0x7f0800f4
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
     goto/16 :goto_1
 
-    .line 352
+    .line 350
     :cond_b
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     const/16 v2, 0x8
 
@@ -1431,34 +1465,34 @@
 
     goto/16 :goto_1
 
-    .line 358
+    .line 356
     :pswitch_b
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->iJL:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->jgH:Ljava/lang/String;
 
     invoke-direct {p0, v1, v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->a(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
-    .line 361
+    .line 359
     :pswitch_c
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->iJN:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->jgJ:Ljava/lang/String;
 
     invoke-direct {p0, v1, v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->a(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
-    .line 364
+    .line 362
     :pswitch_d
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v2, 0x7f03028b
+    const v2, 0x7f070223
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 365
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    .line 363
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
@@ -1470,13 +1504,13 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 367
+    .line 365
     :try_start_7
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1502,8 +1536,8 @@
 
     if-eqz v0, :cond_c
 
-    .line 368
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    .line 366
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     const/4 v2, 0x0
 
@@ -1511,15 +1545,15 @@
 
     goto/16 :goto_1
 
-    .line 374
+    .line 372
     :catch_7
     move-exception v0
 
     goto/16 :goto_1
 
-    .line 370
+    .line 368
     :cond_c
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     const/16 v2, 0x8
 
@@ -1529,32 +1563,75 @@
 
     goto/16 :goto_1
 
-    .line 380
-    :cond_d
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJF:I
+    .line 374
+    :pswitch_e
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
+    const v2, 0x7f07021f
 
-    .line 381
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJF:I
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+    .line 375
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
-    .line 382
-    iget-object v2, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
-    invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 384
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->mn(I)Lcom/tencent/mm/pluginsdk/model/app/f;
+    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v2
 
-    .line 385
-    if-eqz v2, :cond_0
+    const v3, 0x7f0800c0
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 377
+    :try_start_8
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgF:Landroid/view/View;
+
+    const/16 v2, 0x8
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    :try_end_8
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_8
+
+    goto/16 :goto_1
+
+    .line 380
+    :catch_8
+    move-exception v0
+
+    goto/16 :goto_1
+
+    .line 386
+    :cond_d
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgB:I
+
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     .line 387
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgB:I
+
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    .line 388
+    iget-object v2, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
+
+    invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 390
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->nH(I)Lcom/tencent/mm/pluginsdk/model/app/f;
+
+    move-result-object v2
+
+    .line 391
+    if-eqz v2, :cond_0
+
+    .line 393
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
@@ -1564,25 +1641,25 @@
 
     if-eqz v0, :cond_17
 
-    .line 388
+    .line 394
     iget v0, v2, Lcom/tencent/mm/pluginsdk/model/app/f;->field_status:I
 
     const/4 v3, 0x5
 
     if-ne v0, v3, :cond_11
 
-    .line 390
+    .line 396
     iget-object v0, v2, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
     const/4 v3, 0x3
 
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v4}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {v4}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v4
 
@@ -1590,12 +1667,12 @@
 
     move-result-object v0
 
-    .line 397
+    .line 403
     :goto_2
     if-eqz v0, :cond_13
 
-    .line 398
-    iget-object v3, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    .line 404
+    iget-object v3, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
     new-instance v4, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -1603,11 +1680,11 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 411
+    .line 417
     :goto_3
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->emW:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->erW:Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v3}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
@@ -1619,29 +1696,29 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 413
-    invoke-virtual {v2}, Lcom/tencent/mm/pluginsdk/model/app/f;->aPC()Z
+    .line 419
+    invoke-virtual {v2}, Lcom/tencent/mm/pluginsdk/model/app/f;->aUk()Z
 
     move-result v0
 
     if-eqz v0, :cond_e
 
-    invoke-virtual {v2}, Lcom/tencent/mm/pluginsdk/model/app/f;->aPD()Z
+    invoke-virtual {v2}, Lcom/tencent/mm/pluginsdk/model/app/f;->aUl()Z
 
     move-result v0
 
     if-nez v0, :cond_f
 
     :cond_e
-    invoke-virtual {v2}, Lcom/tencent/mm/pluginsdk/model/app/f;->aPE()Z
+    invoke-virtual {v2}, Lcom/tencent/mm/pluginsdk/model/app/f;->aUm()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 414
+    .line 420
     :cond_f
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->i(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/SharedPreferences;
 
@@ -1649,16 +1726,16 @@
 
     if-nez v0, :cond_10
 
-    .line 415
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    .line 421
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v3}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1668,9 +1745,9 @@
 
     invoke-static {v0, v3}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->a(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;Landroid/content/SharedPreferences;)Landroid/content/SharedPreferences;
 
-    .line 417
+    .line 423
     :cond_10
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->i(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/SharedPreferences;
 
@@ -1698,33 +1775,33 @@
 
     if-eqz v0, :cond_0
 
-    .line 418
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJH:Landroid/widget/TextView;
+    .line 424
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgD:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto/16 :goto_1
 
-    .line 391
+    .line 397
     :cond_11
-    invoke-virtual {v2}, Lcom/tencent/mm/pluginsdk/model/app/f;->aPC()Z
+    invoke-virtual {v2}, Lcom/tencent/mm/pluginsdk/model/app/f;->aUk()Z
 
     move-result v0
 
     if-eqz v0, :cond_12
 
-    .line 392
+    .line 398
     iget-object v0, v2, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
     const/4 v3, 0x4
 
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v4}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {v4}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v4
 
@@ -1734,17 +1811,17 @@
 
     goto/16 :goto_2
 
-    .line 394
+    .line 400
     :cond_12
     iget-object v0, v2, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v3}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->h(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {v3}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v3
 
@@ -1754,9 +1831,9 @@
 
     goto/16 :goto_2
 
-    .line 399
+    .line 405
     :cond_13
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->iJL:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->jgH:Ljava/lang/String;
 
     iget-object v3, v2, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
@@ -1766,18 +1843,18 @@
 
     if-eqz v0, :cond_14
 
-    .line 400
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    .line 406
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v3, 0x7f040767
+    const v3, 0x7f0205bd
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto/16 :goto_3
 
-    .line 401
+    .line 407
     :cond_14
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->iJN:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->jgJ:Ljava/lang/String;
 
     iget-object v3, v2, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
@@ -1787,18 +1864,18 @@
 
     if-eqz v0, :cond_15
 
-    .line 402
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    .line 408
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v3, 0x7f040727
+    const v3, 0x7f0205bc
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto/16 :goto_3
 
-    .line 403
+    .line 409
     :cond_15
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->iJM:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->jgI:Ljava/lang/String;
 
     iget-object v3, v2, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
@@ -1808,36 +1885,36 @@
 
     if-eqz v0, :cond_16
 
-    .line 404
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    .line 410
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v3, 0x7f040744
+    const v3, 0x7f0205bb
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto/16 :goto_3
 
-    .line 406
+    .line 412
     :cond_16
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v3, 0x7f040707
+    const v3, 0x7f0200a3
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
     goto/16 :goto_3
 
-    .line 409
+    .line 415
     :cond_17
-    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fAr:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->fJv:Landroid/widget/ImageView;
 
-    const v3, 0x7f040805
+    const v3, 0x7f02070b
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
     goto/16 :goto_3
 
-    .line 230
+    .line 228
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_4
@@ -1854,15 +1931,16 @@
         :pswitch_6
         :pswitch_2
         :pswitch_1
+        :pswitch_e
     .end packed-switch
 .end method
 
-.method public final mn(I)Lcom/tencent/mm/pluginsdk/model/app/f;
+.method public final nH(I)Lcom/tencent/mm/pluginsdk/model/app/f;
     .locals 6
 
     .prologue
-    .line 181
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    .line 179
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->g(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
@@ -1870,7 +1948,7 @@
 
     if-ge p1, v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->a(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
@@ -1879,13 +1957,13 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->a(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->b(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
@@ -1895,7 +1973,7 @@
 
     add-int/2addr v0, p1
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->g(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
@@ -1903,7 +1981,7 @@
 
     if-lt v0, v1, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->g(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
@@ -1911,13 +1989,13 @@
 
     sub-int v0, p1, v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->a(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->b(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
@@ -1927,7 +2005,7 @@
 
     add-int/2addr v0, v1
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJD:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgz:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -1935,17 +2013,17 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 182
+    .line 180
     :cond_1
     const/4 v0, 0x0
 
-    .line 191
+    .line 189
     :goto_0
     return-object v0
 
-    .line 184
+    .line 182
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->g(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
@@ -1953,13 +2031,13 @@
 
     sub-int v0, p1, v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->a(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJC:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgy:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;->b(Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid;)I
 
@@ -1969,8 +2047,8 @@
 
     add-int/2addr v0, v1
 
-    .line 185
-    const-string/jumbo v1, "!32@/B4Tb64lLpKWQsMgLfVFVLoALSSMxsuZ"
+    .line 183
+    const-string/jumbo v1, "MicroMsg.AppGrid"
 
     const-string/jumbo v2, "get item db pos: %d"
 
@@ -1986,10 +2064,10 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 191
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->iJD:Ljava/util/List;
+    .line 189
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;->jgz:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 

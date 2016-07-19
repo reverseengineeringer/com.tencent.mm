@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/hj" android:layout_width="280.0dip" android:layout_height="290.0dip">
+        <ImageView android:id="@id/b5g" android:background="@drawable/ale" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/b5h" android:background="@raw/sns_luckymoney_post_title" android:layout_width="210.0dip" android:layout_height="117.0dip" android:layout_marginTop="30.0dip" android:layout_centerHorizontal="true">
+            <TextView android:textSize="26.0dip" android:textColor="#ffebcd9b" android:id="@id/b5i" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cr9" />
+            <TextView android:textSize="8.0dip" android:textColor="#ffebcd9b" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cr_" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/i8" android:textColor="#ffffe2b1" android:gravity="center" android:id="@id/b5j" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="30.0dip" android:text="@string/cqz" android:layout_below="@id/b5h" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/cu" android:textColor="#ffd84e43" android:gravity="center" android:id="@id/b5k" android:background="@drawable/nn" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="30.0dip" android:text="@string/bcj" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

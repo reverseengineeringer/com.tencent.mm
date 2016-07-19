@@ -9,18 +9,18 @@ final class ListPopupWindow$2
 {
   ListPopupWindow$2(ListPopupWindow paramListPopupWindow) {}
   
-  public final void onItemSelected(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemSelected(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
     if (paramInt != -1)
     {
-      paramAdapterView = ListPopupWindow.a(qi);
+      paramAdapterView = ListPopupWindow.a(qw);
       if (paramAdapterView != null) {
         ListPopupWindow.a.a(paramAdapterView, false);
       }
     }
   }
   
-  public final void onNothingSelected(AdapterView paramAdapterView) {}
+  public final void onNothingSelected(AdapterView<?> paramAdapterView) {}
 }
 
 /* Location:

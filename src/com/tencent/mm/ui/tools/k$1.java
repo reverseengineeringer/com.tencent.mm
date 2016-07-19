@@ -10,12 +10,12 @@ final class k$1
   
   public final void onAnimationCancel(Animator paramAnimator)
   {
-    lwh.biD();
+    lWT.boz();
   }
   
   public final void onAnimationEnd(Animator paramAnimator)
   {
-    lwh.onAnimationEnd();
+    lWT.onAnimationEnd();
   }
   
   public final void onAnimationRepeat(Animator paramAnimator) {}

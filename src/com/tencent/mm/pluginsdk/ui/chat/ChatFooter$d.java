@@ -11,34 +11,34 @@ import com.tencent.mm.ui.widget.MMEditText;
 public final class ChatFooter$d
   implements TextWatcher
 {
-  TextWatcher iLV;
-  private boolean iLW = false;
-  private boolean iLX = e.bV(11);
+  TextWatcher jiS;
+  private boolean jiT = false;
+  private boolean jiU = e.cn(11);
   
   public ChatFooter$d(ChatFooter paramChatFooter, TextWatcher paramTextWatcher)
   {
-    iLV = paramTextWatcher;
+    jiS = paramTextWatcher;
   }
   
   public final void afterTextChanged(Editable paramEditable)
   {
     boolean bool = true;
-    if ((ChatFooter.g(iLO)) && (iLW) && (paramEditable.length() > 0))
+    if ((ChatFooter.g(jiL)) && (jiT) && (paramEditable.length() > 0))
     {
-      iLW = false;
-      ChatFooter.a(iLO).setText(paramEditable.subSequence(0, paramEditable.length() - 1));
-      if (ChatFooter.a(iLO).length() > 0) {
-        ChatFooter.h(iLO).performClick();
+      jiT = false;
+      ChatFooter.a(jiL).setText(paramEditable.subSequence(0, paramEditable.length() - 1));
+      if (ChatFooter.a(jiL).length() > 0) {
+        ChatFooter.h(jiL).performClick();
       }
       return;
     }
-    iLV.afterTextChanged(paramEditable);
-    if (ChatFooter.p(iLO) != null)
+    jiS.afterTextChanged(paramEditable);
+    if (ChatFooter.p(jiL) != null)
     {
-      if (ChatFooter.a(iLO).getLineCount() > 1)
+      if (ChatFooter.a(jiL).getLineCount() > 1)
       {
-        ChatFooter.p(iLO).setVisibility(0);
-        ChatFooter.p(iLO).setText(paramEditable.length() + "/140");
+        ChatFooter.p(jiL).setVisibility(0);
+        ChatFooter.p(jiL).setText(paramEditable.length() + "/140");
       }
     }
     else {
@@ -49,13 +49,13 @@ public final class ChatFooter$d
     }
     for (;;)
     {
-      ChatFooter.b(iLO, bool);
-      if (ChatFooter.n(iLO) == null) {
+      ChatFooter.b(jiL, bool);
+      if (ChatFooter.n(jiL) == null) {
         break;
       }
-      ChatFooter.n(iLO).setSendButtonEnable(bool);
+      ChatFooter.n(jiL).bI(bool);
       return;
-      ChatFooter.p(iLO).setVisibility(8);
+      ChatFooter.p(jiL).setVisibility(8);
       break label162;
       label229:
       bool = false;
@@ -64,17 +64,17 @@ public final class ChatFooter$d
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    iLV.beforeTextChanged(paramCharSequence, paramInt1, paramInt2, paramInt3);
+    jiS.beforeTextChanged(paramCharSequence, paramInt1, paramInt2, paramInt3);
   }
   
   public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    if ((ChatFooter.g(iLO)) && (paramInt2 == 0) && (paramInt1 == paramCharSequence.length() - 1) && (paramInt3 == 1) && (paramCharSequence.charAt(paramCharSequence.length() - 1) == '\n'))
+    if ((ChatFooter.g(jiL)) && (paramInt2 == 0) && (paramInt1 == paramCharSequence.length() - 1) && (paramInt3 == 1) && (paramCharSequence.charAt(paramCharSequence.length() - 1) == '\n'))
     {
-      iLW = true;
+      jiT = true;
       return;
     }
-    iLV.onTextChanged(paramCharSequence, paramInt1, paramInt2, paramInt3);
+    jiS.onTextChanged(paramCharSequence, paramInt1, paramInt2, paramInt3);
   }
 }
 

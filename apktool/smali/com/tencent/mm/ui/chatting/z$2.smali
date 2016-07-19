@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/g$b;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kSO:Lcom/tencent/mm/ui/chatting/z;
+.field final synthetic lsI:Lcom/tencent/mm/ui/chatting/z;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 174
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/z$2;->kSO:Lcom/tencent/mm/ui/chatting/z;
+    .line 84
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/z$2;->lsI:Lcom/tencent/mm/ui/chatting/z;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,19 +36,27 @@
 
 
 # virtual methods
-.method public final vz()V
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
     .prologue
-    .line 178
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/z$2;->kSO:Lcom/tencent/mm/ui/chatting/z;
+    .line 86
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/z$2;->lsI:Lcom/tencent/mm/ui/chatting/z;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/z;->d(Lcom/tencent/mm/ui/chatting/z;)Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v1, v0, Lcom/tencent/mm/ui/chatting/z;->lsD:Lcom/tencent/mm/ui/chatting/cm;
+
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->aRJ()V
+    check-cast v0, Ljava/lang/Long;
 
-    .line 179
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/ui/chatting/cm;->eb(J)Z
+
+    .line 87
     return-void
 .end method

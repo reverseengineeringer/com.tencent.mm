@@ -13,7 +13,7 @@ final class LoginIndepPass$9
   {
     if ((paramInt == 6) || (paramInt == 5))
     {
-      LoginIndepPass.a(ktE);
+      LoginIndepPass.a(kSL);
       return true;
     }
     return false;

@@ -10,7 +10,7 @@ final class ListLinkedInFriendUI$4
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    kOk.finish();
+    lnA.finish();
     return true;
   }
 }

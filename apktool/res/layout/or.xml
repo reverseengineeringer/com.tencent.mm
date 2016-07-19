@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/ann" style="@style/MMListItem">
+        <com.tencent.mm.ui.base.MaskLayout android:id="@id/ano" android:layout_width="@dimen/i1" android:layout_height="@dimen/i1" android:layout_marginLeft="@dimen/j8" android:layout_marginRight="@dimen/j8" android:layout_centerVertical="true">
+            <ImageView android:id="@id/g6" android:layout_width="@dimen/hz" android:layout_height="@dimen/hz" android:layout_centerInParent="true" />
+        </com.tencent.mm.ui.base.MaskLayout>
+        <RelativeLayout android:id="@id/anp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/j8" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <Button android:id="@id/anq" android:focusable="false" android:focusableInTouchMode="false" android:text="@string/asm" style="@style/MMSolidWhiteSmallButton" />
+            <Button android:id="@id/anr" android:focusable="false" android:focusableInTouchMode="false" android:text="@string/at2" style="@style/MMSolidGreenSmallButton" />
+            <TextView android:id="@id/ans" android:visibility="gone" android:text="@string/c1" style="@style/MMFontTipInList" />
+            <TextView android:id="@id/ant" android:background="@null" android:visibility="gone" android:text="@string/bz" style="@style/ContactSignature" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/anp" android:layout_toRightOf="@id/ano" android:layout_centerHorizontal="true">
+            <TextView android:id="@id/anu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="{nick}" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" style="@style/MMFontTitleInList" />
+            <TextView android:id="@id/anv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="{lastmsg}" android:singleLine="true" android:layout_below="@id/anu" android:layout_alignParentLeft="true" style="@style/MMFontTipInList" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

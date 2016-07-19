@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/AtSomeoneUI;->Gb()V
+    value = Lcom/tencent/mm/ui/chatting/AtSomeoneUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kRg:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
+.field final synthetic lrj:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 129
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$3;->kRg:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$3;->lrj:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,10 +38,19 @@
 # virtual methods
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
     .line 134
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$3;->kRg:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$3;->lrj:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/AtSomeoneUI;->a(Lcom/tencent/mm/ui/chatting/AtSomeoneUI;)Lcom/tencent/mm/ui/chatting/AtSomeoneUI$a;
 
@@ -59,27 +68,27 @@
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
     .line 137
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$3;->kRg:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$3;->lrj:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/chatting/AtSomeoneUI;->b(Lcom/tencent/mm/ui/chatting/AtSomeoneUI;)Lcom/tencent/mm/storage/e;
 
     move-result-object v1
 
-    iget-object v3, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lcom/tencent/mm/ui/chatting/AtSomeoneUI;->a(Lcom/tencent/mm/storage/e;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 139
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 140
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->qy()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->pb()Ljava/lang/String;
 
     move-result-object v1
 
@@ -87,7 +96,7 @@
     :cond_0
     const-string/jumbo v3, "select_raw_user_name"
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -97,14 +106,14 @@
     invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 145
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$3;->kRg:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$3;->lrj:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/chatting/AtSomeoneUI;->setResult(ILandroid/content/Intent;)V
 
     .line 146
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$3;->kRg:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$3;->lrj:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/AtSomeoneUI;->finish()V
 

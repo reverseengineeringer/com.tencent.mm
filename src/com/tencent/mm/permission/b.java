@@ -7,15 +7,18 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Process;
 import android.util.Base64;
-import com.tencent.mm.a.n;
-import com.tencent.mm.a.l;
-import com.tencent.mm.compatible.d.q;
-import com.tencent.mm.g.h;
-import com.tencent.mm.model.aw;
-import com.tencent.mm.model.ax;
+import com.tencent.mm.a.o;
+import com.tencent.mm.compatible.d.p;
+import com.tencent.mm.e.a.iq;
+import com.tencent.mm.e.a.ir;
+import com.tencent.mm.h.h;
+import com.tencent.mm.model.ag;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.f;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.g;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -26,65 +29,101 @@ import java.util.Map;
 
 public final class b
 {
-  static final String anZ;
-  static final String aoa;
-  static Map bUE;
-  com.tencent.mm.sdk.c.e bUF = new c(this);
-  private com.tencent.mm.sdk.c.e bUG = new d(this);
+  static final String YC;
+  static final String YD;
+  static Map<Integer, a> cgF;
+  com.tencent.mm.sdk.c.c cgG = new com.tencent.mm.sdk.c.c() {};
+  private com.tencent.mm.sdk.c.c cgH = new com.tencent.mm.sdk.c.c() {};
   
   static
   {
-    Object localObject = q.oI();
-    anZ = (String)localObject;
-    aoa = l.getString(((String)localObject).hashCode());
+    Object localObject = p.mN();
+    YC = (String)localObject;
+    YD = o.getString(((String)localObject).hashCode());
     localObject = new HashMap();
-    bUE = (Map)localObject;
-    ((Map)localObject).put(Integer.valueOf(1), new a(38, 40, 41, a.n.app_permission_tips_title_record, a.n.app_permission_tips_content_prefix_audio));
-    bUE.put(Integer.valueOf(2), new a(43, 44, 45, a.n.app_permission_tips_title_camera, a.n.app_permission_tips_content_prefix_camera));
+    cgF = (Map)localObject;
+    ((Map)localObject).put(Integer.valueOf(1), new a(38, 40, 41, 2131230979, 2131230971));
+    cgF.put(Integer.valueOf(2), new a(43, 44, 45, 2131230978, 2131230972));
   }
   
   public b()
   {
-    com.tencent.mm.sdk.c.a.hXQ.a("PermissionOpMark", bUF);
-    com.tencent.mm.sdk.c.a.hXQ.a("PermissionShowDlg", bUG);
+    com.tencent.mm.sdk.c.a.kug.d(cgG);
+    com.tencent.mm.sdk.c.a.kug.d(cgH);
   }
   
-  private static void a(int paramInt, List paramList, boolean paramBoolean)
+  private static void C(String paramString, int paramInt)
+  {
+    StringBuilder localStringBuilder = new StringBuilder();
+    localStringBuilder.append("\n#client.version=").append(com.tencent.mm.protocal.c.jry).append("\n");
+    localStringBuilder.append("#accinfo.revision=").append(com.tencent.mm.sdk.platformtools.e.boQ).append("\n");
+    localStringBuilder.append("#accinfo.uin=").append(ag.btA.x("last_login_uin", YD)).append("\n");
+    localStringBuilder.append("#accinfo.dev=").append(YC).append("\n");
+    localStringBuilder.append("#accinfo.build=").append(com.tencent.mm.sdk.platformtools.e.boT).append(":").append(com.tencent.mm.sdk.platformtools.e.boU).append(":").append(f.Xv).append("\n");
+    Object localObject1 = new Date();
+    Object localObject2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ", Locale.getDefault());
+    localStringBuilder.append("#accinfo.uploadTime=" + ((SimpleDateFormat)localObject2).format((Date)localObject1)).append("\n");
+    localStringBuilder.append("#permission.type=").append(String.valueOf(paramInt)).append('\n');
+    localStringBuilder.append("#permission.content:\n");
+    Intent localIntent = new Intent();
+    localIntent.setClassName(aa.getPackageName(), "com.tencent.mm.sandbox.monitor.ExceptionMonitorService");
+    localIntent.setAction("uncatch_exception");
+    localIntent.putExtra("exceptionWriteSdcard", false);
+    localIntent.putExtra("exceptionPid", Process.myPid());
+    localObject2 = ag.btA.x("login_weixin_username", "");
+    localObject1 = localObject2;
+    if (be.kf((String)localObject2)) {
+      localObject1 = ag.btA.x("login_user_name", "never_login_crash");
+    }
+    localIntent.putExtra("userName", (String)localObject1);
+    localIntent.putExtra("tag", "permission");
+    paramString = localStringBuilder.toString() + paramString;
+    v.d("MicroMsg.PermissionMgr", "report type: %d, len: %d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramString.length()) });
+    localIntent.putExtra("exceptionMsg", Base64.encodeToString(paramString.getBytes(), 2));
+    aa.getContext().startService(localIntent);
+  }
+  
+  private static void a(int paramInt, List<String> paramList, boolean paramBoolean)
   {
     if (paramList.size() > 5) {}
     Context localContext;
     StringBuilder localStringBuilder;
     for (int i = 5;; i = paramList.size())
     {
-      int k = a.n.app_permission_tips_one;
-      int m = a.n.app_permission_tips_two;
-      int n = a.n.app_permission_tips_three;
-      int i1 = a.n.app_permission_tips_four;
-      int i2 = a.n.app_permission_tips_five;
       localContext = aa.getContext();
       localStringBuilder = new StringBuilder();
-      localStringBuilder.append(localContext.getString(bUEgetvalueOfbUM));
+      localStringBuilder.append(localContext.getString(cgFgetvalueOfcgN));
       j = 0;
       while (j < i)
       {
-        localStringBuilder.append(localContext.getString(new int[] { k, m, n, i1, i2 }[j]));
+        localStringBuilder.append(localContext.getString(new int[] { 2131230975, 2131230980, 2131230977, 2131230974, 2131230973 }[j]));
         localStringBuilder.append((String)paramList.get(j));
         localStringBuilder.append('\n');
         j += 1;
       }
     }
-    paramList = ax.tc();
-    int j = bUEgetvalueOfbUK;
+    paramList = ah.tv();
+    int j = cgFgetvalueOfcgL;
     if (paramBoolean) {}
     for (i = 1;; i = 0)
     {
       paramList.setInt(j, i);
-      PermissionWarningDialog.i(localContext, localContext.getString(bUEgetvalueOfbUL), localStringBuilder.toString());
+      PermissionWarningDialog.h(localContext, localContext.getString(cgFgetvalueOfcgM), localStringBuilder.toString());
       return;
     }
   }
   
-  private static void a(List paramList, boolean paramBoolean)
+  public static void aO(boolean paramBoolean)
+  {
+    if (paramBoolean) {}
+    for (int i = 4;; i = 3)
+    {
+      C("App_List:\n", i);
+      return;
+    }
+  }
+  
+  private static void c(List<String> paramList, boolean paramBoolean)
   {
     StringBuilder localStringBuilder = new StringBuilder();
     localStringBuilder.append("Match_Tips:\n");
@@ -99,17 +138,7 @@ public final class b
     if (paramBoolean) {}
     for (i = 2;; i = 1)
     {
-      x(paramList, i);
-      return;
-    }
-  }
-  
-  public static void aT(boolean paramBoolean)
-  {
-    if (paramBoolean) {}
-    for (int i = 4;; i = 3)
-    {
-      x("App_List:\n", i);
+      C(paramList, i);
       return;
     }
   }
@@ -118,7 +147,7 @@ public final class b
   {
     StringBuilder localStringBuilder = new StringBuilder();
     PackageManager localPackageManager = aa.getContext().getPackageManager();
-    Object localObject = com.tencent.mm.compatible.e.a.au(paramBoolean1);
+    Object localObject = com.tencent.mm.compatible.e.a.ab(paramBoolean1);
     if (localObject != null)
     {
       localStringBuilder.append("App_List:\n");
@@ -145,71 +174,40 @@ public final class b
     if (paramBoolean2) {}
     for (int i = 4;; i = 3)
     {
-      x((String)localObject, i);
+      C((String)localObject, i);
       return;
     }
   }
   
-  private static int iL(String paramString)
+  private static int kZ(String paramString)
   {
     try
     {
-      int i = Integer.parseInt(h.qa().getValue(paramString));
+      int i = Integer.parseInt(h.om().getValue(paramString));
       return i;
     }
     catch (Exception localException)
     {
-      t.e("!32@/B4Tb64lLpL0qTj+UKAbT3of3Pv5i+ze", "getIntValFromDynamicConfig parseInt failed, val: " + paramString);
+      v.e("MicroMsg.PermissionMgr", "getIntValFromDynamicConfig parseInt failed, val: " + paramString);
     }
     return 0;
   }
   
-  private static void x(String paramString, int paramInt)
-  {
-    StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append("\n#client.version=").append(com.tencent.mm.protocal.b.hgo).append("\n");
-    localStringBuilder.append("#accinfo.revision=1169949\n");
-    localStringBuilder.append("#accinfo.uin=").append(aw.boE.y("last_login_uin", aoa)).append("\n");
-    localStringBuilder.append("#accinfo.dev=").append(anZ).append("\n");
-    localStringBuilder.append("#accinfo.build=06/02/2015 10:28 PM:amm-dev").append(":").append(com.tencent.mm.sdk.platformtools.g.amP).append("\n");
-    Object localObject1 = new Date();
-    Object localObject2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ", Locale.getDefault());
-    localStringBuilder.append("#accinfo.uploadTime=" + ((SimpleDateFormat)localObject2).format((Date)localObject1)).append("\n");
-    localStringBuilder.append("#permission.type=").append(String.valueOf(paramInt)).append('\n');
-    localStringBuilder.append("#permission.content:\n");
-    Intent localIntent = new Intent();
-    localIntent.setClassName(aa.getPackageName(), "com.tencent.mm.sandbox.monitor.ExceptionMonitorService");
-    localIntent.setAction("uncatch_exception");
-    localIntent.putExtra("exceptionWriteSdcard", false);
-    localIntent.putExtra("exceptionPid", Process.myPid());
-    localObject2 = aw.boE.y("login_weixin_username", "");
-    localObject1 = localObject2;
-    if (bn.iW((String)localObject2)) {
-      localObject1 = aw.boE.y("login_user_name", "never_login_crash");
-    }
-    localIntent.putExtra("userName", (String)localObject1);
-    localIntent.putExtra("tag", "permission");
-    paramString = localStringBuilder.toString() + paramString;
-    t.d("!32@/B4Tb64lLpL0qTj+UKAbT3of3Pv5i+ze", "report type: %d, len: %d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramString.length()) });
-    localIntent.putExtra("exceptionMsg", Base64.encodeToString(paramString.getBytes(), 2));
-    aa.getContext().startService(localIntent);
-  }
-  
   private static final class a
   {
-    public int bUI;
-    public int bUJ;
-    public int bUK;
-    public int bUL;
-    public int bUM;
+    public int cgJ;
+    public int cgK;
+    public int cgL;
+    public int cgM;
+    public int cgN;
     
     public a(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
     {
-      bUI = paramInt1;
-      bUJ = paramInt2;
-      bUK = paramInt3;
-      bUL = paramInt4;
-      bUM = paramInt5;
+      cgJ = paramInt1;
+      cgK = paramInt2;
+      cgL = paramInt3;
+      cgM = paramInt4;
+      cgN = paramInt5;
     }
   }
 }

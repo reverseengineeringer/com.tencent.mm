@@ -1,10 +1,10 @@
 package com.tencent.mm.ui.a;
 
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 
 public final class a$a
 {
-  private static final a krB = new a(y.getContext());
+  private static final a kQK = new a(aa.getContext());
 }
 
 /* Location:

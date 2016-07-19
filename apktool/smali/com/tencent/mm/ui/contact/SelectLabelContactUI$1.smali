@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lmr:Lcom/tencent/mm/ui/contact/SelectLabelContactUI;
+.field final synthetic lMG:Lcom/tencent/mm/ui/contact/SelectLabelContactUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 96
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectLabelContactUI$1;->lmr:Lcom/tencent/mm/ui/contact/SelectLabelContactUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectLabelContactUI$1;->lMG:Lcom/tencent/mm/ui/contact/SelectLabelContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
     .line 99
     new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SelectLabelContactUI$1;->lmr:Lcom/tencent/mm/ui/contact/SelectLabelContactUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SelectLabelContactUI$1;->lMG:Lcom/tencent/mm/ui/contact/SelectLabelContactUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/SelectLabelContactUI;->a(Lcom/tencent/mm/ui/contact/SelectLabelContactUI;)Ljava/util/HashSet;
 
@@ -54,7 +54,7 @@
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     .line 100
-    const-string/jumbo v1, "!44@/B4Tb64lLpKoY55HdaUCtqT2I08XVRNif1ohy8/Do0k="
+    const-string/jumbo v1, "MicroMsg.SelectLabelContactUI"
 
     const-string/jumbo v2, "SelectUser: %s"
 
@@ -68,14 +68,14 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 101
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SelectLabelContactUI$1;->lmr:Lcom/tencent/mm/ui/contact/SelectLabelContactUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SelectLabelContactUI$1;->lMG:Lcom/tencent/mm/ui/contact/SelectLabelContactUI;
 
     const-string/jumbo v2, ","
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

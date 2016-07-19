@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/LoginIndepPass;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/account/LoginIndepPass;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+.field final synthetic kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 455
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$4;->ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+    .line 433
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$4;->kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 459
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$4;->ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+    .line 437
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$4;->kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/LoginIndepPass;->g(Lcom/tencent/mm/ui/account/LoginIndepPass;)Lcom/tencent/mm/ui/applet/SecurityImage;
 
-    .line 460
+    .line 438
     return-void
 .end method

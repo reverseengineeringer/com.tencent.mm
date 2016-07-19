@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iGU:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
+.field final synthetic jdP:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 150
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$3;->iGU:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$3;->jdP:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 154
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$3;->iGU:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$3;->jdP:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->e(Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;)Landroid/view/View$OnFocusChangeListener;
 
@@ -50,7 +50,7 @@
     if-eqz v0, :cond_0
 
     .line 155
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$3;->iGU:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$3;->jdP:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->e(Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;)Landroid/view/View$OnFocusChangeListener;
 
@@ -60,7 +60,7 @@
 
     .line 157
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$3;->iGU:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$3;->jdP:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->c(Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;)V
 

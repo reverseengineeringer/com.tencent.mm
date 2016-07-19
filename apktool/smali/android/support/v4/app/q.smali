@@ -27,21 +27,21 @@
 
     move-result-object v2
 
-    invoke-virtual {p1}, Landroid/support/v4/app/s$a;->X()Landroid/app/PendingIntent;
+    invoke-virtual {p1}, Landroid/support/v4/app/s$a;->W()Landroid/app/PendingIntent;
 
     move-result-object v3
 
     invoke-direct {v1, v0, v2, v3}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
     .line 103
-    invoke-virtual {p1}, Landroid/support/v4/app/s$a;->Y()[Landroid/support/v4/app/y$a;
+    invoke-virtual {p1}, Landroid/support/v4/app/s$a;->X()[Landroid/support/v4/app/y$a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 104
-    invoke-virtual {p1}, Landroid/support/v4/app/s$a;->Y()[Landroid/support/v4/app/y$a;
+    invoke-virtual {p1}, Landroid/support/v4/app/s$a;->X()[Landroid/support/v4/app/y$a;
 
     move-result-object v0
 

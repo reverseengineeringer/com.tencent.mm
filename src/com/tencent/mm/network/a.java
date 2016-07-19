@@ -3,9 +3,9 @@ package com.tencent.mm.network;
 import android.content.SharedPreferences;
 import com.tencent.mm.a.g;
 import com.tencent.mm.model.ai;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.r;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.s;
+import com.tencent.mm.sdk.platformtools.v;
 import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,34 +14,34 @@ public final class a
   extends d.a
   implements c
 {
-  byte[] bGA;
-  private byte[] cin;
-  private a cio = null;
-  byte[] cip;
-  String ciq;
-  private Map cir = new HashMap();
+  byte[] bzL;
+  private byte[] cdE;
+  private a cdF = null;
+  byte[] cdG;
+  String cdH;
+  private Map<String, byte[]> cdI = new HashMap();
   private boolean foreground = true;
   private int uin;
   String username;
   
   public a(a parama)
   {
-    cio = parama;
-    EH();
+    cdF = parama;
+    Fc();
   }
   
-  private void EH()
+  private void Fc()
   {
-    bGA = ay.kA(ai.tU().getString("server_id", ""));
+    bzL = be.lj(ai.tV().getString("server_id", ""));
   }
   
-  private String EI()
+  private String Fd()
   {
     try
     {
       Object localObject = ByteBuffer.allocate(4096);
-      ((ByteBuffer)localObject).put(cin).put(cip).put(bGA).putInt(uin).put(ciq.getBytes()).put(username.getBytes());
-      localObject = g.m(((ByteBuffer)localObject).array());
+      ((ByteBuffer)localObject).put(cdE).put(cdG).put(bzL).putInt(uin).put(cdH.getBytes()).put(username.getBytes());
+      localObject = g.j(((ByteBuffer)localObject).array());
       return (String)localObject;
     }
     catch (Exception localException) {}
@@ -51,73 +51,78 @@ public final class a
   private void clear()
   {
     username = null;
-    cin = null;
-    bGA = null;
+    cdE = null;
+    bzL = null;
     uin = 0;
-    cip = null;
-    ciq = null;
+    cdG = null;
+    cdH = null;
   }
   
-  public final int A(byte[] paramArrayOfByte)
+  public final int F(byte[] paramArrayOfByte)
   {
-    long l = ay.FS();
-    if (vS())
+    long l = be.Gp();
+    if (vU())
     {
-      u.e("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker parseBuf Error : isLogin == true ");
+      v.e("MicroMsg.AccInfo", "AccInfoCacheInWorker parseBuf Error : isLogin == true ");
       return -2;
     }
     try
     {
-      r localr = new r();
-      int i = localr.aS(paramArrayOfByte);
+      s locals = new s();
+      int i = locals.aZ(paramArrayOfByte);
       if (i != 0)
       {
-        u.e("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker parseBuf Error : initParse: %s", new Object[] { Integer.valueOf(i) });
+        v.e("MicroMsg.AccInfo", "AccInfoCacheInWorker parseBuf Error : initParse: %s", new Object[] { Integer.valueOf(i) });
         return -3;
       }
-      username = localr.getString();
-      ciq = localr.getString();
-      uin = localr.getInt();
-      bGA = localr.getBuffer();
-      cip = localr.getBuffer();
-      cin = localr.getBuffer();
-      paramArrayOfByte = localr.getString();
-      if ((ay.kz(paramArrayOfByte)) || (!paramArrayOfByte.equals(EI())))
+      username = locals.getString();
+      cdH = locals.getString();
+      uin = locals.getInt();
+      bzL = locals.getBuffer();
+      cdG = locals.getBuffer();
+      cdE = locals.getBuffer();
+      paramArrayOfByte = locals.getString();
+      if ((be.kf(paramArrayOfByte)) || (!paramArrayOfByte.equals(Fd())))
       {
         clear();
-        u.e("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker parseBuf Error : checksum failed");
+        v.e("MicroMsg.AccInfo", "AccInfoCacheInWorker parseBuf Error : checksum failed");
         return -4;
       }
-      u.i("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker parseBuf finish time:%s  md5:%s", new Object[] { Long.valueOf(ay.an(l)), paramArrayOfByte });
+      v.i("MicroMsg.AccInfo", "AccInfoCacheInWorker parseBuf finish time:%s  md5:%s", new Object[] { Long.valueOf(be.au(l)), paramArrayOfByte });
       return 0;
     }
     catch (Exception paramArrayOfByte)
     {
       clear();
-      u.e("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker parseBuf exception:%s", new Object[] { ay.b(paramArrayOfByte) });
+      v.e("MicroMsg.AccInfo", "AccInfoCacheInWorker parseBuf exception:%s", new Object[] { be.f(paramArrayOfByte) });
     }
     return -5;
   }
   
-  public final void F(byte[] paramArrayOfByte)
+  public final void L(byte[] paramArrayOfByte)
   {
-    bGA = paramArrayOfByte;
+    bzL = paramArrayOfByte;
   }
   
-  public final void G(byte[] paramArrayOfByte)
+  public final void M(byte[] paramArrayOfByte)
   {
-    cip = paramArrayOfByte;
+    cdG = paramArrayOfByte;
   }
   
-  public final void aN(boolean paramBoolean)
+  public final void as(boolean paramBoolean)
   {
     foreground = paramBoolean;
-    u.i("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "somr accinfo setForegroundMuteRoom :%b", new Object[] { Boolean.valueOf(foreground) });
+    v.i("MicroMsg.AccInfo", "somr accinfo setForegroundMuteRoom :%b", new Object[] { Boolean.valueOf(foreground) });
   }
   
-  public final void ba(int paramInt)
+  public final void bq(int paramInt)
   {
     uin = paramInt;
+  }
+  
+  public final void g(String paramString, byte[] paramArrayOfByte)
+  {
+    cdI.put(paramString, paramArrayOfByte);
   }
   
   public final String getUsername()
@@ -125,41 +130,36 @@ public final class a
     return username;
   }
   
-  public final byte[] gf(String paramString)
+  public final byte[] gs(String paramString)
   {
-    return (byte[])cir.get(paramString);
-  }
-  
-  public final void h(String paramString, byte[] paramArrayOfByte)
-  {
-    cir.put(paramString, paramArrayOfByte);
+    return (byte[])cdI.get(paramString);
   }
   
   public final void i(byte[] paramArrayOfByte, int paramInt)
   {
-    cin = paramArrayOfByte;
+    cdE = paramArrayOfByte;
     uin = paramInt;
-    if (cio != null) {
-      vS();
+    if (cdF != null) {
+      vU();
     }
-    u.d("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "summerauth update session info: session:%s, uin:%d stack:[%s]", new Object[] { ay.Dz(ay.I(paramArrayOfByte)), Integer.valueOf(paramInt), ay.aVJ() });
+    v.d("MicroMsg.AccInfo", "summerauth update session info: session:%s, uin:%d stack:[%s]", new Object[] { be.FO(be.O(paramArrayOfByte)), Integer.valueOf(paramInt), be.baX() });
   }
   
-  public final void kj(String paramString)
+  public final void kT(String paramString)
   {
-    ciq = paramString;
+    cdH = paramString;
   }
   
   public final void reset()
   {
-    u.i("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "reset accinfo");
+    v.i("MicroMsg.AccInfo", "reset accinfo");
     username = "";
-    cin = new byte[0];
-    EH();
+    cdE = new byte[0];
+    Fc();
     uin = 0;
   }
   
-  public final int rg()
+  public final int rf()
   {
     return uin;
   }
@@ -171,59 +171,59 @@ public final class a
   
   public final String toString()
   {
-    String str = "AccInfo:\n" + "|-uin     =" + rg() + "\n";
+    String str = "AccInfo:\n" + "|-uin     =" + rf() + "\n";
     str = str + "|-user    =" + getUsername() + "\n";
-    str = str + "|-wxuser  =" + wo() + "\n";
-    str = str + "|-session =" + ay.I(tq()) + "\n";
-    str = str + "|-ecdhkey =" + ay.I(vT()) + "\n";
-    return str + "`-cookie  =" + ay.I(vR());
+    str = str + "|-wxuser  =" + wq() + "\n";
+    str = str + "|-session =" + be.O(tr()) + "\n";
+    str = str + "|-ecdhkey =" + be.O(vV()) + "\n";
+    return str + "`-cookie  =" + be.O(vT());
   }
   
-  public final byte[] tq()
+  public final byte[] tr()
   {
-    return cin;
-  }
-  
-  public final byte[] vR()
-  {
-    return bGA;
-  }
-  
-  public final boolean vS()
-  {
-    return (cin != null) && (cin.length > 0);
+    return cdE;
   }
   
   public final byte[] vT()
   {
-    return cip;
+    return bzL;
   }
   
   public final boolean vU()
   {
-    return foreground;
+    return (cdE != null) && (cdE.length > 0);
   }
   
   public final byte[] vV()
   {
-    long l = ay.FS();
+    return cdG;
+  }
+  
+  public final boolean vW()
+  {
+    return foreground;
+  }
+  
+  public final byte[] vX()
+  {
+    long l = be.Gp();
     int i;
-    if (ay.kz(username)) {
+    if (be.kf(username)) {
       i = 0;
     }
     while (i == 0)
     {
-      u.e("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker getCacheBuffer Error : isCacheValid== false");
+      v.e("MicroMsg.AccInfo", "AccInfoCacheInWorker getCacheBuffer Error : isCacheValid== false");
       return null;
-      if (ay.J(cin)) {
+      if (be.P(cdE)) {
         i = 0;
-      } else if (ay.J(bGA)) {
+      } else if (be.P(bzL)) {
         i = 0;
       } else if ((uin == 0) || (uin == -1)) {
         i = 0;
-      } else if (ay.J(cip)) {
+      } else if (be.P(cdG)) {
         i = 0;
-      } else if (ay.kz(ciq)) {
+      } else if (be.kf(cdH)) {
         i = 0;
       } else {
         i = 1;
@@ -231,30 +231,30 @@ public final class a
     }
     try
     {
-      Object localObject = new r();
-      ((r)localObject).aUv();
-      ((r)localObject).CL(username);
-      ((r)localObject).CL(ciq);
-      ((r)localObject).po(uin);
-      ((r)localObject).aT(bGA);
-      ((r)localObject).aT(cip);
-      ((r)localObject).aT(cin);
-      String str = EI();
-      ((r)localObject).CL(str);
-      localObject = ((r)localObject).aUw();
-      u.i("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker getCacheBuffer finish time:%s buflen:%s md5:%s", new Object[] { Long.valueOf(ay.an(l)), Integer.valueOf(localObject.length), str });
+      Object localObject = new s();
+      ((s)localObject).aZz();
+      ((s)localObject).EY(username);
+      ((s)localObject).EY(cdH);
+      ((s)localObject).rf(uin);
+      ((s)localObject).ba(bzL);
+      ((s)localObject).ba(cdG);
+      ((s)localObject).ba(cdE);
+      String str = Fd();
+      ((s)localObject).EY(str);
+      localObject = ((s)localObject).aZA();
+      v.i("MicroMsg.AccInfo", "AccInfoCacheInWorker getCacheBuffer finish time:%s buflen:%s md5:%s", new Object[] { Long.valueOf(be.au(l)), Integer.valueOf(localObject.length), str });
       return (byte[])localObject;
     }
     catch (Exception localException)
     {
-      u.e("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker getCacheBuffer exception:%s", new Object[] { ay.b(localException) });
+      v.e("MicroMsg.AccInfo", "AccInfoCacheInWorker getCacheBuffer exception:%s", new Object[] { be.f(localException) });
     }
     return null;
   }
   
-  public final String wo()
+  public final String wq()
   {
-    return ciq;
+    return cdH;
   }
   
   public static abstract interface a {}

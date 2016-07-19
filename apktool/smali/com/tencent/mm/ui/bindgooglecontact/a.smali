@@ -11,13 +11,22 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/ui/i",
+        "<",
+        "Lcom/tencent/mm/modelfriend/o;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field private dfG:Landroid/view/LayoutInflater;
+.field private deJ:Landroid/view/LayoutInflater;
 
-.field private kMD:Ljava/lang/String;
+.field private llS:Ljava/lang/String;
 
-.field kMX:Lcom/tencent/mm/ui/bindgooglecontact/a$a;
+.field lmm:Lcom/tencent/mm/ui/bindgooglecontact/a$a;
 
 .field private mContext:Landroid/content/Context;
 
@@ -37,7 +46,7 @@
     invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/i;-><init>(Landroid/content/Context;Ljava/lang/Object;)V
 
     .line 41
-    iput-object p2, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->kMD:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->llS:Ljava/lang/String;
 
     .line 42
     iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->mContext:Landroid/content/Context;
@@ -49,7 +58,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->dfG:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->deJ:Landroid/view/LayoutInflater;
 
     .line 44
     return-void
@@ -60,25 +69,25 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->kMX:Lcom/tencent/mm/ui/bindgooglecontact/a$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->lmm:Lcom/tencent/mm/ui/bindgooglecontact/a$a;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final Gk()V
+.method public final GH()V
     .locals 6
 
     .prologue
     .line 54
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zy()Lcom/tencent/mm/modelfriend/p;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zL()Lcom/tencent/mm/modelfriend/p;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->mFilter:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->kMD:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->llS:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -213,7 +222,7 @@
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/p;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/p;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -274,18 +283,18 @@
     goto :goto_0
 .end method
 
-.method protected final Gl()V
+.method protected final GI()V
     .locals 0
 
     .prologue
     .line 48
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindgooglecontact/a;->Gk()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindgooglecontact/a;->GH()V
 
     .line 50
     return-void
 .end method
 
-.method public final synthetic a(Ljava/lang/Object;Landroid/database/Cursor;)Ljava/lang/Object;
+.method public final synthetic convertFrom(Ljava/lang/Object;Landroid/database/Cursor;)Ljava/lang/Object;
     .locals 0
 
     .prologue
@@ -299,7 +308,7 @@
     invoke-direct {p1}, Lcom/tencent/mm/modelfriend/o;-><init>()V
 
     :cond_0
-    invoke-virtual {p1, p2}, Lcom/tencent/mm/modelfriend/o;->c(Landroid/database/Cursor;)V
+    invoke-virtual {p1, p2}, Lcom/tencent/mm/modelfriend/o;->b(Landroid/database/Cursor;)V
 
     return-object p1
 .end method
@@ -314,7 +323,7 @@
 
     const/4 v3, 0x0
 
-    const v7, 0x7f080186
+    const v7, 0x7f0f0128
 
     const/4 v6, 0x0
 
@@ -329,9 +338,9 @@
 
     .line 86
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->dfG:Landroid/view/LayoutInflater;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->deJ:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0a0520
+    const v1, 0x7f0302c1
 
     invoke-virtual {v0, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -381,7 +390,7 @@
     .line 97
     iget-object v2, v0, Lcom/tencent/mm/modelfriend/o;->field_googlegmail:Ljava/lang/String;
 
-    iput-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->fxW:Ljava/lang/String;
+    iput-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->fHa:Ljava/lang/String;
 
     .line 99
     iget v2, v0, Lcom/tencent/mm/modelfriend/o;->field_status:I
@@ -399,11 +408,11 @@
     if-eqz v2, :cond_5
 
     .line 125
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->cqM:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->clZ:Landroid/widget/TextView;
 
     iget-object v4, v0, Lcom/tencent/mm/modelfriend/o;->field_googlegmail:Ljava/lang/String;
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->Dx(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/be;->FM(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -423,7 +432,7 @@
 
     .line 187
     :goto_5
-    iget-object v1, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kMY:Landroid/widget/TextView;
+    iget-object v1, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmn:Landroid/widget/TextView;
 
     iget-object v0, v0, Lcom/tencent/mm/modelfriend/o;->field_googlegmail:Ljava/lang/String;
 
@@ -442,7 +451,7 @@
 
     const/4 v4, -0x1
 
-    invoke-static {v2, v6, v4}, Lcom/tencent/mm/q/b;->a(Ljava/lang/String;ZI)Landroid/graphics/Bitmap;
+    invoke-static {v2, v6, v4}, Lcom/tencent/mm/s/b;->a(Ljava/lang/String;ZI)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
@@ -451,13 +460,13 @@
     if-nez v2, :cond_3
 
     .line 107
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->coY:Landroid/widget/ImageView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->ckm:Landroid/widget/ImageView;
 
     iget-object v4, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f0301b1
+    const v5, 0x7f0700af
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/aw/a;->y(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v4, v5}, Lcom/tencent/mm/az/a;->C(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -467,7 +476,7 @@
 
     .line 109
     :cond_3
-    iget-object v4, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->coY:Landroid/widget/ImageView;
+    iget-object v4, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->ckm:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v2}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
@@ -477,7 +486,7 @@
     :pswitch_1
     iget-object v2, v0, Lcom/tencent/mm/modelfriend/o;->field_googleid:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/q/b;->fH(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v2}, Lcom/tencent/mm/s/b;->fU(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
@@ -485,13 +494,13 @@
     if-nez v2, :cond_4
 
     .line 116
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->coY:Landroid/widget/ImageView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->ckm:Landroid/widget/ImageView;
 
     iget-object v4, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f0301b1
+    const v5, 0x7f0700af
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/aw/a;->y(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v4, v5}, Lcom/tencent/mm/az/a;->C(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -501,7 +510,7 @@
 
     .line 118
     :cond_4
-    iget-object v4, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->coY:Landroid/widget/ImageView;
+    iget-object v4, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->ckm:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v2}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
@@ -509,7 +518,7 @@
 
     .line 127
     :cond_5
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->cqM:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->clZ:Landroid/widget/TextView;
 
     iget-object v4, v0, Lcom/tencent/mm/modelfriend/o;->field_googlename:Ljava/lang/String;
 
@@ -519,26 +528,26 @@
 
     .line 132
     :pswitch_2
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kMZ:Landroid/view/View;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmo:Landroid/view/View;
 
     invoke-virtual {v2, v8}, Landroid/view/View;->setClickable(Z)V
 
     .line 133
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kMZ:Landroid/view/View;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmo:Landroid/view/View;
 
-    const v4, 0x7f0406d0
+    const v4, 0x7f020138
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setBackgroundResource(I)V
 
     .line 134
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
-    const v4, 0x7f0b0557
+    const v4, 0x7f08096a
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(I)V
 
     .line 135
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->mContext:Landroid/content/Context;
 
@@ -546,7 +555,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f08017c
+    const v5, 0x7f0f0241
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -558,26 +567,26 @@
 
     .line 138
     :pswitch_3
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kMZ:Landroid/view/View;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmo:Landroid/view/View;
 
     invoke-virtual {v2, v8}, Landroid/view/View;->setClickable(Z)V
 
     .line 139
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kMZ:Landroid/view/View;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmo:Landroid/view/View;
 
-    const v4, 0x7f040694
+    const v4, 0x7f020139
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setBackgroundResource(I)V
 
     .line 140
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
-    const v4, 0x7f0b0558
+    const v4, 0x7f080972
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(I)V
 
     .line 141
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->mContext:Landroid/content/Context;
 
@@ -595,24 +604,24 @@
 
     .line 144
     :pswitch_4
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kMZ:Landroid/view/View;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmo:Landroid/view/View;
 
     invoke-virtual {v2, v6}, Landroid/view/View;->setClickable(Z)V
 
     .line 145
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kMZ:Landroid/view/View;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmo:Landroid/view/View;
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 146
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
-    const v4, 0x7f0b0559
+    const v4, 0x7f08096c
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(I)V
 
     .line 147
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->mContext:Landroid/content/Context;
 
@@ -630,14 +639,14 @@
 
     .line 153
     :pswitch_5
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
     const/4 v3, 0x4
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 154
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kNa:Landroid/widget/ProgressBar;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmp:Landroid/widget/ProgressBar;
 
     invoke-virtual {v2, v6}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
@@ -645,27 +654,27 @@
 
     .line 157
     :pswitch_6
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kMZ:Landroid/view/View;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmo:Landroid/view/View;
 
     invoke-virtual {v2, v6}, Landroid/view/View;->setClickable(Z)V
 
     .line 158
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kMZ:Landroid/view/View;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmo:Landroid/view/View;
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 159
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 160
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kNa:Landroid/widget/ProgressBar;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmp:Landroid/widget/ProgressBar;
 
     invoke-virtual {v2, v9}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
     .line 161
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->mContext:Landroid/content/Context;
 
@@ -688,9 +697,9 @@
 
     .line 164
     :pswitch_7
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
-    const v3, 0x7f0b055b
+    const v3, 0x7f08096b
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
@@ -698,9 +707,9 @@
 
     .line 167
     :pswitch_8
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
-    const v3, 0x7f0b055a
+    const v3, 0x7f080973
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
@@ -708,12 +717,12 @@
 
     .line 172
     :pswitch_9
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 173
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kNa:Landroid/widget/ProgressBar;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmp:Landroid/widget/ProgressBar;
 
     invoke-virtual {v2, v9}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
@@ -726,14 +735,14 @@
 
     .line 176
     :pswitch_a
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
-    const v3, 0x7f0b0557
+    const v3, 0x7f08096a
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
     .line 177
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->mContext:Landroid/content/Context;
 
@@ -741,7 +750,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f08017c
+    const v4, 0x7f0f0241
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -753,14 +762,14 @@
 
     .line 180
     :pswitch_b
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
-    const v3, 0x7f0b0558
+    const v3, 0x7f080972
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
     .line 181
-    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->mContext:Landroid/content/Context;
 
@@ -822,22 +831,22 @@
     .end packed-switch
 .end method
 
-.method public final pH(Ljava/lang/String;)V
+.method public final qY(Ljava/lang/String;)V
     .locals 1
 
     .prologue
     .line 77
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kx(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->lh(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a;->mFilter:Ljava/lang/String;
 
     .line 78
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindgooglecontact/a;->adW()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindgooglecontact/a;->closeCursor()V
 
     .line 79
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindgooglecontact/a;->Gk()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindgooglecontact/a;->GH()V
 
     .line 80
     return-void

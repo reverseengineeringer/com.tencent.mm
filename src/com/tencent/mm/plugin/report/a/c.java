@@ -2,17 +2,17 @@ package com.tencent.mm.plugin.report.a;
 
 public final class c
 {
-  public static boolean fTL = false;
-  public static boolean fTM = true;
-  public static boolean fTN = true;
-  public static boolean fTO = true;
+  public static boolean gdf = false;
+  public static boolean gdg = true;
+  public static boolean gdh = true;
+  public static boolean gdi = true;
   
-  public static void a(boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3, boolean paramBoolean4)
+  public static void b(boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3, boolean paramBoolean4)
   {
-    fTL = paramBoolean1;
-    fTM = paramBoolean2;
-    fTN = paramBoolean3;
-    fTO = paramBoolean4;
+    gdf = paramBoolean1;
+    gdg = paramBoolean2;
+    gdh = paramBoolean3;
+    gdi = paramBoolean4;
   }
 }
 

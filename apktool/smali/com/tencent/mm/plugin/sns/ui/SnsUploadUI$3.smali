@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+.field final synthetic hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 753
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$3;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    .line 783
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$3;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 757
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$3;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    .line 787
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$3;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/h;->i(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/h;->e(Landroid/app/Activity;)V
 
-    .line 758
+    .line 788
     return-void
 .end method

@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public iAB:I
+.field public iXb:I
 
-.field public iAC:I
+.field public iXc:I
 
-.field public iAD:Ljava/lang/String;
+.field public iXd:Ljava/lang/String;
 
 
 # direct methods
@@ -33,15 +33,15 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 614
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     .line 615
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     .line 616
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/o$a;->iAD:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/o$a;->iXd:Ljava/lang/String;
 
     return-void
 .end method

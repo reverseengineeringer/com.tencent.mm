@@ -2,7 +2,7 @@ package com.tencent.mm.modelmulti;
 
 public abstract interface a$c
 {
-  public abstract String AM();
+  public abstract String AY();
 }
 
 /* Location:

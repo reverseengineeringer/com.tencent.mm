@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPv:Lcom/tencent/mm/ui/bindqq/BindQQUI;
+.field final synthetic loL:Lcom/tencent/mm/ui/bindqq/BindQQUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 147
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$6;->kPv:Lcom/tencent/mm/ui/bindqq/BindQQUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$6;->loL:Lcom/tencent/mm/ui/bindqq/BindQQUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hpo:Lcom/tencent/mm/plugin/sns/ui/c/b;
+.field final synthetic hFM:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 469
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$19;->hpo:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    .line 448
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$19;->hFM:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,190 +36,155 @@
 
 
 # virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
-    .locals 10
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
     .prologue
-    const/4 v9, 0x0
+    .line 452
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    move-result-object v0
 
-    const/4 v3, 0x0
+    instance-of v0, v0, Ljava/lang/String;
 
-    .line 473
+    if-nez v0, :cond_1
+
+    .line 493
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 461
+    :cond_1
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 474
-    const-string/jumbo v1, "!44@/B4Tb64lLpJYrxmi4Gb6eMmrCqbzyXwtDSgi89xVDlI="
+    .line 462
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBI()Lcom/tencent/mm/plugin/sns/i/l;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    const-string/jumbo v5, "onCommentLongClick:"
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/i/l;->wA(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 463
+    if-eqz v0, :cond_0
 
-    move-result-object v4
+    .line 466
+    const/16 v1, 0x20
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 475
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    move v0, v2
+    .line 467
+    const-string/jumbo v1, "MicroMsg.TimelineClickListener"
 
-    .line 536
-    :goto_0
-    return v0
+    const-string/jumbo v2, "click the ad tailLink button"
 
-    .line 478
-    :cond_0
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayN()Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v1
+    .line 469
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aDd()Lcom/tencent/mm/plugin/sns/i/a;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v0
+
+    .line 470
+    if-nez v0, :cond_2
+
+    .line 471
+    const-string/jumbo v0, "MicroMsg.TimelineClickListener"
+
+    const-string/jumbo v1, "the adInfo is null"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 474
+    :cond_2
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/i/a;->hdL:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_3
 
-    move v0, v2
+    .line 475
+    const-string/jumbo v0, "MicroMsg.TimelineClickListener"
+
+    const-string/jumbo v1, "the adActionExtTailLink is null"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
 
     .line 479
-    goto :goto_0
+    :cond_3
+    const-string/jumbo v1, "MicroMsg.TimelineClickListener"
 
-    :cond_1
-    move-object v1, p1
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "open webview url : "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, v0, Lcom/tencent/mm/plugin/sns/i/a;->hdL:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 480
+    new-instance v1, Landroid/content/Intent;
+
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
     .line 482
-    check-cast v1, Lcom/tencent/mm/ui/tools/MaskImageButton;
+    new-instance v2, Landroid/os/Bundle;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/tools/MaskImageButton;->lxa:Ljava/lang/Object;
+    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    if-eqz v1, :cond_2
+    .line 484
+    const-string/jumbo v3, "jsapiargs"
 
-    move-object v1, p1
-
-    check-cast v1, Lcom/tencent/mm/ui/tools/MaskImageButton;
-
-    iget-object v1, v1, Lcom/tencent/mm/ui/tools/MaskImageButton;->lxa:Ljava/lang/Object;
-
-    instance-of v1, v1, Ljava/lang/String;
-
-    if-eqz v1, :cond_2
-
-    .line 483
-    check-cast p1, Lcom/tencent/mm/ui/tools/MaskImageButton;
-
-    iget-object v1, p1, Lcom/tencent/mm/ui/tools/MaskImageButton;->lxa:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/String;
-
-    .line 487
-    :goto_1
-    new-instance v4, Landroid/content/Intent;
-
-    invoke-direct {v4}, Landroid/content/Intent;-><init>()V
-
-    .line 489
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azi()Lcom/tencent/mm/plugin/sns/h/l;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v1}, Lcom/tencent/mm/plugin/sns/h/l;->vo(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
-
-    move-result-object v5
-
-    .line 490
-    if-eqz v5, :cond_4
-
-    .line 491
-    const/16 v4, 0x20
-
-    invoke-virtual {v5, v4}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    move v4, v2
-
-    .line 495
-    :goto_2
-    if-eqz v4, :cond_3
-
-    move v0, v3
-
-    .line 499
-    goto :goto_0
+    invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
     .line 485
-    :cond_2
-    const-string/jumbo v1, ""
+    const-string/jumbo v2, "useJs"
 
-    goto :goto_1
+    const/4 v3, 0x1
 
-    .line 501
-    :cond_3
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$19;->hpo:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/ui/c/b;->asX:Landroid/app/Activity;
+    .line 488
+    const-string/jumbo v2, "rawUrl"
 
-    const/4 v6, 0x2
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/i/a;->hdL:Ljava/lang/String;
 
-    new-array v6, v6, [Ljava/lang/String;
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    iget-object v7, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$19;->hpo:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    .line 489
+    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
-    iget-object v7, v7, Lcom/tencent/mm/plugin/sns/ui/c/b;->asX:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$19;->hFM:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    const v8, 0x7f0b0431
+    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/c/b;->aeH:Landroid/app/Activity;
 
-    invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/g;->j(Landroid/content/Intent;Landroid/content/Context;)V
 
-    move-result-object v7
-
-    aput-object v7, v6, v3
-
-    iget-object v7, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$19;->hpo:Lcom/tencent/mm/plugin/sns/ui/c/b;
-
-    iget-object v7, v7, Lcom/tencent/mm/plugin/sns/ui/c/b;->asX:Landroid/app/Activity;
-
-    const v8, 0x7f0b1644
-
-    invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v7
-
-    aput-object v7, v6, v2
-
-    new-instance v2, Lcom/tencent/mm/plugin/sns/ui/c/b$19$1;
-
-    invoke-direct {v2, p0, v5, v0, v1}, Lcom/tencent/mm/plugin/sns/ui/c/b$19$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/c/b$19;Lcom/tencent/mm/plugin/sns/h/k;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v4, v9, v6, v9, v2}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/ui/base/g$c;)Landroid/app/Dialog;
-
-    move v0, v3
-
-    .line 536
-    goto :goto_0
-
-    :cond_4
-    move v4, v3
-
-    goto :goto_2
+    goto/16 :goto_0
 .end method

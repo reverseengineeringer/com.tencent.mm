@@ -8,8 +8,8 @@ import android.os.Message;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.f;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -21,7 +21,7 @@ final class CropImageView$3
   
   public final boolean onTouch(View paramView, final MotionEvent paramMotionEvent)
   {
-    if (!CropImageView.u(luU)) {}
+    if (!CropImageView.u(lVW)) {}
     do
     {
       int i;
@@ -30,10 +30,10 @@ final class CropImageView$3
         do
         {
           return false;
-        } while (CropImageView.i(luU) == null);
+        } while (CropImageView.i(lVW) == null);
         i = paramMotionEvent.getAction() & 0xFF;
-        u.d("!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE", "on touch : event type=" + i + ", isDownOnImg=" + CropImageView.v(luU));
-      } while ((!CropImageView.v(luU)) && (i != 0));
+        v.d("MicroMsg.CropImageView", "on touch : event type=" + i + ", isDownOnImg=" + CropImageView.v(lVW));
+      } while ((!CropImageView.v(lVW)) && (i != 0));
       switch (i)
       {
       case 3: 
@@ -41,109 +41,109 @@ final class CropImageView$3
       default: 
         return false;
       case 0: 
-        u.d("!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE", "action_down");
-        CropImageView.a(luU, paramMotionEvent.getRawX());
-        CropImageView.b(luU, paramMotionEvent.getRawY());
-        u.d("!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE", "lastX=" + CropImageView.w(luU) + ",lastY=" + CropImageView.x(luU));
-        CropImageView.c(luU, CropImageView.w(luU));
-        CropImageView.d(luU, CropImageView.x(luU));
-        paramView = luU.getImageMatrix();
+        v.d("MicroMsg.CropImageView", "action_down");
+        CropImageView.a(lVW, paramMotionEvent.getRawX());
+        CropImageView.b(lVW, paramMotionEvent.getRawY());
+        v.d("MicroMsg.CropImageView", "lastX=" + CropImageView.w(lVW) + ",lastY=" + CropImageView.x(lVW));
+        CropImageView.c(lVW, CropImageView.w(lVW));
+        CropImageView.d(lVW, CropImageView.x(lVW));
+        paramView = lVW.getImageMatrix();
         paramMotionEvent = new RectF();
-        paramMotionEvent.set(0.0F, 0.0F, CropImageView.i(luU).getWidth(), CropImageView.i(luU).getHeight());
+        paramMotionEvent.set(0.0F, 0.0F, CropImageView.i(lVW).getWidth(), CropImageView.i(lVW).getHeight());
         paramView.mapRect(paramMotionEvent);
-        CropImageView.a(luU, paramMotionEvent.contains(CropImageView.w(luU), CropImageView.x(luU)));
-        CropImageView.a(luU, System.currentTimeMillis());
+        CropImageView.a(lVW, paramMotionEvent.contains(CropImageView.w(lVW), CropImageView.x(lVW)));
+        CropImageView.a(lVW, System.currentTimeMillis());
         return false;
       case 5: 
-        u.d("!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE", "action_mult_down");
-        CropImageView.b(luU, true);
-        luU.epi = f.n(paramMotionEvent);
+        v.d("MicroMsg.CropImageView", "action_mult_down");
+        CropImageView.b(lVW, true);
+        lVW.eug = f.m(paramMotionEvent);
       }
-    } while (luU.epi <= 5.0F);
-    luU.luB = true;
-    f.b(CropImageView.h(luU), paramMotionEvent);
+    } while (lVW.eug <= 5.0F);
+    lVW.lVD = true;
+    f.a(CropImageView.h(lVW), paramMotionEvent);
     return true;
-    u.d("!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE", "action_mult_up");
-    luU.luB = false;
-    CropImageView.b(luU, true);
+    v.d("MicroMsg.CropImageView", "action_mult_up");
+    lVW.lVD = false;
+    CropImageView.b(lVW, true);
     return true;
-    u.d("!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE", "action_move");
+    v.d("MicroMsg.CropImageView", "action_move");
     float f1;
-    if (luU.luB)
+    if (lVW.lVD)
     {
-      u.d("!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE", "is valid mult down");
-      luU.epj = f.n(paramMotionEvent);
-      f1 = luU.epj - luU.epi;
-      if ((luU.epj > 5.0F) && (Math.abs(f1) > 5.0F))
+      v.d("MicroMsg.CropImageView", "is valid mult down");
+      lVW.euh = f.m(paramMotionEvent);
+      f1 = lVW.euh - lVW.eug;
+      if ((lVW.euh > 5.0F) && (Math.abs(f1) > 5.0F))
       {
-        f.b(CropImageView.h(luU), paramMotionEvent);
-        u.d("!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE", "mX=" + hluU).x + ",mY=" + hluU).y);
+        f.a(CropImageView.h(lVW), paramMotionEvent);
+        v.d("MicroMsg.CropImageView", "mX=" + hlVW).x + ",mY=" + hlVW).y);
         if (f1 <= 0.0F) {
           break label690;
         }
-        u.d("!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE", "zoom in");
-        luU.biA();
+        v.d("MicroMsg.CropImageView", "zoom in");
+        lVW.bow();
       }
     }
     for (;;)
     {
-      luU.epi = luU.epj;
-      if (!CropImageView.y(luU))
+      lVW.eug = lVW.euh;
+      if (!CropImageView.y(lVW))
       {
-        f1 = paramMotionEvent.getRawX() - CropImageView.w(luU);
-        float f2 = paramMotionEvent.getRawY() - CropImageView.x(luU);
+        f1 = paramMotionEvent.getRawX() - CropImageView.w(lVW);
+        float f2 = paramMotionEvent.getRawY() - CropImageView.x(lVW);
         if ((Math.abs(f1) > 5.0F) || (Math.abs(f2) > 5.0F)) {
-          luU.getImageMatrix().postTranslate(f1, f2);
+          lVW.getImageMatrix().postTranslate(f1, f2);
         }
-        luU.invalidate();
+        lVW.invalidate();
       }
-      CropImageView.b(luU, false);
-      CropImageView.a(luU, paramMotionEvent.getRawX());
-      CropImageView.b(luU, paramMotionEvent.getRawY());
+      CropImageView.b(lVW, false);
+      CropImageView.a(lVW, paramMotionEvent.getRawX());
+      CropImageView.b(lVW, paramMotionEvent.getRawY());
       return false;
       label690:
-      u.d("!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE", "zoom out");
-      luU.biB();
+      v.d("MicroMsg.CropImageView", "zoom out");
+      lVW.box();
     }
-    u.d("!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE", "action_up");
-    if (CropImageView.z(luU))
+    v.d("MicroMsg.CropImageView", "action_up");
+    if (CropImageView.z(lVW))
     {
-      CropImageView.c(luU, false);
-      if (CropImageView.A(luU))
+      CropImageView.c(lVW, false);
+      if (CropImageView.A(lVW))
       {
-        CropImageView.d(luU, false);
-        luU.biB();
-        luU.biB();
-        luU.biB();
-        luU.biB();
-        luU.biB();
+        CropImageView.d(lVW, false);
+        lVW.box();
+        lVW.box();
+        lVW.box();
+        lVW.box();
+        lVW.box();
         return false;
       }
-      CropImageView.d(luU, true);
-      luU.biA();
-      luU.biA();
-      luU.biA();
-      luU.biA();
-      luU.biA();
+      CropImageView.d(lVW, true);
+      lVW.bow();
+      lVW.bow();
+      lVW.bow();
+      lVW.bow();
+      lVW.bow();
       return false;
     }
-    CropImageView.c(luU, true);
-    CropImageView.a(luU, new Timer());
+    CropImageView.c(lVW, true);
+    CropImageView.a(lVW, new Timer());
     paramView = new TimerTask()
     {
       public final void run()
       {
-        if (CropImageView.z(luU))
+        if (CropImageView.z(lVW))
         {
           Message localMessage = new Message();
           what = 4661;
           obj = paramMotionEvent;
-          CropImageView.l(luU).sendMessage(localMessage);
-          CropImageView.c(luU, false);
+          CropImageView.l(lVW).sendMessage(localMessage);
+          CropImageView.c(lVW, false);
         }
       }
     };
-    CropImageView.B(luU).schedule(paramView, 200L);
+    CropImageView.B(lVW).schedule(paramView, 200L);
     return false;
   }
 }

@@ -1,8 +1,10 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import com.tencent.mm.modelgeo.a.a;
-import com.tencent.mm.modelstat.g;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.modelgeo.c;
+import com.tencent.mm.modelstat.b;
+import com.tencent.mm.modelstat.j;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class LocationWidget$3
   implements a.a
@@ -14,15 +16,32 @@ final class LocationWidget$3
     if (!paramBoolean) {
       return true;
     }
-    u.d("!32@/B4Tb64lLpIu6Y+BscdrxMP5NzODT+9I", "get location %f %f", new Object[] { Float.valueOf(paramFloat2), Float.valueOf(paramFloat1) });
-    g.a(2003, paramFloat1, paramFloat2, 0);
-    if (!LocationWidget.b(gZr)) {
-      return false;
-    }
-    if ((LocationWidget.e(gZr) == -1000.0F) || (LocationWidget.f(gZr) == -1000.0F))
+    v.d("MicroMsg.LocationWidget", "get location %f %f", new Object[] { Float.valueOf(paramFloat2), Float.valueOf(paramFloat1) });
+    b localb = b.Dz();
+    if (paramInt == 0)
     {
-      LocationWidget.a(gZr, paramFloat2);
-      LocationWidget.b(gZr, paramFloat1);
+      paramBoolean = false;
+      if (LocationWidget.e(hmJ) != null) {
+        break label98;
+      }
+    }
+    label98:
+    for (boolean bool = false;; bool = ehmJ).bHE)
+    {
+      localb.a(2003, paramBoolean, bool, paramFloat1, paramFloat2, (int)paramDouble2);
+      j.a(2003, paramFloat1, paramFloat2, 0);
+      if (LocationWidget.b(hmJ)) {
+        break label113;
+      }
+      return false;
+      paramBoolean = true;
+      break;
+    }
+    label113:
+    if ((LocationWidget.f(hmJ) == -1000.0F) || (LocationWidget.g(hmJ) == -1000.0F))
+    {
+      LocationWidget.a(hmJ, paramFloat2);
+      LocationWidget.b(hmJ, paramFloat1);
     }
     return false;
   }

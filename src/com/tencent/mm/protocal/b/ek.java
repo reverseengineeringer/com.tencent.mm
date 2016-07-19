@@ -3,52 +3,49 @@ package com.tencent.mm.protocal.b;
 import java.util.LinkedList;
 
 public final class ek
-  extends com.tencent.mm.al.a
+  extends alt
 {
-  public String hnO;
-  public int hnP;
-  public String hnQ;
-  public int hnR;
-  public LinkedList hnS = new LinkedList();
+  public int jxj;
+  public String jyJ;
+  public int jyK;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hnO != null) {
-        paramVarArgs.U(1, hnO);
+      if (kfq != null)
+      {
+        paramVarArgs.cx(1, kfq.iO());
+        kfq.a(paramVarArgs);
       }
-      paramVarArgs.bM(2, hnP);
-      if (hnQ != null) {
-        paramVarArgs.U(3, hnQ);
+      paramVarArgs.cw(2, jxj);
+      if (jyJ != null) {
+        paramVarArgs.e(3, jyJ);
       }
-      paramVarArgs.bM(4, hnR);
-      paramVarArgs.d(5, 8, hnS);
+      paramVarArgs.cw(4, jyK);
       return 0;
     }
     if (paramInt == 1) {
-      if (hnO == null) {
-        break label441;
+      if (kfq == null) {
+        break label402;
       }
     }
-    label441:
-    for (paramInt = a.a.a.b.b.a.T(1, hnO) + 0;; paramInt = 0)
+    label402:
+    for (paramInt = a.a.a.a.cv(1, kfq.iO()) + 0;; paramInt = 0)
     {
-      int i = paramInt + a.a.a.a.bI(2, hnP);
+      int i = paramInt + a.a.a.a.cu(2, jxj);
       paramInt = i;
-      if (hnQ != null) {
-        paramInt = i + a.a.a.b.b.a.T(3, hnQ);
+      if (jyJ != null) {
+        paramInt = i + a.a.a.b.b.a.f(3, jyJ);
       }
-      return paramInt + a.a.a.a.bI(4, hnR) + a.a.a.a.c(5, 8, hnS);
+      return paramInt + a.a.a.a.cu(4, jyK);
       if (paramInt == 2)
       {
-        paramVarArgs = (byte[])paramVarArgs[0];
-        hnS.clear();
-        paramVarArgs = new a.a.a.a.a(paramVarArgs, hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = alt.a(paramVarArgs); paramInt > 0; paramInt = alt.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bve();
           }
         }
         break;
@@ -63,31 +60,27 @@ public final class ek
         default: 
           return -1;
         case 1: 
-          hnO = jMD.readString();
-          return 0;
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new df();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (boolean bool = true; bool; bool = ((df)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, alt.a((a.a.a.a.a)localObject2))) {}
+            kfq = ((df)localObject1);
+            paramInt += 1;
+          }
         case 2: 
-          hnP = jMD.aVp();
+          jxj = mMY.id();
           return 0;
         case 3: 
-          hnQ = jMD.readString();
-          return 0;
-        case 4: 
-          hnR = jMD.aVp();
+          jyJ = mMY.readString();
           return 0;
         }
-        paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
-        i = paramVarArgs.size();
-        paramInt = 0;
-        while (paramInt < i)
-        {
-          Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-          localObject1 = new dy();
-          localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-          for (boolean bool = true; bool; bool = ((dy)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, com.tencent.mm.al.a.a((a.a.a.a.a)localObject2))) {}
-          hnS.add(localObject1);
-          paramInt += 1;
-        }
-        break;
+        jyK = mMY.id();
+        return 0;
       }
       return -1;
     }

@@ -2,39 +2,39 @@ package com.tencent.mm.ui;
 
 import android.content.Intent;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.chatting.ChattingUI.a;
 
 final class LauncherUI$b
   implements Runnable
 {
-  int arU;
-  int auo;
-  Intent aup;
-  int knB = 0;
+  int adJ;
+  int agb;
+  Intent agc;
+  int kMI = 0;
   
   private LauncherUI$b(LauncherUI paramLauncherUI) {}
   
   public final void run()
   {
-    if ((ah.rh()) && (LauncherUI.f(knl)))
+    if ((ah.rg()) && (LauncherUI.e(kMs)))
     {
-      u.i("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on post select image job, acc has ready, retry count %d", new Object[] { Integer.valueOf(knB) });
-      knl.a(LauncherUI.g(knl), null, false);
-      ab.j(new Runnable()
+      v.i("MicroMsg.LauncherUI", "on post select image job, acc has ready, retry count %d", new Object[] { Integer.valueOf(kMI) });
+      kMs.a(LauncherUI.f(kMs), null, false);
+      ad.k(new Runnable()
       {
         public final void run()
         {
           boolean bool = true;
-          if (LauncherUI.h(knl) == null) {}
+          if (LauncherUI.g(kMs) == null) {}
           for (;;)
           {
-            u.d("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on select image ActivityResult. after creat chattingUI, chatting fragment is null? %B", new Object[] { Boolean.valueOf(bool) });
-            if (LauncherUI.h(knl) != null)
+            v.d("MicroMsg.LauncherUI", "on select image ActivityResult. after creat chattingUI, chatting fragment is null? %B", new Object[] { Boolean.valueOf(bool) });
+            if (LauncherUI.g(kMs) != null)
             {
-              u.d("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on select image ActivityResult. do post activity result");
-              LauncherUI.h(knl).onActivityResult(auo & 0xFFFF, arU, aup);
+              v.d("MicroMsg.LauncherUI", "on select image ActivityResult. do post activity result");
+              LauncherUI.g(kMs).onActivityResult(agb & 0xFFFF, adJ, agc);
             }
             return;
             bool = false;
@@ -48,14 +48,14 @@ final class LauncherUI$b
       });
       return;
     }
-    if (knB >= 3)
+    if (kMI >= 3)
     {
-      u.w("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on post select image job, match max retry count");
+      v.w("MicroMsg.LauncherUI", "on post select image job, match max retry count");
       return;
     }
-    u.w("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on post select image job, acc not ready or view init(%B), cur retry count %d", new Object[] { Boolean.valueOf(LauncherUI.f(knl)), Integer.valueOf(knB) });
-    knB += 1;
-    ab.e(this, 300L);
+    v.w("MicroMsg.LauncherUI", "on post select image job, acc not ready or view init(%B), cur retry count %d", new Object[] { Boolean.valueOf(LauncherUI.e(kMs)), Integer.valueOf(kMI) });
+    kMI += 1;
+    ad.e(this, 300L);
   }
   
   public final String toString()

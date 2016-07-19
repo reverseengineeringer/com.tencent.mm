@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+.field final synthetic lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 625
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,16 +36,16 @@
 
 
 # virtual methods
-.method public final ls(Ljava/lang/String;)V
+.method public final md(Ljava/lang/String;)V
     .locals 4
 
     .prologue
     const/4 v0, 0x0
 
     .line 629
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
-    const v2, 0x7f0b0e66
+    const v2, 0x7f080fdf
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/contact/AddressUI$a;->getString(I)Ljava/lang/String;
 
@@ -58,7 +58,7 @@
     if-eqz v1, :cond_1
 
     .line 630
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->c(Lcom/tencent/mm/ui/contact/AddressUI$a;)Landroid/widget/ListView;
 
@@ -73,19 +73,19 @@
 
     .line 633
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->a(Lcom/tencent/mm/ui/contact/AddressUI$a;)Lcom/tencent/mm/ui/contact/a;
 
     move-result-object v1
 
-    const-string/jumbo v2, "!32@/B4Tb64lLpJvPADYHZ60V72QCl639+9L"
+    const-string/jumbo v2, "MicroMsg.AddressAdapter"
 
     const-string/jumbo v3, "getSections"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/contact/a;->lhA:[Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/ui/contact/a;->lHL:[Ljava/lang/String;
 
     .line 634
     if-eqz v1, :cond_0
@@ -100,7 +100,7 @@
     if-eqz v2, :cond_2
 
     .line 639
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->c(Lcom/tencent/mm/ui/contact/AddressUI$a;)Landroid/widget/ListView;
 
@@ -121,13 +121,13 @@
     if-eqz v2, :cond_4
 
     .line 644
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->c(Lcom/tencent/mm/ui/contact/AddressUI$a;)Landroid/widget/ListView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->c(Lcom/tencent/mm/ui/contact/AddressUI$a;)Landroid/widget/ListView;
 
@@ -165,7 +165,7 @@
     if-eqz v2, :cond_3
 
     .line 653
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->a(Lcom/tencent/mm/ui/contact/AddressUI$a;)Lcom/tencent/mm/ui/contact/a;
 
@@ -176,13 +176,13 @@
     move-result v0
 
     .line 654
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->c(Lcom/tencent/mm/ui/contact/AddressUI$a;)Landroid/widget/ListView;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$6;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/contact/AddressUI$a;->c(Lcom/tencent/mm/ui/contact/AddressUI$a;)Landroid/widget/ListView;
 

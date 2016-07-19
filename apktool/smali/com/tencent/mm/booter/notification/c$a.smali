@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field public ajh:Ljava/lang/String;
+.field public UX:Ljava/lang/String;
 
-.field public bnF:I
+.field public bbD:I
 
 
 # direct methods
@@ -57,7 +57,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/tencent/mm/booter/notification/c$a;->ajh:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/booter/notification/c$a;->UX:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -69,7 +69,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/booter/notification/c$a;->bnF:I
+    iget v1, p0, Lcom/tencent/mm/booter/notification/c$a;->bbD:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

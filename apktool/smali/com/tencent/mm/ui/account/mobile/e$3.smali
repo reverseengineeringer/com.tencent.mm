@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final synthetic kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+.field final synthetic kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
-.field final synthetic kxU:Lcom/tencent/mm/ui/account/mobile/e;
+.field final synthetic kXb:Lcom/tencent/mm/ui/account/mobile/e;
 
 
 # direct methods
@@ -26,9 +26,9 @@
 
     .prologue
     .line 110
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/e$3;->kxU:Lcom/tencent/mm/ui/account/mobile/e;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/e$3;->kXb:Lcom/tencent/mm/ui/account/mobile/e;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/e$3;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/e$3;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
     invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
@@ -42,21 +42,21 @@
 
     .prologue
     .line 112
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/e$3;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/e$3;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, v0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/e$3;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/e$3;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
-    const v2, 0x7f0b1335
+    const v2, 0x7f0813b6
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->C(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->D(Landroid/content/Context;Ljava/lang/String;)Z
 
     .line 113
     return-void
@@ -67,13 +67,13 @@
 
     .prologue
     .line 116
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/e$3;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/e$3;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f08018e
+    const v1, 0x7f0f012a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/ab$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ad$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegSetInfoUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegSetInfoUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field elq:Ljava/lang/String;
+.field eqe:Ljava/lang/String;
 
-.field final synthetic kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+.field final synthetic kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
 .field mBitmap:Landroid/graphics/Bitmap;
 
@@ -31,7 +31,7 @@
 
     .prologue
     .line 258
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -70,24 +70,24 @@
     return-object v0
 .end method
 
-.method public final vd()Z
+.method public final vf()Z
     .locals 5
 
     .prologue
     .line 282
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/modelsimple/c;->aT(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/modelsimple/c;->aP(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->elq:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->eqe:Ljava/lang/String;
 
     .line 283
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/modelsimple/c;->aU(Landroid/content/Context;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/tencent/mm/modelsimple/c;->aQ(Landroid/content/Context;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -121,7 +121,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v4, Lcom/tencent/mm/compatible/util/d;->bur:Ljava/lang/String;
+    sget-object v4, Lcom/tencent/mm/compatible/util/d;->biR:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -155,7 +155,7 @@
     move-exception v0
 
     .line 285
-    const-string/jumbo v1, "!32@9DU/RFsdGl8JYFGpESyRAL2xk59FhSfi"
+    const-string/jumbo v1, "MiroMsg.RegSetInfoUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -175,7 +175,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -184,7 +184,7 @@
     move-exception v0
 
     .line 291
-    const-string/jumbo v1, "!32@9DU/RFsdGl8JYFGpESyRAL2xk59FhSfi"
+    const-string/jumbo v1, "MiroMsg.RegSetInfoUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -204,21 +204,21 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 .end method
 
-.method public final ve()Z
+.method public final vg()Z
     .locals 3
 
     .prologue
     const/4 v0, 0x0
 
     .line 263
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->elq:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->eqe:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -228,7 +228,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->b(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/EditText;
 
@@ -250,37 +250,37 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 264
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->b(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/EditText;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->elq:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->eqe:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 266
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/compatible/util/e;->oW()Z
+    invoke-static {}, Lcom/tencent/mm/compatible/util/e;->no()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
     .line 267
-    const-string/jumbo v1, "!32@9DU/RFsdGl8JYFGpESyRAL2xk59FhSfi"
+    const-string/jumbo v1, "MiroMsg.RegSetInfoUI"
 
     const-string/jumbo v2, "SDcard is not available"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 276
     :goto_0
@@ -300,7 +300,7 @@
 
     if-nez v1, :cond_2
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->j(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Z
 
@@ -309,7 +309,7 @@
     if-nez v1, :cond_2
 
     .line 272
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->i(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/ImageView;
 
@@ -320,12 +320,12 @@
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 273
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->k(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Z
 
     .line 274
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$23;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->l(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/ImageView;
 

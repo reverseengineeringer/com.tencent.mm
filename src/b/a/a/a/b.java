@@ -12,9 +12,9 @@ public abstract class b
   
   public abstract String b(i parami);
   
-  public abstract String boD();
+  public abstract String bvB();
   
-  public abstract String boE();
+  public abstract String bvC();
 }
 
 /* Location:

@@ -1,94 +1,92 @@
 package com.tencent.mm.ui.chatting;
 
-import android.os.Bundle;
-import android.os.Looper;
-import android.support.v4.app.FragmentActivity;
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.model.i;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.storage.ag;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.tencent.mm.e.a.nl;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.pluginsdk.ui.d.e;
+import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.ui.base.MMTextView;
 
 final class cu
-  implements com.tencent.mm.model.aa
+  implements View.OnClickListener
 {
-  private final ChattingUI.a kTe;
-  da lbQ;
+  public ChattingUI.a ltl;
   
   public cu(ChattingUI.a parama)
   {
-    kTe = parama;
-    lbQ = new da();
+    ltl = parama;
   }
   
-  public final void a(int paramInt, String paramString1, String paramString2, String paramString3, String paramString4, Bundle paramBundle) {}
-  
-  public final void a(ag paramag)
+  public final void onClick(View paramView)
   {
-    kTe.bfB();
-    if ((!field_talker.equals(kTe.getTalkerUserName())) || (!paramag.aXf())) {}
-    while (paramag == null) {
-      return;
-    }
-    ArrayList localArrayList = new ArrayList();
-    localArrayList.add(paramag);
-    c(localArrayList, false, false);
-  }
-  
-  protected final void c(List paramList, boolean paramBoolean1, boolean paramBoolean2)
-  {
-    da localda = lbQ;
-    FragmentActivity localFragmentActivity = kTe.getActivity();
-    iNc = paramList;
-    lcd = localFragmentActivity;
-    bLg = paramBoolean1;
-    if (paramBoolean2) {}
-    do
+    v.d("MicroMsg.ChattingTranslateClickListener", "tranlsate view clicked");
+    if (!(paramView instanceof ChattingTranslateView)) {}
+    for (;;)
     {
-      do
+      return;
+      localObject = (ChattingTranslateView)paramView;
+      label34:
+      MMTextView localMMTextView;
+      boolean bool;
+      if (lya == ChattingTranslateView.a.lye)
       {
-        handler.sendEmptyMessageDelayed(0, 800L);
+        i = 1;
+        if (i != 0) {
+          break label131;
+        }
+        localMMTextView = (MMTextView)paramView.getTag();
+        if (localMMTextView == null) {
+          continue;
+        }
+        paramView = (dh)localMMTextView.getTag();
+        bool = arX.bcI();
+        if (lya != ChattingTranslateView.a.lyf) {
+          break label133;
+        }
+      }
+      label131:
+      label133:
+      for (int i = 1;; i = 0)
+      {
+        if (i == 0) {
+          break label138;
+        }
+        ((ChattingTranslateView)localObject).bku();
+        ltl.a(arX.field_msgId, ChattingTranslateView.a.lyd);
+        localMMTextView.setText(arX.field_content);
+        e.b(localMMTextView, 1);
         return;
-        while (paramList == null) {}
-        paramList = paramList.iterator();
-      } while (!paramList.hasNext());
-    } while (!localda.a((ag)paramList.next(), localFragmentActivity, paramBoolean1));
-  }
-  
-  public final void cz(String paramString1, String paramString2)
-  {
-    if (t.kz(paramString1)) {
-      return;
-    }
-    paramString2 = new ArrayList();
-    ag localag = new ag();
-    localag.setContent(paramString1);
-    paramString2.add(localag);
-    c(paramString2, true, false);
-  }
-  
-  public final Looper getLooper()
-  {
-    return Looper.getMainLooper();
-  }
-  
-  public final void j(List paramList)
-  {
-    if (i.dn(kTe.getTalkerUserName())) {
-      return;
-    }
-    ArrayList localArrayList = new ArrayList();
-    paramList = paramList.iterator();
-    while (paramList.hasNext())
-    {
-      ag localag = (ag)paramList.next();
-      if ((field_talker.equals(kTe.getTalkerUserName())) && (localag.aXf())) {
-        localArrayList.add(localag);
+        i = 0;
+        break label34;
+        break;
+      }
+      label138:
+      if (lya == ChattingTranslateView.a.lyd) {}
+      for (i = 1; i != 0; i = 0)
+      {
+        if (!bool) {
+          break label213;
+        }
+        ((ChattingTranslateView)localObject).Jh(arX.field_transBrandWording);
+        ltl.a(arX.field_msgId, ChattingTranslateView.a.lyf);
+        localMMTextView.setText(arX.field_transContent);
+        e.b(localMMTextView, 1);
+        return;
       }
     }
-    c(localArrayList, false, false);
+    label213:
+    ((ChattingTranslateView)localObject).bkv();
+    Object localObject = new nl();
+    avI.avL = false;
+    avI.id = arX.field_msgId;
+    avI.avJ = arX.field_content;
+    avI.type = 0;
+    a.kug.y((b)localObject);
+    ltl.a(arX.field_msgId, ChattingTranslateView.a.lye);
   }
 }
 

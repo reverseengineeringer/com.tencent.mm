@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/mobile/g;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/account/mobile/g;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kyD:Lcom/tencent/mm/ui/account/mobile/g;
+.field final synthetic kXK:Lcom/tencent/mm/ui/account/mobile/g;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 307
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/g$8;->kyD:Lcom/tencent/mm/ui/account/mobile/g;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/g$8;->kXK:Lcom/tencent/mm/ui/account/mobile/g;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,14 +43,14 @@
     .line 311
     const-string/jumbo v0, "L200_100"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ll(Ljava/lang/String;)V
 
     .line 313
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/g$8;->kyD:Lcom/tencent/mm/ui/account/mobile/g;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/g$8;->kXK:Lcom/tencent/mm/ui/account/mobile/g;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/account/mobile/g;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v1, v1, Lcom/tencent/mm/ui/account/mobile/g;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     const-class v2, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
@@ -69,9 +69,9 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 316
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/g$8;->kyD:Lcom/tencent/mm/ui/account/mobile/g;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/g$8;->kXK:Lcom/tencent/mm/ui/account/mobile/g;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/account/mobile/g;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v1, v1, Lcom/tencent/mm/ui/account/mobile/g;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->startActivity(Landroid/content/Intent;)V
 
@@ -80,7 +80,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v1
 
@@ -114,7 +114,7 @@
 
     const-string/jumbo v1, "L200_900_phone"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v1
 
@@ -132,7 +132,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kD(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->lm(Ljava/lang/String;)V
 
     .line 320
     return-void

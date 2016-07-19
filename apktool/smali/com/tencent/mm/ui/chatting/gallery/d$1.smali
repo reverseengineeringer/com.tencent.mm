@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic bMq:I
+.field final synthetic bFK:I
 
-.field final synthetic lfM:Lcom/tencent/mm/ui/chatting/gallery/d;
+.field final synthetic lFZ:Lcom/tencent/mm/ui/chatting/gallery/d;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 1149
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/d$1;->lfM:Lcom/tencent/mm/ui/chatting/gallery/d;
+    .line 1150
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/d$1;->lFZ:Lcom/tencent/mm/ui/chatting/gallery/d;
 
-    iput p2, p0, Lcom/tencent/mm/ui/chatting/gallery/d$1;->bMq:I
+    iput p2, p0, Lcom/tencent/mm/ui/chatting/gallery/d$1;->bFK:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,37 +44,37 @@
     .locals 2
 
     .prologue
-    .line 1153
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/d$1;->lfM:Lcom/tencent/mm/ui/chatting/gallery/d;
+    .line 1154
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/d$1;->lFZ:Lcom/tencent/mm/ui/chatting/gallery/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/d;->lel:Lcom/tencent/mm/ui/chatting/gallery/b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/d;->lEy:Lcom/tencent/mm/ui/chatting/gallery/b;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/d$1;->lfM:Lcom/tencent/mm/ui/chatting/gallery/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/d$1;->lFZ:Lcom/tencent/mm/ui/chatting/gallery/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/d;->lel:Lcom/tencent/mm/ui/chatting/gallery/b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/d;->lEy:Lcom/tencent/mm/ui/chatting/gallery/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/b;->lem:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/b;->lEz:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
     if-nez v0, :cond_1
 
-    .line 1158
+    .line 1159
     :cond_0
     :goto_0
     return-void
 
-    .line 1156
+    .line 1157
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/d$1;->lfM:Lcom/tencent/mm/ui/chatting/gallery/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/d$1;->lFZ:Lcom/tencent/mm/ui/chatting/gallery/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/d;->lel:Lcom/tencent/mm/ui/chatting/gallery/b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/d;->lEy:Lcom/tencent/mm/ui/chatting/gallery/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/b;->lem:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/b;->lEz:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
-    iget v1, p0, Lcom/tencent/mm/ui/chatting/gallery/d$1;->bMq:I
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/gallery/d$1;->bFK:I
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->rG(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->tI(I)V
 
     goto :goto_0
 .end method

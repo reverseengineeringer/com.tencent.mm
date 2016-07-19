@@ -1,19 +1,20 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.ui.base.l;
-import com.tencent.mm.ui.base.n.c;
-import java.util.Iterator;
-import java.util.List;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 final class w$3
-  implements n.c
+  implements DialogInterface.OnClickListener
 {
-  public final void a(l paraml)
+  w$3(dm paramdm) {}
+  
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paraml.u(1193046, 2131429452, 2130970037);
-    Iterator localIterator = u.bea().iterator();
-    while (localIterator.hasNext()) {
-      paraml.add((String)localIterator.next());
+    if (lsl != null)
+    {
+      paramDialogInterface = lsl;
+      paramInt = dm.a.lCU;
+      paramDialogInterface.bkm();
     }
   }
 }

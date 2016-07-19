@@ -7,7 +7,7 @@ final class f$2
   
   public final void run()
   {
-    iE.w(0);
+    iV.B(0);
   }
 }
 

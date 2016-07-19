@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/LoginHistoryUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/account/LoginHistoryUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+.field final synthetic kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
-.field final synthetic kty:Lcom/tencent/mm/modelsimple/t;
+.field final synthetic kSG:Lcom/tencent/mm/modelsimple/r;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/account/LoginHistoryUI;Lcom/tencent/mm/modelsimple/t;)V
+.method constructor <init>(Lcom/tencent/mm/ui/account/LoginHistoryUI;Lcom/tencent/mm/modelsimple/r;)V
     .locals 0
 
     .prologue
     .line 907
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$8;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$8;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$8;->kty:Lcom/tencent/mm/modelsimple/t;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$8;->kSG:Lcom/tencent/mm/modelsimple/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,18 +45,18 @@
 
     .prologue
     .line 911
-    const-string/jumbo v0, "!32@/B4Tb64lLpKxsTbPEeLD3A+BAp2nPFbL"
+    const-string/jumbo v0, "MicroMsg.LoginHistoryUI"
 
     const-string/jumbo v1, "onSceneEnd, in runnable"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 912
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$8;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$8;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$8;->kty:Lcom/tencent/mm/modelsimple/t;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$8;->kSG:Lcom/tencent/mm/modelsimple/r;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->a(Lcom/tencent/mm/ui/account/LoginHistoryUI;Lcom/tencent/mm/modelsimple/t;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->a(Lcom/tencent/mm/ui/account/LoginHistoryUI;Lcom/tencent/mm/modelsimple/r;)V
 
     .line 913
     return-void

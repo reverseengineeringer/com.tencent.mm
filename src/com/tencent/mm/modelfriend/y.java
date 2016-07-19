@@ -2,25 +2,25 @@ package com.tencent.mm.modelfriend;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.az.g;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.bc.g;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.network.e;
-import com.tencent.mm.protocal.b.ajb;
-import com.tencent.mm.protocal.b.ajc;
-import com.tencent.mm.protocal.b.ajd;
-import com.tencent.mm.protocal.b.aje;
-import com.tencent.mm.protocal.b.uw;
-import com.tencent.mm.protocal.b.ux;
-import com.tencent.mm.q.b;
-import com.tencent.mm.q.h;
-import com.tencent.mm.q.i;
-import com.tencent.mm.q.n;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.ajo;
+import com.tencent.mm.protocal.b.ajp;
+import com.tencent.mm.protocal.b.ajq;
+import com.tencent.mm.protocal.b.ajr;
+import com.tencent.mm.protocal.b.vh;
+import com.tencent.mm.protocal.b.vi;
+import com.tencent.mm.s.b;
+import com.tencent.mm.s.h;
+import com.tencent.mm.s.i;
+import com.tencent.mm.s.n;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.q;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.a.c;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -30,30 +30,30 @@ import java.util.Map;
 import java.util.Set;
 
 public final class y
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private com.tencent.mm.r.d anM = null;
-  public final com.tencent.mm.r.a anN;
+  public final com.tencent.mm.t.a bkQ;
+  private com.tencent.mm.t.d bkT = null;
   
   public y(int paramInt)
   {
     Object localObject = new a.a();
-    bFa = new uw();
-    bFb = new ux();
+    byl = new vh();
+    bym = new vi();
     uri = "/cgi-bin/micromsg-bin/getqqgroup";
-    bEY = 143;
-    bFc = 38;
-    bFd = 1000000038;
-    anN = ((a.a)localObject).vy();
-    localObject = (uw)anN.bEW.bFf;
-    eiL = 1;
-    jsT = paramInt;
+    byj = 143;
+    byn = 38;
+    byo = 1000000038;
+    bkQ = ((a.a)localObject).vA();
+    localObject = (vh)bkQ.byh.byq;
+    emN = 1;
+    jRa = paramInt;
   }
   
-  private static void a(aje paramaje)
+  private static void a(ajr paramajr)
   {
-    Object localObject1 = ztbCw.rawQuery("select qqgroup.grouopid,qqgroup.membernum,qqgroup.weixinnum,qqgroup.insert_time,qqgroup.lastupdate_time,qqgroup.needupdate,qqgroup.updatekey,qqgroup.groupname from qqgroup ", null);
+    Object localObject1 = zGbvG.rawQuery("select qqgroup.grouopid,qqgroup.membernum,qqgroup.weixinnum,qqgroup.insert_time,qqgroup.lastupdate_time,qqgroup.needupdate,qqgroup.updatekey,qqgroup.groupname from qqgroup ", null);
     HashMap localHashMap;
     int i;
     if (localObject1 == null)
@@ -61,12 +61,12 @@ public final class y
       localHashMap = null;
       i = 0;
       label23:
-      if (i >= fUi) {
+      if (i >= cmq) {
         break label648;
       }
-      localObject2 = (ajd)jFD.get(i);
-      u.d("!44@/B4Tb64lLpK+IBX8XDgnvuUm/HlJEjmIAxuN9at7xJw=", "id:" + jsT + " name:" + joa + " mem:" + jjV + " wei:" + jFC + " md5:" + jiC);
-      if (jsT >= 0) {
+      localObject2 = (ajq)kdZ.get(i);
+      v.d("MicroMsg.NetSceneGetQQGroup", "id:" + jRa + " name:" + jLW + " mem:" + jIc + " wei:" + kdY + " md5:" + jGP);
+      if (jRa >= 0) {
         break label267;
       }
       localObject1 = null;
@@ -74,11 +74,11 @@ public final class y
       if (localObject1 != null) {
         break label329;
       }
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvuUm/HlJEjmIAxuN9at7xJw=", "Error Resp Group Info index:" + i);
+      v.e("MicroMsg.NetSceneGetQQGroup", "Error Resp Group Info index:" + i);
     }
     label267:
     label329:
-    while (bNd == 0)
+    while (bGx == 0)
     {
       i += 1;
       break label23;
@@ -94,84 +94,84 @@ public final class y
       {
         ((Cursor)localObject1).moveToPosition(i);
         localObject2 = new ad();
-        ((ad)localObject2).c((Cursor)localObject1);
-        localHashMap.put(Integer.valueOf(bNc), localObject2);
+        ((ad)localObject2).b((Cursor)localObject1);
+        localHashMap.put(Integer.valueOf(bGw), localObject2);
         i += 1;
       }
       ((Cursor)localObject1).close();
       break;
       localObject1 = new ad();
-      bNc = jsT;
-      bNj = joa;
-      bNd = jjV;
-      bNe = jFC;
-      bNi = jiC;
+      bGw = jRa;
+      bGD = jLW;
+      bGx = jIc;
+      bGy = kdY;
+      bGC = jGP;
       break label132;
     }
     if (localHashMap != null) {}
-    for (Object localObject2 = (ad)localHashMap.get(Integer.valueOf(bNc));; localObject2 = null)
+    for (Object localObject2 = (ad)localHashMap.get(Integer.valueOf(bGw));; localObject2 = null)
     {
       if (localObject2 == null)
       {
-        bNf = ((int)ay.FR());
-        bNg = ((int)ay.FR());
-        bNh = 1;
-        localObject2 = ah.zt();
+        bGz = ((int)be.Go());
+        bGA = ((int)be.Go());
+        bGB = 1;
+        localObject2 = ah.zG();
         if (localObject1 != null)
         {
-          u.d("!32@/B4Tb64lLpJ+zgjqUamJQfLmk15RM/5N", "insert: name:" + ((ad)localObject1).zf());
-          aou = -1;
-          ContentValues localContentValues = ((ad)localObject1).zd();
-          if ((int)bCw.insert("qqgroup", "grouopid", localContentValues) >= 0) {
-            ((ae)localObject2).Ep();
+          v.d("MicroMsg.QQGroupStorage", "insert: name:" + ((ad)localObject1).zs());
+          aqQ = -1;
+          ContentValues localContentValues = ((ad)localObject1).zq();
+          if ((int)bvG.insert("qqgroup", "grouopid", localContentValues) >= 0) {
+            ((ae)localObject2).EJ();
           }
         }
         for (bool = true;; bool = false)
         {
-          u.d("!44@/B4Tb64lLpK+IBX8XDgnvuUm/HlJEjmIAxuN9at7xJw=", "Insert name:" + ((ad)localObject1).zf() + " ret:" + bool);
+          v.d("MicroMsg.NetSceneGetQQGroup", "Insert name:" + ((ad)localObject1).zs() + " ret:" + bool);
           break;
         }
       }
-      bNh = -1;
-      u.d("!44@/B4Tb64lLpK+IBX8XDgnvuUm/HlJEjmIAxuN9at7xJw=", ((ad)localObject1).ze() + " " + ((ad)localObject2).ze() + " " + bNc);
-      if (((ad)localObject2).ze().equals(((ad)localObject1).ze())) {
+      bGB = -1;
+      v.d("MicroMsg.NetSceneGetQQGroup", ((ad)localObject1).zr() + " " + ((ad)localObject2).zr() + " " + bGw);
+      if (((ad)localObject2).zr().equals(((ad)localObject1).zr())) {
         break;
       }
-      bNg = ((int)ay.FR());
-      bNh = 1;
-      aou = -1;
-      boolean bool = ah.zt().a((ad)localObject1);
-      u.d("!44@/B4Tb64lLpK+IBX8XDgnvuUm/HlJEjmIAxuN9at7xJw=", "Update name:" + ((ad)localObject1).zf() + " ret:" + bool);
+      bGA = ((int)be.Go());
+      bGB = 1;
+      aqQ = -1;
+      boolean bool = ah.zG().a((ad)localObject1);
+      v.d("MicroMsg.NetSceneGetQQGroup", "Update name:" + ((ad)localObject1).zs() + " ret:" + bool);
       break;
       label648:
       if (localHashMap != null)
       {
-        paramaje = localHashMap.keySet().iterator();
-        while (paramaje.hasNext())
+        paramajr = localHashMap.keySet().iterator();
+        while (paramajr.hasNext())
         {
-          localObject1 = (ad)localHashMap.get(paramaje.next());
-          if (bNh == 0)
+          localObject1 = (ad)localHashMap.get(paramajr.next());
+          if (bGB == 0)
           {
-            localObject2 = ah.zt();
-            i = bNc;
-            u.d("!32@/B4Tb64lLpJ+zgjqUamJQfLmk15RM/5N", "delete: id:" + i);
-            if (bCw.delete("qqgroup", "grouopid= ?", new String[] { String.valueOf(i) }) > 0)
+            localObject2 = ah.zG();
+            i = bGw;
+            v.d("MicroMsg.QQGroupStorage", "delete: id:" + i);
+            if (bvG.delete("qqgroup", "grouopid= ?", new String[] { String.valueOf(i) }) > 0)
             {
-              ((ae)localObject2).Ep();
+              ((ae)localObject2).EJ();
               bool = true;
               label765:
-              u.d("!44@/B4Tb64lLpK+IBX8XDgnvuUm/HlJEjmIAxuN9at7xJw=", "delete name:" + ((ad)localObject1).zf() + " ret:" + bool);
-              localObject2 = ah.zv();
-              i = bNc;
-              u.d("!32@/B4Tb64lLpLDqTvM25JsITvy8IO+07dZ", "delete: GroupID:" + i);
-              if (bCw.delete("qqlist", "groupid= ?", new String[] { String.valueOf(i) }) <= 0) {
+              v.d("MicroMsg.NetSceneGetQQGroup", "delete name:" + ((ad)localObject1).zs() + " ret:" + bool);
+              localObject2 = ah.zI();
+              i = bGw;
+              v.d("MicroMsg.QQListStorage", "delete: GroupID:" + i);
+              if (bvG.delete("qqlist", "groupid= ?", new String[] { String.valueOf(i) }) <= 0) {
                 break label909;
               }
             }
             label909:
             for (bool = true;; bool = false)
             {
-              u.d("!44@/B4Tb64lLpK+IBX8XDgnvuUm/HlJEjmIAxuN9at7xJw=", "delete QQList name:" + ((ad)localObject1).zf() + " ret:" + bool);
+              v.d("MicroMsg.NetSceneGetQQGroup", "delete QQList name:" + ((ad)localObject1).zs() + " ret:" + bool);
               break;
               bool = false;
               break label765;
@@ -183,99 +183,99 @@ public final class y
     }
   }
   
-  public final int a(e parame, com.tencent.mm.r.d paramd)
+  public final int a(e parame, com.tencent.mm.t.d paramd)
   {
-    anM = paramd;
-    paramd = (uw)anN.bEW.bFf;
-    if ((eiL == 1) && (ah.zt().dh(jsT) == null))
+    bkT = paramd;
+    paramd = (vh)bkQ.byh.byq;
+    if ((emN == 1) && (ah.zG().dM(jRa) == null))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvuUm/HlJEjmIAxuN9at7xJw=", "Err group not exist");
+      v.e("MicroMsg.NetSceneGetQQGroup", "Err group not exist");
       return -1;
     }
-    return a(parame, anN, this);
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, com.tencent.mm.network.o paramo, byte[] paramArrayOfByte)
   {
     if ((paramInt2 != 0) || (paramInt3 != 0))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvuUm/HlJEjmIAxuN9at7xJw=", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
-      anM.a(paramInt2, paramInt3, paramString, this);
+      v.e("MicroMsg.NetSceneGetQQGroup", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
       return;
     }
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvuUm/HlJEjmIAxuN9at7xJw=", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
-    paramArrayOfByte = (uw)anN.bEW.bFf;
-    Object localObject2 = (ux)anN.bEX.bFf;
-    if (eiL == 0) {
-      a(jsU);
+    v.d("MicroMsg.NetSceneGetQQGroup", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
+    paramArrayOfByte = (vh)bkQ.byh.byq;
+    Object localObject2 = (vi)bkQ.byi.byq;
+    if (emN == 0) {
+      a(jRb);
     }
     for (;;)
     {
-      anM.a(paramInt2, paramInt3, paramString, this);
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
       return;
       Object localObject1 = new ArrayList();
       ArrayList localArrayList1 = new ArrayList();
       ArrayList localArrayList2 = new ArrayList();
       int j = 0;
-      while (j < jsV.fUi)
+      while (j < jRc.cmq)
       {
-        localObject3 = (ajb)jsV.jFB.get(j);
-        paramInt1 = jsT;
-        u.v("!44@/B4Tb64lLpK+IBX8XDgnvuUm/HlJEjmIAxuN9at7xJw=", "friend");
+        localObject3 = (ajo)jRc.kdX.get(j);
+        paramInt1 = jRa;
+        v.v("MicroMsg.NetSceneGetQQGroup", "friend");
         paramo = new af();
-        bNk = new com.tencent.mm.a.o(jFx).longValue();
-        b.d(bNk, 3);
-        bNm = paramInt1;
-        bNl = jFz;
+        bGE = new com.tencent.mm.a.o(kdT).longValue();
+        b.d(bGE, 3);
+        bGG = paramInt1;
+        bGF = kdV;
         label524:
         label666:
         int i;
-        if (jFz != 0)
+        if (kdV != 0)
         {
-          if ((eiB == null) || (eiB.equals("")))
+          if ((emC == null) || (emC.equals("")))
           {
             paramo = null;
             ((List)localObject1).add(paramo);
             paramo = new k();
-            aSu = bLM;
-            aSD = bLQ;
-            aSF = bLN;
-            aSG = bLO;
-            aSE = bLP;
-            username = eiB;
+            aFd = bFg;
+            aFm = bFk;
+            aFo = bFh;
+            aFp = bFi;
+            aFn = bFj;
+            username = emC;
             localArrayList1.add(paramo);
             paramo = new h();
-            aSt = 3;
-            paramo.aK(true);
-            username = eiB;
-            bEy = jfN;
-            bEx = jfO;
+            aFc = 3;
+            paramo.ap(true);
+            username = emC;
+            bxJ = jDF;
+            bxI = jDG;
             localArrayList2.add(paramo);
             j += 1;
             continue;
           }
-          com.tencent.mm.storage.k localk = com.tencent.mm.model.ah.tD().rq().Ep(eiB);
-          if ((localk != null) && (field_username.equals(eiB)) && (com.tencent.mm.h.a.ce(field_type))) {
-            bNl = 2;
+          com.tencent.mm.storage.k localk = com.tencent.mm.model.ah.tE().rr().GD(emC);
+          if ((localk != null) && (field_username.equals(emC)) && (com.tencent.mm.i.a.cy(field_type))) {
+            bGF = 2;
           }
         }
         else
         {
-          username = eiB;
-          bNn = iVW;
-          bNt = jFA;
-          bNu = com.tencent.mm.platformtools.c.ks(jFA);
-          bNv = com.tencent.mm.platformtools.c.kr(jFA);
-          bNo = com.tencent.mm.platformtools.c.ks(iVW);
-          bNp = com.tencent.mm.platformtools.c.kr(iVW);
-          bNq = jFy;
-          bNr = com.tencent.mm.platformtools.c.ks(jFy);
-          bNs = com.tencent.mm.platformtools.c.kr(jFy);
+          username = emC;
+          bGH = jtx;
+          bGN = kdW;
+          bGO = com.tencent.mm.platformtools.c.lb(kdW);
+          bGP = com.tencent.mm.platformtools.c.la(kdW);
+          bGI = com.tencent.mm.platformtools.c.lb(jtx);
+          bGJ = com.tencent.mm.platformtools.c.la(jtx);
+          bGK = kdU;
+          bGL = com.tencent.mm.platformtools.c.lb(kdU);
+          bGM = com.tencent.mm.platformtools.c.la(kdU);
           paramInt1 = 32;
-          if (ay.kz(paramo.zm())) {
+          if (be.kf(paramo.zz())) {
             break label763;
           }
-          paramInt1 = paramo.zm().charAt(0);
+          paramInt1 = paramo.zz().charAt(0);
           if ((paramInt1 < 97) || (paramInt1 > 122)) {
             break label835;
           }
@@ -283,27 +283,27 @@ public final class y
         }
         for (;;)
         {
-          bEu = i;
-          com.tencent.mm.model.ah.tD().rV().cm(eiB, jpd);
-          u.v("!44@/B4Tb64lLpK+IBX8XDgnvuUm/HlJEjmIAxuN9at7xJw=", "QQ Friend nickname: " + paramo.zi() + "  remark: " + paramo.zl());
+          bxF = i;
+          com.tencent.mm.model.ah.tE().rX().cA(emC, jNd);
+          v.v("MicroMsg.NetSceneGetQQGroup", "QQ Friend nickname: " + paramo.zv() + "  remark: " + paramo.zy());
           break;
-          bNl = 1;
+          bGF = 1;
           break label524;
           label763:
-          if (!ay.kz(paramo.zn()))
+          if (!be.kf(paramo.zA()))
           {
-            paramInt1 = paramo.zn().charAt(0);
+            paramInt1 = paramo.zA().charAt(0);
             break label666;
           }
-          if (!ay.kz(paramo.zj()))
+          if (!be.kf(paramo.zw()))
           {
-            paramInt1 = paramo.zj().charAt(0);
+            paramInt1 = paramo.zw().charAt(0);
             break label666;
           }
-          if (ay.kz(paramo.zk())) {
+          if (be.kf(paramo.zx())) {
             break label666;
           }
-          paramInt1 = paramo.zk().charAt(0);
+          paramInt1 = paramo.zx().charAt(0);
           break label666;
           label835:
           if (paramInt1 >= 65)
@@ -318,26 +318,26 @@ public final class y
         }
       }
       paramo = new HashMap();
-      localObject2 = ah.zv();
-      paramInt1 = jsT;
-      u.d("!32@/B4Tb64lLpLDqTvM25JsITvy8IO+07dZ", "getByGroupID: GroupID:" + paramInt1);
+      localObject2 = ah.zI();
+      paramInt1 = jRa;
+      v.d("MicroMsg.QQListStorage", "getByGroupID: GroupID:" + paramInt1);
       Object localObject3 = "select qqlist.qq,qqlist.wexinstatus,qqlist.groupid,qqlist.username,qqlist.nickname,qqlist.pyinitial,qqlist.quanpin,qqlist.qqnickname,qqlist.qqpyinitial,qqlist.qqquanpin,qqlist.qqremark,qqlist.qqremarkpyinitial,qqlist.qqremarkquanpin,qqlist.reserved1,qqlist.reserved2,qqlist.reserved3,qqlist.reserved4 from qqlist  where qqlist.groupid = \"" + paramInt1 + "\"";
-      localObject2 = bCw.rawQuery((String)localObject3, null);
+      localObject2 = bvG.rawQuery((String)localObject3, null);
       while (((Cursor)localObject2).moveToNext())
       {
         localObject3 = new af();
-        ((af)localObject3).c((Cursor)localObject2);
-        paramo.put(Long.valueOf(bNk), localObject3);
+        ((af)localObject3).b((Cursor)localObject2);
+        paramo.put(Long.valueOf(bGE), localObject3);
       }
       ((Cursor)localObject2).close();
       localObject1 = ((List)localObject1).iterator();
       while (((Iterator)localObject1).hasNext())
       {
         localObject2 = (af)((Iterator)localObject1).next();
-        if (paramo.containsKey(Long.valueOf(bNk)))
+        if (paramo.containsKey(Long.valueOf(bGE)))
         {
-          localObject3 = (af)paramo.get(Long.valueOf(bNk));
-          if (!ay.j(Long.valueOf(bNk), Long.valueOf(bNk))) {
+          localObject3 = (af)paramo.get(Long.valueOf(bGE));
+          if (!be.n(Long.valueOf(bGE), Long.valueOf(bGE))) {
             paramInt1 = 0;
           }
           for (;;)
@@ -345,40 +345,40 @@ public final class y
             if (paramInt1 != 0) {
               break label1477;
             }
-            ah.zv().a(bNk, (af)localObject2);
-            paramo.remove(Long.valueOf(bNk));
+            ah.zI().a(bGE, (af)localObject2);
+            paramo.remove(Long.valueOf(bGE));
             break;
-            if (!ay.j(Integer.valueOf(bNl), Integer.valueOf(bNl))) {
+            if (!be.n(Integer.valueOf(bGF), Integer.valueOf(bGF))) {
               paramInt1 = 0;
-            } else if (!ay.j(Integer.valueOf(bNm), Integer.valueOf(bNm))) {
+            } else if (!be.n(Integer.valueOf(bGG), Integer.valueOf(bGG))) {
               paramInt1 = 0;
-            } else if (!ay.j(username, username)) {
+            } else if (!be.n(username, username)) {
               paramInt1 = 0;
-            } else if (!ay.j(bNn, bNn)) {
+            } else if (!be.n(bGH, bGH)) {
               paramInt1 = 0;
-            } else if (!ay.j(bNo, bNo)) {
+            } else if (!be.n(bGI, bGI)) {
               paramInt1 = 0;
-            } else if (!ay.j(bNp, bNp)) {
+            } else if (!be.n(bGJ, bGJ)) {
               paramInt1 = 0;
-            } else if (!ay.j(bNq, bNq)) {
+            } else if (!be.n(bGK, bGK)) {
               paramInt1 = 0;
-            } else if (!ay.j(bNr, bNr)) {
+            } else if (!be.n(bGL, bGL)) {
               paramInt1 = 0;
-            } else if (!ay.j(bNs, bNs)) {
+            } else if (!be.n(bGM, bGM)) {
               paramInt1 = 0;
-            } else if (!ay.j(bNt, bNt)) {
+            } else if (!be.n(bGN, bGN)) {
               paramInt1 = 0;
-            } else if (!ay.j(bNu, bNu)) {
+            } else if (!be.n(bGO, bGO)) {
               paramInt1 = 0;
-            } else if (!ay.j(bNv, bNv)) {
+            } else if (!be.n(bGP, bGP)) {
               paramInt1 = 0;
-            } else if (!ay.j(bEs, bEs)) {
+            } else if (!be.n(bxD, bxD)) {
               paramInt1 = 0;
-            } else if (!ay.j(bEt, bEt)) {
+            } else if (!be.n(bxE, bxE)) {
               paramInt1 = 0;
-            } else if (!ay.j(Integer.valueOf(bEu), Integer.valueOf(bEu))) {
+            } else if (!be.n(Integer.valueOf(bxF), Integer.valueOf(bxF))) {
               paramInt1 = 0;
-            } else if (!ay.j(Integer.valueOf(bEv), Integer.valueOf(bEv))) {
+            } else if (!be.n(Integer.valueOf(bxG), Integer.valueOf(bxG))) {
               paramInt1 = 0;
             } else {
               paramInt1 = 1;
@@ -388,27 +388,27 @@ public final class y
         else
         {
           label1477:
-          ah.zv().a((af)localObject2);
+          ah.zI().a((af)localObject2);
         }
       }
       paramo = paramo.keySet().iterator();
       while (paramo.hasNext())
       {
         long l = ((Long)paramo.next()).longValue();
-        localObject1 = ah.zv();
-        u.d("!32@/B4Tb64lLpLDqTvM25JsITvy8IO+07dZ", "delete: QQ:" + l);
-        if (bCw.delete("qqlist", "qq= ?", new String[] { String.valueOf(l) }) > 0) {
+        localObject1 = ah.zI();
+        v.d("MicroMsg.QQListStorage", "delete: QQ:" + l);
+        if (bvG.delete("qqlist", "qq= ?", new String[] { String.valueOf(l) }) > 0) {
           ((ag)localObject1).b(5, (com.tencent.mm.sdk.h.j)localObject1, String.valueOf(l));
         }
       }
-      ah.zs().q(localArrayList1);
-      n.vs().q(localArrayList2);
+      ah.zF().v(localArrayList1);
+      n.vu().v(localArrayList2);
       paramo = new ad();
-      bNc = jsT;
-      bNh = 0;
-      bNg = ((int)ay.FR());
-      aou = 48;
-      ah.zt().a(paramo);
+      bGw = jRa;
+      bGB = 0;
+      bGA = ((int)be.Go());
+      aqQ = 48;
+      ah.zG().a(paramo);
     }
   }
   

@@ -10,8 +10,8 @@ final class a$2
   
   public final void onClick(View paramView)
   {
-    if (a.a(kOa) != null) {
-      a.a(kOa).bP(cqF, 0);
+    if (a.a(lnq) != null) {
+      a.a(lnq).bV(clS, 0);
     }
   }
 }

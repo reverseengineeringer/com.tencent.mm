@@ -18,8 +18,8 @@
 .method public abstract a(Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface$OnDismissListener;)Z
 .end method
 
-.method public abstract ba(Ljava/lang/String;)Z
+.method public abstract bf(Ljava/lang/String;)Z
 .end method
 
-.method public abstract o(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+.method public abstract p(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 .end method

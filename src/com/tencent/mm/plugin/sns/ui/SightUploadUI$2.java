@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.d.a.lj;
+import com.tencent.mm.e.a.lp;
 import com.tencent.mm.sdk.c.a;
 
 final class SightUploadUI$2
@@ -12,12 +12,12 @@ final class SightUploadUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = new lj();
-    aHJ.type = 0;
-    aHJ.aHL = false;
-    a.jUF.j(paramMenuItem);
-    hbd.age();
-    hbd.finish();
+    paramMenuItem = new lp();
+    atZ.type = 0;
+    atZ.aub = false;
+    a.kug.y(paramMenuItem);
+    hoE.aiI();
+    hoE.finish();
     return true;
   }
 }

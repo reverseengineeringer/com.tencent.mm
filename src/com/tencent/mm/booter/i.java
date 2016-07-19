@@ -2,8 +2,8 @@ package com.tencent.mm.booter;
 
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.bb;
-import com.tencent.mm.protocal.b.aas;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.b.abh;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.storage.g;
 import java.util.LinkedList;
 
@@ -12,32 +12,32 @@ public final class i
   public static void run()
   {
     LinkedList localLinkedList = new LinkedList();
-    int j = ay.b((Integer)ah.tu().get(19), 0);
+    int j = be.b((Integer)ah.tv().get(19), 0);
     int i = 0;
-    aas localaas;
+    abh localabh;
     while (i < j)
     {
-      localaas = new aas();
-      fUk = 31;
-      fUt = "0";
-      localLinkedList.add(localaas);
+      localabh = new abh();
+      gdy = 31;
+      gdI = "0";
+      localLinkedList.add(localabh);
       i += 1;
     }
-    j = ay.b((Integer)ah.tu().get(20), 0);
+    j = be.b((Integer)ah.tv().get(20), 0);
     i = 0;
     while (i < j)
     {
-      localaas = new aas();
-      fUk = 31;
-      fUt = "1";
-      localLinkedList.add(localaas);
+      localabh = new abh();
+      gdy = 31;
+      gdI = "1";
+      localLinkedList.add(localabh);
       i += 1;
     }
     if (localLinkedList.size() > 0)
     {
       bb.a(localLinkedList);
-      ah.tu().set(19, Integer.valueOf(0));
-      ah.tu().set(20, Integer.valueOf(0));
+      ah.tv().set(19, Integer.valueOf(0));
+      ah.tv().set(20, Integer.valueOf(0));
     }
   }
 }

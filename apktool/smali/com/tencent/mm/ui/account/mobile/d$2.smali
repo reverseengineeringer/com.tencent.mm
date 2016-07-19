@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kxT:Lcom/tencent/mm/ui/account/mobile/d;
+.field final synthetic kXa:Lcom/tencent/mm/ui/account/mobile/d;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 94
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/d$2;->kxT:Lcom/tencent/mm/ui/account/mobile/d;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/d$2;->kXa:Lcom/tencent/mm/ui/account/mobile/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

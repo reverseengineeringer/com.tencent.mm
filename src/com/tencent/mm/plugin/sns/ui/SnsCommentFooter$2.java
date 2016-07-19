@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.text.Editable;
 import android.text.TextWatcher;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.widget.MMEditText;
 import java.util.Iterator;
 import java.util.List;
@@ -14,51 +14,51 @@ final class SnsCommentFooter$2
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    if (SnsCommentFooter.a(hdG).getText() == null) {
+    if (SnsCommentFooter.a(hst).getText() == null) {
       return;
     }
-    u.d("!44@/B4Tb64lLpIPhXvycW2PJqlaK/iQk5LCbM+7zl/KqGE=", "update commentkey:" + SnsCommentFooter.b(hdG));
-    Object localObject = hdH.iterator();
+    v.d("MicroMsg.SnsCommentFooter", "update commentkey:" + SnsCommentFooter.b(hst));
+    Object localObject = hsu.iterator();
     while (((Iterator)localObject).hasNext())
     {
       i locali = (i)((Iterator)localObject).next();
-      if (SnsCommentFooter.b(hdG).equals(buL))
+      if (SnsCommentFooter.b(hst).equals(DF))
       {
-        u.d("!44@/B4Tb64lLpIPhXvycW2PJqlaK/iQk5LCbM+7zl/KqGE=", "afterTextChanged update");
-        text = SnsCommentFooter.a(hdG).getText().toString();
+        v.d("MicroMsg.SnsCommentFooter", "afterTextChanged update");
+        text = SnsCommentFooter.a(hst).getText().toString();
       }
     }
     for (int i = 1;; i = 0)
     {
       if (i == 0)
       {
-        u.d("!44@/B4Tb64lLpIPhXvycW2PJqlaK/iQk5LCbM+7zl/KqGE=", "afterTextChanged add");
+        v.d("MicroMsg.SnsCommentFooter", "afterTextChanged add");
         localObject = new i();
-        buL = SnsCommentFooter.b(hdG);
-        text = SnsCommentFooter.a(hdG).getText().toString();
+        DF = SnsCommentFooter.b(hst);
+        text = SnsCommentFooter.a(hst).getText().toString();
         if ((text != null) && (text.length() > 0)) {
-          hdH.add(localObject);
+          hsu.add(localObject);
         }
       }
-      if (hdH.size() > 5)
+      if (hsu.size() > 5)
       {
-        u.d("!44@/B4Tb64lLpIPhXvycW2PJqlaK/iQk5LCbM+7zl/KqGE=", "comments remove");
-        hdH.remove(0);
+        v.d("MicroMsg.SnsCommentFooter", "comments remove");
+        hsu.remove(0);
       }
-      SnsCommentFooter.a(hdG).requestFocus();
+      SnsCommentFooter.a(hst).requestFocus();
       if ((paramEditable.length() > 0) && (paramEditable.toString().trim().length() > 0)) {}
       for (boolean bool = true;; bool = false)
       {
-        if ((bool) && (hdG.eYS))
+        if ((bool) && (hst.fhm))
         {
-          SnsCommentFooter.a(hdG, bool);
-          hdG.eYS = false;
+          SnsCommentFooter.a(hst, bool);
+          hst.fhm = false;
         }
         if (bool) {
           break;
         }
-        SnsCommentFooter.a(hdG, bool);
-        hdG.eYS = true;
+        SnsCommentFooter.a(hst, bool);
+        hst.fhm = true;
         return;
       }
     }

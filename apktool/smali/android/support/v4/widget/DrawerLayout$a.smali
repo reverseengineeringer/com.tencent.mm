@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private final ht:Landroid/graphics/Rect;
+.field private final hM:Landroid/graphics/Rect;
 
-.field final synthetic hu:Landroid/support/v4/widget/DrawerLayout;
+.field final synthetic hN:Landroid/support/v4/widget/DrawerLayout;
 
 
 # direct methods
@@ -26,7 +26,7 @@
 
     .prologue
     .line 1520
-    iput-object p1, p0, Landroid/support/v4/widget/DrawerLayout$a;->hu:Landroid/support/v4/widget/DrawerLayout;
+    iput-object p1, p0, Landroid/support/v4/widget/DrawerLayout$a;->hN:Landroid/support/v4/widget/DrawerLayout;
 
     invoke-direct {p0}, Landroid/support/v4/view/a;-><init>()V
 
@@ -35,7 +35,7 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v4/widget/DrawerLayout$a;->ht:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroid/support/v4/widget/DrawerLayout$a;->hM:Landroid/graphics/Rect;
 
     return-void
 .end method
@@ -45,9 +45,9 @@
 
     .prologue
     .line 1556
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$a;->hu:Landroid/support/v4/widget/DrawerLayout;
+    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$a;->hN:Landroid/support/v4/widget/DrawerLayout;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/DrawerLayout;->ay()Landroid/view/View;
+    invoke-virtual {v0}, Landroid/support/v4/widget/DrawerLayout;->ax()Landroid/view/View;
 
     move-result-object v0
 
@@ -101,7 +101,7 @@
 
     .line 1533
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$a;->ht:Landroid/graphics/Rect;
+    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$a;->hM:Landroid/graphics/Rect;
 
     invoke-virtual {v1, v0}, Landroid/support/v4/view/a/a;->getBoundsInParent(Landroid/graphics/Rect;)V
 
@@ -187,7 +187,7 @@
     invoke-virtual {v1}, Landroid/support/v4/view/a/a;->recycle()V
 
     .line 1537
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$a;->hu:Landroid/support/v4/widget/DrawerLayout;
+    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$a;->hN:Landroid/support/v4/widget/DrawerLayout;
 
     invoke-virtual {v0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
@@ -200,7 +200,7 @@
     if-ge v0, v1, :cond_2
 
     .line 1539
-    iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout$a;->hu:Landroid/support/v4/widget/DrawerLayout;
+    iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout$a;->hN:Landroid/support/v4/widget/DrawerLayout;
 
     invoke-virtual {v2, v0}, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
 

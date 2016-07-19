@@ -14,30 +14,30 @@ import android.provider.ContactsContract.Contacts;
 import android.provider.ContactsContract.Data;
 import android.provider.ContactsContract.Profile;
 import com.tencent.mm.compatible.util.e;
-import com.tencent.mm.pluginsdk.g.a;
-import com.tencent.mm.sdk.platformtools.ah;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.pluginsdk.h.a;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class c
 {
   @TargetApi(14)
-  public static String aT(Context paramContext)
+  public static String aP(Context paramContext)
   {
-    u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "Get name of a contacts record or profile.");
+    v.i("MicroMsg.ContactsUtil", "Get name of a contacts record or profile.");
     if (paramContext == null)
     {
-      u.e("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "context is null.");
+      v.e("MicroMsg.ContactsUtil", "context is null.");
       return null;
     }
     ContentResolver localContentResolver = paramContext.getContentResolver();
-    if (!a.aL(paramContext, "android.permission.READ_CONTACTS"))
+    if (!a.aK(paramContext, "android.permission.READ_CONTACTS"))
     {
-      u.e("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "no contact permission");
+      v.e("MicroMsg.ContactsUtil", "no contact permission");
       return null;
     }
-    if (e.bU(14)) {
-      u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "The Android API version is higher than 14.");
+    if (e.cm(14)) {
+      v.i("MicroMsg.ContactsUtil", "The Android API version is higher than 14.");
     }
     for (;;)
     {
@@ -52,22 +52,22 @@ public final class c
           break label257;
         }
         String str1 = ((Cursor)localObject).getString(((Cursor)localObject).getColumnIndex("display_name"));
-        u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "Have got name from profile, name is %s", new Object[] { str1 });
+        v.i("MicroMsg.ContactsUtil", "Have got name from profile, name is %s", new Object[] { str1 });
         ((Cursor)localObject).close();
         localObject = str1;
-        if (ay.kz(str1))
+        if (be.kf(str1))
         {
-          paramContext = w(paramContext, d.bc(paramContext));
-          if (ay.kz(paramContext))
+          paramContext = x(paramContext, d.aY(paramContext));
+          if (be.kf(paramContext))
           {
-            u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "contactId is null.");
+            v.i("MicroMsg.ContactsUtil", "contactId is null.");
             return null;
           }
         }
       }
       catch (Exception localException)
       {
-        u.d("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "query crashed");
+        v.d("MicroMsg.ContactsUtil", "query crashed");
         localObject = null;
         continue;
         paramContext = localContentResolver.query(ContactsContract.Data.CONTENT_URI, new String[] { "display_name" }, "contact_id=?", new String[] { paramContext }, null);
@@ -77,7 +77,7 @@ public final class c
           if (paramContext.moveToFirst())
           {
             str2 = paramContext.getString(paramContext.getColumnIndex("display_name"));
-            u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "Have got name from contacts, name is %s", new Object[] { str2 });
+            v.i("MicroMsg.ContactsUtil", "Have got name from contacts, name is %s", new Object[] { str2 });
           }
           paramContext.close();
           localObject = str2;
@@ -93,26 +93,26 @@ public final class c
   }
   
   @TargetApi(14)
-  public static Bitmap aU(Context paramContext)
+  public static Bitmap aQ(Context paramContext)
   {
-    u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "Get bitmap of a contacts record or profile.");
+    v.i("MicroMsg.ContactsUtil", "Get bitmap of a contacts record or profile.");
     if (paramContext == null)
     {
-      u.e("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "context is null.");
+      v.e("MicroMsg.ContactsUtil", "context is null.");
       return null;
     }
     ContentResolver localContentResolver = paramContext.getContentResolver();
     Object localObject5 = null;
-    if (!a.aL(paramContext, "android.permission.READ_CONTACTS"))
+    if (!a.aK(paramContext, "android.permission.READ_CONTACTS"))
     {
-      u.e("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "no contact permission");
+      v.e("MicroMsg.ContactsUtil", "no contact permission");
       return null;
     }
     Object localObject3 = null;
     Object localObject1 = localObject5;
-    if (e.bU(14))
+    if (e.cm(14))
     {
-      u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "The Android API version is higher than 14.");
+      v.i("MicroMsg.ContactsUtil", "The Android API version is higher than 14.");
       try
       {
         localObject1 = localContentResolver.query(ContactsContract.Profile.CONTENT_URI, new String[] { "_id" }, null, null, null);
@@ -130,23 +130,23 @@ public final class c
           if (!((Cursor)localObject4).moveToFirst()) {
             break label970;
           }
-          if ((!ah.dB(paramContext)) && (!ah.dA(paramContext)) && (!ah.dy(paramContext))) {
+          if ((!ak.dC(paramContext)) && (!ak.dB(paramContext)) && (!ak.dz(paramContext))) {
             break label371;
           }
-          u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "The network status is wifi or 3G or 4G.");
+          v.i("MicroMsg.ContactsUtil", "The network status is wifi or 3G or 4G.");
           localObject1 = ((Cursor)localObject4).getString(((Cursor)localObject4).getColumnIndex("data_sync1"));
-          u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "get sync avatar url : [%s]", new Object[] { localObject1 });
-          if (ay.kz((String)localObject1)) {
+          v.i("MicroMsg.ContactsUtil", "get sync avatar url : [%s]", new Object[] { localObject1 });
+          if (be.kf((String)localObject1)) {
             break label371;
           }
           i = ((String)localObject1).lastIndexOf("https:");
-          u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "check is exist https download url :[%d]", new Object[] { Integer.valueOf(i) });
+          v.i("MicroMsg.ContactsUtil", "check is exist https download url :[%d]", new Object[] { Integer.valueOf(i) });
           if (i < 0) {
             break label371;
           }
           localObject3 = ((String)localObject1).substring(i);
-          localObject1 = jb((String)localObject3);
-          u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "Get image from google sync account in profile,url:[%s]", new Object[] { localObject3 });
+          localObject1 = jt((String)localObject3);
+          v.i("MicroMsg.ContactsUtil", "Get image from google sync account in profile,url:[%s]", new Object[] { localObject3 });
           localObject3 = localObject1;
           if (localObject1 == null) {
             break label374;
@@ -158,13 +158,13 @@ public final class c
           ((Cursor)localObject4).close();
           return (Bitmap)localObject1;
           localException1 = localException1;
-          u.d("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "query crashed");
+          v.d("MicroMsg.ContactsUtil", "query crashed");
         }
         catch (Exception localException2)
         {
           for (;;)
           {
-            u.d("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "query crashed");
+            v.d("MicroMsg.ContactsUtil", "query crashed");
             localObject4 = localObject3;
           }
           localObject3 = null;
@@ -174,12 +174,12 @@ public final class c
             break label455;
           }
           localObject5 = ((Cursor)localObject4).getBlob(i);
-          u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "get bitmap data is null : [%b]", new Object[] { Boolean.valueOf(ay.J((byte[])localObject5)) });
+          v.i("MicroMsg.ContactsUtil", "get bitmap data is null : [%b]", new Object[] { Boolean.valueOf(be.P((byte[])localObject5)) });
           localObject2 = localObject3;
-          if (ay.J((byte[])localObject5)) {
+          if (be.P((byte[])localObject5)) {
             break label455;
           }
-          u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "Get image from profile personal icon.");
+          v.i("MicroMsg.ContactsUtil", "Get image from profile personal icon.");
           localObject2 = BitmapFactory.decodeByteArray((byte[])localObject5, 0, localObject5.length);
         }
       }
@@ -208,11 +208,11 @@ public final class c
             break label820;
           }
         }
-        localObject5 = w(paramContext, d.bc(paramContext));
-        if (!ay.kz((String)localObject5)) {
+        localObject5 = x(paramContext, d.aY(paramContext));
+        if (!be.kf((String)localObject5)) {
           break;
         }
-        u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "contactId is null.");
+        v.i("MicroMsg.ContactsUtil", "contactId is null.");
         return null;
         label506:
         ((Cursor)localObject3).close();
@@ -226,14 +226,14 @@ public final class c
         localObject3 = localObject2;
         if (((Cursor)localObject4).moveToFirst())
         {
-          if ((!ah.dB(paramContext)) && (!ah.dA(paramContext)))
+          if ((!ak.dC(paramContext)) && (!ak.dB(paramContext)))
           {
             localObject3 = localObject2;
-            if (!ah.dy(paramContext)) {
+            if (!ak.dz(paramContext)) {
               break label830;
             }
           }
-          u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "The network status is wifi or 3G or 4G.");
+          v.i("MicroMsg.ContactsUtil", "The network status is wifi or 3G or 4G.");
           localObject3 = ((Cursor)localObject4).getString(((Cursor)localObject4).getColumnIndex("raw_contact_id"));
           localCursor = localContentResolver.query(ContactsContract.Data.CONTENT_URI, new String[] { "data15", "data_sync1" }, "mimetype=? AND raw_contact_id=?", new String[] { "vnd.android.cursor.item/photo", localObject3 }, null);
           localObject3 = localObject2;
@@ -249,21 +249,21 @@ public final class c
             {
               String str = localCursor.getString(i);
               localObject3 = localObject2;
-              if (!ay.kz(str))
+              if (!be.kf(str))
               {
                 i = str.lastIndexOf("https:");
                 localObject3 = localObject2;
                 if (i >= 0)
                 {
                   str = str.substring(i);
-                  localObject2 = jb(str);
+                  localObject2 = jt(str);
                   localObject3 = localObject2;
                   if (localObject2 != null)
                   {
                     localObject3 = localObject2;
                     if (!((Bitmap)localObject2).isRecycled())
                     {
-                      u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "Get image from google sync account in contacts,url:[%s]", new Object[] { str });
+                      v.i("MicroMsg.ContactsUtil", "Get image from google sync account in contacts,url:[%s]", new Object[] { str });
                       localCursor.close();
                       localObject3 = localObject2;
                     }
@@ -286,13 +286,13 @@ public final class c
       }
       localCursor.close();
       label830:
-      u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "Get bitmap from contacts icon.");
+      v.i("MicroMsg.ContactsUtil", "Get bitmap from contacts icon.");
       int i = ((Cursor)localObject4).getColumnIndex("photo_id");
       long l;
       if (i != -1)
       {
         l = ((Cursor)localObject4).getLong(i);
-        u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "Have got photoId,photoId is " + l);
+        v.i("MicroMsg.ContactsUtil", "Have got photoId,photoId is " + l);
       }
       for (;;)
       {
@@ -307,7 +307,7 @@ public final class c
           if (((Bitmap)localObject3).isRecycled()) {
             break label945;
           }
-          u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "Get image from contacts through google account.");
+          v.i("MicroMsg.ContactsUtil", "Get image from contacts through google account.");
           break label813;
         }
         localObject2 = localObject3;
@@ -326,7 +326,7 @@ public final class c
   }
   
   /* Error */
-  private static Bitmap jb(String paramString)
+  private static Bitmap jt(String paramString)
   {
     // Byte code:
     //   0: aconst_null
@@ -347,13 +347,13 @@ public final class c
     //   24: iconst_0
     //   25: aload_0
     //   26: aastore
-    //   27: invokestatic 85	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   27: invokestatic 85	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   30: aload_0
-    //   31: invokestatic 95	com/tencent/mm/sdk/platformtools/ay:kz	(Ljava/lang/String;)Z
+    //   31: invokestatic 95	com/tencent/mm/sdk/platformtools/be:kf	(Ljava/lang/String;)Z
     //   34: ifeq +15 -> 49
     //   37: ldc 13
     //   39: ldc_w 279
-    //   42: invokestatic 26	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   42: invokestatic 26	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   45: aload_2
     //   46: astore_0
     //   47: aload_0
@@ -367,7 +367,7 @@ public final class c
     //   62: ifne +13 -> 75
     //   65: ldc 13
     //   67: ldc_w 287
-    //   70: invokestatic 26	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   70: invokestatic 26	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   73: aconst_null
     //   74: areturn
     //   75: new 289	java/io/ByteArrayOutputStream
@@ -380,7 +380,7 @@ public final class c
     //   90: invokespecial 294	com/tencent/mm/network/t:<init>	(Ljava/lang/String;)V
     //   93: astore_0
     //   94: aload_0
-    //   95: getfield 298	com/tencent/mm/network/t:cjx	Ljavax/net/ssl/HttpsURLConnection;
+    //   95: getfield 298	com/tencent/mm/network/t:ceO	Ljavax/net/ssl/HttpsURLConnection;
     //   98: invokevirtual 304	javax/net/ssl/HttpsURLConnection:getInputStream	()Ljava/io/InputStream;
     //   101: astore 4
     //   103: aload 4
@@ -401,9 +401,9 @@ public final class c
     //   131: iconst_0
     //   132: aload 10
     //   134: aastore
-    //   135: invokestatic 308	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   135: invokestatic 308	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   138: aload_0
-    //   139: getfield 298	com/tencent/mm/network/t:cjx	Ljavax/net/ssl/HttpsURLConnection;
+    //   139: getfield 298	com/tencent/mm/network/t:ceO	Ljavax/net/ssl/HttpsURLConnection;
     //   142: invokevirtual 311	javax/net/ssl/HttpsURLConnection:disconnect	()V
     //   145: aload 4
     //   147: ifnull +8 -> 155
@@ -423,7 +423,7 @@ public final class c
     //   174: aload_0
     //   175: invokevirtual 320	java/io/IOException:getMessage	()Ljava/lang/String;
     //   178: aastore
-    //   179: invokestatic 308	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   179: invokestatic 308	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   182: aconst_null
     //   183: areturn
     //   184: aload 7
@@ -480,11 +480,11 @@ public final class c
     //   273: aload 6
     //   275: invokevirtual 320	java/io/IOException:getMessage	()Ljava/lang/String;
     //   278: aastore
-    //   279: invokestatic 308	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   279: invokestatic 308	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   282: aload_0
     //   283: ifnull +10 -> 293
     //   286: aload_0
-    //   287: getfield 298	com/tencent/mm/network/t:cjx	Ljavax/net/ssl/HttpsURLConnection;
+    //   287: getfield 298	com/tencent/mm/network/t:ceO	Ljavax/net/ssl/HttpsURLConnection;
     //   290: invokevirtual 311	javax/net/ssl/HttpsURLConnection:disconnect	()V
     //   293: aload 4
     //   295: ifnull +8 -> 303
@@ -504,7 +504,7 @@ public final class c
     //   323: aload_0
     //   324: invokevirtual 320	java/io/IOException:getMessage	()Ljava/lang/String;
     //   327: aastore
-    //   328: invokestatic 308	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   328: invokestatic 308	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   331: aload 5
     //   333: areturn
     //   334: aload 7
@@ -517,7 +517,7 @@ public final class c
     //   345: astore 6
     //   347: aload 9
     //   349: invokevirtual 334	java/io/ByteArrayOutputStream:toByteArray	()[B
-    //   352: invokestatic 340	com/tencent/mm/sdk/platformtools/d:aQ	([B)Landroid/graphics/Bitmap;
+    //   352: invokestatic 340	com/tencent/mm/sdk/platformtools/d:aX	([B)Landroid/graphics/Bitmap;
     //   355: astore 7
     //   357: aload 7
     //   359: astore 5
@@ -530,7 +530,7 @@ public final class c
     //   370: aload 9
     //   372: invokevirtual 315	java/io/ByteArrayOutputStream:close	()V
     //   375: aload_0
-    //   376: getfield 298	com/tencent/mm/network/t:cjx	Ljavax/net/ssl/HttpsURLConnection;
+    //   376: getfield 298	com/tencent/mm/network/t:ceO	Ljavax/net/ssl/HttpsURLConnection;
     //   379: invokevirtual 311	javax/net/ssl/HttpsURLConnection:disconnect	()V
     //   382: aload 7
     //   384: astore_0
@@ -550,7 +550,7 @@ public final class c
     //   410: aload_0
     //   411: invokevirtual 320	java/io/IOException:getMessage	()Ljava/lang/String;
     //   414: aastore
-    //   415: invokestatic 308	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   415: invokestatic 308	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   418: aload 7
     //   420: areturn
     //   421: astore 5
@@ -571,11 +571,11 @@ public final class c
     //   444: aload 5
     //   446: invokevirtual 343	java/lang/Exception:getMessage	()Ljava/lang/String;
     //   449: aastore
-    //   450: invokestatic 308	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   450: invokestatic 308	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   453: aload_0
     //   454: ifnull +10 -> 464
     //   457: aload_0
-    //   458: getfield 298	com/tencent/mm/network/t:cjx	Ljavax/net/ssl/HttpsURLConnection;
+    //   458: getfield 298	com/tencent/mm/network/t:ceO	Ljavax/net/ssl/HttpsURLConnection;
     //   461: invokevirtual 311	javax/net/ssl/HttpsURLConnection:disconnect	()V
     //   464: aload 4
     //   466: ifnull +8 -> 474
@@ -595,7 +595,7 @@ public final class c
     //   494: aload_0
     //   495: invokevirtual 320	java/io/IOException:getMessage	()Ljava/lang/String;
     //   498: aastore
-    //   499: invokestatic 308	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   499: invokestatic 308	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   502: aload 6
     //   504: areturn
     //   505: astore 4
@@ -606,7 +606,7 @@ public final class c
     //   511: aload_0
     //   512: ifnull +10 -> 522
     //   515: aload_0
-    //   516: getfield 298	com/tencent/mm/network/t:cjx	Ljavax/net/ssl/HttpsURLConnection;
+    //   516: getfield 298	com/tencent/mm/network/t:ceO	Ljavax/net/ssl/HttpsURLConnection;
     //   519: invokevirtual 311	javax/net/ssl/HttpsURLConnection:disconnect	()V
     //   522: aload_2
     //   523: ifnull +7 -> 530
@@ -626,7 +626,7 @@ public final class c
     //   550: aload_0
     //   551: invokevirtual 320	java/io/IOException:getMessage	()Ljava/lang/String;
     //   554: aastore
-    //   555: invokestatic 308	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   555: invokestatic 308	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   558: goto -23 -> 535
     //   561: astore 4
     //   563: aconst_null
@@ -722,7 +722,7 @@ public final class c
   
   /* Error */
   @TargetApi(14)
-  public static String v(Context paramContext, String paramString)
+  public static String w(Context paramContext, String paramString)
   {
     // Byte code:
     //   0: aconst_null
@@ -735,12 +735,12 @@ public final class c
     //   13: iconst_0
     //   14: aload_1
     //   15: aastore
-    //   16: invokestatic 85	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   16: invokestatic 85	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   19: aload_0
     //   20: ifnonnull +13 -> 33
     //   23: ldc 13
     //   25: ldc_w 348
-    //   28: invokestatic 26	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   28: invokestatic 26	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   31: aconst_null
     //   32: areturn
     //   33: aload_0
@@ -755,7 +755,7 @@ public final class c
     //   54: invokevirtual 362	android/telephony/TelephonyManager:getSimCountryIso	()Ljava/lang/String;
     //   57: astore_1
     //   58: aload_1
-    //   59: invokestatic 95	com/tencent/mm/sdk/platformtools/ay:kz	(Ljava/lang/String;)Z
+    //   59: invokestatic 95	com/tencent/mm/sdk/platformtools/be:kf	(Ljava/lang/String;)Z
     //   62: ifeq +926 -> 988
     //   65: aload 5
     //   67: invokevirtual 365	android/telephony/TelephonyManager:getNetworkCountryIso	()Ljava/lang/String;
@@ -765,7 +765,7 @@ public final class c
     //   75: aload_1
     //   76: astore 5
     //   78: aload_1
-    //   79: invokestatic 95	com/tencent/mm/sdk/platformtools/ay:kz	(Ljava/lang/String;)Z
+    //   79: invokestatic 95	com/tencent/mm/sdk/platformtools/be:kf	(Ljava/lang/String;)Z
     //   82: ifeq +11 -> 93
     //   85: invokestatic 371	java/util/Locale:getDefault	()Ljava/util/Locale;
     //   88: invokevirtual 374	java/util/Locale:getCountry	()Ljava/lang/String;
@@ -773,14 +773,14 @@ public final class c
     //   93: aload 5
     //   95: astore 6
     //   97: aload 4
-    //   99: invokestatic 95	com/tencent/mm/sdk/platformtools/ay:kz	(Ljava/lang/String;)Z
+    //   99: invokestatic 95	com/tencent/mm/sdk/platformtools/be:kf	(Ljava/lang/String;)Z
     //   102: ifne +124 -> 226
     //   105: aload 4
     //   107: invokevirtual 282	java/lang/String:trim	()Ljava/lang/String;
     //   110: astore_0
     //   111: aload_0
     //   112: aload 6
-    //   114: invokestatic 380	com/tencent/mm/sdk/platformtools/ai:cf	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    //   114: invokestatic 380	com/tencent/mm/sdk/platformtools/al:cs	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     //   117: astore_1
     //   118: ldc 13
     //   120: ldc_w 382
@@ -798,9 +798,9 @@ public final class c
     //   136: iconst_2
     //   137: aload 6
     //   139: aastore
-    //   140: invokestatic 85	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   140: invokestatic 85	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   143: aload_1
-    //   144: invokestatic 95	com/tencent/mm/sdk/platformtools/ay:kz	(Ljava/lang/String;)Z
+    //   144: invokestatic 95	com/tencent/mm/sdk/platformtools/be:kf	(Ljava/lang/String;)Z
     //   147: ifne +838 -> 985
     //   150: aload_1
     //   151: invokevirtual 385	java/lang/String:length	()I
@@ -825,10 +825,10 @@ public final class c
     //   185: iconst_0
     //   186: aload_0
     //   187: aastore
-    //   188: invokestatic 85	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   188: invokestatic 85	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   191: ldc 13
     //   193: ldc_w 391
-    //   196: invokestatic 21	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   196: invokestatic 21	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   199: aload_0
     //   200: areturn
     //   201: astore_1
@@ -838,7 +838,7 @@ public final class c
     //   205: astore 4
     //   207: ldc 13
     //   209: ldc_w 393
-    //   212: invokestatic 26	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   212: invokestatic 26	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   215: aload_1
     //   216: astore 6
     //   218: goto -121 -> 97
@@ -847,22 +847,22 @@ public final class c
     //   223: goto -56 -> 167
     //   226: aload_0
     //   227: ldc 34
-    //   229: invokestatic 40	com/tencent/mm/pluginsdk/g/a:aL	(Landroid/content/Context;Ljava/lang/String;)Z
+    //   229: invokestatic 40	com/tencent/mm/pluginsdk/h/a:aK	(Landroid/content/Context;Ljava/lang/String;)Z
     //   232: ifne +12 -> 244
     //   235: ldc 13
     //   237: ldc 42
-    //   239: invokestatic 26	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   239: invokestatic 26	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   242: aconst_null
     //   243: areturn
     //   244: aload_0
     //   245: invokevirtual 32	android/content/Context:getContentResolver	()Landroid/content/ContentResolver;
     //   248: astore 8
     //   250: bipush 14
-    //   252: invokestatic 396	com/tencent/mm/compatible/util/e:bV	(I)Z
+    //   252: invokestatic 396	com/tencent/mm/compatible/util/e:cn	(I)Z
     //   255: ifne +719 -> 974
     //   258: ldc 13
     //   260: ldc_w 398
-    //   263: invokestatic 21	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   263: invokestatic 21	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   266: aload 8
     //   268: getstatic 56	android/provider/ContactsContract$Profile:CONTENT_URI	Landroid/net/Uri;
     //   271: iconst_1
@@ -900,7 +900,7 @@ public final class c
     //   336: iload_2
     //   337: invokevirtual 409	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
     //   340: invokevirtual 245	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   343: invokestatic 21	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   343: invokestatic 21	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   346: aload_1
     //   347: ifnull +18 -> 365
     //   350: aload_1
@@ -956,7 +956,7 @@ public final class c
     //   460: iconst_0
     //   461: aload_1
     //   462: aastore
-    //   463: invokestatic 85	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   463: invokestatic 85	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   466: aload_1
     //   467: astore 5
     //   469: aload 4
@@ -973,17 +973,17 @@ public final class c
     //   501: aload 4
     //   503: astore_1
     //   504: aload 4
-    //   506: invokestatic 95	com/tencent/mm/sdk/platformtools/ay:kz	(Ljava/lang/String;)Z
+    //   506: invokestatic 95	com/tencent/mm/sdk/platformtools/be:kf	(Ljava/lang/String;)Z
     //   509: ifeq +218 -> 727
     //   512: aload_0
     //   513: aload_0
-    //   514: invokestatic 100	com/tencent/mm/modelsimple/d:bc	(Landroid/content/Context;)Ljava/lang/String;
-    //   517: invokestatic 104	com/tencent/mm/modelsimple/c:w	(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    //   514: invokestatic 100	com/tencent/mm/modelsimple/d:aY	(Landroid/content/Context;)Ljava/lang/String;
+    //   517: invokestatic 104	com/tencent/mm/modelsimple/c:x	(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     //   520: astore_0
     //   521: aload 4
     //   523: astore_1
     //   524: aload_0
-    //   525: invokestatic 95	com/tencent/mm/sdk/platformtools/ay:kz	(Ljava/lang/String;)Z
+    //   525: invokestatic 95	com/tencent/mm/sdk/platformtools/be:kf	(Ljava/lang/String;)Z
     //   528: ifne +199 -> 727
     //   531: aload 8
     //   533: getstatic 248	android/provider/ContactsContract$Contacts:CONTENT_URI	Landroid/net/Uri;
@@ -1024,7 +1024,7 @@ public final class c
     //   609: iload_2
     //   610: invokevirtual 409	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
     //   613: invokevirtual 245	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   616: invokestatic 21	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   616: invokestatic 21	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   619: aload 4
     //   621: astore_1
     //   622: iload_2
@@ -1067,7 +1067,7 @@ public final class c
     //   692: invokeinterface 80 2 0
     //   697: astore_1
     //   698: aload_1
-    //   699: invokestatic 95	com/tencent/mm/sdk/platformtools/ay:kz	(Ljava/lang/String;)Z
+    //   699: invokestatic 95	com/tencent/mm/sdk/platformtools/be:kf	(Ljava/lang/String;)Z
     //   702: ifne +179 -> 881
     //   705: ldc 13
     //   707: ldc_w 426
@@ -1077,17 +1077,17 @@ public final class c
     //   715: iconst_0
     //   716: aload_1
     //   717: aastore
-    //   718: invokestatic 85	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   718: invokestatic 85	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   721: aload_0
     //   722: invokeinterface 89 1 0
     //   727: aload_1
     //   728: astore_0
     //   729: aload_1
-    //   730: invokestatic 95	com/tencent/mm/sdk/platformtools/ay:kz	(Ljava/lang/String;)Z
+    //   730: invokestatic 95	com/tencent/mm/sdk/platformtools/be:kf	(Ljava/lang/String;)Z
     //   733: ifne +110 -> 843
     //   736: aload_1
     //   737: aload 6
-    //   739: invokestatic 380	com/tencent/mm/sdk/platformtools/ai:cf	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    //   739: invokestatic 380	com/tencent/mm/sdk/platformtools/al:cs	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     //   742: astore 5
     //   744: ldc 13
     //   746: ldc_w 428
@@ -1105,11 +1105,11 @@ public final class c
     //   763: iconst_2
     //   764: aload 6
     //   766: aastore
-    //   767: invokestatic 85	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   767: invokestatic 85	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   770: aload_1
     //   771: astore_0
     //   772: aload 5
-    //   774: invokestatic 95	com/tencent/mm/sdk/platformtools/ay:kz	(Ljava/lang/String;)Z
+    //   774: invokestatic 95	com/tencent/mm/sdk/platformtools/be:kf	(Ljava/lang/String;)Z
     //   777: ifne +50 -> 827
     //   780: aload_1
     //   781: ldc_w 387
@@ -1140,7 +1140,7 @@ public final class c
     //   837: iconst_0
     //   838: aload_0
     //   839: aastore
-    //   840: invokestatic 85	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   840: invokestatic 85	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   843: aload_0
     //   844: areturn
     //   845: astore_1
@@ -1150,7 +1150,7 @@ public final class c
     //   849: astore_1
     //   850: ldc 13
     //   852: ldc 108
-    //   854: invokestatic 111	com/tencent/mm/sdk/platformtools/u:d	(Ljava/lang/String;Ljava/lang/String;)V
+    //   854: invokestatic 111	com/tencent/mm/sdk/platformtools/v:d	(Ljava/lang/String;Ljava/lang/String;)V
     //   857: goto -511 -> 346
     //   860: astore 4
     //   862: aconst_null
@@ -1161,7 +1161,7 @@ public final class c
     //   870: astore_1
     //   871: ldc 13
     //   873: ldc 108
-    //   875: invokestatic 111	com/tencent/mm/sdk/platformtools/u:d	(Ljava/lang/String;Ljava/lang/String;)V
+    //   875: invokestatic 111	com/tencent/mm/sdk/platformtools/v:d	(Ljava/lang/String;Ljava/lang/String;)V
     //   878: goto -402 -> 476
     //   881: aload_0
     //   882: invokeinterface 273 1 0
@@ -1253,18 +1253,18 @@ public final class c
     //   78	93	949	java/lang/Exception
   }
   
-  private static String w(Context paramContext, String paramString)
+  private static String x(Context paramContext, String paramString)
   {
     Object localObject = null;
-    u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "Get contactId by email, email = %s", new Object[] { paramString });
+    v.i("MicroMsg.ContactsUtil", "Get contactId by email, email = %s", new Object[] { paramString });
     if (paramContext == null)
     {
-      u.e("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "context is null.");
+      v.e("MicroMsg.ContactsUtil", "context is null.");
       return null;
     }
-    if (ay.kz(paramString))
+    if (be.kf(paramString))
     {
-      u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "email is null.");
+      v.i("MicroMsg.ContactsUtil", "email is null.");
       return null;
     }
     for (;;)
@@ -1286,7 +1286,7 @@ public final class c
         Cursor localCursor;
         boolean bool;
         paramContext = null;
-        u.printErrStackTrace("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", paramString, "getContactIdByEmail error", new Object[0]);
+        v.printErrStackTrace("MicroMsg.ContactsUtil", paramString, "getContactIdByEmail error", new Object[0]);
         continue;
         paramContext = null;
         continue;
@@ -1297,10 +1297,10 @@ public final class c
       {
         paramContext = localCursor.getString(localCursor.getColumnIndex("contact_id"));
         paramString = paramContext;
-        if (!ay.kz(paramContext))
+        if (!be.kf(paramContext))
         {
           paramString = paramContext;
-          u.i("!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0", "Have got contactId ,contactId is [%s]", new Object[] { paramContext });
+          v.i("MicroMsg.ContactsUtil", "Have got contactId ,contactId is [%s]", new Object[] { paramContext });
         }
       }
       catch (Exception localException)

@@ -1,6 +1,7 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import android.content.Context;
+import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -9,7 +10,8 @@ import android.widget.ScrollView;
 public class WrapScollview
   extends ScrollView
 {
-  private View cMt;
+  View cJf;
+  boolean hDA = true;
   
   public WrapScollview(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -21,12 +23,20 @@ public class WrapScollview
     super(paramContext, paramAttributeSet, paramInt);
   }
   
+  protected int computeScrollDeltaToGetChildRectOnScreen(Rect paramRect)
+  {
+    if (!hDA) {
+      return 0;
+    }
+    return super.computeScrollDeltaToGetChildRectOnScreen(paramRect);
+  }
+  
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
   {
     int i = 1;
-    if (cMt != null)
+    if (cJf != null)
     {
-      View localView = cMt;
+      View localView = cJf;
       float f1 = paramMotionEvent.getRawX();
       float f2 = paramMotionEvent.getRawY();
       int[] arrayOfInt = new int[2];
@@ -43,11 +53,6 @@ public class WrapScollview
       }
     }
     return super.onInterceptTouchEvent(paramMotionEvent);
-  }
-  
-  public void setContentView(View paramView)
-  {
-    cMt = paramView;
   }
 }
 

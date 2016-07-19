@@ -10,25 +10,25 @@ final class VideoTextureView$2
   
   public final void onPrepared(MediaPlayer paramMediaPlayer)
   {
-    VideoTextureView.d(iTe);
-    if (VideoTextureView.e(iTe) != null) {
-      VideoTextureView.e(iTe).Xq();
+    VideoTextureView.d(jqr);
+    if (VideoTextureView.e(jqr) != null) {
+      VideoTextureView.e(jqr).Zb();
     }
-    VideoTextureView.a(iTe, paramMediaPlayer.getVideoWidth());
-    VideoTextureView.b(iTe, paramMediaPlayer.getVideoHeight());
-    VideoTextureView.c(iTe);
-    if ((VideoTextureView.a(iTe) != 0) && (VideoTextureView.b(iTe) != 0)) {
-      if (VideoTextureView.f(iTe))
+    VideoTextureView.a(jqr, paramMediaPlayer.getVideoWidth());
+    VideoTextureView.b(jqr, paramMediaPlayer.getVideoHeight());
+    VideoTextureView.c(jqr);
+    if ((VideoTextureView.a(jqr) != 0) && (VideoTextureView.b(jqr) != 0)) {
+      if (VideoTextureView.f(jqr))
       {
-        VideoTextureView.g(iTe).start();
-        VideoTextureView.h(iTe);
+        VideoTextureView.g(jqr).start();
+        VideoTextureView.h(jqr);
       }
     }
-    while (!VideoTextureView.f(iTe)) {
+    while (!VideoTextureView.f(jqr)) {
       return;
     }
-    VideoTextureView.g(iTe).start();
-    VideoTextureView.h(iTe);
+    VideoTextureView.g(jqr).start();
+    VideoTextureView.h(jqr);
   }
 }
 

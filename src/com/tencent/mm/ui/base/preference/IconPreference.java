@@ -11,37 +11,37 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 
 public class IconPreference
   extends Preference
 {
   private Context context;
-  private String dlN = "";
-  private int dlO = -1;
-  private int dlP = 8;
-  private Bitmap dlQ = null;
-  public int dlR = -1;
-  private int dlS = 8;
-  private int dlT = 0;
-  private int dlU = 8;
-  public ImageView dlV = null;
-  private ViewGroup dlW = null;
-  private View dlX = null;
-  public RelativeLayout.LayoutParams dlY;
+  private int dlA = 0;
+  private int dlB = 8;
+  public ImageView dlC = null;
+  private ViewGroup dlD = null;
+  private View dlE = null;
+  public RelativeLayout.LayoutParams dlF;
+  private String dlu = "";
+  private int dlv = -1;
+  private int dlw = 8;
+  private Bitmap dlx = null;
+  public int dly = -1;
+  private int dlz = 8;
   public Drawable drawable;
   private int height = -1;
-  private int kLg = 8;
-  private ImageView kLh = null;
-  private TextView kLi;
-  private String kLk = "";
-  private int kLl = -1;
-  private int kLm = 8;
-  private int kLn = -1;
-  private TextView kLo;
-  private TextView kLp;
-  private boolean kLq = false;
-  public boolean kLr = false;
+  private int lkA = -1;
+  private int lkB = 8;
+  private int lkC = -1;
+  private TextView lkD;
+  private TextView lkE;
+  private boolean lkF = false;
+  public boolean lkG = false;
+  private int lkv = 8;
+  private ImageView lkw = null;
+  private TextView lkx;
+  private String lkz = "";
   
   public IconPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -52,36 +52,67 @@ public class IconPreference
   {
     super(paramContext, paramAttributeSet, paramInt);
     context = paramContext;
-    setLayoutResource(2131363286);
+    setLayoutResource(2130903981);
   }
   
-  public final void ag(String paramString, int paramInt)
+  public final void A(String paramString, int paramInt1, int paramInt2)
   {
-    dlN = paramString;
-    dlO = paramInt;
+    lkz = paramString;
+    lkA = paramInt1;
+    lkC = paramInt2;
+    if (lkD != null)
+    {
+      lkD.setText(paramString);
+      if (paramInt1 != -1) {
+        lkD.setBackgroundDrawable(a.C(context, paramInt1));
+      }
+      if (paramInt2 != -1) {
+        lkD.setTextColor(paramInt2);
+      }
+    }
   }
   
-  public final void hB(boolean paramBoolean)
+  public final void E(Bitmap paramBitmap)
   {
-    kLq = paramBoolean;
-    if (kLo != null)
+    dlx = paramBitmap;
+    dly = -1;
+    if (dlC != null) {
+      dlC.setImageBitmap(paramBitmap);
+    }
+  }
+  
+  public final void ah(String paramString, int paramInt)
+  {
+    dlu = paramString;
+    dlv = paramInt;
+  }
+  
+  public final void bj(String paramString, int paramInt)
+  {
+    A(paramString, paramInt, lkC);
+  }
+  
+  public final void jdMethod_if(boolean paramBoolean)
+  {
+    lkF = paramBoolean;
+    if (lkD != null)
     {
       if (paramBoolean)
       {
-        kLo.setCompoundDrawablesWithIntrinsicBounds(0, 0, 2130970358, 0);
-        kLo.setCompoundDrawablePadding((int)context.getResources().getDimension(2131034577));
+        lkD.setCompoundDrawablesWithIntrinsicBounds(0, 0, 2130839518, 0);
+        lkD.setCompoundDrawablePadding((int)context.getResources().getDimension(2131427704));
       }
     }
     else {
       return;
     }
-    kLo.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+    lkD.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
   }
   
   public void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    Object localObject = (ImageView)paramView.findViewById(2131166875);
+    Object localObject = (ImageView)paramView.findViewById(2131756743);
     if (localObject != null)
     {
       if (drawable != null)
@@ -92,66 +123,66 @@ public class IconPreference
     }
     else
     {
-      localObject = (LinearLayout)paramView.findViewById(2131166874);
+      localObject = (LinearLayout)paramView.findViewById(2131758087);
       if (height != -1) {
         ((LinearLayout)localObject).setMinimumHeight(height);
       }
-      kLp = ((TextView)paramView.findViewById(2131166876));
-      if (kLp != null)
+      lkE = ((TextView)paramView.findViewById(2131758079));
+      if (lkE != null)
       {
-        if (!kLr) {
+        if (!lkG) {
           break label490;
         }
-        kLp.setCompoundDrawablesWithIntrinsicBounds(2130970358, 0, 0, 0);
-        kLp.setCompoundDrawablePadding((int)context.getResources().getDimension(2131034577));
+        lkE.setCompoundDrawablesWithIntrinsicBounds(2130839518, 0, 0, 0);
+        lkE.setCompoundDrawablePadding((int)context.getResources().getDimension(2131427704));
         label124:
-        kLp.setVisibility(dlP);
-        kLp.setText(dlN);
-        if (dlO != -1) {
-          kLp.setBackgroundDrawable(a.y(context, dlO));
+        lkE.setVisibility(dlw);
+        lkE.setText(dlu);
+        if (dlv != -1) {
+          lkE.setBackgroundDrawable(a.C(context, dlv));
         }
       }
-      kLo = ((TextView)paramView.findViewById(2131166958));
-      if (kLo != null)
+      lkD = ((TextView)paramView.findViewById(2131758103));
+      if (lkD != null)
       {
-        kLo.setVisibility(kLm);
-        kLo.setText(kLk);
-        if (kLl != -1) {
-          kLo.setBackgroundDrawable(a.y(context, kLl));
+        lkD.setVisibility(lkB);
+        lkD.setText(lkz);
+        if (lkA != -1) {
+          lkD.setBackgroundDrawable(a.C(context, lkA));
         }
-        if (kLn != -1) {
-          kLo.setTextColor(kLn);
+        if (lkC != -1) {
+          lkD.setTextColor(lkC);
         }
-        if (!kLq) {
+        if (!lkF) {
           break label504;
         }
-        kLo.setCompoundDrawablesWithIntrinsicBounds(0, 0, 2130970358, 0);
-        kLo.setCompoundDrawablePadding((int)context.getResources().getDimension(2131034577));
+        lkD.setCompoundDrawablesWithIntrinsicBounds(0, 0, 2130839518, 0);
+        lkD.setCompoundDrawablePadding((int)context.getResources().getDimension(2131427704));
       }
       label298:
-      kLh = ((ImageView)paramView.findViewById(2131169500));
-      kLh.setVisibility(kLg);
-      dlV = ((ImageView)paramView.findViewById(2131166960));
-      dlW = ((ViewGroup)paramView.findViewById(2131166959));
-      dlX = paramView.findViewById(2131166961);
-      dlX.setVisibility(dlU);
-      if (dlQ == null) {
+      lkw = ((ImageView)paramView.findViewById(2131758102));
+      lkw.setVisibility(lkv);
+      dlC = ((ImageView)paramView.findViewById(2131758105));
+      dlD = ((ViewGroup)paramView.findViewById(2131758104));
+      dlE = paramView.findViewById(2131758106);
+      dlE.setVisibility(dlB);
+      if (dlx == null) {
         break label518;
       }
-      dlV.setImageBitmap(dlQ);
+      dlC.setImageBitmap(dlx);
     }
     for (;;)
     {
-      dlV.setVisibility(dlS);
-      dlW.setVisibility(dlT);
-      if (dlY != null) {
-        dlV.setLayoutParams(dlY);
+      dlC.setVisibility(dlz);
+      dlD.setVisibility(dlA);
+      if (dlF != null) {
+        dlC.setLayoutParams(dlF);
       }
-      kLi = ((TextView)paramView.findViewById(16908310));
+      lkx = ((TextView)paramView.findViewById(16908310));
       return;
-      if (kr != 0)
+      if (kI != 0)
       {
-        Drawable localDrawable = mContext.getResources().getDrawable(kr);
+        Drawable localDrawable = mContext.getResources().getDrawable(kI);
         drawable = localDrawable;
         ((ImageView)localObject).setImageDrawable(localDrawable);
         ((ImageView)localObject).setVisibility(0);
@@ -160,14 +191,14 @@ public class IconPreference
       ((ImageView)localObject).setVisibility(8);
       break;
       label490:
-      kLp.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+      lkE.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
       break label124;
       label504:
-      kLo.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+      lkD.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
       break label298;
       label518:
-      if (dlR != -1) {
-        dlV.setImageResource(dlR);
+      if (dly != -1) {
+        dlC.setImageResource(dly);
       }
     }
   }
@@ -175,92 +206,66 @@ public class IconPreference
   public View onCreateView(ViewGroup paramViewGroup)
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131755262);
     localViewGroup.removeAllViews();
-    View.inflate(mContext, 2131363266, localViewGroup);
+    View.inflate(mContext, 2130904003, localViewGroup);
     return paramViewGroup;
   }
   
-  public final void qK(int paramInt)
+  public final void sM(int paramInt)
   {
-    dlP = paramInt;
-    if (kLp != null) {
-      kLp.setVisibility(paramInt);
+    dlw = paramInt;
+    if (lkE != null) {
+      lkE.setVisibility(paramInt);
     }
   }
   
-  public final void qL(int paramInt)
+  public final void sN(int paramInt)
   {
-    kLm = paramInt;
-    if (kLo != null) {
-      kLo.setVisibility(paramInt);
+    lkB = paramInt;
+    if (lkD != null) {
+      lkD.setVisibility(paramInt);
     }
   }
   
-  public final void qM(int paramInt)
+  public final void sO(int paramInt)
   {
-    kLg = paramInt;
-    if (kLh != null) {
-      kLh.setVisibility(paramInt);
+    lkv = paramInt;
+    if (lkw != null) {
+      lkw.setVisibility(paramInt);
     }
   }
   
-  public final void qN(int paramInt)
+  public final void sP(int paramInt)
   {
-    dlR = paramInt;
-    dlQ = null;
-    if (dlV != null) {
-      dlV.setImageResource(paramInt);
+    dly = paramInt;
+    dlx = null;
+    if (dlC != null) {
+      dlC.setImageResource(paramInt);
     }
   }
   
-  public final void qO(int paramInt)
+  public final void sQ(int paramInt)
   {
-    dlS = paramInt;
-    if (dlV != null) {
-      dlV.setVisibility(dlS);
+    dlz = paramInt;
+    if (dlC != null) {
+      dlC.setVisibility(dlz);
     }
   }
   
-  public final void qP(int paramInt)
+  public final void sR(int paramInt)
   {
-    dlT = paramInt;
-    if (dlW != null) {
-      dlW.setVisibility(dlT);
+    dlA = paramInt;
+    if (dlD != null) {
+      dlD.setVisibility(dlA);
     }
   }
   
-  public final void qQ(int paramInt)
+  public final void sS(int paramInt)
   {
-    dlU = paramInt;
-    if (dlX != null) {
-      dlX.setVisibility(dlU);
-    }
-  }
-  
-  public final void u(Bitmap paramBitmap)
-  {
-    dlQ = paramBitmap;
-    dlR = -1;
-    if (dlV != null) {
-      dlV.setImageBitmap(paramBitmap);
-    }
-  }
-  
-  public final void y(String paramString, int paramInt1, int paramInt2)
-  {
-    kLk = paramString;
-    kLl = paramInt1;
-    kLn = paramInt2;
-    if (kLo != null)
-    {
-      kLo.setText(paramString);
-      if (paramInt1 != -1) {
-        kLo.setBackgroundDrawable(a.y(context, paramInt1));
-      }
-      if (paramInt2 != -1) {
-        kLo.setTextColor(paramInt2);
-      }
+    dlB = paramInt;
+    if (dlE != null) {
+      dlE.setVisibility(dlB);
     }
   }
 }

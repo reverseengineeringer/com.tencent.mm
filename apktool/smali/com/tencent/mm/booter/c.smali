@@ -12,15 +12,25 @@
 
 
 # static fields
-.field private static blT:Lcom/tencent/mm/booter/c;
+.field private static aZz:Lcom/tencent/mm/booter/c;
 
 
 # instance fields
-.field public blQ:I
+.field public aZw:I
 
-.field private final blR:[Ljava/lang/String;
+.field private final aZx:[Ljava/lang/String;
 
-.field private final blS:Ljava/util/HashMap;
+.field private final aZy:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private ctx:Landroid/content/Context;
 
@@ -38,7 +48,7 @@
     .line 41
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/booter/c;->blQ:I
+    iput v0, p0, Lcom/tencent/mm/booter/c;->aZw:I
 
     .line 43
     const/4 v0, 0x4
@@ -69,14 +79,14 @@
 
     aput-object v2, v0, v1
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/c;->blR:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/booter/c;->aZx:[Ljava/lang/String;
 
     .line 45
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/c;->blS:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/booter/c;->aZy:Ljava/util/HashMap;
 
     .line 59
     iput-object p1, p0, Lcom/tencent/mm/booter/c;->ctx:Landroid/content/Context;
@@ -88,9 +98,9 @@
 
     .line 61
     :try_start_0
-    sget-object v1, Lcom/tencent/mm/j/a$a;->CONTENT_URI:Landroid/net/Uri;
+    sget-object v1, Lcom/tencent/mm/k/a$a;->CONTENT_URI:Landroid/net/Uri;
 
-    iget-object v2, p0, Lcom/tencent/mm/booter/c;->blR:[Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/booter/c;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x0
 
@@ -139,7 +149,7 @@
 
     const-string/jumbo v2, "com.tencent.mm.coolassist"
 
-    invoke-static {v2, p1}, Lcom/tencent/mm/sdk/platformtools/ay;->j(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2, p1}, Lcom/tencent/mm/sdk/platformtools/be;->j(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -156,7 +166,7 @@
 
     .line 85
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/sdk/b/b;->aUn()V
+    invoke-static {}, Lcom/tencent/mm/sdk/b/b;->aZn()V
 
     .line 86
     const-string/jumbo v1, "key"
@@ -196,12 +206,12 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/booter/c$a;->h(ILjava/lang/String;)Ljava/lang/Object;
+    invoke-static {v4, v5}, Lcom/tencent/mm/booter/c$a;->i(ILjava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
     .line 94
-    iget-object v5, p0, Lcom/tencent/mm/booter/c;->blS:Ljava/util/HashMap;
+    iget-object v5, p0, Lcom/tencent/mm/booter/c;->aZy:Ljava/util/HashMap;
 
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
@@ -218,12 +228,12 @@
     goto :goto_1
 .end method
 
-.method public static an(Landroid/content/Context;)Lcom/tencent/mm/booter/c;
+.method public static ak(Landroid/content/Context;)Lcom/tencent/mm/booter/c;
     .locals 1
 
     .prologue
     .line 52
-    sget-object v0, Lcom/tencent/mm/booter/c;->blT:Lcom/tencent/mm/booter/c;
+    sget-object v0, Lcom/tencent/mm/booter/c;->aZz:Lcom/tencent/mm/booter/c;
 
     if-nez v0, :cond_0
 
@@ -232,18 +242,18 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/booter/c;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/tencent/mm/booter/c;->blT:Lcom/tencent/mm/booter/c;
+    sput-object v0, Lcom/tencent/mm/booter/c;->aZz:Lcom/tencent/mm/booter/c;
 
     .line 55
     :cond_0
-    sget-object v0, Lcom/tencent/mm/booter/c;->blT:Lcom/tencent/mm/booter/c;
+    sget-object v0, Lcom/tencent/mm/booter/c;->aZz:Lcom/tencent/mm/booter/c;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final cv(Ljava/lang/String;)V
+.method public final cA(Ljava/lang/String;)V
     .locals 9
 
     .prologue
@@ -261,11 +271,11 @@
     .line 101
     const-string/jumbo v1, ".com.tencent.mm.debug.log.append_mode"
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v8}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v8}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v5
 
@@ -276,7 +286,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -285,11 +295,11 @@
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.uploadLog"
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v8}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v8}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
@@ -318,11 +328,11 @@
     if-lez v2, :cond_0
 
     .line 111
-    new-instance v2, Lcom/tencent/mm/sdk/platformtools/av;
+    new-instance v2, Lcom/tencent/mm/sdk/platformtools/w;
 
-    invoke-direct {v2, v1}, Lcom/tencent/mm/sdk/platformtools/av;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/tencent/mm/sdk/platformtools/w;-><init>(Ljava/lang/String;)V
 
-    sput-object v2, Lcom/tencent/mm/xlog/Xlog;->lIy:Lcom/tencent/mm/sdk/platformtools/av;
+    sput-object v2, Lcom/tencent/mm/xlog/Xlog;->mkh:Lcom/tencent/mm/sdk/platformtools/w;
 
     .line 115
     :cond_0
@@ -359,15 +369,15 @@
     if-nez v1, :cond_4
 
     :goto_1
-    sget v1, Lcom/tencent/mm/protocal/b;->iUf:I
+    sget v1, Lcom/tencent/mm/protocal/c;->jry:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    sget-object v2, Lcom/tencent/mm/storage/j;->kax:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/storage/j;->kAH:Ljava/lang/String;
 
-    sget-object v3, Lcom/tencent/mm/compatible/util/d;->buq:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/compatible/util/d;->biQ:Ljava/lang/String;
 
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -395,11 +405,11 @@
 
     .line 131
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->getLogLevel()I
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->getLogLevel()I
 
     move-result v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/u;->pp(I)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/v;->rg(I)V
 
     .line 132
     return-void
@@ -417,36 +427,36 @@
     goto :goto_1
 .end method
 
-.method public final cw(Ljava/lang/String;)Ljava/lang/Boolean;
+.method public final cB(Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 4
 
     .prologue
     const/4 v1, 0x0
 
-    .line 615
-    iget-object v0, p0, Lcom/tencent/mm/booter/c;->blS:Ljava/util/HashMap;
+    .line 671
+    iget-object v0, p0, Lcom/tencent/mm/booter/c;->aZy:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 616
+    .line 672
     if-nez v0, :cond_0
 
     move-object v0, v1
 
-    .line 625
+    .line 681
     :goto_0
     return-object v0
 
-    .line 620
+    .line 676
     :cond_0
     instance-of v2, v0, Ljava/lang/Boolean;
 
     if-eqz v2, :cond_1
 
-    .line 621
-    const-string/jumbo v1, "!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX"
+    .line 677
+    const-string/jumbo v1, "MicroMsg.Debugger"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -476,9 +486,9 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 622
+    .line 678
     check-cast v0, Ljava/lang/Boolean;
 
     goto :goto_0
@@ -486,7 +496,7 @@
     :cond_1
     move-object v0, v1
 
-    .line 625
+    .line 681
     goto :goto_0
 .end method
 
@@ -494,20 +504,20 @@
     .locals 4
 
     .prologue
-    .line 595
-    iget-object v0, p0, Lcom/tencent/mm/booter/c;->blS:Ljava/util/HashMap;
+    .line 651
+    iget-object v0, p0, Lcom/tencent/mm/booter/c;->aZy:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 596
+    .line 652
     instance-of v1, v0, Ljava/lang/Integer;
 
     if-eqz v1, :cond_0
 
-    .line 597
-    const-string/jumbo v1, "!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX"
+    .line 653
+    const-string/jumbo v1, "MicroMsg.Debugger"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -537,12 +547,12 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 598
+    .line 654
     check-cast v0, Ljava/lang/Integer;
 
-    .line 601
+    .line 657
     :goto_0
     return-object v0
 
@@ -556,20 +566,20 @@
     .locals 4
 
     .prologue
-    .line 585
-    iget-object v0, p0, Lcom/tencent/mm/booter/c;->blS:Ljava/util/HashMap;
+    .line 641
+    iget-object v0, p0, Lcom/tencent/mm/booter/c;->aZy:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 586
+    .line 642
     instance-of v1, v0, Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 587
-    const-string/jumbo v1, "!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX"
+    .line 643
+    const-string/jumbo v1, "MicroMsg.Debugger"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -599,12 +609,12 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 588
+    .line 644
     check-cast v0, Ljava/lang/String;
 
-    .line 591
+    .line 647
     :goto_0
     return-object v0
 

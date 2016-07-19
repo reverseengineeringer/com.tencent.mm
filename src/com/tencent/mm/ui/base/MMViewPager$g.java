@@ -1,40 +1,47 @@
 package com.tencent.mm.ui.base;
 
-import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import java.lang.ref.WeakReference;
+import android.graphics.Matrix;
+import com.tencent.mm.sdk.platformtools.ac;
 
-public final class MMViewPager$g
-  extends aa
+final class MMViewPager$g
+  extends MMViewPager.a
 {
-  WeakReference kIn;
-  long kIo;
+  float[] lhx = new float[9];
   
-  public MMViewPager$g(WeakReference paramWeakReference)
+  public MMViewPager$g(MMViewPager paramMMViewPager)
   {
-    kIn = paramWeakReference;
+    super(paramMMViewPager);
   }
   
-  public final void handleMessage(Message paramMessage)
+  public final void play()
   {
-    super.handleMessage(paramMessage);
-    removeMessages(what);
-    MMViewPager localMMViewPager;
-    if (kIn != null)
+    MMViewPager.c(lhv).post(new Runnable()
     {
-      localMMViewPager = (MMViewPager)kIn.get();
-      if ((localMMViewPager != null) && (what == 1))
+      public final void run()
       {
-        if ((MMViewPager.k(localMMViewPager) == null) || (MMViewPager.k(localMMViewPager).aPA())) {
-          break label81;
+        MMViewPager.a(lhv).getImageMatrix().getValues(lhx);
+        float f2 = lhx[2];
+        float f1 = MMViewPager.a(lhv).getScale() * alhv).imageWidth;
+        if (f1 < MMViewPager.b(lhv)) {}
+        for (f1 = MMViewPager.b(lhv) / 2.0F - f1 / 2.0F;; f1 = 0.0F)
+        {
+          f1 -= f2;
+          if (f1 >= 0.0F) {
+            lhw = true;
+          }
+          for (;;)
+          {
+            MMViewPager.a(lhv).p(f1, 0.0F);
+            return;
+            if (Math.abs(f1) <= 5.0F) {
+              lhw = true;
+            } else {
+              f1 = -(float)(Math.abs(f1) - Math.pow(Math.sqrt(Math.abs(f1)) - 1.0D, 2.0D)) * 2.0F;
+            }
+          }
         }
-        MMViewPager.k(localMMViewPager).play();
-        sendEmptyMessageDelayed(what, kIo);
       }
-    }
-    return;
-    label81:
-    MMViewPager.l(localMMViewPager);
+    });
   }
 }
 

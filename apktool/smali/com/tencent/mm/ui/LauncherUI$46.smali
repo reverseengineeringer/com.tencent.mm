@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 5464
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$46;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 4764
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$46;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,11 +40,8 @@
     .locals 3
 
     .prologue
-    .line 5468
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
-
-    .line 5469
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$46;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 4767
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$46;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     new-instance v1, Landroid/content/Intent;
 
@@ -54,6 +51,6 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->startActivity(Landroid/content/Intent;)V
 
-    .line 5470
+    .line 4768
     return-void
 .end method

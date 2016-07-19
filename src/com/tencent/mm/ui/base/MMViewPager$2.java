@@ -12,23 +12,24 @@ final class MMViewPager$2
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if (MMViewPager.e(kIi) != null) {}
-    for (boolean bool1 = MMViewPager.e(kIi).onTouch(paramView, paramMotionEvent);; bool1 = false)
+    if (MMViewPager.f(lhv) != null) {}
+    for (boolean bool1 = MMViewPager.f(lhv).onTouch(paramView, paramMotionEvent);; bool1 = false)
     {
-      paramView = MMViewPager.f(kIi);
+      paramView = MMViewPager.g(lhv);
       if (paramView == null)
       {
-        MMViewPager.a(kIi, null);
-        MMViewPager.g(kIi).onTouchEvent(paramMotionEvent);
+        MMViewPager.a(lhv, null);
+        MMViewPager.h(lhv).onTouchEvent(paramMotionEvent);
         return bool1;
       }
-      MMViewPager.a(kIi, paramView);
-      boolean bool2 = MMViewPager.a(kIi, MMViewPager.a(kIi), paramMotionEvent);
-      if (MMViewPager.h(kIi) != null) {
-        MMViewPager.h(kIi).recycle();
+      MMViewPager.a(lhv, paramView);
+      boolean bool2 = MMViewPager.a(lhv, MMViewPager.a(lhv), paramMotionEvent);
+      if (MMViewPager.i(lhv) != null) {
+        MMViewPager.i(lhv).recycle();
       }
-      MMViewPager.a(kIi, MotionEvent.obtainNoHistory(paramMotionEvent));
-      MMViewPager.g(kIi).onTouchEvent(paramMotionEvent);
+      MMViewPager.a(lhv, MotionEvent.obtainNoHistory(paramMotionEvent));
+      MMViewPager.h(lhv).onTouchEvent(paramMotionEvent);
+      lhv.computeScroll();
       return (bool2) || (bool1);
     }
   }

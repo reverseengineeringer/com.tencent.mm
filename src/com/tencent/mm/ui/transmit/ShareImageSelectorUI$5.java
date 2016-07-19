@@ -10,8 +10,8 @@ final class ShareImageSelectorUI$5
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (ShareImageSelectorUI.Dt() == 1) {
-      ShareImageSelectorUI.c(lBC);
+    if (ShareImageSelectorUI.bpp() == 1) {
+      ShareImageSelectorUI.c(mcu);
     }
   }
 }

@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract aSi()V
+.method public abstract aWZ()V
 .end method
 
-.method public abstract aSj()V
+.method public abstract aXa()V
 .end method
 
-.method public abstract ww(Ljava/lang/String;)V
+.method public abstract xP(Ljava/lang/String;)V
 .end method

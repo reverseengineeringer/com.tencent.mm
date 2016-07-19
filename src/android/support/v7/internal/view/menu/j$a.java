@@ -10,7 +10,7 @@ final class j$a
   extends i.a
   implements d.b
 {
-  ActionProvider.VisibilityListener mE;
+  ActionProvider.VisibilityListener mU;
   
   public j$a(j paramj, d paramd)
   {
@@ -24,7 +24,7 @@ final class j$a
   
   public final View onCreateActionView(MenuItem paramMenuItem)
   {
-    return mz.onCreateActionView();
+    return mP.onCreateActionView();
   }
   
   public final boolean overridesItemVisibility()
@@ -36,8 +36,8 @@ final class j$a
   
   public final void setVisibilityListener(ActionProvider.VisibilityListener paramVisibilityListener)
   {
-    mE = paramVisibilityListener;
-    d locald = mz;
+    mU = paramVisibilityListener;
+    d locald = mP;
     if (paramVisibilityListener != null) {}
     for (paramVisibilityListener = this;; paramVisibilityListener = null)
     {

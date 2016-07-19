@@ -14,11 +14,11 @@ final class ChatroomContactUI$3
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = new Intent(ljg, SelectContactUI.class);
-    paramMenuItem.putExtra("titile", ljg.getString(2131428316));
+    paramMenuItem = new Intent(lJr, SelectContactUI.class);
+    paramMenuItem.putExtra("titile", lJr.getString(2131230848));
     paramMenuItem.putExtra("list_type", 0);
-    paramMenuItem.putExtra("list_attr", r.n(new int[] { r.llA, 256, 512 }));
-    ljg.koJ.kpc.startActivity(paramMenuItem);
+    paramMenuItem.putExtra("list_attr", r.n(new int[] { r.lLN, 256, 512 }));
+    lJr.kNN.kOg.startActivity(paramMenuItem);
     return false;
   }
 }

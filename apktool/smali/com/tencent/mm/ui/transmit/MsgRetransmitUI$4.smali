@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # annotations
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic bDO:Ljava/lang/String;
+.field final synthetic lDP:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$a;
 
-.field final synthetic lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
+.field final synthetic mbK:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;Ljava/lang/String;)V
+.method constructor <init>(Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$a;)V
     .locals 0
 
     .prologue
-    .line 542
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$4;->lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
+    .line 1129
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$4;->mbK:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$4;->bDO:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$4;->lDP:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,23 +40,17 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+.method public final onCancel(Landroid/content/DialogInterface;)V
+    .locals 2
 
     .prologue
-    .line 546
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$4;->lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
+    .line 1133
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$4;->lDP:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$4;->lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
+    const/4 v1, 0x1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;->getIntent()Landroid/content/Intent;
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$a;->mbO:Z
 
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$4;->bDO:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;->a(Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;Landroid/content/Intent;Ljava/lang/String;)V
-
-    .line 547
+    .line 1134
     return-void
 .end method

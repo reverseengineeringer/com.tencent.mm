@@ -13,9 +13,9 @@ final class SnsCommentDetailUI$26
   
   public final void onClick(View paramView)
   {
-    SnsCommentDetailUI localSnsCommentDetailUI = hda;
+    SnsCommentDetailUI localSnsCommentDetailUI = hrN;
     paramView = (LinearLayout)paramView;
-    ImageView localImageView = (ImageView)paramView.findViewById(2131168691);
+    ImageView localImageView = (ImageView)paramView.findViewById(2131759085);
     ScaleAnimation localScaleAnimation = new ScaleAnimation(0.9F, 1.5F, 0.9F, 1.5F, 1, 0.5F, 1, 0.5F);
     localScaleAnimation.setDuration(400L);
     localScaleAnimation.setStartOffset(100L);
@@ -23,7 +23,7 @@ final class SnsCommentDetailUI$26
     localImageView.clearAnimation();
     localImageView.startAnimation(localScaleAnimation);
     localScaleAnimation.setAnimationListener(new SnsCommentDetailUI.29(localSnsCommentDetailUI, paramView));
-    SnsCommentDetailUI.s(hda);
+    SnsCommentDetailUI.s(hrN);
   }
 }
 

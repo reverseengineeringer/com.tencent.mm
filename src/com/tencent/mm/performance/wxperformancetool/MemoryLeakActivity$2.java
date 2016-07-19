@@ -2,7 +2,7 @@ package com.tencent.mm.performance.wxperformancetool;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.ba.a;
+import com.tencent.mm.bd.a;
 import com.tencent.mm.ui.base.h;
 
 final class MemoryLeakActivity$2
@@ -12,11 +12,11 @@ final class MemoryLeakActivity$2
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.Gc(clp);
-    if ((MemoryLeakActivity.b(clo) != null) && (MemoryLeakActivity.b(clo).isShowing())) {
-      MemoryLeakActivity.b(clo).dismiss();
+    a.It(cgs);
+    if ((MemoryLeakActivity.b(cgr) != null) && (MemoryLeakActivity.b(cgr).isShowing())) {
+      MemoryLeakActivity.b(cgr).dismiss();
     }
-    clo.finish();
+    cgr.finish();
   }
 }
 

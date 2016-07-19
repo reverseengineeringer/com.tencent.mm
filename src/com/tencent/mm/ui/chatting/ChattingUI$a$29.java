@@ -1,16 +1,23 @@
 package com.tencent.mm.ui.chatting;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.content.DialogInterface.OnCancelListener;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.modelsimple.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.t.m;
 
 final class ChattingUI$a$29
-  implements DialogInterface.OnClickListener
+  implements DialogInterface.OnCancelListener
 {
-  ChattingUI$a$29(ChattingUI.a parama) {}
+  ChattingUI$a$29(ChattingUI.a parama, ai paramai, u paramu) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void onCancel(DialogInterface paramDialogInterface)
   {
-    paramDialogInterface.dismiss();
+    v.i("MicroMsg.ChattingUI", "cancel revoke msg:%d", new Object[] { Long.valueOf(gaM.field_msgId) });
+    ah.tF().c(lBd);
   }
 }
 

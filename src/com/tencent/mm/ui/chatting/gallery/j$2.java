@@ -3,15 +3,19 @@ package com.tencent.mm.ui.chatting.gallery;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.an.m;
-import com.tencent.mm.an.n;
-import com.tencent.mm.an.o;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.protocal.b.ask;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.aq.n;
+import com.tencent.mm.aq.q;
+import com.tencent.mm.aq.r;
+import com.tencent.mm.av.c;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.ar;
+import com.tencent.mm.model.f;
+import com.tencent.mm.protocal.b.ata;
+import com.tencent.mm.storage.ai;
 import com.tencent.mm.ui.MMActivity;
+import com.tencent.mm.ui.chatting.a;
+import com.tencent.mm.ui.chatting.a.a;
+import com.tencent.mm.ui.chatting.a.b;
 
 final class j$2
   implements View.OnClickListener
@@ -20,27 +24,61 @@ final class j$2
   
   public final void onClick(View paramView)
   {
-    if ((paramView.getTag() != null) && ((paramView.getTag() instanceof ag)))
+    ai localai;
+    q localq;
+    Intent localIntent;
+    String str;
+    boolean bool;
+    if ((paramView.getTag() != null) && ((paramView.getTag() instanceof ai)))
     {
-      paramView = (ag)paramView.getTag();
-      ask localask = jVfield_imgPath).cgi;
-      if ((localask != null) && (!t.kz(byS)))
+      localai = (ai)paramView.getTag();
+      a.a(a.a.lph, localai);
+      localq = com.tencent.mm.aq.s.kC(field_imgPath);
+      ata localata = cbu;
+      if ((localata != null) && (!com.tencent.mm.platformtools.s.kf(brM)))
       {
-        com.tencent.mm.an.j.Ea();
-        String str = n.jM(field_imgPath);
-        Intent localIntent = new Intent();
+        n.Es();
+        paramView = r.kq(field_imgPath);
+        localIntent = new Intent();
         localIntent.putExtra("IsAd", false);
-        localIntent.putExtra("KStremVideoUrl", byS);
-        localIntent.putExtra("KThumUrl", byX);
-        localIntent.putExtra("KThumbPath", str);
+        localIntent.putExtra("KStremVideoUrl", brM);
+        localIntent.putExtra("KThumUrl", brR);
+        localIntent.putExtra("KThumbPath", paramView);
         localIntent.putExtra("KMediaId", "fakeid_" + field_msgId);
-        localIntent.putExtra("KMediaVideoTime", jmL);
-        localIntent.putExtra("KMediaTitle", byU);
-        localIntent.putExtra("StreamWording", byV);
-        localIntent.putExtra("StremWebUrl", byW);
-        localIntent.putExtra("KFromUserName", field_talker);
-        c.c(lhq.leH.lem.koJ.kpc, "sns", ".ui.VideoAdPlayerUI", localIntent);
+        localIntent.putExtra("KMediaVideoTime", jKM);
+        localIntent.putExtra("KMediaTitle", brO);
+        localIntent.putExtra("StreamWording", brP);
+        localIntent.putExtra("StremWebUrl", brQ);
+        str = field_talker;
+        bool = str.endsWith("@chatroom");
+        if (!bool) {
+          break label384;
+        }
+        paramView = ar.fx(field_content);
+        localIntent.putExtra("KSta_StremVideoAduxInfo", brS);
+        localIntent.putExtra("KSta_StremVideoPublishId", brT);
+        localIntent.putExtra("KSta_SourceType", 1);
+        if (!bool) {
+          break label390;
+        }
       }
+    }
+    label384:
+    label390:
+    for (int i = lpqvalue;; i = lppvalue)
+    {
+      localIntent.putExtra("KSta_Scene", i);
+      localIntent.putExtra("KSta_FromUserName", paramView);
+      localIntent.putExtra("KSta_ChatName", str);
+      localIntent.putExtra("KSta_MsgId", field_msgSvrId);
+      localIntent.putExtra("KSta_SnsStatExtStr", atH);
+      if (bool) {
+        localIntent.putExtra("KSta_ChatroomMembercount", f.dV(str));
+      }
+      c.c(lHB.lET.lEz.kNN.kOg, "sns", ".ui.VideoAdPlayerUI", localIntent);
+      return;
+      paramView = str;
+      break;
     }
   }
 }

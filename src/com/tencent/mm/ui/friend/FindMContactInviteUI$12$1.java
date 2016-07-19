@@ -2,28 +2,28 @@ package com.tencent.mm.ui.friend;
 
 import android.app.ProgressDialog;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 
 final class FindMContactInviteUI$12$1
   implements d
 {
   FindMContactInviteUI$12$1(FindMContactInviteUI.12 param12) {}
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    if (FindMContactInviteUI.a(lrw.lrv) != null)
+    if (FindMContactInviteUI.a(lSa.lRZ) != null)
     {
-      FindMContactInviteUI.a(lrw.lrv).dismiss();
-      FindMContactInviteUI.a(lrw.lrv, null);
+      FindMContactInviteUI.a(lSa.lRZ).dismiss();
+      FindMContactInviteUI.a(lSa.lRZ, null);
     }
-    if (FindMContactInviteUI.k(lrw.lrv) != null)
+    if (FindMContactInviteUI.k(lSa.lRZ) != null)
     {
-      ah.tE().b(432, FindMContactInviteUI.k(lrw.lrv));
-      FindMContactInviteUI.a(lrw.lrv, null);
+      ah.tF().b(432, FindMContactInviteUI.k(lSa.lRZ));
+      FindMContactInviteUI.a(lSa.lRZ, null);
     }
-    FindMContactInviteUI.l(lrw.lrv);
+    FindMContactInviteUI.l(lSa.lRZ);
   }
 }
 

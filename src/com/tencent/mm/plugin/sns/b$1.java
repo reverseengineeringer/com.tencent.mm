@@ -1,19 +1,19 @@
 package com.tencent.mm.plugin.sns;
 
-import com.tencent.mm.d.a.dr;
-import com.tencent.mm.d.a.dr.a;
+import com.tencent.mm.e.a.dv;
+import com.tencent.mm.e.a.dv.a;
 import com.tencent.mm.model.as.a;
 import com.tencent.mm.pluginsdk.i.o.e.a;
 
 final class b$1
   implements i.o.e.a
 {
-  b$1(b paramb, dr paramdr) {}
+  b$1(b paramb, dv paramdv) {}
   
   public final void a(boolean paramBoolean1, boolean paramBoolean2, String paramString, boolean paramBoolean3)
   {
-    if (gEN.axv != null) {
-      gEN.axv.axz.a(null);
+    if (gLo.aju != null) {
+      gLo.aju.ajy.a(null);
     }
   }
   

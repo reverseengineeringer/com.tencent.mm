@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kMJ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2;
+.field final synthetic llY:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 72
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2$2;->kMJ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2$2;->llY:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

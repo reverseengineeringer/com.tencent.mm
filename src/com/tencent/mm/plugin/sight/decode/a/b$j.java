@@ -11,11 +11,11 @@ final class b$j
   
   public final void run()
   {
-    if ((b.e(gxL) < 0) || (b.k(gxL) == null) || (b.k(gxL).get() == null)) {
+    if ((b.e(gEj) < 0) || (b.k(gEj) == null) || (b.k(gEj).get() == null)) {
       return;
     }
-    String str = SightVideoJNI.getVideoInfo(b.e(gxL));
-    ((TextView)b.k(gxL).get()).setText(str);
+    String str = SightVideoJNI.getVideoInfo(b.e(gEj));
+    ((TextView)b.k(gEj).get()).setText(str);
   }
 }
 

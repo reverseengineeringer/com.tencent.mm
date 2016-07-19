@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hdQ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
+.field final synthetic hsD:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 145
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$2;->hdQ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$2;->hsD:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 152
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$2;->hdQ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$2;->hsD:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;)I
 
@@ -50,11 +50,11 @@
     if-nez v0, :cond_0
 
     .line 153
-    invoke-static {}, Lcom/tencent/mm/g/b;->pt()I
+    invoke-static {}, Lcom/tencent/mm/h/b;->nL()I
 
     .line 154
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$2;->hdQ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$2;->hsD:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;)I
 
@@ -69,7 +69,7 @@
 
     .line 160
     :goto_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$2;->hdQ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$2;->hsD:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->b(Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;)Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
@@ -79,13 +79,13 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/tools/a/c;->rZ(I)Lcom/tencent/mm/ui/tools/a/c;
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/tools/a/c;->ud(I)Lcom/tencent/mm/ui/tools/a/c;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/ui/tools/a/c;->lzG:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/tools/a/c;->mav:Z
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$2$1;
 
@@ -100,7 +100,7 @@
 
     .line 157
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/g/b;->ps()I
+    invoke-static {}, Lcom/tencent/mm/h/b;->nK()I
 
     move-result v0
 

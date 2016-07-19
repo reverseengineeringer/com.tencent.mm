@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.g.b;
+import com.tencent.mm.h.b;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.tools.a.c;
 import com.tencent.mm.ui.tools.a.c.a;
@@ -15,21 +15,21 @@ final class SnsCommentFooter$6
   
   public final void onClick(View paramView)
   {
-    paramView = c.a(SnsCommentFooter.a(hdG)).rZ(b.pt());
-    lzG = true;
+    paramView = c.a(SnsCommentFooter.a(hst)).ud(b.nL());
+    mav = true;
     paramView.a(new c.a()
     {
-      public final void Om() {}
+      public final void Px() {}
       
-      public final void On()
+      public final void Py()
       {
-        g.e(SnsCommentFooter.d(hdG), 2131433035, 2131433034);
+        g.f(SnsCommentFooter.d(hst), 2131235601, 2131235602);
       }
       
-      public final void mm(String paramAnonymousString)
+      public final void ng(String paramAnonymousString)
       {
-        hdI.vM(SnsCommentFooter.a(hdG).getText().toString());
-        SnsCommentFooter.a(hdG).setText("");
+        hsv.wZ(SnsCommentFooter.a(hst).getText().toString());
+        SnsCommentFooter.a(hst).setText("");
       }
     });
   }

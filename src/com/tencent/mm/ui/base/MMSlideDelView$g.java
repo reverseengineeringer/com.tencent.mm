@@ -1,10 +1,10 @@
 package com.tencent.mm.ui.base;
 
-import android.view.View;
-
-public abstract interface MMSlideDelView$g
+class MMSlideDelView$g
 {
-  public abstract void j(View paramView, int paramInt);
+  int dsi;
+  
+  private MMSlideDelView$g(MMSlideDelView paramMMSlideDelView) {}
 }
 
 /* Location:

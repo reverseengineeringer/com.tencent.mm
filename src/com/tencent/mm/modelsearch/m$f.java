@@ -5,10 +5,10 @@ import java.util.LinkedList;
 
 public final class m$f
 {
-  j bZF;
-  o bZG;
-  LinkedList bZH = new LinkedList();
-  SparseArray bZI = new SparseArray();
+  j bTo;
+  o bTp;
+  LinkedList<k> bTq = new LinkedList();
+  SparseArray<l> bTr = new SparseArray();
 }
 
 /* Location:

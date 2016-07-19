@@ -3,10 +3,10 @@ package com.tencent.mm.plugin.sns.ui;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.ai;
-import com.tencent.mm.plugin.sns.d.as;
-import com.tencent.mm.plugin.sns.h.k;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.ah;
+import com.tencent.mm.plugin.sns.e.ar;
+import com.tencent.mm.plugin.sns.i.k;
 
 final class SnsCommentDetailUI$8
   implements View.OnClickListener
@@ -15,19 +15,19 @@ final class SnsCommentDetailUI$8
   
   public final void onClick(View paramView)
   {
-    if (hdb.lN(32)) {
+    if (hrO.na(32)) {
       return;
     }
-    ai.lB(hdb.gUC);
-    ai.lz(hdb.gUC);
-    ad.azf().azE();
+    ah.mL(hrO.hhu);
+    ah.mJ(hrO.hhu);
+    ad.aBF().aCf();
     paramView = new Intent();
-    hda.setResult(-1, paramView);
-    if (SnsCommentDetailUI.p(hda)) {
+    hrN.setResult(-1, paramView);
+    if (SnsCommentDetailUI.p(hrN)) {
       paramView.putExtra("sns_gallery_force_finish", true);
     }
-    hda.finish();
-    hda.finish();
+    hrN.finish();
+    hrN.finish();
   }
 }
 

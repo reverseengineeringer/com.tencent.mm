@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # annotations
@@ -74,6 +73,9 @@
 .method public abstract copyBackForwardList()Lcom/tencent/smtt/export/external/interfaces/IX5WebBackForwardList;
 .end method
 
+.method public abstract createPrintDocumentAdapter(Ljava/lang/String;)Ljava/lang/Object;
+.end method
+
 .method public abstract destroy()V
 .end method
 
@@ -113,9 +115,6 @@
 .end method
 
 .method public abstract getFavicon()Landroid/graphics/Bitmap;
-.end method
-
-.method public abstract getGamePlayerWebViewClient()Ljava/lang/Object;
 .end method
 
 .method public abstract getHitTestResult()Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;
@@ -183,6 +182,17 @@
 .end method
 
 .method public abstract loadUrl(Ljava/lang/String;Ljava/util/Map;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 .end method
 
 .method public abstract onPause()V
@@ -252,6 +262,17 @@
 .end method
 
 .method public abstract saveWebArchive(Ljava/lang/String;ZLandroid/webkit/ValueCallback;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Z",
+            "Landroid/webkit/ValueCallback",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 .end method
 
 .method public abstract setBackgroundColor(I)V
@@ -264,9 +285,6 @@
 .end method
 
 .method public abstract setFindListener(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$FindListener;)V
-.end method
-
-.method public abstract setGamePlayerWebViewClient(Ljava/lang/Object;)V
 .end method
 
 .method public abstract setHorizontalScrollbarOverlay(Z)V

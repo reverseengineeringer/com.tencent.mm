@@ -2,11 +2,11 @@ package com.tencent.mm.app.plugin;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.net.URLDecoder;
 
 @URISpanHandlerSet.a
@@ -27,7 +27,7 @@ class URISpanHandlerSet$BindLinkedinUriSpanHandler
   {
     if (paramString.toLowerCase().startsWith("weixin://linkedin/"))
     {
-      u.d("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "linkedin bind url %s", new Object[] { paramString });
+      v.d("MicroMsg.URISpanHandlerSet", "linkedin bind url %s", new Object[] { paramString });
       paraml = new Bundle();
       paramString = paramString.substring(19).split("\\&");
       int j = paramString.length;
@@ -43,18 +43,18 @@ class URISpanHandlerSet$BindLinkedinUriSpanHandler
       }
       paramString = new Intent();
       paramString.putExtra("qrcode_bundle", paraml);
-      c.c(URISpanHandlerSet.a(ang), "accountsync", "com.tencent.mm.ui.bindlinkedin.BindLinkedInUI", paramString);
+      c.c(URISpanHandlerSet.a(ZU), "accountsync", "com.tencent.mm.ui.bindlinkedin.BindLinkedInUI", paramString);
       return true;
     }
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[0];
   }

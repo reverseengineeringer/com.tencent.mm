@@ -1,15 +1,15 @@
 package com.tencent.mm.plugin.sight.encode.ui;
 
 import com.tencent.mm.a.e;
-import com.tencent.mm.an.g;
-import com.tencent.mm.an.j;
-import com.tencent.mm.an.n;
-import com.tencent.mm.an.o;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.aq.k;
+import com.tencent.mm.aq.n;
+import com.tencent.mm.aq.r;
+import com.tencent.mm.aq.s;
+import com.tencent.mm.plugin.report.service.g;
 import com.tencent.mm.plugin.sight.encode.a.b;
 import com.tencent.mm.plugin.sight.encode.a.b.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ChattingSightContainerView$7
   implements Runnable
@@ -18,45 +18,45 @@ final class ChattingSightContainerView$7
   
   public final void run()
   {
-    u.i("!56@/B4Tb64lLpKwUcOR+EdWcqTX9DHwPoekDqTih72bviWMKwaxVrupIQ==", "on stop callback, send to %s, duration %d, fps %.2f", new Object[] { ChattingSightContainerView.a(gBF), Integer.valueOf(ChattingSightContainerView.i(gBF).getDuration()), Float.valueOf(ChattingSightContainerView.i(gBF).aws()) });
-    j.Ea();
-    String str1 = n.jL(ChattingSightContainerView.j(gBF));
-    j.Ea();
-    String str2 = n.jM(ChattingSightContainerView.j(gBF));
-    int i = ChattingSightContainerView.i(gBF).getDuration();
-    j.Ee().a(str1, str2, null, i, null);
-    str1 = ChattingSightContainerView.a(gBF);
-    str2 = ChattingSightContainerView.j(gBF);
-    if (ay.kz(str1))
+    v.i("MicroMsg.ChattingSightContainerView", "on stop callback, send to %s, duration %d, fps %.2f", new Object[] { ChattingSightContainerView.a(gIh), Integer.valueOf(ChattingSightContainerView.i(gIh).getDuration()), Float.valueOf(ChattingSightContainerView.i(gIh).ayR()) });
+    n.Es();
+    String str1 = r.kp(ChattingSightContainerView.j(gIh));
+    n.Es();
+    String str2 = r.kq(ChattingSightContainerView.j(gIh));
+    int i = ChattingSightContainerView.i(gIh).getDuration();
+    n.Ew().a(str1, str2, null, i, null);
+    str1 = ChattingSightContainerView.a(gIh);
+    str2 = ChattingSightContainerView.j(gIh);
+    if (be.kf(str1))
     {
-      u.w("!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw=", "want to mux and send, but talker is null");
+      v.w("MicroMsg.SightRecorderHelper", "want to mux and send, but talker is null");
       i = 0;
     }
     for (;;)
     {
-      ChattingSightContainerView.i(gBF).a(b.b.gzP);
+      ChattingSightContainerView.i(gIh).a(b.b.gGr);
       if (i != 0) {
-        h.fUJ.g(11442, new Object[] { Integer.valueOf(2), Integer.valueOf(1) });
+        g.gdY.h(11442, new Object[] { Integer.valueOf(2), Integer.valueOf(1) });
       }
       return;
-      if (-1L == o.e(str2, i, str1))
+      if (-1L == s.c(str2, i, str1))
       {
-        u.e("!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw=", "prepare sight error");
+        v.e("MicroMsg.SightRecorderHelper", "prepare sight error");
         i = 0;
       }
       else
       {
-        j.Ea();
-        if (e.aw(n.jL(str2)) <= 0)
+        n.Es();
+        if (e.aA(r.kp(str2)) <= 0)
         {
-          u.e("!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw=", "mux sight error: file length 0");
-          o.jQ(str2);
+          v.e("MicroMsg.SightRecorderHelper", "mux sight error: file length 0");
+          s.kw(str2);
           i = 0;
         }
         else
         {
-          o.h(str2, i, 62);
-          if (o.jR(str2) < 0) {
+          s.h(str2, i, 62);
+          if (s.kx(str2) < 0) {
             i = 0;
           } else {
             i = 1;

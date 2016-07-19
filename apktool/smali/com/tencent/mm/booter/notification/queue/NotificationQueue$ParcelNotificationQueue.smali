@@ -16,9 +16,28 @@
     name = "ParcelNotificationQueue"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/util/LinkedList",
+        "<",
+        "Lcom/tencent/mm/booter/notification/NotificationItem;",
+        ">;",
+        "Landroid/os/Parcelable;"
+    }
+.end annotation
+
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/booter/notification/queue/NotificationQueue$ParcelNotificationQueue;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods

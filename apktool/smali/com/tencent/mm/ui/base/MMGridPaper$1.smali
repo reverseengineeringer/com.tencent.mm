@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/base/MMGridPaper;->setGridPaperAdapter(Lcom/tencent/mm/ui/base/j;)V
+    value = Lcom/tencent/mm/ui/base/MMGridPaper;->a(Lcom/tencent/mm/ui/base/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kEx:Lcom/tencent/mm/ui/base/MMGridPaper;
+.field final synthetic ldA:Lcom/tencent/mm/ui/base/MMGridPaper;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 154
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMGridPaper$1;->kEx:Lcom/tencent/mm/ui/base/MMGridPaper;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMGridPaper$1;->ldA:Lcom/tencent/mm/ui/base/MMGridPaper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +36,12 @@
 
 
 # virtual methods
-.method public final bcD()V
+.method public final bhZ()V
     .locals 1
 
     .prologue
     .line 165
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaper$1;->kEx:Lcom/tencent/mm/ui/base/MMGridPaper;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaper$1;->ldA:Lcom/tencent/mm/ui/base/MMGridPaper;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMGridPaper;->refresh()V
 

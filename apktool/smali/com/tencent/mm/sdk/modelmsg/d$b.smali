@@ -34,7 +34,7 @@
     invoke-direct {p0}, Lcom/tencent/mm/sdk/e/b;-><init>()V
 
     .line 116
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/sdk/modelmsg/d$b;->m(Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/sdk/modelmsg/d$b;->o(Landroid/os/Bundle;)V
 
     .line 117
     return-void

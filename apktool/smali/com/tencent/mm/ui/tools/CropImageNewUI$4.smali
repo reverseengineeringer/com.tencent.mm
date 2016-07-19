@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+.field final synthetic lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 721
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$4;->luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+    .line 723
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$4;->lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,34 +44,34 @@
 
     const/4 v4, 0x0
 
-    .line 724
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$4;->luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+    .line 726
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$4;->lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/CropImageNewUI;->j(Lcom/tencent/mm/ui/tools/CropImageNewUI;)Lcom/tencent/mm/ui/tools/CropImageView;
 
     move-result-object v0
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/tools/CropImageView;->efe:Landroid/graphics/Bitmap;
+    iget-object v1, v0, Lcom/tencent/mm/ui/tools/CropImageView;->eiG:Landroid/graphics/Bitmap;
 
     if-nez v1, :cond_0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE"
+    const-string/jumbo v0, "MicroMsg.CropImageView"
 
     const-string/jumbo v1, "rotate not done! cause: btmp is null!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 725
+    .line 727
     :goto_0
     return-void
 
-    .line 724
+    .line 726
     :cond_0
     const/4 v1, 0x2
 
     new-array v1, v1, [F
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/tools/CropImageView;->efe:Landroid/graphics/Bitmap;
+    iget-object v2, v0, Lcom/tencent/mm/ui/tools/CropImageView;->eiG:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -83,7 +83,7 @@
 
     aput v2, v1, v4
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/tools/CropImageView;->efe:Landroid/graphics/Bitmap;
+    iget-object v2, v0, Lcom/tencent/mm/ui/tools/CropImageView;->eiG:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -113,17 +113,17 @@
 
     invoke-virtual {v2, v3, v4, v1}, Landroid/graphics/Matrix;->postRotate(FFF)Z
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/tools/CropImageView;->efe:Landroid/graphics/Bitmap;
+    iget-object v1, v0, Lcom/tencent/mm/ui/tools/CropImageView;->eiG:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/CropImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/CropImageView;->invalidate()V
 
-    iget v1, v0, Lcom/tencent/mm/ui/tools/CropImageView;->aAX:I
+    iget v1, v0, Lcom/tencent/mm/ui/tools/CropImageView;->ann:I
 
     add-int/lit8 v1, v1, 0x1
 
-    iput v1, v0, Lcom/tencent/mm/ui/tools/CropImageView;->aAX:I
+    iput v1, v0, Lcom/tencent/mm/ui/tools/CropImageView;->ann:I
 
     goto :goto_0
 .end method

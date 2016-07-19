@@ -20,6 +20,8 @@ public class KVReportJni$KVReportJava2C
   
   public static native void reportListIDKey(KVReportJni.IDKeyDataInfo[] paramArrayOfIDKeyDataInfo, boolean paramBoolean);
   
+  public static native void setDebugFlag(boolean paramBoolean);
+  
   public static native void setUin(long paramLong);
   
   public static native void writeImportKvData(long paramLong, String paramString, boolean paramBoolean);

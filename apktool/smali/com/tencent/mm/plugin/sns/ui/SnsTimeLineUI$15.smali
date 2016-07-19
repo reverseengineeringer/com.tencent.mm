@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/tencent/mm/kiss/app/Interactor$b;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->Gb()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,9 +16,19 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/tencent/mm/kiss/app/Interactor$b",
+        "<",
+        "Lcom/tencent/mm/plugin/sns/vending/a$b;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+.field final synthetic hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
 
 # direct methods
@@ -26,8 +36,8 @@
     .locals 0
 
     .prologue
-    .line 1669
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    .line 877
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,111 +46,462 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final synthetic ah(Ljava/lang/Object;)V
+    .locals 11
 
     .prologue
-    const v3, 0x10b24
+    const v1, 0x7f101033
 
-    .line 1672
-    new-instance v0, Landroid/content/Intent;
+    const/16 v4, 0x8
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    const/4 v6, 0x1
 
-    .line 1673
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    const/4 v3, 0x0
 
-    const-class v2, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+    .line 877
+    check-cast p1, Lcom/tencent/mm/plugin/sns/vending/a$b;
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+    iget v0, p1, Lcom/tencent/mm/plugin/sns/vending/a$b;->hGd:I
 
-    .line 1674
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayZ()Lcom/tencent/mm/plugin/sns/d/al$a;
+    if-lez v0, :cond_0
 
-    move-result-object v1
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    invoke-static {v0, p1}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;Lcom/tencent/mm/plugin/sns/vending/a$b;)V
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->eNy:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/plugin/sns/d/al$a;->e(Landroid/content/Intent;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->t(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Landroid/widget/LinearLayout;
 
-    move-result-object v1
+    move-result-object v0
 
-    .line 1675
-    if-nez v1, :cond_1
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
-    .line 1676
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->finish()V
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1688
-    :cond_0
     :goto_0
-    return-void
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    .line 1678
-    :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->j(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/av;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    if-eqz v0, :cond_b
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->j(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/av;
 
     move-result-object v0
 
-    const/4 v2, 0x0
+    iget-object v7, v0, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
 
-    invoke-virtual {v0, v3, v2}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->hsZ:Landroid/widget/LinearLayout;
 
-    check-cast v0, Ljava/lang/Integer;
+    if-eqz v0, :cond_a
 
-    const/4 v2, 0x0
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ah;->aBX()Ljava/util/List;
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Integer;I)I
+    move-result-object v8
 
-    move-result v0
+    const-string/jumbo v0, ""
 
-    .line 1681
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    move v1, v3
+
+    :goto_1
+    invoke-interface {v8}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
-
-    move-result-object v2
-
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v8, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v2, v3, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+    check-cast v0, Lcom/tencent/mm/plugin/sns/i/k;
 
-    .line 1683
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->startActivity(Landroid/content/Intent;)V
+    move-result-object v0
 
-    .line 1684
-    invoke-virtual {v1}, Landroid/content/Intent;->getFlags()I
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    move-result-object v0
 
-    const/high16 v1, 0x4000000
+    const-string/jumbo v2, " "
 
-    and-int/2addr v0, v1
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    .line 1685
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->finish()V
+    move-result-object v2
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    move-object v0, v2
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->t(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
+
+    :cond_1
+    const-string/jumbo v1, "MicroMsg.SnsHeader"
+
+    const-string/jumbo v2, "refreshError %s %s %s"
+
+    const/4 v5, 0x3
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    invoke-interface {v8}, Ljava/util/List;->size()I
+
+    move-result v9
+
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    aput-object v9, v5, v3
+
+    aput-object v0, v5, v6
+
+    const/4 v9, 0x2
+
+    iget-object v10, v7, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsR:Ljava/lang/String;
+
+    aput-object v10, v5, v9
+
+    invoke-static {v1, v2, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v1, v7, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsR:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    invoke-interface {v8}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_4
+
+    move v0, v6
+
+    :goto_2
+    if-eqz v0, :cond_b
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->t(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    :cond_2
+    :goto_3
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/ar;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->u(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/TestTimeForSns;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/TestTimeForSns;->hasDrawed()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/ar;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/ar;->mVending:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineVending;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineVending;->notifyVendingDataChange()V
+
+    const-string/jumbo v0, "MicroMsg.SnsTimeLineUI"
+
+    const-string/jumbo v1, "has not show view, pass"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3
+    return-void
+
+    :cond_4
+    move v0, v3
+
+    goto :goto_2
+
+    :cond_5
+    iput-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsR:Ljava/lang/String;
+
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->hsZ:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
+
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
+
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->hsZ:Landroid/widget/LinearLayout;
+
+    invoke-interface {v8}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_6
+
+    move v0, v3
+
+    :goto_4
+    invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$c;
+
+    invoke-direct {v0, v7}, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$c;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsHeader;)V
+
+    invoke-static {v8, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    move v5, v3
+
+    :goto_5
+    invoke-interface {v8}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v5, v0, :cond_9
+
+    invoke-interface {v8, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/plugin/sns/i/k;
+
+    iget v1, v0, Lcom/tencent/mm/plugin/sns/i/k;->hhu:I
+
+    invoke-interface {v8}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsQ:Ljava/util/Map;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    invoke-interface {v0, v9}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsQ:Ljava/util/Map;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    invoke-interface {v0, v9}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_7
+
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsQ:Ljava/util/Map;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    :goto_6
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    invoke-interface {v8, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/tencent/mm/plugin/sns/i/k;
+
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    invoke-interface {v8, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/tencent/mm/plugin/sns/i/k;
+
+    const v2, 0x7f1008fb
+
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    iget v1, v1, Lcom/tencent/mm/plugin/sns/i/k;->field_type:I
+
+    const/16 v9, 0xf
+
+    if-ne v1, v9, :cond_8
+
+    const v1, 0x7f0812c7
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(I)V
+
+    :goto_7
+    iget-object v1, v7, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
+
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->hsZ:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    add-int/lit8 v0, v5, 0x1
+
+    move v5, v0
+
+    goto :goto_5
+
+    :cond_6
+    move v0, v4
+
+    goto :goto_4
+
+    :cond_7
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->context:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/p;->ef(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const v9, 0x7f0302cf
+
+    const/4 v10, 0x0
+
+    invoke-virtual {v0, v9, v10}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v9
+
+    new-instance v10, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;
+
+    invoke-direct {v10, v7, v2, v5}, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsHeader;II)V
+
+    invoke-virtual {v9, v10}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v2, v7, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsQ:Ljava/util/Map;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_6
+
+    :cond_8
+    const v1, 0x7f0812c2
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
+
+    goto :goto_7
+
+    :cond_9
+    invoke-interface {v8}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_a
+
+    move v0, v6
+
+    goto/16 :goto_2
+
+    :cond_a
+    move v0, v3
+
+    goto/16 :goto_2
+
+    :cond_b
+    iget v0, p1, Lcom/tencent/mm/plugin/sns/vending/a$b;->hGd:I
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$15;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->t(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    goto/16 :goto_3
 .end method

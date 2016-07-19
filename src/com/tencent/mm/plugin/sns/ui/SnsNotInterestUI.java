@@ -14,17 +14,17 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.tencent.kingkong.support.Log;
-import com.tencent.mm.d.a.en;
+import com.tencent.mm.e.a.er;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.h.l;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.plugin.sns.i.l;
 import com.tencent.mm.sdk.c.a;
 import com.tencent.mm.storage.q;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.preference.MMPreference;
 import com.tencent.mm.ui.base.preference.Preference;
 import com.tencent.mm.ui.base.preference.PreferenceTitleCategory;
@@ -38,39 +38,39 @@ public class SnsNotInterestUI
   extends MMPreference
   implements d
 {
-  private static final String[] hgr = { "sns_expose_reason_not_fav", "sns_expose_reason_too_freq", "sns_expose_reason_too_many_same_content", "sns_expose_reason_marketing", "sns_expose_reason_content_sexy", "sns_expose_reason_rumour", "sns_expose_reason_other" };
-  private static final int[] hgs = { 1, 2, 4, 8, 16, 32, 64 };
-  private static final int[] hgw = { 2131433212, 2131433213, 2131433215, 2131433216, 2131433217, 2131433218, 2131433219 };
-  private f cMA;
-  private com.tencent.mm.ui.base.p cOt = null;
-  private String fBB = null;
-  private LinearLayout hgA;
-  private int hgB;
-  private int hgC;
-  private long hgD;
-  private boolean hgE = false;
-  private boolean hgF = false;
-  com.tencent.mm.plugin.sns.d.p hgG = null;
-  private HashMap hgt = new HashMap(hgr.length);
-  private HashMap hgu = new HashMap(hgs.length);
-  private HashMap hgv = new HashMap(hgs.length);
-  private TextView hgx;
-  private EditText hgy;
-  private ListView hgz;
+  private static final String[] hvh = { "sns_expose_reason_not_fav", "sns_expose_reason_too_freq", "sns_expose_reason_too_many_same_content", "sns_expose_reason_marketing", "sns_expose_reason_content_sexy", "sns_expose_reason_rumour", "sns_expose_reason_other" };
+  private static final int[] hvi = { 1, 2, 4, 8, 16, 32, 64 };
+  private static final int[] hvm = { 2131235417, 2131235422, 2131235423, 2131235416, 2131235415, 2131235420, 2131235418 };
+  private f cJw;
+  private com.tencent.mm.ui.base.p cLs = null;
+  private String fKF = null;
+  private HashMap<String, Boolean> hvj = new HashMap(hvh.length);
+  private HashMap<Integer, Boolean> hvk = new HashMap(hvi.length);
+  private HashMap<String, Integer> hvl = new HashMap(hvi.length);
+  private TextView hvn;
+  private EditText hvo;
+  private ListView hvp;
+  private LinearLayout hvq;
+  private int hvr;
+  private int hvs;
+  private long hvt;
+  private boolean hvu = false;
+  private boolean hvv = false;
+  com.tencent.mm.plugin.sns.e.p hvw = null;
   
-  private void aCh()
+  private void aFh()
   {
     int k = 0;
-    Object localObject1 = hgr;
+    Object localObject1 = hvh;
     int j = localObject1.length;
     int i = 0;
     while (i < j)
     {
       Object localObject2 = localObject1[i];
-      hgt.put(localObject2, Boolean.valueOf(false));
+      hvj.put(localObject2, Boolean.valueOf(false));
       i += 1;
     }
-    localObject1 = hgs;
+    localObject1 = hvi;
     int m = localObject1.length;
     i = 0;
     for (;;)
@@ -80,20 +80,25 @@ public class SnsNotInterestUI
         break;
       }
       j = localObject1[i];
-      hgu.put(Integer.valueOf(j), Boolean.valueOf(false));
+      hvk.put(Integer.valueOf(j), Boolean.valueOf(false));
       i += 1;
     }
-    while (j < hgs.length)
+    while (j < hvi.length)
     {
-      hgv.put(hgr[j], Integer.valueOf(hgs[j]));
+      hvl.put(hvh[j], Integer.valueOf(hvi[j]));
       j += 1;
     }
   }
   
-  protected final void Gb()
+  public final int GK()
   {
-    super.Gb();
-    qb(2131433210);
+    return -1;
+  }
+  
+  protected final void Gy()
+  {
+    super.Gy();
+    rR(2131235426);
     b(new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
@@ -102,89 +107,61 @@ public class SnsNotInterestUI
         return true;
       }
     });
-    hgx = ((TextView)findViewById(2131168787));
-    hgy = ((EditText)findViewById(2131168788));
-    hgz = ((ListView)findViewById(16908298));
-    hgA = ((LinearLayout)findViewById(2131168786));
-    hgA.setOnClickListener(new View.OnClickListener()
+    hvn = ((TextView)findViewById(2131759127));
+    hvo = ((EditText)findViewById(2131759128));
+    hvp = ((ListView)findViewById(16908298));
+    hvq = ((LinearLayout)findViewById(2131759126));
+    hvq.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
         SnsNotInterestUI.a(SnsNotInterestUI.this).requestFocus();
-        age();
+        aiI();
       }
     });
-    hgy.setVisibility(8);
-    hgx.setVisibility(8);
-    cMA = kLL;
-    if (cMA == null) {
-      Log.e("!44@/B4Tb64lLpKPysbTDt0jz3tGyI328ChJpWI2LUidORs=", "initPref error, PreferenceScreen is null!");
+    hvo.setVisibility(8);
+    hvn.setVisibility(8);
+    cJw = lla;
+    if (cJw == null) {
+      Log.e("MicroMsg.SnsNotInterestUI", "initPref error, PreferenceScreen is null!");
     }
     for (;;)
     {
-      a(0, getString(2131428577), new MenuItem.OnMenuItemClickListener()
+      a(0, getString(2131231358), new MenuItem.OnMenuItemClickListener()
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
         {
           SnsNotInterestUI.b(SnsNotInterestUI.this);
           return true;
         }
-      }, j.b.kpJ);
+      }, j.b.kOO);
       M(0, false);
       return;
       Object localObject;
-      if (cMA.GB("sns_expose_desc") == null)
+      if (cJw.IR("sns_expose_desc") == null)
       {
         localObject = new PreferenceTitleCategory(this);
-        ((Preference)localObject).setTitle(2131433211);
+        ((Preference)localObject).setTitle(2131235413);
         ((Preference)localObject).setKey("sns_expose_desc");
-        cMA.a((Preference)localObject);
+        cJw.a((Preference)localObject);
       }
       int i = 0;
-      while (i < hgr.length)
+      while (i < hvh.length)
       {
-        localObject = hgr[i];
-        int j = hgw[i];
-        if (cMA.GB((String)localObject) == null)
+        localObject = hvh[i];
+        int j = hvm[i];
+        if (cJw.IR((String)localObject) == null)
         {
           Preference localPreference = new Preference(this);
           localPreference.setTitle(j);
           localPreference.setKey((String)localObject);
-          localPreference.setLayoutResource(2131363286);
-          localPreference.setWidgetLayoutResource(2131363293);
-          cMA.a(localPreference);
+          localPreference.setLayoutResource(2130903981);
+          localPreference.setWidgetLayoutResource(2130903989);
+          cJw.a(localPreference);
         }
         i += 1;
       }
     }
-  }
-  
-  public final int Gn()
-  {
-    return -1;
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
-  {
-    Log.d("!44@/B4Tb64lLpKPysbTDt0jz3tGyI328ChJpWI2LUidORs=", "onSceneEnd, errType:%d, errCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-    if (paramj.getType() == 218)
-    {
-      cOt.dismiss();
-      cOt = null;
-      if (type == 9)
-      {
-        if ((paramInt1 != 0) || (paramInt2 != 0)) {
-          break label91;
-        }
-        hgE = true;
-        Toast.makeText(this, 2131433221, 1).show();
-        finish();
-      }
-    }
-    return;
-    label91:
-    hgE = false;
-    Toast.makeText(this, 2131433222, 1).show();
   }
   
   public final boolean a(f paramf, Preference paramPreference)
@@ -194,24 +171,24 @@ public class SnsNotInterestUI
     do
     {
       return false;
-      str = cln;
-    } while (!hgt.containsKey(str));
-    boolean bool = ((Boolean)hgt.get(str)).booleanValue();
+      str = cgq;
+    } while (!hvj.containsKey(str));
+    boolean bool = ((Boolean)hvj.get(str)).booleanValue();
     label67:
     int i;
     if (bool)
     {
-      paramPreference.setWidgetLayoutResource(2131363293);
+      paramPreference.setWidgetLayoutResource(2130903989);
       paramf.notifyDataSetChanged();
       if (bool) {
         break label256;
       }
       bool = true;
-      hgt.put(str, Boolean.valueOf(bool));
-      i = ((Integer)hgv.get(str)).intValue();
-      hgu.put(Integer.valueOf(i), Boolean.valueOf(bool));
-      Log.d("!44@/B4Tb64lLpKPysbTDt0jz3tGyI328ChJpWI2LUidORs=", "click: %s, notInterestType: %d, isCheck: %b", new Object[] { str, Integer.valueOf(i), Boolean.valueOf(bool) });
-      paramf = hgt.values().iterator();
+      hvj.put(str, Boolean.valueOf(bool));
+      i = ((Integer)hvl.get(str)).intValue();
+      hvk.put(Integer.valueOf(i), Boolean.valueOf(bool));
+      Log.d("MicroMsg.SnsNotInterestUI", "click: %s, notInterestType: %d, isCheck: %b", new Object[] { str, Integer.valueOf(i), Boolean.valueOf(bool) });
+      paramf = hvj.values().iterator();
       while (paramf.hasNext()) {
         if (((Boolean)paramf.next()).booleanValue())
         {
@@ -225,18 +202,18 @@ public class SnsNotInterestUI
           if ((!bool) || (!str.equals("sns_expose_reason_other"))) {
             break label276;
           }
-          hgy.setVisibility(0);
-          hgx.setVisibility(0);
-          hgy.requestFocus();
-          hgF = true;
-          apz();
+          hvo.setVisibility(0);
+          hvn.setVisibility(0);
+          hvo.requestFocus();
+          hvv = true;
+          asv();
         }
       }
     }
     for (;;)
     {
       return true;
-      paramPreference.setWidgetLayoutResource(2131363259);
+      paramPreference.setWidgetLayoutResource(2130903988);
       break;
       label256:
       bool = false;
@@ -247,53 +224,53 @@ public class SnsNotInterestUI
       M(0, false);
       break label196;
       label276:
-      if (!((Boolean)hgt.get("sns_expose_reason_other")).booleanValue())
+      if (!((Boolean)hvj.get("sns_expose_reason_other")).booleanValue())
       {
-        hgy.setVisibility(8);
-        hgx.setVisibility(8);
-        hgz.requestFocus();
-        hgF = false;
-        age();
+        hvo.setVisibility(8);
+        hvn.setVisibility(8);
+        hvp.requestFocus();
+        hvv = false;
+        aiI();
       }
       else
       {
-        hgz.requestFocus();
-        age();
+        hvp.requestFocus();
+        aiI();
       }
     }
   }
   
   protected final int getLayoutId()
   {
-    return 2131362927;
+    return 2130904429;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    hgB = getIntent().getIntExtra("sns_info_not_interest_scene", 0);
-    hgD = getIntent().getLongExtra("sns_info_svr_id", 0L);
-    if (hgD != 0L)
+    hvr = getIntent().getIntExtra("sns_info_not_interest_scene", 0);
+    hvt = getIntent().getLongExtra("sns_info_svr_id", 0L);
+    if (hvt != 0L)
     {
-      paramBundle = azicxhgD).field_userName;
+      paramBundle = aBIcMhvt).field_userName;
       if (paramBundle != null)
       {
-        paramBundle = ah.tD().rq().Eo(paramBundle);
-        if (aSu != 2) {
+        paramBundle = ah.tE().rr().GC(paramBundle);
+        if (aFd != 2) {
           break label108;
         }
-        hgw[1] = 2131433214;
+        hvm[1] = 2131235421;
       }
     }
     for (;;)
     {
-      ah.tE().a(218, this);
-      aCh();
-      Gb();
+      ah.tF().a(218, this);
+      aFh();
+      Gy();
       return;
       label108:
-      if (aSu == 1) {
-        hgw[1] = 2131433213;
+      if (aFd == 1) {
+        hvm[1] = 2131235422;
       }
     }
   }
@@ -301,12 +278,35 @@ public class SnsNotInterestUI
   protected void onDestroy()
   {
     super.onDestroy();
-    aCh();
-    ah.tE().b(218, this);
-    en localen = new en();
-    azj.azk = hgE;
-    azj.azl = hgD;
-    a.jUF.j(localen);
+    aFh();
+    ah.tF().b(218, this);
+    er localer = new er();
+    all.alm = hvu;
+    all.aln = hvt;
+    a.kug.y(localer);
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    Log.d("MicroMsg.SnsNotInterestUI", "onSceneEnd, errType:%d, errCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    if (paramj.getType() == 218)
+    {
+      cLs.dismiss();
+      cLs = null;
+      if (type == 9)
+      {
+        if ((paramInt1 != 0) || (paramInt2 != 0)) {
+          break label91;
+        }
+        hvu = true;
+        Toast.makeText(this, 2131235425, 1).show();
+        finish();
+      }
+    }
+    return;
+    label91:
+    hvu = false;
+    Toast.makeText(this, 2131235414, 1).show();
   }
 }
 

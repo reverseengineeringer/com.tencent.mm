@@ -7,14 +7,14 @@ final class MobileFriendUI$15
 {
   MobileFriendUI$15(MobileFriendUI paramMobileFriendUI) {}
   
-  public final void qm(int paramInt)
+  public final void se(int paramInt)
   {
     if (paramInt > 0)
     {
-      MobileFriendUI.g(kPt).setVisibility(8);
+      MobileFriendUI.g(loJ).setVisibility(8);
       return;
     }
-    MobileFriendUI.g(kPt).setVisibility(0);
+    MobileFriendUI.g(loJ).setVisibility(0);
   }
 }
 

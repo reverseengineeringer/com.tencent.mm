@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gYa:Lcom/tencent/mm/plugin/sns/ui/FlipView;
+.field final synthetic hlm:Lcom/tencent/mm/plugin/sns/ui/FlipView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 185
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$1;->gYa:Lcom/tencent/mm/plugin/sns/ui/FlipView;
+    .line 203
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$1;->hlm:Lcom/tencent/mm/plugin/sns/ui/FlipView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,6 +40,6 @@
     .locals 0
 
     .prologue
-    .line 189
+    .line 207
     return-void
 .end method

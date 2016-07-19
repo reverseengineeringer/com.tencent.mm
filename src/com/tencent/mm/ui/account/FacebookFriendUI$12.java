@@ -11,7 +11,7 @@ final class FacebookFriendUI$12
   
   public final void onClick(View paramView)
   {
-    ksr.startActivity(new Intent(ksr, FacebookAuthUI.class));
+    kRz.startActivity(new Intent(kRz, FacebookAuthUI.class));
   }
 }
 

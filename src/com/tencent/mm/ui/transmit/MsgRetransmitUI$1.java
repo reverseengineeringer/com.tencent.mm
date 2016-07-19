@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.transmit;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MsgRetransmitUI$1
   implements Runnable
@@ -9,8 +9,8 @@ final class MsgRetransmitUI$1
   
   public final void run()
   {
-    u.i("!44@/B4Tb64lLpLWl/1sKbbnJDN+/k3QDAC+0iKsGdZGh9U=", "test before sendMutiImage");
-    MsgRetransmitUI.a(lAT, bDO);
+    v.i("MicroMsg.MsgRetransmitUI", "test before sendMutiImage");
+    MsgRetransmitUI.a(mbK, bwZ);
   }
 }
 

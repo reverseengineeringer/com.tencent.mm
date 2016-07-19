@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="right" android:layout_gravity="right" style="@style/ChattingUIContent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/ak9" android:layout_width="200.0dip" android:layout_height="150.0dip">
+        <FrameLayout android:gravity="bottom" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:gravity="bottom" android:id="@id/a23" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+            <ImageView android:id="@id/a16" android:background="@drawable/cl" android:visibility="gone" android:layout_width="200.0dip" android:layout_height="150.0dip" />
+            <ImageView android:layout_gravity="center" android:id="@id/a24" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginBottom="@dimen/h4" android:src="@drawable/ann" android:scaleType="fitCenter" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/a25" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/a22" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+            <LinearLayout android:layout_gravity="center|top" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="53.0dip" android:weightSum="1.0">
+                <LinearLayout android:layout_gravity="center|top" android:orientation="vertical" android:id="@id/a1z" android:background="@drawable/ano" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="180.0dip" android:layout_height="40.0dip" android:layout_marginTop="5.0dip">
+                    <TextView android:textSize="10.0dip" android:textStyle="bold" android:textColor="@color/j_" android:ellipsize="end" android:gravity="center|left" android:layout_gravity="bottom|center" android:id="@id/a20" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="169.0dip" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="3.0dip" android:minWidth="195.0dip" />
+                    <TextView android:textSize="8.0dip" android:textColor="@color/gn" android:ellipsize="end" android:gravity="left" android:layout_gravity="bottom|center" android:id="@id/a21" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="169.0dip" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:layout_marginBottom="7.0dip" android:minWidth="195.0dip" android:maxLines="1" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

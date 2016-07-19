@@ -8,6 +8,15 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/booter/notification/NotificationItem;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
@@ -15,21 +24,21 @@
 
 .field private b:Landroid/graphics/Bitmap;
 
-.field bnT:Landroid/app/PendingIntent;
+.field bbR:Landroid/app/PendingIntent;
 
-.field public bnU:Ljava/lang/String;
+.field public bbS:Ljava/lang/String;
 
-.field public bnV:J
+.field public bbT:J
 
-.field public bnW:I
+.field public bbU:I
 
-.field public bnX:Z
+.field public bbV:Z
 
-.field public bnY:I
+.field public bbW:I
 
-.field public bnZ:I
+.field public bbX:I
 
-.field dg:Landroid/app/Notification;
+.field dw:Landroid/app/Notification;
 
 .field public id:I
 
@@ -88,7 +97,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 30
-    const-string/jumbo v0, "!44@/B4Tb64lLpKR3MWtFvfaIEWJqs/cZ9a9PkO83sP22Qk="
+    const-string/jumbo v0, "MicroMsg.NotificationItem"
 
     iput-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->TAG:Ljava/lang/String;
 
@@ -100,27 +109,27 @@
     .line 38
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnV:J
+    iput-wide v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbT:J
 
     .line 39
-    iput v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnW:I
+    iput v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbU:I
 
     .line 43
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnX:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbV:Z
 
     .line 48
-    iput v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnY:I
+    iput v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbW:I
 
     .line 69
-    iput v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnZ:I
+    iput v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbX:I
 
     .line 101
     iput p1, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->id:I
 
     .line 102
-    iput-object p2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnU:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbS:Ljava/lang/String;
 
     .line 103
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -136,13 +145,13 @@
 
     .line 106
     :cond_0
-    iput-object p3, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iput-object p3, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     .line 107
-    iput-boolean p4, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnX:Z
+    iput-boolean p4, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbV:Z
 
     .line 108
-    iput v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnY:I
+    iput v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbW:I
 
     .line 109
     return-void
@@ -162,7 +171,7 @@
 .end method
 
 .method private constructor <init>(Landroid/os/Parcel;)V
-    .locals 5
+    .locals 6
 
     .prologue
     const/4 v1, 0x1
@@ -173,7 +182,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 30
-    const-string/jumbo v0, "!44@/B4Tb64lLpKR3MWtFvfaIEWJqs/cZ9a9PkO83sP22Qk="
+    const-string/jumbo v0, "MicroMsg.NotificationItem"
 
     iput-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->TAG:Ljava/lang/String;
 
@@ -183,21 +192,21 @@
     iput v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->id:I
 
     .line 38
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    iput-wide v3, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnV:J
+    iput-wide v4, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbT:J
 
     .line 39
-    iput v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnW:I
+    iput v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbU:I
 
     .line 43
-    iput-boolean v1, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnX:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbV:Z
 
     .line 48
-    iput v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnY:I
+    iput v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbW:I
 
     .line 69
-    iput v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnZ:I
+    iput v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbX:I
 
     .line 297
     if-nez p1, :cond_0
@@ -219,7 +228,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnU:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbS:Ljava/lang/String;
 
     .line 302
     const-class v0, Landroid/graphics/Bitmap;
@@ -249,7 +258,7 @@
 
     check-cast v0, Landroid/app/Notification;
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     .line 304
     const-class v0, Landroid/app/PendingIntent;
@@ -264,7 +273,7 @@
 
     check-cast v0, Landroid/app/PendingIntent;
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnT:Landroid/app/PendingIntent;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbR:Landroid/app/PendingIntent;
 
     .line 305
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
@@ -276,21 +285,21 @@
     move v0, v1
 
     :goto_1
-    iput-boolean v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnX:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbV:Z
 
     .line 306
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnV:J
+    iput-wide v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbT:J
 
     .line 307
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnW:I
+    iput v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbU:I
 
     goto :goto_0
 
@@ -335,13 +344,13 @@
 
     if-ne v0, v2, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->nw()Lcom/tencent/mm/booter/notification/queue/b;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->lK()Lcom/tencent/mm/booter/notification/queue/b;
 
     move-result-object v0
 
-    iget-boolean v5, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnX:Z
+    iget-boolean v5, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbV:Z
 
-    invoke-virtual {v0, v5}, Lcom/tencent/mm/booter/notification/queue/b;->at(Z)I
+    invoke-virtual {v0, v5}, Lcom/tencent/mm/booter/notification/queue/b;->W(Z)I
 
     move-result v0
 
@@ -349,7 +358,7 @@
     iput v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->id:I
 
     .line 126
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
@@ -357,11 +366,11 @@
     if-nez v5, :cond_1
 
     .line 129
-    const-string/jumbo v0, "!44@/B4Tb64lLpKR3MWtFvfaIEWJqs/cZ9a9PkO83sP22Qk="
+    const-string/jumbo v0, "MicroMsg.NotificationItem"
 
     const-string/jumbo v1, "error, show notification but MMApplicationContext.getContext() == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -382,16 +391,16 @@
 
     .line 133
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     if-nez v0, :cond_2
 
     .line 134
-    const-string/jumbo v0, "!44@/B4Tb64lLpKR3MWtFvfaIEWJqs/cZ9a9PkO83sP22Qk="
+    const-string/jumbo v0, "MicroMsg.NotificationItem"
 
     const-string/jumbo v1, "error, show notification but mNotification == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v2
 
@@ -400,13 +409,13 @@
 
     .line 138
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->nw()Lcom/tencent/mm/booter/notification/queue/b;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->lK()Lcom/tencent/mm/booter/notification/queue/b;
 
     move-result-object v0
 
-    iget-object v6, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnU:Ljava/lang/String;
+    iget-object v6, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbS:Ljava/lang/String;
 
-    invoke-static {v6}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    invoke-static {v6}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v7
 
@@ -419,13 +428,13 @@
     if-eqz v0, :cond_3
 
     .line 143
-    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->nw()Lcom/tencent/mm/booter/notification/queue/b;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->lK()Lcom/tencent/mm/booter/notification/queue/b;
 
     move-result-object v6
 
     iget v7, v0, Lcom/tencent/mm/booter/notification/NotificationItem;->id:I
 
-    const-string/jumbo v8, "!44@/B4Tb64lLpKR3MWtFvfaIPwtPgb87rUCyQv3l0JxiQQ="
+    const-string/jumbo v8, "MicroMsg.Notification.Queue"
 
     const-string/jumbo v9, "mark: %d"
 
@@ -441,7 +450,7 @@
 
     aput-object v12, v10, v11
 
-    invoke-static {v8, v9, v10}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v8, v9, v10}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     iput v7, v6, Lcom/tencent/mm/booter/notification/queue/b;->mark:I
 
@@ -449,23 +458,23 @@
     :cond_3
     if-eqz v0, :cond_4
 
-    iget-object v6, v0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v6, v0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     iget-object v6, v6, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
     if-eqz v6, :cond_4
 
-    iget-object v6, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v6, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     iget-object v6, v6, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
     if-eqz v6, :cond_4
 
-    iget-object v0, v0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v0, v0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     iget-object v0, v0, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
-    iget-object v6, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v6, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     iget-object v6, v6, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
@@ -476,13 +485,13 @@
     if-eqz v0, :cond_4
 
     .line 157
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v7, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v7, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     iget-object v7, v7, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
@@ -504,24 +513,24 @@
 
     .line 160
     :cond_4
-    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->nw()Lcom/tencent/mm/booter/notification/queue/b;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->lK()Lcom/tencent/mm/booter/notification/queue/b;
 
     move-result-object v0
 
     if-nez p0, :cond_9
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpKR3MWtFvfaIPwtPgb87rUCyQv3l0JxiQQ="
+    const-string/jumbo v0, "MicroMsg.Notification.Queue"
 
     const-string/jumbo v2, "notification item null when put"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 161
     :goto_3
     if-eqz v1, :cond_5
 
     .line 162
-    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->nw()Lcom/tencent/mm/booter/notification/queue/b;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->lK()Lcom/tencent/mm/booter/notification/queue/b;
 
     move-result-object v0
 
@@ -531,26 +540,26 @@
 
     .line 165
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     invoke-static {v0, p1}, Lcom/tencent/mm/booter/notification/d;->a(Landroid/app/Notification;Lcom/tencent/mm/booter/notification/a/g;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnZ:I
+    iput v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbX:I
 
     .line 169
     if-eqz v5, :cond_6
 
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     if-nez v0, :cond_e
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpKR3MWtFvfaIEWJqs/cZ9a9PkO83sP22Qk="
+    const-string/jumbo v0, "MicroMsg.NotificationItem"
 
     const-string/jumbo v1, "error, notify but mNotification == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 170
     :cond_6
@@ -580,11 +589,11 @@
 
     if-eqz v0, :cond_8
 
-    iget-object v8, v0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnU:Ljava/lang/String;
+    iget-object v8, v0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbS:Ljava/lang/String;
 
     if-eqz v8, :cond_8
 
-    iget-object v8, v0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnU:Ljava/lang/String;
+    iget-object v8, v0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbS:Ljava/lang/String;
 
     invoke-virtual {v8, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -600,11 +609,11 @@
 
     if-ne v6, v2, :cond_a
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpKR3MWtFvfaIPwtPgb87rUCyQv3l0JxiQQ="
+    const-string/jumbo v0, "MicroMsg.Notification.Queue"
 
     const-string/jumbo v2, "notification id = -1(NotificationItem.INVALID_ID) when put"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -631,7 +640,7 @@
 
     if-ne v2, v6, :cond_b
 
-    const-string/jumbo v2, "!44@/B4Tb64lLpKR3MWtFvfaIPwtPgb87rUCyQv3l0JxiQQ="
+    const-string/jumbo v2, "MicroMsg.Notification.Queue"
 
     const-string/jumbo v6, "remove mark: %d"
 
@@ -649,7 +658,7 @@
 
     aput-object v9, v7, v8
 
-    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     iget v2, v0, Lcom/tencent/mm/booter/notification/queue/b;->mark:I
 
@@ -673,20 +682,20 @@
 
     if-lt v2, v6, :cond_d
 
-    invoke-virtual {v0}, Lcom/tencent/mm/booter/notification/queue/b;->nx()Lcom/tencent/mm/booter/notification/NotificationItem;
+    invoke-virtual {v0}, Lcom/tencent/mm/booter/notification/queue/b;->lL()Lcom/tencent/mm/booter/notification/NotificationItem;
 
     move-result-object v1
 
     :cond_d
-    iget-object v2, v0, Lcom/tencent/mm/booter/notification/queue/b;->bog:Lcom/tencent/mm/booter/notification/queue/NotificationQueue;
+    iget-object v2, v0, Lcom/tencent/mm/booter/notification/queue/b;->bce:Lcom/tencent/mm/booter/notification/queue/NotificationQueue;
 
     invoke-virtual {v2, p0}, Lcom/tencent/mm/booter/notification/queue/NotificationQueue;->d(Lcom/tencent/mm/booter/notification/NotificationItem;)Z
 
-    iget-object v2, v0, Lcom/tencent/mm/booter/notification/queue/b;->boh:Lcom/tencent/mm/booter/notification/queue/a;
+    iget-object v2, v0, Lcom/tencent/mm/booter/notification/queue/b;->bcf:Lcom/tencent/mm/booter/notification/queue/a;
 
     invoke-virtual {v2, p0}, Lcom/tencent/mm/booter/notification/queue/a;->b(Lcom/tencent/mm/booter/notification/NotificationItem;)V
 
-    const-string/jumbo v2, "!44@/B4Tb64lLpKR3MWtFvfaIPwtPgb87rUCyQv3l0JxiQQ="
+    const-string/jumbo v2, "MicroMsg.Notification.Queue"
 
     const-string/jumbo v6, "put item: %d, queuesize: %d"
 
@@ -716,27 +725,27 @@
 
     aput-object v0, v7, v8
 
-    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_3
 
     .line 169
     :cond_e
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     if-nez v0, :cond_11
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpKR3MWtFvfaIEWJqs/cZ9a9PkO83sP22Qk="
+    const-string/jumbo v0, "MicroMsg.NotificationItem"
 
     const-string/jumbo v1, "error, safeCheck but MMApplicationContext.getContext() == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_f
     :goto_5
-    const-string/jumbo v0, "!44@/B4Tb64lLpKR3MWtFvfaIEWJqs/cZ9a9PkO83sP22Qk="
+    const-string/jumbo v0, "MicroMsg.NotificationItem"
 
     const-string/jumbo v1, "notificaiton.defaults: %d, notification.sound: %s, notification.vibrate: %s"
 
@@ -746,7 +755,7 @@
 
     const/4 v5, 0x0
 
-    iget-object v6, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v6, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     iget v6, v6, Landroid/app/Notification;->defaults:I
 
@@ -758,7 +767,7 @@
 
     const/4 v5, 0x1
 
-    iget-object v6, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v6, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     iget-object v6, v6, Landroid/app/Notification;->sound:Landroid/net/Uri;
 
@@ -766,7 +775,7 @@
 
     const/4 v5, 0x2
 
-    iget-object v6, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v6, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     iget-object v6, v6, Landroid/app/Notification;->vibrate:[J
 
@@ -776,59 +785,59 @@
 
     aput-object v6, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     :try_start_3
-    invoke-static {}, Lcom/tencent/mm/booter/notification/a/e;->nF()I
+    invoke-static {}, Lcom/tencent/mm/booter/notification/a/e;->lT()I
 
     move-result v0
 
     if-ne v0, v3, :cond_10
 
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     iget v0, v0, Landroid/app/Notification;->defaults:I
 
     if-eq v0, v13, :cond_10
 
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     iget-object v0, v0, Landroid/app/Notification;->vibrate:[J
 
     if-nez v0, :cond_10
 
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/app/Notification;->defaults:I
 
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/app/Notification;->sound:Landroid/net/Uri;
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpKR3MWtFvfaIEWJqs/cZ9a9PkO83sP22Qk="
+    const-string/jumbo v0, "MicroMsg.NotificationItem"
 
     const-string/jumbo v1, "mode == vibrate & wechat shake is close, so notification switch to silent"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_10
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/support/v4/app/v;->i(Landroid/content/Context;)Landroid/support/v4/app/v;
+    invoke-static {v0}, Landroid/support/v4/app/v;->g(Landroid/content/Context;)Landroid/support/v4/app/v;
 
     move-result-object v1
 
     iget v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->id:I
 
-    iget-object v5, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v5, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     invoke-static {v5}, Landroid/support/v4/app/p;->a(Landroid/app/Notification;)Landroid/os/Bundle;
 
@@ -849,7 +858,7 @@
     :goto_6
     if-eqz v0, :cond_14
 
-    new-instance v0, Landroid/support/v4/app/v$f;
+    new-instance v0, Landroid/support/v4/app/v$e;
 
     iget-object v3, v1, Landroid/support/v4/app/v;->mContext:Landroid/content/Context;
 
@@ -859,13 +868,13 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v3, v2, v4, v5}, Landroid/support/v4/app/v$f;-><init>(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
+    invoke-direct {v0, v3, v2, v4, v5}, Landroid/support/v4/app/v$e;-><init>(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
 
-    invoke-virtual {v1, v0}, Landroid/support/v4/app/v;->a(Landroid/support/v4/app/v$i;)V
+    invoke-virtual {v1, v0}, Landroid/support/v4/app/v;->a(Landroid/support/v4/app/v$h;)V
 
-    sget-object v0, Landroid/support/v4/app/v;->dI:Landroid/support/v4/app/v$b;
+    sget-object v0, Landroid/support/v4/app/v;->dY:Landroid/support/v4/app/v$b;
 
-    iget-object v1, v1, Landroid/support/v4/app/v;->dG:Landroid/app/NotificationManager;
+    iget-object v1, v1, Landroid/support/v4/app/v;->dW:Landroid/app/NotificationManager;
 
     const/4 v3, 0x0
 
@@ -876,7 +885,7 @@
 
     :goto_7
     :try_start_4
-    iget-wide v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnV:J
+    iget-wide v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbT:J
 
     const-wide/16 v2, 0x0
 
@@ -884,27 +893,27 @@
 
     if-eqz v0, :cond_6
 
-    iget-wide v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnV:J
+    iget-wide v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbT:J
 
     invoke-static {v0, v1}, Lcom/tencent/mm/booter/notification/c;->B(J)V
 
     goto/16 :goto_4
 
     :cond_11
-    iget-object v1, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v1, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     if-nez v1, :cond_12
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpKR3MWtFvfaIEWJqs/cZ9a9PkO83sP22Qk="
+    const-string/jumbo v0, "MicroMsg.NotificationItem"
 
     const-string/jumbo v1, "error, safeCheck but mNotification == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_5
 
     :cond_12
-    iget-object v1, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v1, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     iget v1, v1, Landroid/app/Notification;->icon:I
 
@@ -918,9 +927,9 @@
 
     if-nez v0, :cond_f
 
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
-    const v1, 0x7f040668
+    const v1, 0x7f0203be
 
     iput v1, v0, Landroid/app/Notification;->icon:I
     :try_end_4
@@ -935,9 +944,9 @@
 
     :cond_14
     :try_start_5
-    sget-object v0, Landroid/support/v4/app/v;->dI:Landroid/support/v4/app/v$b;
+    sget-object v0, Landroid/support/v4/app/v;->dY:Landroid/support/v4/app/v$b;
 
-    iget-object v1, v1, Landroid/support/v4/app/v;->dG:Landroid/app/NotificationManager;
+    iget-object v1, v1, Landroid/support/v4/app/v;->dW:Landroid/app/NotificationManager;
 
     const/4 v3, 0x0
 
@@ -950,6 +959,19 @@
 
     :catch_0
     move-exception v0
+
+    :try_start_6
+    const-string/jumbo v1, "MicroMsg.NotificationItem"
+
+    const-string/jumbo v2, "Notification Exception?"
+
+    const/4 v3, 0x0
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
     goto :goto_7
 
@@ -980,7 +1002,7 @@
     if-nez v0, :cond_0
 
     .line 115
-    const-string/jumbo v0, "!44@/B4Tb64lLpKR3MWtFvfaIEWJqs/cZ9a9PkO83sP22Qk="
+    const-string/jumbo v0, "MicroMsg.NotificationItem"
 
     const-string/jumbo v1, "recycle bitmap:%s"
 
@@ -998,7 +1020,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 116
     iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->b:Landroid/graphics/Bitmap;
@@ -1009,7 +1031,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     .line 120
     const/4 v0, 0x0
@@ -1019,7 +1041,7 @@
     .line 121
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnT:Landroid/app/PendingIntent;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbR:Landroid/app/PendingIntent;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1048,7 +1070,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     .prologue
     .line 344
@@ -1070,9 +1092,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnV:J
+    iget-wide v2, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbT:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1082,7 +1104,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnU:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbS:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1094,7 +1116,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnW:I
+    iget v1, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbU:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1119,7 +1141,7 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 332
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnU:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbS:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -1134,17 +1156,17 @@
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
     .line 334
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
     .line 335
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnT:Landroid/app/PendingIntent;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbR:Landroid/app/PendingIntent;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
     .line 336
-    iget-boolean v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnX:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbV:Z
 
     if-eqz v0, :cond_1
 
@@ -1156,12 +1178,12 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
     .line 337
-    iget-wide v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnV:J
+    iget-wide v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbT:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
     .line 338
-    iget v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnW:I
+    iget v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbU:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -1170,7 +1192,7 @@
 
     .line 332
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnU:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbS:Ljava/lang/String;
 
     goto :goto_0
 

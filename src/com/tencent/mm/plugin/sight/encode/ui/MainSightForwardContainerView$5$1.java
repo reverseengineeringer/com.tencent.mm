@@ -7,7 +7,7 @@ final class MainSightForwardContainerView$5$1
   
   public final void run()
   {
-    gCJ.gCI.awH();
+    gJk.gJj.azh();
   }
 }
 

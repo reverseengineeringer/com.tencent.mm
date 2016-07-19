@@ -7,7 +7,7 @@ final class MMTagPanel$b$2
   
   public final void run()
   {
-    MMTagPanel.e(kHv.kHq).ni(dOA.trim());
+    MMTagPanel.e(lgx.lgs).oq(dQi.trim());
   }
 }
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/k" style="@style/ChattingUISplit" />
+    <LinearLayout style="@style/ChattingUIContent">
+        <View android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/a2m" style="@style/ChattingUIState" />
+                <ProgressBar android:layout_gravity="center_vertical" android:id="@id/a3c" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+                <com.tencent.mm.pluginsdk.ui.simley.EmojiView android:layout_gravity="right" android:id="@id/a1f" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" style="@style/EmojiCommonStyle" />
+            </LinearLayout>
+        </LinearLayout>
+        <include layout="@layout/chatting_item_avatar_to" />
+    </LinearLayout>
+</LinearLayout>

@@ -11,16 +11,16 @@ final class b$b$4
   
   public final void run()
   {
-    if (b.r(gxS.gxL) != null)
+    if (b.r(gEp.gEj) != null)
     {
-      View localView = b.r(gxS.gxL).avQ();
+      View localView = b.r(gEp.gEj).ayl();
       if (localView != null)
       {
-        if ((b.D(gxS.gxL) == null) && (b.r(gxS.gxL).avR() != -1) && (b.l(gxS.gxL).get() != null)) {
-          b.a(gxS.gxL, AnimationUtils.loadAnimation(((View)b.l(gxS.gxL).get()).getContext(), b.r(gxS.gxL).avR()));
+        if ((b.D(gEp.gEj) == null) && (b.r(gEp.gEj).aym() != -1) && (b.l(gEp.gEj).get() != null)) {
+          b.a(gEp.gEj, AnimationUtils.loadAnimation(((View)b.l(gEp.gEj).get()).getContext(), b.r(gEp.gEj).aym()));
         }
-        if (b.D(gxS.gxL) != null) {
-          localView.startAnimation(b.D(gxS.gxL));
+        if (b.D(gEp.gEj) != null) {
+          localView.startAnimation(b.D(gEp.gEj));
         }
         localView.setVisibility(0);
       }

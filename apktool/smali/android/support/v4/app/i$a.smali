@@ -171,7 +171,7 @@
     move-result-object v3
 
     .line 79
-    invoke-virtual {p0, v0, v2, v3}, Landroid/support/v4/app/i$a;->b(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {p0, v0, v2, v3}, Landroid/support/v4/app/i$a;->a(Ljava/lang/String;ILjava/lang/String;)V
 
     move v0, v1
 

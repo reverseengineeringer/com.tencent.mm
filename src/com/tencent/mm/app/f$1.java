@@ -1,81 +1,65 @@
 package com.tencent.mm.app;
 
-import android.app.Application;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Build;
-import android.util.Base64;
-import android.util.StringBuilderPrinter;
-import com.tencent.mm.loader.stub.BaseBuildInfo;
-import com.tencent.mm.loader.stub.a;
-import com.tencent.mm.loader.stub.c;
-import com.tencent.mm.sdk.platformtools.ae;
-import com.tencent.mm.sdk.platformtools.ae.c;
-import com.tencent.mm.sdk.platformtools.y;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import android.os.HandlerThread;
+import android.os.Process;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.LauncherUI;
+import com.tencent.mm.ui.chatting.eb;
 
-final class f$1
-  implements ae.c
+public final class f$1
+  implements eb
 {
-  f$1(String paramString, Application paramApplication) {}
+  public f$1(f paramf) {}
   
-  public final void a(ae paramae, String paramString, Throwable paramThrowable)
+  public final void iZ()
   {
-    try
+    v.i("MicroMsg.INIT", "start time check WorkerProfile.getInstance().hasCreate:%b, onviewDrawed time: %d", new Object[] { Boolean.valueOf(WorkerProfile.jr().js()), Long.valueOf(System.currentTimeMillis() - LauncherUI.kLE) });
+    ad.k(new Runnable()
     {
-      StringBuilder localStringBuilder = new StringBuilder(2560);
-      StringBuilderPrinter localStringBuilderPrinter = new StringBuilderPrinter(localStringBuilder);
-      localStringBuilderPrinter.println("#client.version=" + BaseBuildInfo.bwQ);
-      localStringBuilderPrinter.println("#accinfo.revision=" + BaseBuildInfo.rc());
-      paramThrowable = c.bxf.A("last_login_uin", "0");
-      if (paramThrowable != null)
+      public final void run()
       {
-        paramae = paramThrowable;
-        if (!paramThrowable.equals("0")) {}
-      }
-      else
-      {
-        paramae = Integer.toString((Build.DEVICE + Build.FINGERPRINT + Build.MANUFACTURER + Build.MODEL).hashCode());
-      }
-      localStringBuilderPrinter.println("#accinfo.uin=" + paramae);
-      paramThrowable = new StringBuilder("#accinfo.runtime=").append(System.currentTimeMillis() - MMApplication.alw).append("(");
-      if (alh == null) {}
-      for (paramae = "";; paramae = alh)
-      {
-        localStringBuilderPrinter.println(paramae + ") by cup");
-        localStringBuilderPrinter.println("#accinfo.build=" + BaseBuildInfo.bwS + ":" + BaseBuildInfo.bwT + ":0");
-        paramae = new Date();
-        paramThrowable = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ", Locale.getDefault());
-        localStringBuilderPrinter.println("#accinfo.crashTime=" + paramThrowable.format(paramae));
-        localStringBuilderPrinter.println("#crashContent=");
-        paramae = paramString;
-        if (e.ae(y.getContext()) == 1) {
-          paramae = paramString.substring(0, e.af(y.getContext()));
+        v.i("MicroMsg.INIT", "start time check post run: " + (System.currentTimeMillis() - LauncherUI.kLE));
+        if (!WorkerProfile.jr().js())
+        {
+          Object localObject = WorkerProfile.jr();
+          WorkerProfile.b localb = ((WorkerProfile)localObject).jt();
+          if ((ZI == null) || (!ZI.isAlive())) {
+            v.e("MicroMsg.WorkerProfile", "setHighPriority failed thread is dead");
+          }
+          for (;;)
+          {
+            localb = ((WorkerProfile)localObject).jt();
+            localObject = new WorkerProfile.12((WorkerProfile)localObject);
+            handler.post((Runnable)localObject);
+            v.i("MicroMsg.INIT", "start time check notifyALLinit not hascreate: " + (System.currentTimeMillis() - LauncherUI.kLE));
+            if (Ys.Yn) {
+              Ys.iY();
+            }
+            return;
+            int i = ZI.getThreadId();
+            try
+            {
+              if (-8 != Process.getThreadPriority(i)) {
+                break label192;
+              }
+              v.w("MicroMsg.WorkerProfile", "setHighPriority No Need.");
+            }
+            catch (Exception localException)
+            {
+              v.w("MicroMsg.WorkerProfile", "thread:%d setHighPriority failed", new Object[] { Integer.valueOf(i) });
+            }
+            continue;
+            label192:
+            Process.setThreadPriority(i, -8);
+            v.i("MicroMsg.WorkerProfile", "InitThreadController:%d setHighPriority to %d", new Object[] { Integer.valueOf(i), Integer.valueOf(Process.getThreadPriority(i)) });
+          }
         }
-        e.d(y.getContext(), y.aQC(), "first");
-        localStringBuilderPrinter.println(paramae);
-        paramae = new Intent();
-        paramae.setAction("INTENT_ACTION_UNCATCH");
-        paramae.putExtra("INTENT_EXTRA_USER_NAME", c.bxf.A("login_user_name", "never_login_crash"));
-        paramae.putExtra("INTENT_EXTRA_EXCEPTION_MSG", Base64.encodeToString(localStringBuilder.toString().getBytes(), 2));
-        paramae.putExtra("INTENT_EXTRA_DATA_PATH", a.bxa + "crash/");
-        paramae.putExtra("INTENT_EXTRA_SDCARD_PATH", a.bxe);
-        paramae.putExtra("INTENT_EXTRA_UIN", c.bxf.A("last_login_uin", "0"));
-        paramae.putExtra("INTENT_EXTRA_CLIENT_VERSION", BaseBuildInfo.bwQ);
-        paramae.putExtra("INTENT_EXTRA_DEVICE_TYPE", BaseBuildInfo.bwR);
-        paramae.putExtra("INTENT_EXTRA_TAG", "exception");
-        paramString = ali.getSharedPreferences("system_config_prefs", 0);
-        paramae.putExtra("INTENT_EXTRA_HOST", "http://" + paramString.getString("support.weixin.qq.com", "support.weixin.qq.com"));
-        paramae.setClassName(ali, ali.getPackageName() + ".crash.CrashUploaderService");
-        y.getContext().startService(paramae);
-        return;
+        WorkerProfile.jr().jq();
+        v.i("MicroMsg.INIT", "start time check notifyALLinit  hascreate: " + (System.currentTimeMillis() - LauncherUI.kLE));
       }
-      return;
-    }
-    catch (Exception paramae) {}
+    });
   }
 }
 

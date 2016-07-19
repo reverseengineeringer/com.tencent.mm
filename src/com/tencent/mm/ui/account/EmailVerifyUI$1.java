@@ -7,10 +7,10 @@ final class EmailVerifyUI$1
 {
   EmailVerifyUI$1(EmailVerifyUI paramEmailVerifyUI) {}
   
-  public final void Go(String paramString)
+  public final void ID(String paramString)
   {
-    ksd.bC(true);
-    EmailVerifyUI.a(ksd, paramString);
+    kRl.bp(true);
+    EmailVerifyUI.a(kRl, paramString);
   }
 }
 

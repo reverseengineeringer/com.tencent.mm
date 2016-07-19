@@ -1,8 +1,15 @@
 package com.tencent.mm.ar;
 
-public abstract interface a
+import com.tencent.mm.t.j;
+
+public abstract class a
+  extends j
 {
-  public abstract void onDone();
+  public abstract void EX();
+  
+  public abstract String[] EY();
+  
+  public abstract long EZ();
 }
 
 /* Location:

@@ -31,49 +31,42 @@ import java.util.Set;
 
 public final class v
 {
-  private static final int dC;
-  private static final Object dD = new Object();
-  private static String dE;
-  private static Set dF = new HashSet();
-  private static h dH;
-  public static final b dI;
+  private static final int dS;
+  private static final Object dT = new Object();
+  private static String dU;
+  private static Set<String> dV = new HashSet();
+  private static g dX;
+  public static final b dY;
   private static final Object sLock = new Object();
-  public final NotificationManager dG;
+  public final NotificationManager dW;
   public final Context mContext;
   
   static
   {
-    if (Build.VERSION.SDK_INT >= 14) {
-      dI = new e();
-    }
-    for (;;)
+    if (Build.VERSION.SDK_INT >= 14) {}
+    for (dY = new d();; dY = new c())
     {
-      dC = dI.ab();
+      dS = dY.Z();
       return;
-      if (Build.VERSION.SDK_INT >= 5) {
-        dI = new d();
-      } else {
-        dI = new c();
-      }
     }
   }
   
   private v(Context paramContext)
   {
     mContext = paramContext;
-    dG = ((NotificationManager)mContext.getSystemService("notification"));
+    dW = ((NotificationManager)mContext.getSystemService("notification"));
   }
   
-  public static v i(Context paramContext)
+  public static v g(Context paramContext)
   {
     return new v(paramContext);
   }
   
-  public static Set j(Context paramContext)
+  public static Set<String> h(Context paramContext)
   {
     paramContext = Settings.Secure.getString(paramContext.getContentResolver(), "enabled_notification_listeners");
     HashSet localHashSet;
-    if ((paramContext != null) && (!paramContext.equals(dE)))
+    if ((paramContext != null) && (!paramContext.equals(dU)))
     {
       ??? = paramContext.split(":");
       localHashSet = new HashSet(???.length);
@@ -88,30 +81,30 @@ public final class v
         i += 1;
       }
     }
-    synchronized (dD)
+    synchronized (dT)
     {
-      dF = localHashSet;
-      dE = paramContext;
-      return dF;
+      dV = localHashSet;
+      dU = paramContext;
+      return dV;
     }
   }
   
-  public final void a(i parami)
+  public final void a(h paramh)
   {
     synchronized (sLock)
     {
-      if (dH == null) {
-        dH = new h(mContext.getApplicationContext());
+      if (dX == null) {
+        dX = new g(mContext.getApplicationContext());
       }
-      dHmHandler.obtainMessage(0, parami).sendToTarget();
+      dXmHandler.obtainMessage(0, paramh).sendToTarget();
       return;
     }
   }
   
   private static final class a
-    implements v.i
+    implements v.h
   {
-    final boolean dJ;
+    final boolean dZ;
     final int id;
     final String packageName;
     final String tag;
@@ -121,17 +114,17 @@ public final class v
       packageName = paramString1;
       id = paramInt;
       tag = null;
-      dJ = false;
+      dZ = false;
     }
     
     public final void a(i parami)
     {
-      if (dJ)
+      if (dZ)
       {
         parami.i(packageName);
         return;
       }
-      parami.b(packageName, id, tag);
+      parami.a(packageName, id, tag);
     }
     
     public final String toString()
@@ -140,7 +133,7 @@ public final class v
       localStringBuilder.append("packageName:").append(packageName);
       localStringBuilder.append(", id:").append(id);
       localStringBuilder.append(", tag:").append(tag);
-      localStringBuilder.append(", all:").append(dJ);
+      localStringBuilder.append(", all:").append(dZ);
       localStringBuilder.append("]");
       return localStringBuilder.toString();
     }
@@ -148,16 +141,21 @@ public final class v
   
   public static abstract interface b
   {
+    public abstract int Z();
+    
     public abstract void a(NotificationManager paramNotificationManager, String paramString, int paramInt);
     
     public abstract void a(NotificationManager paramNotificationManager, String paramString, int paramInt, Notification paramNotification);
-    
-    public abstract int ab();
   }
   
   static class c
     implements v.b
   {
+    public int Z()
+    {
+      return 1;
+    }
+    
     public void a(NotificationManager paramNotificationManager, String paramString, int paramInt)
     {
       paramNotificationManager.cancel(paramInt);
@@ -167,16 +165,16 @@ public final class v
     {
       paramNotificationManager.notify(paramInt, paramNotification);
     }
-    
-    public int ab()
-    {
-      return 1;
-    }
   }
   
-  static class d
+  static final class d
     extends v.c
   {
+    public final int Z()
+    {
+      return 33;
+    }
+    
     public final void a(NotificationManager paramNotificationManager, String paramString, int paramInt)
     {
       paramNotificationManager.cancel(null, paramInt);
@@ -188,34 +186,25 @@ public final class v
     }
   }
   
-  static final class e
-    extends v.d
+  private static final class e
+    implements v.h
   {
-    public final int ab()
-    {
-      return 33;
-    }
-  }
-  
-  private static final class f
-    implements v.i
-  {
-    final Notification dK;
+    final Notification ea;
     final int id;
     final String packageName;
     final String tag;
     
-    public f(String paramString1, int paramInt, String paramString2, Notification paramNotification)
+    public e(String paramString1, int paramInt, String paramString2, Notification paramNotification)
     {
       packageName = paramString1;
       id = paramInt;
       tag = null;
-      dK = paramNotification;
+      ea = paramNotification;
     }
     
     public final void a(i parami)
     {
-      parami.a(packageName, id, tag, dK);
+      parami.a(packageName, id, tag, ea);
     }
     
     public final String toString()
@@ -229,113 +218,113 @@ public final class v
     }
   }
   
-  private static final class g
+  private static final class f
   {
-    final ComponentName dL;
-    final IBinder dM;
+    final ComponentName eb;
+    final IBinder ec;
     
-    public g(ComponentName paramComponentName, IBinder paramIBinder)
+    public f(ComponentName paramComponentName, IBinder paramIBinder)
     {
-      dL = paramComponentName;
-      dM = paramIBinder;
+      eb = paramComponentName;
+      ec = paramIBinder;
     }
   }
   
-  private static final class h
+  private static final class g
     implements ServiceConnection, Handler.Callback
   {
-    private final HandlerThread dN;
-    private final Map dO = new HashMap();
-    private Set dP = new HashSet();
+    private final HandlerThread ed;
+    private final Map<ComponentName, a> ee = new HashMap();
+    private Set<String> ef = new HashSet();
     private final Context mContext;
     final Handler mHandler;
     
-    public h(Context paramContext)
+    public g(Context paramContext)
     {
       mContext = paramContext;
-      dN = new HandlerThread("NotificationManagerCompat");
-      dN.start();
-      mHandler = new Handler(dN.getLooper(), this);
+      ed = new HandlerThread("NotificationManagerCompat");
+      ed.start();
+      mHandler = new Handler(ed.getLooper(), this);
     }
     
     private void a(a parama)
     {
-      if (dQ)
+      if (eg)
       {
         mContext.unbindService(this);
-        dQ = false;
+        eg = false;
       }
-      dR = null;
+      eh = null;
     }
     
     private void b(a parama)
     {
-      if (mHandler.hasMessages(3, dL)) {
+      if (mHandler.hasMessages(3, eb)) {
         return;
       }
       retryCount += 1;
       if (retryCount > 6)
       {
-        new StringBuilder("Giving up on delivering ").append(dS.size()).append(" tasks to ").append(dL).append(" after ").append(retryCount).append(" retries");
-        dS.clear();
+        new StringBuilder("Giving up on delivering ").append(ei.size()).append(" tasks to ").append(eb).append(" after ").append(retryCount).append(" retries");
+        ei.clear();
         return;
       }
       int i = (1 << retryCount - 1) * 1000;
       if (Log.isLoggable("NotifManCompat", 3)) {
         new StringBuilder("Scheduling retry for ").append(i).append(" ms");
       }
-      parama = mHandler.obtainMessage(3, dL);
+      parama = mHandler.obtainMessage(3, eb);
       mHandler.sendMessageDelayed(parama, i);
     }
     
     private void c(a parama)
     {
       if (Log.isLoggable("NotifManCompat", 3)) {
-        new StringBuilder("Processing component ").append(dL).append(", ").append(dS.size()).append(" queued tasks");
+        new StringBuilder("Processing component ").append(eb).append(", ").append(ei.size()).append(" queued tasks");
       }
-      if (dS.isEmpty()) {}
+      if (ei.isEmpty()) {}
       for (;;)
       {
         return;
         boolean bool;
-        if (dQ)
+        if (eg)
         {
           bool = true;
-          if ((!bool) || (dR == null)) {
+          if ((!bool) || (eh == null)) {
             b(parama);
           }
         }
         else
         {
-          localObject = new Intent("android.support.BIND_NOTIFICATION_SIDE_CHANNEL").setComponent(dL);
-          dQ = mContext.bindService((Intent)localObject, this, v.aa());
-          if (dQ) {
+          localObject = new Intent("android.support.BIND_NOTIFICATION_SIDE_CHANNEL").setComponent(eb);
+          eg = mContext.bindService((Intent)localObject, this, v.dS);
+          if (eg) {
             retryCount = 0;
           }
           for (;;)
           {
-            bool = dQ;
+            bool = eg;
             break;
-            new StringBuilder("Unable to bind to listener ").append(dL);
+            new StringBuilder("Unable to bind to listener ").append(eb);
             mContext.unbindService(this);
           }
         }
-        Object localObject = (v.i)dS.peek();
+        Object localObject = (v.h)ei.peek();
         if (localObject != null) {}
         try
         {
           if (Log.isLoggable("NotifManCompat", 3)) {
             new StringBuilder("Sending task ").append(localObject);
           }
-          ((v.i)localObject).a(dR);
-          dS.remove();
+          ((v.h)localObject).a(eh);
+          ei.remove();
         }
         catch (DeadObjectException localDeadObjectException)
         {
           if (Log.isLoggable("NotifManCompat", 3)) {
-            new StringBuilder("Remote service has died: ").append(dL);
+            new StringBuilder("Remote service has died: ").append(eb);
           }
-          if (dS.isEmpty()) {
+          if (ei.isEmpty()) {
             continue;
           }
           b(parama);
@@ -345,7 +334,7 @@ public final class v
         {
           for (;;)
           {
-            new StringBuilder("RemoteException communicating with ").append(dL);
+            new StringBuilder("RemoteException communicating with ").append(eb);
           }
         }
       }
@@ -359,11 +348,11 @@ public final class v
       default: 
         return false;
       case 0: 
-        paramMessage = (v.i)obj;
-        Object localObject2 = v.j(mContext);
-        if (!((Set)localObject2).equals(dP))
+        paramMessage = (v.h)obj;
+        Object localObject2 = v.h(mContext);
+        if (!((Set)localObject2).equals(ef))
         {
-          dP = ((Set)localObject2);
+          ef = ((Set)localObject2);
           Object localObject3 = mContext.getPackageManager().queryIntentServices(new Intent().setAction("android.support.BIND_NOTIFICATION_SIDE_CHANNEL"), 4);
           localObject1 = new HashSet();
           localObject3 = ((List)localObject3).iterator();
@@ -384,15 +373,15 @@ public final class v
           while (((Iterator)localObject2).hasNext())
           {
             localObject3 = (ComponentName)((Iterator)localObject2).next();
-            if (!dO.containsKey(localObject3))
+            if (!ee.containsKey(localObject3))
             {
               if (Log.isLoggable("NotifManCompat", 3)) {
                 new StringBuilder("Adding listener record for ").append(localObject3);
               }
-              dO.put(localObject3, new a((ComponentName)localObject3));
+              ee.put(localObject3, new a((ComponentName)localObject3));
             }
           }
-          localObject2 = dO.entrySet().iterator();
+          localObject2 = ee.entrySet().iterator();
           while (((Iterator)localObject2).hasNext())
           {
             localObject3 = (Map.Entry)((Iterator)localObject2).next();
@@ -406,36 +395,36 @@ public final class v
             }
           }
         }
-        localObject1 = dO.values().iterator();
+        localObject1 = ee.values().iterator();
         while (((Iterator)localObject1).hasNext())
         {
           localObject2 = (a)((Iterator)localObject1).next();
-          dS.add(paramMessage);
+          ei.add(paramMessage);
           c((a)localObject2);
         }
         return true;
       case 1: 
-        localObject1 = (v.g)obj;
-        paramMessage = dL;
-        localObject1 = dM;
-        paramMessage = (a)dO.get(paramMessage);
+        localObject1 = (v.f)obj;
+        paramMessage = eb;
+        localObject1 = ec;
+        paramMessage = (a)ee.get(paramMessage);
         if (paramMessage != null)
         {
-          dR = i.a.a((IBinder)localObject1);
+          eh = i.a.a((IBinder)localObject1);
           retryCount = 0;
           c(paramMessage);
         }
         return true;
       case 2: 
         paramMessage = (ComponentName)obj;
-        paramMessage = (a)dO.get(paramMessage);
+        paramMessage = (a)ee.get(paramMessage);
         if (paramMessage != null) {
           a(paramMessage);
         }
         return true;
       }
       paramMessage = (ComponentName)obj;
-      paramMessage = (a)dO.get(paramMessage);
+      paramMessage = (a)ee.get(paramMessage);
       if (paramMessage != null) {
         c(paramMessage);
       }
@@ -447,7 +436,7 @@ public final class v
       if (Log.isLoggable("NotifManCompat", 3)) {
         new StringBuilder("Connected to service ").append(paramComponentName);
       }
-      mHandler.obtainMessage(1, new v.g(paramComponentName, paramIBinder)).sendToTarget();
+      mHandler.obtainMessage(1, new v.f(paramComponentName, paramIBinder)).sendToTarget();
     }
     
     public final void onServiceDisconnected(ComponentName paramComponentName)
@@ -460,20 +449,20 @@ public final class v
     
     private static final class a
     {
-      public final ComponentName dL;
-      public boolean dQ = false;
-      public i dR;
-      public LinkedList dS = new LinkedList();
+      public final ComponentName eb;
+      public boolean eg = false;
+      public i eh;
+      public LinkedList<v.h> ei = new LinkedList();
       public int retryCount = 0;
       
       public a(ComponentName paramComponentName)
       {
-        dL = paramComponentName;
+        eb = paramComponentName;
       }
     }
   }
   
-  private static abstract interface i
+  private static abstract interface h
   {
     public abstract void a(i parami);
   }

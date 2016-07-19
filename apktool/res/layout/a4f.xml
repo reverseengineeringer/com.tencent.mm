@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:scrollbarAlwaysDrawVerticalTrack="false" android:id="@id/bu6" android:background="@color/j3" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:fadeScrollbars="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/bjs" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:id="@id/bu7" style="@style/plugin_qqmail_compose_item_align_style">
+            <TextView android:id="@id/bu8" android:text="@string/bt6" style="@style/plugin_qqmail_compose_item_title_style" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/bu9" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+            <com.tencent.mm.plugin.qqmail.ui.MailAddrsViewControl android:id="@id/bu_" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <AutoCompleteTextView style="@style/plug_qqmail_compose_input_style" />
+                </FrameLayout>
+            </com.tencent.mm.plugin.qqmail.ui.MailAddrsViewControl>
+            <ImageView android:id="@id/bua" style="@style/plugin_qqmail_add_addr_style" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/bub" style="@style/plugin_qqmail_compose_item_align_style">
+            <TextView android:text="@string/bsz" style="@style/plugin_qqmail_compose_item_title_style" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/buc" android:visibility="gone" style="@style/plugin_qqmail_compose_item_align_style">
+            <TextView android:text="@string/bsx" style="@style/plugin_qqmail_compose_item_title_style" />
+            <com.tencent.mm.plugin.qqmail.ui.MailAddrsViewControl android:id="@id/bud" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <AutoCompleteTextView style="@style/plug_qqmail_compose_input_style" />
+                </FrameLayout>
+            </com.tencent.mm.plugin.qqmail.ui.MailAddrsViewControl>
+            <ImageView android:id="@id/bue" android:visibility="invisible" style="@style/plugin_qqmail_add_addr_style" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/buf" android:visibility="gone" style="@style/plugin_qqmail_compose_item_align_style">
+            <TextView android:text="@string/bsv" style="@style/plugin_qqmail_compose_item_title_style" />
+            <com.tencent.mm.plugin.qqmail.ui.MailAddrsViewControl android:id="@id/bug" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <AutoCompleteTextView style="@style/plug_qqmail_compose_input_style" />
+                </FrameLayout>
+            </com.tencent.mm.plugin.qqmail.ui.MailAddrsViewControl>
+            <ImageView android:id="@id/buh" android:visibility="invisible" style="@style/plugin_qqmail_add_addr_style" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/bui" style="@style/plugin_qqmail_compose_item_align_style">
+            <TextView android:text="@string/bt4" style="@style/plugin_qqmail_compose_item_title_style" />
+            <EditText android:id="@id/buj" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <ImageView android:id="@id/buk" android:visibility="gone" android:src="@drawable/ih" style="@style/plugin_qqmail_subject_delete_style" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/bul" android:background="@drawable/l5" android:focusable="true" style="@style/plugin_qqmail_compose_item_align_style">
+            <TextView android:textSize="@dimen/cu" android:textColor="@color/jj" android:id="@id/bum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bsp" android:layout_weight="1.0" />
+            <ImageView android:id="@id/bun" android:src="@raw/qqmail_attach_icon_normal" style="@style/plug_qqmail_compose_add_style" />
+        </LinearLayout>
+        <LinearLayout android:visibility="gone" style="@style/plugin_qqmail_compose_item_style">
+            <LinearLayout android:orientation="vertical" android:id="@id/buo" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:id="@id/bup" android:background="@drawable/a8s" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/bt3" />
+        <EditText android:textSize="@dimen/h4" android:gravity="center|left|top" android:id="@id/buq" android:background="@null" android:padding="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="100.0dip" android:layout_weight="1.0" />
+        <com.tencent.mm.ui.widget.MMWebView android:layout_gravity="center|left|top" android:id="@id/bur" android:background="@null" android:padding="5.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="100.0dip" />
+        <LinearLayout android:gravity="center|top" android:orientation="vertical" android:id="@id/bus" android:background="@drawable/ed" android:padding="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:layout_marginBottom="15.0dip" android:minHeight="100.0dip">
+            <TextView android:textSize="20.0sp" android:textColor="@color/ak" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/c4n" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff454545" android:id="@id/but" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/c4p" android:maxLines="6" android:singleLine="false" />
+            <ImageView android:id="@id/buu" android:layout_width="220.0dip" android:layout_height="220.0dip" android:layout_marginTop="23.0dip" android:src="@drawable/tk" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff888888" android:gravity="center" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="33.0dip" android:text="@string/c4o" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

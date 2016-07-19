@@ -1,86 +1,130 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.d.b.cc;
-import com.tencent.mm.sdk.h.c.a;
-import java.lang.reflect.Field;
-import java.util.Map;
+import android.content.ContentValues;
+import android.database.Cursor;
+import com.tencent.mm.bc.f;
+import com.tencent.mm.bc.f.a;
+import com.tencent.mm.sdk.h.d;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import junit.framework.Assert;
 
 public final class an
-  extends cc
+  extends com.tencent.mm.sdk.h.g
+  implements f.a
 {
-  protected static c.a aot;
+  public static final String[] bkN = { "CREATE TABLE IF NOT EXISTS role_info ( id TEXT PRIMARY KEY, name TEXT, status INT, text_reserved1 TEXT, text_reserved2 TEXT, text_reserved3 TEXT, text_reserved4 TEXT, int_reserved1 INT, int_reserved2 INT, int_reserved3 INT, int_reserved4 INT )" };
+  public d bkP = null;
   
-  static
+  public an(com.tencent.mm.bc.g paramg)
   {
-    c.a locala = new c.a();
-    ceD = new Field[5];
-    blR = new String[6];
-    StringBuilder localStringBuilder = new StringBuilder();
-    blR[0] = "encryptUsername";
-    jYx.put("encryptUsername", "TEXT default ''  PRIMARY KEY ");
-    localStringBuilder.append(" encryptUsername TEXT default ''  PRIMARY KEY ");
-    localStringBuilder.append(", ");
-    jYw = "encryptUsername";
-    blR[1] = "conRemark";
-    jYx.put("conRemark", "TEXT default '' ");
-    localStringBuilder.append(" conRemark TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[2] = "contactLabels";
-    jYx.put("contactLabels", "TEXT default '' ");
-    localStringBuilder.append(" contactLabels TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[3] = "conDescription";
-    jYx.put("conDescription", "TEXT default '' ");
-    localStringBuilder.append(" conDescription TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[4] = "conPhone";
-    jYx.put("conPhone", "TEXT default '' ");
-    localStringBuilder.append(" conPhone TEXT default '' ");
-    blR[5] = "rowid";
-    jYy = localStringBuilder.toString();
-    aot = locala;
+    bkP = paramg;
   }
   
-  public an()
+  public final am HT(String paramString)
   {
-    field_encryptUsername = "";
-    field_conRemark = "";
-  }
-  
-  public an(String paramString)
-  {
-    this();
-    field_conRemark = "";
-    String str = paramString;
-    if (paramString == null) {
-      str = "";
+    Object localObject = null;
+    if ((paramString == null) || (paramString.length() <= 0)) {
+      return null;
     }
-    field_encryptUsername = str;
-  }
-  
-  public an(String paramString1, String paramString2)
-  {
-    this();
-    String str = paramString1;
-    if (paramString1 == null) {
-      str = "";
+    am localam = new am();
+    Cursor localCursor = bkP.query("role_info", null, "name LIKE ?", new String[] { "%" + paramString }, null, null, null);
+    paramString = (String)localObject;
+    if (localCursor.moveToFirst())
+    {
+      localam.b(localCursor);
+      paramString = localam;
     }
-    field_encryptUsername = str;
-    paramString1 = paramString2;
-    if (paramString2 == null) {
-      paramString1 = "";
+    localCursor.close();
+    return paramString;
+  }
+  
+  public final am HU(String paramString)
+  {
+    Object localObject = null;
+    if ((paramString != null) && (paramString.length() > 0)) {}
+    for (boolean bool = true;; bool = false)
+    {
+      Assert.assertTrue(bool);
+      am localam = new am();
+      Cursor localCursor = bkP.query("role_info", null, "name= ?", new String[] { paramString }, null, null, null);
+      paramString = (String)localObject;
+      if (localCursor.moveToFirst())
+      {
+        localam.b(localCursor);
+        paramString = localam;
+      }
+      localCursor.close();
+      return paramString;
     }
-    field_conRemark = paramString1;
   }
   
-  protected final Object clone()
+  public final int a(f paramf)
   {
-    return super.clone();
+    if (paramf != null) {
+      bkP = paramf;
+    }
+    return 0;
   }
   
-  protected final c.a ls()
+  public final void a(am paramam)
   {
-    return aot;
+    aqQ = 135;
+    paramam = paramam.kn();
+    if ((paramam.size() > 0) && (bkP.insert("role_info", "id", paramam) != 0L)) {
+      EJ();
+    }
+  }
+  
+  public final void b(am paramam)
+  {
+    ContentValues localContentValues = paramam.kn();
+    if (localContentValues.size() > 0)
+    {
+      int i = bkP.update("role_info", localContentValues, "name like ?", new String[] { name });
+      v.d("MicroMsg.RoleStorage", "update role info, name=" + name + ", res:" + i);
+      if (i > 0) {
+        EJ();
+      }
+    }
+  }
+  
+  public final void bf(String paramString, int paramInt)
+  {
+    if (be.kf(paramString)) {
+      v.e("MicroMsg.RoleStorage", "insert role info failed: empty user");
+    }
+    while (HU(paramString) != null) {
+      return;
+    }
+    a(new am(paramString, true, paramInt));
+    v.d("MicroMsg.RoleStorage", "insert new role, user=" + paramString);
+  }
+  
+  public final String getTableName()
+  {
+    return "role_info";
+  }
+  
+  public final void ha(String paramString)
+  {
+    if (paramString.length() > 0) {}
+    for (boolean bool = true;; bool = false)
+    {
+      Assert.assertTrue(bool);
+      int i = bkP.delete("role_info", "name=?", new String[] { paramString });
+      v.d("MicroMsg.RoleStorage", "delete name name :" + paramString + ", res:" + i);
+      if (i > 0) {
+        EJ();
+      }
+      return;
+    }
+  }
+  
+  public final boolean has(String paramString)
+  {
+    am localam = HT(new am.a(paramString).HS(""));
+    return (localam != null) && (paramString.equals(name));
   }
 }
 

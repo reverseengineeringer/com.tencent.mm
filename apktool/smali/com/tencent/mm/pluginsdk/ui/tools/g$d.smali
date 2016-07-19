@@ -15,17 +15,26 @@
 
 
 # static fields
-.field static final iSH:Landroid/graphics/Paint;
+.field static final jpQ:Landroid/graphics/Paint;
 
 
 # instance fields
-.field final ewu:Landroid/graphics/Rect;
+.field final eCN:Landroid/graphics/Rect;
 
-.field iSI:Ljava/lang/ref/WeakReference;
+.field jpR:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Landroid/graphics/Bitmap;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private iSJ:Z
+.field private jpS:Z
 
-.field private iSK:Z
+.field private jpT:Z
 
 
 # direct methods
@@ -33,14 +42,14 @@
     .locals 2
 
     .prologue
-    .line 323
+    .line 321
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x6
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->iSH:Landroid/graphics/Paint;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->jpQ:Landroid/graphics/Paint;
 
     return-void
 .end method
@@ -51,30 +60,30 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 320
+    .line 318
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 324
+    .line 322
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->ewu:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->eCN:Landroid/graphics/Rect;
 
-    .line 330
+    .line 328
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->iSI:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->jpR:Ljava/lang/ref/WeakReference;
 
-    .line 362
-    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->iSJ:Z
+    .line 360
+    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->jpS:Z
 
-    .line 363
-    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->iSK:Z
+    .line 361
+    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->jpT:Z
 
     return-void
 .end method
@@ -87,7 +96,7 @@
 
     const/4 v3, 0x0
 
-    .line 350
+    .line 348
     invoke-virtual {p0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -102,13 +111,13 @@
 
     check-cast v0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;
 
-    .line 352
+    .line 350
     :goto_0
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->iSI:Ljava/lang/ref/WeakReference;
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->jpR:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Landroid/widget/ImageView;->getScaleType()Landroid/widget/ImageView$ScaleType;
 
@@ -121,7 +130,7 @@
     move v1, v2
 
     :goto_1
-    iput-boolean v1, v0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->iSJ:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->jpS:Z
 
     invoke-virtual {p0}, Landroid/widget/ImageView;->getScaleType()Landroid/widget/ImageView$ScaleType;
 
@@ -132,17 +141,17 @@
     if-ne v1, v4, :cond_2
 
     :goto_2
-    iput-boolean v2, v0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->iSK:Z
+    iput-boolean v2, v0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->jpT:Z
 
-    .line 354
+    .line 352
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     invoke-virtual {p0}, Landroid/widget/ImageView;->postInvalidate()V
 
-    .line 355
+    .line 353
     return-void
 
-    .line 350
+    .line 348
     :cond_0
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;
 
@@ -153,7 +162,7 @@
     :cond_1
     move v1, v3
 
-    .line 352
+    .line 350
     goto :goto_1
 
     :cond_2
@@ -166,12 +175,12 @@
     .locals 1
 
     .prologue
-    .line 358
+    .line 356
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->b(Landroid/widget/ImageView;Landroid/graphics/Bitmap;)V
 
-    .line 359
+    .line 357
     return-void
 .end method
 
@@ -181,8 +190,8 @@
     .locals 4
 
     .prologue
-    .line 372
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->iSI:Ljava/lang/ref/WeakReference;
+    .line 370
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->jpR:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -204,21 +213,21 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 376
+    .line 374
     :cond_1
     return-void
 
-    .line 372
+    .line 370
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->ewu:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->eCN:Landroid/graphics/Rect;
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->copyBounds(Landroid/graphics/Rect;)V
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->ewu:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->eCN:Landroid/graphics/Rect;
 
-    sget-object v3, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->iSH:Landroid/graphics/Paint;
+    sget-object v3, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->jpQ:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
@@ -231,7 +240,7 @@
     .locals 1
 
     .prologue
-    .line 398
+    .line 396
     const/4 v0, 0x0
 
     return v0
@@ -241,7 +250,7 @@
     .locals 0
 
     .prologue
-    .line 390
+    .line 388
     return-void
 .end method
 
@@ -249,6 +258,6 @@
     .locals 0
 
     .prologue
-    .line 394
+    .line 392
     return-void
 .end method

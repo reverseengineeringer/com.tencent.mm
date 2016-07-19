@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/je" android:padding="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/hb" style="@style/MMBody">
+        <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:padding="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/jt" android:lineSpacingExtra="@dimen/jw" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/jf" android:background="@drawable/dl" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8" android:layout_marginRight="@dimen/j8" android:minHeight="@dimen/hm">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/h4" android:textColor="@color/j_" android:gravity="center_vertical" android:id="@id/jg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="from time" />
+                <TextView android:textSize="@dimen/jc" android:textColor="#ffa5a5a5" android:gravity="center_vertical" android:id="@id/jh" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="from who" android:lineSpacingExtra="@dimen/jw" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/h4" android:textColor="#ff576b95" android:gravity="center_vertical" android:id="@id/ji" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="size" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/jj" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8" android:src="@raw/net_warn_icon" />
+        </LinearLayout>
+        <TextView android:gravity="left" android:layout_marginTop="@dimen/j8" android:text="@string/jy" style="@style/qq_sync_intro_text" />
+        <Button android:id="@id/jk" android:layout_marginLeft="@dimen/e0" android:layout_marginTop="@dimen/hb" android:layout_marginRight="@dimen/e0" android:text="@string/jw" style="@style/MMSolidGreenLargeButton" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:id="@id/jl" android:padding="0.0dip" android:visibility="gone" android:layout_height="fill_parent" android:layout_marginTop="@dimen/hb" style="@style/MMBody">
+        <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:padding="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/jt" android:lineSpacingExtra="@dimen/jw" />
+        <LinearLayout android:gravity="center_vertical" android:background="@drawable/t5" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8" android:layout_marginRight="@dimen/j8" android:minHeight="@dimen/hm">
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/j_" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jf" />
+        </LinearLayout>
+        <TextView android:gravity="left" android:layout_marginTop="@dimen/j8" android:text="@string/jy" style="@style/qq_sync_intro_text" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/jm" android:padding="0.0dip" android:visibility="gone" android:layout_height="fill_parent" android:layout_marginTop="@dimen/hb" style="@style/MMBody" />
+    <LinearLayout android:gravity="center_horizontal" android:id="@id/jn" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/hb" style="@style/MMBody">
+        <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:padding="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/jt" android:lineSpacingExtra="@dimen/jw" />
+        <LinearLayout android:gravity="center_vertical" android:background="@drawable/t5" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8" android:layout_marginRight="@dimen/j8" android:minHeight="@dimen/hm">
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/j_" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/jz" android:layout_weight="1.0" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/jo" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+        </LinearLayout>
+        <TextView android:gravity="left" android:layout_marginTop="@dimen/j8" android:text="@string/jy" style="@style/qq_sync_intro_text" />
+    </LinearLayout>
+</LinearLayout>

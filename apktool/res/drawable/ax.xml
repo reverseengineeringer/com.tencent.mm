@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:Android="http://schemas.android.com/apk/res/android">
+    <item Android:drawable="@drawable/aw" />
+    <item Android:drawable="@raw/emotionstore_add_icon" Android:left="16.0dip" Android:top="6.0dip" Android:right="16.0dip" Android:bottom="6.0dip" />
+    <item Android:drawable="@drawable/yh" Android:left="0.0dip" Android:top="0.0dip" Android:right="23.0dip" />
+</layer-list>

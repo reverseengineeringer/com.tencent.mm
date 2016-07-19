@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic hgS:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
+.field final synthetic hvH:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
 
-.field final synthetic hgT:Lcom/tencent/mm/plugin/sns/d/t;
+.field final synthetic hvI:Lcom/tencent/mm/plugin/sns/e/t;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;Lcom/tencent/mm/plugin/sns/d/t;)V
+.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;Lcom/tencent/mm/plugin/sns/e/t;)V
     .locals 0
 
     .prologue
     .line 185
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$2;->hgS:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$2;->hvH:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$2;->hgT:Lcom/tencent/mm/plugin/sns/d/t;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$2;->hvI:Lcom/tencent/mm/plugin/sns/e/t;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,18 +45,18 @@
 
     .prologue
     .line 189
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$2;->hgS:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$2;->hvH:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;)V
 
     .line 190
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$2;->hgT:Lcom/tencent/mm/plugin/sns/d/t;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$2;->hvI:Lcom/tencent/mm/plugin/sns/e/t;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 191
     return-void

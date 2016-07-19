@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" style="@style/MMFullLineItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/dl" style="@style/MMListItem">
+        <ImageView android:id="@id/ao3" android:background="@null" android:layout_width="@dimen/i5" android:layout_height="@dimen/i5" android:layout_marginRight="@dimen/i7" />
+        <TextView android:id="@id/ao4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/j8" android:singleLine="true" style="@style/MMFontPreferenceLarge" />
+    </LinearLayout>
+</LinearLayout>

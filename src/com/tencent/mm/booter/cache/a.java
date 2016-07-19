@@ -6,29 +6,29 @@ import android.graphics.Bitmap;
 import com.tencent.mm.a.f;
 import com.tencent.mm.cache.MCacheItem;
 import com.tencent.mm.cache.b.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.q;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.r;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Map;
 
 public final class a
   extends b.a
 {
-  public static a bnn;
-  private final f bno;
+  public static a bbl;
+  private final f<String, Bitmap> bbm;
   
   private a()
   {
-    Context localContext = y.getContext();
+    Context localContext = aa.getContext();
     if (com.tencent.mm.platformtools.a.a.values == null) {}
     try
     {
-      com.tencent.mm.platformtools.a.a.values = q.CK(ay.d(localContext.getAssets().open("profile.ini")));
+      com.tencent.mm.platformtools.a.a.values = r.EX(be.d(localContext.getAssets().open("profile.ini")));
       if (com.tencent.mm.platformtools.a.a.values == null)
       {
         localContext = null;
-        bno = new f(ay.getInt(localContext, 2000));
+        bbm = new f(be.getInt(localContext, 2000));
         return;
       }
     }
@@ -36,7 +36,7 @@ public final class a
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpJ/Ri7/U8l0ZUhPEbTfEF2l", "exception:%s", new Object[] { ay.b(localException) });
+        v.e("MicroMsg.ProfileUtil", "exception:%s", new Object[] { be.f(localException) });
         continue;
         String str = (String)com.tencent.mm.platformtools.a.a.values.get("BACKGROUND_BITMAP_CACHE_LIMIT");
       }
@@ -45,40 +45,40 @@ public final class a
   
   public static void destroy()
   {
-    if (bnn == null) {
+    if (bbl == null) {
       return;
     }
-    bnnbno.clear();
+    bblbbm.clear();
   }
   
   public static void prepare()
   {
-    if (bnn == null) {
-      bnn = new a();
+    if (bbl == null) {
+      bbl = new a();
     }
   }
   
   public final void a(String paramString, Bitmap paramBitmap)
   {
-    u.v("!32@/B4Tb64lLpLhzJusfWXg89/gcb/GJ8Qq", "setting bitmap: %s", new Object[] { paramString });
-    bno.d(paramString, paramBitmap);
+    v.v("MicroMsg.MMCacheImpl", "setting bitmap: %s", new Object[] { paramString });
+    bbm.g(paramString, paramBitmap);
   }
   
-  public final MCacheItem cI(String paramString)
+  public final MCacheItem cP(String paramString)
   {
-    u.v("!32@/B4Tb64lLpLhzJusfWXg89/gcb/GJ8Qq", "getting cache item: %s", new Object[] { paramString });
+    v.v("MicroMsg.MMCacheImpl", "getting cache item: %s", new Object[] { paramString });
     return null;
   }
   
-  public final void cJ(String paramString)
+  public final void cQ(String paramString)
   {
-    u.v("!32@/B4Tb64lLpLhzJusfWXg89/gcb/GJ8Qq", "setting cache item: %s", new Object[] { paramString });
+    v.v("MicroMsg.MMCacheImpl", "setting cache item: %s", new Object[] { paramString });
   }
   
   public final Bitmap getBitmap(String paramString)
   {
-    u.v("!32@/B4Tb64lLpLhzJusfWXg89/gcb/GJ8Qq", "getting bitmap: %s", new Object[] { paramString });
-    return (Bitmap)bno.get(paramString);
+    v.v("MicroMsg.MMCacheImpl", "getting bitmap: %s", new Object[] { paramString });
+    return (Bitmap)bbm.get(paramString);
   }
 }
 

@@ -1,52 +1,39 @@
 package com.tencent.mm.pluginsdk.c;
 
-import com.tencent.mm.d.a.gm;
-import com.tencent.mm.d.a.gm.a;
+import com.tencent.mm.e.a.gx;
 import com.tencent.mm.sdk.c.b;
 import com.tencent.mm.sdk.c.c;
 import java.util.ArrayList;
 
 public abstract class a
-  extends c
+  extends c<gx>
 {
-  protected ArrayList izz = new ArrayList(3);
+  protected ArrayList<String> iVV = new ArrayList(3);
   
-  public a(int paramInt)
+  public a()
   {
-    super(0);
+    kum = gx.class.getName().hashCode();
   }
   
   public static void a(String paramString, a parama)
   {
-    if (!izz.contains(paramString)) {
-      izz.add(paramString);
+    if (!iVV.contains(paramString)) {
+      iVV.add(paramString);
     }
-    com.tencent.mm.sdk.c.a.jUF.b("MStorageNotify", parama);
-    e.zz(paramString);
+    com.tencent.mm.sdk.c.a.kug.d(parama);
+    e.Bv(paramString);
   }
   
   public static void b(String paramString, a parama)
   {
-    e.zA(paramString);
-    com.tencent.mm.sdk.c.a.jUF.c("MStorageNotify", parama);
-    if (izz.contains(paramString)) {
-      izz.remove(paramString);
+    e.Bw(paramString);
+    com.tencent.mm.sdk.c.a.kug.e(parama);
+    if (iVV.contains(paramString)) {
+      iVV.remove(paramString);
     }
   }
   
-  public final boolean a(b paramb)
-  {
-    if ((paramb instanceof gm))
-    {
-      paramb = (gm)paramb;
-      if ((aBD.aBE != null) && (izz.contains(aBD.aBE.id))) {
-        g(aBD.aBE);
-      }
-    }
-    return false;
-  }
-  
-  public abstract void g(b paramb);
+  public abstract void v(b paramb);
 }
 
 /* Location:

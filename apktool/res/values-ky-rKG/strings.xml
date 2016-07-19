@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">%1$s Android Тагынма колдонмосунун жаңыртылышын талап кылат.</string>
+    <string name="b">Android Тагынма колдонмосу жаңыртылмайынча %1$s иштебейт.</string>
+    <string name="c">Android Тагынманы жаңыртуу</string>
+    <string name="d">%1$s учурда жеткиликсиз бир же бир нече Google Play кызматтарын талап кылууда. Жардам үчүн өндүрүүчүгө кайрылыңыз.</string>
+    <string name="e">Google Play кызматтарын иштетүү</string>
+    <string name="f">Google Play кызматтарын иштетмейиңизче %1$s иштебейт.</string>
+    <string name="g">Google Play кызматтарын иштетүү</string>
+    <string name="h">%1$s сурап жатат</string>
+    <string name="i">Google Play кызматтарын алуу</string>
+    <string name="j">Google Play кызматтарысыз %1$s иштебейт, алар телефонуңузда жок болуп жатат.</string>
+    <string name="k">Google Play кызматтарысыз %1$s иштебейт, алар планшетиңизде жок болуп жатат.</string>
+    <string name="l">Google Play кызматтарын алуу</string>
+    <string name="m">Көрсөтүлгөн каттоо эсеби бул түзмөктө жок. Башка каттоо эсебин тандаңыз.</string>
+    <string name="n">Каттоо эсеби жараксыз</string>
+    <string name="o">Колдонмону иштетүү үчүн, Google Play Кызматтарын иштетүү керек.</string>
+    <string name="p">Google Play Кызматтарына туташуу үчүн, дайындарды өткөрүүчү туташуу талап кылынат.</string>
+    <string name="q">Тармак катасы</string>
+    <string name="r">Колдонмону иштетүү үчүн, Google Play Кызматтарын жаңыртуу керек.</string>
+    <string name="s">Google Play кызматтарынын катасы</string>
+    <string name="t">Белгиленген каттоо эсепке кирүү катасы. Башка каттоо эсебин тандаңыз.</string>
+    <string name="u">Кирүү ишке ашкан жок</string>
+    <string name="v">Google Play кызматтарында келип чыккан белгисиз көйгөй.</string>
+    <string name="w">%1$s Google Play кызматтарына ишенет, аларды түзмөгүңүз колдоого албайт. Жардам үчүн өндүрүүчүгө кайрылыңыз.</string>
+    <string name="x">Google Play кызматтары</string>
+    <string name="y">Жаңыртуу</string>
+    <string name="z">Google Play кызматтары жаңыртылмайынча %1$s иштебейт.</string>
+    <string name="a0">Google Play кызматтарын жаңыртуу</string>
+    <string name="a1">Google Play кызматтарысыз %1$s иштебейт, алар учурда жаңыртылууда.</string>
+    <string name="a2">Google Play кызматтары жаңыртылууда</string>
+    <string name="a3">Телефондо ачык</string>
+    <string name="a4">Кирүү</string>
+    <string name="a5">Google менен кирүү</string>
+</resources>

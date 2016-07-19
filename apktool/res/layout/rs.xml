@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/awm" style="@style/GAME_MMSearchListNormalItem">
+        <ImageView android:id="@id/awn" android:layout_width="@dimen/hz" android:layout_height="@dimen/hz" android:layout_marginRight="@dimen/it" android:layout_alignParentLeft="true" />
+        <TextView android:id="@id/awo" android:layout_marginLeft="5.0dip" android:minHeight="24.0dip" android:layout_alignTop="@id/awn" android:layout_alignParentRight="true" style="@style/MMFontTipInList" />
+        <TextView android:gravity="center_vertical" android:id="@id/awp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="24.0dip" android:layout_toLeftOf="@id/awo" android:layout_toRightOf="@id/awn" android:layout_alignTop="@id/awn" style="@style/MMFontTitleInList" />
+        <TextView android:gravity="center_vertical" android:id="@id/awq" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:minHeight="24.0dip" android:singleLine="true" android:layout_toRightOf="@id/awn" android:layout_alignLeft="@id/awp" android:layout_alignBottom="@id/awn" style="@style/MMFontTipInList" />
+    </RelativeLayout>
+</FrameLayout>

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bzi:Lcom/tencent/mm/model/a;
+.field final synthetic bsf:Lcom/tencent/mm/model/a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 25
-    iput-object p1, p0, Lcom/tencent/mm/model/a$1;->bzi:Lcom/tencent/mm/model/a;
+    iput-object p1, p0, Lcom/tencent/mm/model/a$1;->bsf:Lcom/tencent/mm/model/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,14 +44,14 @@
 
     .line 29
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/model/a;->re()Z
+    invoke-static {}, Lcom/tencent/mm/model/a;->rd()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 30
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0xe2
 
@@ -61,7 +61,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -75,7 +75,7 @@
     move-exception v0
 
     .line 33
-    const-string/jumbo v1, "!44@/B4Tb64lLpLEGVwVFEpAHktoF8fiVITamsAi0LNQQfI="
+    const-string/jumbo v1, "MicroMsg.AccInfoCacheInWorker"
 
     const-string/jumbo v2, "init Exception:%s"
 
@@ -83,13 +83,13 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

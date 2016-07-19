@@ -16,6 +16,16 @@
     name = "h"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Landroid/view/View;",
+        ">;"
+    }
+.end annotation
+
 
 # direct methods
 .method constructor <init>()V
@@ -51,13 +61,13 @@
 
     check-cast v1, Landroid/support/v4/view/ViewPager$LayoutParams;
 
-    iget-boolean v2, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->gF:Z
+    iget-boolean v2, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->ha:Z
 
-    iget-boolean v3, v1, Landroid/support/v4/view/ViewPager$LayoutParams;->gF:Z
+    iget-boolean v3, v1, Landroid/support/v4/view/ViewPager$LayoutParams;->ha:Z
 
     if-eq v2, v3, :cond_1
 
-    iget-boolean v0, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->gF:Z
+    iget-boolean v0, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->ha:Z
 
     if-eqz v0, :cond_0
 

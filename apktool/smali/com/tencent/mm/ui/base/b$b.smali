@@ -18,7 +18,16 @@
 
 
 # instance fields
-.field public kBn:Ljava/lang/ref/WeakReference;
+.field public las:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/tencent/mm/ui/base/b$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -53,16 +62,16 @@
     const/4 v1, 0x0
 
     .line 157
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/b$b;->kBn:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/b$b;->las:Ljava/lang/ref/WeakReference;
 
     if-nez v0, :cond_0
 
     .line 158
-    const-string/jumbo v0, "!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i"
+    const-string/jumbo v0, "MicroMsg.ActivityUtil"
 
     const-string/jumbo v1, "swipe invoke fail, callbackRef NULL!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 172
     :goto_0
@@ -70,7 +79,7 @@
 
     .line 161
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/b$b;->kBn:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/b$b;->las:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -82,11 +91,11 @@
     if-nez v0, :cond_1
 
     .line 163
-    const-string/jumbo v0, "!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i"
+    const-string/jumbo v0, "MicroMsg.ActivityUtil"
 
     const-string/jumbo v1, "swipe invoke fail, callback NULL!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -115,7 +124,7 @@
 
     .line 171
     :cond_2
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/b$a;->hu(Z)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/b$a;->hS(Z)V
 
     goto :goto_0
 .end method

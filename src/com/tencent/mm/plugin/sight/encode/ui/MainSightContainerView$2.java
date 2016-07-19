@@ -11,19 +11,19 @@ final class MainSightContainerView$2
   
   public final void run()
   {
-    if ((!MainSightContainerView.f(gCA)) || ((MainSightContainerView.d(gCA) != null) && (dgCA).gDc.awS()))) {
-      MainSightContainerView.g(gCA);
+    if ((!MainSightContainerView.f(gJb)) || ((MainSightContainerView.d(gJb) != null) && (dgJb).gJD.azp()))) {
+      MainSightContainerView.g(gJb);
     }
     do
     {
       return;
-      MainSightContainerView.h(gCA).setVisibility(0);
-    } while ((MainSightContainerView.d(gCA) == null) || (MainSightContainerView.d(gCA).awY()) || (MainSightContainerView.i(gCA).getVisibility() == 0));
-    MainSightContainerView.i(gCA).setVisibility(0);
-    MainSightContainerView.i(gCA).startAnimation(AnimationUtils.loadAnimation(MainSightContainerView.e(gCA), 2130837575));
-    MainSightContainerView.j(gCA).setText(2131430517);
-    MainSightContainerView.j(gCA).setVisibility(0);
-    MainSightContainerView.j(gCA).startAnimation(AnimationUtils.loadAnimation(MainSightContainerView.e(gCA), 2130837575));
+      MainSightContainerView.h(gJb).setVisibility(0);
+    } while ((MainSightContainerView.d(gJb) == null) || (MainSightContainerView.d(gJb).azx()) || (MainSightContainerView.i(gJb).getVisibility() == 0));
+    MainSightContainerView.i(gJb).setVisibility(0);
+    MainSightContainerView.i(gJb).startAnimation(AnimationUtils.loadAnimation(MainSightContainerView.e(gJb), 2130968612));
+    MainSightContainerView.j(gJb).setText(2131235330);
+    MainSightContainerView.j(gJb).setVisibility(0);
+    MainSightContainerView.j(gJb).startAnimation(AnimationUtils.loadAnimation(MainSightContainerView.e(gJb), 2130968612));
   }
 }
 

@@ -40,7 +40,7 @@ final class c$b
     return ((EdgeEffect)paramObject).draw(paramCanvas);
   }
   
-  public final Object l(Context paramContext)
+  public final Object j(Context paramContext)
   {
     return new EdgeEffect(paramContext);
   }

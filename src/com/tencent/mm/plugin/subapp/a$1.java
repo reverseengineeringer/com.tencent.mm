@@ -1,0 +1,9 @@
+package com.tencent.mm.plugin.subapp;
+
+final class a$1 {}
+
+/* Location:
+ * Qualified Name:     com.tencent.mm.plugin.subapp.a.1
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

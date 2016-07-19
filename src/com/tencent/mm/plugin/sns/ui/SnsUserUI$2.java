@@ -1,18 +1,23 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 
 final class SnsUserUI$2
-  implements DialogInterface.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
   SnsUserUI$2(SnsUserUI paramSnsUserUI) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramDialogInterface.dismiss();
-    hme.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    if ((SnsUserUI.n(hCj) != null) && (nhCj).hog))
+    {
+      SnsUserUI.n(hCj).fh(true);
+      SnsUserUI.i(hCj);
+      return true;
+    }
+    hCj.finish();
+    return true;
   }
 }
 

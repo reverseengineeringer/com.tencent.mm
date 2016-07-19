@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" style="@style/MMBody">
+        <ImageView android:src="@drawable/zb" style="@style/FreeWifiConnectStateIV" />
+        <TextView android:id="@id/aoi" android:text="@string/awm" style="@style/FreeWifiConnectStateTV" />
+        <TextView android:id="@id/aoj" android:text="@string/aw9" style="@style/FreeWifiConnectTips" />
+        <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_marginTop="@dimen/hb" style="@style/MMLine">
+            <CheckBox android:id="@id/aok" android:text="@string/avh" style="@style/FreeWifiCheckBox" />
+            <Button android:id="@id/aol" android:text="@string/awo" style="@style/FreeWifiUserAgeementBtn" />
+        </LinearLayout>
+        <Button android:id="@id/aom" android:text="@string/aw8" style="@style/FreeWifiUserAgreementBtn" />
+    </LinearLayout>
+    <Button android:id="@id/aon" android:text="@string/aw5" style="@style/FreeWifiHelpBtn" />
+</LinearLayout>

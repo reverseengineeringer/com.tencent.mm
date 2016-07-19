@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/model/b/d$a;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->onStart()V
+    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bkO()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 2887
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$77;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 3063
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$77;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,36 +36,41 @@
 
 
 # virtual methods
-.method public final uR()V
+.method public final run()V
     .locals 2
 
     .prologue
-    .line 2889
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$77;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 3066
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$77;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->o(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->lrK:Lcom/tencent/mm/storage/k;
 
-    move-result-object v0
+    iget v0, v0, Lcom/tencent/mm/e/b/p;->field_type:I
 
-    new-instance v1, Lcom/tencent/mm/ui/chatting/ChattingUI$a$77$1;
+    invoke-static {v0}, Lcom/tencent/mm/i/a;->cy(I)Z
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a$77$1;-><init>(Lcom/tencent/mm/ui/chatting/ChattingUI$a$77;)V
+    move-result v0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    if-nez v0, :cond_0
 
-    .line 2894
-    return-void
-.end method
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$77;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-.method public final uS()V
-    .locals 1
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->lrK:Lcom/tencent/mm/storage/k;
 
-    .prologue
-    .line 2897
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$77;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->bbC()Z
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->J(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)V
+    move-result v0
 
-    .line 2898
+    if-eqz v0, :cond_0
+
+    .line 3067
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$77;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+
+    const v1, 0x7f080391
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->rS(I)V
+
+    .line 3069
+    :cond_0
     return-void
 .end method

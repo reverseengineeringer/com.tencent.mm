@@ -4,15 +4,15 @@
 
 
 # static fields
-.field static akp:Lcom/tencent/mm/sdk/platformtools/aa;
+.field static Xi:Lcom/tencent/mm/sdk/platformtools/ac;
 
 
 # instance fields
-.field akm:Ljava/io/File;
+.field Xf:Ljava/io/File;
 
-.field private akn:Ljava/util/concurrent/locks/ReentrantLock;
+.field private Xg:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field private ako:Ljava/util/concurrent/locks/Condition;
+.field private Xh:Ljava/util/concurrent/locks/Condition;
 
 
 # direct methods
@@ -28,16 +28,16 @@
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/a/b;->akn:Ljava/util/concurrent/locks/ReentrantLock;
+    iput-object v0, p0, Lcom/tencent/mm/a/b;->Xg:Ljava/util/concurrent/locks/ReentrantLock;
 
     .line 22
-    iget-object v0, p0, Lcom/tencent/mm/a/b;->akn:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->Xg:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->newCondition()Ljava/util/concurrent/locks/Condition;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/a/b;->ako:Ljava/util/concurrent/locks/Condition;
+    iput-object v0, p0, Lcom/tencent/mm/a/b;->Xh:Ljava/util/concurrent/locks/Condition;
 
     .line 26
     const-class v1, Lcom/tencent/mm/a/b;
@@ -46,7 +46,7 @@
 
     .line 27
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/a/b;->akp:Lcom/tencent/mm/sdk/platformtools/aa;
+    sget-object v0, Lcom/tencent/mm/a/b;->Xi:Lcom/tencent/mm/sdk/platformtools/ac;
 
     if-nez v0, :cond_0
 
@@ -61,15 +61,15 @@
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
     .line 30
-    new-instance v2, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v2, Lcom/tencent/mm/sdk/platformtools/ac;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    invoke-direct {v2, v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v2, v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
-    sput-object v2, Lcom/tencent/mm/a/b;->akp:Lcom/tencent/mm/sdk/platformtools/aa;
+    sput-object v2, Lcom/tencent/mm/a/b;->Xi:Lcom/tencent/mm/sdk/platformtools/ac;
 
     .line 32
     :cond_0
@@ -88,7 +88,7 @@
 
     if-eqz v1, :cond_1
 
-    iput-object v0, p0, Lcom/tencent/mm/a/b;->akm:Ljava/io/File;
+    iput-object v0, p0, Lcom/tencent/mm/a/b;->Xf:Ljava/io/File;
 
     .line 34
     :goto_0
@@ -107,7 +107,7 @@
 
     .line 33
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpKXBaxGdtxV+BEoZ2+3MD7CYjuHi5HpPHU="
+    const-string/jumbo v0, "MicroMsg.ConcurrentFileBuilder"
 
     const-string/jumbo v1, "create new file %s"
 
@@ -119,15 +119,15 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    sget-object v0, Lcom/tencent/mm/a/b;->akp:Lcom/tencent/mm/sdk/platformtools/aa;
+    sget-object v0, Lcom/tencent/mm/a/b;->Xi:Lcom/tencent/mm/sdk/platformtools/ac;
 
     new-instance v1, Lcom/tencent/mm/a/b$1;
 
     invoke-direct {v1, p0, p1}, Lcom/tencent/mm/a/b$1;-><init>(Lcom/tencent/mm/a/b;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 .end method
@@ -137,7 +137,7 @@
 
     .prologue
     .line 17
-    iget-object v0, p0, Lcom/tencent/mm/a/b;->akn:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->Xg:Ljava/util/concurrent/locks/ReentrantLock;
 
     return-object v0
 .end method
@@ -147,38 +147,38 @@
 
     .prologue
     .line 17
-    iget-object v0, p0, Lcom/tencent/mm/a/b;->ako:Ljava/util/concurrent/locks/Condition;
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->Xh:Ljava/util/concurrent/locks/Condition;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final kk()Ljava/io/File;
+.method public final iL()Ljava/io/File;
     .locals 2
 
     .prologue
     .line 74
-    iget-object v0, p0, Lcom/tencent/mm/a/b;->akn:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->Xg:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
     .line 76
     :goto_0
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/a/b;->akm:Ljava/io/File;
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->Xf:Ljava/io/File;
 
     if-nez v0, :cond_0
 
     .line 77
-    const-string/jumbo v0, "!44@/B4Tb64lLpKXBaxGdtxV+BEoZ2+3MD7CYjuHi5HpPHU="
+    const-string/jumbo v0, "MicroMsg.ConcurrentFileBuilder"
 
     const-string/jumbo v1, "getFile await"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 78
-    iget-object v0, p0, Lcom/tencent/mm/a/b;->ako:Ljava/util/concurrent/locks/Condition;
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->Xh:Ljava/util/concurrent/locks/Condition;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->await()V
     :try_end_0
@@ -191,19 +191,19 @@
     :catch_0
     move-exception v0
 
-    iget-object v0, p0, Lcom/tencent/mm/a/b;->akn:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->Xg:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     .line 85
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/a/b;->akm:Ljava/io/File;
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->Xf:Ljava/io/File;
 
     return-object v0
 
     .line 82
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/a/b;->akn:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->Xg:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
@@ -212,7 +212,7 @@
     :catchall_0
     move-exception v0
 
-    iget-object v1, p0, Lcom/tencent/mm/a/b;->akn:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v1, p0, Lcom/tencent/mm/a/b;->Xg:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 

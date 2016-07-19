@@ -26,12 +26,13 @@
     .locals 0
 
     .prologue
-    .line 69
+    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 71
     iput-object p1, p0, Lcom/tencent/kingkong/IContentObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
+    .line 72
     return-void
 .end method
 
@@ -112,7 +113,7 @@
     .line 102
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 104
+    .line 103
     return-void
 
     :cond_0
@@ -132,13 +133,11 @@
 
     goto :goto_1
 
-    .line 101
+    .line 102
     :catchall_0
     move-exception v0
 
-    .line 102
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 103
     throw v0
 .end method

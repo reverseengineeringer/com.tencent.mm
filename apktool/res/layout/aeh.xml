@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/dg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/ats" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="left" android:orientation="vertical" android:id="@id/boj" android:paddingLeft="@dimen/i7" android:paddingTop="@dimen/hb" android:paddingRight="@dimen/i7" android:paddingBottom="@dimen/i7" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/cu" android:textColor="@color/ot" android:gravity="center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:minHeight="25.0dip" android:text="@string/dgm" />
+            <TextView android:ellipsize="end" android:id="@id/ck3" android:visibility="gone" android:layout_marginLeft="5.0dip" android:layout_marginTop="@dimen/j_" android:maxLines="2" style="@style/WalletInputTips" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center" android:id="@id/a4_" android:layout_width="fill_parent" android:layout_height="@dimen/dy" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/i7" android:src="@color/aj" />
+        <com.tencent.mm.ui.base.MaxListView android:id="@id/cke" android:background="@null" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/m2" android:dividerHeight="@dimen/dz" android:choiceMode="singleChoice" />
+        <ImageView android:background="@color/m2" android:layout_width="fill_parent" android:layout_height="@dimen/dz" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/i7" />
+        <Button android:textSize="@dimen/i8" android:textColor="@color/ot" android:id="@id/cn8" android:background="@drawable/a6" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/i2" android:text="@string/fw" />
+    </LinearLayout>
+</ScrollView>

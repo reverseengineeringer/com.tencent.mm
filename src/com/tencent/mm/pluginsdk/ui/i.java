@@ -7,20 +7,20 @@ import android.content.Intent;
 import android.util.Base64;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.z;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
 import com.tencent.mm.ui.base.g;
 
 public final class i
 {
-  public static boolean cR(Context paramContext)
+  public static boolean cP(Context paramContext)
   {
-    if (!z.CQ("network_doctor_shown")) {
+    if (!ab.Fd("network_doctor_shown")) {
       return false;
     }
-    g.a(paramContext, 2131431081, 2131430877, new DialogInterface.OnClickListener()
+    g.a(paramContext, 2131234016, 2131231028, new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
@@ -30,12 +30,12 @@ public final class i
     return true;
   }
   
-  public static boolean s(Context paramContext, final String paramString1, final String paramString2)
+  public static boolean t(Context paramContext, final String paramString1, final String paramString2)
   {
-    if (!z.CQ("wap_reporter_shown")) {
+    if (!ab.Fd("wap_reporter_shown")) {
       return false;
     }
-    g.a(paramContext, 2131431080, 2131430877, 2131430907, 2131430884, new DialogInterface.OnClickListener()
+    g.a(paramContext, 2131234524, 2131231028, 2131231003, 2131230873, new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
@@ -44,22 +44,22 @@ public final class i
         String str1 = paramString2;
         if (paramAnonymousDialogInterface == null)
         {
-          u.w("!44@mGXR/vVzLfNQboDSwDDOvfffvGyAww6NFolKGe+wF9E=", "reportViaWap: context is null");
+          v.w("Micromsg.NetworkErrAlert", "reportViaWap: context is null");
           return;
         }
         if (str2 == null) {
-          u.w("!44@mGXR/vVzLfNQboDSwDDOvfffvGyAww6NFolKGe+wF9E=", "reportViaWap: ip is null");
+          v.w("Micromsg.NetworkErrAlert", "reportViaWap: ip is null");
         }
         if (str1 == null) {
-          u.w("!44@mGXR/vVzLfNQboDSwDDOvfffvGyAww6NFolKGe+wF9E=", "reportViaWap: errMsg is null");
+          v.w("Micromsg.NetworkErrAlert", "reportViaWap: errMsg is null");
         }
-        String str3 = (String)ah.tD().rn().get(2, null);
+        String str3 = (String)ah.tE().ro().get(2, null);
         str3 = "http://w.mail.qq.com/cgi-bin/mmfeedback?t=mmfeedback&f=xhtml" + "&u=" + Base64.encodeToString(str3.getBytes(), 8);
-        str2 = str3 + "&i=" + Base64.encodeToString(ay.ad(str2, "").getBytes(), 8);
-        str1 = str2 + "&e=" + Base64.encodeToString(ay.ad(str1, "").getBytes(), 8);
+        str2 = str3 + "&i=" + Base64.encodeToString(be.ab(str2, "").getBytes(), 8);
+        str1 = str2 + "&e=" + Base64.encodeToString(be.ab(str1, "").getBytes(), 8);
         str1 = str1 + "&autologin=n";
-        u.d("!44@mGXR/vVzLfNQboDSwDDOvfffvGyAww6NFolKGe+wF9E=", "upload error to " + str1);
-        ay.C(paramAnonymousDialogInterface, str1);
+        v.d("Micromsg.NetworkErrAlert", "upload error to " + str1);
+        be.D(paramAnonymousDialogInterface, str1);
       }
     }, null);
     return true;

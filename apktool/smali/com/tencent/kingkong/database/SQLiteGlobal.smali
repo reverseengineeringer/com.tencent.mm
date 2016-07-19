@@ -35,7 +35,6 @@
     .line 42
     sput-boolean v1, Lcom/tencent/kingkong/database/SQLiteGlobal;->optimization:Z
 
-    .line 36
     return-void
 .end method
 
@@ -177,7 +176,6 @@
 
     move-result-object v3
 
-    .line 126
     const/4 v4, 0x2
 
     new-array v4, v4, [Ljava/lang/Object;
@@ -194,7 +192,6 @@
 
     move-result-object v6
 
-    .line 125
     aput-object v6, v4, v5
 
     invoke-virtual {v3, v0, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -203,7 +200,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 126
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -225,7 +221,7 @@
 
     goto :goto_0
 
-    .line 115
+    .line 130
     :catchall_0
     move-exception v0
 
@@ -306,7 +302,6 @@
 
     move-result-object v2
 
-    .line 87
     const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -321,7 +316,6 @@
 
     move-result-object v5
 
-    .line 86
     aput-object v5, v3, v4
 
     invoke-virtual {v2, v0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -330,7 +324,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 87
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -435,7 +428,6 @@
 
     move-result-object v2
 
-    .line 105
     const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -446,7 +438,6 @@
 
     const/4 v4, 0x1
 
-    .line 104
     aput-object v1, v3, v4
 
     invoke-virtual {v2, v0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;

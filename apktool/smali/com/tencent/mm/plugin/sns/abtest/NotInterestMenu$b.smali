@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract axq()V
+.method public abstract azS()V
 .end method

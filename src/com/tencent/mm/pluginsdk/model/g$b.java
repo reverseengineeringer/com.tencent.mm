@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.model;
 
 public final class g$b
 {
-  public String izW;
+  public String iWu;
 }
 
 /* Location:

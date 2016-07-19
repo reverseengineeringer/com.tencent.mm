@@ -5,27 +5,27 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.os.Looper;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.e;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.e;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.p;
 
 public final class b
   implements d, e
 {
-  public j auF;
-  public p coc;
-  public a cod;
+  public j ags;
+  public p cjq;
+  public a cjr;
   public Context context;
-  private aa handler = new aa(Looper.getMainLooper());
+  private ac handler = new ac(Looper.getMainLooper());
   
   public b(Context paramContext, a parama)
   {
     context = paramContext;
-    cod = parama;
+    cjr = parama;
   }
   
   public final void a(final int paramInt1, int paramInt2, j paramj)
@@ -37,8 +37,8 @@ public final class b
       {
         public final void run()
         {
-          if (coc != null) {
-            coc.setMessage(context.getString(2131430943) + paramInt1 + "%");
+          if (cjq != null) {
+            cjq.setMessage(context.getString(2131230948) + paramInt1 + "%");
           }
         }
       });
@@ -46,36 +46,36 @@ public final class b
     }
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
   {
     if (paramj.getType() == 139)
     {
-      ah.tE().b(139, this);
+      ah.tF().b(139, this);
       if ((paramInt2 != 0) || (paramInt1 != 0)) {
         break label77;
       }
-      cod.FY();
+      cjr.Gv();
     }
     for (;;)
     {
-      if (coc != null) {
-        coc.dismiss();
+      if (cjq != null) {
+        cjq.dismiss();
       }
       return;
       if (paramj.getType() != 138) {
         break;
       }
-      ah.tE().b(138, this);
+      ah.tF().b(138, this);
       break;
       label77:
-      u.e("!24@/B4Tb64lLpIfnJwgZ47LaQ==", "do init failed, err=" + paramInt1 + "," + paramInt2);
-      cod.FY();
+      v.e("MicroMsg.DoInit", "do init failed, err=" + paramInt1 + "," + paramInt2);
+      cjr.Gv();
     }
   }
   
   public static abstract interface a
   {
-    public abstract void FY();
+    public abstract void Gv();
   }
 }
 

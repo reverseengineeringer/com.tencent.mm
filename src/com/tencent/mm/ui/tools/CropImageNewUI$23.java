@@ -11,15 +11,15 @@ final class CropImageNewUI$23
   
   public final void run()
   {
-    if (luq.getIntent().getBooleanExtra("CropImage_DirectlyIntoFilter", false))
+    if (lVs.getIntent().getBooleanExtra("CropImage_DirectlyIntoFilter", false))
     {
-      luq.finish();
+      lVs.finish();
       return;
     }
-    CropImageNewUI.e(luq).setVisibility(8);
-    CropImageNewUI.p(luq).setVisibility(0);
-    CropImageNewUI.q(luq).setVisibility(((Integer)CropImageNewUI.q(luq).getTag()).intValue());
-    CropImageNewUI.j(luq).setVisibility(0);
+    CropImageNewUI.e(lVs).setVisibility(8);
+    CropImageNewUI.p(lVs).setVisibility(0);
+    CropImageNewUI.q(lVs).setVisibility(((Integer)CropImageNewUI.q(lVs).getTag()).intValue());
+    CropImageNewUI.j(lVs).setVisibility(0);
   }
 }
 

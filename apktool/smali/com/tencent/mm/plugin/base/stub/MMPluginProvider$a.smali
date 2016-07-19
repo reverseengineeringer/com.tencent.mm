@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public bp(Landroid/content/Context;)Z
+.method public bk(Landroid/content/Context;)Z
     .locals 1
 
     .prologue

@@ -9,8 +9,8 @@ final class i$4
   
   public final void run()
   {
-    if ((iJp.context instanceof MMActivity)) {
-      ((MMActivity)iJp.context).apz();
+    if ((jgl.context instanceof MMActivity)) {
+      ((MMActivity)jgl.context).asv();
     }
   }
 }

@@ -2,13 +2,9 @@ package com.tencent.mm.plugin.sight.encode.ui;
 
 public abstract interface b
 {
-  public abstract void awK();
+  public abstract void eC(boolean paramBoolean);
   
-  public abstract void awL();
-  
-  public abstract void eK(boolean paramBoolean);
-  
-  public abstract void tY(String paramString);
+  public abstract void ve(String paramString);
 }
 
 /* Location:

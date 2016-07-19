@@ -2,24 +2,24 @@ package com.tencent.mm.pluginsdk.ui.applet;
 
 import android.os.Bundle;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class CdnImageView$a
   implements Runnable
 {
-  private aa handler;
+  private ac handler;
   private String url;
   
-  CdnImageView$a(String paramString, aa paramaa)
+  CdnImageView$a(String paramString, ac paramac)
   {
     url = paramString;
-    handler = paramaa;
+    handler = paramac;
   }
   
   public final void run()
   {
-    byte[] arrayOfByte = ay.Du(url);
+    byte[] arrayOfByte = be.FJ(url);
     Message localMessage = Message.obtain();
     Bundle localBundle = new Bundle();
     localBundle.putByteArray("k_data", arrayOfByte);

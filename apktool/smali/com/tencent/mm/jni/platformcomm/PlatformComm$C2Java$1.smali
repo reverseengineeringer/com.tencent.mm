@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 266
+    .line 262
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,11 +34,11 @@
     .locals 1
 
     .prologue
-    .line 269
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->bwq:Lcom/tencent/mm/jni/platformcomm/PlatformComm$a;
+    .line 265
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->blD:Lcom/tencent/mm/jni/platformcomm/PlatformComm$a;
 
     invoke-interface {v0}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$a;->restartProcess()V
 
-    .line 270
+    .line 266
     return-void
 .end method

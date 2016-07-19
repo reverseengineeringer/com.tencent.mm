@@ -7,11 +7,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.ab.a.a;
-import com.tencent.mm.ab.a.a.c;
-import com.tencent.mm.ab.a.a.c.a;
-import com.tencent.mm.ab.n;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ae.a.a.c;
+import com.tencent.mm.ae.a.a.c.a;
+import com.tencent.mm.ae.n;
+import com.tencent.mm.sdk.i.e;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,35 +20,38 @@ import java.util.Map;
 final class ChattingSendDataToDeviceUI$a
   extends BaseAdapter
 {
-  private c dCP;
-  private List kQp = new ArrayList();
-  private Map kXD;
+  private Context context;
+  private c dEk;
+  private List<Map<String, ChattingSendDataToDeviceUI.c>> lqe;
+  private Map<String, ChattingSendDataToDeviceUI.c> lxR;
   
-  public ChattingSendDataToDeviceUI$a()
+  public ChattingSendDataToDeviceUI$a(ChattingSendDataToDeviceUI paramChattingSendDataToDeviceUI, Context paramContext)
   {
-    c.a locala = new c.a();
-    bTO = 2130968634;
-    dCP = locala.AA();
+    context = paramContext;
+    lqe = new ArrayList();
+    paramChattingSendDataToDeviceUI = new c.a();
+    bNp = 2130838865;
+    dEk = paramChattingSendDataToDeviceUI.AM();
   }
   
-  public final void bO(List paramList)
+  public final void cc(List<ChattingSendDataToDeviceUI.c> paramList)
   {
-    kQp.clear();
+    lqe.clear();
     int j = paramList.size();
     int i = 0;
     while (i < j)
     {
-      kXD = new HashMap();
-      kXD.put("hard_device_info", paramList.get(i));
-      kQp.add(kXD);
+      lxR = new HashMap();
+      lxR.put("hard_device_info", paramList.get(i));
+      lqe.add(lxR);
       i += 1;
     }
-    u.d("!56@/B4Tb64lLpKwUcOR+EdWcrdJoeml35tRVsicf3Gr5mNoQw/InWfBMw==", "updateData mDeviceInfoList.size()=" + kQp.size());
+    v.d("MicroMsg.ChattingSendDataToDeviceUI", "updateData mDeviceInfoList.size() = %d", new Object[] { Integer.valueOf(lqe.size()) });
   }
   
   public final int getCount()
   {
-    return kQp.size();
+    return lqe.size();
   }
   
   public final long getItemId(int paramInt)
@@ -56,97 +59,209 @@ final class ChattingSendDataToDeviceUI$a
     return paramInt;
   }
   
-  public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+  public final View getView(int paramInt, final View paramView, ViewGroup paramViewGroup)
   {
-    ChattingSendDataToDeviceUI.c localc = rf(paramInt);
-    u.d("!56@/B4Tb64lLpKwUcOR+EdWcrdJoeml35tRVsicf3Gr5mNoQw/InWfBMw==", "position =" + paramInt + " getCount() =" + getCount());
-    Object localObject;
-    int i;
+    ChattingSendDataToDeviceUI.c localc = th(paramInt);
+    v.d("MicroMsg.ChattingSendDataToDeviceUI", "position = %d, getCount() = %d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(getCount()) });
+    final int i;
+    final int j;
     StringBuffer localStringBuffer;
-    int j;
-    label181:
+    float f;
+    label249:
+    int k;
+    label252:
     String str2;
-    if (paramView == null)
+    if (ChattingSendDataToDeviceUI.f(lxJ).get(Integer.valueOf(paramInt)) == null)
     {
-      paramView = new eb();
-      localObject = View.inflate(paramViewGroup.getContext(), 2131361823, null);
-      dFN = ((View)localObject).findViewById(2131165347);
-      dda = ((TextView)((View)localObject).findViewById(2131165367));
-      cNV = ((ImageView)((View)localObject).findViewById(2131165364));
-      kXB = ((TextView)((View)localObject).findViewById(2131165368));
-      ldT = ((SendDataToDeviceProgressBar)((View)localObject).findViewById(2131165365));
-      ldT.setVisibility(4);
-      ((View)localObject).setTag(paramView);
-      paramViewGroup = paramView;
-      paramView = (View)localObject;
-      String str1 = bpe;
-      i = 0;
+      paramView = new ec();
+      paramViewGroup = View.inflate(paramViewGroup.getContext(), 2130904328, null);
+      dHo = paramViewGroup.findViewById(2131755259);
+      dbD = ((TextView)paramViewGroup.findViewById(2131756617));
+      cKV = ((ImageView)paramViewGroup.findViewById(2131756616));
+      lxP = ((TextView)paramViewGroup.findViewById(2131758859));
+      lEh = ((SendDataToDeviceProgressBar)paramViewGroup.findViewById(2131758858));
+      lEh.setVisibility(4);
+      ChattingSendDataToDeviceUI.f(lxJ).put(Integer.valueOf(paramInt), paramViewGroup);
+      paramViewGroup.setTag(paramView);
+      ChattingSendDataToDeviceUI.n(lxJ).put(deviceID, Integer.valueOf(paramInt));
+      String str1 = bdd;
+      i = 8;
+      j = 0;
       localObject = new StringBuffer();
       localStringBuffer = new StringBuffer();
-      j = 0;
-      if (j >= str1.length()) {
-        break label289;
+      f = com.tencent.mm.az.a.cW(context);
+      if ((f != 1.125F) && (f != 1.25F)) {
+        break label359;
       }
-      int k = Character.codePointAt(str1, j);
-      str2 = str1.substring(j, j + 1);
-      if ((k < 0) || (k > 255)) {
-        break label268;
+      i = 6;
+      k = 0;
+      if (k >= str1.length()) {
+        break label394;
       }
-      i += 1;
-      label232:
-      if (i > 8) {
-        break label277;
+      int m = Character.codePointAt(str1, k);
+      str2 = str1.substring(k, k + 1);
+      if ((m < 0) || (m > 255)) {
+        break label373;
+      }
+      j += 1;
+      label303:
+      if (j > i) {
+        break label382;
       }
       localObject = ((StringBuffer)localObject).append(str2);
     }
     for (;;)
     {
-      j += 1;
-      break label181;
-      paramViewGroup = (eb)paramView.getTag();
+      k += 1;
+      break label252;
+      paramViewGroup = (View)ChattingSendDataToDeviceUI.f(lxJ).get(Integer.valueOf(paramInt));
+      paramView = (ec)paramViewGroup.getTag();
       break;
-      label268:
-      i += 2;
-      break label232;
-      label277:
+      label359:
+      if (f != 1.375F) {
+        break label249;
+      }
+      i = 5;
+      break label249;
+      label373:
+      j += 2;
+      break label303;
+      label382:
       localStringBuffer = localStringBuffer.append(str2);
     }
-    label289:
-    dda.setText(((StringBuffer)localObject).toString());
-    if (i >= 8) {
-      kXB.setText(localStringBuffer);
+    label394:
+    dbD.setText(((StringBuffer)localObject).toString());
+    if (j >= i) {
+      lxP.setText(localStringBuffer);
     }
-    if (awh != null)
+    final Object localObject = null;
+    if (ChattingSendDataToDeviceUI.g(lxJ).containsKey(thdeviceID)) {
+      localObject = (ChattingSendDataToDeviceUI.c)ChattingSendDataToDeviceUI.g(lxJ).get(thdeviceID);
+    }
+    if ((localObject != null) && (ahZ != null))
     {
-      kXB.setText(awh);
-      u.d("!56@/B4Tb64lLpKwUcOR+EdWcrdJoeml35tRVsicf3Gr5mNoQw/InWfBMw==", "position(%s), sendState(%s).", new Object[] { Integer.valueOf(paramInt), awh });
-      if (!awh.equals(ChattingSendDataToDeviceUI.beM().getResources().getString(2131427895))) {
-        break label482;
+      v.d("MicroMsg.ChattingSendDataToDeviceUI", "position(%s), sendState(%s).", new Object[] { Integer.valueOf(paramInt), ahZ });
+      if (!ahZ.equals("send_data_sending")) {
+        break label716;
       }
-      kXB.setTextColor(ChattingSendDataToDeviceUI.beM().getResources().getColor(2131231237));
-      ldT.setProgress(progress);
-      ldT.setVisibility(0);
+      lxP.setText(context.getString(2131231770));
+      lxP.setTextColor(context.getResources().getColor(2131689915));
+      lEh.setProgress(progress);
+      lEh.setVisibility(0);
+      localObject = deviceID;
+      localObject = (ChattingSendDataToDeviceUI.c)ChattingSendDataToDeviceUI.g(lxJ).get(localObject);
+      j = progress;
+      if (j < 100) {
+        break label702;
+      }
+      i = 0;
+      e.c(new Runnable()
+      {
+        public final void run()
+        {
+          int i = j + 1;
+          while (lxJ.lxB)
+          {
+            int j;
+            if (i >= 100)
+            {
+              j = i;
+              try
+              {
+                if (localObjectahZ.equals("send_data_sucess"))
+                {
+                  j = i;
+                  lxJ.runOnUiThread(new Runnable()
+                  {
+                    public final void run()
+                    {
+                      lxK.lEh.setProgress(0);
+                      lxK.lEh.setVisibility(4);
+                      lxK.lxP.setText(lxJ.getText(2131231768));
+                      lxK.lxP.setTextColor(lxJ.getResources().getColor(2131689915));
+                      lxL.ahZ = "send_data_sucess";
+                      lxL.progress = 0;
+                      ChattingSendDataToDeviceUI.g(lxJ).put(lxL.deviceID, lxL);
+                      v.i("MicroMsg.ChattingSendDataToDeviceUI", " deviceId %s SEND_DATA_SUCCESS!", new Object[] { lxL.deviceID });
+                    }
+                  });
+                  return;
+                }
+                j = i;
+                if (!localObjectahZ.equals("send_data_failed")) {
+                  continue;
+                }
+                j = i;
+                lxJ.runOnUiThread(new Runnable()
+                {
+                  public final void run()
+                  {
+                    lxK.lEh.setProgress(0);
+                    lxK.lEh.setVisibility(4);
+                    lxK.lxP.setText(lxJ.getText(2131231765));
+                    lxK.lxP.setTextColor(lxJ.getResources().getColor(2131689918));
+                    lxL.ahZ = "send_data_failed";
+                    lxL.progress = 0;
+                    ChattingSendDataToDeviceUI.g(lxJ).put(lxL.deviceID, lxL);
+                    v.i("MicroMsg.ChattingSendDataToDeviceUI", " deviceId %s SEND_DATA_FAILED!", new Object[] { lxL.deviceID });
+                  }
+                });
+                return;
+              }
+              catch (Exception localException)
+              {
+                v.d("MicroMsg.ChattingSendDataToDeviceUI", "setSendingProgress exception %s", new Object[] { localException });
+                i = j;
+              }
+            }
+            else
+            {
+              j = i;
+              paramViewlEh.setProgress(i);
+              j = i;
+              localObjectprogress = i;
+              i += 1;
+              j = i;
+              Thread.sleep(i);
+            }
+          }
+        }
+      }, "SendDataState_handler").start();
     }
     for (;;)
     {
-      u.d("!56@/B4Tb64lLpKwUcOR+EdWcrdJoeml35tRVsicf3Gr5mNoQw/InWfBMw==", "position(%s), name(%s).", new Object[] { Integer.valueOf(paramInt), bpe });
-      n.As().a(iconUrl, cNV, dCP);
-      dFN.setTag(Integer.valueOf(paramInt));
-      return paramView;
-      label482:
-      if (awh.equals(ChattingSendDataToDeviceUI.beM().getResources().getString(2131427893))) {
-        kXB.setTextColor(ChattingSendDataToDeviceUI.beM().getResources().getColor(2131231237));
-      } else if (awh.equals(ChattingSendDataToDeviceUI.beM().getResources().getString(2131427900))) {
-        kXB.setTextColor(ChattingSendDataToDeviceUI.beM().getResources().getColor(2131231238));
-      } else if (awh.equals(ChattingSendDataToDeviceUI.beM().getResources().getString(2131427894))) {
-        kXB.setTextColor(ChattingSendDataToDeviceUI.beM().getResources().getColor(2131231234));
+      v.d("MicroMsg.ChattingSendDataToDeviceUI", "position(%s), name(%s).", new Object[] { Integer.valueOf(paramInt), bdd });
+      n.AC().a(iconUrl, cKV, dEk);
+      dHo.setTag(Integer.valueOf(paramInt));
+      return paramViewGroup;
+      label702:
+      i = 500 / (100 - j);
+      break;
+      label716:
+      if (ahZ.equals("send_data_sucess"))
+      {
+        lxP.setText(context.getString(2131231768));
+        lxP.setTextColor(context.getResources().getColor(2131689915));
+        lEh.setVisibility(4);
+      }
+      else if (ahZ.equals("send_data_cancel"))
+      {
+        lxP.setText(context.getString(2131231761));
+        lxP.setTextColor(context.getResources().getColor(2131689913));
+        lEh.setVisibility(4);
+      }
+      else if (ahZ.equals("send_data_failed"))
+      {
+        lxP.setText(context.getString(2131231765));
+        lxP.setTextColor(context.getResources().getColor(2131689918));
+        lEh.setVisibility(4);
       }
     }
   }
   
-  public final ChattingSendDataToDeviceUI.c rf(int paramInt)
+  public final ChattingSendDataToDeviceUI.c th(int paramInt)
   {
-    return (ChattingSendDataToDeviceUI.c)((Map)kQp.get(paramInt)).get("hard_device_info");
+    return (ChattingSendDataToDeviceUI.c)((Map)lqe.get(paramInt)).get("hard_device_info");
   }
 }
 

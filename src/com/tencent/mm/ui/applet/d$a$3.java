@@ -10,18 +10,18 @@ import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import com.tencent.mm.ba.c;
-import com.tencent.mm.ba.c.a;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.bd.c;
+import com.tencent.mm.bd.c.a;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class d$a$3
   implements View.OnTouchListener
 {
-  int kzD;
-  int kzE;
-  int kzF = kzI.widthPixels - kzY.alm.width - 1;
-  int kzG = kzI.heightPixels - kzY.alm.height - 1;
-  long kzH;
+  int kYK;
+  int kYL;
+  int kYM = kYP.widthPixels - kZe.Yl.width - 1;
+  int kYN = kYP.heightPixels - kZe.Yl.height - 1;
+  long kYO;
   
   d$a$3(d.a parama, DisplayMetrics paramDisplayMetrics) {}
   
@@ -40,69 +40,69 @@ final class d$a$3
       do
       {
         return false;
-        kzD = ((int)paramMotionEvent.getRawX() - kzY.alm.x);
-        kzE = ((int)paramMotionEvent.getRawY() - kzY.alm.y);
-        kzH = System.currentTimeMillis();
+        kYK = ((int)paramMotionEvent.getRawX() - kZe.Yl.x);
+        kYL = ((int)paramMotionEvent.getRawY() - kZe.Yl.y);
+        kYO = System.currentTimeMillis();
         return false;
-        kzF = (kzI.widthPixels - kzY.alm.width - 1);
-        kzG = (kzI.heightPixels - kzY.alm.height - 1);
-        kzY.alm.x = ((int)paramMotionEvent.getRawX() - kzD);
-        kzY.alm.y = ((int)paramMotionEvent.getRawY() - kzE);
-        paramView = kzY.alm;
-        if (kzY.alm.x < 0)
+        kYM = (kYP.widthPixels - kZe.Yl.width - 1);
+        kYN = (kYP.heightPixels - kZe.Yl.height - 1);
+        kZe.Yl.x = ((int)paramMotionEvent.getRawX() - kYK);
+        kZe.Yl.y = ((int)paramMotionEvent.getRawY() - kYL);
+        paramView = kZe.Yl;
+        if (kZe.Yl.x < 0)
         {
           i = 0;
           x = i;
-          paramView = kzY.alm;
-          if (kzY.alm.x <= kzF) {
+          paramView = kZe.Yl;
+          if (kZe.Yl.x <= kYM) {
             break label339;
           }
-          i = kzF;
+          i = kYM;
           x = i;
-          paramView = kzY.alm;
-          if (kzY.alm.y >= 0) {
+          paramView = kZe.Yl;
+          if (kZe.Yl.y >= 0) {
             break label353;
           }
           i = 0;
           y = i;
-          paramView = kzY.alm;
-          if (kzY.alm.y <= kzG) {
+          paramView = kZe.Yl;
+          if (kZe.Yl.y <= kYN) {
             break label367;
           }
         }
-        for (int i = kzG;; i = kzY.alm.y)
+        for (int i = kYN;; i = kZe.Yl.y)
         {
           y = i;
-          kzY.all.updateViewLayout(kzY.alk, kzY.alm);
+          kZe.Yk.updateViewLayout(kZe.Yj, kZe.Yl);
           return false;
-          i = kzY.alm.x;
+          i = kZe.Yl.x;
           break;
-          i = kzY.alm.x;
+          i = kZe.Yl.x;
           break label229;
-          i = kzY.alm.y;
+          i = kZe.Yl.y;
           break label257;
         }
-      } while (System.currentTimeMillis() - kzH >= 300L);
-      paramView = kzY;
-      kzX.removeMessages(0);
-      kzW = 0;
-      if (!kzT) {
+      } while (System.currentTimeMillis() - kYO >= 300L);
+      paramView = kZe;
+      kZd.removeMessages(0);
+      kZc = 0;
+      if (!kYZ) {
         break;
       }
-      aAH.setVisibility(0);
-      aAF.setVisibility(4);
-    } while (c.aZg().b(kzV));
-    paramView.eh(context);
+      amQ.setVisibility(0);
+      amO.setVisibility(4);
+    } while (c.bex().b(kZb));
+    paramView.el(context);
     return false;
-    aAF.setVisibility(0);
-    aAF.setBackgroundDrawable(context.getResources().getDrawable(2130968679));
-    if (!kzT) {}
+    amO.setVisibility(0);
+    amO.setBackgroundDrawable(context.getResources().getDrawable(2130839506));
+    if (!kYZ) {}
     for (boolean bool = true;; bool = false)
     {
-      kzT = bool;
-      kzV = new c.a(null, 6, 8, 0);
-      c.aZg().c(kzV);
-      paramView.bcl();
+      kYZ = bool;
+      kZb = new c.a(null, 6, 8, 0);
+      c.bex().c(kZb);
+      paramView.bhy();
       return false;
     }
   }

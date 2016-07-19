@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ao/d$b;
+.implements Lcom/tencent/mm/ar/d$b;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iHM:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+.field final synthetic jeJ:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 404
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->iHM:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->jeJ:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,17 +36,17 @@
 
 
 # virtual methods
-.method public final EF()V
-    .locals 5
+.method public final Fa()V
+    .locals 6
 
     .prologue
     .line 434
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->iHM:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->jeJ:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->reset()V
 
     .line 435
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->iHM:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->jeJ:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->q(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;)Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
@@ -56,45 +56,45 @@
 
     const/4 v2, 0x0
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v4, -0x1
 
-    invoke-interface {v0, v1, v2, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;->a(Z[Ljava/lang/String;J)V
+    invoke-interface {v0, v1, v2, v4, v5}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;->a(Z[Ljava/lang/String;J)V
 
     .line 436
     return-void
 .end method
 
-.method public final EG()V
+.method public final Fb()V
     .locals 1
 
     .prologue
     .line 407
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->iHM:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->jeJ:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->n(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;)V
 
     .line 408
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->iHM:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->jeJ:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->o(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;)V
 
     .line 409
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->iHM:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->jeJ:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->p(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;)Lcom/tencent/mm/sdk/platformtools/af;
+    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->p(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;)Lcom/tencent/mm/sdk/platformtools/ah;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 410
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->iHM:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->jeJ:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->p(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;)Lcom/tencent/mm/sdk/platformtools/af;
+    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->p(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;)Lcom/tencent/mm/sdk/platformtools/ah;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/af;->aUF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->aZJ()V
 
     .line 412
     :cond_0
@@ -107,17 +107,17 @@
     .prologue
     .line 417
     :try_start_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY="
+    const-string/jumbo v0, "MicroMsg.VoiceSearchLayout"
 
     const-string/jumbo v1, "dkaddr onRes "
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 418
     if-eqz p1, :cond_0
 
     .line 419
-    const-string/jumbo v0, "!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY="
+    const-string/jumbo v0, "MicroMsg.VoiceSearchLayout"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -149,7 +149,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 420
     array-length v1, p1
@@ -162,7 +162,7 @@
     aget-object v2, p1, v0
 
     .line 421
-    const-string/jumbo v3, "!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY="
+    const-string/jumbo v3, "MicroMsg.VoiceSearchLayout"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -178,7 +178,7 @@
 
     move-result-object v2
 
-    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 420
     add-int/lit8 v0, v0, 0x1
@@ -187,12 +187,12 @@
 
     .line 424
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->iHM:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->jeJ:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->reset()V
 
     .line 425
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->iHM:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;->jeJ:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->q(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;)Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 

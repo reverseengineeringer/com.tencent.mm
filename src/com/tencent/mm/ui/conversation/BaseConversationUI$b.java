@@ -5,30 +5,30 @@ import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.o;
 
 public class BaseConversationUI$b
   extends o
 {
-  public BaseConversationUI lnu;
-  private BaseConversationUI.a meW = BaseConversationUI.a.lnq;
+  public BaseConversationUI lNO;
+  private BaseConversationUI.a lNP = BaseConversationUI.a.lNK;
   
-  public final void Gj(String paramString)
+  public final void Ah(String paramString)
   {
-    if (lnu != null)
+    if (lNO != null)
     {
-      BaseConversationUI localBaseConversationUI = lnu;
+      BaseConversationUI localBaseConversationUI = lNO;
       title = paramString;
-      if (dsa != null) {
-        localBaseConversationUI.NW();
+      if (dsq != null) {
+        localBaseConversationUI.Pg();
       }
     }
   }
   
   public final void finish()
   {
-    getActivity().finish();
+    y().finish();
   }
   
   protected int getLayoutId()
@@ -36,20 +36,20 @@ public class BaseConversationUI$b
     return 0;
   }
   
-  public View onCreateView(LayoutInflater paramLayoutInflater, ViewGroup paramViewGroup, Bundle paramBundle)
+  public final View onCreateView(LayoutInflater paramLayoutInflater, ViewGroup paramViewGroup, Bundle paramBundle)
   {
-    meW = BaseConversationUI.a.lnq;
-    lnu = ((BaseConversationUI)getActivity());
+    lNP = BaseConversationUI.a.lNK;
+    lNO = ((BaseConversationUI)y());
     paramLayoutInflater = paramLayoutInflater.inflate(getLayoutId(), paramViewGroup, false);
-    setHasOptionsMenu(true);
+    A();
     return paramLayoutInflater;
   }
   
   public void onDestroy()
   {
-    if (meW != BaseConversationUI.a.lns)
+    if (lNP != BaseConversationUI.a.lNM)
     {
-      u.w("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "fmStatus != ActivityStatus.ACTIVITY_PAUSE when fm onDestroy");
+      v.w("MicroMsg.BaseConversationUI", "fmStatus != ActivityStatus.ACTIVITY_PAUSE when fm onDestroy");
       onPause();
     }
     super.onDestroy();
@@ -58,13 +58,13 @@ public class BaseConversationUI$b
   public void onPause()
   {
     super.onPause();
-    meW = BaseConversationUI.a.lns;
+    lNP = BaseConversationUI.a.lNM;
   }
   
   public void onResume()
   {
     super.onResume();
-    meW = BaseConversationUI.a.lnr;
+    lNP = BaseConversationUI.a.lNL;
   }
 }
 

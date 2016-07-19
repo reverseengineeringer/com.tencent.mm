@@ -10,7 +10,7 @@ final class RegByFacebookSetPwdUI$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    kup.finish();
+    kTw.finish();
   }
 }
 

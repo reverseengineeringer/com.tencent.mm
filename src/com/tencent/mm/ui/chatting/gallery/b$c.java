@@ -2,7 +2,7 @@ package com.tencent.mm.ui.chatting.gallery;
 
 public abstract interface b$c
 {
-  public abstract void Xq();
+  public abstract void Zb();
 }
 
 /* Location:

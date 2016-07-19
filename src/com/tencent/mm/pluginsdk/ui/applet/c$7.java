@@ -11,12 +11,12 @@ final class c$7
   
   public final void onClick(View paramView)
   {
-    if (iIg != null) {
-      iIg.a(true, c.ah(cqb), c.ai(cqb));
+    if (jfd != null) {
+      jfd.a(true, c.ak(clo), c.al(clo));
     }
-    iIh.dismiss();
-    iIh.setFocusable(false);
-    iIh.setTouchable(false);
+    jfe.dismiss();
+    jfe.setFocusable(false);
+    jfe.setTouchable(false);
   }
 }
 

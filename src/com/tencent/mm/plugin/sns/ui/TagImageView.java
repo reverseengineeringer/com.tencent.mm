@@ -2,21 +2,16 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import com.tencent.mm.ui.widget.QImageView;
+import com.tencent.mm.ui.widget.QFadeImageView;
 
 public class TagImageView
-  extends QImageView
+  extends QFadeImageView
 {
-  private int position = -1;
+  public int position = -1;
   
   public TagImageView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-  }
-  
-  public int getPosition()
-  {
-    return position;
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
@@ -27,11 +22,6 @@ public class TagImageView
   protected void onMeasure(int paramInt1, int paramInt2)
   {
     super.onMeasure(paramInt1, paramInt2);
-  }
-  
-  public void setPosition(int paramInt)
-  {
-    position = paramInt;
   }
 }
 

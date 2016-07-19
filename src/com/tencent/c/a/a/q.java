@@ -16,7 +16,7 @@ public abstract class q
   public final void b(a parama)
   {
     if (parama == null) {}
-    while (!jY()) {
+    while (!iz()) {
       return;
     }
     a(parama);
@@ -29,36 +29,36 @@ public abstract class q
     {
       return;
       paramg = paramg.toString();
-    } while (!jY());
+    } while (!iz());
     write(s.encode(paramg));
   }
   
-  protected abstract boolean jY();
+  protected abstract String iA();
   
-  protected abstract String jZ();
+  protected abstract a iB();
   
-  protected abstract a ka();
-  
-  public final g kh()
+  public final g iI()
   {
     g localg = null;
-    if (jY()) {}
-    for (String str = s.decode(jZ());; str = null)
+    if (iz()) {}
+    for (String str = s.decode(iA());; str = null)
     {
       if (str != null) {
-        localg = g.ar(str);
+        localg = g.av(str);
       }
       return localg;
     }
   }
   
-  public final a ki()
+  public final a iJ()
   {
-    if (jY()) {
-      return ka();
+    if (iz()) {
+      return iB();
     }
     return null;
   }
+  
+  protected abstract boolean iz();
   
   protected abstract void write(String paramString);
 }

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByEmailUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegByEmailUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+.field final synthetic kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 139
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$5;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$5;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,17 +41,17 @@
 
     .prologue
     .line 143
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$5;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$5;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$5;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$5;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
-    const v2, 0x7f0b1334
+    const v2, 0x7f0813b1
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/account/RegByEmailUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->C(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->D(Landroid/content/Context;Ljava/lang/String;)Z
 
     .line 144
     return-void

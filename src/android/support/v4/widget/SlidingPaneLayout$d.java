@@ -1,6 +1,11 @@
 package android.support.v4.widget;
 
-public abstract interface SlidingPaneLayout$d {}
+import android.view.View;
+
+abstract interface SlidingPaneLayout$d
+{
+  public abstract void b(SlidingPaneLayout paramSlidingPaneLayout, View paramView);
+}
 
 /* Location:
  * Qualified Name:     android.support.v4.widget.SlidingPaneLayout.d

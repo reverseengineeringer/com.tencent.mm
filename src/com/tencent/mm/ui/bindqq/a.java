@@ -1,60 +1,50 @@
 package com.tencent.mm.ui.bindqq;
 
-import com.tencent.mm.d.a.gt;
-import com.tencent.mm.d.a.gt.a;
+import com.tencent.mm.e.a.he;
+import com.tencent.mm.e.a.he.a;
 import com.tencent.mm.sdk.c.c;
 
 public final class a
-  extends c
+  extends c<he>
   implements b.a
 {
-  private gt kPx;
+  private he loN;
   
   public a()
   {
-    super(0);
+    kum = he.class.getName().hashCode();
   }
   
-  public final boolean a(com.tencent.mm.sdk.c.b paramb)
+  public final void bjm()
   {
-    if (!(paramb instanceof gt)) {
+    if ((loN != null) && (loN.aol.aoo != null))
+    {
+      loN.aom.afB = false;
+      loN.aol.aoo.run();
+      loN = null;
+    }
+  }
+  
+  public final boolean p(int paramInt1, int paramInt2, String paramString)
+  {
+    if (loN == null) {
       return false;
     }
-    kPx = ((gt)paramb);
-    new b(kPx.aBS.aBU, this).bdG();
-    return false;
-  }
-  
-  public final void bdF()
-  {
-    if ((kPx != null) && (kPx.aBS.aBV != null))
+    if (loN.aol.aoo == null)
     {
-      kPx.aBT.atR = false;
-      kPx.aBS.aBV.run();
-      kPx = null;
-    }
-  }
-  
-  public final boolean r(int paramInt1, int paramInt2, String paramString)
-  {
-    if (kPx == null) {
-      return false;
-    }
-    if (kPx.aBS.aBV == null)
-    {
-      kPx = null;
+      loN = null;
       return false;
     }
     if ((paramInt1 == 0) && (paramInt2 == 0))
     {
-      kPx.aBT.atR = true;
-      kPx.aBS.aBV.run();
-      kPx = null;
+      loN.aom.afB = true;
+      loN.aol.aoo.run();
+      loN = null;
       return true;
     }
-    kPx.aBT.atR = false;
-    kPx.aBS.aBV.run();
-    kPx = null;
+    loN.aom.afB = false;
+    loN.aol.aoo.run();
+    loN = null;
     return false;
   }
 }

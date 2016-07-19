@@ -1,20 +1,22 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.alq;
-import com.tencent.mm.protocal.b.ane;
-import com.tencent.mm.protocal.b.dd;
+import com.tencent.mm.protocal.b.afw;
 
 public final class w$b
-  extends h.d
-  implements h.b
+  extends k.d
+  implements k.b
 {
-  public ane iVo = new ane();
+  public afw jsH = new afw();
   
-  public final int y(byte[] paramArrayOfByte)
+  public final int D(byte[] paramArrayOfByte)
   {
-    iVo = ((ane)new ane().am(paramArrayOfByte));
-    h.a(this, iVo.jHj);
-    return iVo.jHj.iZL;
+    jsH = ((afw)new afw().au(paramArrayOfByte));
+    return jsH.jxr;
+  }
+  
+  public final int getCmdId()
+  {
+    return 1000000121;
   }
 }
 

@@ -1,30 +1,27 @@
 package android.support.v4.app;
 
-import android.os.Bundle;
 import android.support.v4.content.c;
 
 public abstract class j
 {
-  public boolean O()
+  public boolean N()
   {
     return false;
   }
   
-  public abstract c a(int paramInt, a parama);
+  public abstract <D> c<D> a(int paramInt, a<D> parama);
   
-  public abstract c b(int paramInt, a parama);
+  public abstract <D> c<D> b(int paramInt, a<D> parama);
   
   public abstract void destroyLoader(int paramInt);
   
-  public abstract c k(int paramInt);
+  public abstract <D> c<D> k(int paramInt);
   
-  public static abstract interface a
+  public static abstract interface a<D>
   {
-    public abstract c onCreateLoader(int paramInt, Bundle paramBundle);
+    public abstract void a(c<D> paramc, D paramD);
     
-    public abstract void onLoadFinished(c paramc, Object paramObject);
-    
-    public abstract void onLoaderReset(c paramc);
+    public abstract c<D> l(int paramInt);
   }
 }
 

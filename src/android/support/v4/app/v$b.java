@@ -5,11 +5,11 @@ import android.app.NotificationManager;
 
 public abstract interface v$b
 {
+  public abstract int Z();
+  
   public abstract void a(NotificationManager paramNotificationManager, String paramString, int paramInt);
   
   public abstract void a(NotificationManager paramNotificationManager, String paramString, int paramInt, Notification paramNotification);
-  
-  public abstract int ab();
 }
 
 /* Location:

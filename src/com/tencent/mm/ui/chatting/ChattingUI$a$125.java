@@ -1,16 +1,59 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.tencent.mm.ai.b;
+import com.tencent.mm.model.i;
+import com.tencent.mm.p.a.a;
+import com.tencent.mm.protocal.b.afj;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class ChattingUI$a$125
-  implements View.OnClickListener
+  implements Runnable
 {
-  ChattingUI$a$125(ChattingUI.a parama, int paramInt) {}
+  ChattingUI$a$125(ChattingUI.a parama, String paramString1, String paramString2, long paramLong) {}
   
-  public final void onClick(View paramView)
+  public final void run()
   {
-    ChattingUI.a.c(laF, bMq);
+    String str = lBR;
+    Object localObject = str;
+    if (i.du(ZX))
+    {
+      localObject = str;
+      if (!be.ab(str, "").startsWith("<"))
+      {
+        int i = lBR.indexOf(':');
+        localObject = str;
+        if (i != -1) {
+          localObject = lBR.substring(i + 1);
+        }
+      }
+    }
+    localObject = a.a.dI(be.FF((String)localObject));
+    if (localObject != null) {
+      switch (type)
+      {
+      }
+    }
+    for (;;)
+    {
+      return;
+      localObject = b.kS();
+      if ((localObject != null) && (kae != null) && (kad == 0)) {
+        try
+        {
+          long l = Long.parseLong(kae);
+          if (lBS == l)
+          {
+            ad.k(new Runnable()
+            {
+              public final void run() {}
+            });
+            return;
+          }
+        }
+        catch (Exception localException) {}
+      }
+    }
   }
 }
 

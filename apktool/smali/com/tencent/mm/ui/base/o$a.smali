@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kFA:Lcom/tencent/mm/ui/base/o;
+.field final synthetic leE:Lcom/tencent/mm/ui/base/o;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 157
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/o$a;->kFA:Lcom/tencent/mm/ui/base/o;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/o$a;->leE:Lcom/tencent/mm/ui/base/o;
 
     .line 158
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -123,7 +123,7 @@
     if-nez v1, :cond_3
 
     .line 190
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/o$a;->kFA:Lcom/tencent/mm/ui/base/o;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/o$a;->leE:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/base/o;->dismiss()V
 
@@ -151,7 +151,7 @@
 
     .prologue
     .line 202
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/o$a;->kFA:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/o$a;->leE:Lcom/tencent/mm/ui/base/o;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/o;->a(Lcom/tencent/mm/ui/base/o;)Landroid/view/View$OnTouchListener;
 
@@ -159,7 +159,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/o$a;->kFA:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/o$a;->leE:Lcom/tencent/mm/ui/base/o;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/o;->a(Lcom/tencent/mm/ui/base/o;)Landroid/view/View$OnTouchListener;
 
@@ -243,7 +243,7 @@
 
     .line 215
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/o$a;->kFA:Lcom/tencent/mm/ui/base/o;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/o$a;->leE:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/base/o;->dismiss()V
 
@@ -262,7 +262,7 @@
     if-ne v1, v2, :cond_2
 
     .line 218
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/o$a;->kFA:Lcom/tencent/mm/ui/base/o;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/o$a;->leE:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/base/o;->dismiss()V
 

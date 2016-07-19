@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/aec" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/t5" android:paddingTop="@dimen/i7" android:paddingBottom="@dimen/i7" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/adg" android:layout_width="@dimen/ll" android:layout_height="@dimen/ll" android:src="@drawable/xr" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@id/aed" android:padding="@dimen/cp" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MMFontTitleInList" />
+            <TextView android:id="@id/adl" android:padding="@dimen/cp" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MMFontTipInList" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/aee" android:padding="@dimen/hj" android:paddingBottom="@dimen/i7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/apw" style="@style/MMFontTipInList" />
+</LinearLayout>

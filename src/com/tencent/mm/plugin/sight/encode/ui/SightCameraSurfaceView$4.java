@@ -3,8 +3,8 @@ package com.tencent.mm.plugin.sight.encode.ui;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnErrorListener;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SightCameraSurfaceView$4
   implements Runnable
@@ -13,14 +13,14 @@ final class SightCameraSurfaceView$4
   
   public final void run()
   {
-    if (SightCameraSurfaceView.e(gDS) != null) {}
+    if (SightCameraSurfaceView.e(gKs) != null) {}
     try
     {
-      SightCameraSurfaceView.e(gDS).stop();
-      SightCameraSurfaceView.e(gDS).release();
-      if (SightCameraView.b.gEt == gDS.gEi)
+      SightCameraSurfaceView.e(gKs).stop();
+      SightCameraSurfaceView.e(gKs).release();
+      if (SightCameraView.b.gKU == gKs.gKI)
       {
-        u.e("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "play video %s Error, surfaceStatus is destory", new Object[] { gDV });
+        v.e("MicroMsg.SightCameraSurfaceView", "play video %s Error, surfaceStatus is destory", new Object[] { gKv });
         return;
       }
     }
@@ -28,49 +28,49 @@ final class SightCameraSurfaceView$4
     {
       for (;;)
       {
-        u.w("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "try to release mediaplayer error");
+        v.w("MicroMsg.SightCameraSurfaceView", "try to release mediaplayer error");
       }
     }
     for (;;)
     {
       try
       {
-        SightCameraSurfaceView.a(gDS, new MediaPlayer());
-        SightCameraSurfaceView.e(gDS).setOnCompletionListener(new MediaPlayer.OnCompletionListener()
+        SightCameraSurfaceView.a(gKs, new MediaPlayer());
+        SightCameraSurfaceView.e(gKs).setOnCompletionListener(new MediaPlayer.OnCompletionListener()
         {
           public final void onCompletion(MediaPlayer paramAnonymousMediaPlayer)
           {
-            u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "complete playing %s ", new Object[] { gDV });
-            gDS.axj();
+            v.i("MicroMsg.SightCameraSurfaceView", "complete playing %s ", new Object[] { gKv });
+            gKs.azL();
           }
         });
-        SightCameraSurfaceView.e(gDS).setOnErrorListener(new MediaPlayer.OnErrorListener()
+        SightCameraSurfaceView.e(gKs).setOnErrorListener(new MediaPlayer.OnErrorListener()
         {
           public final boolean onError(MediaPlayer paramAnonymousMediaPlayer, int paramAnonymousInt1, int paramAnonymousInt2)
           {
-            u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "play %s error", new Object[] { gDV });
+            v.i("MicroMsg.SightCameraSurfaceView", "play %s error", new Object[] { gKv });
             return false;
           }
         });
-        SightCameraSurfaceView.e(gDS).setDataSource(gDV);
-        SightCameraSurfaceView.e(gDS).setDisplay(SightCameraSurfaceView.a(gDS));
-        SightCameraSurfaceView.e(gDS).setAudioStreamType(3);
-        if (gDW)
+        SightCameraSurfaceView.e(gKs).setDataSource(gKv);
+        SightCameraSurfaceView.e(gKs).setDisplay(SightCameraSurfaceView.a(gKs));
+        SightCameraSurfaceView.e(gKs).setAudioStreamType(3);
+        if (gKw)
         {
-          SightCameraSurfaceView.e(gDS).setVolume(0.0F, 0.0F);
-          SightCameraSurfaceView.e(gDS).setScreenOnWhilePlaying(true);
-          SightCameraSurfaceView.e(gDS).setLooping(true);
-          SightCameraSurfaceView.e(gDS).prepare();
-          SightCameraSurfaceView.e(gDS).start();
+          SightCameraSurfaceView.e(gKs).setVolume(0.0F, 0.0F);
+          SightCameraSurfaceView.e(gKs).setScreenOnWhilePlaying(true);
+          SightCameraSurfaceView.e(gKs).setLooping(true);
+          SightCameraSurfaceView.e(gKs).prepare();
+          SightCameraSurfaceView.e(gKs).start();
           return;
         }
       }
       catch (Exception localException2)
       {
-        u.e("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "play %s, error: %s, %s", new Object[] { gDV, localException2.getMessage(), ay.b(localException2) });
+        v.e("MicroMsg.SightCameraSurfaceView", "play %s, error: %s, %s", new Object[] { gKv, localException2.getMessage(), be.f(localException2) });
         return;
       }
-      gDS.axi();
+      gKs.azK();
     }
   }
   

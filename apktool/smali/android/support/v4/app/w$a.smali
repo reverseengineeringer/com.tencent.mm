@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field public final dT:Ljava/lang/String;
+.field public final ej:Ljava/lang/String;
 
-.field public dU:Ljava/lang/CharSequence;
+.field public ek:Ljava/lang/CharSequence;
 
-.field public dV:[Ljava/lang/CharSequence;
+.field public el:[Ljava/lang/CharSequence;
 
-.field public dW:Z
+.field public em:Z
 
 .field public mExtras:Landroid/os/Bundle;
 
@@ -37,7 +37,7 @@
     .line 98
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v4/app/w$a;->dW:Z
+    iput-boolean v0, p0, Landroid/support/v4/app/w$a;->em:Z
 
     .line 99
     new-instance v0, Landroid/os/Bundle;
@@ -47,7 +47,7 @@
     iput-object v0, p0, Landroid/support/v4/app/w$a;->mExtras:Landroid/os/Bundle;
 
     .line 106
-    iput-object p1, p0, Landroid/support/v4/app/w$a;->dT:Ljava/lang/String;
+    iput-object p1, p0, Landroid/support/v4/app/w$a;->ej:Ljava/lang/String;
 
     .line 110
     return-void

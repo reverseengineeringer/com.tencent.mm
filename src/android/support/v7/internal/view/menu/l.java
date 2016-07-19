@@ -10,13 +10,13 @@ public abstract interface l
   
   public abstract boolean a(p paramp);
   
-  public abstract boolean bj();
+  public abstract boolean bk();
   
   public abstract boolean d(h paramh);
   
   public abstract boolean e(h paramh);
   
-  public abstract void q(boolean paramBoolean);
+  public abstract void p(boolean paramBoolean);
   
   public static abstract interface a
   {

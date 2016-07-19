@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic ckw:Lcom/tencent/mm/performance/a/a;
+.field final synthetic cfO:Lcom/tencent/mm/performance/a/a;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 54
-    iput-object p1, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iput-object p1, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     invoke-direct {p0}, Landroid/app/Instrumentation;-><init>()V
 
@@ -48,14 +48,14 @@
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x1
 
     invoke-static {v0, p1, p2, v1}, Lcom/tencent/mm/performance/a/a;->a(Lcom/tencent/mm/performance/a/a;Landroid/app/Activity;Landroid/os/Bundle;Z)V
 
     .line 58
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/a/a;->a(Lcom/tencent/mm/performance/a/a;)Landroid/app/Instrumentation;
 
@@ -64,7 +64,7 @@
     invoke-virtual {v0, p1, p2}, Landroid/app/Instrumentation;->callActivityOnCreate(Landroid/app/Activity;Landroid/os/Bundle;)V
 
     .line 59
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x0
 
@@ -79,14 +79,14 @@
 
     .prologue
     .line 120
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x1
 
     invoke-static {v0, p1, v1}, Lcom/tencent/mm/performance/a/a;->f(Lcom/tencent/mm/performance/a/a;Landroid/app/Activity;Z)V
 
     .line 121
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/a/a;->a(Lcom/tencent/mm/performance/a/a;)Landroid/app/Instrumentation;
 
@@ -95,7 +95,7 @@
     invoke-virtual {v0, p1}, Landroid/app/Instrumentation;->callActivityOnDestroy(Landroid/app/Activity;)V
 
     .line 122
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x0
 
@@ -110,14 +110,14 @@
 
     .prologue
     .line 92
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x1
 
     invoke-static {v0, p1, p2, v1}, Lcom/tencent/mm/performance/a/a;->a(Lcom/tencent/mm/performance/a/a;Landroid/app/Activity;Landroid/content/Intent;Z)V
 
     .line 93
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/a/a;->a(Lcom/tencent/mm/performance/a/a;)Landroid/app/Instrumentation;
 
@@ -126,7 +126,7 @@
     invoke-virtual {v0, p1, p2}, Landroid/app/Instrumentation;->callActivityOnNewIntent(Landroid/app/Activity;Landroid/content/Intent;)V
 
     .line 94
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x0
 
@@ -141,14 +141,14 @@
 
     .prologue
     .line 71
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x1
 
     invoke-static {v0, p1, v1}, Lcom/tencent/mm/performance/a/a;->b(Lcom/tencent/mm/performance/a/a;Landroid/app/Activity;Z)V
 
     .line 72
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/a/a;->a(Lcom/tencent/mm/performance/a/a;)Landroid/app/Instrumentation;
 
@@ -157,7 +157,7 @@
     invoke-virtual {v0, p1}, Landroid/app/Instrumentation;->callActivityOnPause(Landroid/app/Activity;)V
 
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x0
 
@@ -172,14 +172,14 @@
 
     .prologue
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x1
 
     invoke-static {v0, p1, v1}, Lcom/tencent/mm/performance/a/a;->d(Lcom/tencent/mm/performance/a/a;Landroid/app/Activity;Z)V
 
     .line 86
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/a/a;->a(Lcom/tencent/mm/performance/a/a;)Landroid/app/Instrumentation;
 
@@ -188,7 +188,7 @@
     invoke-virtual {v0, p1}, Landroid/app/Instrumentation;->callActivityOnRestart(Landroid/app/Activity;)V
 
     .line 87
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x0
 
@@ -203,14 +203,14 @@
 
     .prologue
     .line 106
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x1
 
     invoke-static {v0, p1, p2, v1}, Lcom/tencent/mm/performance/a/a;->c(Lcom/tencent/mm/performance/a/a;Landroid/app/Activity;Landroid/os/Bundle;Z)V
 
     .line 107
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/a/a;->a(Lcom/tencent/mm/performance/a/a;)Landroid/app/Instrumentation;
 
@@ -219,7 +219,7 @@
     invoke-virtual {v0, p1, p2}, Landroid/app/Instrumentation;->callActivityOnRestoreInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
 
     .line 108
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x0
 
@@ -234,14 +234,14 @@
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x1
 
     invoke-static {v0, p1, v1}, Lcom/tencent/mm/performance/a/a;->a(Lcom/tencent/mm/performance/a/a;Landroid/app/Activity;Z)V
 
     .line 65
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/a/a;->a(Lcom/tencent/mm/performance/a/a;)Landroid/app/Instrumentation;
 
@@ -250,7 +250,7 @@
     invoke-virtual {v0, p1}, Landroid/app/Instrumentation;->callActivityOnResume(Landroid/app/Activity;)V
 
     .line 66
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x0
 
@@ -265,14 +265,14 @@
 
     .prologue
     .line 99
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x1
 
     invoke-static {v0, p1, p2, v1}, Lcom/tencent/mm/performance/a/a;->b(Lcom/tencent/mm/performance/a/a;Landroid/app/Activity;Landroid/os/Bundle;Z)V
 
     .line 100
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/a/a;->a(Lcom/tencent/mm/performance/a/a;)Landroid/app/Instrumentation;
 
@@ -281,7 +281,7 @@
     invoke-virtual {v0, p1, p2}, Landroid/app/Instrumentation;->callActivityOnSaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
 
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x0
 
@@ -296,14 +296,14 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x1
 
     invoke-static {v0, p1, v1}, Lcom/tencent/mm/performance/a/a;->c(Lcom/tencent/mm/performance/a/a;Landroid/app/Activity;Z)V
 
     .line 79
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/a/a;->a(Lcom/tencent/mm/performance/a/a;)Landroid/app/Instrumentation;
 
@@ -312,7 +312,7 @@
     invoke-virtual {v0, p1}, Landroid/app/Instrumentation;->callActivityOnStart(Landroid/app/Activity;)V
 
     .line 80
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x0
 
@@ -327,14 +327,14 @@
 
     .prologue
     .line 113
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x1
 
     invoke-static {v0, p1, v1}, Lcom/tencent/mm/performance/a/a;->e(Lcom/tencent/mm/performance/a/a;Landroid/app/Activity;Z)V
 
     .line 114
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/a/a;->a(Lcom/tencent/mm/performance/a/a;)Landroid/app/Instrumentation;
 
@@ -343,7 +343,7 @@
     invoke-virtual {v0, p1}, Landroid/app/Instrumentation;->callActivityOnStop(Landroid/app/Activity;)V
 
     .line 115
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->ckw:Lcom/tencent/mm/performance/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a$b;->cfO:Lcom/tencent/mm/performance/a/a;
 
     const/4 v1, 0x0
 

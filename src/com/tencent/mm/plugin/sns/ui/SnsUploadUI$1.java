@@ -14,12 +14,12 @@ final class SnsUploadUI$1
   
   public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    if (SnsUploadUI.a(hlY).getText().toString().trim().length() > 0)
+    if (SnsUploadUI.a(hCb).getText().toString().trim().length() > 0)
     {
-      hlY.bC(true);
+      hCb.bp(true);
       return;
     }
-    hlY.bC(false);
+    hCb.bp(false);
   }
 }
 

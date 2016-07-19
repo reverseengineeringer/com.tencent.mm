@@ -5,7 +5,7 @@ import com.tencent.mm.ui.tools.f.a;
 final class b$3
   implements f.a
 {
-  public final void pV() {}
+  public final void op() {}
 }
 
 /* Location:

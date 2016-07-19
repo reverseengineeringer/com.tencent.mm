@@ -7,31 +7,88 @@
 
 
 # instance fields
-.field private final bxg:Landroid/content/SharedPreferences;
+.field private final bpi:Landroid/content/SharedPreferences;
 
 .field private final context:Landroid/content/Context;
 
-.field private kKX:Lcom/tencent/mm/ui/base/preference/Preference$a;
+.field private lkm:Lcom/tencent/mm/ui/base/preference/Preference$a;
 
-.field private final kLR:Lcom/tencent/mm/ui/base/preference/j;
+.field private final llg:Lcom/tencent/mm/ui/base/preference/j;
 
-.field private final kLS:Ljava/util/LinkedList;
+.field private final llh:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final kLT:Ljava/util/HashMap;
+.field private final lli:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/ui/base/preference/Preference;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final kLU:Ljava/util/HashSet;
+.field private final llj:Ljava/util/HashSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final kLV:Ljava/util/LinkedList;
+.field private final llk:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final kLW:Ljava/util/HashMap;
+.field private final lll:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final kLX:Ljava/util/HashMap;
+.field private final llm:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private kLY:[I
+.field private lln:[I
 
-.field private kLZ:Z
+.field private llo:Z
 
-.field private kMa:Z
+.field private llp:Z
 
 
 # direct methods
@@ -49,66 +106,66 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLS:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llh:Ljava/util/LinkedList;
 
     .line 25
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
     .line 27
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLU:Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llj:Ljava/util/HashSet;
 
     .line 28
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     .line 30
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLW:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lll:Ljava/util/HashMap;
 
     .line 31
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLX:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llm:Ljava/util/HashMap;
 
     .line 36
     new-array v0, v1, [I
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     .line 47
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/preference/h;->kLZ:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/preference/h;->llo:Z
 
     .line 48
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/preference/h;->kMa:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/preference/h;->llp:Z
 
     .line 51
     new-instance v0, Lcom/tencent/mm/ui/base/preference/j;
 
     invoke-direct {v0, p1}, Lcom/tencent/mm/ui/base/preference/j;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLR:Lcom/tencent/mm/ui/base/preference/j;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llg:Lcom/tencent/mm/ui/base/preference/j;
 
     .line 52
     iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/h;->context:Landroid/content/Context;
 
     .line 53
-    iput-object p2, p0, Lcom/tencent/mm/ui/base/preference/h;->bxg:Landroid/content/SharedPreferences;
+    iput-object p2, p0, Lcom/tencent/mm/ui/base/preference/h;->bpi:Landroid/content/SharedPreferences;
 
     .line 54
     return-void
@@ -131,12 +188,12 @@
     check-cast v0, Lcom/tencent/mm/ui/base/preference/CheckBoxPreference;
 
     .line 350
-    iget-boolean v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->kMo:Z
+    iget-boolean v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->llD:Z
 
     if-eqz v1, :cond_0
 
     .line 351
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     move-object v1, p0
 
@@ -150,7 +207,7 @@
 
     move-result v1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/ui/base/preference/CheckBoxPreference;->kKS:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/base/preference/CheckBoxPreference;->lkh:Z
 
     .line 356
     :cond_0
@@ -164,12 +221,12 @@
     check-cast v0, Lcom/tencent/mm/ui/base/preference/DialogPreference;
 
     .line 358
-    iget-boolean v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->kMo:Z
+    iget-boolean v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->llD:Z
 
     if-eqz v1, :cond_1
 
     .line 359
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     invoke-interface {p1, v1, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -189,12 +246,12 @@
     check-cast v0, Lcom/tencent/mm/ui/base/preference/EditPreference;
 
     .line 366
-    iget-boolean v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->kMo:Z
+    iget-boolean v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->llD:Z
 
     if-eqz v1, :cond_2
 
     .line 367
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     invoke-interface {p1, v1, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -222,18 +279,18 @@
     move-result-object v0
 
     .line 98
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 99
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->kLS:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->llh:Ljava/util/LinkedList;
 
     const/4 v2, -0x1
 
     if-ne p2, v2, :cond_0
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->kLS:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->llh:Ljava/util/LinkedList;
 
     invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
@@ -243,7 +300,7 @@
     invoke-virtual {v1, p2, v0}, Ljava/util/LinkedList;->add(ILjava/lang/Object;)V
 
     .line 102
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLW:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lll:Ljava/util/HashMap;
 
     invoke-static {p1}, Lcom/tencent/mm/ui/base/preference/h;->c(Lcom/tencent/mm/ui/base/preference/Preference;)Ljava/lang/String;
 
@@ -255,18 +312,18 @@
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kMa:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llp:Z
 
     if-nez v0, :cond_1
 
     .line 103
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLW:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lll:Ljava/util/HashMap;
 
     invoke-static {p1}, Lcom/tencent/mm/ui/base/preference/h;->c(Lcom/tencent/mm/ui/base/preference/Preference;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->kLW:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->lll:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->size()I
 
@@ -280,18 +337,18 @@
 
     .line 107
     :cond_1
-    iget-object v0, p1, Lcom/tencent/mm/ui/base/preference/Preference;->kMp:Ljava/lang/String;
+    iget-object v0, p1, Lcom/tencent/mm/ui/base/preference/Preference;->llE:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
     .line 108
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLX:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llm:Ljava/util/HashMap;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p1, Lcom/tencent/mm/ui/base/preference/Preference;->kMp:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/ui/base/preference/Preference;->llE:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -303,7 +360,7 @@
 
     move-result-object v1
 
-    iget-object v2, p1, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -313,7 +370,7 @@
 
     move-result-object v1
 
-    iget-object v2, p1, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -322,7 +379,7 @@
     return-void
 .end method
 
-.method private bdr()V
+.method private biY()V
     .locals 6
 
     .prologue
@@ -337,7 +394,7 @@
     move v2, v0
 
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -346,9 +403,9 @@
     if-ge v2, v0, :cond_4
 
     .line 186
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v1, v2}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -365,9 +422,9 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -377,9 +434,9 @@
     if-eqz v2, :cond_1
 
     .line 195
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     add-int/lit8 v5, v2, -0x1
 
@@ -399,9 +456,9 @@
     if-eqz v4, :cond_1
 
     .line 201
-    iget-object v4, v1, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v4, v1, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -451,9 +508,9 @@
 
     .line 204
     :cond_2
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -496,7 +553,7 @@
 
     .line 211
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v3}, Ljava/util/LinkedList;->removeAll(Ljava/util/Collection;)Z
 
@@ -531,7 +588,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->llI:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -543,7 +600,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMu:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->llJ:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -561,11 +618,11 @@
 
     .prologue
     .line 61
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -574,7 +631,7 @@
     if-lez v0, :cond_0
 
     .line 62
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     .line 65
     :goto_0
@@ -602,20 +659,20 @@
     goto :goto_0
 .end method
 
-.method private static qS(I)Z
+.method private static sU(I)Z
     .locals 1
 
     .prologue
     .line 235
-    const v0, 0x7f0a05d6
+    const v0, 0x7f0303ad
 
     if-eq p0, v0, :cond_0
 
-    const v0, 0x7f0a0564
+    const v0, 0x7f0303f5
 
     if-eq p0, v0, :cond_0
 
-    const v0, 0x7f0a0596
+    const v0, 0x7f0303f6
 
     if-ne p0, v0, :cond_1
 
@@ -633,12 +690,12 @@
 
 
 # virtual methods
-.method public final GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+.method public final IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
     .locals 1
 
     .prologue
     .line 115
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -649,12 +706,12 @@
     return-object v0
 .end method
 
-.method public final GC(Ljava/lang/String;)Z
+.method public final IS(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
     .line 151
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/base/preference/h;->GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/base/preference/h;->IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
 
     move-result-object v0
 
@@ -665,12 +722,12 @@
     return v0
 .end method
 
-.method public final GD(Ljava/lang/String;)I
+.method public final IT(Ljava/lang/String;)I
     .locals 1
 
     .prologue
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     if-nez v0, :cond_0
 
@@ -682,7 +739,7 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedList;->indexOf(Ljava/lang/Object;)I
 
@@ -712,7 +769,7 @@
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/ui/base/preference/h;->b(Lcom/tencent/mm/ui/base/preference/Preference;I)V
 
     .line 91
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLZ:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llo:Z
 
     if-nez v0, :cond_0
 
@@ -722,6 +779,49 @@
     .line 94
     :cond_0
     return-void
+.end method
+
+.method public final aD(Ljava/lang/String;Z)V
+    .locals 1
+
+    .prologue
+    .line 120
+    if-eqz p2, :cond_2
+
+    .line 121
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llj:Ljava/util/HashSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 122
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llj:Ljava/util/HashSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    .line 131
+    :cond_0
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/h;->notifyDataSetChanged()V
+
+    .line 132
+    :cond_1
+    :goto_0
+    return-void
+
+    .line 127
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llj:Ljava/util/HashSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
 .end method
 
 .method public final addPreferencesFromResource(I)V
@@ -735,10 +835,10 @@
     const/4 v7, 0x0
 
     .line 166
-    iput-boolean v8, p0, Lcom/tencent/mm/ui/base/preference/h;->kLZ:Z
+    iput-boolean v8, p0, Lcom/tencent/mm/ui/base/preference/h;->llo:Z
 
     .line 167
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->kLR:Lcom/tencent/mm/ui/base/preference/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->llg:Lcom/tencent/mm/ui/base/preference/j;
 
     iget-object v0, v1, Lcom/tencent/mm/ui/base/preference/j;->mContext:Landroid/content/Context;
 
@@ -751,7 +851,7 @@
     move-result-object v2
 
     :try_start_0
-    iget-object v3, v1, Lcom/tencent/mm/ui/base/preference/j;->kMe:[Ljava/lang/Object;
+    iget-object v3, v1, Lcom/tencent/mm/ui/base/preference/j;->llt:[Ljava/lang/Object;
 
     monitor-enter v3
     :try_end_0
@@ -762,7 +862,7 @@
 
     move-result-object v4
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/base/preference/j;->kMe:[Ljava/lang/Object;
+    iget-object v0, v1, Lcom/tencent/mm/ui/base/preference/j;->llt:[Ljava/lang/Object;
 
     const/4 v5, 0x0
 
@@ -872,7 +972,7 @@
     invoke-interface {v2}, Landroid/content/res/XmlResourceParser;->close()V
 
     .line 168
-    iput-boolean v7, p0, Lcom/tencent/mm/ui/base/preference/h;->kLZ:Z
+    iput-boolean v7, p0, Lcom/tencent/mm/ui/base/preference/h;->llo:Z
 
     .line 170
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/h;->notifyDataSetChanged()V
@@ -941,55 +1041,12 @@
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 .end method
 
-.method public final at(Ljava/lang/String;Z)V
-    .locals 1
-
-    .prologue
-    .line 120
-    if-eqz p2, :cond_2
-
-    .line 121
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLU:Ljava/util/HashSet;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 122
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLU:Ljava/util/HashSet;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    .line 131
-    :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/h;->notifyDataSetChanged()V
-
-    .line 132
-    :cond_1
-    :goto_0
-    return-void
-
-    .line 127
-    :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLU:Ljava/util/HashSet;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-.end method
-
 .method public final b(Lcom/tencent/mm/ui/base/preference/Preference$a;)V
     .locals 0
 
     .prologue
     .line 176
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/h;->kKX:Lcom/tencent/mm/ui/base/preference/Preference$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/h;->lkm:Lcom/tencent/mm/ui/base/preference/Preference$a;
 
     .line 177
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/h;->notifyDataSetChanged()V
@@ -1019,19 +1076,19 @@
     move-result-object v0
 
     .line 141
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->kLS:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->llh:Ljava/util/LinkedList;
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
     .line 142
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 143
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLU:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llj:Ljava/util/HashSet;
 
-    iget-object v1, p1, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
@@ -1049,7 +1106,7 @@
 
     .prologue
     .line 375
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -1063,9 +1120,9 @@
 
     .prologue
     .line 380
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v1, p1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -1093,9 +1150,9 @@
 
     .prologue
     .line 399
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v1, p1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -1108,7 +1165,7 @@
     check-cast v0, Lcom/tencent/mm/ui/base/preference/Preference;
 
     .line 400
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->kLW:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->lll:Ljava/util/HashMap;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/preference/h;->c(Lcom/tencent/mm/ui/base/preference/Preference;)Ljava/lang/String;
 
@@ -1145,11 +1202,11 @@
     .line 411
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v3, v0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     move/from16 v0, p1
 
@@ -1171,7 +1228,7 @@
     .line 414
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/base/preference/h;->kKX:Lcom/tencent/mm/ui/base/preference/Preference$a;
+    iget-object v3, v0, Lcom/tencent/mm/ui/base/preference/h;->lkm:Lcom/tencent/mm/ui/base/preference/Preference$a;
 
     invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/base/preference/Preference;->a(Lcom/tencent/mm/ui/base/preference/Preference$a;)V
 
@@ -1179,7 +1236,7 @@
     :cond_0
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/base/preference/h;->kLW:Ljava/util/HashMap;
+    iget-object v3, v0, Lcom/tencent/mm/ui/base/preference/h;->lll:Ljava/util/HashMap;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/base/preference/h;->c(Lcom/tencent/mm/ui/base/preference/Preference;)Ljava/lang/String;
 
@@ -1207,12 +1264,12 @@
     .line 424
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     aget v5, v2, p1
 
     .line 426
-    const v2, 0x7f0700c1
+    const v2, 0x7f1000fe
 
     invoke-virtual {v4, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1222,11 +1279,11 @@
     if-nez v6, :cond_2
 
     .line 428
-    const-string/jumbo v2, "!44@/B4Tb64lLpL7nV+aKji0O5oZqg+g/M2CVC2enFN9hcI="
+    const-string/jumbo v2, "MicroMsg.MMPreferenceAdapter"
 
     const-string/jumbo v3, "find content view error"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v2, v4
 
@@ -1271,7 +1328,7 @@
     move-result v11
 
     .line 442
-    const v2, 0x7f0406e4
+    const v2, 0x7f0206ca
 
     .line 443
     invoke-virtual {v4}, Landroid/view/View;->getPaddingLeft()I
@@ -1301,7 +1358,7 @@
     .line 448
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
@@ -1315,7 +1372,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
@@ -1329,7 +1386,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
@@ -1349,11 +1406,11 @@
 
     .line 450
     :cond_3
-    const v2, 0x7f04067f
+    const v2, 0x7f02051d
 
     .line 456
     :goto_1
-    const v3, 0x7f08017c
+    const v3, 0x7f0f0241
 
     move/from16 v17, v3
 
@@ -1395,13 +1452,13 @@
     if-eqz v2, :cond_8
 
     .line 452
-    const v2, 0x7f04067f
+    const v2, 0x7f02051d
 
     goto :goto_1
 
     .line 454
     :cond_8
-    const v2, 0x7f04066d
+    const v2, 0x7f02041c
 
     goto :goto_1
 
@@ -1418,7 +1475,7 @@
 
     .line 465
     :cond_a
-    const v3, 0x7f04066d
+    const v3, 0x7f02041c
 
     goto :goto_2
 .end method
@@ -1430,16 +1487,16 @@
     const/4 v1, 0x1
 
     .line 390
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kMa:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llp:Z
 
     if-nez v0, :cond_0
 
     .line 391
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/preference/h;->kMa:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/preference/h;->llp:Z
 
     .line 394
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLW:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lll:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
 
@@ -1457,7 +1514,7 @@
 
     .prologue
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLS:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llh:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedList;->indexOf(Ljava/lang/Object;)I
 
@@ -1470,22 +1527,22 @@
     .locals 10
 
     .prologue
-    const v9, 0x7f0a05d6
+    const v9, 0x7f0303f6
 
-    const v8, 0x7f0a05af
+    const v8, 0x7f0303f5
 
-    const v7, 0x7f0a0596
+    const v7, 0x7f0303e3
 
-    const v6, 0x7f0a0564
+    const v6, 0x7f0303ad
 
     const/4 v1, 0x0
 
     .line 244
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLS:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llh:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -1505,7 +1562,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/h;->kLU:Ljava/util/HashSet;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/h;->llj:Ljava/util/HashSet;
 
     invoke-virtual {v3, v0}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
@@ -1513,7 +1570,7 @@
 
     if-nez v3, :cond_0
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
     invoke-virtual {v3, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1521,7 +1578,7 @@
 
     if-nez v3, :cond_1
 
-    const-string/jumbo v3, "!44@/B4Tb64lLpL7nV+aKji0O5oZqg+g/M2CVC2enFN9hcI="
+    const-string/jumbo v3, "MicroMsg.MMPreferenceAdapter"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1537,19 +1594,19 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_1
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v3, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
 
@@ -1557,9 +1614,9 @@
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v2, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -1571,9 +1628,9 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/preference/Preference;
 
-    iget v0, v0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
+    iget v0, v0, Lcom/tencent/mm/ui/base/preference/Preference;->llI:I
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/preference/h;->qS(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/preference/h;->sU(I)Z
 
     move-result v0
 
@@ -1589,10 +1646,10 @@
 
     .line 247
     :cond_3
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/preference/h;->bdr()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/preference/h;->biY()V
 
     .line 249
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -1600,10 +1657,10 @@
 
     new-array v0, v0, [I
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     .line 252
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     array-length v0, v0
 
@@ -1615,7 +1672,7 @@
 
     .line 258
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     array-length v0, v0
 
@@ -1624,9 +1681,9 @@
     if-ne v0, v2, :cond_7
 
     .line 259
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v2, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -1638,12 +1695,12 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/preference/Preference;
 
-    iget v2, v0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
+    iget v2, v0, Lcom/tencent/mm/ui/base/preference/Preference;->llI:I
 
     .line 260
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v3, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -1656,7 +1713,7 @@
     check-cast v0, Lcom/tencent/mm/ui/base/preference/Preference;
 
     .line 261
-    invoke-static {v2}, Lcom/tencent/mm/ui/base/preference/h;->qS(I)Z
+    invoke-static {v2}, Lcom/tencent/mm/ui/base/preference/h;->sU(I)Z
 
     move-result v2
 
@@ -1668,7 +1725,7 @@
     if-eqz v0, :cond_5
 
     .line 264
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     aget v2, v0, v1
 
@@ -1678,9 +1735,9 @@
 
     .line 273
     :goto_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v2, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -1692,7 +1749,7 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/preference/Preference;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->bxg:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/h;->bpi:Landroid/content/SharedPreferences;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/preference/h;->a(Lcom/tencent/mm/ui/base/preference/Preference;Landroid/content/SharedPreferences;)V
 
@@ -1703,7 +1760,7 @@
 
     .line 267
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     const/4 v2, 0x3
 
@@ -1713,7 +1770,7 @@
 
     .line 271
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     const/4 v2, 0x4
 
@@ -1724,7 +1781,7 @@
     .line 279
     :cond_7
     :goto_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -1733,9 +1790,9 @@
     if-ge v1, v0, :cond_12
 
     .line 280
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v2, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -1747,14 +1804,14 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/preference/Preference;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->bxg:Landroid/content/SharedPreferences;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->bpi:Landroid/content/SharedPreferences;
 
     invoke-static {v0, v2}, Lcom/tencent/mm/ui/base/preference/h;->a(Lcom/tencent/mm/ui/base/preference/Preference;Landroid/content/SharedPreferences;)V
 
     .line 282
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v2, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -1767,10 +1824,10 @@
     check-cast v0, Lcom/tencent/mm/ui/base/preference/Preference;
 
     .line 283
-    iget v2, v0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
+    iget v2, v0, Lcom/tencent/mm/ui/base/preference/Preference;->llI:I
 
     .line 284
-    invoke-static {v2}, Lcom/tencent/mm/ui/base/preference/h;->qS(I)Z
+    invoke-static {v2}, Lcom/tencent/mm/ui/base/preference/h;->sU(I)Z
 
     move-result v3
 
@@ -1782,7 +1839,7 @@
     if-eqz v0, :cond_9
 
     .line 289
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     aget v2, v0, v1
 
@@ -1804,7 +1861,7 @@
     if-nez v1, :cond_a
 
     .line 294
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     aget v2, v0, v1
 
@@ -1816,7 +1873,7 @@
 
     .line 298
     :cond_a
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -1827,7 +1884,7 @@
     if-ne v1, v0, :cond_b
 
     .line 299
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     aget v2, v0, v1
 
@@ -1837,9 +1894,9 @@
 
     .line 302
     :cond_b
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     add-int/lit8 v3, v1, -0x1
 
@@ -1853,18 +1910,18 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/preference/Preference;
 
-    iget v0, v0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
+    iget v0, v0, Lcom/tencent/mm/ui/base/preference/Preference;->llI:I
 
     .line 303
-    if-ne v0, v9, :cond_c
+    if-ne v0, v6, :cond_c
 
-    if-eq v0, v6, :cond_c
+    if-eq v0, v8, :cond_c
 
-    if-ne v0, v7, :cond_8
+    if-ne v0, v9, :cond_8
 
     .line 306
     :cond_c
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     aget v2, v0, v1
 
@@ -1876,13 +1933,13 @@
 
     .line 309
     :cond_d
-    if-ne v2, v8, :cond_10
+    if-ne v2, v7, :cond_10
 
     .line 311
     if-nez v1, :cond_e
 
     .line 312
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     aget v2, v0, v1
 
@@ -1894,7 +1951,7 @@
 
     .line 316
     :cond_e
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     aget v2, v0, v1
 
@@ -1903,9 +1960,9 @@
     aput v2, v0, v1
 
     .line 318
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     add-int/lit8 v3, v1, -0x1
 
@@ -1919,18 +1976,18 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/preference/Preference;
 
-    iget v0, v0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
+    iget v0, v0, Lcom/tencent/mm/ui/base/preference/Preference;->llI:I
 
     .line 320
-    if-eq v0, v9, :cond_f
-
     if-eq v0, v6, :cond_f
 
-    if-ne v0, v7, :cond_8
+    if-eq v0, v8, :cond_f
+
+    if-ne v0, v9, :cond_8
 
     .line 323
     :cond_f
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     add-int/lit8 v2, v1, -0x1
 
@@ -1944,7 +2001,7 @@
 
     .line 328
     :cond_10
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     aget v2, v0, v1
 
@@ -1956,9 +2013,9 @@
     if-eqz v1, :cond_8
 
     .line 331
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     add-int/lit8 v3, v1, -0x1
 
@@ -1972,20 +2029,20 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/preference/Preference;
 
-    iget v0, v0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
+    iget v0, v0, Lcom/tencent/mm/ui/base/preference/Preference;->llI:I
 
     .line 335
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/preference/h;->qS(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/preference/h;->sU(I)Z
 
     move-result v2
 
     if-nez v2, :cond_11
 
-    if-ne v0, v8, :cond_8
+    if-ne v0, v7, :cond_8
 
     .line 336
     :cond_11
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLY:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lln:[I
 
     add-int/lit8 v2, v1, -0x1
 
@@ -2009,22 +2066,22 @@
 
     .prologue
     .line 156
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llk:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
     .line 157
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLT:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->lli:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
     .line 158
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLS:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llh:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
     .line 159
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->kLU:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/h;->llj:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 

@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static F(Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/storage/ad;
+.method public static C(Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/storage/ae;
     .locals 9
 
     .prologue
@@ -28,22 +28,22 @@
 
     .line 130
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rv()Lcom/tencent/mm/storage/al;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rx()Lcom/tencent/mm/storage/an;
 
     move-result-object v1
 
-    invoke-virtual {v1, p0}, Lcom/tencent/mm/storage/al;->FD(Ljava/lang/String;)Lcom/tencent/mm/storage/ak;
+    invoke-virtual {v1, p0}, Lcom/tencent/mm/storage/an;->HT(Ljava/lang/String;)Lcom/tencent/mm/storage/am;
 
     move-result-object v5
 
     .line 131
     if-eqz v5, :cond_0
 
-    iget v1, v5, Lcom/tencent/mm/storage/ak;->kgA:I
+    iget v1, v5, Lcom/tencent/mm/storage/am;->kGZ:I
 
     if-ne v1, v6, :cond_4
 
@@ -53,17 +53,17 @@
     if-eqz v1, :cond_0
 
     .line 135
-    new-instance v0, Lcom/tencent/mm/storage/ad;
+    new-instance v0, Lcom/tencent/mm/storage/ae;
 
     const-string/jumbo v1, "@domain.android"
 
-    iget-object v2, v5, Lcom/tencent/mm/storage/ak;->name:Ljava/lang/String;
+    iget-object v2, v5, Lcom/tencent/mm/storage/am;->name:Ljava/lang/String;
 
-    iget-object v3, v5, Lcom/tencent/mm/storage/ak;->kgz:Lcom/tencent/mm/storage/ak$a;
+    iget-object v3, v5, Lcom/tencent/mm/storage/am;->kGY:Lcom/tencent/mm/storage/am$a;
 
     const-string/jumbo v4, ""
 
-    invoke-virtual {v3, v4}, Lcom/tencent/mm/storage/ak$a;->FC(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/storage/am$a;->HS(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -115,19 +115,19 @@
     move-result-object v3
 
     :cond_3
-    iget-object v4, v5, Lcom/tencent/mm/storage/ak;->kgz:Lcom/tencent/mm/storage/ak$a;
+    iget-object v4, v5, Lcom/tencent/mm/storage/am;->kGY:Lcom/tencent/mm/storage/am$a;
 
     const-string/jumbo v7, ""
 
-    invoke-virtual {v4, v7}, Lcom/tencent/mm/storage/ak$a;->FC(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4, v7}, Lcom/tencent/mm/storage/am$a;->HS(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v5}, Lcom/tencent/mm/storage/ak;->PN()Z
+    invoke-virtual {v5}, Lcom/tencent/mm/storage/am;->Rc()Z
 
     move-result v5
 
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/storage/ad;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/storage/ae;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
 
     goto :goto_0
 
@@ -138,7 +138,7 @@
     goto :goto_1
 .end method
 
-.method public static eX(Ljava/lang/String;)Lcom/tencent/mm/storage/ad;
+.method public static fj(Ljava/lang/String;)Lcom/tencent/mm/storage/ae;
     .locals 7
 
     .prologue
@@ -147,7 +147,7 @@
     const/4 v5, 0x1
 
     .line 27
-    new-instance v0, Lcom/tencent/mm/storage/ad;
+    new-instance v0, Lcom/tencent/mm/storage/ae;
 
     const-string/jumbo v1, "@black.android"
 
@@ -157,29 +157,29 @@
 
     move v6, v5
 
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/storage/ad;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/storage/ae;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
 
     return-object v0
 .end method
 
-.method public static eY(Ljava/lang/String;)Lcom/tencent/mm/storage/ad;
+.method public static fk(Ljava/lang/String;)Lcom/tencent/mm/storage/ae;
     .locals 7
 
     .prologue
     const/4 v2, 0x0
 
     .line 32
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rv()Lcom/tencent/mm/storage/al;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rx()Lcom/tencent/mm/storage/an;
 
     move-result-object v0
 
     const-string/jumbo v1, "@t.qq.com"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/al;->FD(Ljava/lang/String;)Lcom/tencent/mm/storage/ak;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/an;->HT(Ljava/lang/String;)Lcom/tencent/mm/storage/am;
 
     move-result-object v3
 
@@ -191,15 +191,15 @@
     return-object v2
 
     :cond_0
-    new-instance v0, Lcom/tencent/mm/storage/ad;
+    new-instance v0, Lcom/tencent/mm/storage/ae;
 
     const-string/jumbo v1, "@t.qq.com"
 
-    invoke-virtual {v3}, Lcom/tencent/mm/storage/ak;->PN()Z
+    invoke-virtual {v3}, Lcom/tencent/mm/storage/am;->Rc()Z
 
     move-result v5
 
-    invoke-virtual {v3}, Lcom/tencent/mm/storage/ak;->aXX()Z
+    invoke-virtual {v3}, Lcom/tencent/mm/storage/am;->bdp()Z
 
     move-result v6
 
@@ -207,7 +207,7 @@
 
     move-object v4, v2
 
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/storage/ad;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/storage/ae;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
 
     move-object v2, v0
 

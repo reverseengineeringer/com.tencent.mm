@@ -13,53 +13,55 @@
 
 
 # instance fields
-.field private aSG:Ljava/lang/String;
+.field private aFp:Ljava/lang/String;
 
-.field private bNY:F
+.field private bHu:F
 
-.field private bNZ:F
+.field private bHv:F
 
-.field private cMt:Landroid/view/View;
+.field private cJf:Landroid/view/View;
 
-.field private eDO:Lcom/tencent/mm/modelgeo/b;
+.field private eRa:Lcom/tencent/mm/modelgeo/b$a;
 
-.field private eDP:Lcom/tencent/mm/modelgeo/c;
+.field private eTE:Ljava/lang/String;
 
-.field private eDQ:Z
+.field private eWB:Lcom/tencent/mm/modelgeo/b;
 
-.field private eDR:Lcom/tencent/mm/modelgeo/a$a;
+.field private eZl:Landroid/app/Activity;
 
-.field private eDS:Lcom/tencent/mm/modelgeo/b$a;
+.field frO:F
 
-.field private eLJ:Ljava/lang/String;
+.field private fsc:Lcom/tencent/mm/modelgeo/a$a;
 
-.field private eRr:Landroid/app/Activity;
+.field private fst:Lcom/tencent/mm/protocal/b/abr;
 
-.field private fiS:F
+.field private hjR:Landroid/widget/ImageView;
 
-.field private fjv:Lcom/tencent/mm/protocal/b/abc;
+.field private hkO:Landroid/widget/TextView;
 
-.field private gWs:Landroid/widget/ImageView;
+.field private hmA:Ljava/lang/String;
 
-.field private gXC:Landroid/widget/TextView;
+.field private hmB:I
 
-.field private gXg:Ljava/lang/String;
+.field hmC:F
 
-.field private gZl:Landroid/widget/TextView;
+.field hmD:F
 
-.field private gZm:Ljava/lang/String;
+.field hmE:I
 
-.field private gZn:I
+.field private hmF:Lcom/tencent/mm/modelgeo/c;
 
-.field private gZo:F
+.field hmG:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
 
-.field private gZp:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
+.field private hmH:Z
 
-.field private gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+.field private hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-.field private meQ:F
+.field private hmx:Landroid/widget/TextView;
 
-.field private meR:I
+.field private hmy:[B
+
+.field private hmz:Ljava/lang/String;
 
 
 # direct methods
@@ -75,70 +77,70 @@
 
     const/4 v0, 0x0
 
-    .line 77
+    .line 80
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 53
-    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNY:F
+    .line 55
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHu:F
 
-    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNZ:F
-
-    .line 58
-    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZn:I
-
-    .line 59
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fjv:Lcom/tencent/mm/protocal/b/abc;
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHv:F
 
     .line 61
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZo:F
+    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmB:I
 
     .line 62
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fiS:F
-
-    .line 63
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->meQ:F
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fst:Lcom/tencent/mm/protocal/b/abr;
 
     .line 64
-    const/4 v0, -0x1
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmC:F
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->meR:I
+    .line 65
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->frO:F
 
     .line 66
-    invoke-static {}, Lcom/tencent/mm/modelgeo/c;->zD()Lcom/tencent/mm/modelgeo/c;
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmD:F
+
+    .line 67
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmE:I
+
+    .line 69
+    invoke-static {}, Lcom/tencent/mm/modelgeo/c;->zQ()Lcom/tencent/mm/modelgeo/c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDP:Lcom/tencent/mm/modelgeo/c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmF:Lcom/tencent/mm/modelgeo/c;
 
-    .line 67
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZp:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
+    .line 70
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmG:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
 
-    .line 69
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDQ:Z
+    .line 72
+    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmH:Z
 
-    .line 240
+    .line 243
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$2;-><init>(Lcom/tencent/mm/plugin/sns/ui/LocationWidget;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDS:Lcom/tencent/mm/modelgeo/b$a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eRa:Lcom/tencent/mm/modelgeo/b$a;
 
-    .line 259
+    .line 262
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$3;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/LocationWidget;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDR:Lcom/tencent/mm/modelgeo/a$a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fsc:Lcom/tencent/mm/modelgeo/a$a;
 
-    .line 362
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    .line 366
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    .line 78
+    .line 81
     check-cast p1, Lcom/tencent/mm/ui/MMActivity;
 
-    invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->f(Lcom/tencent/mm/ui/MMActivity;)V
+    invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->d(Lcom/tencent/mm/ui/MMActivity;)V
 
-    .line 79
+    .line 82
     return-void
 .end method
 
@@ -154,75 +156,84 @@
 
     const/4 v0, 0x0
 
-    .line 72
+    .line 75
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 53
-    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNY:F
+    .line 55
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHu:F
 
-    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNZ:F
-
-    .line 58
-    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZn:I
-
-    .line 59
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fjv:Lcom/tencent/mm/protocal/b/abc;
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHv:F
 
     .line 61
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZo:F
+    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmB:I
 
     .line 62
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fiS:F
-
-    .line 63
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->meQ:F
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fst:Lcom/tencent/mm/protocal/b/abr;
 
     .line 64
-    const/4 v0, -0x1
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmC:F
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->meR:I
+    .line 65
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->frO:F
 
     .line 66
-    invoke-static {}, Lcom/tencent/mm/modelgeo/c;->zD()Lcom/tencent/mm/modelgeo/c;
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmD:F
+
+    .line 67
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmE:I
+
+    .line 69
+    invoke-static {}, Lcom/tencent/mm/modelgeo/c;->zQ()Lcom/tencent/mm/modelgeo/c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDP:Lcom/tencent/mm/modelgeo/c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmF:Lcom/tencent/mm/modelgeo/c;
 
-    .line 67
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZp:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
+    .line 70
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmG:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
 
-    .line 69
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDQ:Z
+    .line 72
+    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmH:Z
 
-    .line 240
+    .line 243
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$2;-><init>(Lcom/tencent/mm/plugin/sns/ui/LocationWidget;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDS:Lcom/tencent/mm/modelgeo/b$a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eRa:Lcom/tencent/mm/modelgeo/b$a;
 
-    .line 259
+    .line 262
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$3;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/LocationWidget;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDR:Lcom/tencent/mm/modelgeo/a$a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fsc:Lcom/tencent/mm/modelgeo/a$a;
 
-    .line 362
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    .line 366
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    .line 73
+    .line 76
     check-cast p1, Lcom/tencent/mm/ui/MMActivity;
 
-    invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->f(Lcom/tencent/mm/ui/MMActivity;)V
+    invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->d(Lcom/tencent/mm/ui/MMActivity;)V
 
-    .line 74
+    .line 77
     return-void
 .end method
 
-.method private D(Ljava/util/ArrayList;)V
+.method private H(Ljava/util/ArrayList;)V
     .locals 13
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/compatible/util/Exif$a;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     const/4 v9, 0x0
@@ -233,7 +244,7 @@
 
     const/16 v12, 0x2b83
 
-    .line 190
+    .line 193
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -242,34 +253,20 @@
 
     if-nez v0, :cond_1
 
-    .line 218
+    .line 221
     :cond_0
     return-void
 
-    .line 194
+    .line 197
     :cond_1
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-string/jumbo v1, "1"
 
-    invoke-virtual {v0, v12, v1}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v12, v1}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
-    .line 196
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNY:F
-
-    sub-float v0, v4, v0
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
-
-    move-result v0
-
-    float-to-double v0, v0
-
-    cmpl-double v0, v0, v2
-
-    if-lez v0, :cond_2
-
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNZ:F
+    .line 199
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHu:F
 
     sub-float v0, v4, v0
 
@@ -283,7 +280,21 @@
 
     if-lez v0, :cond_2
 
-    .line 197
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHv:F
+
+    sub-float v0, v4, v0
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    float-to-double v0, v0
+
+    cmpl-double v0, v0, v2
+
+    if-lez v0, :cond_2
+
+    .line 200
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -298,16 +309,16 @@
 
     check-cast v2, Lcom/tencent/mm/compatible/util/Exif$a;
 
-    .line 198
+    .line 201
     iget-wide v0, v2, Lcom/tencent/mm/compatible/util/Exif$a;->latitude:D
 
     iget-wide v2, v2, Lcom/tencent/mm/compatible/util/Exif$a;->longitude:D
 
-    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNY:F
+    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHu:F
 
     float-to-double v4, v4
 
-    iget v6, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNZ:F
+    iget v6, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHv:F
 
     float-to-double v6, v6
 
@@ -317,17 +328,17 @@
 
     if-eqz v0, :cond_2
 
-    .line 199
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 202
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-string/jumbo v1, "2"
 
-    invoke-virtual {v0, v12, v1}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v12, v1}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
     :cond_2
     move v8, v9
 
-    .line 203
+    .line 206
     :goto_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -335,10 +346,10 @@
 
     if-ge v8, v0, :cond_0
 
-    .line 204
+    .line 207
     const/4 v11, 0x1
 
-    .line 205
+    .line 208
     add-int/lit8 v0, v8, 0x1
 
     move v10, v0
@@ -350,7 +361,7 @@
 
     if-ge v10, v0, :cond_4
 
-    .line 206
+    .line 209
     invoke-virtual {p1, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -359,7 +370,7 @@
 
     check-cast v2, Lcom/tencent/mm/compatible/util/Exif$a;
 
-    .line 207
+    .line 210
     invoke-virtual {p1, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -368,7 +379,7 @@
 
     check-cast v6, Lcom/tencent/mm/compatible/util/Exif$a;
 
-    .line 208
+    .line 211
     iget-wide v0, v2, Lcom/tencent/mm/compatible/util/Exif$a;->latitude:D
 
     iget-wide v2, v2, Lcom/tencent/mm/compatible/util/Exif$a;->longitude:D
@@ -383,27 +394,27 @@
 
     if-eqz v0, :cond_3
 
-    .line 210
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 213
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-string/jumbo v1, "3"
 
-    invoke-virtual {v0, v12, v1}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v12, v1}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
     move v0, v9
 
-    .line 216
+    .line 219
     :goto_2
     if-eqz v0, :cond_0
 
-    .line 203
+    .line 206
     add-int/lit8 v0, v8, 0x1
 
     move v8, v0
 
     goto :goto_0
 
-    .line 205
+    .line 208
     :cond_3
     add-int/lit8 v0, v10, 0x1
 
@@ -421,8 +432,8 @@
     .locals 0
 
     .prologue
-    .line 41
-    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNY:F
+    .line 43
+    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHu:F
 
     return p1
 .end method
@@ -431,8 +442,8 @@
     .locals 1
 
     .prologue
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eRr:Landroid/app/Activity;
+    .line 43
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eZl:Landroid/app/Activity;
 
     return-object v0
 .end method
@@ -441,125 +452,125 @@
     .locals 0
 
     .prologue
-    .line 41
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aSG:Ljava/lang/String;
+    .line 43
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aFp:Ljava/lang/String;
 
     return-object p1
 .end method
 
-.method private aBc()V
+.method private aEa()V
     .locals 3
 
     .prologue
     const/16 v2, 0x8
 
-    .line 412
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZl:Landroid/widget/TextView;
+    .line 416
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmx:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXC:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hkO:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 413
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eLJ:Ljava/lang/String;
+    .line 417
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eTE:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 418
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZl:Landroid/widget/TextView;
+    .line 422
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmx:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eLJ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eTE:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 420
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXC:Landroid/widget/TextView;
+    .line 424
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hkO:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 430
+    .line 434
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eLJ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eTE:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aSG:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aFp:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 431
+    .line 435
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gWs:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hjR:Landroid/widget/ImageView;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->getSelectedStateImageResource()I
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aEc()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 436
+    .line 440
     :goto_1
     return-void
 
-    .line 421
+    .line 425
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aSG:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aFp:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 422
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZl:Landroid/widget/TextView;
+    .line 426
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmx:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aSG:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aFp:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 423
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXC:Landroid/widget/TextView;
+    .line 427
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hkO:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 425
+    .line 429
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZl:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmx:Landroid/widget/TextView;
 
-    const v1, 0x7f0b1671
+    const v1, 0x7f081296
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 426
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXC:Landroid/widget/TextView;
+    .line 430
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hkO:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 433
+    .line 437
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gWs:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hjR:Landroid/widget/ImageView;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->getNormalStateImageResource()I
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aEb()I
 
     move-result v1
 
@@ -568,7 +579,7 @@
     goto :goto_1
 .end method
 
-.method private aBd()V
+.method private aEe()V
     .locals 13
 
     .prologue
@@ -580,26 +591,26 @@
 
     const/4 v2, 0x2
 
-    .line 486
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZp:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
+    .line 494
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmG:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
 
     if-eqz v0, :cond_0
 
-    .line 487
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZp:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
+    .line 495
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmG:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;->aBf()Z
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;->aEg()Z
 
     move-result v3
 
-    .line 488
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZp:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
+    .line 496
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmG:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;->aBe()Ljava/util/ArrayList;
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;->aEf()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 489
+    .line 497
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -608,11 +619,11 @@
 
     if-nez v4, :cond_1
 
-    .line 498
+    .line 506
     :cond_0
     return-void
 
-    .line 492
+    .line 500
     :cond_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -631,8 +642,8 @@
 
     check-cast v0, Lcom/tencent/mm/compatible/util/Exif$a;
 
-    .line 493
-    const-string/jumbo v5, "!32@/B4Tb64lLpIu6Y+BscdrxMP5NzODT+9I"
+    .line 501
+    const-string/jumbo v5, "MicroMsg.LocationWidget"
 
     const-string/jumbo v6, "snsreport lat lng %f, %f"
 
@@ -654,10 +665,10 @@
 
     aput-object v8, v7, v1
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 494
-    sget-object v5, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 502
+    sget-object v5, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v6, 0x2c51
 
@@ -708,7 +719,7 @@
 
     aput-object v8, v7, v0
 
-    invoke-virtual {v5, v6, v7}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v5, v6, v7}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -722,8 +733,8 @@
     .locals 0
 
     .prologue
-    .line 41
-    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNZ:F
+    .line 43
+    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHv:F
 
     return p1
 .end method
@@ -732,7 +743,7 @@
     .locals 4
 
     .prologue
-    .line 221
+    .line 224
     invoke-static/range {p0 .. p7}, Lcom/tencent/mm/pluginsdk/j;->c(DDDD)D
 
     move-result-wide v0
@@ -758,8 +769,8 @@
     .locals 1
 
     .prologue
-    .line 41
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDQ:Z
+    .line 43
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmH:Z
 
     return v0
 .end method
@@ -768,8 +779,8 @@
     .locals 0
 
     .prologue
-    .line 41
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aBc()V
+    .line 43
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aEa()V
 
     return-void
 .end method
@@ -778,42 +789,22 @@
     .locals 1
 
     .prologue
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aSG:Ljava/lang/String;
+    .line 43
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aFp:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic e(Lcom/tencent/mm/plugin/sns/ui/LocationWidget;)F
-    .locals 1
-
-    .prologue
-    .line 41
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNY:F
-
-    return v0
-.end method
-
-.method static synthetic f(Lcom/tencent/mm/plugin/sns/ui/LocationWidget;)F
-    .locals 1
-
-    .prologue
-    .line 41
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNZ:F
-
-    return v0
-.end method
-
-.method private f(Lcom/tencent/mm/ui/MMActivity;)V
+.method private d(Lcom/tencent/mm/ui/MMActivity;)V
     .locals 3
 
     .prologue
     const/high16 v2, -0x3b860000    # -1000.0f
 
-    .line 87
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eRr:Landroid/app/Activity;
+    .line 90
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eZl:Landroid/app/Activity;
 
-    .line 88
+    .line 91
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->getLayoutResource()I
 
     move-result v0
@@ -822,25 +813,12 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->cMt:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->cJf:Landroid/view/View;
 
-    .line 92
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->cMt:Landroid/view/View;
+    .line 95
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->cJf:Landroid/view/View;
 
-    const v1, 0x7f070391
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZl:Landroid/widget/TextView;
-
-    .line 93
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->cMt:Landroid/view/View;
-
-    const v1, 0x7f070d06
+    const v1, 0x7f1009d7
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -848,12 +826,25 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXC:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmx:Landroid/widget/TextView;
 
-    .line 94
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->cMt:Landroid/view/View;
+    .line 96
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->cJf:Landroid/view/View;
 
-    const v1, 0x7f070d05
+    const v1, 0x7f1009d9
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hkO:Landroid/widget/TextView;
+
+    .line 97
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->cJf:Landroid/view/View;
+
+    const v1, 0x7f1009d8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -861,17 +852,17 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gWs:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hjR:Landroid/widget/ImageView;
 
-    .line 96
-    invoke-static {}, Lcom/tencent/mm/modelgeo/b;->zB()Lcom/tencent/mm/modelgeo/b;
+    .line 99
+    invoke-static {}, Lcom/tencent/mm/modelgeo/b;->zO()Lcom/tencent/mm/modelgeo/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDO:Lcom/tencent/mm/modelgeo/b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eWB:Lcom/tencent/mm/modelgeo/b;
 
-    .line 98
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->cMt:Landroid/view/View;
+    .line 101
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->cJf:Landroid/view/View;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$1;
 
@@ -879,7 +870,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 112
+    .line 115
     invoke-virtual {p1}, Lcom/tencent/mm/ui/MMActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -890,18 +881,18 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXg:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmA:Ljava/lang/String;
 
-    .line 114
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXg:Ljava/lang/String;
+    .line 117
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmA:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 115
+    .line 118
     invoke-virtual {p1}, Lcom/tencent/mm/ui/MMActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -912,9 +903,9 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNY:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHu:F
 
-    .line 117
+    .line 120
     invoke-virtual {p1}, Lcom/tencent/mm/ui/MMActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -925,9 +916,9 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNZ:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHv:F
 
-    .line 119
+    .line 122
     invoke-virtual {p1}, Lcom/tencent/mm/ui/MMActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -938,9 +929,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eLJ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eTE:Ljava/lang/String;
 
-    .line 121
+    .line 124
     invoke-virtual {p1}, Lcom/tencent/mm/ui/MMActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -951,19 +942,49 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZm:Ljava/lang/String;
-
-    .line 123
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aBc()V
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmz:Ljava/lang/String;
 
     .line 126
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aEa()V
+
+    .line 129
     :cond_0
     return-void
 .end method
 
+.method static synthetic e(Lcom/tencent/mm/plugin/sns/ui/LocationWidget;)Lcom/tencent/mm/modelgeo/c;
+    .locals 1
+
+    .prologue
+    .line 43
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmF:Lcom/tencent/mm/modelgeo/c;
+
+    return-object v0
+.end method
+
+.method static synthetic f(Lcom/tencent/mm/plugin/sns/ui/LocationWidget;)F
+    .locals 1
+
+    .prologue
+    .line 43
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHu:F
+
+    return v0
+.end method
+
+.method static synthetic g(Lcom/tencent/mm/plugin/sns/ui/LocationWidget;)F
+    .locals 1
+
+    .prologue
+    .line 43
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHv:F
+
+    return v0
+.end method
+
 
 # virtual methods
-.method public final A(Landroid/content/Intent;)Z
+.method public final E(Landroid/content/Intent;)Z
     .locals 9
 
     .prologue
@@ -977,15 +998,15 @@
 
     const/4 v4, 0x0
 
-    .line 289
+    .line 293
     if-nez p1, :cond_1
 
-    .line 359
+    .line 363
     :cond_0
     :goto_0
     return v6
 
-    .line 293
+    .line 297
     :cond_1
     const-string/jumbo v0, "get_poi_classify_type"
 
@@ -993,16 +1014,16 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZn:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmB:I
 
-    .line 297
-    const-string/jumbo v0, "!32@/B4Tb64lLpIu6Y+BscdrxMP5NzODT+9I"
+    .line 301
+    const-string/jumbo v0, "MicroMsg.LocationWidget"
 
     const-string/jumbo v1, "onactivity result ok poiClassifyType %d"
 
     new-array v2, v6, [Ljava/lang/Object;
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZn:I
+    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmB:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1010,9 +1031,9 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 299
+    .line 303
     const-string/jumbo v0, "get_poi_name"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -1021,13 +1042,13 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eLJ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eTE:Ljava/lang/String;
 
-    .line 301
+    .line 305
     const-string/jumbo v0, "get_city"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -1036,32 +1057,32 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aSG:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aFp:Ljava/lang/String;
 
-    .line 303
+    .line 307
     const-string/jumbo v0, "get_lat"
 
     invoke-virtual {p1, v0, v5}, Landroid/content/Intent;->getFloatExtra(Ljava/lang/String;F)F
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNY:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHu:F
 
-    .line 305
+    .line 309
     const-string/jumbo v0, "get_lng"
 
     invoke-virtual {p1, v0, v5}, Landroid/content/Intent;->getFloatExtra(Ljava/lang/String;F)F
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNZ:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHv:F
 
-    .line 308
-    const-string/jumbo v0, "!32@/B4Tb64lLpIu6Y+BscdrxMP5NzODT+9I"
+    .line 312
+    const-string/jumbo v0, "MicroMsg.LocationWidget"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1069,7 +1090,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZo:F
+    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmC:F
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -1081,7 +1102,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fiS:F
+    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->frO:F
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -1091,27 +1112,27 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 309
+    .line 313
     const-string/jumbo v0, "get_cur_lat"
 
     invoke-virtual {p1, v0, v7}, Landroid/content/Intent;->getFloatExtra(Ljava/lang/String;F)F
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZo:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmC:F
 
-    .line 310
+    .line 314
     const-string/jumbo v0, "get_cur_lng"
 
     invoke-virtual {p1, v0, v7}, Landroid/content/Intent;->getFloatExtra(Ljava/lang/String;F)F
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fiS:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->frO:F
 
-    .line 311
+    .line 315
     const-string/jumbo v0, "get_loctype"
 
     const/4 v1, -0x1
@@ -1120,27 +1141,36 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->meR:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmE:I
 
-    .line 312
+    .line 316
     const-string/jumbo v0, "get_accuracy"
 
     invoke-virtual {p1, v0, v7}, Landroid/content/Intent;->getFloatExtra(Ljava/lang/String;F)F
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->meQ:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmD:F
 
-    .line 316
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eLJ:Ljava/lang/String;
+    .line 318
+    const-string/jumbo v0, "location_ctx"
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->getByteArrayExtra(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmy:[B
+
+    .line 320
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eTE:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 317
+    .line 321
     const-string/jumbo v0, "get_poi_address"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -1149,13 +1179,13 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZm:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmz:Ljava/lang/String;
 
-    .line 321
+    .line 325
     const-string/jumbo v0, "get_poi_classify_id"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -1164,22 +1194,22 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXg:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmA:Ljava/lang/String;
 
-    .line 325
-    new-instance v0, Lcom/tencent/mm/protocal/b/abc;
+    .line 329
+    new-instance v0, Lcom/tencent/mm/protocal/b/abr;
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/abc;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/abr;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fjv:Lcom/tencent/mm/protocal/b/abc;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fst:Lcom/tencent/mm/protocal/b/abr;
 
-    .line 327
+    .line 331
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fjv:Lcom/tencent/mm/protocal/b/abc;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fst:Lcom/tencent/mm/protocal/b/abr;
 
     const-string/jumbo v1, "get_poi_item_buf"
 
@@ -1187,75 +1217,75 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/protocal/b/abc;->am([B)Lcom/tencent/mm/at/a;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/protocal/b/abr;->au([B)Lcom/tencent/mm/ax/a;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/abc;
+    check-cast v0, Lcom/tencent/mm/protocal/b/abr;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fjv:Lcom/tencent/mm/protocal/b/abc;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fst:Lcom/tencent/mm/protocal/b/abr;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 332
+    .line 336
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXg:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmA:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 333
-    new-instance v0, Lcom/tencent/mm/protocal/b/abc;
-
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/abc;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fjv:Lcom/tencent/mm/protocal/b/abc;
-
-    .line 334
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fjv:Lcom/tencent/mm/protocal/b/abc;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXg:Ljava/lang/String;
-
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/abc;->fjp:Ljava/lang/String;
-
-    .line 335
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fjv:Lcom/tencent/mm/protocal/b/abc;
-
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZn:I
-
-    iput v1, v0, Lcom/tencent/mm/protocal/b/abc;->dzC:I
-
-    .line 336
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fjv:Lcom/tencent/mm/protocal/b/abc;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eLJ:Ljava/lang/String;
-
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/abc;->asP:Ljava/lang/String;
-
     .line 337
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fjv:Lcom/tencent/mm/protocal/b/abc;
+    new-instance v0, Lcom/tencent/mm/protocal/b/abr;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/abc;->jxs:Ljava/util/LinkedList;
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/abr;-><init>()V
 
-    new-instance v1, Lcom/tencent/mm/protocal/b/aly;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fst:Lcom/tencent/mm/protocal/b/abr;
 
-    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/aly;-><init>()V
+    .line 338
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fst:Lcom/tencent/mm/protocal/b/abr;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZm:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmA:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/protocal/b/aly;->Cr(Ljava/lang/String;)Lcom/tencent/mm/protocal/b/aly;
+    iput-object v1, v0, Lcom/tencent/mm/protocal/b/abr;->fsn:Ljava/lang/String;
+
+    .line 339
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fst:Lcom/tencent/mm/protocal/b/abr;
+
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmB:I
+
+    iput v1, v0, Lcom/tencent/mm/protocal/b/abr;->Type:I
+
+    .line 340
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fst:Lcom/tencent/mm/protocal/b/abr;
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eTE:Ljava/lang/String;
+
+    iput-object v1, v0, Lcom/tencent/mm/protocal/b/abr;->aez:Ljava/lang/String;
+
+    .line 341
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fst:Lcom/tencent/mm/protocal/b/abr;
+
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/abr;->jVY:Ljava/util/LinkedList;
+
+    new-instance v1, Lcom/tencent/mm/protocal/b/amj;
+
+    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/amj;-><init>()V
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmz:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/protocal/b/amj;->EF(Ljava/lang/String;)Lcom/tencent/mm/protocal/b/amj;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 354
+    .line 358
     :cond_2
     :goto_2
-    const-string/jumbo v0, "!32@/B4Tb64lLpIu6Y+BscdrxMP5NzODT+9I"
+    const-string/jumbo v0, "MicroMsg.LocationWidget"
 
     const-string/jumbo v1, "label %s poiname %s"
 
@@ -1263,28 +1293,28 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZm:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmz:Ljava/lang/String;
 
     aput-object v3, v2, v4
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eLJ:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eTE:Ljava/lang/String;
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 355
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aBc()V
+    .line 359
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aEa()V
 
-    .line 357
+    .line 361
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;-><init>(Lcom/tencent/mm/plugin/sns/ui/LocationWidget;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    .line 358
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    .line 362
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
     if-eqz p1, :cond_0
 
@@ -1304,9 +1334,9 @@
 
     invoke-virtual {p1, v1, v2, v3}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiT:J
+    iput-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frR:J
 
     const-string/jumbo v1, "lastSuccStamp"
 
@@ -1314,9 +1344,9 @@
 
     invoke-virtual {p1, v1, v2, v3}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiU:J
+    iput-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frS:J
 
     const-string/jumbo v1, "firstSuccStamp"
 
@@ -1324,9 +1354,9 @@
 
     invoke-virtual {p1, v1, v2, v3}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiV:J
+    iput-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frT:J
 
     const-string/jumbo v1, "reqLoadCnt"
 
@@ -1334,7 +1364,7 @@
 
     move-result v1
 
-    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiW:I
+    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frU:I
 
     const-string/jumbo v1, "entry_time"
 
@@ -1342,7 +1372,7 @@
 
     move-result v1
 
-    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fjc:I
+    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frZ:I
 
     const-string/jumbo v1, "search_id"
 
@@ -1350,104 +1380,104 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->cKD:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->cHG:Ljava/lang/String;
 
     goto/16 :goto_0
 
-    .line 329
+    .line 333
     :catch_0
     move-exception v0
 
-    iput-object v8, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fjv:Lcom/tencent/mm/protocal/b/abc;
+    iput-object v8, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fst:Lcom/tencent/mm/protocal/b/abr;
 
     goto/16 :goto_1
 
-    .line 339
+    .line 343
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aSG:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aFp:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 340
+    .line 344
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eLJ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eTE:Ljava/lang/String;
 
-    .line 341
+    .line 345
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZm:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmz:Ljava/lang/String;
 
-    .line 342
+    .line 346
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXg:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmA:Ljava/lang/String;
 
-    .line 343
-    iput-object v8, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fjv:Lcom/tencent/mm/protocal/b/abc;
+    .line 347
+    iput-object v8, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fst:Lcom/tencent/mm/protocal/b/abr;
 
     goto/16 :goto_2
 
-    .line 345
-    :cond_4
-    iput v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNY:F
-
-    .line 346
-    iput v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNZ:F
-
-    .line 347
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eLJ:Ljava/lang/String;
-
-    .line 348
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZm:Ljava/lang/String;
-
     .line 349
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aSG:Ljava/lang/String;
+    :cond_4
+    iput v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHu:F
 
     .line 350
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXg:Ljava/lang/String;
+    iput v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHv:F
 
     .line 351
-    iput-object v8, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fjv:Lcom/tencent/mm/protocal/b/abc;
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eTE:Ljava/lang/String;
+
+    .line 352
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmz:Ljava/lang/String;
+
+    .line 353
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aFp:Ljava/lang/String;
+
+    .line 354
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmA:Ljava/lang/String;
+
+    .line 355
+    iput-object v8, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fst:Lcom/tencent/mm/protocal/b/abr;
 
     goto/16 :goto_2
 .end method
 
-.method public final aBb()V
-    .locals 10
+.method public final aDZ()V
+    .locals 11
 
     .prologue
-    const/4 v9, 0x1
+    const/4 v10, 0x1
 
-    .line 148
+    .line 151
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 149
+    .line 152
     const-string/jumbo v0, "near_life_scene"
 
-    invoke-virtual {v1, v0, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v1, v0, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 155
+    .line 158
     :try_start_0
     const-string/jumbo v0, "get_poi_item_buf"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fjv:Lcom/tencent/mm/protocal/b/abc;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fst:Lcom/tencent/mm/protocal/b/abr;
 
-    invoke-virtual {v2}, Lcom/tencent/mm/protocal/b/abc;->toByteArray()[B
+    invoke-virtual {v2}, Lcom/tencent/mm/protocal/b/abr;->toByteArray()[B
 
     move-result-object v2
 
@@ -1455,63 +1485,63 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 158
+    .line 161
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXg:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmA:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 161
+    .line 164
     const-string/jumbo v0, "get_poi_classify_id"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXg:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmA:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 167
+    .line 170
     :cond_0
     :goto_1
     const-string/jumbo v0, "get_lat"
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNY:F
+    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHu:F
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;F)Landroid/content/Intent;
-
-    .line 168
-    const-string/jumbo v0, "get_lng"
-
-    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNZ:F
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;F)Landroid/content/Intent;
-
-    .line 170
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZp:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
-
-    if-eqz v0, :cond_3
 
     .line 171
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZp:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
+    const-string/jumbo v0, "get_lng"
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;->aBe()Ljava/util/ArrayList;
+    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHv:F
 
-    move-result-object v0
+    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;F)Landroid/content/Intent;
 
     .line 173
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmG:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
+
     if-eqz v0, :cond_3
 
     .line 174
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->D(Ljava/util/ArrayList;)V
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmG:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
+
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;->aEf()Ljava/util/ArrayList;
+
+    move-result-object v0
 
     .line 176
+    if-eqz v0, :cond_3
+
+    .line 177
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->H(Ljava/util/ArrayList;)V
+
+    .line 179
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 177
+    .line 180
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -1529,7 +1559,7 @@
 
     check-cast v0, Lcom/tencent/mm/compatible/util/Exif$a;
 
-    .line 178
+    .line 181
     const-string/jumbo v4, "%f\n%f"
 
     const/4 v5, 0x2
@@ -1538,9 +1568,9 @@
 
     const/4 v6, 0x0
 
-    iget-wide v7, v0, Lcom/tencent/mm/compatible/util/Exif$a;->latitude:D
+    iget-wide v8, v0, Lcom/tencent/mm/compatible/util/Exif$a;->latitude:D
 
-    invoke-static {v7, v8}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v8, v9}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v7
 
@@ -1552,7 +1582,7 @@
 
     move-result-object v0
 
-    aput-object v0, v5, v9
+    aput-object v0, v5, v10
 
     invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1562,32 +1592,32 @@
 
     goto :goto_2
 
-    .line 163
+    .line 166
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aSG:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aFp:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 164
+    .line 167
     const-string/jumbo v0, "get_city"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aSG:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aFp:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     goto :goto_1
 
-    .line 180
+    .line 183
     :cond_2
     const-string/jumbo v0, "lat_long_list"
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
-    .line 184
+    .line 187
     :cond_3
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->getContext()Landroid/content/Context;
 
@@ -1599,9 +1629,9 @@
 
     const/16 v4, 0xa
 
-    invoke-static {v0, v2, v3, v1, v4}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {v0, v2, v3, v1, v4}, Lcom/tencent/mm/av/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
 
-    .line 187
+    .line 190
     return-void
 
     :catch_0
@@ -1610,50 +1640,27 @@
     goto/16 :goto_0
 .end method
 
-.method public getCurLocation()Lcom/tencent/mm/protocal/b/aby;
-    .locals 2
-
-    .prologue
-    .line 477
-    new-instance v0, Lcom/tencent/mm/protocal/b/aby;
-
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/aby;-><init>()V
-
-    .line 478
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZo:F
-
-    iput v1, v0, Lcom/tencent/mm/protocal/b/aby;->jer:F
-
-    .line 479
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fiS:F
-
-    iput v1, v0, Lcom/tencent/mm/protocal/b/aby;->jeq:F
-
-    .line 480
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->meQ:F
-
-    iput v1, v0, Lcom/tencent/mm/protocal/b/aby;->meQ:F
-
-    .line 481
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->meR:I
-
-    iput v1, v0, Lcom/tencent/mm/protocal/b/aby;->meR:I
-
-    .line 482
-    return-object v0
-.end method
-
-.method protected getLayoutResource()I
+.method protected aEb()I
     .locals 1
 
     .prologue
-    .line 511
-    const v0, 0x7f0a03ff
+    .line 443
+    const v0, 0x7f0702a2
 
     return v0
 .end method
 
-.method public getLocation()Lcom/tencent/mm/protocal/b/aby;
+.method protected aEc()I
+    .locals 1
+
+    .prologue
+    .line 447
+    const v0, 0x7f0702a3
+
+    return v0
+.end method
+
+.method public final aEd()Lcom/tencent/mm/protocal/b/acn;
     .locals 10
 
     .prologue
@@ -1665,75 +1672,90 @@
 
     const/4 v6, 0x1
 
-    .line 447
-    new-instance v0, Lcom/tencent/mm/protocal/b/aby;
-
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/aby;-><init>()V
-
-    .line 448
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNY:F
-
-    iput v1, v0, Lcom/tencent/mm/protocal/b/aby;->jer:F
-
-    .line 449
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bNZ:F
-
-    iput v1, v0, Lcom/tencent/mm/protocal/b/aby;->jeq:F
-
-    .line 450
-    iput v7, v0, Lcom/tencent/mm/protocal/b/aby;->jxZ:I
-
     .line 451
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eLJ:Ljava/lang/String;
+    new-instance v0, Lcom/tencent/mm/protocal/b/acn;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/acn;-><init>()V
+
+    .line 452
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHu:F
+
+    iput v1, v0, Lcom/tencent/mm/protocal/b/acn;->jCc:F
+
+    .line 453
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->bHv:F
+
+    iput v1, v0, Lcom/tencent/mm/protocal/b/acn;->jCb:F
+
+    .line 454
+    iput v7, v0, Lcom/tencent/mm/protocal/b/acn;->jWF:I
+
+    .line 455
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmy:[B
+
+    if-eqz v1, :cond_0
+
+    .line 456
+    new-instance v1, Lcom/tencent/mm/ax/b;
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmy:[B
+
+    invoke-direct {v1, v2}, Lcom/tencent/mm/ax/b;-><init>([B)V
+
+    iput-object v1, v0, Lcom/tencent/mm/protocal/b/acn;->jWG:Lcom/tencent/mm/ax/b;
+
+    .line 458
+    :cond_0
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eTE:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_4
 
-    .line 452
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZm:Ljava/lang/String;
+    .line 459
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmz:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/aby;->gZm:Ljava/lang/String;
-
-    .line 453
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eLJ:Ljava/lang/String;
-
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/aby;->eLJ:Ljava/lang/String;
-
-    .line 455
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXg:Ljava/lang/String;
-
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/aby;->jxW:Ljava/lang/String;
-
-    .line 456
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aSG:Ljava/lang/String;
-
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/aby;->bLO:Ljava/lang/String;
-
-    .line 457
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZn:I
-
-    if-eqz v1, :cond_2
-
-    .line 458
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZn:I
-
-    if-ne v1, v6, :cond_2
+    iput-object v1, v0, Lcom/tencent/mm/protocal/b/acn;->hmz:Ljava/lang/String;
 
     .line 460
-    iput v8, v0, Lcom/tencent/mm/protocal/b/aby;->gZn:I
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eTE:Ljava/lang/String;
 
-    .line 464
+    iput-object v1, v0, Lcom/tencent/mm/protocal/b/acn;->eTE:Ljava/lang/String;
+
+    .line 462
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmA:Ljava/lang/String;
+
+    iput-object v1, v0, Lcom/tencent/mm/protocal/b/acn;->jWC:Ljava/lang/String;
+
+    .line 463
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aFp:Ljava/lang/String;
+
+    iput-object v1, v0, Lcom/tencent/mm/protocal/b/acn;->bFi:Ljava/lang/String;
+
+    .line 465
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmB:I
+
+    if-eqz v1, :cond_3
+
+    .line 466
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmB:I
+
+    if-ne v1, v6, :cond_3
+
+    .line 468
+    iput v8, v0, Lcom/tencent/mm/protocal/b/acn;->hmB:I
+
+    .line 472
     :goto_0
-    const-string/jumbo v1, "!32@/B4Tb64lLpIu6Y+BscdrxMP5NzODT+9I"
+    const-string/jumbo v1, "MicroMsg.LocationWidget"
 
     const-string/jumbo v2, "getlocation type %d"
 
     new-array v3, v6, [Ljava/lang/Object;
 
-    iget v4, v0, Lcom/tencent/mm/protocal/b/aby;->gZn:I
+    iget v4, v0, Lcom/tencent/mm/protocal/b/acn;->hmB:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1741,20 +1763,20 @@
 
     aput-object v4, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 471
-    :cond_0
+    .line 479
+    :cond_1
     :goto_1
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     const-string/jumbo v1, "%f/%f"
 
     new-array v2, v8, [Ljava/lang/Object;
 
-    iget v3, v0, Lcom/tencent/mm/protocal/b/aby;->jer:F
+    iget v3, v0, Lcom/tencent/mm/protocal/b/acn;->jCc:F
 
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -1762,7 +1784,7 @@
 
     aput-object v3, v2, v7
 
-    iget v3, v0, Lcom/tencent/mm/protocal/b/aby;->jeq:F
+    iget v3, v0, Lcom/tencent/mm/protocal/b/acn;->jCb:F
 
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -1784,7 +1806,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
     iget v4, v4, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->index:I
 
@@ -1804,9 +1826,9 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    iget-wide v4, v4, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiT:J
+    iget-wide v4, v4, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frR:J
 
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -1824,9 +1846,9 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    iget-wide v4, v4, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiV:J
+    iget-wide v4, v4, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frT:J
 
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -1844,9 +1866,9 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    iget-wide v4, v4, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiU:J
+    iget-wide v4, v4, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frS:J
 
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -1864,9 +1886,9 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    iget v4, v4, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiW:I
+    iget v4, v4, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frU:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1884,7 +1906,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXg:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmA:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1902,9 +1924,9 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    iget v4, v4, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fjc:I
+    iget v4, v4, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frZ:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1922,9 +1944,9 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->cKD:Ljava/lang/String;
+    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->cHG:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1936,7 +1958,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    const-string/jumbo v3, "!32@/B4Tb64lLpIu6Y+BscdrxMP5NzODT+9I"
+    const-string/jumbo v3, "MicroMsg.LocationWidget"
 
     const-string/jumbo v4, "report %s"
 
@@ -1948,9 +1970,9 @@
 
     aput-object v2, v5, v7
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v3, 0x2b7f
 
@@ -1964,7 +1986,7 @@
 
     aput-object v5, v4, v7
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
     iget v5, v5, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->index:I
 
@@ -1976,11 +1998,11 @@
 
     aput-object v5, v4, v6
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    iget-wide v5, v5, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiT:J
+    iget-wide v6, v5, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frR:J
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
@@ -1988,9 +2010,9 @@
 
     const/4 v5, 0x3
 
-    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    iget-wide v6, v6, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiV:J
+    iget-wide v6, v6, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frT:J
 
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -2010,11 +2032,11 @@
 
     aput-object v6, v4, v5
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    iget-wide v5, v5, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiU:J
+    iget-wide v6, v5, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frS:J
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
@@ -2022,9 +2044,9 @@
 
     const/4 v5, 0x6
 
-    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    iget v6, v6, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiW:I
+    iget v6, v6, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frU:I
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2038,15 +2060,15 @@
 
     const/16 v1, 0x8
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gXg:Ljava/lang/String;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmA:Ljava/lang/String;
 
     aput-object v5, v4, v1
 
     const/16 v1, 0x9
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    iget v5, v5, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fjc:I
+    iget v5, v5, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frZ:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2056,114 +2078,93 @@
 
     const/16 v1, 0xa
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZq:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmI:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;
 
-    iget-object v5, v5, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->cKD:Ljava/lang/String;
+    iget-object v5, v5, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->cHG:Ljava/lang/String;
 
     aput-object v5, v4, v1
 
     const/16 v1, 0xb
 
-    invoke-static {}, Lcom/tencent/mm/compatible/d/p;->ow()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/compatible/d/p;->mM()Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v4, v1
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
-    .line 472
-    :cond_1
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aBd()V
+    .line 480
+    :cond_2
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aEe()V
 
-    .line 473
+    .line 481
     return-object v0
 
-    .line 462
-    :cond_2
-    iput v6, v0, Lcom/tencent/mm/protocal/b/aby;->gZn:I
+    .line 470
+    :cond_3
+    iput v6, v0, Lcom/tencent/mm/protocal/b/acn;->hmB:I
 
     goto/16 :goto_0
 
-    .line 465
-    :cond_3
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aSG:Ljava/lang/String;
+    .line 473
+    :cond_4
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aFp:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_1
 
-    .line 466
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aSG:Ljava/lang/String;
+    .line 474
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aFp:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/aby;->bLO:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/protocal/b/acn;->bFi:Ljava/lang/String;
 
     goto/16 :goto_1
 .end method
 
-.method protected getNormalStateImageResource()I
+.method protected getLayoutResource()I
     .locals 1
 
     .prologue
-    .line 439
-    const v0, 0x7f0300e7
+    .line 519
+    const v0, 0x7f030322
 
     return v0
-.end method
-
-.method protected getSelectedStateImageResource()I
-    .locals 1
-
-    .prologue
-    .line 443
-    const v0, 0x7f03010a
-
-    return v0
-.end method
-
-.method public setLocationWidgetListener(Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;)V
-    .locals 0
-
-    .prologue
-    .line 501
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->gZp:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
-
-    .line 502
-    return-void
 .end method
 
 .method public final stop()V
     .locals 2
 
     .prologue
-    .line 232
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDP:Lcom/tencent/mm/modelgeo/c;
+    .line 235
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmF:Lcom/tencent/mm/modelgeo/c;
 
     if-eqz v0, :cond_0
 
-    .line 233
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDP:Lcom/tencent/mm/modelgeo/c;
+    .line 236
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmF:Lcom/tencent/mm/modelgeo/c;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDR:Lcom/tencent/mm/modelgeo/a$a;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->fsc:Lcom/tencent/mm/modelgeo/a$a;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/modelgeo/c;->c(Lcom/tencent/mm/modelgeo/a$a;)V
 
-    .line 235
+    .line 238
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDO:Lcom/tencent/mm/modelgeo/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eWB:Lcom/tencent/mm/modelgeo/b;
 
     if-eqz v0, :cond_1
 
-    .line 236
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDO:Lcom/tencent/mm/modelgeo/b;
+    .line 239
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eWB:Lcom/tencent/mm/modelgeo/b;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eDS:Lcom/tencent/mm/modelgeo/b$a;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->eRa:Lcom/tencent/mm/modelgeo/b$a;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/modelgeo/b;->a(Lcom/tencent/mm/modelgeo/b$a;)Z
 
-    .line 238
+    .line 241
     :cond_1
     return-void
 .end method

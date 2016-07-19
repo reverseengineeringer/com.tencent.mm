@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lkt:Lcom/tencent/mm/ui/contact/k;
+.field final synthetic lKE:Lcom/tencent/mm/ui/contact/k;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 71
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/k$2;->lkt:Lcom/tencent/mm/ui/contact/k;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/k$2;->lKE:Lcom/tencent/mm/ui/contact/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,43 +41,43 @@
 
     .prologue
     .line 75
-    const-string/jumbo v0, "!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY="
+    const-string/jumbo v0, "MicroMsg.FMessageContactView"
 
     const-string/jumbo v1, "onNotifyChange, fmsg change"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 77
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/k$2;->lkt:Lcom/tencent/mm/ui/contact/k;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/k$2;->lKE:Lcom/tencent/mm/ui/contact/k;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/k;->b(Lcom/tencent/mm/ui/contact/k;)Lcom/tencent/mm/sdk/platformtools/af;
+    invoke-static {v0}, Lcom/tencent/mm/ui/contact/k;->b(Lcom/tencent/mm/ui/contact/k;)Lcom/tencent/mm/sdk/platformtools/ah;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/af;->aVf()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->baj()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 78
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/k$2;->lkt:Lcom/tencent/mm/ui/contact/k;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/k$2;->lKE:Lcom/tencent/mm/ui/contact/k;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/k;->b(Lcom/tencent/mm/ui/contact/k;)Lcom/tencent/mm/sdk/platformtools/af;
+    invoke-static {v0}, Lcom/tencent/mm/ui/contact/k;->b(Lcom/tencent/mm/ui/contact/k;)Lcom/tencent/mm/sdk/platformtools/ah;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/af;->aUF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->aZJ()V
 
     .line 80
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/k$2;->lkt:Lcom/tencent/mm/ui/contact/k;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/k$2;->lKE:Lcom/tencent/mm/ui/contact/k;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/k;->b(Lcom/tencent/mm/ui/contact/k;)Lcom/tencent/mm/sdk/platformtools/af;
+    invoke-static {v0}, Lcom/tencent/mm/ui/contact/k;->b(Lcom/tencent/mm/ui/contact/k;)Lcom/tencent/mm/sdk/platformtools/ah;
 
     move-result-object v2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/k$2;->lkt:Lcom/tencent/mm/ui/contact/k;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/k$2;->lKE:Lcom/tencent/mm/ui/contact/k;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/k;->c(Lcom/tencent/mm/ui/contact/k;)Z
 
@@ -88,7 +88,7 @@
     const-wide/16 v0, 0x1f4
 
     :goto_0
-    invoke-virtual {v2, v0, v1}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
+    invoke-virtual {v2, v0, v1}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
 
     .line 89
     return-void

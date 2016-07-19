@@ -11,7 +11,7 @@ final class MMAppMgr$5
 {
   public final void onCheckedChanged(CompoundButton paramCompoundButton, boolean paramBoolean)
   {
-    paramCompoundButton = ah.tD().rn();
+    paramCompoundButton = ah.tE().ro();
     if (!paramBoolean) {}
     for (paramBoolean = true;; paramBoolean = false)
     {

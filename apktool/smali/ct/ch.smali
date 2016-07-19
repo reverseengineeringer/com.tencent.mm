@@ -1,159 +1,398 @@
 .class public final Lct/ch;
-.super Ljava/lang/Object;
+.super Lct/cg;
 .source "SourceFile"
 
 
 # static fields
-.field private static a:Ljava/util/List;
+.field public static final a:Lct/ch;
+
+
+# instance fields
+.field private final b:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Landroid/net/wifi/ScanResult;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final c:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
     .prologue
-    .line 11
-    new-instance v0, Ljava/util/ArrayList;
+    .line 13
+    new-instance v0, Lct/ch;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
-    .line 14
-    sput-object v0, Lct/ch;->a:Ljava/util/List;
+    move-result-object v1
 
-    const-string/jumbo v1, "mobile"
+    const-wide/16 v2, 0x0
 
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-direct {v0, v1, v2, v3}, Lct/ch;-><init>(Ljava/util/List;J)V
 
-    .line 15
-    sget-object v0, Lct/ch;->a:Ljava/util/List;
+    sput-object v0, Lct/ch;->a:Lct/ch;
 
-    const-string/jumbo v1, "16wifi"
+    return-void
+.end method
 
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+.method public constructor <init>(Ljava/util/List;J)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Landroid/net/wifi/ScanResult;",
+            ">;J)V"
+        }
+    .end annotation
 
-    .line 16
-    sget-object v0, Lct/ch;->a:Ljava/util/List;
-
-    const-string/jumbo v1, "cmcc"
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 17
-    sget-object v0, Lct/ch;->a:Ljava/util/List;
-
-    const-string/jumbo v1, "360wifi"
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 18
-    sget-object v0, Lct/ch;->a:Ljava/util/List;
-
-    const-string/jumbo v1, "androidap"
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 19
-    sget-object v0, Lct/ch;->a:Ljava/util/List;
-
-    const-string/jumbo v1, "htcphone"
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
+    .prologue
     .line 20
-    sget-object v0, Lct/ch;->a:Ljava/util/List;
-
-    const-string/jumbo v1, "xiaomi"
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-direct {p0}, Lct/cg;-><init>()V
 
     .line 21
-    sget-object v0, Lct/ch;->a:Ljava/util/List;
-
-    const-string/jumbo v1, "lenovo"
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    iput-wide p2, p0, Lct/ch;->c:J
 
     .line 22
-    sget-object v0, Lct/ch;->a:Ljava/util/List;
+    new-instance v0, Ljava/util/ArrayList;
 
-    const-string/jumbo v1, "macbook"
+    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    iput-object v0, p0, Lct/ch;->b:Ljava/util/List;
 
     .line 24
     return-void
 .end method
 
-.method public static a(Ljava/util/List;)Ljava/util/List;
-    .locals 4
+
+# virtual methods
+.method public final a()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Landroid/net/wifi/ScanResult;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 33
-    new-instance v1, Ljava/util/ArrayList;
+    .line 47
+    iget-object v0, p0, Lct/ch;->b:Ljava/util/List;
 
-    invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    .line 34
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final a(JJ)Z
+    .locals 3
+
+    .prologue
+    .line 53
+    iget-wide v0, p0, Lct/ch;->c:J
+
+    sub-long v0, p1, v0
+
+    cmp-long v0, v0, p3
+
+    if-gez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final a(Lct/ch;)Z
+    .locals 11
+
+    .prologue
+    .line 63
+    iget-object v1, p1, Lct/ch;->b:Ljava/util/List;
+
+    .line 64
+    iget-object v0, p0, Lct/ch;->b:Ljava/util/List;
+
+    .line 66
+    if-eqz v1, :cond_0
+
+    if-nez v0, :cond_1
+
+    .line 67
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 70
+    :goto_0
+    return v0
+
+    .line 68
+    :cond_1
     invoke-interface {v1}, Ljava/util/List;->size()I
 
-    .line 35
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    move-result v2
 
-    move-result-object v2
+    if-eqz v2, :cond_2
 
-    .line 37
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    .line 69
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 70
+    :cond_3
+    if-eqz v1, :cond_4
+
+    if-nez v0, :cond_5
+
+    :cond_4
+    const/4 v0, 0x0
+
+    :goto_1
+    if-nez v0, :cond_f
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_5
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v6
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v7
+
+    if-nez v6, :cond_6
+
+    if-nez v7, :cond_6
+
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_6
+    if-eqz v6, :cond_7
+
+    if-nez v7, :cond_8
+
+    :cond_7
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_8
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    if-le v2, v3, :cond_b
+
+    move-object v2, v1
+
+    :goto_2
+    const/4 v4, 0x0
+
+    const/4 v3, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v8
+
+    move v5, v4
+
+    move v4, v3
+
+    move v3, v1
+
+    :goto_3
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_c
 
-    .line 38
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/wifi/ScanResult;
 
-    .line 39
-    iget-object v0, v0, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    .line 40
-    if-eqz v0, :cond_1
+    move-result-object v9
 
-    const-string/jumbo v3, "000000000000"
+    :cond_9
+    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v1
 
-    move-result v3
+    if-eqz v1, :cond_12
 
-    if-nez v3, :cond_1
+    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const-string/jumbo v3, "00-00-00-00-00-00"
+    move-result-object v1
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    check-cast v1, Landroid/net/wifi/ScanResult;
 
-    move-result v3
+    iget-object v1, v1, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
-    if-nez v3, :cond_1
+    iget-object v10, v0, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
-    const-string/jumbo v3, "00:00:00:00:00:00"
+    invoke-virtual {v1, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v1
 
-    move-result v0
+    if-eqz v1, :cond_9
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x1
 
-    .line 43
-    :cond_1
-    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
+    if-ne v4, v1, :cond_11
 
-    goto :goto_0
+    iget v1, v0, Landroid/net/wifi/ScanResult;->level:I
 
-    .line 54
-    :cond_2
-    return-object v1
+    const/16 v9, -0x32
+
+    if-le v1, v9, :cond_11
+
+    add-int/lit8 v3, v3, 0x1
+
+    move v1, v3
+
+    :goto_4
+    const/4 v3, 0x2
+
+    if-ne v4, v3, :cond_a
+
+    iget v3, v0, Landroid/net/wifi/ScanResult;->level:I
+
+    const/16 v9, -0x3c
+
+    if-le v3, v9, :cond_a
+
+    add-int/lit8 v1, v1, 0x1
+
+    :cond_a
+    const/4 v3, 0x3
+
+    if-ne v4, v3, :cond_10
+
+    iget v0, v0, Landroid/net/wifi/ScanResult;->level:I
+
+    const/16 v3, -0x3c
+
+    if-le v0, v3, :cond_10
+
+    add-int/lit8 v0, v1, 0x1
+
+    :goto_5
+    add-int/lit8 v3, v5, 0x1
+
+    :goto_6
+    add-int/lit8 v1, v4, 0x1
+
+    move v4, v1
+
+    move v5, v3
+
+    move v3, v0
+
+    goto :goto_3
+
+    :cond_b
+    move-object v2, v0
+
+    move-object v0, v1
+
+    goto :goto_2
+
+    :cond_c
+    const/4 v0, 0x3
+
+    if-eq v3, v0, :cond_e
+
+    add-int v0, v6, v7
+
+    shl-int/lit8 v1, v5, 0x1
+
+    int-to-double v2, v1
+
+    int-to-double v0, v0
+
+    const-wide v6, 0x3fe3333333333333L    # 0.6
+
+    mul-double/2addr v0, v6
+
+    cmpg-double v0, v2, v0
+
+    if-ltz v0, :cond_d
+
+    const/16 v0, 0xd
+
+    if-ge v5, v0, :cond_e
+
+    :cond_d
+    const/4 v0, 0x1
+
+    goto/16 :goto_1
+
+    :cond_e
+    const/4 v0, 0x0
+
+    goto/16 :goto_1
+
+    :cond_f
+    const/4 v0, 0x0
+
+    goto/16 :goto_0
+
+    :cond_10
+    move v0, v1
+
+    goto :goto_5
+
+    :cond_11
+    move v1, v3
+
+    goto :goto_4
+
+    :cond_12
+    move v0, v3
+
+    move v3, v5
+
+    goto :goto_6
 .end method

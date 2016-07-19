@@ -2,7 +2,7 @@ package com.tencent.mm.dbsupport.newcursor;
 
 public abstract interface c$a
 {
-  public abstract String qF();
+  public abstract String pj();
 }
 
 /* Location:

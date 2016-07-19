@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic kpx:Lcom/tencent/mm/ui/j;
+.field final synthetic kOB:Lcom/tencent/mm/ui/j;
 
-.field final synthetic kpy:Ljava/lang/Runnable;
+.field final synthetic kOC:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 1521
-    iput-object p1, p0, Lcom/tencent/mm/ui/j$2;->kpx:Lcom/tencent/mm/ui/j;
+    .line 1544
+    iput-object p1, p0, Lcom/tencent/mm/ui/j$2;->kOB:Lcom/tencent/mm/ui/j;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/j$2;->kpy:Ljava/lang/Runnable;
+    iput-object p2, p0, Lcom/tencent/mm/ui/j$2;->kOC:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,12 +44,12 @@
     .locals 4
 
     .prologue
-    .line 1525
+    .line 1548
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/j$2;->kpx:Lcom/tencent/mm/ui/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/j$2;->kOB:Lcom/tencent/mm/ui/j;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/j;->k(Lcom/tencent/mm/ui/j;)J
 
@@ -63,21 +63,21 @@
 
     if-gez v0, :cond_0
 
-    .line 1527
-    iget-object v0, p0, Lcom/tencent/mm/ui/j$2;->kpy:Ljava/lang/Runnable;
+    .line 1550
+    iget-object v0, p0, Lcom/tencent/mm/ui/j$2;->kOC:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 1529
+    .line 1552
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/j$2;->kpx:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j$2;->kOB:Lcom/tencent/mm/ui/j;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/j;->a(Lcom/tencent/mm/ui/j;J)J
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/ui/j;->a(Lcom/tencent/mm/ui/j;J)J
 
-    .line 1530
+    .line 1553
     return-void
 .end method

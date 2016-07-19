@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+.field final synthetic lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 710
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$3;->luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+    .line 712
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$3;->lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 714
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$3;->luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+    .line 716
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$3;->lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/CropImageNewUI;->finish()V
 
-    .line 715
+    .line 717
     return-void
 .end method

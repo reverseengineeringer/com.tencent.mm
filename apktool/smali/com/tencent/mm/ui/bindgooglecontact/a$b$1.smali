@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic kNc:Lcom/tencent/mm/ui/bindgooglecontact/a;
+.field final synthetic lmr:Lcom/tencent/mm/ui/bindgooglecontact/a;
 
-.field final synthetic kNd:Lcom/tencent/mm/ui/bindgooglecontact/a$b;
+.field final synthetic lms:Lcom/tencent/mm/ui/bindgooglecontact/a$b;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 212
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b$1;->kNd:Lcom/tencent/mm/ui/bindgooglecontact/a$b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b$1;->lms:Lcom/tencent/mm/ui/bindgooglecontact/a$b;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b$1;->kNc:Lcom/tencent/mm/ui/bindgooglecontact/a;
+    iput-object p2, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b$1;->lmr:Lcom/tencent/mm/ui/bindgooglecontact/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,16 +45,16 @@
 
     .prologue
     .line 215
-    const-string/jumbo v0, "!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92JmmhadCtsXjQrRrk90isnD"
+    const-string/jumbo v0, "MicroMsg.GoogleContact.GoogleFriendAdapter"
 
     const-string/jumbo v1, "onClick"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 216
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b$1;->kNd:Lcom/tencent/mm/ui/bindgooglecontact/a$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b$1;->lms:Lcom/tencent/mm/ui/bindgooglecontact/a$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kNb:Lcom/tencent/mm/ui/bindgooglecontact/a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmq:Lcom/tencent/mm/ui/bindgooglecontact/a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindgooglecontact/a;->a(Lcom/tencent/mm/ui/bindgooglecontact/a;)Lcom/tencent/mm/ui/bindgooglecontact/a$a;
 
@@ -63,19 +63,19 @@
     if-eqz v0, :cond_0
 
     .line 217
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b$1;->kNd:Lcom/tencent/mm/ui/bindgooglecontact/a$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b$1;->lms:Lcom/tencent/mm/ui/bindgooglecontact/a$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kNb:Lcom/tencent/mm/ui/bindgooglecontact/a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmq:Lcom/tencent/mm/ui/bindgooglecontact/a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindgooglecontact/a;->a(Lcom/tencent/mm/ui/bindgooglecontact/a;)Lcom/tencent/mm/ui/bindgooglecontact/a$a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b$1;->kNd:Lcom/tencent/mm/ui/bindgooglecontact/a$b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b$1;->lms:Lcom/tencent/mm/ui/bindgooglecontact/a$b;
 
     iget v1, v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->position:I
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/bindgooglecontact/a$a;->qV(I)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/bindgooglecontact/a$a;->sX(I)V
 
     .line 219
     :cond_0

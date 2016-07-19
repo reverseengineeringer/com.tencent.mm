@@ -3,7 +3,7 @@ package com.tencent.mm.compatible.b;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class d$1
   extends BroadcastReceiver
@@ -16,8 +16,8 @@ final class d$1
       return;
     }
     paramContext = paramIntent.getAction();
-    d.aw(paramIntent.getBooleanExtra("existing", false));
-    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt onReceive action[" + paramContext + "] existing:" + d.nV());
+    d.Z(paramIntent.getBooleanExtra("existing", false));
+    v.d("MicroMsg.MMAudioManager", "dkbt onReceive action[" + paramContext + "] existing:" + d.ml());
   }
 }
 

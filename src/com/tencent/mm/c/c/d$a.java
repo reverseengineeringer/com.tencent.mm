@@ -1,7 +1,7 @@
 package com.tencent.mm.c.c;
 
 import com.tencent.mm.c.b.g.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 
@@ -12,33 +12,33 @@ final class d$a
   {
     for (;;)
     {
-      synchronized (arP)
+      synchronized (adx)
       {
-        boolean bool = arP.arE;
-        u.d("!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+", "ThreadSpeex in: " + bool + " queueLen: " + arP.arD.size());
+        boolean bool = adx.adm;
+        v.d("MicroMsg.SpeexWriter", "ThreadSpeex in: " + bool + " queueLen: " + adx.adl.size());
         if (bool) {
-          if (arP.arD.isEmpty()) {
+          if (adx.adl.isEmpty()) {
             break;
           }
         }
       }
       try
       {
-        ??? = (g.a)arP.arD.poll(200L, TimeUnit.MILLISECONDS);
+        ??? = (g.a)adx.adl.poll(200L, TimeUnit.MILLISECONDS);
         if (??? != null) {
           break label149;
         }
-        u.e("!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+", "poll byteBuf is null, " + arP.arF);
+        v.e("MicroMsg.SpeexWriter", "poll byteBuf is null, " + adx.adn);
       }
       catch (InterruptedException localInterruptedException)
       {
-        u.i("!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+", "ThreadSpeex poll null");
+        v.i("MicroMsg.SpeexWriter", "ThreadSpeex poll null");
       }
       localObject2 = finally;
       throw ((Throwable)localObject2);
       continue;
       label149:
-      arP.a(localInterruptedException, 0);
+      adx.a(localInterruptedException, 0);
     }
   }
 }

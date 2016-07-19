@@ -15,16 +15,16 @@
 
 
 # static fields
-.field public static izi:Lcom/tencent/mm/pluginsdk/i$af$a;
+.field public static iVE:Lcom/tencent/mm/pluginsdk/i$af$a;
 
 
 # direct methods
-.method public static aPe()Lcom/tencent/mm/pluginsdk/i$af$a;
+.method public static aTG()Lcom/tencent/mm/pluginsdk/i$af$a;
     .locals 1
 
     .prologue
-    .line 938
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ak;->izi:Lcom/tencent/mm/pluginsdk/i$af$a;
+    .line 935
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ak;->iVE:Lcom/tencent/mm/pluginsdk/i$af$a;
 
     return-object v0
 .end method

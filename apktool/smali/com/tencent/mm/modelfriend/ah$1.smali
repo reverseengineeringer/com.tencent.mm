@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/ab;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic bNM:Lcom/tencent/mm/modelfriend/ah;
+.field final synthetic bHi:Lcom/tencent/mm/modelfriend/ah;
 
 
 # direct methods
@@ -24,39 +33,46 @@
 
     .prologue
     .line 45
-    iput-object p1, p0, Lcom/tencent/mm/modelfriend/ah$1;->bNM:Lcom/tencent/mm/modelfriend/ah;
+    iput-object p1, p0, Lcom/tencent/mm/modelfriend/ah$1;->bHi:Lcom/tencent/mm/modelfriend/ah;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/ab;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/modelfriend/ah$1;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 2
 
     .prologue
-    .line 48
-    instance-of v0, p1, Lcom/tencent/mm/d/a/aa;
+    .line 45
+    check-cast p1, Lcom/tencent/mm/e/a/ab;
+
+    instance-of v0, p1, Lcom/tencent/mm/e/a/ab;
 
     if-eqz v0, :cond_0
 
-    .line 49
-    check-cast p1, Lcom/tencent/mm/d/a/aa;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/ab;->aeX:Lcom/tencent/mm/e/a/ab$a;
 
-    .line 50
-    iget-object v0, p1, Lcom/tencent/mm/d/a/aa;->atp:Lcom/tencent/mm/d/a/aa$a;
-
-    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yG()Z
+    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yT()Z
 
     move-result v1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/d/a/aa$a;->atf:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/e/a/ab$a;->aeP:Z
 
-    .line 52
     :cond_0
     const/4 v0, 0x0
 

@@ -1,11 +1,11 @@
 package com.tencent.mm.ui.account.mobile;
 
 public final class MobileInputUI$a
-  extends Enum
+  extends Enum<a>
 {
-  public static int[] bcf()
+  public static int[] bhr()
   {
-    return (int[])kyf.clone();
+    return (int[])kXm.clone();
   }
 }
 

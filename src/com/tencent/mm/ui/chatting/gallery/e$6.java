@@ -4,62 +4,62 @@ import android.graphics.Bitmap;
 import android.os.Build.VERSION;
 import android.text.TextUtils;
 import android.util.SparseArray;
-import com.tencent.mm.sdk.platformtools.am.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ap.a;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashMap;
 
 final class e$6
-  implements am.a
+  implements ap.a
 {
-  private Bitmap efe = null;
+  private Bitmap eiG = null;
   
   e$6(e parame, String paramString) {}
   
-  public final boolean vd()
+  public final boolean vf()
   {
-    if ((e.b(lfV) == null) || (TextUtils.isEmpty(lfY))) {
+    if ((e.b(lGi) == null) || (TextUtils.isEmpty(lGl))) {
       return false;
     }
     try
     {
-      efe = e.b(lfV).Hc(lfY);
+      eiG = e.b(lGi).Jr(lGl);
       return true;
     }
     catch (Exception localException)
     {
-      u.w("!44@/B4Tb64lLpJSmuQVFTi9B6QdAPUqkDaT/sMIXOVKzm0=", "try to load Bmp fail: %s", new Object[] { localException.getMessage() });
-      efe = null;
+      v.w("MicroMsg.ImageGalleryLazyLoader", "try to load Bmp fail: %s", new Object[] { localException.getMessage() });
+      eiG = null;
     }
     return false;
   }
   
-  public final boolean ve()
+  public final boolean vg()
   {
-    e.d(lfV);
-    if (e.e(lfV).containsKey(lfY))
+    e.d(lGi);
+    if (e.e(lGi).containsKey(lGl))
     {
-      i = ((Integer)e.e(lfV).get(lfY)).intValue();
-      if (e.f(lfV)) {
+      i = ((Integer)e.e(lGi).get(lGl)).intValue();
+      if (e.f(lGi)) {
         break label136;
       }
-      e.g(lfV).put(i, efe);
+      e.g(lGi).put(i, eiG);
     }
     Bitmap localBitmap;
     int j;
     for (;;)
     {
-      lfV.u(lfY, efe);
-      localBitmap = efe;
+      lGi.r(lGl, eiG);
+      localBitmap = eiG;
       if ((localBitmap != null) && (!localBitmap.isRecycled())) {
         break;
       }
       j = 0;
-      u.i("!44@/B4Tb64lLpJSmuQVFTi9B6QdAPUqkDaT/sMIXOVKzm0=", "bmp size : %s", new Object[] { Integer.valueOf(j) });
-      efe = null;
-      e.h(lfV);
+      v.i("MicroMsg.ImageGalleryLazyLoader", "bmp size : %s", new Object[] { Integer.valueOf(j) });
+      eiG = null;
+      e.h(lGi);
       return false;
       label136:
-      e.a(lfV, i, efe);
+      e.a(lGi, i, eiG);
     }
     if (Build.VERSION.SDK_INT >= 12) {}
     for (int i = localBitmap.getByteCount();; i = localBitmap.getRowBytes() * localBitmap.getHeight())

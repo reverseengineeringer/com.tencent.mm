@@ -1,8 +1,8 @@
 package com.tencent.mm.plugin.ext.voicecontrol;
 
 import com.tencent.mm.pluginsdk.d.a.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ExtControlProviderVoiceControl$1
   implements Runnable
@@ -11,20 +11,20 @@ final class ExtControlProviderVoiceControl$1
   
   public final void run()
   {
-    int i = ay.getInt(dLN, 4);
+    int i = be.getInt(dNu, 4);
     if (i == 1) {
-      ExtControlProviderVoiceControl.a(dLR, cmw);
+      ExtControlProviderVoiceControl.a(dNy, chB);
     }
     for (;;)
     {
-      if (!ExtControlProviderVoiceControl.a(ExtControlProviderVoiceControl.a(dLR), i, ay.getInt(dLO, 4), ay.getInt(dLP, 16000), ay.getInt(dLQ, 16), cmw))
+      if (!ExtControlProviderVoiceControl.a(ExtControlProviderVoiceControl.a(dNy), i, be.getInt(dNv, 4), be.getInt(dNw, 16000), be.getInt(dNx, 16), chB))
       {
-        u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] !ok countDown");
-        ExtControlProviderVoiceControl.a(dLR, 4);
-        dLR.dLJ.countDown();
+        v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] !ok countDown");
+        ExtControlProviderVoiceControl.a(dNy, 3504);
+        dNy.dNq.countDown();
       }
       return;
-      u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] not pcm, don't run localVoiceControl");
+      v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] not pcm, don't run localVoiceControl");
     }
   }
 }

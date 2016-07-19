@@ -1,16 +1,16 @@
 package com.tencent.mm.console;
 
 import android.content.Intent;
-import com.tencent.mm.platformtools.r;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.platformtools.q;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class Shell$6
   implements Shell.a
 {
-  public final void i(Intent paramIntent)
+  public final void j(Intent paramIntent)
   {
-    r.cno = paramIntent.getStringExtra("errmsg");
-    u.w("!24@/B4Tb64lLpLOIdMtS2bKaA==", "tiger set tigerIDCErrMsg =%s", new Object[] { r.cno });
+    q.cip = paramIntent.getIntExtra("value", 0);
+    v.w("MicroMsg.Shell", "dkdnstd set Test.netDnsSimulateFault=%s", new Object[] { Integer.toBinaryString(q.cip) });
   }
 }
 

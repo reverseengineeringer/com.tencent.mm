@@ -2,28 +2,28 @@ package com.tencent.mm.lan_cs;
 
 public final class Server
 {
-  public static a bwO;
+  public static a boO;
   
   public static class C2Java
   {
     public static void onConnect(String paramString, int paramInt)
     {
-      if (Server.bwO != null) {
-        Server.bwO.onConnect(paramString, paramInt);
+      if (Server.boO != null) {
+        Server.boO.onConnect(paramString, paramInt);
       }
     }
     
     public static void onDisconnect(String paramString, int paramInt)
     {
-      if (Server.bwO != null) {
-        Server.bwO.ra();
+      if (Server.boO != null) {
+        Server.boO.qD();
       }
     }
     
     public static void onRecv(String paramString, int paramInt, byte[] paramArrayOfByte)
     {
-      if (Server.bwO != null) {
-        Server.bwO.onRecv(paramString, paramInt, paramArrayOfByte);
+      if (Server.boO != null) {
+        Server.boO.onRecv(paramString, paramInt, paramArrayOfByte);
       }
     }
   }
@@ -43,7 +43,7 @@ public final class Server
     
     public abstract void onRecv(String paramString, int paramInt, byte[] paramArrayOfByte);
     
-    public abstract void ra();
+    public abstract void qD();
   }
 }
 

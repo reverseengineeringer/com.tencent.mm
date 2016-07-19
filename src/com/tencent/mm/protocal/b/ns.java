@@ -1,42 +1,44 @@
 package com.tencent.mm.protocal.b;
 
 public final class ns
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public String asL;
-  public String ayA;
+  public String akC;
+  public String desc;
   public String info;
-  public boolean jkU = false;
-  public boolean jkV = false;
-  public boolean jmU = false;
-  public boolean jmV = false;
+  public boolean jIT = false;
+  public boolean jIU = false;
+  public boolean jKV = false;
+  public boolean jKW = false;
+  public boolean jKX = false;
   public String title;
+  public int type;
   
-  public final ns Cj(String paramString)
+  public final ns Eg(String paramString)
   {
     title = paramString;
-    jkU = true;
+    jIT = true;
     return this;
   }
   
-  public final ns Ck(String paramString)
+  public final ns Eh(String paramString)
   {
-    asL = paramString;
-    jkV = true;
+    desc = paramString;
+    jIU = true;
     return this;
   }
   
-  public final ns Cl(String paramString)
+  public final ns Ei(String paramString)
   {
-    ayA = paramString;
-    jmU = true;
+    akC = paramString;
+    jKV = true;
     return this;
   }
   
-  public final ns Cm(String paramString)
+  public final ns Ej(String paramString)
   {
     info = paramString;
-    jmV = true;
+    jKW = true;
     return this;
   }
   
@@ -46,46 +48,53 @@ public final class ns
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
       if (title != null) {
-        paramVarArgs.d(1, title);
+        paramVarArgs.e(1, title);
       }
-      if (asL != null) {
-        paramVarArgs.d(2, asL);
+      if (desc != null) {
+        paramVarArgs.e(2, desc);
       }
-      if (ayA != null) {
-        paramVarArgs.d(3, ayA);
+      if (akC != null) {
+        paramVarArgs.e(3, akC);
       }
       if (info != null) {
-        paramVarArgs.d(4, info);
+        paramVarArgs.e(4, info);
+      }
+      if (jKX == true) {
+        paramVarArgs.cw(5, type);
       }
       return 0;
     }
     if (paramInt == 1) {
       if (title == null) {
-        break label368;
+        break label429;
       }
     }
-    label368:
-    for (int i = a.a.a.b.b.a.e(1, title) + 0;; i = 0)
+    label429:
+    for (int i = a.a.a.b.b.a.f(1, title) + 0;; i = 0)
     {
       paramInt = i;
-      if (asL != null) {
-        paramInt = i + a.a.a.b.b.a.e(2, asL);
+      if (desc != null) {
+        paramInt = i + a.a.a.b.b.a.f(2, desc);
       }
       i = paramInt;
-      if (ayA != null) {
-        i = paramInt + a.a.a.b.b.a.e(3, ayA);
+      if (akC != null) {
+        i = paramInt + a.a.a.b.b.a.f(3, akC);
       }
       paramInt = i;
       if (info != null) {
-        paramInt = i + a.a.a.b.b.a.e(4, info);
+        paramInt = i + a.a.a.b.b.a.f(4, info);
       }
-      return paramInt;
+      i = paramInt;
+      if (jKX == true) {
+        i = paramInt + a.a.a.a.cu(5, type);
+      }
+      return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
         break;
@@ -99,24 +108,35 @@ public final class ns
         default: 
           return -1;
         case 1: 
-          title = maU.readString();
-          jkU = true;
+          title = mMY.readString();
+          jIT = true;
           return 0;
         case 2: 
-          asL = maU.readString();
-          jkV = true;
+          desc = mMY.readString();
+          jIU = true;
           return 0;
         case 3: 
-          ayA = maU.readString();
-          jmU = true;
+          akC = mMY.readString();
+          jKV = true;
+          return 0;
+        case 4: 
+          info = mMY.readString();
+          jKW = true;
           return 0;
         }
-        info = maU.readString();
-        jmV = true;
+        type = mMY.id();
+        jKX = true;
         return 0;
       }
       return -1;
     }
+  }
+  
+  public final ns qO(int paramInt)
+  {
+    type = paramInt;
+    jKX = true;
+    return this;
   }
 }
 

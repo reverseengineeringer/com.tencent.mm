@@ -4,7 +4,17 @@
 
 
 # static fields
-.field static final bvl:Ljava/util/HashMap;
+.field static final bjV:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -20,7 +30,7 @@
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
     .line 56
-    sput-object v0, Lcom/tencent/mm/crash/CrashUploaderService;->bvl:Ljava/util/HashMap;
+    sput-object v0, Lcom/tencent/mm/crash/CrashUploaderService;->bjV:Ljava/util/HashMap;
 
     const-string/jumbo v1, "exception"
 
@@ -33,7 +43,7 @@
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 57
-    sget-object v0, Lcom/tencent/mm/crash/CrashUploaderService;->bvl:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/crash/CrashUploaderService;->bjV:Ljava/util/HashMap;
 
     const-string/jumbo v1, "anr"
 
@@ -46,7 +56,7 @@
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 58
-    sget-object v0, Lcom/tencent/mm/crash/CrashUploaderService;->bvl:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/crash/CrashUploaderService;->bjV:Ljava/util/HashMap;
 
     const-string/jumbo v1, "handler"
 
@@ -59,7 +69,7 @@
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 59
-    sget-object v0, Lcom/tencent/mm/crash/CrashUploaderService;->bvl:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/crash/CrashUploaderService;->bjV:Ljava/util/HashMap;
 
     const-string/jumbo v1, "sql"
 
@@ -72,7 +82,7 @@
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 60
-    sget-object v0, Lcom/tencent/mm/crash/CrashUploaderService;->bvl:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/crash/CrashUploaderService;->bjV:Ljava/util/HashMap;
 
     const-string/jumbo v1, "permission"
 
@@ -140,7 +150,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v3}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v3
 
@@ -149,7 +159,7 @@
     move-result-object v3
 
     .line 160
-    invoke-static {p1}, Lcom/tencent/mm/a/q;->q([B)[B
+    invoke-static {p1}, Lcom/tencent/mm/a/q;->m([B)[B
 
     move-result-object v4
 
@@ -224,7 +234,7 @@
 
     move-result-object v3
 
-    sget-object v0, Lcom/tencent/mm/crash/CrashUploaderService;->bvl:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/crash/CrashUploaderService;->bjV:Ljava/util/HashMap;
 
     invoke-virtual {v0, p5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -232,7 +242,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->d(Ljava/lang/Integer;)I
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Integer;)I
 
     move-result v0
 
@@ -307,7 +317,7 @@
     move-result-object v0
 
     .line 188
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->d(Ljava/io/InputStream;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->d(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -333,7 +343,7 @@
     goto :goto_0
 .end method
 
-.method private static i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method private static k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
     .prologue
@@ -354,7 +364,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 139
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -435,7 +445,7 @@
 
     .line 145
     :goto_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aUD()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->aZH()Ljava/lang/String;
 
     move-result-object v1
 
@@ -480,7 +490,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/a/e;->e(Ljava/lang/String;[B)I
+    invoke-static {p0, v0}, Lcom/tencent/mm/a/e;->d(Ljava/lang/String;[B)I
 
     .line 150
     :cond_1
@@ -506,7 +516,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/a/e;->e(Ljava/lang/String;[B)I
+    invoke-static {p0, v0}, Lcom/tencent/mm/a/e;->d(Ljava/lang/String;[B)I
 
     .line 151
     return-void
@@ -541,7 +551,7 @@
 
 # virtual methods
 .method protected onHandleIntent(Landroid/content/Intent;)V
-    .locals 18
+    .locals 20
 
     .prologue
     .line 65
@@ -554,85 +564,56 @@
 
     .line 69
     :cond_1
-    const-string/jumbo v1, "INTENT_EXTRA_EXCEPTION_MSG"
+    const-string/jumbo v2, "INTENT_EXTRA_EXCEPTION_MSG"
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 70
+    const-string/jumbo v2, "INTENT_EXTRA_USER_NAME"
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 70
-    const-string/jumbo v1, "INTENT_EXTRA_USER_NAME"
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
     .line 71
-    const-string/jumbo v3, "INTENT_EXTRA_SDCARD_PATH"
+    const-string/jumbo v4, "INTENT_EXTRA_SDCARD_PATH"
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    .line 72
-    const-string/jumbo v3, "INTENT_EXTRA_DATA_PATH"
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 73
-    const-string/jumbo v3, "INTENT_EXTRA_UIN"
+    .line 72
+    const-string/jumbo v4, "INTENT_EXTRA_DATA_PATH"
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
+    .line 73
+    const-string/jumbo v4, "INTENT_EXTRA_UIN"
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v10
+
     .line 74
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     .line 76
     :try_start_0
-    const-string/jumbo v4, "INTENT_EXTRA_CLIENT_VERSION"
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ljava/lang/Integer;->decode(Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
-    :try_end_0
-    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_1
-
-    move-result v3
-
-    .line 81
-    :goto_1
-    const-string/jumbo v4, "INTENT_EXTRA_DEVICE_TYPE"
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 82
-    const-string/jumbo v5, "INTENT_EXTRA_HOST"
+    const-string/jumbo v5, "INTENT_EXTRA_CLIENT_VERSION"
 
     move-object/from16 v0, p1
 
@@ -640,8 +621,28 @@
 
     move-result-object v5
 
-    .line 83
-    const-string/jumbo v6, "INTENT_EXTRA_TAG"
+    invoke-static {v5}, Ljava/lang/Integer;->decode(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+    :try_end_0
+    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_1
+
+    move-result v4
+
+    .line 81
+    :goto_1
+    const-string/jumbo v5, "INTENT_EXTRA_DEVICE_TYPE"
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 82
+    const-string/jumbo v6, "INTENT_EXTRA_HOST"
 
     move-object/from16 v0, p1
 
@@ -649,316 +650,325 @@
 
     move-result-object v6
 
+    .line 83
+    const-string/jumbo v7, "INTENT_EXTRA_TAG"
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
     .line 84
-    if-eqz v6, :cond_2
+    if-eqz v7, :cond_2
 
-    invoke-virtual {v6}, Ljava/lang/String;->length()I
+    invoke-virtual {v7}, Ljava/lang/String;->length()I
 
-    move-result v10
+    move-result v11
 
-    if-nez v10, :cond_3
+    if-nez v11, :cond_3
 
     .line 85
     :cond_2
-    const-string/jumbo v6, "exception"
+    const-string/jumbo v7, "exception"
 
     .line 87
     :cond_3
-    new-instance v10, Ljava/lang/StringBuilder;
-
-    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v10, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    const-string/jumbo v11, ","
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    const-string/jumbo v11, "_"
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    const-string/jumbo v11, "_"
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    sget-object v11, Landroid/os/Build;->CPU_ABI:Ljava/lang/String;
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    const-string/jumbo v11, ","
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v10
-
-    .line 88
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v11, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v10
+    move-result-object v11
 
-    const-string/jumbo v11, "exception,time_"
+    const-string/jumbo v12, ","
 
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v10
+    move-result-object v11
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FR()J
+    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-wide v11
+    move-result-object v11
 
-    invoke-virtual {v10, v11, v12}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const-string/jumbo v12, "_"
 
-    move-result-object v10
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v11, ",error_"
+    move-result-object v11
 
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v10
+    move-result-object v11
 
-    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string/jumbo v12, "_"
 
-    move-result-object v2
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v11
 
-    move-result-object v10
+    sget-object v12, Landroid/os/Build;->CPU_ABI:Ljava/lang/String;
 
-    .line 91
-    :try_start_1
-    new-instance v2, Ljava/io/File;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    move-result-object v11
 
-    .line 92
-    invoke-virtual {v2}, Ljava/io/File;->exists()Z
+    const-string/jumbo v12, ","
 
-    move-result v11
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v11, :cond_7
+    move-result-object v11
 
-    .line 93
-    invoke-virtual {v2}, Ljava/io/File;->mkdirs()Z
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 105
-    :cond_4
-    new-instance v2, Ljava/util/Date;
+    move-result-object v11
 
-    invoke-direct {v2}, Ljava/util/Date;-><init>()V
-
-    .line 106
-    new-instance v11, Ljava/text/SimpleDateFormat;
-
-    const-string/jumbo v12, "yyyyMMdd"
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v13
-
-    invoke-direct {v11, v12, v13}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
-
-    .line 107
+    .line 88
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v12, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v11
 
-    const-string/jumbo v12, "crash_"
+    const-string/jumbo v12, "exception,time_"
 
-    invoke-virtual {v7, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v11
 
-    invoke-virtual {v11, v2}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Go()J
 
-    move-result-object v2
+    move-result-wide v12
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12, v13}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v11
 
-    const-string/jumbo v7, ".txt"
+    const-string/jumbo v12, ",error_"
 
-    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v11
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v11, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v2, v10, v9}, Lcom/tencent/mm/crash/CrashUploaderService;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    .line 91
+    :try_start_1
+    new-instance v3, Ljava/io/File;
+
+    invoke-direct {v3, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 92
+    invoke-virtual {v3}, Ljava/io/File;->exists()Z
+
+    move-result v12
+
+    if-nez v12, :cond_7
+
+    .line 93
+    invoke-virtual {v3}, Ljava/io/File;->mkdirs()Z
+
+    .line 105
+    :cond_4
+    new-instance v3, Ljava/util/Date;
+
+    invoke-direct {v3}, Ljava/util/Date;-><init>()V
+
+    .line 106
+    new-instance v12, Ljava/text/SimpleDateFormat;
+
+    const-string/jumbo v13, "yyyyMMdd"
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v14
+
+    invoke-direct {v12, v13, v14}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    .line 107
+    new-instance v13, Ljava/lang/StringBuilder;
+
+    invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    const-string/jumbo v13, "crash_"
+
+    invoke-virtual {v8, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v12, v3}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string/jumbo v8, ".txt"
+
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3, v11, v10}, Lcom/tencent/mm/crash/CrashUploaderService;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     .line 112
     :goto_2
-    new-instance v2, Ljava/io/File;
+    new-instance v3, Ljava/io/File;
 
-    invoke-direct {v2, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 113
-    invoke-virtual {v2}, Ljava/io/File;->exists()Z
-
-    move-result v7
-
-    if-nez v7, :cond_5
-
-    .line 114
-    invoke-virtual {v2}, Ljava/io/File;->mkdir()Z
-
-    .line 117
-    :cond_5
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 119
-    new-instance v7, Ljava/io/File;
-
-    invoke-direct {v7, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 120
-    invoke-virtual {v7}, Ljava/io/File;->length()J
-
-    move-result-wide v11
-
-    const-wide/32 v13, 0x40000
-
-    cmp-long v8, v11, v13
-
-    if-lez v8, :cond_6
-
-    .line 121
-    invoke-virtual {v7}, Ljava/io/File;->delete()Z
-
-    .line 124
-    :cond_6
-    invoke-static {v2, v10, v9}, Lcom/tencent/mm/crash/CrashUploaderService;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 125
-    const/4 v8, 0x0
-
-    const/4 v9, -0x1
-
-    invoke-static {v2, v8, v9}, Lcom/tencent/mm/a/e;->d(Ljava/lang/String;II)[B
-
-    move-result-object v2
-
-    .line 126
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->J([B)Z
+    invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v8
 
-    if-nez v8, :cond_0
+    if-nez v8, :cond_5
+
+    .line 114
+    invoke-virtual {v3}, Ljava/io/File;->mkdir()Z
+
+    .line 117
+    :cond_5
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 119
+    new-instance v8, Ljava/io/File;
+
+    invoke-direct {v8, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 120
+    invoke-virtual {v8}, Ljava/io/File;->length()J
+
+    move-result-wide v12
+
+    const-wide/32 v14, 0x40000
+
+    cmp-long v9, v12, v14
+
+    if-lez v9, :cond_6
+
+    .line 121
+    invoke-virtual {v8}, Ljava/io/File;->delete()Z
+
+    .line 124
+    :cond_6
+    invoke-static {v3, v11, v10}, Lcom/tencent/mm/crash/CrashUploaderService;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 125
+    const/4 v9, 0x0
+
+    const/4 v10, -0x1
+
+    invoke-static {v3, v9, v10}, Lcom/tencent/mm/a/e;->d(Ljava/lang/String;II)[B
+
+    move-result-object v3
+
+    .line 126
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
+
+    move-result v9
+
+    if-nez v9, :cond_0
 
     .line 130
-    invoke-static/range {v1 .. v6}, Lcom/tencent/mm/crash/CrashUploaderService;->a(Ljava/lang/String;[BILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static/range {v2 .. v7}, Lcom/tencent/mm/crash/CrashUploaderService;->a(Ljava/lang/String;[BILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
 
     .line 131
-    invoke-virtual {v7}, Ljava/io/File;->delete()Z
+    invoke-virtual {v8}, Ljava/io/File;->delete()Z
 
     goto/16 :goto_0
 
     .line 95
     :cond_7
     :try_start_2
-    invoke-virtual {v2}, Ljava/io/File;->listFiles()[Ljava/io/File;
+    invoke-virtual {v3}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
-    move-result-object v11
+    move-result-object v12
 
     .line 96
-    if-eqz v11, :cond_4
+    if-eqz v12, :cond_4
 
     .line 97
-    array-length v12, v11
+    array-length v13, v12
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     :goto_3
-    if-ge v2, v12, :cond_4
+    if-ge v3, v13, :cond_4
 
-    aget-object v13, v11, v2
+    aget-object v14, v12, v3
 
     .line 98
-    invoke-virtual {v13}, Ljava/io/File;->lastModified()J
+    invoke-virtual {v14}, Ljava/io/File;->lastModified()J
 
-    move-result-wide v14
+    move-result-wide v16
 
-    invoke-static {v14, v15}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
+    invoke-static/range {v16 .. v17}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
 
-    move-result-wide v14
+    move-result-wide v16
 
-    const-wide v16, 0x9a7ec800L
+    const-wide v18, 0x9a7ec800L
 
-    cmp-long v14, v14, v16
+    cmp-long v15, v16, v18
 
-    if-lez v14, :cond_8
+    if-lez v15, :cond_8
 
     .line 99
-    invoke-virtual {v13}, Ljava/io/File;->delete()Z
+    invoke-virtual {v14}, Ljava/io/File;->delete()Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     .line 97
     :cond_8
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_3
 
     :catch_0
-    move-exception v2
+    move-exception v3
 
     goto :goto_2
 
     :catch_1
-    move-exception v4
+    move-exception v5
 
     goto/16 :goto_1
 .end method

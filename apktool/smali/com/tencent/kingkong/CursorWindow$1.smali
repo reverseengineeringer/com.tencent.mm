@@ -12,8 +12,18 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcom/tencent/kingkong/CursorWindow;",
+        ">;"
+    }
 .end annotation
 
 
@@ -25,7 +35,6 @@
     .line 673
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
     return-void
 .end method
 
@@ -40,7 +49,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lcom/tencent/kingkong/CursorWindow;-><init>(Landroid/os/Parcel;Lcom/tencent/kingkong/CursorWindow;)V
+    invoke-direct {v0, p1, v1}, Lcom/tencent/kingkong/CursorWindow;-><init>(Landroid/os/Parcel;Lcom/tencent/kingkong/CursorWindow$1;)V
 
     return-object v0
 .end method
@@ -49,7 +58,7 @@
     .locals 1
 
     .prologue
-    .line 1
+    .line 673
     invoke-virtual {p0, p1}, Lcom/tencent/kingkong/CursorWindow$1;->createFromParcel(Landroid/os/Parcel;)Lcom/tencent/kingkong/CursorWindow;
 
     move-result-object v0
@@ -71,7 +80,7 @@
     .locals 1
 
     .prologue
-    .line 1
+    .line 673
     invoke-virtual {p0, p1}, Lcom/tencent/kingkong/CursorWindow$1;->newArray(I)[Lcom/tencent/kingkong/CursorWindow;
 
     move-result-object v0

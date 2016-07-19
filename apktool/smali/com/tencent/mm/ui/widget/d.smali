@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public lEY:I
+.field public mfN:I
 
 
 # direct methods
@@ -20,7 +20,7 @@
     .line 10
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/d;->lEY:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/d;->mfN:I
 
     .line 14
     return-void
@@ -49,7 +49,7 @@
 
     sub-int v0, p8, v0
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/d;->lEY:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/d;->mfN:I
 
     add-int/2addr v0, v2
 

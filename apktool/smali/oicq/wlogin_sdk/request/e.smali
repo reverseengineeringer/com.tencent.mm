@@ -14,15 +14,15 @@
     .line 33
     const/16 v0, 0x810
 
-    iput v0, p0, Loicq/wlogin_sdk/request/e;->mbE:I
+    iput v0, p0, Loicq/wlogin_sdk/request/e;->mNI:I
 
     .line 34
     const/16 v0, 0xd
 
-    iput v0, p0, Loicq/wlogin_sdk/request/e;->mbF:I
+    iput v0, p0, Loicq/wlogin_sdk/request/e;->mNJ:I
 
     .line 35
-    iput-object p1, p0, Loicq/wlogin_sdk/request/e;->mbH:Loicq/wlogin_sdk/request/i;
+    iput-object p1, p0, Loicq/wlogin_sdk/request/e;->mNL:Loicq/wlogin_sdk/request/i;
 
     .line 36
     return-void

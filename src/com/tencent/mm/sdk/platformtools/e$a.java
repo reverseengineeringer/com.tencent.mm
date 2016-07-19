@@ -2,7 +2,7 @@ package com.tencent.mm.sdk.platformtools;
 
 final class e$a
 {
-  public static String cc(String paramString1, String paramString2)
+  public static String co(String paramString1, String paramString2)
   {
     if (paramString1 == null) {
       paramString2 = null;
@@ -17,7 +17,7 @@ final class e$a
     return paramString1.substring(i);
   }
   
-  public static String cd(String paramString1, String paramString2)
+  public static String cp(String paramString1, String paramString2)
   {
     String str;
     if (paramString1 == null) {

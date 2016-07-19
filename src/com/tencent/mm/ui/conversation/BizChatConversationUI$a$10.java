@@ -1,59 +1,26 @@
 package com.tencent.mm.ui.conversation;
 
-import android.widget.Toast;
-import com.tencent.mm.protocal.b.ajo;
-import com.tencent.mm.protocal.b.fa;
-import com.tencent.mm.protocal.b.jc;
-import com.tencent.mm.protocal.b.oi;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-import com.tencent.mm.t.aj;
-import com.tencent.mm.t.d;
-import com.tencent.mm.t.e;
-import com.tencent.mm.t.f;
-import com.tencent.mm.t.w;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.v.an;
+import com.tencent.mm.v.d;
+import com.tencent.mm.v.e;
+import com.tencent.mm.v.e.a;
+import com.tencent.mm.v.e.a.b;
 
 final class BizChatConversationUI$a$10
-  implements Runnable
+  implements e.a
 {
-  BizChatConversationUI$a$10(BizChatConversationUI.a parama, j paramj) {}
+  BizChatConversationUI$a$10(BizChatConversationUI.a parama) {}
   
-  public final void run()
+  public final void a(e.a.b paramb)
   {
-    long l = System.currentTimeMillis();
-    jc localjc = ((w)aoT).xu();
-    if ((localjc == null) || (jhF == null) || (jhF.ret != 0))
+    if ((paramb != null) && (bAx != null))
     {
-      if ((localjc != null) && (jhF != null))
-      {
-        u.w("!44@/B4Tb64lLpKy3Chyc6XXOXXrN+2WuSA5l4/ktVQL7f8=", "willen onSceneEnd err:code:%s", new Object[] { Integer.valueOf(jhF.ret) });
-        return;
-      }
-      u.w("!44@/B4Tb64lLpKy3Chyc6XXOXXrN+2WuSA5l4/ktVQL7f8=", "willen onSceneEnd err:resp == null");
-      return;
+      v.i("MicroMsg.BizChatConversationFmUI", "bizChatExtension bizChat change");
+      paramb = an.xJ().V(bAm);
+      BizChatConversationUI.a.b(lOo).ei(field_bizChatLocalId);
+      v.i("MicroMsg.BizChatConversationFmUI", "needToUpdate:%s", new Object[] { Boolean.valueOf(field_needToUpdate) });
     }
-    final boolean bool = f.a(jhE, BizChatConversationUI.a.JT());
-    u.d("!44@/B4Tb64lLpKy3Chyc6XXOXXrN+2WuSA5l4/ktVQL7f8=", "willen test handleFullBizChatInfo use time:%s", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
-    ab.j(new Runnable()
-    {
-      public final void run()
-      {
-        if (cMg == null)
-        {
-          Toast.makeText(y.getContext(), lnN.getString(2131432804), 0).show();
-          return;
-        }
-        if (bool)
-        {
-          BizChatConversationUI.a.a(lnN, cMg.field_bizChatLocalId);
-          u.d("!44@/B4Tb64lLpKy3Chyc6XXOXXrN+2WuSA5l4/ktVQL7f8=", "willen start ChattingUI");
-          return;
-        }
-        Toast.makeText(y.getContext(), lnN.getString(2131432804), 0).show();
-      }
-    });
   }
 }
 

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/tools/l$a;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->blg()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 5235
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$114;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 6015
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$114;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,62 +36,36 @@
 
 
 # virtual methods
-.method public final bge()V
-    .locals 2
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
     .prologue
-    .line 5239
-    const-string/jumbo v0, "!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/"
+    .line 6018
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$114;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    const-string/jumbo v1, "on fling up"
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->blf()V
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    .line 6019
+    new-instance v0, Lcom/tencent/mm/e/a/dh;
 
-    .line 5240
-    return-void
-.end method
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/dh;-><init>()V
 
-.method public final bgf()V
-    .locals 2
+    .line 6020
+    iget-object v1, v0, Lcom/tencent/mm/e/a/dh;->aiw:Lcom/tencent/mm/e/a/dh$a;
 
-    .prologue
-    .line 5244
-    const-string/jumbo v0, "!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/"
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$114;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    const-string/jumbo v1, "on fling right"
+    iget-object v2, v2, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->lrK:Lcom/tencent/mm/storage/k;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v2, v2, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    .line 5245
-    return-void
-.end method
+    iput-object v2, v1, Lcom/tencent/mm/e/a/dh$a;->username:Ljava/lang/String;
 
-.method public final bgg()V
-    .locals 2
+    .line 6021
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    .prologue
-    .line 5249
-    const-string/jumbo v0, "!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/"
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    const-string/jumbo v1, "on fling left"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 5250
-    return-void
-.end method
-
-.method public final bgh()V
-    .locals 2
-
-    .prologue
-    .line 5254
-    const-string/jumbo v0, "!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/"
-
-    const-string/jumbo v1, "on fling down"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 5258
+    .line 6028
     return-void
 .end method

@@ -2,24 +2,24 @@ package com.tencent.mm.modelsns;
 
 public final class c
 {
-  StringBuffer ccm = new StringBuffer();
-  StringBuffer ccn = new StringBuffer();
+  StringBuffer bWb = new StringBuffer();
+  StringBuffer bWc = new StringBuffer();
   
-  public final String CY()
+  public final String Di()
   {
-    ccm.append("--end--\n\n");
-    return ccm.toString();
+    bWb.append("--end--\n\n");
+    return bWb.toString();
   }
   
-  public final void f(String paramString, Object paramObject)
+  public final void m(String paramString, Object paramObject)
   {
-    ccm.append(paramString + "->" + paramObject + "\n");
-    ccn.append(paramObject);
+    bWb.append(paramString + "->" + paramObject + "\n");
+    bWc.append(paramObject);
   }
   
   public final String toString()
   {
-    return ccn.toString();
+    return bWc.toString();
   }
 }
 

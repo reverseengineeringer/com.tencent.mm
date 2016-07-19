@@ -4,9 +4,9 @@ import android.content.Intent;
 
 public abstract interface a
 {
-  public abstract boolean H(Intent paramIntent);
+  public abstract boolean M(Intent paramIntent);
   
-  public abstract void gF(boolean paramBoolean);
+  public abstract void hd(boolean paramBoolean);
   
   public abstract boolean isBusy();
   

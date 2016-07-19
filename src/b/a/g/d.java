@@ -4,9 +4,9 @@ import java.util.regex.Pattern;
 
 public final class d
 {
-  private static final Pattern mer = Pattern.compile("^[a-zA-Z][a-zA-Z0-9+.-]*://\\S+");
+  private static final Pattern mQv = Pattern.compile("^[a-zA-Z][a-zA-Z0-9+.-]*://\\S+");
   
-  public static void c(Object paramObject, String paramString)
+  public static void d(Object paramObject, String paramString)
   {
     if (paramObject != null) {}
     for (boolean bool = true;; bool = false)
@@ -16,7 +16,7 @@ public final class d
     }
   }
   
-  public static void cT(String paramString1, String paramString2)
+  public static void dg(String paramString1, String paramString2)
   {
     if ((paramString1 != null) && (!paramString1.trim().equals(""))) {}
     for (boolean bool = true;; bool = false)

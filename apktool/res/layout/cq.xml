@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbars="none" style="@style/MMScroll">
+        <LinearLayout android:gravity="center_horizontal" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" style="@style/MMBody">
+            <ImageView android:paddingBottom="33.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uy" />
+            <TextView android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/rl" android:lineSpacingExtra="4.0dip" style="@style/MMBriefText" />
+            <LinearLayout android:gravity="center|left" android:id="@id/pc" android:background="@drawable/dl" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/pd" android:background="@raw/default_avatar" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_margin="5.0dip" />
+                <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="6.0sp" android:text="@string/r7" android:singleLine="true" android:layout_weight="1.0" style="@style/MMFontPreferenceLarge" />
+                <ImageView android:layout_gravity="center|right" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0dip" android:src="@drawable/j9" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

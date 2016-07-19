@@ -7,8 +7,8 @@ final class ViewPager$3
   
   public final void run()
   {
-    ViewPager.a(gA);
-    gA.populate();
+    ViewPager.a(gV);
+    gV.populate();
   }
 }
 

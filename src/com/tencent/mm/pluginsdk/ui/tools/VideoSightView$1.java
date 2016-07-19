@@ -8,17 +8,17 @@ final class VideoSightView$1
 {
   VideoSightView$1(VideoSightView paramVideoSightView) {}
   
-  public final void a(b paramb, int paramInt)
+  public final void d(b paramb, int paramInt)
   {
     if (-1 == paramInt) {
-      if (iST.gyx != null) {
-        iST.gyx.az(0, 0);
+      if (jqf.gEU != null) {
+        jqf.gEU.aE(0, 0);
       }
     }
-    while ((paramInt != 0) || (iST.gyx == null)) {
+    while ((paramInt != 0) || (jqf.gEU == null)) {
       return;
     }
-    iST.gyx.lG();
+    jqf.gEU.jQ();
   }
 }
 

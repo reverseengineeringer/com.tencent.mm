@@ -3,12 +3,12 @@ package com.tencent.mm.ui.tools;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.ah;
 
 final class CropImageNewUI$10
   implements View.OnTouchListener
 {
-  CropImageNewUI$10(CropImageNewUI paramCropImageNewUI, af paramaf) {}
+  CropImageNewUI$10(CropImageNewUI paramCropImageNewUI, ah paramah) {}
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
@@ -18,9 +18,9 @@ final class CropImageNewUI$10
     for (;;)
     {
       return false;
-      lus.ds(200L);
+      lVu.dJ(200L);
       continue;
-      lus.aUF();
+      lVu.aZJ();
     }
   }
 }

@@ -9,8 +9,8 @@ final class ImageGalleryGridUI$1
   
   public final void run()
   {
-    if ((ImageGalleryGridUI.a(lfA) != null) && (ImageGalleryGridUI.a(lfA).getVisibility() != 4)) {
-      ImageGalleryGridUI.a(lfA).setVisibility(4);
+    if ((ImageGalleryGridUI.a(lFM) != null) && (ImageGalleryGridUI.a(lFM).getVisibility() != 4)) {
+      ImageGalleryGridUI.a(lFM).setVisibility(4);
     }
   }
 }

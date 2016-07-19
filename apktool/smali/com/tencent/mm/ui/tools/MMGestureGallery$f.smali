@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field kIk:[F
+.field final synthetic lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-.field final synthetic lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+.field lhx:[F
 
 
 # direct methods
@@ -25,20 +25,20 @@
     .locals 1
 
     .prologue
-    .line 100
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$f;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 287
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$f;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    .line 101
+    .line 288
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/tools/MMGestureGallery$a;-><init>(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
 
-    .line 98
+    .line 285
     const/16 v0, 0x9
 
     new-array v0, v0, [F
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$f;->kIk:[F
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$f;->lhx:[F
 
-    .line 103
+    .line 290
     return-void
 .end method
 
@@ -48,10 +48,10 @@
     .locals 2
 
     .prologue
-    .line 108
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$f;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 295
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$f;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->c(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/sdk/platformtools/aa;
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->c(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v0
 
@@ -59,8 +59,8 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$f$1;-><init>(Lcom/tencent/mm/ui/tools/MMGestureGallery$f;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
-    .line 145
+    .line 333
     return-void
 .end method

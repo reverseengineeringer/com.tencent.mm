@@ -3,20 +3,20 @@ package com.tencent.mm.compatible.b;
 import android.annotation.TargetApi;
 import android.media.AudioRecord;
 import android.media.audiofx.NoiseSuppressor;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class g
   implements e.a
 {
-  private NoiseSuppressor bpG = null;
+  private NoiseSuppressor bdG = null;
   
   @TargetApi(16)
   public g(AudioRecord paramAudioRecord)
   {
     boolean bool = NoiseSuppressor.isAvailable();
-    u.d("!44@/B4Tb64lLpIF0puzW1Oq16BT4ojg3TONtPZ4sG974Xc=", "available  " + bool);
+    v.d("MicroMsg.MMNoiseSuppressor", "available  " + bool);
     if (bool) {
-      bpG = NoiseSuppressor.create(paramAudioRecord.getAudioSessionId());
+      bdG = NoiseSuppressor.create(paramAudioRecord.getAudioSessionId());
     }
   }
   
@@ -27,16 +27,16 @@ public final class g
   }
   
   @TargetApi(16)
-  public final boolean nK()
+  public final boolean lY()
   {
-    if (bpG != null) {}
+    if (bdG != null) {}
     try
     {
-      int i = bpG.setEnabled(true);
+      int i = bdG.setEnabled(true);
       if (i == 0) {
         return true;
       }
-      u.d("!44@/B4Tb64lLpIF0puzW1Oq16BT4ojg3TONtPZ4sG974Xc=", "setEnabled failed " + i);
+      v.d("MicroMsg.MMNoiseSuppressor", "setEnabled failed " + i);
     }
     catch (Exception localException)
     {

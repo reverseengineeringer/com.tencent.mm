@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ae1" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:background="@drawable/aei" android:paddingLeft="12.0dip" android:paddingRight="6.0dip" style="@style/MMFooter">
+        <ImageView android:id="@id/c_j" android:background="@null" android:paddingTop="3.0dip" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/d6" android:minWidth="0.0dip" style="@style/MMSmallButton" />
+        <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.tencent.mm.ui.widget.MMEditText android:textColor="@color/ak" android:layout_gravity="bottom" android:id="@id/c_k" android:background="@drawable/aj4" android:layout_width="0.0dip" android:layout_marginTop="8.0dip" android:maxHeight="@dimen/d6" android:minHeight="@dimen/d7" android:singleLine="false" android:layout_weight="1.0" android:inputType="textCapSentences|textMultiLine" android:textCursorDrawable="@drawable/am" style="@style/MMEditText" />
+            <ImageButton android:id="@id/bat" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/d5" android:contentDescription="@string/wu" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip">
+            <TextView android:gravity="top" android:id="@id/yz" android:visibility="gone" style="@style/ChattingUIWordCount" />
+            <Button android:textColor="#1a000000" android:id="@id/c_l" android:background="@drawable/m8" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="wrap_content" android:layout_height="@dimen/d_" android:layout_marginBottom="8.0dip" android:minWidth="@dimen/db" android:text="@string/a1_" />
+            <Button android:textColor="@color/q7" android:id="@id/c_m" android:background="@drawable/b6" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/d_" android:layout_marginBottom="8.0dip" android:minWidth="@dimen/db" android:text="@string/a1_" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

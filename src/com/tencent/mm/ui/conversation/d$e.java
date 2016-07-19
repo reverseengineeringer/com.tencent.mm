@@ -2,35 +2,35 @@ package com.tencent.mm.ui.conversation;
 
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 
 final class d$e
 {
-  private String apb = null;
-  private boolean bvP = false;
-  private k cId = null;
-  private Integer loS = null;
+  private String ajT = null;
+  private boolean ble = false;
+  private k cFh = null;
+  private Integer lPi = null;
   
   public d$e(d paramd) {}
   
-  public final k bhK()
+  public final k bnC()
   {
-    if ((bvP) && (cId == null) && (ah.rh())) {
-      cId = ah.tD().rq().Ep(apb);
+    if ((ble) && (cFh == null) && (ah.rg())) {
+      cFh = ah.tE().rr().GD(ajT);
     }
-    return cId;
+    return cFh;
   }
   
-  public final void setTalker(String paramString)
+  public final void cr(String paramString)
   {
-    apb = paramString;
-    cId = null;
-    loS = null;
-    bvP = false;
-    if (!t.kz(paramString)) {
-      bvP = true;
+    ajT = paramString;
+    cFh = null;
+    lPi = null;
+    ble = false;
+    if (!s.kf(paramString)) {
+      ble = true;
     }
   }
 }

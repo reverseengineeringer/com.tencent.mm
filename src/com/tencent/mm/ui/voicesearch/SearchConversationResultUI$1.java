@@ -7,9 +7,9 @@ final class SearchConversationResultUI$1
 {
   SearchConversationResultUI$1(SearchConversationResultUI paramSearchConversationResultUI) {}
   
-  public final void Gh() {}
+  public final void GE() {}
   
-  public final void Gi() {}
+  public final void GF() {}
 }
 
 /* Location:

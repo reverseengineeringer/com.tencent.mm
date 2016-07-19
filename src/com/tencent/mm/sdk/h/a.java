@@ -1,12 +1,12 @@
 package com.tencent.mm.sdk.h;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Properties;
 
 public final class a
 {
   private String filePath;
-  private Properties jYt;
+  private Properties kyQ;
   
   /* Error */
   public a(String paramString)
@@ -16,7 +16,7 @@ public final class a
     //   1: invokespecial 17	java/lang/Object:<init>	()V
     //   4: aload_0
     //   5: aconst_null
-    //   6: putfield 19	com/tencent/mm/sdk/h/a:jYt	Ljava/util/Properties;
+    //   6: putfield 19	com/tencent/mm/sdk/h/a:kyQ	Ljava/util/Properties;
     //   9: aload_0
     //   10: aconst_null
     //   11: putfield 21	com/tencent/mm/sdk/h/a:filePath	Ljava/lang/String;
@@ -24,7 +24,7 @@ public final class a
     //   15: new 23	java/util/Properties
     //   18: dup
     //   19: invokespecial 24	java/util/Properties:<init>	()V
-    //   22: putfield 19	com/tencent/mm/sdk/h/a:jYt	Ljava/util/Properties;
+    //   22: putfield 19	com/tencent/mm/sdk/h/a:kyQ	Ljava/util/Properties;
     //   25: aload_0
     //   26: aload_1
     //   27: putfield 21	com/tencent/mm/sdk/h/a:filePath	Ljava/lang/String;
@@ -36,7 +36,7 @@ public final class a
     //   39: aload_3
     //   40: astore_2
     //   41: aload_0
-    //   42: getfield 19	com/tencent/mm/sdk/h/a:jYt	Ljava/util/Properties;
+    //   42: getfield 19	com/tencent/mm/sdk/h/a:kyQ	Ljava/util/Properties;
     //   45: aload_3
     //   46: invokevirtual 32	java/util/Properties:load	(Ljava/io/InputStream;)V
     //   49: aload_3
@@ -56,7 +56,7 @@ public final class a
     //   69: aload_2
     //   70: invokevirtual 43	java/io/IOException:getLocalizedMessage	()Ljava/lang/String;
     //   73: aastore
-    //   74: invokestatic 49	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   74: invokestatic 49	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   77: return
     //   78: astore 4
     //   80: aconst_null
@@ -76,7 +76,7 @@ public final class a
     //   98: aload 4
     //   100: invokevirtual 52	java/lang/Exception:getLocalizedMessage	()Ljava/lang/String;
     //   103: aastore
-    //   104: invokestatic 49	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   104: invokestatic 49	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   107: aload_3
     //   108: ifnull -55 -> 53
     //   111: aload_3
@@ -96,7 +96,7 @@ public final class a
     //   131: aload_2
     //   132: invokevirtual 43	java/io/IOException:getLocalizedMessage	()Ljava/lang/String;
     //   135: aastore
-    //   136: invokestatic 49	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   136: invokestatic 49	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   139: return
     //   140: astore_3
     //   141: aconst_null
@@ -121,7 +121,7 @@ public final class a
     //   168: aload_2
     //   169: invokevirtual 43	java/io/IOException:getLocalizedMessage	()Ljava/lang/String;
     //   172: aastore
-    //   173: invokestatic 49	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   173: invokestatic 49	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   176: goto -25 -> 151
     //   179: astore_3
     //   180: goto -37 -> 143
@@ -154,7 +154,32 @@ public final class a
     //   41	49	183	java/lang/Exception
   }
   
-  private Long DE(String paramString)
+  public static boolean N(String paramString1, String paramString2, String paramString3)
+  {
+    return new a(paramString1).cv(paramString2, paramString3);
+  }
+  
+  public static Long cw(String paramString1, String paramString2)
+  {
+    return new a(paramString1).FT(paramString2);
+  }
+  
+  public static boolean g(String paramString1, String paramString2, long paramLong)
+  {
+    return new a(paramString1).A(paramString2, paramLong);
+  }
+  
+  public static String getValue(String paramString1, String paramString2)
+  {
+    return new a(paramString1).getValue(paramString2);
+  }
+  
+  public final boolean A(String paramString, long paramLong)
+  {
+    return cv(paramString, String.valueOf(paramLong));
+  }
+  
+  public final Long FT(String paramString)
   {
     paramString = getValue(paramString);
     if (paramString == null) {
@@ -167,32 +192,12 @@ public final class a
     }
     catch (Exception localException)
     {
-      u.e("!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3", "getLongValue ParseLong : %s Failed. [%s]", new Object[] { paramString, localException.getLocalizedMessage() });
+      v.e("MicroMsg.ReadConfig", "getLongValue ParseLong : %s Failed. [%s]", new Object[] { paramString, localException.getLocalizedMessage() });
     }
     return null;
   }
   
-  public static boolean L(String paramString1, String paramString2, String paramString3)
-  {
-    return new a(paramString1).ch(paramString2, paramString3);
-  }
-  
-  public static Long ci(String paramString1, String paramString2)
-  {
-    return new a(paramString1).DE(paramString2);
-  }
-  
-  public static String getValue(String paramString1, String paramString2)
-  {
-    return new a(paramString1).getValue(paramString2);
-  }
-  
-  public static boolean h(String paramString1, String paramString2, long paramLong)
-  {
-    return new a(paramString1).ch(paramString2, String.valueOf(paramLong));
-  }
-  
-  public final Integer DF(String paramString)
+  public final Integer FU(String paramString)
   {
     paramString = getValue(paramString);
     if (paramString == null) {
@@ -205,43 +210,43 @@ public final class a
     }
     catch (Exception localException)
     {
-      u.e("!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3", "getIntegerValue ParseInteger : %s Failed. [%s]", new Object[] { paramString, localException.getLocalizedMessage() });
+      v.e("MicroMsg.ReadConfig", "getIntegerValue ParseInteger : %s Failed. [%s]", new Object[] { paramString, localException.getLocalizedMessage() });
     }
     return null;
   }
   
-  public final boolean aM(String paramString, int paramInt)
+  public final boolean aW(String paramString, int paramInt)
   {
-    return ch(paramString, String.valueOf(paramInt));
+    return cv(paramString, String.valueOf(paramInt));
   }
   
   /* Error */
-  public final boolean ch(String paramString1, String paramString2)
+  public final boolean cv(String paramString1, String paramString2)
   {
     // Byte code:
-    //   0: new 110	java/io/FileOutputStream
+    //   0: new 114	java/io/FileOutputStream
     //   3: dup
     //   4: aload_0
     //   5: getfield 21	com/tencent/mm/sdk/h/a:filePath	Ljava/lang/String;
-    //   8: invokespecial 111	java/io/FileOutputStream:<init>	(Ljava/lang/String;)V
+    //   8: invokespecial 115	java/io/FileOutputStream:<init>	(Ljava/lang/String;)V
     //   11: astore 4
     //   13: aload 4
     //   15: astore_3
     //   16: aload_0
-    //   17: getfield 19	com/tencent/mm/sdk/h/a:jYt	Ljava/util/Properties;
+    //   17: getfield 19	com/tencent/mm/sdk/h/a:kyQ	Ljava/util/Properties;
     //   20: aload_1
     //   21: aload_2
-    //   22: invokevirtual 115	java/util/Properties:setProperty	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    //   22: invokevirtual 119	java/util/Properties:setProperty	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
     //   25: pop
     //   26: aload 4
     //   28: astore_3
     //   29: aload_0
-    //   30: getfield 19	com/tencent/mm/sdk/h/a:jYt	Ljava/util/Properties;
+    //   30: getfield 19	com/tencent/mm/sdk/h/a:kyQ	Ljava/util/Properties;
     //   33: aload 4
-    //   35: ldc 117
-    //   37: invokevirtual 121	java/util/Properties:store	(Ljava/io/OutputStream;Ljava/lang/String;)V
+    //   35: ldc 121
+    //   37: invokevirtual 125	java/util/Properties:store	(Ljava/io/OutputStream;Ljava/lang/String;)V
     //   40: aload 4
-    //   42: invokevirtual 122	java/io/FileOutputStream:close	()V
+    //   42: invokevirtual 126	java/io/FileOutputStream:close	()V
     //   45: iconst_1
     //   46: ireturn
     //   47: astore_1
@@ -259,7 +264,7 @@ public final class a
     //   65: aload_1
     //   66: invokevirtual 43	java/io/IOException:getLocalizedMessage	()Ljava/lang/String;
     //   69: aastore
-    //   70: invokestatic 49	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   70: invokestatic 49	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   73: iconst_1
     //   74: ireturn
     //   75: astore_2
@@ -268,7 +273,7 @@ public final class a
     //   78: aload_1
     //   79: astore_3
     //   80: ldc 37
-    //   82: ldc 124
+    //   82: ldc -128
     //   84: iconst_2
     //   85: anewarray 4	java/lang/Object
     //   88: dup
@@ -281,11 +286,11 @@ public final class a
     //   97: aload_2
     //   98: invokevirtual 52	java/lang/Exception:getLocalizedMessage	()Ljava/lang/String;
     //   101: aastore
-    //   102: invokestatic 49	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   102: invokestatic 49	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   105: aload_1
     //   106: ifnull +90 -> 196
     //   109: aload_1
-    //   110: invokevirtual 122	java/io/FileOutputStream:close	()V
+    //   110: invokevirtual 126	java/io/FileOutputStream:close	()V
     //   113: iconst_0
     //   114: ireturn
     //   115: astore_1
@@ -303,7 +308,7 @@ public final class a
     //   133: aload_1
     //   134: invokevirtual 43	java/io/IOException:getLocalizedMessage	()Ljava/lang/String;
     //   137: aastore
-    //   138: invokestatic 49	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   138: invokestatic 49	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   141: iconst_0
     //   142: ireturn
     //   143: astore_1
@@ -312,7 +317,7 @@ public final class a
     //   146: aload_3
     //   147: ifnull +7 -> 154
     //   150: aload_3
-    //   151: invokevirtual 122	java/io/FileOutputStream:close	()V
+    //   151: invokevirtual 126	java/io/FileOutputStream:close	()V
     //   154: aload_1
     //   155: athrow
     //   156: astore_2
@@ -330,7 +335,7 @@ public final class a
     //   174: aload_2
     //   175: invokevirtual 43	java/io/IOException:getLocalizedMessage	()Ljava/lang/String;
     //   178: aastore
-    //   179: invokestatic 49	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   179: invokestatic 49	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   182: goto -28 -> 154
     //   185: astore_1
     //   186: goto -40 -> 146
@@ -363,8 +368,8 @@ public final class a
   
   public final String getValue(String paramString)
   {
-    if ((jYt != null) && (jYt.containsKey(paramString))) {
-      return jYt.getProperty(paramString);
+    if ((kyQ != null) && (kyQ.containsKey(paramString))) {
+      return kyQ.getProperty(paramString);
     }
     return null;
   }

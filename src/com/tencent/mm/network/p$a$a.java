@@ -2,10 +2,10 @@ package com.tencent.mm.network;
 
 import android.os.IBinder;
 import android.os.Parcel;
-import com.tencent.mm.protocal.e;
-import com.tencent.mm.protocal.e.a;
-import com.tencent.mm.protocal.f;
-import com.tencent.mm.protocal.f.a;
+import com.tencent.mm.protocal.g;
+import com.tencent.mm.protocal.g.a;
+import com.tencent.mm.protocal.h;
+import com.tencent.mm.protocal.h.a;
 
 final class p$a$a
   implements p
@@ -275,7 +275,7 @@ final class p$a$a
     }
   }
   
-  public final void gk(String paramString)
+  public final void gx(String paramString)
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -294,7 +294,7 @@ final class p$a$a
     }
   }
   
-  public final boolean vB()
+  public final boolean vD()
   {
     boolean bool = false;
     Parcel localParcel1 = Parcel.obtain();
@@ -317,7 +317,7 @@ final class p$a$a
     }
   }
   
-  public final int vF()
+  public final int vI()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -336,7 +336,7 @@ final class p$a$a
     }
   }
   
-  public final int vx()
+  public final int vz()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -355,7 +355,7 @@ final class p$a$a
     }
   }
   
-  public final e wf()
+  public final g wh()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -364,8 +364,8 @@ final class p$a$a
       localParcel1.writeInterfaceToken("com.tencent.mm.network.IReqResp_AIDL");
       mRemote.transact(4, localParcel1, localParcel2, 0);
       localParcel2.readException();
-      e locale = e.a.aq(localParcel2.readStrongBinder());
-      return locale;
+      g localg = g.a.S(localParcel2.readStrongBinder());
+      return localg;
     }
     finally
     {
@@ -374,7 +374,7 @@ final class p$a$a
     }
   }
   
-  public final f wg()
+  public final h wi()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -383,8 +383,8 @@ final class p$a$a
       localParcel1.writeInterfaceToken("com.tencent.mm.network.IReqResp_AIDL");
       mRemote.transact(3, localParcel1, localParcel2, 0);
       localParcel2.readException();
-      f localf = f.a.ar(localParcel2.readStrongBinder());
-      return localf;
+      h localh = h.a.T(localParcel2.readStrongBinder());
+      return localh;
     }
     finally
     {
@@ -393,7 +393,7 @@ final class p$a$a
     }
   }
   
-  public final int wh()
+  public final int wj()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();

@@ -7,7 +7,7 @@ final class i$2
   
   public final void run()
   {
-    iSN.aod();
+    jpZ.aqV();
   }
 }
 

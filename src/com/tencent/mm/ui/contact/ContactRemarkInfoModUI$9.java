@@ -3,7 +3,7 @@ package com.tencent.mm.ui.contact;
 import android.text.Editable;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.pluginsdk.ui.d.e;
 import com.tencent.mm.ui.base.MMClearEditText;
 
@@ -14,11 +14,11 @@ final class ContactRemarkInfoModUI$9
   
   public final void onClick(View paramView)
   {
-    ContactRemarkInfoModUI.f(ljV);
-    ContactRemarkInfoModUI.a(ljV, true, -1);
-    ContactRemarkInfoModUI.g(ljV).setText(e.a(ljV, t.ky(ContactRemarkInfoModUI.A(ljV)), ContactRemarkInfoModUI.g(ljV).getTextSize()));
-    ContactRemarkInfoModUI.g(ljV).setSelection(ContactRemarkInfoModUI.g(ljV).getText().length());
-    ContactRemarkInfoModUI.z(ljV).setVisibility(8);
+    ContactRemarkInfoModUI.f(lKg);
+    ContactRemarkInfoModUI.a(lKg, true, -1);
+    ContactRemarkInfoModUI.g(lKg).setText(e.a(lKg, s.li(ContactRemarkInfoModUI.A(lKg)), ContactRemarkInfoModUI.g(lKg).getTextSize()));
+    ContactRemarkInfoModUI.g(lKg).setSelection(ContactRemarkInfoModUI.g(lKg).getText().length());
+    ContactRemarkInfoModUI.z(lKg).setVisibility(8);
   }
 }
 

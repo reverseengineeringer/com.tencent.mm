@@ -3,11 +3,11 @@ package android.support.v4.app;
 import android.graphics.Bitmap;
 
 public final class p$b
-  extends p.p
+  extends p.o
 {
-  Bitmap cD;
-  Bitmap cE;
-  boolean cF;
+  Bitmap cT;
+  Bitmap cU;
+  boolean cV;
 }
 
 /* Location:

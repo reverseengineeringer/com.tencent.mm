@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/sb" android:layout_width="fill_parent" android:layout_height="75.0dip" android:layout_marginLeft="@dimen/j8" android:layout_marginTop="@dimen/j8" android:layout_marginRight="@dimen/j8"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/apm" android:background="@drawable/afb" android:paddingLeft="@dimen/hb" android:paddingRight="@dimen/hb" android:layout_width="fill_parent" android:layout_height="75.0dip">
+        <ImageView android:id="@id/apn" android:layout_width="46.0dip" android:layout_height="46.0dip" android:layout_marginTop="@dimen/hb" android:layout_marginRight="@dimen/j8" android:layout_marginBottom="@dimen/hb" android:src="@raw/actionbar_particular_icon" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/ak" android:id="@id/apo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:ellipsize="end" android:id="@id/app" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j8" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/ry" android:background="@drawable/dw" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/hr" android:layout_marginRight="@dimen/hr" android:layout_marginBottom="0.0dip" android:layout_alignBottom="@id/apm" android:layerType="software" />
+</RelativeLayout>

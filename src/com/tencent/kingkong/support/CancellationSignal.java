@@ -24,11 +24,7 @@ public final class CancellationSignal
   
   private void waitForCancelFinishedLocked()
   {
-    for (;;)
-    {
-      if (!mCancelInProgress) {
-        return;
-      }
+    while (mCancelInProgress) {
       try
       {
         wait();
@@ -44,40 +40,40 @@ public final class CancellationSignal
     //   0: aload_0
     //   1: monitorenter
     //   2: aload_0
-    //   3: getfield 46	com/tencent/kingkong/support/CancellationSignal:mIsCanceled	Z
+    //   3: getfield 48	com/tencent/kingkong/support/CancellationSignal:mIsCanceled	Z
     //   6: ifeq +6 -> 12
     //   9: aload_0
     //   10: monitorexit
     //   11: return
     //   12: aload_0
     //   13: iconst_1
-    //   14: putfield 46	com/tencent/kingkong/support/CancellationSignal:mIsCanceled	Z
+    //   14: putfield 48	com/tencent/kingkong/support/CancellationSignal:mIsCanceled	Z
     //   17: aload_0
     //   18: iconst_1
-    //   19: putfield 38	com/tencent/kingkong/support/CancellationSignal:mCancelInProgress	Z
+    //   19: putfield 40	com/tencent/kingkong/support/CancellationSignal:mCancelInProgress	Z
     //   22: aload_0
-    //   23: getfield 48	com/tencent/kingkong/support/CancellationSignal:mOnCancelListener	Lcom/tencent/kingkong/support/CancellationSignal$OnCancelListener;
+    //   23: getfield 50	com/tencent/kingkong/support/CancellationSignal:mOnCancelListener	Lcom/tencent/kingkong/support/CancellationSignal$OnCancelListener;
     //   26: astore_1
     //   27: aload_0
-    //   28: getfield 50	com/tencent/kingkong/support/CancellationSignal:mRemote	Lcom/tencent/kingkong/support/ICancellationSignal;
+    //   28: getfield 52	com/tencent/kingkong/support/CancellationSignal:mRemote	Lcom/tencent/kingkong/support/ICancellationSignal;
     //   31: astore_2
     //   32: aload_0
     //   33: monitorexit
     //   34: aload_1
     //   35: ifnull +9 -> 44
     //   38: aload_1
-    //   39: invokeinterface 53 1 0
+    //   39: invokeinterface 55 1 0
     //   44: aload_2
     //   45: ifnull +9 -> 54
     //   48: aload_2
-    //   49: invokeinterface 57 1 0
+    //   49: invokeinterface 59 1 0
     //   54: aload_0
     //   55: monitorenter
     //   56: aload_0
     //   57: iconst_0
-    //   58: putfield 38	com/tencent/kingkong/support/CancellationSignal:mCancelInProgress	Z
+    //   58: putfield 40	com/tencent/kingkong/support/CancellationSignal:mCancelInProgress	Z
     //   61: aload_0
-    //   62: invokevirtual 60	java/lang/Object:notifyAll	()V
+    //   62: invokevirtual 62	java/lang/Object:notifyAll	()V
     //   65: aload_0
     //   66: monitorexit
     //   67: return
@@ -96,9 +92,9 @@ public final class CancellationSignal
     //   80: monitorenter
     //   81: aload_0
     //   82: iconst_0
-    //   83: putfield 38	com/tencent/kingkong/support/CancellationSignal:mCancelInProgress	Z
+    //   83: putfield 40	com/tencent/kingkong/support/CancellationSignal:mCancelInProgress	Z
     //   86: aload_0
-    //   87: invokevirtual 60	java/lang/Object:notifyAll	()V
+    //   87: invokevirtual 62	java/lang/Object:notifyAll	()V
     //   90: aload_0
     //   91: monitorexit
     //   92: aload_1

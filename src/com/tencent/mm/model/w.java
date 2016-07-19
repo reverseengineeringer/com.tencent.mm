@@ -2,7 +2,7 @@ package com.tencent.mm.model;
 
 public abstract interface w
 {
-  public abstract void cd(int paramInt);
+  public abstract void cx(int paramInt);
 }
 
 /* Location:

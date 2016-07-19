@@ -12,11 +12,11 @@
 
 
 # static fields
-.field private static bCx:Lcom/tencent/mm/model/aw;
+.field private static bvH:Lcom/tencent/mm/model/aw;
 
 
 # instance fields
-.field public final bxg:Landroid/content/SharedPreferences;
+.field public final bpi:Landroid/content/SharedPreferences;
 
 
 # direct methods
@@ -28,11 +28,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 24
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v1
 
@@ -42,7 +42,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/model/aw;->bxg:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/tencent/mm/model/aw;->bpi:Landroid/content/SharedPreferences;
 
     .line 25
     return-void
@@ -53,12 +53,12 @@
 
     .prologue
     .line 9
-    iget-object v0, p0, Lcom/tencent/mm/model/aw;->bxg:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/tencent/mm/model/aw;->bpi:Landroid/content/SharedPreferences;
 
     return-object v0
 .end method
 
-.method public static uB()Lcom/tencent/mm/model/aw;
+.method public static uD()Lcom/tencent/mm/model/aw;
     .locals 2
 
     .prologue
@@ -69,7 +69,7 @@
 
     .line 29
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/model/aw;->bCx:Lcom/tencent/mm/model/aw;
+    sget-object v0, Lcom/tencent/mm/model/aw;->bvH:Lcom/tencent/mm/model/aw;
 
     if-nez v0, :cond_0
 
@@ -78,7 +78,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/model/aw;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/model/aw;->bCx:Lcom/tencent/mm/model/aw;
+    sput-object v0, Lcom/tencent/mm/model/aw;->bvH:Lcom/tencent/mm/model/aw;
 
     .line 32
     :cond_0
@@ -87,7 +87,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 33
-    sget-object v0, Lcom/tencent/mm/model/aw;->bCx:Lcom/tencent/mm/model/aw;
+    sget-object v0, Lcom/tencent/mm/model/aw;->bvH:Lcom/tencent/mm/model/aw;
 
     return-object v0
 

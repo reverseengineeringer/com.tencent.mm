@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iMB:Lcom/tencent/mm/pluginsdk/ui/chat/l;
+.field final synthetic jjy:Lcom/tencent/mm/pluginsdk/ui/chat/l;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 146
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/l$2;->iMB:Lcom/tencent/mm/pluginsdk/ui/chat/l;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/l$2;->jjy:Lcom/tencent/mm/pluginsdk/ui/chat/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,18 +36,18 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 2
 
     .prologue
     .line 149
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/l$2;->iMB:Lcom/tencent/mm/pluginsdk/ui/chat/l;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/l$2;->jjy:Lcom/tencent/mm/pluginsdk/ui/chat/l;
 
-    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/chat/l;->iMv:Lcom/tencent/mm/ui/base/o;
+    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/chat/l;->jjs:Lcom/tencent/mm/ui/base/o;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/l;->iMv:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/l;->jjs:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/o;->dismiss()V
 

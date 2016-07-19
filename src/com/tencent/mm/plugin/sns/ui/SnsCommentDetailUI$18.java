@@ -10,7 +10,7 @@ final class SnsCommentDetailUI$18
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    hda.finish();
+    hrN.finish();
     return true;
   }
 }

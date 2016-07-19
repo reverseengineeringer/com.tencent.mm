@@ -1,14 +1,10 @@
 .class final Lcom/tencent/smtt/sdk/QbSdk$3;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lcom/tencent/smtt/sdk/n;
+.super Ljava/lang/Thread;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/smtt/sdk/QbSdk;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/smtt/sdk/QbSdk;->preInit(Landroid/content/Context;Lcom/tencent/smtt/sdk/QbSdk$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,130 +13,124 @@
 .end annotation
 
 
+# instance fields
+.field final synthetic mtm:Landroid/os/Handler;
+
+.field final synthetic val$context:Landroid/content/Context;
+
+
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/content/Context;Landroid/os/Handler;)V
     .locals 0
 
-    .prologue
-    .line 1392
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcom/tencent/smtt/sdk/QbSdk$3;->val$context:Landroid/content/Context;
+
+    iput-object p2, p0, Lcom/tencent/smtt/sdk/QbSdk$3;->mtm:Landroid/os/Handler;
+
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDownloadFinish(I)V
-    .locals 1
+.method public final run()V
+    .locals 4
 
-    .prologue
-    .line 1396
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    sput-boolean v0, Lcom/tencent/smtt/sdk/k;->lSz:Z
+    const/4 v3, 0x1
 
-    .line 1397
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->bll()Lcom/tencent/smtt/sdk/n;
+    invoke-static {}, Lcom/tencent/smtt/sdk/m;->brX()Lcom/tencent/smtt/sdk/m;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/QbSdk$3;->val$context:Landroid/content/Context;
 
-    .line 1398
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->bll()Lcom/tencent/smtt/sdk/n;
+    invoke-virtual {v0, v1}, Lcom/tencent/smtt/sdk/m;->ff(Landroid/content/Context;)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcom/tencent/smtt/sdk/m;->brX()Lcom/tencent/smtt/sdk/m;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/n;->onDownloadFinish(I)V
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/QbSdk$3;->val$context:Landroid/content/Context;
 
-    .line 1399
+    invoke-virtual {v0, v1, v3}, Lcom/tencent/smtt/sdk/m;->s(Landroid/content/Context;Z)V
+
     :cond_0
-    sget-object v0, Lcom/tencent/smtt/sdk/QbSdk;->mTbsListenerDebug:Lcom/tencent/smtt/sdk/n;
+    invoke-static {v3}, Lcom/tencent/smtt/sdk/d;->jb(Z)Lcom/tencent/smtt/sdk/d;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    .line 1400
-    sget-object v0, Lcom/tencent/smtt/sdk/QbSdk;->mTbsListenerDebug:Lcom/tencent/smtt/sdk/n;
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/QbSdk$3;->val$context:Landroid/content/Context;
 
-    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/n;->onDownloadFinish(I)V
+    invoke-virtual {v0, v1, v3}, Lcom/tencent/smtt/sdk/d;->o(Landroid/content/Context;Z)V
 
-    .line 1401
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/QbSdk$3;->val$context:Landroid/content/Context;
+
+    invoke-static {v1}, Lcom/tencent/smtt/sdk/q;->fr(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/QbSdk$3;->val$context:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/tencent/smtt/sdk/q;->fx(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/QbSdk$3;->val$context:Landroid/content/Context;
+
+    invoke-static {v1, v2}, Lcom/tencent/smtt/sdk/k;->p(Landroid/content/Context;Z)Z
+
     :cond_1
+    sget-boolean v1, Lcom/tencent/smtt/sdk/WebView;->mSysWebviewCreated:Z
+
+    if-nez v1, :cond_2
+
+    sget-boolean v1, Lcom/tencent/smtt/sdk/QbSdk;->mtd:Z
+
+    if-nez v1, :cond_2
+
+    sput-boolean v2, Lcom/tencent/smtt/sdk/QbSdk;->msX:Z
+
+    :cond_2
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->brr()Z
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/QbSdk$3;->mtm:Landroid/os/Handler;
+
+    const/4 v2, 0x3
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/QbSdk$3;->mtm:Landroid/os/Handler;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    :goto_0
     return-void
-.end method
 
-.method public final onDownloadProgress(I)V
-    .locals 1
+    :cond_3
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/QbSdk$3;->mtm:Landroid/os/Handler;
 
-    .prologue
-    .line 1417
-    sget-object v0, Lcom/tencent/smtt/sdk/QbSdk;->mTbsListenerDebug:Lcom/tencent/smtt/sdk/n;
+    invoke-virtual {v0, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    if-eqz v0, :cond_0
-
-    .line 1418
-    sget-object v0, Lcom/tencent/smtt/sdk/QbSdk;->mTbsListenerDebug:Lcom/tencent/smtt/sdk/n;
-
-    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/n;->onDownloadProgress(I)V
-
-    .line 1419
-    :cond_0
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->bll()Lcom/tencent/smtt/sdk/n;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 1420
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->bll()Lcom/tencent/smtt/sdk/n;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/n;->onDownloadProgress(I)V
-
-    .line 1422
-    :cond_1
-    return-void
-.end method
-
-.method public final onInstallFinish(I)V
-    .locals 1
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 1406
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/QbSdk;->setTBSInstallingStatus(Z)V
-
-    .line 1408
-    sput-boolean v0, Lcom/tencent/smtt/sdk/k;->lSz:Z
-
-    .line 1409
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->bll()Lcom/tencent/smtt/sdk/n;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 1410
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->bll()Lcom/tencent/smtt/sdk/n;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/n;->onInstallFinish(I)V
-
-    .line 1411
-    :cond_0
-    sget-object v0, Lcom/tencent/smtt/sdk/QbSdk;->mTbsListenerDebug:Lcom/tencent/smtt/sdk/n;
-
-    if-eqz v0, :cond_1
-
-    .line 1412
-    sget-object v0, Lcom/tencent/smtt/sdk/QbSdk;->mTbsListenerDebug:Lcom/tencent/smtt/sdk/n;
-
-    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/n;->onInstallFinish(I)V
-
-    .line 1413
-    :cond_1
-    return-void
+    goto :goto_0
 .end method

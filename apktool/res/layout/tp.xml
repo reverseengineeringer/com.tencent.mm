@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:background="@color/ow" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/b1h" android:layout_width="fill_parent" android:layout_height="176.0dip">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/b1i" android:paddingLeft="@dimen/b6" android:paddingRight="@dimen/b6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="34.0dip">
+            <TextView android:textSize="@dimen/b0" android:textColor="@color/dd" android:gravity="center" android:layout_gravity="center" android:id="@id/b1j" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:textSize="@dimen/b0" android:gravity="left" android:layout_gravity="center_horizontal" android:id="@id/b1k" android:background="@color/nl" android:paddingLeft="@dimen/b2" android:paddingRight="@dimen/b2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:cursorVisible="false" android:maxLines="1" android:singleLine="true" android:editable="false" android:layout_weight="0.6" android:inputType="phone" />
+            <LinearLayout android:gravity="center" android:id="@id/b1l" android:clickable="true" android:longClickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="35.0dip">
+                <Button android:layout_gravity="center" android:background="@drawable/kj" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:longClickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:id="@id/b1m" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/b6" android:layout_below="@id/b1i">
+            <TextView android:textSize="12.0sp" android:textColor="@color/dd" android:gravity="center" android:layout_gravity="center" android:id="@id/b1n" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/b7" android:textColor="@color/df" android:id="@id/b1o" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/b1i" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/b1p" android:background="#fff9f9f9" android:clipChildren="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/b1h" android:layout_alignParentBottom="true">
+        <FrameLayout android:id="@id/b1q" android:background="@color/de" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <ImageButton android:id="@id/aba" android:background="@null" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginBottom="14.0dip" android:src="@drawable/dz" android:scaleType="center" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <com.tencent.mm.plugin.ipcall.ui.DialPad android:id="@id/b1r" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/aba" android:layout_below="@id/b1q" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

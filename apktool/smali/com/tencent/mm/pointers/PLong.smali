@@ -20,7 +20,7 @@
 .end method
 
 .method public constructor <init>(J)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 7

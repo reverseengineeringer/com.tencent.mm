@@ -30,12 +30,12 @@
 
     .prologue
     .line 39
-    sget-object v0, Lcom/tencent/mm/lan_cs/Server;->bwO:Lcom/tencent/mm/lan_cs/Server$a;
+    sget-object v0, Lcom/tencent/mm/lan_cs/Server;->boO:Lcom/tencent/mm/lan_cs/Server$a;
 
     if-eqz v0, :cond_0
 
     .line 40
-    sget-object v0, Lcom/tencent/mm/lan_cs/Server;->bwO:Lcom/tencent/mm/lan_cs/Server$a;
+    sget-object v0, Lcom/tencent/mm/lan_cs/Server;->boO:Lcom/tencent/mm/lan_cs/Server$a;
 
     invoke-interface {v0, p0, p1}, Lcom/tencent/mm/lan_cs/Server$a;->onConnect(Ljava/lang/String;I)V
 
@@ -49,14 +49,14 @@
 
     .prologue
     .line 44
-    sget-object v0, Lcom/tencent/mm/lan_cs/Server;->bwO:Lcom/tencent/mm/lan_cs/Server$a;
+    sget-object v0, Lcom/tencent/mm/lan_cs/Server;->boO:Lcom/tencent/mm/lan_cs/Server$a;
 
     if-eqz v0, :cond_0
 
     .line 45
-    sget-object v0, Lcom/tencent/mm/lan_cs/Server;->bwO:Lcom/tencent/mm/lan_cs/Server$a;
+    sget-object v0, Lcom/tencent/mm/lan_cs/Server;->boO:Lcom/tencent/mm/lan_cs/Server$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/lan_cs/Server$a;->ra()V
+    invoke-interface {v0}, Lcom/tencent/mm/lan_cs/Server$a;->qD()V
 
     .line 47
     :cond_0
@@ -68,12 +68,12 @@
 
     .prologue
     .line 34
-    sget-object v0, Lcom/tencent/mm/lan_cs/Server;->bwO:Lcom/tencent/mm/lan_cs/Server$a;
+    sget-object v0, Lcom/tencent/mm/lan_cs/Server;->boO:Lcom/tencent/mm/lan_cs/Server$a;
 
     if-eqz v0, :cond_0
 
     .line 35
-    sget-object v0, Lcom/tencent/mm/lan_cs/Server;->bwO:Lcom/tencent/mm/lan_cs/Server$a;
+    sget-object v0, Lcom/tencent/mm/lan_cs/Server;->boO:Lcom/tencent/mm/lan_cs/Server$a;
 
     invoke-interface {v0, p0, p1, p2}, Lcom/tencent/mm/lan_cs/Server$a;->onRecv(Ljava/lang/String;I[B)V
 

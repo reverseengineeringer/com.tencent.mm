@@ -1,29 +1,39 @@
 package com.tencent.mm.pluginsdk.model;
 
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.smtt.a.s;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.smtt.utils.s;
 
 final class t$a$1
   extends s
 {
+  public final void BF(String paramString)
+  {
+    v.i("TBSDownloadChecker.TbsLogClient", "TbsLogClient: " + paramString);
+  }
+  
+  public final void d(String paramString1, String paramString2)
+  {
+    v.d(paramString1, paramString2);
+  }
+  
   public final void e(String paramString1, String paramString2)
   {
-    u.e(paramString1, paramString2);
+    v.e(paramString1, paramString2);
   }
   
   public final void i(String paramString1, String paramString2)
   {
-    u.i(paramString1, paramString2);
+    v.i(paramString1, paramString2);
+  }
+  
+  public final void v(String paramString1, String paramString2)
+  {
+    v.v(paramString1, paramString2);
   }
   
   public final void w(String paramString1, String paramString2)
   {
-    u.w(paramString1, paramString2);
-  }
-  
-  public final void zJ(String paramString)
-  {
-    u.i("!44@y/WeowghBR5n652sfGgHORnKHXaK/NoiW8PTcQT9tlM=", "TbsLogClient: " + paramString);
+    v.w(paramString1, paramString2);
   }
 }
 

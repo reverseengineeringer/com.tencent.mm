@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/ChatroomContactUI;->Gb()V
+    value = Lcom/tencent/mm/ui/contact/ChatroomContactUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+.field final synthetic lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 168
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+    .line 170
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,136 +36,136 @@
 
 
 # virtual methods
-.method public final Gd()V
+.method public final GA()V
     .locals 0
 
     .prologue
-    .line 192
+    .line 194
     return-void
 .end method
 
-.method public final Ge()V
+.method public final GB()V
     .locals 0
 
     .prologue
-    .line 198
+    .line 200
     return-void
 .end method
 
-.method public final Gf()V
+.method public final GC()V
     .locals 0
 
     .prologue
-    .line 173
+    .line 175
     return-void
 .end method
 
-.method public final Gg()V
+.method public final GD()V
     .locals 0
 
     .prologue
-    .line 178
+    .line 180
     return-void
 .end method
 
-.method public final KR()V
+.method public final LD()V
     .locals 2
 
     .prologue
-    .line 202
-    const-string/jumbo v0, "!44@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2P4SCBJbIGwmU="
+    .line 204
+    const-string/jumbo v0, "MicroMsg.ChatroomContactUI"
 
     const-string/jumbo v1, "onVoiceSearchStart"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 203
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+    .line 205
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/ChatroomContactUI;->age()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/ChatroomContactUI;->aiI()V
 
-    .line 204
+    .line 206
     return-void
 .end method
 
-.method public final KS()V
+.method public final LE()V
     .locals 0
 
     .prologue
-    .line 210
+    .line 212
     return-void
 .end method
 
 .method public final a(Z[Ljava/lang/String;JI)V
-    .locals 4
+    .locals 5
 
     .prologue
-    .line 214
-    const-string/jumbo v0, "!44@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2P4SCBJbIGwmU="
+    .line 216
+    const-string/jumbo v0, "MicroMsg.ChatroomContactUI"
 
     const-string/jumbo v1, "onVoiceReturn"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 215
+    .line 217
     if-eqz p1, :cond_0
 
-    .line 216
+    .line 218
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const-class v2, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 217
+    .line 219
     const-string/jumbo v1, "VoiceSearchResultUI_Resultlist"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 218
+    .line 220
     const-string/jumbo v1, "VoiceSearchResultUI_VoiceId"
 
     invoke-virtual {v0, v1, p3, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 219
+    .line 221
     const-string/jumbo v1, "VoiceSearchResultUI_ShowType"
 
     invoke-virtual {v0, v1, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 220
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+    .line 222
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v1, v0}, Landroid/support/v7/app/ActionBarActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 229
+    .line 231
     :goto_0
     return-void
 
-    .line 222
+    .line 224
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const-class v2, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 223
+    .line 225
     const-string/jumbo v1, "VoiceSearchResultUI_Resultlist"
 
     const/4 v2, 0x0
@@ -174,16 +174,16 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 224
+    .line 226
     const-string/jumbo v1, "VoiceSearchResultUI_Error"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, v2, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v3, 0x7f0b0099
+    const v3, 0x7f08084d
 
     invoke-virtual {v2, v3}, Landroid/support/v7/app/ActionBarActivity;->getString(I)Ljava/lang/String;
 
@@ -191,44 +191,44 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 225
+    .line 227
     const-string/jumbo v1, "VoiceSearchResultUI_VoiceId"
 
     invoke-virtual {v0, v1, p3, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 226
+    .line 228
     const-string/jumbo v1, "VoiceSearchResultUI_ShowType"
 
     invoke-virtual {v0, v1, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 227
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+    .line 229
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v1, v0}, Landroid/support/v7/app/ActionBarActivity;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 .end method
 
-.method public final kE(Ljava/lang/String;)Z
+.method public final ln(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
-    .line 234
+    .line 236
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final kF(Ljava/lang/String;)V
+.method public final lo(Ljava/lang/String;)V
     .locals 4
 
     .prologue
-    .line 183
-    const-string/jumbo v0, "!44@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2P4SCBJbIGwmU="
+    .line 185
+    const-string/jumbo v0, "MicroMsg.ChatroomContactUI"
 
     const-string/jumbo v1, "onSearchBarChange %s"
 
@@ -240,18 +240,18 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 184
-    invoke-static {p1}, Lcom/tencent/mm/platformtools/t;->kx(Ljava/lang/String;)Ljava/lang/String;
+    .line 186
+    invoke-static {p1}, Lcom/tencent/mm/platformtools/s;->lh(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 185
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+    .line 187
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$7;->lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
     invoke-static {v1, v0}, Lcom/tencent/mm/ui/contact/ChatroomContactUI;->a(Lcom/tencent/mm/ui/contact/ChatroomContactUI;Ljava/lang/String;)V
 
-    .line 186
+    .line 188
     return-void
 .end method

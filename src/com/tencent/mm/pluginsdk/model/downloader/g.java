@@ -8,41 +8,39 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Environment;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-import com.tencent.mm.storage.z;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.File;
 
 final class g
   extends h
 {
-  private DownloadManager iCB = (DownloadManager)mContext.getSystemService("download");
-  private Context mContext = y.getContext();
+  private DownloadManager iZp = (DownloadManager)mContext.getSystemService("download");
+  private Context mContext = com.tencent.mm.sdk.platformtools.aa.getContext();
   
   public g(a parama)
   {
     super(parama);
   }
   
-  private e df(long paramLong)
+  private e dw(long paramLong)
   {
     e locale = new e();
     Object localObject = new DownloadManager.Query();
     ((DownloadManager.Query)localObject).setFilterById(new long[] { paramLong });
     try
     {
-      localObject = iCB.query((DownloadManager.Query)localObject);
+      localObject = iZp.query((DownloadManager.Query)localObject);
       if (localObject == null)
       {
-        u.e("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "query download status failed: cursor is null");
+        v.e("MicroMsg.FileDownloaderImpl23", "query download status failed: cursor is null");
         return locale;
       }
     }
     catch (Exception localException1)
     {
-      u.e("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "query downloadinfo from downloadmanager failed:%s, sysDownloadId:%d", new Object[] { localException1.toString(), Long.valueOf(paramLong) });
+      v.e("MicroMsg.FileDownloaderImpl23", "query downloadinfo from downloadmanager failed:%s, sysDownloadId:%d", new Object[] { localException1.toString(), Long.valueOf(paramLong) });
       return locale;
     }
     int i;
@@ -73,21 +71,21 @@ final class g
           if (k != -1)
           {
             String str = localException1.getString(k);
-            if (ay.kz(str)) {
+            if (be.kf(str)) {
               break;
             }
-            u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "get download uri: [%s]", new Object[] { str });
+            v.i("MicroMsg.FileDownloaderImpl23", "get download uri: [%s]", new Object[] { str });
             path = Uri.parse(str).getPath();
-            u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "get download path: [%s]", new Object[] { path });
+            v.i("MicroMsg.FileDownloaderImpl23", "get download path: [%s]", new Object[] { path });
           }
           if (m != -1) {
-            azd = localException1.getLong(m);
+            alf = localException1.getLong(m);
           }
           if (n != -1) {
-            aze = localException1.getLong(n);
+            alg = localException1.getLong(n);
           }
           localException1.close();
-          u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "querySysDownloadManager: id: %d, status: %d, url: %s, path: %s", new Object[] { Long.valueOf(paramLong), Integer.valueOf(status), url, path });
+          v.i("MicroMsg.FileDownloaderImpl23", "querySysDownloadManager: id: %d, status: %d, url: %s, path: %s", new Object[] { Long.valueOf(paramLong), Integer.valueOf(status), url, path });
           return locale;
           status = 1;
         }
@@ -97,7 +95,7 @@ final class g
     {
       for (;;)
       {
-        u.e("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "query download info failed: [%s]", new Object[] { localException2.toString() });
+        v.e("MicroMsg.FileDownloaderImpl23", "query download info failed: [%s]", new Object[] { localException2.toString() });
         status = 4;
         continue;
         status = 4;
@@ -106,138 +104,112 @@ final class g
         continue;
         status = 3;
         continue;
-        u.e("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "get download uri failed");
+        v.e("MicroMsg.FileDownloaderImpl23", "get download uri failed");
       }
     }
   }
   
   public final long a(final d paramd)
   {
-    if ((paramd == null) || (ay.kz(iCq)))
+    if ((paramd == null) || (be.kf(iZe)))
     {
-      u.e("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "Invalid Request");
+      v.e("MicroMsg.FileDownloaderImpl23", "Invalid Request");
       return -1L;
     }
-    String str = iCq;
+    String str = iZe;
     final Object localObject1 = "";
-    Object localObject2 = b.Aa(str);
+    Object localObject2 = b.BZ(str);
     if (localObject2 != null)
     {
-      localObject1 = df(field_sysDownloadId);
+      localObject1 = dw(field_sysDownloadId);
       if (status == 1) {
         return id;
       }
       localObject1 = field_filePath;
     }
     localObject2 = com.tencent.mm.compatible.util.g.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath();
-    if (!ay.kz((String)localObject2))
+    if (!be.kf((String)localObject2))
     {
       localObject2 = new File((String)localObject2);
       if (!((File)localObject2).exists()) {
-        u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "download folder not exist, make new one : [%b]", new Object[] { Boolean.valueOf(((File)localObject2).mkdir()) });
+        v.i("MicroMsg.FileDownloaderImpl23", "download folder not exist, make new one : [%b]", new Object[] { Boolean.valueOf(((File)localObject2).mkdir()) });
       }
     }
-    Ah((String)localObject1);
-    b.zY(str);
-    b.zZ(ehh);
+    Ch((String)localObject1);
+    b.BX(str);
+    b.BY(ekS);
     localObject1 = f.b(paramd);
     field_downloadId = System.currentTimeMillis();
     field_status = 0;
     field_downloaderType = 1;
-    str = bn(str);
+    str = ko(str);
     field_filePath = (com.tencent.mm.compatible.util.g.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath() + "/" + str);
-    b.a((z)localObject1);
-    ah.tv().r(new Runnable()
+    b.c((com.tencent.mm.storage.aa)localObject1);
+    ah.tw().t(new Runnable()
     {
       public final void run()
       {
-        if (paramdiCv)
+        if (paramdiZj)
         {
-          String str = f.Ag(localObject1field_downloadUrl);
+          String str = f.Cg(localObject1field_downloadUrl);
           localObject1field_md5 = str;
         }
-        long l = c(localObject1);
+        long l = e(localObject1);
         if (l > 0L)
         {
           localObject1field_sysDownloadId = l;
           localObject1field_status = 1;
-          b.b(localObject1);
-          iCo.k(localObject1field_downloadId, localObject1field_filePath);
-          c.aQc();
-          if (c.da(localObject1field_downloadId))
+          b.d(localObject1);
+          iYY.m(localObject1field_downloadId, localObject1field_filePath);
+          c.aUL();
+          if (c.dr(localObject1field_downloadId))
           {
-            c.aQc();
+            c.aUL();
             c.n(localObject1field_downloadId, l);
           }
-          u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "addDownloadTask: id: %d, url: %s, path: %s", new Object[] { Long.valueOf(localObject1field_downloadId), localObject1field_downloadUrl, localObject1field_filePath });
+          v.i("MicroMsg.FileDownloaderImpl23", "addDownloadTask: id: %d, url: %s, path: %s", new Object[] { Long.valueOf(localObject1field_downloadId), localObject1field_downloadUrl, localObject1field_filePath });
           return;
         }
         localObject1field_status = 4;
-        b.b(localObject1);
-        iCo.cY(localObject1field_downloadId);
-        u.e("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "addDownloadTask Failed: Invalid downloadId");
+        b.d(localObject1);
+        iYY.dp(localObject1field_downloadId);
+        v.e("MicroMsg.FileDownloaderImpl23", "addDownloadTask Failed: Invalid downloadId");
       }
     });
     return field_downloadId;
   }
   
-  final long c(z paramz)
+  public final int cV(long paramLong)
   {
-    try
+    c.aUL();
+    if (c.dr(paramLong))
     {
-      DownloadManager.Request localRequest = new DownloadManager.Request(Uri.parse(field_downloadUrl));
-      localRequest.setAllowedNetworkTypes(3);
-      localRequest.setShowRunningNotification(field_showNotification);
-      localRequest.setVisibleInDownloadsUi(field_showNotification);
-      if (!ay.kz(field_fileName)) {
-        localRequest.setTitle(field_fileName);
-      }
-      localRequest.setDestinationUri(Uri.fromFile(new File(field_filePath)));
-      long l = iCB.enqueue(localRequest);
-      if (l > 0L) {
-        return l;
-      }
-      u.e("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "addToSysDownloadManager Failed: Invalid downloadId");
-      return -1L;
+      c.aUL();
+      paramLong = c.dt(paramLong);
+      return iZp.remove(new long[] { paramLong });
     }
-    catch (Exception localException)
+    com.tencent.mm.storage.aa localaa = b.dq(paramLong);
+    if (localaa == null)
     {
-      u.e("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "Add download task failed: %s, url: %s", new Object[] { localException.toString(), field_downloadUrl });
-    }
-    return -1L;
-  }
-  
-  public final int cG(long paramLong)
-  {
-    c.aQc();
-    if (c.da(paramLong))
-    {
-      c.aQc();
-      paramLong = c.dc(paramLong);
-      return iCB.remove(new long[] { paramLong });
-    }
-    z localz = b.cZ(paramLong);
-    if (localz == null)
-    {
-      u.e("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "Invalid id");
+      v.e("MicroMsg.FileDownloaderImpl23", "Invalid id");
       return 0;
     }
     for (;;)
     {
       try
       {
-        int i = iCB.remove(new long[] { field_sysDownloadId });
+        int i = iZp.remove(new long[] { field_sysDownloadId });
       }
       catch (Exception localException1)
       {
         try
         {
-          u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "removeDownloadTask: id: %d", new Object[] { Long.valueOf(paramLong) });
-          com.tencent.mm.loader.stub.b.deleteFile(field_filePath);
-          u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "removeDownloadTask: path: %s", new Object[] { field_filePath });
+          v.i("MicroMsg.FileDownloaderImpl23", "removeDownloadTask: id: %d", new Object[] { Long.valueOf(paramLong) });
+          com.tencent.mm.a.e.deleteFile(field_filePath);
+          v.i("MicroMsg.FileDownloaderImpl23", "removeDownloadTask: path: %s", new Object[] { field_filePath });
           field_status = 5;
-          b.b(localz);
-          iCo.cX(paramLong);
+          b.d(localaa);
+          iYY.jdMethod_do(paramLong);
           return i;
         }
         catch (Exception localException2)
@@ -250,21 +222,21 @@ final class g
       tmp158_155[0] = Long.valueOf(paramLong);
       Object[] tmp165_158 = tmp158_155;
       tmp165_158[1] = localException1.toString();
-      u.e("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "remove task error:[%d], [%s]", tmp165_158);
+      v.e("MicroMsg.FileDownloaderImpl23", "remove task error:[%d], [%s]", tmp165_158);
     }
   }
   
-  public final e cH(long paramLong)
+  public final e cW(long paramLong)
   {
-    c.aQc();
-    if (c.da(paramLong))
+    c.aUL();
+    if (c.dr(paramLong))
     {
-      c.aQc();
-      localObject = df(c.dc(paramLong));
+      c.aUL();
+      localObject = dw(c.dt(paramLong));
       id = paramLong;
       return (e)localObject;
     }
-    Object localObject = b.cZ(paramLong);
+    Object localObject = b.dq(paramLong);
     if (localObject == null) {
       return new e();
     }
@@ -275,20 +247,20 @@ final class g
       url = field_downloadUrl;
       status = field_status;
       path = field_filePath;
-      aut = field_md5;
+      agg = field_md5;
       return locale;
     }
-    e locale = df(field_sysDownloadId);
+    e locale = dw(field_sysDownloadId);
     id = paramLong;
-    aut = field_md5;
+    agg = field_md5;
     return locale;
   }
   
-  public final boolean cI(long paramLong)
+  public final boolean cX(long paramLong)
   {
-    e locale = cH(paramLong);
+    e locale = cW(paramLong);
     if (locale == null) {
-      u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "pauseDownloadTask: %d, record not found", new Object[] { Long.valueOf(paramLong) });
+      v.i("MicroMsg.FileDownloaderImpl23", "pauseDownloadTask: %d, record not found", new Object[] { Long.valueOf(paramLong) });
     }
     int i;
     do
@@ -296,43 +268,69 @@ final class g
       return false;
       if (status != 1)
       {
-        u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "pauseDownloadTask: %d, Task is not running", new Object[] { Long.valueOf(paramLong) });
+        v.i("MicroMsg.FileDownloaderImpl23", "pauseDownloadTask: %d, Task is not running", new Object[] { Long.valueOf(paramLong) });
         return true;
       }
-      i = cG(paramLong);
-      u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "pauseDownloadTask: %d, Task removed: %d", new Object[] { Long.valueOf(paramLong), Integer.valueOf(i) });
+      i = cV(paramLong);
+      v.i("MicroMsg.FileDownloaderImpl23", "pauseDownloadTask: %d, Task removed: %d", new Object[] { Long.valueOf(paramLong), Integer.valueOf(i) });
     } while (i <= 0);
     return true;
   }
   
-  public final boolean cJ(long paramLong)
+  public final boolean cY(long paramLong)
   {
-    z localz = b.cZ(paramLong);
-    if (localz == null)
+    com.tencent.mm.storage.aa localaa = b.dq(paramLong);
+    if (localaa == null)
     {
-      u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "resumeDownloadTask: %d, record not found", new Object[] { Long.valueOf(paramLong) });
+      v.i("MicroMsg.FileDownloaderImpl23", "resumeDownloadTask: %d, record not found", new Object[] { Long.valueOf(paramLong) });
       return false;
     }
     if (field_downloaderType != 1)
     {
-      u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "resumeDownloadTask: %d, downloader not matched", new Object[] { Long.valueOf(paramLong) });
+      v.i("MicroMsg.FileDownloaderImpl23", "resumeDownloadTask: %d, downloader not matched", new Object[] { Long.valueOf(paramLong) });
       return false;
     }
     if (field_status != 5)
     {
-      u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "resumeDownloadTask: %d, not in paused status", new Object[] { Long.valueOf(paramLong) });
+      v.i("MicroMsg.FileDownloaderImpl23", "resumeDownloadTask: %d, not in paused status", new Object[] { Long.valueOf(paramLong) });
       return false;
     }
-    paramLong = c(localz);
+    paramLong = e(localaa);
     if (paramLong > 0L)
     {
       field_sysDownloadId = paramLong;
       field_status = 1;
-      b.b(localz);
+      b.d(localaa);
       return true;
     }
-    u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXM+TN3Gf0zADQ=", "resumeDownloadTask: %d, restart failed");
+    v.i("MicroMsg.FileDownloaderImpl23", "resumeDownloadTask: %d, restart failed");
     return false;
+  }
+  
+  final long e(com.tencent.mm.storage.aa paramaa)
+  {
+    try
+    {
+      DownloadManager.Request localRequest = new DownloadManager.Request(Uri.parse(field_downloadUrl));
+      localRequest.setAllowedNetworkTypes(3);
+      localRequest.setShowRunningNotification(field_showNotification);
+      localRequest.setVisibleInDownloadsUi(field_showNotification);
+      if (!be.kf(field_fileName)) {
+        localRequest.setTitle(field_fileName);
+      }
+      localRequest.setDestinationUri(Uri.fromFile(new File(field_filePath)));
+      long l = iZp.enqueue(localRequest);
+      if (l > 0L) {
+        return l;
+      }
+      v.e("MicroMsg.FileDownloaderImpl23", "addToSysDownloadManager Failed: Invalid downloadId");
+      return -1L;
+    }
+    catch (Exception localException)
+    {
+      v.e("MicroMsg.FileDownloaderImpl23", "Add download task failed: %s, url: %s", new Object[] { localException.toString(), field_downloadUrl });
+    }
+    return -1L;
   }
 }
 

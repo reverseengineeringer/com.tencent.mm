@@ -13,15 +13,15 @@ final class n$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (kqi != null)
+    if (kPn != null)
     {
-      if (kqj != null) {
-        kqj.run();
+      if (kPo != null) {
+        kPo.run();
       }
-      d.aW(amX);
-      amX.finish();
-      amX.startActivity(kqi);
-      b.w(amX, kqi);
+      d.aS(ZM);
+      ZM.finish();
+      ZM.startActivity(kPn);
+      b.w(ZM, kPn);
     }
   }
 }

@@ -1,110 +1,112 @@
 package ct;
 
-import android.os.Bundle;
-import org.json.JSONException;
-import org.json.JSONObject;
+import java.io.File;
+import java.io.FilenameFilter;
+import java.util.concurrent.CountDownLatch;
 
-final class cs
+public final class cs
 {
-  public static final cs a = new cs();
-  public String b;
-  public String c;
-  public String d;
-  public String e;
-  public String f;
-  public String g;
-  public String h;
-  public String i;
-  public String j;
-  public String k;
-  public final Bundle l = new Bundle();
-  
-  cs() {}
-  
-  private cs(cs paramcs)
+  private static final FilenameFilter a = new FilenameFilter()
   {
-    if (l.size() > 0)
+    public final boolean accept(File paramAnonymousFile, String paramAnonymousString)
     {
-      l.putAll(l);
-      return;
+      return paramAnonymousString.endsWith(".stacktrace");
     }
-    b = b;
-    c = c;
-    d = d;
-    e = e;
-    f = f;
-    g = g;
-    h = h;
-    i = i;
-    j = j;
-    k = k;
-  }
+  };
+  private static boolean b;
   
-  public cs(JSONObject paramJSONObject)
+  public static CountDownLatch a(bg parambg, final String paramString1, final String paramString2, final String paramString3)
   {
     try
     {
-      if (paramJSONObject.has("admin_level_1"))
+      final CountDownLatch localCountDownLatch = new CountDownLatch(1);
+      new Thread()
       {
-        String str1 = paramJSONObject.getString("nation");
-        String str2 = paramJSONObject.getString("admin_level_1");
-        String str3 = paramJSONObject.getString("admin_level_2");
-        String str4 = paramJSONObject.getString("admin_level_3");
-        String str5 = paramJSONObject.getString("locality");
-        String str6 = paramJSONObject.getString("sublocality");
-        paramJSONObject = paramJSONObject.getString("route");
-        l.putString("nation", str1);
-        l.putString("admin_level_1", str2);
-        l.putString("admin_level_2", str3);
-        l.putString("admin_level_3", str4);
-        l.putString("locality", str5);
-        l.putString("sublocality", str6);
-        l.putString("route", paramJSONObject);
-        return;
-      }
-      c = paramJSONObject.getString("name");
-      d = paramJSONObject.getString("code");
-      b = paramJSONObject.getString("nation");
-      e = paramJSONObject.getString("province");
-      f = paramJSONObject.getString("city");
-      g = paramJSONObject.getString("district");
-      h = paramJSONObject.getString("town");
-      i = paramJSONObject.getString("village");
-      j = paramJSONObject.getString("street");
-      k = paramJSONObject.getString("street_no");
-      return;
+        /* Error */
+        public final void run()
+        {
+          // Byte code:
+          //   0: invokestatic 40	ct/cs:a	()Z
+          //   3: ifne +57 -> 60
+          //   6: iconst_1
+          //   7: invokestatic 43	ct/cs:a	(Z)Z
+          //   10: pop
+          //   11: aload_0
+          //   12: getfield 20	ct/cs$2:a	Lct/bg;
+          //   15: aload_0
+          //   16: getfield 22	ct/cs$2:b	Ljava/lang/String;
+          //   19: new 45	java/io/File
+          //   22: dup
+          //   23: aload_0
+          //   24: getfield 24	ct/cs$2:c	Ljava/lang/String;
+          //   27: invokespecial 48	java/io/File:<init>	(Ljava/lang/String;)V
+          //   30: invokevirtual 52	java/io/File:getParentFile	()Ljava/io/File;
+          //   33: invokestatic 55	ct/cs:a	(Lct/bg;Ljava/lang/String;Ljava/io/File;)V
+          //   36: aload_0
+          //   37: getfield 20	ct/cs$2:a	Lct/bg;
+          //   40: aload_0
+          //   41: getfield 22	ct/cs$2:b	Ljava/lang/String;
+          //   44: aload_0
+          //   45: getfield 26	ct/cs$2:d	Ljava/lang/String;
+          //   48: invokevirtual 61	java/lang/String:getBytes	()[B
+          //   51: invokevirtual 66	ct/bg:a	(Ljava/lang/String;[B)Ljava/lang/String;
+          //   54: pop
+          //   55: iconst_0
+          //   56: invokestatic 43	ct/cs:a	(Z)Z
+          //   59: pop
+          //   60: aload_0
+          //   61: getfield 28	ct/cs$2:e	Ljava/util/concurrent/CountDownLatch;
+          //   64: invokevirtual 71	java/util/concurrent/CountDownLatch:countDown	()V
+          //   67: return
+          //   68: astore_1
+          //   69: new 73	java/io/BufferedWriter
+          //   72: dup
+          //   73: new 75	java/io/FileWriter
+          //   76: dup
+          //   77: aload_0
+          //   78: getfield 24	ct/cs$2:c	Ljava/lang/String;
+          //   81: invokespecial 76	java/io/FileWriter:<init>	(Ljava/lang/String;)V
+          //   84: invokespecial 79	java/io/BufferedWriter:<init>	(Ljava/io/Writer;)V
+          //   87: astore_1
+          //   88: aload_1
+          //   89: aload_0
+          //   90: getfield 26	ct/cs$2:d	Ljava/lang/String;
+          //   93: invokevirtual 82	java/io/BufferedWriter:write	(Ljava/lang/String;)V
+          //   96: aload_1
+          //   97: invokevirtual 85	java/io/BufferedWriter:flush	()V
+          //   100: aload_1
+          //   101: invokevirtual 88	java/io/BufferedWriter:close	()V
+          //   104: goto -49 -> 55
+          //   107: astore_2
+          //   108: aload_1
+          //   109: invokevirtual 88	java/io/BufferedWriter:close	()V
+          //   112: aload_2
+          //   113: athrow
+          //   114: astore_1
+          //   115: goto -60 -> 55
+          // Local variable table:
+          //   start	length	slot	name	signature
+          //   0	118	0	this	2
+          //   68	1	1	localException	Exception
+          //   87	22	1	localBufferedWriter	java.io.BufferedWriter
+          //   114	1	1	localIOException	java.io.IOException
+          //   107	6	2	localObject	Object
+          // Exception table:
+          //   from	to	target	type
+          //   36	55	68	java/lang/Exception
+          //   88	100	107	finally
+          //   69	88	114	java/io/IOException
+          //   100	104	114	java/io/IOException
+          //   108	114	114	java/io/IOException
+        }
+      }.start();
+      return localCountDownLatch;
     }
-    catch (JSONException paramJSONObject)
+    finally
     {
-      b.a.a("TencentJson", "json error", paramJSONObject);
-      throw paramJSONObject;
+      parambg = finally;
+      throw parambg;
     }
-  }
-  
-  public static cs a(cs paramcs)
-  {
-    if (paramcs == null) {
-      return null;
-    }
-    return new cs(paramcs);
-  }
-  
-  public final String toString()
-  {
-    StringBuilder localStringBuilder = new StringBuilder("SubnationData{");
-    localStringBuilder.append("name=").append(c).append(",");
-    localStringBuilder.append("code=").append(d).append(",");
-    localStringBuilder.append("nation=").append(b).append(",");
-    localStringBuilder.append("province=").append(e).append(",");
-    localStringBuilder.append("city=").append(f).append(",");
-    localStringBuilder.append("district=").append(g).append(",");
-    localStringBuilder.append("town=").append(h).append(",");
-    localStringBuilder.append("village=").append(i).append(",");
-    localStringBuilder.append("street=").append(j).append(",");
-    localStringBuilder.append("street_no=").append(k).append(",");
-    localStringBuilder.append("bundle").append(l).append(",");
-    localStringBuilder.append("}");
-    return localStringBuilder.toString();
   }
 }
 

@@ -1,15 +1,15 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class d$2
-  implements af.a
+  implements ah.a
 {
   d$2(d paramd) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    d.n(bmw);
+    d.n(bac);
     return false;
   }
 }

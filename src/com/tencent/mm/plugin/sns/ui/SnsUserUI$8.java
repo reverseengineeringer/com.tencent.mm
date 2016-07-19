@@ -1,14 +1,9 @@
 package com.tencent.mm.plugin.sns.ui;
 
 final class SnsUserUI$8
-  implements Runnable
+  implements ao.c
 {
   SnsUserUI$8(SnsUserUI paramSnsUserUI) {}
-  
-  public final void run()
-  {
-    hme.aBq();
-  }
 }
 
 /* Location:

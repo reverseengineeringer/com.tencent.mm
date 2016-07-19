@@ -16,36 +16,36 @@ public final class c
   extends BaseAdapter
   implements Filterable
 {
-  private List fHl;
-  private ArrayList fHn;
-  private a krL;
-  private String krM;
+  private List<String> fQl;
+  private ArrayList<String> fQn;
+  private a kQT;
+  private String kQU;
   private Context mContext;
   private final Object mLock = new Object();
   
   public c(Context paramContext, String[] paramArrayOfString, String paramString)
   {
     mContext = paramContext;
-    fHl = Arrays.asList(paramArrayOfString);
-    krM = paramString;
+    fQl = Arrays.asList(paramArrayOfString);
+    kQU = paramString;
   }
   
-  private String gB(int paramInt)
+  private String hy(int paramInt)
   {
-    return (String)fHl.get(paramInt);
+    return (String)fQl.get(paramInt);
   }
   
   public final int getCount()
   {
-    return fHl.size();
+    return fQl.size();
   }
   
   public final Filter getFilter()
   {
-    if (krL == null) {
-      krL = new a((byte)0);
+    if (kQT == null) {
+      kQT = new a((byte)0);
     }
-    return krL;
+    return kQT;
   }
   
   public final long getItemId(int paramInt)
@@ -57,16 +57,16 @@ public final class c
   {
     if (paramView == null)
     {
-      paramView = View.inflate(mContext, 2131362460, null);
+      paramView = View.inflate(mContext, 2130903110, null);
       paramViewGroup = new b();
-      cHA = ((TextView)paramView.findViewById(2131167145));
+      cEE = ((TextView)paramView.findViewById(2131755372));
       paramView.setTag(paramViewGroup);
     }
     for (;;)
     {
-      String str = gB(paramInt);
-      cHA.setText(str);
-      paramView.setBackgroundResource(2130970354);
+      String str = hy(paramInt);
+      cEE.setText(str);
+      paramView.setBackgroundResource(2130838071);
       return paramView;
       paramViewGroup = (b)paramView.getTag();
     }
@@ -147,7 +147,7 @@ public final class c
   
   static final class b
   {
-    public TextView cHA;
+    public TextView cEE;
   }
 }
 

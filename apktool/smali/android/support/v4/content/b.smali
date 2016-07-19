@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/v4/content/b$d;,
         Landroid/support/v4/content/b$c;,
         Landroid/support/v4/content/b$b;,
         Landroid/support/v4/content/b$a;
@@ -15,7 +14,7 @@
 
 
 # static fields
-.field private static final ei:Landroid/support/v4/content/b$a;
+.field private static final ey:Landroid/support/v4/content/b$a;
 
 
 # direct methods
@@ -32,38 +31,23 @@
     if-lt v0, v1, :cond_0
 
     .line 87
-    new-instance v0, Landroid/support/v4/content/b$d;
-
-    invoke-direct {v0}, Landroid/support/v4/content/b$d;-><init>()V
-
-    sput-object v0, Landroid/support/v4/content/b;->ei:Landroid/support/v4/content/b$a;
-
-    .line 93
-    :goto_0
-    return-void
-
-    .line 88
-    :cond_0
-    const/16 v1, 0xb
-
-    if-lt v0, v1, :cond_1
-
-    .line 89
     new-instance v0, Landroid/support/v4/content/b$c;
 
     invoke-direct {v0}, Landroid/support/v4/content/b$c;-><init>()V
 
-    sput-object v0, Landroid/support/v4/content/b;->ei:Landroid/support/v4/content/b$a;
-
-    goto :goto_0
+    sput-object v0, Landroid/support/v4/content/b;->ey:Landroid/support/v4/content/b$a;
 
     .line 91
-    :cond_1
+    :goto_0
+    return-void
+
+    .line 89
+    :cond_0
     new-instance v0, Landroid/support/v4/content/b$b;
 
     invoke-direct {v0}, Landroid/support/v4/content/b$b;-><init>()V
 
-    sput-object v0, Landroid/support/v4/content/b;->ei:Landroid/support/v4/content/b$a;
+    sput-object v0, Landroid/support/v4/content/b;->ey:Landroid/support/v4/content/b$a;
 
     goto :goto_0
 .end method
@@ -72,8 +56,8 @@
     .locals 1
 
     .prologue
-    .line 221
-    sget-object v0, Landroid/support/v4/content/b;->ei:Landroid/support/v4/content/b$a;
+    .line 219
+    sget-object v0, Landroid/support/v4/content/b;->ey:Landroid/support/v4/content/b$a;
 
     invoke-interface {v0, p0}, Landroid/support/v4/content/b$a;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
 

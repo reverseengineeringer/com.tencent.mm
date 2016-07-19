@@ -33,7 +33,6 @@
 
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteProgram;->EMPTY_STRING_ARRAY:[Ljava/lang/String;
 
-    .line 30
     return-void
 .end method
 
@@ -45,7 +44,7 @@
 
     const/4 v1, 0x0
 
-    .line 40
+    .line 41
     invoke-direct {p0}, Lcom/tencent/kingkong/database/SQLiteClosable;-><init>()V
 
     .line 42
@@ -84,12 +83,10 @@
 
     iget-object v4, p0, Lcom/tencent/kingkong/database/SQLiteProgram;->mSql:Ljava/lang/String;
 
-    .line 59
     invoke-virtual {p1, v0}, Lcom/tencent/kingkong/database/SQLiteDatabase;->getThreadDefaultConnectionFlags(Z)I
 
     move-result v0
 
-    .line 58
     invoke-virtual {v3, v4, v0, p4, v2}, Lcom/tencent/kingkong/database/SQLiteSession;->prepare(Ljava/lang/String;ILcom/tencent/kingkong/support/CancellationSignal;Lcom/tencent/kingkong/database/SQLiteStatementInfo;)V
 
     .line 61
@@ -126,7 +123,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 69
     array-length v2, p3
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -139,7 +135,6 @@
 
     move-result-object v1
 
-    .line 70
     iget v2, p0, Lcom/tencent/kingkong/database/SQLiteProgram;->mNumParameters:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -156,7 +151,6 @@
 
     move-result-object v1
 
-    .line 68
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
@@ -247,7 +241,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 213
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -258,7 +251,6 @@
 
     move-result-object v1
 
-    .line 214
     iget v2, p0, Lcom/tencent/kingkong/database/SQLiteProgram;->mNumParameters:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -275,7 +267,6 @@
 
     move-result-object v1
 
-    .line 212
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
@@ -305,14 +296,9 @@
     array-length v0, p1
 
     :goto_0
-    if-nez v0, :cond_1
-
-    .line 203
-    :cond_0
-    return-void
+    if-eqz v0, :cond_0
 
     .line 200
-    :cond_1
     add-int/lit8 v1, v0, -0x1
 
     aget-object v1, p1, v1
@@ -323,6 +309,10 @@
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
+
+    .line 203
+    :cond_0
+    return-void
 .end method
 
 .method public bindBlob(I[B)V
@@ -368,7 +358,7 @@
 .end method
 
 .method public bindDouble(ID)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 152
@@ -383,7 +373,7 @@
 .end method
 
 .method public bindLong(IJ)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 141

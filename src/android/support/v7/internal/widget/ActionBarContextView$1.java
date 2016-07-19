@@ -11,7 +11,7 @@ final class ActionBarContextView$1
   
   public final void onClick(View paramView)
   {
-    ny.finish();
+    nO.finish();
   }
 }
 

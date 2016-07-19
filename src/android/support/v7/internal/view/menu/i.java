@@ -15,12 +15,12 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 class i
-  extends c
+  extends c<MenuItem>
   implements android.support.v4.a.a.b
 {
-  private final boolean mw;
-  private boolean mx;
-  MenuItem my;
+  private final boolean mM;
+  private boolean mN;
+  MenuItem mO;
   
   i(MenuItem paramMenuItem)
   {
@@ -30,14 +30,14 @@ class i
   i(MenuItem paramMenuItem, boolean paramBoolean)
   {
     super(paramMenuItem);
-    my = paramMenuItem;
-    mx = paramMenuItem.isVisible();
-    mw = paramBoolean;
+    mO = paramMenuItem;
+    mN = paramMenuItem.isVisible();
+    mM = paramBoolean;
   }
   
   public final android.support.v4.a.a.b a(android.support.v4.view.d paramd)
   {
-    MenuItem localMenuItem = my;
+    MenuItem localMenuItem = mO;
     if (paramd != null) {}
     for (paramd = b(paramd);; paramd = null)
     {
@@ -48,7 +48,7 @@ class i
   
   public final android.support.v4.a.a.b a(g.e parame)
   {
-    MenuItem localMenuItem = my;
+    MenuItem localMenuItem = mO;
     if (parame != null) {}
     for (parame = new c(parame);; parame = null)
     {
@@ -64,126 +64,126 @@ class i
   
   final boolean bG()
   {
-    if (mx) {
-      my.getActionProvider();
+    if (mN) {
+      mO.getActionProvider();
     }
     return false;
   }
   
   public boolean collapseActionView()
   {
-    return my.collapseActionView();
+    return mO.collapseActionView();
   }
   
   public boolean expandActionView()
   {
-    return my.expandActionView();
+    return mO.expandActionView();
   }
   
   public ActionProvider getActionProvider()
   {
-    return my.getActionProvider();
+    return mO.getActionProvider();
   }
   
   public View getActionView()
   {
-    View localView2 = my.getActionView();
+    View localView2 = mO.getActionView();
     View localView1 = localView2;
     if ((localView2 instanceof b)) {
-      localView1 = (View)mD;
+      localView1 = (View)mT;
     }
     return localView1;
   }
   
   public char getAlphabeticShortcut()
   {
-    return my.getAlphabeticShortcut();
+    return mO.getAlphabeticShortcut();
   }
   
   public int getGroupId()
   {
-    return my.getGroupId();
+    return mO.getGroupId();
   }
   
   public Drawable getIcon()
   {
-    return my.getIcon();
+    return mO.getIcon();
   }
   
   public Intent getIntent()
   {
-    return my.getIntent();
+    return mO.getIntent();
   }
   
   public int getItemId()
   {
-    return my.getItemId();
+    return mO.getItemId();
   }
   
   public ContextMenu.ContextMenuInfo getMenuInfo()
   {
-    return my.getMenuInfo();
+    return mO.getMenuInfo();
   }
   
   public char getNumericShortcut()
   {
-    return my.getNumericShortcut();
+    return mO.getNumericShortcut();
   }
   
   public int getOrder()
   {
-    return my.getOrder();
+    return mO.getOrder();
   }
   
   public SubMenu getSubMenu()
   {
-    return a(my.getSubMenu());
+    return a(mO.getSubMenu());
   }
   
   public CharSequence getTitle()
   {
-    return my.getTitle();
+    return mO.getTitle();
   }
   
   public CharSequence getTitleCondensed()
   {
-    return my.getTitleCondensed();
+    return mO.getTitleCondensed();
   }
   
   public boolean hasSubMenu()
   {
-    return my.hasSubMenu();
+    return mO.hasSubMenu();
   }
   
   public boolean isActionViewExpanded()
   {
-    return my.isActionViewExpanded();
+    return mO.isActionViewExpanded();
   }
   
   public boolean isCheckable()
   {
-    return my.isCheckable();
+    return mO.isCheckable();
   }
   
   public boolean isChecked()
   {
-    return my.isChecked();
+    return mO.isChecked();
   }
   
   public boolean isEnabled()
   {
-    return my.isEnabled();
+    return mO.isEnabled();
   }
   
   public boolean isVisible()
   {
-    return my.isVisible();
+    return mO.isVisible();
   }
   
   public MenuItem setActionProvider(ActionProvider paramActionProvider)
   {
-    my.setActionProvider(paramActionProvider);
-    if ((paramActionProvider != null) && (mw)) {
+    mO.setActionProvider(paramActionProvider);
+    if ((paramActionProvider != null) && (mM)) {
       bG();
     }
     return this;
@@ -191,10 +191,10 @@ class i
   
   public MenuItem setActionView(int paramInt)
   {
-    my.setActionView(paramInt);
-    View localView = my.getActionView();
+    mO.setActionView(paramInt);
+    View localView = mO.getActionView();
     if ((localView instanceof android.support.v7.a.b)) {
-      my.setActionView(new b(localView));
+      mO.setActionView(new b(localView));
     }
     return this;
   }
@@ -205,67 +205,67 @@ class i
     if ((paramView instanceof android.support.v7.a.b)) {
       localObject = new b(paramView);
     }
-    my.setActionView((View)localObject);
+    mO.setActionView((View)localObject);
     return this;
   }
   
   public MenuItem setAlphabeticShortcut(char paramChar)
   {
-    my.setAlphabeticShortcut(paramChar);
+    mO.setAlphabeticShortcut(paramChar);
     return this;
   }
   
   public MenuItem setCheckable(boolean paramBoolean)
   {
-    my.setCheckable(paramBoolean);
+    mO.setCheckable(paramBoolean);
     return this;
   }
   
   public MenuItem setChecked(boolean paramBoolean)
   {
-    my.setChecked(paramBoolean);
+    mO.setChecked(paramBoolean);
     return this;
   }
   
   public MenuItem setEnabled(boolean paramBoolean)
   {
-    my.setEnabled(paramBoolean);
+    mO.setEnabled(paramBoolean);
     return this;
   }
   
   public MenuItem setIcon(int paramInt)
   {
-    my.setIcon(paramInt);
+    mO.setIcon(paramInt);
     return this;
   }
   
   public MenuItem setIcon(Drawable paramDrawable)
   {
-    my.setIcon(paramDrawable);
+    mO.setIcon(paramDrawable);
     return this;
   }
   
   public MenuItem setIntent(Intent paramIntent)
   {
-    my.setIntent(paramIntent);
+    mO.setIntent(paramIntent);
     return this;
   }
   
   public MenuItem setNumericShortcut(char paramChar)
   {
-    my.setNumericShortcut(paramChar);
+    mO.setNumericShortcut(paramChar);
     return this;
   }
   
   public MenuItem setOnActionExpandListener(MenuItem.OnActionExpandListener paramOnActionExpandListener)
   {
-    my.setOnActionExpandListener(paramOnActionExpandListener);
+    mO.setOnActionExpandListener(paramOnActionExpandListener);
     return this;
   }
   
   public MenuItem setOnMenuItemClickListener(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
   {
-    MenuItem localMenuItem = my;
+    MenuItem localMenuItem = mO;
     if (paramOnMenuItemClickListener != null) {}
     for (paramOnMenuItemClickListener = new d(paramOnMenuItemClickListener);; paramOnMenuItemClickListener = null)
     {
@@ -276,60 +276,60 @@ class i
   
   public MenuItem setShortcut(char paramChar1, char paramChar2)
   {
-    my.setShortcut(paramChar1, paramChar2);
+    mO.setShortcut(paramChar1, paramChar2);
     return this;
   }
   
   public void setShowAsAction(int paramInt)
   {
-    my.setShowAsAction(paramInt);
+    mO.setShowAsAction(paramInt);
   }
   
   public MenuItem setShowAsActionFlags(int paramInt)
   {
-    my.setShowAsActionFlags(paramInt);
+    mO.setShowAsActionFlags(paramInt);
     return this;
   }
   
   public MenuItem setTitle(int paramInt)
   {
-    my.setTitle(paramInt);
+    mO.setTitle(paramInt);
     return this;
   }
   
   public MenuItem setTitle(CharSequence paramCharSequence)
   {
-    my.setTitle(paramCharSequence);
+    mO.setTitle(paramCharSequence);
     return this;
   }
   
   public MenuItem setTitleCondensed(CharSequence paramCharSequence)
   {
-    my.setTitleCondensed(paramCharSequence);
+    mO.setTitleCondensed(paramCharSequence);
     return this;
   }
   
   public MenuItem setVisible(boolean paramBoolean)
   {
-    if (mw)
+    if (mM)
     {
-      mx = paramBoolean;
+      mN = paramBoolean;
       bG();
     }
-    return my.setVisible(paramBoolean);
+    return mO.setVisible(paramBoolean);
   }
   
   class a
     extends ActionProvider
   {
-    final android.support.v4.view.d mz;
+    final android.support.v4.view.d mP;
     
     public a(android.support.v4.view.d paramd)
     {
       super();
-      mz = paramd;
+      mP = paramd;
       if (i.a(i.this)) {
-        mz.a(new d.b() {});
+        mP.a(new d.b() {});
       }
     }
     
@@ -343,7 +343,7 @@ class i
       if (i.a(i.this)) {
         bG();
       }
-      return mz.onCreateActionView();
+      return mP.onCreateActionView();
     }
     
     public boolean onPerformDefaultAction()
@@ -361,28 +361,28 @@ class i
     extends FrameLayout
     implements CollapsibleActionView
   {
-    final android.support.v7.a.b mD;
+    final android.support.v7.a.b mT;
     
     b(View paramView)
     {
       super();
-      mD = ((android.support.v7.a.b)paramView);
+      mT = ((android.support.v7.a.b)paramView);
       addView(paramView);
     }
     
     public final void onActionViewCollapsed()
     {
-      mD.onActionViewCollapsed();
+      mT.onActionViewCollapsed();
     }
     
     public final void onActionViewExpanded()
     {
-      mD.onActionViewExpanded();
+      mT.onActionViewExpanded();
     }
   }
   
   private final class c
-    extends d
+    extends d<g.e>
     implements MenuItem.OnActionExpandListener
   {
     c(g.e parame)
@@ -392,21 +392,21 @@ class i
     
     public final boolean onMenuItemActionCollapse(MenuItem paramMenuItem)
     {
-      g.e locale = (g.e)lr;
+      g.e locale = (g.e)lI;
       f(paramMenuItem);
-      return locale.ag();
+      return locale.ae();
     }
     
     public final boolean onMenuItemActionExpand(MenuItem paramMenuItem)
     {
-      g.e locale = (g.e)lr;
+      g.e locale = (g.e)lI;
       f(paramMenuItem);
-      return locale.af();
+      return locale.ad();
     }
   }
   
   private final class d
-    extends d
+    extends d<MenuItem.OnMenuItemClickListener>
     implements MenuItem.OnMenuItemClickListener
   {
     d(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
@@ -416,7 +416,7 @@ class i
     
     public final boolean onMenuItemClick(MenuItem paramMenuItem)
     {
-      return ((MenuItem.OnMenuItemClickListener)lr).onMenuItemClick(f(paramMenuItem));
+      return ((MenuItem.OnMenuItemClickListener)lI).onMenuItemClick(f(paramMenuItem));
     }
   }
 }

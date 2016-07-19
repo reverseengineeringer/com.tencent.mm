@@ -3,7 +3,7 @@ package oicq.wlogin_sdk.tools;
 import android.os.Parcelable.Creator;
 
 final class ErrMsg$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<ErrMsg>
 {}
 
 /* Location:

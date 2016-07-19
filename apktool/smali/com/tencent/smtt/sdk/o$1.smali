@@ -1,6 +1,5 @@
 .class final Lcom/tencent/smtt/sdk/o$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -18,16 +17,14 @@
 
 
 # instance fields
-.field final synthetic lTg:Lcom/tencent/smtt/sdk/o;
+.field final synthetic muY:Lcom/tencent/smtt/sdk/o;
 
 
 # direct methods
 .method constructor <init>(Lcom/tencent/smtt/sdk/o;)V
     .locals 0
 
-    .prologue
-    .line 273
-    iput-object p1, p0, Lcom/tencent/smtt/sdk/o$1;->lTg:Lcom/tencent/smtt/sdk/o;
+    iput-object p1, p0, Lcom/tencent/smtt/sdk/o$1;->muY:Lcom/tencent/smtt/sdk/o;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,12 +36,9 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 278
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/o$1;->lTg:Lcom/tencent/smtt/sdk/o;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/o$1;->muY:Lcom/tencent/smtt/sdk/o;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/o;->blW()V
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/o;->bsa()V
 
-    .line 279
     return-void
 .end method

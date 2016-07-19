@@ -12,8 +12,18 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Ljava/io/File;",
+        ">;"
+    }
 .end annotation
 
 
@@ -25,7 +35,6 @@
     .line 257
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
     return-void
 .end method
 
@@ -55,7 +64,7 @@
     .locals 1
 
     .prologue
-    .line 1
+    .line 257
     check-cast p1, Ljava/io/File;
 
     check-cast p2, Ljava/io/File;

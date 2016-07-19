@@ -9,7 +9,7 @@ final class RegByMobileRegAIOUI$16
   
   public final void run()
   {
-    RegByMobileRegAIOUI.x(kuT).smoothScrollBy(0, kuW);
+    RegByMobileRegAIOUI.x(kUa).smoothScrollBy(0, kUd);
   }
 }
 

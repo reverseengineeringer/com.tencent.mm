@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/pw" android:background="#ffc5c5c5" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:paddingTop="14.0dip" android:paddingRight="@dimen/hb" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/h4" android:textColor="#ff000000" android:ellipsize="end" android:id="@id/px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="@dimen/h4" android:textColor="#ff888888" android:ellipsize="end" android:id="@id/py" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:singleLine="true" />
+        </LinearLayout>
+        <Button android:textSize="@dimen/h4" android:textColor="#ff06be04" android:id="@id/pz" android:background="@drawable/c3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="74.0dip" android:minHeight="32.0dip" android:text="@string/sm" />
+    </LinearLayout>
+</LinearLayout>

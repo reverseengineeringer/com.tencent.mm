@@ -4,47 +4,47 @@
 
 
 # static fields
-.field public static mdA:I
+.field public static mPA:I
 
-.field public static mdg:I
+.field public static mPB:I
 
-.field public static mdh:I
+.field public static mPC:Loicq/wlogin_sdk/tools/b;
 
-.field public static mdi:I
+.field public static mPD:Z
 
-.field public static mdj:I
+.field public static mPE:I
 
-.field public static mdk:I
+.field public static mPk:I
 
-.field public static mdl:I
+.field public static mPl:I
 
-.field public static mdm:I
+.field public static mPm:I
 
-.field public static mdn:I
+.field public static mPn:I
 
-.field public static mdo:I
+.field public static mPo:I
 
-.field public static mdp:I
+.field public static mPp:I
 
-.field public static mdq:I
+.field public static mPq:I
 
-.field public static mdr:I
+.field public static mPr:I
 
-.field public static mds:I
+.field public static mPs:I
 
-.field public static mdt:I
+.field public static mPt:I
 
-.field public static mdu:I
+.field public static mPu:I
 
-.field public static mdv:I
+.field public static mPv:I
 
-.field public static mdw:I
+.field public static mPw:I
 
-.field public static mdx:I
+.field public static mPx:I
 
-.field public static mdy:Loicq/wlogin_sdk/tools/b;
+.field public static mPy:I
 
-.field public static mdz:Z
+.field public static mPz:I
 
 
 # direct methods
@@ -61,95 +61,95 @@
     .line 59
     const v0, 0xffff
 
-    sput v0, Loicq/wlogin_sdk/tools/util;->mdg:I
+    sput v0, Loicq/wlogin_sdk/tools/util;->mPk:I
 
     .line 60
     const/16 v0, 0x80
 
-    sput v0, Loicq/wlogin_sdk/tools/util;->mdh:I
+    sput v0, Loicq/wlogin_sdk/tools/util;->mPl:I
 
     .line 62
-    sput v1, Loicq/wlogin_sdk/tools/util;->mdi:I
+    sput v1, Loicq/wlogin_sdk/tools/util;->mPm:I
 
     .line 63
-    sput v2, Loicq/wlogin_sdk/tools/util;->mdj:I
+    sput v2, Loicq/wlogin_sdk/tools/util;->mPn:I
 
     .line 64
     const/4 v0, 0x2
 
-    sput v0, Loicq/wlogin_sdk/tools/util;->mdk:I
+    sput v0, Loicq/wlogin_sdk/tools/util;->mPo:I
 
     .line 65
     const/4 v0, 0x3
 
-    sput v0, Loicq/wlogin_sdk/tools/util;->mdl:I
+    sput v0, Loicq/wlogin_sdk/tools/util;->mPp:I
 
     .line 66
     const/4 v0, 0x4
 
-    sput v0, Loicq/wlogin_sdk/tools/util;->mdm:I
+    sput v0, Loicq/wlogin_sdk/tools/util;->mPq:I
 
     .line 67
-    sput v3, Loicq/wlogin_sdk/tools/util;->mdn:I
+    sput v3, Loicq/wlogin_sdk/tools/util;->mPr:I
 
     .line 68
     const/4 v0, 0x6
 
-    sput v0, Loicq/wlogin_sdk/tools/util;->mdo:I
+    sput v0, Loicq/wlogin_sdk/tools/util;->mPs:I
 
     .line 69
     const/4 v0, 0x7
 
-    sput v0, Loicq/wlogin_sdk/tools/util;->mdp:I
+    sput v0, Loicq/wlogin_sdk/tools/util;->mPt:I
 
     .line 70
     const/16 v0, 0x8
 
-    sput v0, Loicq/wlogin_sdk/tools/util;->mdq:I
+    sput v0, Loicq/wlogin_sdk/tools/util;->mPu:I
 
     .line 71
     const/16 v0, 0x9
 
-    sput v0, Loicq/wlogin_sdk/tools/util;->mdr:I
+    sput v0, Loicq/wlogin_sdk/tools/util;->mPv:I
 
     .line 72
     const/16 v0, 0xa
 
-    sput v0, Loicq/wlogin_sdk/tools/util;->mds:I
+    sput v0, Loicq/wlogin_sdk/tools/util;->mPw:I
 
     .line 73
     const/16 v0, 0xb
 
-    sput v0, Loicq/wlogin_sdk/tools/util;->mdt:I
+    sput v0, Loicq/wlogin_sdk/tools/util;->mPx:I
 
     .line 74
     const/16 v0, 0xc
 
-    sput v0, Loicq/wlogin_sdk/tools/util;->mdu:I
+    sput v0, Loicq/wlogin_sdk/tools/util;->mPy:I
 
     .line 75
     const/16 v0, 0xd
 
-    sput v0, Loicq/wlogin_sdk/tools/util;->mdv:I
+    sput v0, Loicq/wlogin_sdk/tools/util;->mPz:I
 
     .line 76
     const/16 v0, 0xe
 
-    sput v0, Loicq/wlogin_sdk/tools/util;->mdw:I
+    sput v0, Loicq/wlogin_sdk/tools/util;->mPA:I
 
     .line 79
-    sput v2, Loicq/wlogin_sdk/tools/util;->mdx:I
+    sput v2, Loicq/wlogin_sdk/tools/util;->mPB:I
 
     .line 83
     const/4 v0, 0x0
 
-    sput-object v0, Loicq/wlogin_sdk/tools/util;->mdy:Loicq/wlogin_sdk/tools/b;
+    sput-object v0, Loicq/wlogin_sdk/tools/util;->mPC:Loicq/wlogin_sdk/tools/b;
 
     .line 84
-    sput-boolean v1, Loicq/wlogin_sdk/tools/util;->mdz:Z
+    sput-boolean v1, Loicq/wlogin_sdk/tools/util;->mPD:Z
 
     .line 86
-    sput v3, Loicq/wlogin_sdk/tools/util;->mdA:I
+    sput v3, Loicq/wlogin_sdk/tools/util;->mPE:I
 
     .line 89
     return-void
@@ -165,7 +165,7 @@
     return-void
 .end method
 
-.method public static D([BI)I
+.method public static E([BI)I
     .locals 1
 
     .prologue
@@ -177,65 +177,7 @@
     return v0
 .end method
 
-.method public static DG(Ljava/lang/String;)V
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x2
-
-    .line 517
-    :try_start_0
-    sget v0, Loicq/wlogin_sdk/tools/util;->mdx:I
-
-    if-lt v0, v1, :cond_0
-
-    .line 519
-    sget-object v0, Loicq/wlogin_sdk/tools/util;->mdy:Loicq/wlogin_sdk/tools/b;
-
-    if-eqz v0, :cond_1
-
-    .line 520
-    sget-object v0, Loicq/wlogin_sdk/tools/util;->mdy:Loicq/wlogin_sdk/tools/b;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1, p0}, Loicq/wlogin_sdk/tools/b;->o(ILjava/lang/String;)V
-
-    .line 528
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 522
-    :cond_1
-    sget-boolean v0, Loicq/wlogin_sdk/tools/util;->mdz:Z
-
-    if-eqz v0, :cond_0
-
-    .line 523
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v1, "wlogin_sdk"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Loicq/wlogin_sdk/tools/util;->boB()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
-.end method
-
-.method public static E([BI)I
+.method public static F([BI)I
     .locals 2
 
     .prologue
@@ -261,7 +203,65 @@
     return v0
 .end method
 
-.method public static F([BI)I
+.method public static FV(Ljava/lang/String;)V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x2
+
+    .line 517
+    :try_start_0
+    sget v0, Loicq/wlogin_sdk/tools/util;->mPB:I
+
+    if-lt v0, v1, :cond_0
+
+    .line 519
+    sget-object v0, Loicq/wlogin_sdk/tools/util;->mPC:Loicq/wlogin_sdk/tools/b;
+
+    if-eqz v0, :cond_1
+
+    .line 520
+    sget-object v0, Loicq/wlogin_sdk/tools/util;->mPC:Loicq/wlogin_sdk/tools/b;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1, p0}, Loicq/wlogin_sdk/tools/b;->p(ILjava/lang/String;)V
+
+    .line 528
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 522
+    :cond_1
+    sget-boolean v0, Loicq/wlogin_sdk/tools/util;->mPD:Z
+
+    if-eqz v0, :cond_0
+
+    .line 523
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "wlogin_sdk"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {}, Loicq/wlogin_sdk/tools/util;->bvz()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+.end method
+
+.method public static G([BI)I
     .locals 3
 
     .prologue
@@ -317,7 +317,7 @@
     return v0
 .end method
 
-.method private static IM(Ljava/lang/String;)[B
+.method private static Ln(Ljava/lang/String;)[B
     .locals 4
 
     .prologue
@@ -402,27 +402,27 @@
     goto :goto_1
 .end method
 
-.method public static IN(Ljava/lang/String;)V
+.method public static Lo(Ljava/lang/String;)V
     .locals 2
 
     .prologue
     .line 503
     :try_start_0
-    sget v0, Loicq/wlogin_sdk/tools/util;->mdx:I
+    sget v0, Loicq/wlogin_sdk/tools/util;->mPB:I
 
     if-lez v0, :cond_0
 
     .line 504
-    sget-object v0, Loicq/wlogin_sdk/tools/util;->mdy:Loicq/wlogin_sdk/tools/b;
+    sget-object v0, Loicq/wlogin_sdk/tools/util;->mPC:Loicq/wlogin_sdk/tools/b;
 
     if-eqz v0, :cond_1
 
     .line 505
-    sget-object v0, Loicq/wlogin_sdk/tools/util;->mdy:Loicq/wlogin_sdk/tools/b;
+    sget-object v0, Loicq/wlogin_sdk/tools/util;->mPC:Loicq/wlogin_sdk/tools/b;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1, p0}, Loicq/wlogin_sdk/tools/b;->o(ILjava/lang/String;)V
+    invoke-virtual {v0, v1, p0}, Loicq/wlogin_sdk/tools/b;->p(ILjava/lang/String;)V
 
     .line 513
     :cond_0
@@ -431,7 +431,7 @@
 
     .line 507
     :cond_1
-    sget-boolean v0, Loicq/wlogin_sdk/tools/util;->mdz:Z
+    sget-boolean v0, Loicq/wlogin_sdk/tools/util;->mPD:Z
 
     if-eqz v0, :cond_0
 
@@ -442,7 +442,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Loicq/wlogin_sdk/tools/util;->boB()Ljava/lang/String;
+    invoke-static {}, Loicq/wlogin_sdk/tools/util;->bvz()Ljava/lang/String;
 
     move-result-object v1
 
@@ -672,7 +672,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->g(Ljava/lang/Exception;)V
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->h(Ljava/lang/Exception;)V
 
     .line 714
     const/4 v0, 0x0
@@ -890,7 +890,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->g(Ljava/lang/Exception;)V
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->h(Ljava/lang/Exception;)V
 
     .line 687
     const/4 v0, 0x0
@@ -898,7 +898,7 @@
     goto/16 :goto_0
 .end method
 
-.method public static U(Landroid/content/Context;I)V
+.method public static X(Landroid/content/Context;I)V
     .locals 2
 
     .prologue
@@ -935,7 +935,7 @@
 
     .prologue
     .line 381
-    invoke-static {p0}, Loicq/wlogin_sdk/tools/util;->gT(Landroid/content/Context;)[B
+    invoke-static {p0}, Loicq/wlogin_sdk/tools/util;->hp(Landroid/content/Context;)[B
 
     move-result-object v0
 
@@ -965,7 +965,7 @@
     .line 387
     const-string/jumbo v1, "ksid"
 
-    invoke-static {p1}, Loicq/wlogin_sdk/tools/util;->bw([B)Ljava/lang/String;
+    invoke-static {p1}, Loicq/wlogin_sdk/tools/util;->bE([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1008,7 +1008,7 @@
     .line 427
     const-string/jumbo v1, "imei"
 
-    invoke-static {p1}, Loicq/wlogin_sdk/tools/util;->bw([B)Ljava/lang/String;
+    invoke-static {p1}, Loicq/wlogin_sdk/tools/util;->bE([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1023,7 +1023,7 @@
 .end method
 
 .method public static b([BIJ)V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 116
@@ -1031,9 +1031,9 @@
 
     const/4 v1, 0x0
 
-    shr-long v1, p2, v1
+    shr-long v2, p2, v1
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -1044,9 +1044,9 @@
 
     const/16 v1, 0x8
 
-    shr-long v1, p2, v1
+    shr-long v2, p2, v1
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -1057,9 +1057,9 @@
 
     const/16 v1, 0x10
 
-    shr-long v1, p2, v1
+    shr-long v2, p2, v1
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -1070,9 +1070,9 @@
 
     const/16 v1, 0x18
 
-    shr-long v1, p2, v1
+    shr-long v2, p2, v1
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -1083,9 +1083,9 @@
 
     const/16 v1, 0x20
 
-    shr-long v1, p2, v1
+    shr-long v2, p2, v1
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -1096,9 +1096,9 @@
 
     const/16 v1, 0x28
 
-    shr-long v1, p2, v1
+    shr-long v2, p2, v1
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -1109,9 +1109,9 @@
 
     const/16 v1, 0x30
 
-    shr-long v1, p2, v1
+    shr-long v2, p2, v1
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -1122,9 +1122,9 @@
 
     const/16 v1, 0x38
 
-    shr-long v1, p2, v1
+    shr-long v2, p2, v1
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -1134,284 +1134,7 @@
     return-void
 .end method
 
-.method public static boA()J
-    .locals 2
-
-    .prologue
-    .line 191
-    invoke-static {}, Loicq/wlogin_sdk/request/i;->boq()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method private static boB()Ljava/lang/String;
-    .locals 3
-
-    .prologue
-    .line 487
-    :try_start_0
-    new-instance v0, Ljava/lang/Throwable;
-
-    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    aget-object v0, v0, v1
-
-    .line 493
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "["
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, ":"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Ljava/lang/StackTraceElement;->getLineNumber()I
-
-    move-result v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    .line 497
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    const-string/jumbo v0, ""
-
-    goto :goto_0
-.end method
-
-.method public static boC()Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 588
-    new-instance v0, Ljava/lang/String;
-
-    const-string/jumbo v1, "2014/02/28 14:20"
-
-    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static bow()[B
-    .locals 2
-
-    .prologue
-    .line 92
-    new-instance v0, Ljava/lang/String;
-
-    const-string/jumbo v1, "android"
-
-    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static box()[B
-    .locals 1
-
-    .prologue
-    .line 96
-    sget-object v0, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static boy()I
-    .locals 4
-
-    .prologue
-    .line 163
-    invoke-static {}, Ljava/lang/Math;->random()D
-
-    move-result-wide v0
-
-    const-wide v2, 0x41dfffffffc00000L    # 2.147483647E9
-
-    mul-double/2addr v0, v2
-
-    double-to-int v0, v0
-
-    return v0
-.end method
-
-.method public static boz()[B
-    .locals 1
-
-    .prologue
-    .line 167
-    const/16 v0, 0x10
-
-    invoke-static {v0}, Ljava/security/SecureRandom;->getSeed(I)[B
-
-    move-result-object v0
-
-    .line 168
-    return-object v0
-.end method
-
-.method public static bu(Landroid/content/Context;Ljava/lang/String;)[B
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 466
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-
-    move-result-object v0
-
-    iget-object v0, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    .line 468
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    new-array v0, v2, [B
-
-    goto :goto_0
-.end method
-
-.method public static bv(Landroid/content/Context;Ljava/lang/String;)[B
-    .locals 4
-
-    .prologue
-    const/4 v3, 0x0
-
-    .line 474
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    .line 475
-    const/16 v1, 0x40
-
-    .line 474
-    invoke-virtual {v0, p1, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-
-    move-result-object v0
-
-    .line 476
-    iget-object v1, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
-
-    array-length v1, v1
-
-    if-lez v1, :cond_0
-
-    .line 477
-    iget-object v1, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
-
-    const/4 v2, 0x0
-
-    aget-object v1, v1, v2
-
-    if-nez v1, :cond_1
-
-    .line 478
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 483
-    :goto_0
-    return-object v0
-
-    .line 480
-    :cond_1
-    iget-object v0, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    invoke-virtual {v0}, Landroid/content/pm/Signature;->toByteArray()[B
-
-    move-result-object v0
-
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/c;->bu([B)[B
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 483
-    :catch_0
-    move-exception v0
-
-    new-array v0, v3, [B
-
-    goto :goto_0
-.end method
-
-.method public static bv([B)[B
+.method public static bD([B)[B
     .locals 4
 
     .prologue
@@ -1446,14 +1169,14 @@
     invoke-static {p0, v3, v1, v0, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 178
-    invoke-static {v1}, Loicq/wlogin_sdk/tools/c;->bu([B)[B
+    invoke-static {v1}, Loicq/wlogin_sdk/tools/c;->bC([B)[B
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static bw([B)Ljava/lang/String;
+.method public static bE([B)Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -1537,7 +1260,7 @@
     goto :goto_0
 .end method
 
-.method public static bx([B)J
+.method public static bF([B)J
     .locals 2
 
     .prologue
@@ -1555,6 +1278,283 @@
     array-length v0, p0
 
     int-to-long v0, v0
+
+    goto :goto_0
+.end method
+
+.method public static bv(Landroid/content/Context;Ljava/lang/String;)[B
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 466
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v0
+
+    iget-object v0, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .line 468
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-array v0, v2, [B
+
+    goto :goto_0
+.end method
+
+.method public static bvA()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 588
+    new-instance v0, Ljava/lang/String;
+
+    const-string/jumbo v1, "2014/02/28 14:20"
+
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public static bvu()[B
+    .locals 2
+
+    .prologue
+    .line 92
+    new-instance v0, Ljava/lang/String;
+
+    const-string/jumbo v1, "android"
+
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static bvv()[B
+    .locals 1
+
+    .prologue
+    .line 96
+    sget-object v0, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static bvw()I
+    .locals 4
+
+    .prologue
+    .line 163
+    invoke-static {}, Ljava/lang/Math;->random()D
+
+    move-result-wide v0
+
+    const-wide v2, 0x41dfffffffc00000L    # 2.147483647E9
+
+    mul-double/2addr v0, v2
+
+    double-to-int v0, v0
+
+    return v0
+.end method
+
+.method public static bvx()[B
+    .locals 1
+
+    .prologue
+    .line 167
+    const/16 v0, 0x10
+
+    invoke-static {v0}, Ljava/security/SecureRandom;->getSeed(I)[B
+
+    move-result-object v0
+
+    .line 168
+    return-object v0
+.end method
+
+.method public static bvy()J
+    .locals 2
+
+    .prologue
+    .line 191
+    invoke-static {}, Loicq/wlogin_sdk/request/i;->bvo()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method private static bvz()Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 487
+    :try_start_0
+    new-instance v0, Ljava/lang/Throwable;
+
+    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    aget-object v0, v0, v1
+
+    .line 493
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "["
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, ":"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/lang/StackTraceElement;->getLineNumber()I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .line 497
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    const-string/jumbo v0, ""
+
+    goto :goto_0
+.end method
+
+.method public static bw(Landroid/content/Context;Ljava/lang/String;)[B
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x0
+
+    .line 474
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    .line 475
+    const/16 v1, 0x40
+
+    .line 474
+    invoke-virtual {v0, p1, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v0
+
+    .line 476
+    iget-object v1, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+
+    array-length v1, v1
+
+    if-lez v1, :cond_0
+
+    .line 477
+    iget-object v1, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+
+    const/4 v2, 0x0
+
+    aget-object v1, v1, v2
+
+    if-nez v1, :cond_1
+
+    .line 478
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 483
+    :goto_0
+    return-object v0
+
+    .line 480
+    :cond_1
+    iget-object v0, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    invoke-virtual {v0}, Landroid/content/pm/Signature;->toByteArray()[B
+
+    move-result-object v0
+
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/c;->bC([B)[B
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 483
+    :catch_0
+    move-exception v0
+
+    new-array v0, v3, [B
 
     goto :goto_0
 .end method
@@ -1627,7 +1627,7 @@
 .end method
 
 .method public static c([BIJ)V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 127
@@ -1635,9 +1635,9 @@
 
     const/4 v1, 0x0
 
-    shr-long v1, p2, v1
+    shr-long v2, p2, v1
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -1648,9 +1648,9 @@
 
     const/16 v1, 0x8
 
-    shr-long v1, p2, v1
+    shr-long v2, p2, v1
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -1661,9 +1661,9 @@
 
     const/16 v1, 0x10
 
-    shr-long v1, p2, v1
+    shr-long v2, p2, v1
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -1674,9 +1674,9 @@
 
     const/16 v1, 0x18
 
-    shr-long v1, p2, v1
+    shr-long v2, p2, v1
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -1686,7 +1686,7 @@
     return-void
 .end method
 
-.method public static cP(Ljava/lang/String;Ljava/lang/String;)V
+.method public static dc(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
     .prologue
@@ -1694,17 +1694,17 @@
 
     .line 532
     :try_start_0
-    sget v0, Loicq/wlogin_sdk/tools/util;->mdx:I
+    sget v0, Loicq/wlogin_sdk/tools/util;->mPB:I
 
     if-lt v0, v1, :cond_0
 
     .line 534
-    sget-object v0, Loicq/wlogin_sdk/tools/util;->mdy:Loicq/wlogin_sdk/tools/b;
+    sget-object v0, Loicq/wlogin_sdk/tools/util;->mPC:Loicq/wlogin_sdk/tools/b;
 
     if-eqz v0, :cond_1
 
     .line 535
-    sget-object v0, Loicq/wlogin_sdk/tools/util;->mdy:Loicq/wlogin_sdk/tools/b;
+    sget-object v0, Loicq/wlogin_sdk/tools/util;->mPC:Loicq/wlogin_sdk/tools/b;
 
     const/4 v1, 0x2
 
@@ -1717,7 +1717,7 @@
 
     .line 537
     :cond_1
-    sget-boolean v0, Loicq/wlogin_sdk/tools/util;->mdz:Z
+    sget-boolean v0, Loicq/wlogin_sdk/tools/util;->mPD:Z
 
     if-eqz v0, :cond_0
 
@@ -1728,7 +1728,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Loicq/wlogin_sdk/tools/util;->boB()Ljava/lang/String;
+    invoke-static {}, Loicq/wlogin_sdk/tools/util;->bvz()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1760,23 +1760,23 @@
     goto :goto_0
 .end method
 
-.method public static cQ(Ljava/lang/String;Ljava/lang/String;)V
+.method public static dd(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
     .prologue
     .line 547
     :try_start_0
-    sget v0, Loicq/wlogin_sdk/tools/util;->mdx:I
+    sget v0, Loicq/wlogin_sdk/tools/util;->mPB:I
 
     if-ltz v0, :cond_0
 
     .line 548
-    sget-object v0, Loicq/wlogin_sdk/tools/util;->mdy:Loicq/wlogin_sdk/tools/b;
+    sget-object v0, Loicq/wlogin_sdk/tools/util;->mPC:Loicq/wlogin_sdk/tools/b;
 
     if-eqz v0, :cond_1
 
     .line 549
-    sget-object v0, Loicq/wlogin_sdk/tools/util;->mdy:Loicq/wlogin_sdk/tools/b;
+    sget-object v0, Loicq/wlogin_sdk/tools/util;->mPC:Loicq/wlogin_sdk/tools/b;
 
     const/4 v1, 0x0
 
@@ -1789,7 +1789,7 @@
 
     .line 551
     :cond_1
-    sget-boolean v0, Loicq/wlogin_sdk/tools/util;->mdz:Z
+    sget-boolean v0, Loicq/wlogin_sdk/tools/util;->mPD:Z
 
     if-eqz v0, :cond_0
 
@@ -1800,7 +1800,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Loicq/wlogin_sdk/tools/util;->boB()Ljava/lang/String;
+    invoke-static {}, Loicq/wlogin_sdk/tools/util;->bvz()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1832,7 +1832,7 @@
     goto :goto_0
 .end method
 
-.method public static g(Ljava/lang/Exception;)V
+.method public static h(Ljava/lang/Exception;)V
     .locals 3
 
     .prologue
@@ -1865,13 +1865,13 @@
     .line 567
     const-string/jumbo v1, "exception:"
 
-    invoke-static {v1, v0}, Loicq/wlogin_sdk/tools/util;->cQ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Loicq/wlogin_sdk/tools/util;->dd(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 568
     return-void
 .end method
 
-.method public static gL(Landroid/content/Context;)[B
+.method public static hh(Landroid/content/Context;)[B
     .locals 1
 
     .prologue
@@ -1922,7 +1922,7 @@
     goto :goto_0
 .end method
 
-.method public static gM(Landroid/content/Context;)[B
+.method public static hi(Landroid/content/Context;)[B
     .locals 1
 
     .prologue
@@ -1965,7 +1965,7 @@
     goto :goto_0
 .end method
 
-.method public static gN(Landroid/content/Context;)[B
+.method public static hj(Landroid/content/Context;)[B
     .locals 4
 
     .prologue
@@ -2086,7 +2086,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/c;->bu([B)[B
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/c;->bC([B)[B
 
     move-result-object v0
 
@@ -2098,7 +2098,7 @@
     goto :goto_0
 .end method
 
-.method public static gO(Landroid/content/Context;)[B
+.method public static hk(Landroid/content/Context;)[B
     .locals 4
 
     .prologue
@@ -2157,7 +2157,7 @@
     goto :goto_0
 .end method
 
-.method public static gP(Landroid/content/Context;)I
+.method public static hl(Landroid/content/Context;)I
     .locals 3
 
     .prologue
@@ -2223,7 +2223,7 @@
     goto :goto_1
 .end method
 
-.method public static gQ(Landroid/content/Context;)I
+.method public static hm(Landroid/content/Context;)I
     .locals 3
 
     .prologue
@@ -2248,7 +2248,7 @@
     return v0
 .end method
 
-.method public static gR(Landroid/content/Context;)V
+.method public static hn(Landroid/content/Context;)V
     .locals 3
 
     .prologue
@@ -2280,7 +2280,7 @@
     return-void
 .end method
 
-.method public static gS(Landroid/content/Context;)Ljava/lang/String;
+.method public static ho(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
     .prologue
@@ -2338,7 +2338,7 @@
     goto :goto_0
 .end method
 
-.method public static gT(Landroid/content/Context;)[B
+.method public static hp(Landroid/content/Context;)[B
     .locals 5
 
     .prologue
@@ -2377,7 +2377,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->IM(Ljava/lang/String;)[B
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->Ln(Ljava/lang/String;)[B
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2395,7 +2395,7 @@
     :cond_0
     const-string/jumbo v1, "get_ksid:null"
 
-    invoke-static {v1}, Loicq/wlogin_sdk/tools/util;->DG(Ljava/lang/String;)V
+    invoke-static {v1}, Loicq/wlogin_sdk/tools/util;->FV(Ljava/lang/String;)V
 
     .line 419
     :goto_1
@@ -2434,7 +2434,7 @@
     .line 411
     const-string/jumbo v2, "exception"
 
-    invoke-static {v2, v0}, Loicq/wlogin_sdk/tools/util;->cQ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Loicq/wlogin_sdk/tools/util;->dd(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -2448,7 +2448,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->bw([B)Ljava/lang/String;
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->bE([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2460,12 +2460,12 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Loicq/wlogin_sdk/tools/util;->DG(Ljava/lang/String;)V
+    invoke-static {v1}, Loicq/wlogin_sdk/tools/util;->FV(Ljava/lang/String;)V
 
     goto :goto_1
 .end method
 
-.method public static gU(Landroid/content/Context;)[B
+.method public static hq(Landroid/content/Context;)[B
     .locals 6
 
     .prologue
@@ -2498,7 +2498,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Loicq/wlogin_sdk/tools/util;->IM(Ljava/lang/String;)[B
+    invoke-static {v1}, Loicq/wlogin_sdk/tools/util;->Ln(Ljava/lang/String;)[B
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2550,7 +2550,7 @@
     .line 449
     const-string/jumbo v2, "exception"
 
-    invoke-static {v2, v1}, Loicq/wlogin_sdk/tools/util;->cQ(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Loicq/wlogin_sdk/tools/util;->dd(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -2562,7 +2562,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->bw([B)Ljava/lang/String;
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->bE([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2574,12 +2574,12 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Loicq/wlogin_sdk/tools/util;->DG(Ljava/lang/String;)V
+    invoke-static {v1}, Loicq/wlogin_sdk/tools/util;->FV(Ljava/lang/String;)V
 
     goto :goto_1
 .end method
 
-.method public static gV(Landroid/content/Context;)[B
+.method public static hr(Landroid/content/Context;)[B
     .locals 1
 
     .prologue
@@ -2624,7 +2624,7 @@
     goto :goto_0
 .end method
 
-.method public static l([BII)V
+.method public static n([BII)V
     .locals 2
 
     .prologue
@@ -2641,7 +2641,7 @@
     return-void
 .end method
 
-.method public static m([BII)V
+.method public static o([BII)V
     .locals 2
 
     .prologue
@@ -2667,7 +2667,7 @@
     return-void
 .end method
 
-.method public static n([BII)V
+.method public static p([BII)V
     .locals 2
 
     .prologue

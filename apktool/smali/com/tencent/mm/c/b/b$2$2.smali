@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic apR:Lcom/tencent/mm/c/b/b$2;
+.field final synthetic abj:Lcom/tencent/mm/c/b/b$2;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 392
-    iput-object p1, p0, Lcom/tencent/mm/c/b/b$2$2;->apR:Lcom/tencent/mm/c/b/b$2;
+    iput-object p1, p0, Lcom/tencent/mm/c/b/b$2$2;->abj:Lcom/tencent/mm/c/b/b$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,16 +41,16 @@
 
     .prologue
     .line 395
-    iget-object v0, p0, Lcom/tencent/mm/c/b/b$2$2;->apR:Lcom/tencent/mm/c/b/b$2;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/b$2$2;->abj:Lcom/tencent/mm/c/b/b$2;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/b$2;->apQ:Lcom/tencent/mm/c/b/b;
+    iget-object v0, v0, Lcom/tencent/mm/c/b/b$2;->abi:Lcom/tencent/mm/c/b/b;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/c/b/b;->lv()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/c/b/b;->jW()Z
 
     .line 396
-    iget-object v0, p0, Lcom/tencent/mm/c/b/b$2$2;->apR:Lcom/tencent/mm/c/b/b$2;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/b$2$2;->abj:Lcom/tencent/mm/c/b/b$2;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/b$2;->apQ:Lcom/tencent/mm/c/b/b;
+    iget-object v0, v0, Lcom/tencent/mm/c/b/b$2;->abi:Lcom/tencent/mm/c/b/b;
 
     invoke-static {v0}, Lcom/tencent/mm/c/b/b;->a(Lcom/tencent/mm/c/b/b;)Lcom/tencent/mm/c/b/b$a;
 

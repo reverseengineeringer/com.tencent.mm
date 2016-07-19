@@ -10,8 +10,8 @@ import com.tencent.mm.model.i;
 import com.tencent.mm.sdk.h.d;
 import com.tencent.mm.sdk.h.j;
 import com.tencent.mm.sdk.h.j.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.ui.contact.a.a;
@@ -24,34 +24,34 @@ public final class c
   extends n
   implements j.b
 {
-  private int fSV = Integer.MAX_VALUE;
-  private Cursor fdB;
-  private a liC;
-  private int liD = Integer.MAX_VALUE;
-  private int liE = Integer.MAX_VALUE;
-  private int liF = Integer.MAX_VALUE;
-  private int liG = Integer.MAX_VALUE;
-  private int liH = Integer.MAX_VALUE;
-  private HashMap liI = null;
-  private SparseArray liJ = null;
+  private Cursor fmd;
+  private int gcv = Integer.MAX_VALUE;
+  private a lIN;
+  private int lIO = Integer.MAX_VALUE;
+  private int lIP = Integer.MAX_VALUE;
+  private int lIQ = Integer.MAX_VALUE;
+  private int lIR = Integer.MAX_VALUE;
+  private int lIS = Integer.MAX_VALUE;
+  private HashMap<String, Integer> lIT = null;
+  private SparseArray<String> lIU = null;
   
-  public c(MMBaseSelectContactUI paramMMBaseSelectContactUI, List paramList, boolean paramBoolean1, boolean paramBoolean2, a parama)
+  public c(MMBaseSelectContactUI paramMMBaseSelectContactUI, List<String> paramList, boolean paramBoolean1, boolean paramBoolean2, a parama)
   {
     super(paramMMBaseSelectContactUI, paramList, paramBoolean1, paramBoolean2);
-    u.i("!44@/B4Tb64lLpKitGgq3MZRMROkvsQBc+P9X7l1ftO2Uu4=", "create!");
-    liC = parama;
-    ah.tD().rq().a(this);
-    WQ();
+    v.i("MicroMsg.AlphabetContactAdapter", "create!");
+    lIN = parama;
+    ah.tE().rr().a(this);
+    YA();
   }
   
-  private void WQ()
+  private void YA()
   {
-    liD = Integer.MAX_VALUE;
-    fSV = Integer.MAX_VALUE;
-    liE = Integer.MAX_VALUE;
-    liF = Integer.MAX_VALUE;
-    liG = Integer.MAX_VALUE;
-    liH = Integer.MAX_VALUE;
+    lIO = Integer.MAX_VALUE;
+    gcv = Integer.MAX_VALUE;
+    lIP = Integer.MAX_VALUE;
+    lIQ = Integer.MAX_VALUE;
+    lIR = Integer.MAX_VALUE;
+    lIS = Integer.MAX_VALUE;
     label64:
     ArrayList localArrayList;
     Object localObject1;
@@ -60,47 +60,47 @@ public final class c
     Object localObject2;
     Object localObject3;
     int j;
-    if (liI != null)
+    if (lIT != null)
     {
-      liI.clear();
-      if (liJ == null) {
+      lIT.clear();
+      if (lIU == null) {
         break label422;
       }
-      liJ.clear();
+      lIU.clear();
       localArrayList = new ArrayList();
-      if (!liC.liO) {
+      if (!lIN.lIZ) {
         break label515;
       }
-      localObject1 = ah.tD().rq().f(ay.h(liC.liQ.split(",")), false);
+      localObject1 = ah.tE().rr().g(be.g(lIN.lJb.split(",")), false);
       localArrayList.add(localObject1);
       i = ((Cursor)localObject1).getCount();
-      u.d("!44@/B4Tb64lLpKitGgq3MZRMROkvsQBc+P9X7l1ftO2Uu4=", "ap: recent like count %d", new Object[] { Integer.valueOf(i) });
+      v.d("MicroMsg.AlphabetContactAdapter", "ap: recent like count %d", new Object[] { Integer.valueOf(i) });
       if (i <= 0) {
         break label436;
       }
-      liH = 0;
+      lIS = 0;
       i = i + 1 + 0;
-      af(liH, "☆");
-      localObject2 = ah.tD().rq();
-      localObject3 = ay.h(liC.liP.split(","));
-      localObject3 = "select * ,rowid from rcontact where (" + q.keY + ") and (" + q.bC((List)localObject3) + ")" + q.aWC();
-      localObject2 = aoX.rawQuery((String)localObject3, null);
+      ap(lIS, "☆");
+      localObject2 = ah.tE().rr();
+      localObject3 = be.g(lIN.lJa.split(","));
+      localObject3 = "select * ,rowid from rcontact where (" + q.kFf + ") and (" + q.bL((List)localObject3) + ")" + q.bbQ();
+      localObject2 = bkP.rawQuery((String)localObject3, null);
       localArrayList.add(localObject2);
       j = ((Cursor)localObject2).getCount();
       if (j <= 0) {
         break label447;
       }
-      liE = i;
+      lIP = i;
       i += j + 1;
-      af(liE, "☆");
+      ap(lIP, "☆");
     }
     int k;
     for (;;)
     {
-      localObject3 = ay.h(liC.liP.split(","));
-      localArrayList.add(ah.tD().rq().f((List)localObject3, true));
-      localObject2 = i.m((List)localObject3);
-      localObject3 = i.l((List)localObject3);
+      localObject3 = be.g(lIN.lJa.split(","));
+      localArrayList.add(ah.tE().rr().g((List)localObject3, true));
+      localObject2 = i.q((List)localObject3);
+      localObject3 = i.p((List)localObject3);
       if ((localObject2 == null) || (localObject3 == null)) {
         break label464;
       }
@@ -112,80 +112,80 @@ public final class c
         k = j;
         if (i < localObject3.length)
         {
-          af(localObject3[i] + j, localObject2[i]);
+          ap(localObject3[i] + j, localObject2[i]);
           k = j + 1;
         }
         i += 1;
         j = k;
       }
-      liI = new HashMap();
+      lIT = new HashMap();
       break;
       label422:
-      liJ = new SparseArray();
+      lIU = new SparseArray();
       break label64;
       label436:
-      liH = Integer.MAX_VALUE;
+      lIS = Integer.MAX_VALUE;
       i = 0;
       break label171;
       label447:
-      liE = Integer.MAX_VALUE;
+      lIP = Integer.MAX_VALUE;
     }
     ((Cursor)localObject1).getCount();
     for (;;)
     {
       label464:
-      u.d("!44@/B4Tb64lLpKitGgq3MZRMROkvsQBc+P9X7l1ftO2Uu4=", "headerPosMap=%s", new Object[] { liI.toString() });
-      fdB = new MergeCursor((Cursor[])localArrayList.toArray(new Cursor[0]));
+      v.d("MicroMsg.AlphabetContactAdapter", "headerPosMap=%s", new Object[] { lIT.toString() });
+      fmd = new MergeCursor((Cursor[])localArrayList.toArray(new Cursor[0]));
       notifyDataSetChanged();
       return;
       label515:
-      if ((liC.liR) && (liC.liS != null))
+      if ((lIN.lJc) && (lIN.lJd != null))
       {
-        localObject1 = ay.h(liC.liS.split(";"));
-        i = ah.tD().rq().by((List)localObject1).getCount();
+        localObject1 = be.g(lIN.lJd.split(";"));
+        i = ah.tE().rr().bH((List)localObject1).getCount();
         if (i > 0)
         {
-          liD = 0;
+          lIO = 0;
           i = i + 1 + 0;
-          af(fSV, "↑");
-          if (!liC.liL) {
-            break label955;
+          ap(gcv, "↑");
+          if (!lIN.lIW) {
+            break label960;
           }
-          localObject1 = ah.tD().rq().bD(cvM);
+          localObject1 = ah.tE().rr().bM(crs);
           localArrayList.add(localObject1);
           j = ((Cursor)localObject1).getCount();
           if (j <= 0) {
-            break label949;
+            break label954;
           }
-          liE = i;
-          af(liE, "☆");
+          lIP = i;
+          ap(lIP, "☆");
           i += j + 1;
           label662:
-          localObject1 = ah.tD().rq();
-          localObject2 = liC.lhu;
-          localObject3 = cvM;
-          if (llg) {
-            break label958;
+          localObject1 = ah.tE().rr();
+          localObject2 = lIN.lHF;
+          localObject3 = crs;
+          if (lLt) {
+            break label963;
           }
         }
       }
-      label938:
-      label949:
-      label955:
-      label958:
+      label943:
+      label954:
+      label960:
+      label963:
       for (boolean bool = true;; bool = false)
       {
         localObject1 = ((q)localObject1).a((String)localObject2, "", (List)localObject3, false, bool);
         localArrayList.add(localObject1);
-        localObject2 = i.a(liC.lhu, "", "", cvM);
-        localObject3 = i.a(liC.lhu, "", cvM, "");
+        localObject2 = i.a(lIN.lHF, "", "", crs);
+        localObject3 = i.a(lIN.lHF, "", crs, "");
         j = i;
         if (localObject2 == null) {
-          break label978;
+          break label983;
         }
         j = i;
         if (localObject3 == null) {
-          break label978;
+          break label983;
         }
         j = 0;
         int m;
@@ -194,90 +194,90 @@ public final class c
           m = k;
           if (j < localObject3.length)
           {
-            af(localObject3[j] + k, localObject2[j]);
+            ap(localObject3[j] + k, localObject2[j]);
             m = k + 1;
           }
           j += 1;
         }
-        liD = Integer.MAX_VALUE;
+        lIO = Integer.MAX_VALUE;
         i = 0;
         break;
-        if (liC.liK)
+        if (lIN.lIV)
         {
-          localObject1 = g.bT(cvM);
+          localObject1 = g.ci(crs);
           if (((List)localObject1).size() == 0) {}
-          for (localObject1 = ah.tD().rq().aWH();; localObject1 = ah.tD().rq().by((List)localObject1))
+          for (localObject1 = ah.tE().rr().bbV();; localObject1 = ah.tE().rr().bH((List)localObject1))
           {
             localArrayList.add(localObject1);
             i = ((Cursor)localObject1).getCount();
             if (i <= 0) {
-              break label938;
+              break label943;
             }
-            fSV = 0;
+            gcv = 0;
             i = i + 1 + 0;
-            af(fSV, "↑");
+            ap(gcv, "↑");
             break;
           }
-          fSV = Integer.MAX_VALUE;
+          gcv = Integer.MAX_VALUE;
         }
         i = 0;
         break;
-        liE = Integer.MAX_VALUE;
+        lIP = Integer.MAX_VALUE;
         break label662;
       }
       j = i + (((Cursor)localObject1).getCount() + localObject2.length);
-      label978:
+      label983:
       i = j;
-      if (liC.liM)
+      if (lIN.lIX)
       {
-        localObject1 = ah.tD().rq().c("@all.chatroom.contact", "", cvM);
+        localObject1 = ah.tE().rr().c("@all.chatroom.contact", "", crs);
         localArrayList.add(localObject1);
         i = ((Cursor)localObject1).getCount();
         if (i <= 0) {
-          break label1147;
+          break label1154;
         }
-        liF = j;
+        lIQ = j;
         i = j + (i + 1);
-        af(liF, lkS.getActivity().getString(2131428313));
+        ap(lIQ, lLd.getActivity().getString(2131230806));
       }
       for (;;)
       {
-        if (!liC.liN) {
-          break label1156;
+        if (!lIN.lIY) {
+          break label1163;
         }
-        localObject1 = ah.tD().rq().c("@verify.contact", "", cvM);
+        localObject1 = ah.tE().rr().c("@verify.contact", "", crs);
         localArrayList.add(localObject1);
         if (((Cursor)localObject1).getCount() <= 0) {
-          break label1158;
+          break label1165;
         }
-        liG = i;
-        af(liG, lkS.getActivity().getString(2131428338));
+        lIR = i;
+        ap(lIR, lLd.getActivity().getString(2131230837));
         break;
-        label1147:
-        liF = Integer.MAX_VALUE;
+        label1154:
+        lIQ = Integer.MAX_VALUE;
         i = j;
       }
-      label1156:
+      label1163:
       continue;
-      label1158:
-      liG = Integer.MAX_VALUE;
+      label1165:
+      lIR = Integer.MAX_VALUE;
     }
   }
   
-  private void af(int paramInt, String paramString)
+  private void ap(int paramInt, String paramString)
   {
-    liI.put(paramString, Integer.valueOf(paramInt));
-    liJ.put(paramInt, paramString);
+    lIT.put(paramString, Integer.valueOf(paramInt));
+    lIU.put(paramInt, paramString);
   }
   
-  private static a ag(int paramInt, String paramString)
+  private static a aq(int paramInt, String paramString)
   {
     com.tencent.mm.ui.contact.a.g localg = new com.tencent.mm.ui.contact.a.g(paramInt);
-    lnf = paramString;
+    lNA = paramString;
     return localg;
   }
   
-  public final int He(String paramString)
+  public final int Jt(String paramString)
   {
     int j = -1;
     int i;
@@ -290,32 +290,32 @@ public final class c
       {
         return i;
         i = j;
-      } while (liI == null);
+      } while (lIT == null);
       i = j;
-    } while (!liI.containsKey(paramString));
-    return ((Integer)liI.get(paramString)).intValue() + lkS.getContentLV().getHeaderViewsCount();
+    } while (!lIT.containsKey(paramString));
+    return ((Integer)lIT.get(paramString)).intValue() + lLd.azv().getHeaderViewsCount();
   }
   
   public final void a(int paramInt, j paramj, Object paramObject)
   {
-    WQ();
+    YA();
     notifyDataSetChanged();
   }
   
   protected final boolean c(a parama)
   {
     int j = position + 1;
-    int k = liH;
-    int m = liD;
-    int n = fSV;
-    int i1 = liE;
-    int i2 = liF;
-    int i3 = liG;
+    int k = lIS;
+    int m = lIO;
+    int n = gcv;
+    int i1 = lIP;
+    int i2 = lIQ;
+    int i3 = lIR;
     int i = 0;
     if (i < 6) {
       if (j != new int[] { k, m, n, i1, i2, i3 }[i]) {}
     }
-    while (liJ.indexOfKey(j) >= 0)
+    while (lIU.indexOfKey(j) >= 0)
     {
       return true;
       i += 1;
@@ -327,42 +327,42 @@ public final class c
   public final void finish()
   {
     super.finish();
-    u.i("!44@/B4Tb64lLpKitGgq3MZRMROkvsQBc+P9X7l1ftO2Uu4=", "finish!");
-    if (fdB != null)
+    v.i("MicroMsg.AlphabetContactAdapter", "finish!");
+    if (fmd != null)
     {
-      fdB.close();
-      fdB = null;
+      fmd.close();
+      fmd = null;
     }
-    ah.tD().rq().b(this);
+    ah.tE().rr().b(this);
   }
   
   public final int getCount()
   {
-    return fdB.getCount() + liI.size();
+    return fmd.getCount() + lIT.size();
   }
   
-  protected final a iH(int paramInt)
+  protected final a jQ(int paramInt)
   {
-    if (paramInt == liH) {
-      return ag(paramInt, lkS.getActivity().getString(2131428347));
+    if (paramInt == lIS) {
+      return aq(paramInt, lLd.getActivity().getString(2131230852));
     }
-    if (paramInt == liD) {
-      return ag(paramInt, liC.liT);
+    if (paramInt == lIO) {
+      return aq(paramInt, lIN.lJe);
     }
-    if (paramInt == fSV) {
-      return ag(paramInt, lkS.getActivity().getString(2131428339));
+    if (paramInt == gcv) {
+      return aq(paramInt, lLd.getActivity().getString(2131230835));
     }
-    if (paramInt == liE) {
-      return ag(paramInt, lkS.getActivity().getString(2131428335));
+    if (paramInt == lIP) {
+      return aq(paramInt, lLd.getActivity().getString(2131230821));
     }
-    if (paramInt == liF) {
-      return ag(paramInt, lkS.getActivity().getString(2131428313));
+    if (paramInt == lIQ) {
+      return aq(paramInt, lLd.getActivity().getString(2131230806));
     }
-    if (paramInt == liG) {
-      return ag(paramInt, lkS.getActivity().getString(2131428338));
+    if (paramInt == lIR) {
+      return aq(paramInt, lLd.getActivity().getString(2131230837));
     }
-    if (liJ.indexOfKey(paramInt) >= 0) {
-      return ag(paramInt, (String)liJ.get(paramInt));
+    if (lIU.indexOfKey(paramInt) >= 0) {
+      return aq(paramInt, (String)lIU.get(paramInt));
     }
     int k = paramInt;
     int i = 0;
@@ -371,11 +371,11 @@ public final class c
     do
     {
       j = i;
-      if (i > liJ.size()) {
+      if (i > lIU.size()) {
         break;
       }
       j = i;
-      if (liJ.indexOfKey(k) >= 0) {
+      if (lIU.indexOfKey(k) >= 0) {
         j = i + 1;
       }
       m = k - 1;
@@ -383,33 +383,33 @@ public final class c
       i = j;
     } while (m >= 0);
     i = paramInt - j;
-    if (fdB.moveToPosition(i))
+    if (fmd.moveToPosition(i))
     {
-      u.d("!44@/B4Tb64lLpKitGgq3MZRMROkvsQBc+P9X7l1ftO2Uu4=", "create contact item position=%d | index=%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(i) });
+      v.d("MicroMsg.AlphabetContactAdapter", "create contact item position=%d | index=%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(i) });
       k localk = new k();
-      localk.c(fdB);
+      localk.b(fmd);
       e locale = new e(paramInt);
-      cId = localk;
-      lkT = awQ();
+      cFh = localk;
+      lLe = azn();
       return locale;
     }
-    u.i("!44@/B4Tb64lLpKitGgq3MZRMROkvsQBc+P9X7l1ftO2Uu4=", "create contact item error: position=%d | index=%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(i) });
+    v.i("MicroMsg.AlphabetContactAdapter", "create contact item error: position=%d | index=%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(i) });
     return null;
   }
   
   public static final class a
   {
-    public String lhu = "@all.contact.without.chatroom";
-    public boolean liK = false;
-    public boolean liL = false;
-    public boolean liM = false;
-    public boolean liN = false;
-    public boolean liO = false;
-    public String liP;
-    public String liQ;
-    public boolean liR = false;
-    public String liS = "";
-    public String liT = "";
+    public String lHF = "@all.contact.without.chatroom";
+    public boolean lIV = false;
+    public boolean lIW = false;
+    public boolean lIX = false;
+    public boolean lIY = false;
+    public boolean lIZ = false;
+    public String lJa;
+    public String lJb;
+    public boolean lJc = false;
+    public String lJd = "";
+    public String lJe = "";
   }
 }
 

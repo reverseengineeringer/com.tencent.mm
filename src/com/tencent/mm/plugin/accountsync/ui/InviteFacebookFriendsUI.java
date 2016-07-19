@@ -21,20 +21,19 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.tencent.mm.ag.b.i;
-import com.tencent.mm.ag.b.i.a;
+import com.tencent.mm.aj.b.i;
+import com.tencent.mm.aj.b.i.a;
 import com.tencent.mm.modelfriend.q;
 import com.tencent.mm.modelfriend.x;
 import com.tencent.mm.pluginsdk.ui.d.e;
-import com.tencent.mm.r.m;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.c;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.account.FacebookAuthUI;
-import com.tencent.mm.ui.d.a.c.a;
+import com.tencent.mm.ui.e.a.c.a;
 import com.tencent.mm.ui.i.a;
 import com.tencent.mm.ui.tools.r.b;
 import java.util.ArrayList;
@@ -42,69 +41,69 @@ import java.util.List;
 
 public class InviteFacebookFriendsUI
   extends MMActivity
-  implements com.tencent.mm.r.d
+  implements com.tencent.mm.t.d
 {
-  private ListView coJ;
-  a coK;
-  private View coL;
-  private ProgressDialog coM = null;
-  String coN;
-  private final int coO = 5;
+  private ListView cjX;
+  a cjY;
+  private View cjZ;
+  private ProgressDialog cka = null;
+  String ckb;
+  private final int ckc = 5;
   
-  private void af(String paramString1, String paramString2)
+  private void ad(String paramString1, String paramString2)
   {
     com.tencent.mm.ui.base.g.a(this, paramString2, paramString1, new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        paramAnonymousDialogInterface = new Intent(koJ.kpc, FacebookAuthUI.class);
+        paramAnonymousDialogInterface = new Intent(kNN.kOg, FacebookAuthUI.class);
         paramAnonymousDialogInterface.putExtra("is_force_unbind", true);
-        koJ.kpc.startActivity(paramAnonymousDialogInterface);
+        kNN.kOg.startActivity(paramAnonymousDialogInterface);
         finish();
       }
     }, null);
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    coJ = ((ListView)findViewById(2131167146));
-    final Object localObject1 = (TextView)findViewById(2131165800);
-    ((TextView)localObject1).setText(2131429152);
+    cjX = ((ListView)findViewById(2131756850));
+    final Object localObject1 = (TextView)findViewById(2131756604);
+    ((TextView)localObject1).setText(2131232565);
     final Object localObject2 = new com.tencent.mm.ui.tools.r(true, true);
-    lxA = new r.b()
+    lYp = new r.b()
     {
-      public final void Gd() {}
+      public final void GA() {}
       
-      public final void Ge() {}
+      public final void GB() {}
       
-      public final void Gf() {}
+      public final void GC() {}
       
-      public final void Gg() {}
+      public final void GD() {}
       
-      public final boolean kE(String paramAnonymousString)
+      public final boolean ln(String paramAnonymousString)
       {
         return false;
       }
       
-      public final void kF(String paramAnonymousString)
+      public final void lo(String paramAnonymousString)
       {
-        InviteFacebookFriendsUI.a(InviteFacebookFriendsUI.this, ay.kx(paramAnonymousString));
+        InviteFacebookFriendsUI.a(InviteFacebookFriendsUI.this, be.lh(paramAnonymousString));
         paramAnonymousString = InviteFacebookFriendsUI.this;
-        if (coK != null)
+        if (cjY != null)
         {
-          InviteFacebookFriendsUI.a locala = coK;
-          coW = ay.kx(coN.trim());
-          locala.adW();
-          locala.Gk();
+          InviteFacebookFriendsUI.a locala = cjY;
+          ckk = be.lh(ckb.trim());
+          locala.closeCursor();
+          locala.GH();
         }
       }
     };
     a((com.tencent.mm.ui.tools.r)localObject2);
-    coK = new a(this, new i.a()
+    cjY = new a(this, new i.a()
     {
-      public final void Gh()
+      public final void GE()
       {
-        if (com.tencent.mm.model.h.sC())
+        if (com.tencent.mm.model.h.sE())
         {
           if (InviteFacebookFriendsUI.a(InviteFacebookFriendsUI.this).getCount() == 0) {
             localObject1.setVisibility(0);
@@ -116,44 +115,44 @@ public class InviteFacebookFriendsUI
         localObject1.setVisibility(8);
       }
       
-      public final void Gi() {}
+      public final void GF() {}
     });
-    coJ.setAdapter(coK);
-    coL = findViewById(2131167148);
-    coJ.setOnItemClickListener(new AdapterView.OnItemClickListener()
+    cjX.setAdapter(cjY);
+    cjZ = findViewById(2131756852);
+    cjX.setOnItemClickListener(new AdapterView.OnItemClickListener()
     {
-      public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+      public final void onItemClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
       {
-        if (InviteFacebookFriendsUI.a(InviteFacebookFriendsUI.this).Gj().length >= 50)
+        if (InviteFacebookFriendsUI.a(InviteFacebookFriendsUI.this).GG().length >= 50)
         {
-          com.tencent.mm.ui.base.g.e(InviteFacebookFriendsUI.this, 2131428256, 2131430877);
+          com.tencent.mm.ui.base.g.f(InviteFacebookFriendsUI.this, 2131232571, 2131231028);
           return;
         }
-        InviteFacebookFriendsUI.a(InviteFacebookFriendsUI.this).ep(paramAnonymousInt - InviteFacebookFriendsUI.b(InviteFacebookFriendsUI.this).getHeaderViewsCount());
-        if (InviteFacebookFriendsUI.a(InviteFacebookFriendsUI.this).Gj().length > 0)
+        InviteFacebookFriendsUI.a(InviteFacebookFriendsUI.this).fb(paramAnonymousInt - InviteFacebookFriendsUI.b(InviteFacebookFriendsUI.this).getHeaderViewsCount());
+        if (InviteFacebookFriendsUI.a(InviteFacebookFriendsUI.this).GG().length > 0)
         {
-          hh(true);
+          hF(true);
           return;
         }
-        hh(false);
+        hF(false);
       }
     });
-    u.d("!56@/B4Tb64lLpI1xvkrLEXBhhg96dI0eWcb0x/iHQfmkIg6em4Z80TVkw==", "isBindForFacebookApp:" + com.tencent.mm.model.h.sC());
-    if (com.tencent.mm.model.h.sC())
+    v.d("MicroMsg.InviteFacebookFriendsUI", "isBindForFacebookApp:" + com.tencent.mm.model.h.sE());
+    if (com.tencent.mm.model.h.sE())
     {
-      coJ.setVisibility(0);
-      coL.setVisibility(8);
-      long l = ay.c((Long)com.tencent.mm.model.ah.tD().rn().get(65831, null));
-      localObject1 = ay.ky((String)com.tencent.mm.model.ah.tD().rn().get(65830, null));
-      if ((ay.an(l) > 86400000L) && (((String)localObject1).length() > 0))
+      cjX.setVisibility(0);
+      cjZ.setVisibility(8);
+      long l = be.c((Long)com.tencent.mm.model.ah.tE().ro().get(65831, null));
+      localObject1 = be.li((String)com.tencent.mm.model.ah.tE().ro().get(65830, null));
+      if ((be.au(l) > 86400000L) && (((String)localObject1).length() > 0))
       {
-        localObject2 = new com.tencent.mm.ui.d.a.c("290293790992170");
-        ((com.tencent.mm.ui.d.a.c)localObject2).Ho((String)localObject1);
-        new com.tencent.mm.ui.account.h((com.tencent.mm.ui.d.a.c)localObject2, new com.tencent.mm.o.a()
+        localObject2 = new com.tencent.mm.ui.e.a.c("290293790992170");
+        ((com.tencent.mm.ui.e.a.c)localObject2).JD((String)localObject1);
+        new com.tencent.mm.ui.account.h((com.tencent.mm.ui.e.a.c)localObject2, new com.tencent.mm.q.a()
         {
-          public final void g(Bundle paramAnonymousBundle)
+          public final void i(Bundle paramAnonymousBundle)
           {
-            super.g(paramAnonymousBundle);
+            super.i(paramAnonymousBundle);
           }
           
           public final void onError(int paramAnonymousInt, String paramAnonymousString)
@@ -163,42 +162,42 @@ public class InviteFacebookFriendsUI
               InviteFacebookFriendsUI.c(InviteFacebookFriendsUI.this);
             }
           }
-        }).bbG();
+        }).bgS();
       }
       localObject1 = new x();
-      ((x)localObject1).yZ();
-      localObject2 = new af(new af.a()
+      ((x)localObject1).zm();
+      localObject2 = new com.tencent.mm.sdk.platformtools.ah(new ah.a()
       {
-        public final boolean lj()
+        public final boolean jK()
         {
-          com.tencent.mm.model.ah.tD().rn().set(65829, Integer.valueOf(1));
-          com.tencent.mm.model.ah.tE().d(localObject1);
+          com.tencent.mm.model.ah.tE().ro().set(65829, Integer.valueOf(1));
+          com.tencent.mm.model.ah.tF().a(localObject1, 0);
           return false;
         }
       }, false);
-      if (ay.d((Integer)com.tencent.mm.model.ah.tD().rn().get(65829, null)) <= 0) {
-        break label424;
+      if (be.f((Integer)com.tencent.mm.model.ah.tE().ro().get(65829, null)) <= 0) {
+        break label425;
       }
-      com.tencent.mm.model.ah.tD().rn().set(65829, Integer.valueOf(1));
-      com.tencent.mm.model.ah.tE().d((com.tencent.mm.r.j)localObject1);
+      com.tencent.mm.model.ah.tE().ro().set(65829, Integer.valueOf(1));
+      com.tencent.mm.model.ah.tF().a((com.tencent.mm.t.j)localObject1, 0);
     }
     for (;;)
     {
-      ActionBarActivity localActionBarActivity = koJ.kpc;
-      getString(2131430877);
-      coM = com.tencent.mm.ui.base.g.a(localActionBarActivity, getString(2131428823), true, new DialogInterface.OnCancelListener()
+      ActionBarActivity localActionBarActivity = kNN.kOg;
+      getString(2131231028);
+      cka = com.tencent.mm.ui.base.g.a(localActionBarActivity, getString(2131234243), true, new DialogInterface.OnCancelListener()
       {
         public final void onCancel(DialogInterface paramAnonymousDialogInterface)
         {
-          localObject2.aUF();
-          com.tencent.mm.model.ah.tE().c(localObject1);
+          localObject2.aZJ();
+          com.tencent.mm.model.ah.tF().c(localObject1);
         }
       });
       b(new MenuItem.OnMenuItemClickListener()
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
         {
-          age();
+          aiI();
           finish();
           return true;
         }
@@ -210,14 +209,14 @@ public class InviteFacebookFriendsUI
           BackwardSupportUtil.c.a(InviteFacebookFriendsUI.b(InviteFacebookFriendsUI.this));
         }
       };
-      a(0, getString(2131428255), new MenuItem.OnMenuItemClickListener()
+      a(0, getString(2131232569), new MenuItem.OnMenuItemClickListener()
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
         {
-          com.tencent.mm.ui.d.a.c localc = new com.tencent.mm.ui.d.a.c("290293790992170");
+          com.tencent.mm.ui.e.a.c localc = new com.tencent.mm.ui.e.a.c("290293790992170");
           Bundle localBundle = new Bundle();
-          localBundle.putString("message", getString(2131429165));
-          final long[] arrayOfLong = InviteFacebookFriendsUI.a(InviteFacebookFriendsUI.this).Gj();
+          localBundle.putString("message", getString(2131232568));
+          final long[] arrayOfLong = InviteFacebookFriendsUI.a(InviteFacebookFriendsUI.this).GG();
           paramAnonymousMenuItem = Long.toString(arrayOfLong[0]);
           int i = 1;
           while (i < arrayOfLong.length)
@@ -229,22 +228,22 @@ public class InviteFacebookFriendsUI
           localBundle.putString("to", paramAnonymousMenuItem);
           localc.a(InviteFacebookFriendsUI.this, "apprequests", localBundle, new c.a()
           {
-            public final void a(com.tencent.mm.ui.d.a.b paramAnonymous2b)
+            public final void a(com.tencent.mm.ui.e.a.b paramAnonymous2b)
             {
-              u.e("!56@/B4Tb64lLpI1xvkrLEXBhhg96dI0eWcb0x/iHQfmkIg6em4Z80TVkw==", "fbinvite error");
+              v.e("MicroMsg.InviteFacebookFriendsUI", "fbinvite error");
             }
             
-            public final void a(com.tencent.mm.ui.d.a.d paramAnonymous2d)
+            public final void a(com.tencent.mm.ui.e.a.d paramAnonymous2d)
             {
-              u.e("!56@/B4Tb64lLpI1xvkrLEXBhhg96dI0eWcb0x/iHQfmkIg6em4Z80TVkw==", "fbinvite error");
+              v.e("MicroMsg.InviteFacebookFriendsUI", "fbinvite error");
             }
             
-            public final void g(Bundle paramAnonymous2Bundle)
+            public final void i(Bundle paramAnonymous2Bundle)
             {
-              u.i("!56@/B4Tb64lLpI1xvkrLEXBhhg96dI0eWcb0x/iHQfmkIg6em4Z80TVkw==", "fbinvite oncomplete");
+              v.i("MicroMsg.InviteFacebookFriendsUI", "fbinvite oncomplete");
               paramAnonymous2Bundle = new ArrayList();
               paramAnonymous2Bundle.add(new b.i.a(33, Integer.toString(arrayOfLong.length)));
-              com.tencent.mm.model.ah.tD().rp().b(new b.i(paramAnonymous2Bundle));
+              com.tencent.mm.model.ah.tE().rq().b(new b.i(paramAnonymous2Bundle));
               paramAnonymous2Bundle = arrayOfLong;
               int j = paramAnonymous2Bundle.length;
               int i = 0;
@@ -253,16 +252,16 @@ public class InviteFacebookFriendsUI
                 long l = paramAnonymous2Bundle[i];
                 q localq = new q();
                 username = Long.toString(l);
-                bMG = 5;
-                bIs = ((int)ay.FR());
-                com.tencent.mm.modelfriend.ah.zu().a(localq);
+                bGa = 5;
+                bBD = ((int)be.Go());
+                com.tencent.mm.modelfriend.ah.zH().a(localq);
                 i += 1;
               }
-              com.tencent.mm.ui.base.g.a(InviteFacebookFriendsUI.this, 2131428257, 2131430877, 2131430901, 2131430902, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+              com.tencent.mm.ui.base.g.a(InviteFacebookFriendsUI.this, 2131232570, 2131231028, 2131231050, 2131230966, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
               {
                 public final void onClick(DialogInterface paramAnonymous3DialogInterface, int paramAnonymous3Int)
                 {
-                  InviteFacebookFriendsUI.a(InviteFacebookFriendsUI.this).Gk();
+                  InviteFacebookFriendsUI.a(InviteFacebookFriendsUI.this).GH();
                 }
               }, new DialogInterface.OnClickListener()
               {
@@ -275,84 +274,84 @@ public class InviteFacebookFriendsUI
             
             public final void onCancel()
             {
-              u.e("!56@/B4Tb64lLpI1xvkrLEXBhhg96dI0eWcb0x/iHQfmkIg6em4Z80TVkw==", "fbinvite cancle");
+              v.e("MicroMsg.InviteFacebookFriendsUI", "fbinvite cancle");
             }
           });
           return true;
         }
       });
-      hh(false);
+      hF(false);
       return;
-      label424:
-      ((af)localObject2).ds(5000L);
+      label425:
+      ((com.tencent.mm.sdk.platformtools.ah)localObject2).dJ(5000L);
     }
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
-  {
-    u.i("!56@/B4Tb64lLpI1xvkrLEXBhhg96dI0eWcb0x/iHQfmkIg6em4Z80TVkw==", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
-    if (paramj.getType() != 32) {
-      return;
-    }
-    if (coM != null)
-    {
-      coM.dismiss();
-      coM = null;
-    }
-    if ((paramInt1 == 4) && (paramInt2 == -68))
-    {
-      paramj = paramString;
-      if (ay.kz(paramString)) {
-        paramj = "error";
-      }
-      af(getString(2131430877), paramj);
-      return;
-    }
-    if ((paramInt1 == 0) && (paramInt2 == 0))
-    {
-      coK.a(null, null);
-      return;
-    }
-    Toast.makeText(this, 2131428800, 0).show();
   }
   
   protected final int getLayoutId()
   {
-    return 2131362461;
+    return 2130903597;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    qb(2131428254);
-    com.tencent.mm.model.ah.tE().a(32, this);
-    Gb();
+    rR(2131232572);
+    com.tencent.mm.model.ah.tF().a(32, this);
+    Gy();
   }
   
   protected void onDestroy()
   {
-    com.tencent.mm.model.ah.tE().b(32, this);
-    coK.adW();
+    com.tencent.mm.model.ah.tF().b(32, this);
+    cjY.closeCursor();
     super.onDestroy();
   }
   
-  public static final class a
-    extends com.tencent.mm.ui.i
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, com.tencent.mm.t.j paramj)
   {
-    private int[] bMl;
-    String coW;
-    private boolean[] coX;
+    v.i("MicroMsg.InviteFacebookFriendsUI", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+    if (paramj.getType() != 32) {
+      return;
+    }
+    if (cka != null)
+    {
+      cka.dismiss();
+      cka = null;
+    }
+    if ((paramInt1 == 4) && (paramInt2 == -68))
+    {
+      paramj = paramString;
+      if (be.kf(paramString)) {
+        paramj = "error";
+      }
+      ad(getString(2131231028), paramj);
+      return;
+    }
+    if ((paramInt1 == 0) && (paramInt2 == 0))
+    {
+      cjY.a(null, null);
+      return;
+    }
+    Toast.makeText(this, 2131233841, 0).show();
+  }
+  
+  public static final class a
+    extends com.tencent.mm.ui.i<com.tencent.mm.modelfriend.h>
+  {
+    private int[] bFF;
+    String ckk;
+    private boolean[] ckl;
     
     public a(Context paramContext, i.a parama)
     {
       super(new com.tencent.mm.modelfriend.h());
-      koC = parama;
+      kNG = parama;
     }
     
-    public final long[] Gj()
+    public final long[] GG()
     {
       int m = 0;
-      Object localObject = coX;
+      Object localObject = ckl;
       int n = localObject.length;
       int i = 0;
       int k;
@@ -369,10 +368,10 @@ public class InviteFacebookFriendsUI
       i = m;
       if (j < getCount())
       {
-        if (coX[j] == 0) {
+        if (ckl[j] == 0) {
           break label102;
         }
-        localObject[i] = getItemaSw;
+        localObject[i] = getItemaFf;
         i += 1;
       }
       label102:
@@ -384,10 +383,10 @@ public class InviteFacebookFriendsUI
       }
     }
     
-    public final void Gk()
+    public final void GH()
     {
-      com.tencent.mm.modelfriend.i locali = com.tencent.mm.modelfriend.ah.zr();
-      String str = coW;
+      com.tencent.mm.modelfriend.i locali = com.tencent.mm.modelfriend.ah.zE();
+      String str = ckk;
       StringBuilder localStringBuilder = new StringBuilder();
       localStringBuilder.append(" where facebookfriend.status = 102 ");
       if ((str != null) && (str.length() > 0))
@@ -397,24 +396,24 @@ public class InviteFacebookFriendsUI
         localStringBuilder.append("facebookfriend.nickname like '%" + str + "%' or ");
         localStringBuilder.append("facebookfriend.username like '%" + str + "%' ) ");
       }
-      setCursor(bCw.rawQuery("select facebookfriend.fbid,facebookfriend.fbname,facebookfriend.fbimgkey,facebookfriend.status,facebookfriend.username,facebookfriend.nickname,facebookfriend.nicknamepyinitial,facebookfriend.nicknamequanpin,facebookfriend.sex,facebookfriend.personalcard,facebookfriend.province,facebookfriend.city,facebookfriend.signature,facebookfriend.alias,facebookfriend.type,facebookfriend.email from facebookfriend  " + localStringBuilder.toString() + " order by  case when status = 100 then 0  when status = 102 then 3  when status = 101 then 1 else 2 end  , nicknamepyinitial", null));
-      bMl = new int[getCount()];
-      coX = new boolean[getCount()];
+      setCursor(bvG.rawQuery("select facebookfriend.fbid,facebookfriend.fbname,facebookfriend.fbimgkey,facebookfriend.status,facebookfriend.username,facebookfriend.nickname,facebookfriend.nicknamepyinitial,facebookfriend.nicknamequanpin,facebookfriend.sex,facebookfriend.personalcard,facebookfriend.province,facebookfriend.city,facebookfriend.signature,facebookfriend.alias,facebookfriend.type,facebookfriend.email from facebookfriend  " + localStringBuilder.toString() + " order by  case when status = 100 then 0  when status = 102 then 3  when status = 101 then 1 else 2 end  , nicknamepyinitial", null));
+      bFF = new int[getCount()];
+      ckl = new boolean[getCount()];
       super.notifyDataSetChanged();
     }
     
-    protected final void Gl()
+    protected final void GI()
     {
-      Gk();
+      GH();
     }
     
-    public final void ep(int paramInt)
+    public final void fb(int paramInt)
     {
-      if ((paramInt < 0) || (paramInt >= coX.length)) {
+      if ((paramInt < 0) || (paramInt >= ckl.length)) {
         return;
       }
-      boolean[] arrayOfBoolean = coX;
-      if (coX[paramInt] == 0) {}
+      boolean[] arrayOfBoolean = ckl;
+      if (ckl[paramInt] == 0) {}
       for (int i = 1;; i = 0)
       {
         arrayOfBoolean[paramInt] = i;
@@ -430,43 +429,43 @@ public class InviteFacebookFriendsUI
       if (paramView == null)
       {
         paramViewGroup = new a();
-        paramView = View.inflate(context, 2131362447, null);
-        coY = ((ImageView)paramView.findViewById(2131167114));
-        bMs = ((TextView)paramView.findViewById(2131167115));
-        coZ = ((TextView)paramView.findViewById(2131167116));
-        cpa = ((CheckBox)paramView.findViewById(2131167117));
+        paramView = View.inflate(context, 2130903549, null);
+        ckm = ((ImageView)paramView.findViewById(2131756733));
+        bFM = ((TextView)paramView.findViewById(2131756734));
+        ckn = ((TextView)paramView.findViewById(2131756739));
+        cko = ((CheckBox)paramView.findViewById(2131756740));
         paramView.setTag(paramViewGroup);
-        bMs.setText(e.a(context, localh.yw(), bMs.getTextSize()));
-        localBitmap = com.tencent.mm.q.b.fK(aSw);
+        bFM.setText(e.a(context, localh.yI(), bFM.getTextSize()));
+        localBitmap = com.tencent.mm.s.b.fX(aFf);
         if (localBitmap != null) {
           break label211;
         }
-        coY.setImageDrawable(com.tencent.mm.aw.a.y(context, 2130903473));
+        ckm.setImageDrawable(com.tencent.mm.az.a.C(context, 2131165359));
       }
       for (;;)
       {
-        cpa.setChecked(coX[paramInt]);
-        if (!com.tencent.mm.modelfriend.ah.zu().hA(Long.toString(aSw))) {
+        cko.setChecked(ckl[paramInt]);
+        if (!com.tencent.mm.modelfriend.ah.zH().hS(Long.toString(aFf))) {
           break label223;
         }
-        coZ.setVisibility(0);
+        ckn.setVisibility(0);
         return paramView;
         paramViewGroup = (a)paramView.getTag();
         break;
         label211:
-        coY.setImageBitmap(localBitmap);
+        ckm.setImageBitmap(localBitmap);
       }
       label223:
-      coZ.setVisibility(8);
+      ckn.setVisibility(8);
       return paramView;
     }
     
     public static final class a
     {
-      TextView bMs;
-      ImageView coY;
-      TextView coZ;
-      CheckBox cpa;
+      TextView bFM;
+      ImageView ckm;
+      TextView ckn;
+      CheckBox cko;
     }
   }
 }

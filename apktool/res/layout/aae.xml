@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/cbo" android:background="@color/ak" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.plugin.sns.lucky.ui.LuckyRevealImageView android:id="@id/cay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" android:layout_centerInParent="true" />
+    <ProgressBar android:gravity="center" android:layout_gravity="center" android:id="@id/b02" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_centerInParent="true" style="@style/mediumCustomProgressBar" />
+    <RelativeLayout android:id="@id/cbp" android:layout_width="fill_parent" android:layout_height="75.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip" android:maxWidth="320.0dip" android:layout_alignParentBottom="true" android:layout_centerInParent="true" android:layout_centerHorizontal="true">
+        <ImageView android:background="@drawable/nj" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/amm" android:scaleType="fitXY" />
+        <com.tencent.mm.plugin.sns.lucky.ui.SnsLuckyAdBannerImageView android:id="@id/cbq" android:layout_width="200.0dip" android:layout_height="fill_parent" android:scaleType="fitXY" android:layout_alignParentRight="true" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="75.0dip" android:layout_alignParentLeft="true">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/cbr" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="20.0dip" />
+            <TextView android:textSize="13.0dip" android:textColor="#ccffffff" android:layout_gravity="center_vertical" android:id="@id/cbs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:includeFontPadding="false" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/cbt" android:background="@color/nl" android:paddingTop="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="145.0dip" android:layout_alignParentBottom="true">
+        <Button android:textSize="16.0dip" android:textColor="#ffffdea8" android:id="@id/cbk" android:background="@drawable/i0" android:paddingLeft="@dimen/ia" android:paddingRight="@dimen/ia" android:layout_width="wrap_content" android:layout_height="35.0dip" android:text="@string/cr7" />
+    </LinearLayout>
+</RelativeLayout>

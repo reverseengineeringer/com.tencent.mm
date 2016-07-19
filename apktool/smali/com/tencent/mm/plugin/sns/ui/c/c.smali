@@ -22,7 +22,7 @@
 .method public abstract a(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
 .end method
 
-.method public abstract af(Landroid/view/View;)Z
+.method public abstract ah(Landroid/view/View;)Z
 .end method
 
 .method public onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
@@ -30,7 +30,7 @@
 
     .prologue
     .line 17
-    invoke-virtual {p0, p2}, Lcom/tencent/mm/plugin/sns/ui/c/c;->af(Landroid/view/View;)Z
+    invoke-virtual {p0, p2}, Lcom/tencent/mm/plugin/sns/ui/c/c;->ah(Landroid/view/View;)Z
 
     move-result v0
 
@@ -45,11 +45,11 @@
 
     .line 20
     :cond_0
-    const-string/jumbo v0, "!64@/B4Tb64lLpJYrxmi4Gb6eGmGfYELhRzS0HOkdwjvINJAum6Of014UMnF7U/AfX/p"
+    const-string/jumbo v0, "MicroMsg.TimelineOnCreateContextMenuListener"
 
     const-string/jumbo v1, "onMMCreateContextMenu error"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

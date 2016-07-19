@@ -1,6 +1,9 @@
 package android.support.v4.app;
 
-public abstract interface a$a {}
+public abstract interface a$a
+{
+  public abstract void onRequestPermissionsResult(int paramInt, String[] paramArrayOfString, int[] paramArrayOfInt);
+}
 
 /* Location:
  * Qualified Name:     android.support.v4.app.a.a

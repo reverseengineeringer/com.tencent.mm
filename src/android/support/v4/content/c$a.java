@@ -1,8 +1,8 @@
 package android.support.v4.content;
 
-public abstract interface c$a
+public abstract interface c$a<D>
 {
-  public abstract void a(c paramc, Object paramObject);
+  public abstract void b(c<D> paramc, D paramD);
 }
 
 /* Location:

@@ -3,19 +3,37 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/gx;",
+        ">;"
+    }
+.end annotation
+
+
 # instance fields
-.field protected izz:Ljava/util/ArrayList;
+.field protected iVV:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>()V
     .locals 2
 
     .prologue
-    .line 15
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    .line 10
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
     .line 12
     new-instance v0, Ljava/util/ArrayList;
@@ -24,18 +42,29 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/c/a;->izz:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/c/a;->iVV:Ljava/util/ArrayList;
 
-    .line 16
+    const-class v0, Lcom/tencent/mm/e/a/gx;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/c/a;->kum:I
+
     return-void
 .end method
 
 .method public static a(Ljava/lang/String;Lcom/tencent/mm/pluginsdk/c/a;)V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 21
-    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/c/a;->izz:Ljava/util/ArrayList;
+    .line 17
+    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/c/a;->iVV:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -43,42 +72,38 @@
 
     if-nez v0, :cond_0
 
-    .line 22
-    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/c/a;->izz:Ljava/util/ArrayList;
+    .line 18
+    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/c/a;->iVV:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 24
+    .line 20
     :cond_0
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "MStorageNotify"
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
 
-    invoke-virtual {v0, v1, p1}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    .line 21
+    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/c/e;->Bv(Ljava/lang/String;)Lcom/tencent/mm/e/a/na;
 
-    .line 25
-    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/c/e;->zz(Ljava/lang/String;)Lcom/tencent/mm/d/a/mn;
-
-    .line 26
+    .line 22
     return-void
 .end method
 
 .method public static b(Ljava/lang/String;Lcom/tencent/mm/pluginsdk/c/a;)V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 29
-    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/c/e;->zA(Ljava/lang/String;)V
+    .line 25
+    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/c/e;->Bw(Ljava/lang/String;)V
 
-    .line 30
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 26
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "MStorageNotify"
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
-    invoke-virtual {v0, v1, p1}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 31
-    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/c/a;->izz:Ljava/util/ArrayList;
+    .line 27
+    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/c/a;->iVV:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -86,44 +111,48 @@
 
     if-eqz v0, :cond_0
 
-    .line 32
-    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/c/a;->izz:Ljava/util/ArrayList;
+    .line 28
+    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/c/a;->iVV:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 34
+    .line 30
     :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 2
 
     .prologue
-    .line 38
-    instance-of v0, p1, Lcom/tencent/mm/d/a/gm;
+    .line 10
+    check-cast p1, Lcom/tencent/mm/e/a/gx;
+
+    instance-of v0, p1, Lcom/tencent/mm/e/a/gx;
 
     if-eqz v0, :cond_0
 
-    .line 39
-    check-cast p1, Lcom/tencent/mm/d/a/gm;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/gx;->anV:Lcom/tencent/mm/e/a/gx$a;
 
-    .line 40
-    iget-object v0, p1, Lcom/tencent/mm/d/a/gm;->aBD:Lcom/tencent/mm/d/a/gm$a;
-
-    iget-object v0, v0, Lcom/tencent/mm/d/a/gm$a;->aBE:Lcom/tencent/mm/sdk/c/b;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/gx$a;->anW:Lcom/tencent/mm/sdk/c/b;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/c/a;->izz:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/c/a;->iVV:Ljava/util/ArrayList;
 
-    iget-object v1, p1, Lcom/tencent/mm/d/a/gm;->aBD:Lcom/tencent/mm/d/a/gm$a;
+    iget-object v1, p1, Lcom/tencent/mm/e/a/gx;->anV:Lcom/tencent/mm/e/a/gx$a;
 
-    iget-object v1, v1, Lcom/tencent/mm/d/a/gm$a;->aBE:Lcom/tencent/mm/sdk/c/b;
+    iget-object v1, v1, Lcom/tencent/mm/e/a/gx$a;->anW:Lcom/tencent/mm/sdk/c/b;
 
-    iget-object v1, v1, Lcom/tencent/mm/sdk/c/b;->id:Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -131,19 +160,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 41
-    iget-object v0, p1, Lcom/tencent/mm/d/a/gm;->aBD:Lcom/tencent/mm/d/a/gm$a;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/gx;->anV:Lcom/tencent/mm/e/a/gx$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/gm$a;->aBE:Lcom/tencent/mm/sdk/c/b;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/gx$a;->anW:Lcom/tencent/mm/sdk/c/b;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/c/a;->g(Lcom/tencent/mm/sdk/c/b;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/c/a;->v(Lcom/tencent/mm/sdk/c/b;)V
 
-    .line 44
     :cond_0
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public abstract g(Lcom/tencent/mm/sdk/c/b;)V
+.method public abstract v(Lcom/tencent/mm/sdk/c/b;)V
 .end method

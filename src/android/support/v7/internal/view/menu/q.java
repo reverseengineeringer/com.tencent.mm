@@ -17,53 +17,53 @@ final class q
   
   public final void clearHeader()
   {
-    ((SubMenu)lr).clearHeader();
+    ((SubMenu)lI).clearHeader();
   }
   
   public final MenuItem getItem()
   {
-    return f(((SubMenu)lr).getItem());
+    return f(((SubMenu)lI).getItem());
   }
   
   public final SubMenu setHeaderIcon(int paramInt)
   {
-    ((SubMenu)lr).setHeaderIcon(paramInt);
+    ((SubMenu)lI).setHeaderIcon(paramInt);
     return this;
   }
   
   public final SubMenu setHeaderIcon(Drawable paramDrawable)
   {
-    ((SubMenu)lr).setHeaderIcon(paramDrawable);
+    ((SubMenu)lI).setHeaderIcon(paramDrawable);
     return this;
   }
   
   public final SubMenu setHeaderTitle(int paramInt)
   {
-    ((SubMenu)lr).setHeaderTitle(paramInt);
+    ((SubMenu)lI).setHeaderTitle(paramInt);
     return this;
   }
   
   public final SubMenu setHeaderTitle(CharSequence paramCharSequence)
   {
-    ((SubMenu)lr).setHeaderTitle(paramCharSequence);
+    ((SubMenu)lI).setHeaderTitle(paramCharSequence);
     return this;
   }
   
   public final SubMenu setHeaderView(View paramView)
   {
-    ((SubMenu)lr).setHeaderView(paramView);
+    ((SubMenu)lI).setHeaderView(paramView);
     return this;
   }
   
   public final SubMenu setIcon(int paramInt)
   {
-    ((SubMenu)lr).setIcon(paramInt);
+    ((SubMenu)lI).setIcon(paramInt);
     return this;
   }
   
   public final SubMenu setIcon(Drawable paramDrawable)
   {
-    ((SubMenu)lr).setIcon(paramDrawable);
+    ((SubMenu)lI).setIcon(paramDrawable);
     return this;
   }
 }

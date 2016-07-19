@@ -3,49 +3,49 @@ package com.tencent.mm.plugin.sight.draft.ui;
 import android.graphics.Bitmap;
 import com.tencent.mm.a.f;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.d;
 import java.lang.ref.WeakReference;
 
 public abstract class c
 {
-  f gzH = new f(24);
-  Bitmap gzI;
+  f<String, Bitmap> gGj = new f(24);
+  Bitmap gGk;
   
-  private Bitmap awj()
+  private Bitmap ayH()
   {
-    if (gzI == null) {
-      gzI = d.pk(2130903662);
+    if (gGk == null) {
+      gGk = d.ra(2131165732);
     }
-    return gzI;
+    return gGk;
   }
   
-  public final Bitmap h(String paramString1, String paramString2, boolean paramBoolean)
+  public final Bitmap k(String paramString1, String paramString2, boolean paramBoolean)
   {
-    if (ay.kz(paramString1)) {
-      localObject = awj();
+    if (be.kf(paramString1)) {
+      localObject = ayH();
     }
     Bitmap localBitmap;
     do
     {
       return (Bitmap)localObject;
-      localBitmap = (Bitmap)gzH.get(paramString1);
+      localBitmap = (Bitmap)gGj.get(paramString1);
       localObject = localBitmap;
     } while (localBitmap != null);
     Object localObject = new a((byte)0);
-    buL = paramString1;
+    DF = paramString1;
     path = paramString2;
-    gzJ = paramBoolean;
-    gzK = new WeakReference(this);
+    gGl = paramBoolean;
+    gGm = new WeakReference(this);
     if (paramBoolean) {
-      ah.tv().r((Runnable)localObject);
+      ah.tw().t((Runnable)localObject);
     }
     do
     {
-      return awj();
+      return ayH();
       ((a)localObject).run();
-      paramString1 = (Bitmap)gzH.get(paramString1);
+      paramString1 = (Bitmap)gGj.get(paramString1);
     } while (paramString1 == null);
     return paramString1;
   }
@@ -55,26 +55,26 @@ public abstract class c
   private static final class a
     implements Runnable
   {
-    String buL;
-    boolean gzJ;
-    WeakReference gzK;
+    String DF;
+    boolean gGl;
+    WeakReference<c> gGm;
     String path;
     
     public final void run()
     {
-      Bitmap localBitmap = d.CE(path);
-      Object localObject = (c)gzK.get();
+      Bitmap localBitmap = d.ER(path);
+      Object localObject = (c)gGm.get();
       if (localObject != null)
       {
-        if ((!ay.kz(buL)) && (localBitmap != null)) {
-          gzH.put(buL, localBitmap);
+        if ((!be.kf(DF)) && (localBitmap != null)) {
+          gGj.put(DF, localBitmap);
         }
         localObject = new c.b((byte)0);
-        buL = buL;
-        efe = localBitmap;
-        gzK = gzK;
-        if (gzJ) {
-          ab.j((Runnable)localObject);
+        DF = DF;
+        eiG = localBitmap;
+        gGm = gGm;
+        if (gGl) {
+          ad.k((Runnable)localObject);
         }
       }
     }
@@ -83,15 +83,15 @@ public abstract class c
   private static final class b
     implements Runnable
   {
-    String buL;
-    Bitmap efe;
-    WeakReference gzK;
+    String DF;
+    Bitmap eiG;
+    WeakReference<c> gGm;
     
     public final void run()
     {
-      c localc = (c)gzK.get();
+      c localc = (c)gGm.get();
       if (localc != null) {
-        localc.o(buL, efe);
+        localc.o(DF, eiG);
       }
     }
   }

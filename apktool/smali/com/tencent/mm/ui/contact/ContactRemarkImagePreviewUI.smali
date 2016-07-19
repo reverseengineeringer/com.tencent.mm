@@ -12,17 +12,17 @@
 
 
 # instance fields
-.field private dQq:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+.field private dSv:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-.field private ljk:Landroid/view/View;
+.field private lJv:Landroid/view/View;
 
-.field private ljl:Ljava/lang/String;
+.field private lJw:Ljava/lang/String;
 
-.field private ljm:Z
+.field private lJx:Z
 
-.field private ljn:Z
+.field private lJy:Z
 
-.field private ljo:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;
+.field private lJz:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;
 
 .field private username:Ljava/lang/String;
 
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 54
+    .line 55
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
-    .line 313
+    .line 316
     return-void
 .end method
 
@@ -43,8 +43,8 @@
     .locals 0
 
     .prologue
-    .line 54
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->hV(Z)V
+    .line 55
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->iy(Z)V
 
     return-void
 .end method
@@ -53,8 +53,8 @@
     .locals 1
 
     .prologue
-    .line 54
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->ljn:Z
+    .line 55
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->lJy:Z
 
     return v0
 .end method
@@ -63,8 +63,8 @@
     .locals 1
 
     .prologue
-    .line 54
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->ljm:Z
+    .line 55
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->lJx:Z
 
     return v0
 .end method
@@ -73,73 +73,75 @@
     .locals 1
 
     .prologue
-    .line 54
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->ljl:Ljava/lang/String;
+    .line 55
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->lJw:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method static synthetic d(Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;)V
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 54
-    new-instance v0, Lcom/tencent/mm/d/a/ay;
+    .line 55
+    new-instance v0, Lcom/tencent/mm/e/a/bb;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/ay;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/bb;-><init>()V
 
     const/4 v1, 0x6
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->ljl:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->lJw:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/model/d;->a(Lcom/tencent/mm/d/a/ay;ILjava/lang/String;)Z
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/model/d;->a(Lcom/tencent/mm/e/a/bb;ILjava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/ay;->aue:Lcom/tencent/mm/d/a/ay$b;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/bb;->afR:Lcom/tencent/mm/e/a/bb$b;
 
-    iget v0, v0, Lcom/tencent/mm/d/a/ay$b;->ret:I
+    iget v0, v0, Lcom/tencent/mm/e/a/bb$b;->ret:I
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    const/16 v0, 0x2e
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    const v1, 0x7f08077e
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
-
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
-
-    const v2, 0x7f0b0e8f
-
-    invoke-virtual {v1, v2}, Landroid/support/v7/app/ActionBarActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    const v2, 0x7f080747
+
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, p0, v1, v2, v3}, Lcom/tencent/mm/ui/snackbar/a;->a(ILandroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/ui/snackbar/b$b;)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/ay;->aud:Lcom/tencent/mm/d/a/ay$a;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/bb;->afQ:Lcom/tencent/mm/e/a/bb$a;
 
-    iget v0, v0, Lcom/tencent/mm/d/a/ay$a;->type:I
+    iget v0, v0, Lcom/tencent/mm/e/a/bb$a;->type:I
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v0, v2}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+    invoke-static {v1, v0, v2}, Lcom/tencent/mm/ui/base/g;->f(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     goto :goto_0
 .end method
@@ -148,63 +150,63 @@
     .locals 1
 
     .prologue
-    .line 54
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->ljk:Landroid/view/View;
+    .line 55
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->lJv:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method private hV(Z)V
+.method private iy(Z)V
     .locals 3
 
     .prologue
-    .line 255
+    .line 258
     if-eqz p1, :cond_0
 
-    .line 256
+    .line 259
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 257
+    .line 260
     const-string/jumbo v1, "response_delete"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 258
+    .line 261
     const/4 v1, -0x1
 
     invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->setResult(ILandroid/content/Intent;)V
 
-    .line 260
+    .line 263
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->finish()V
 
-    .line 261
+    .line 264
     return-void
 .end method
 
 
 # virtual methods
-.method protected final Gb()V
+.method protected final Gy()V
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
-    .line 105
-    const v0, 0x7f0701b3
+    .line 106
+    const v0, 0x7f100547
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->ljk:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->lJv:Landroid/view/View;
 
-    .line 106
-    const v0, 0x7f0700c5
+    .line 107
+    const v0, 0x7f100548
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->findViewById(I)Landroid/view/View;
 
@@ -212,23 +214,23 @@
 
     check-cast v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->dQq:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->dSv:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    .line 108
-    const v0, 0x7f0b0469
+    .line 109
+    const v0, 0x7f080c4e
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->qb(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->rR(I)V
 
-    .line 110
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->dQq:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 111
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->dSv:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->setVerticalFadingEdgeEnabled(Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->dQq:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->dSv:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->setHorizontalFadingEdgeEnabled(Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->dQq:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->dSv:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/k;->H(Landroid/view/View;)V
 
@@ -236,21 +238,21 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;-><init>(Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->ljo:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->lJz:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->ljo:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->lJz:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->ljl:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->lJw:Ljava/lang/String;
 
     iput-object v1, v0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;->imagePath:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->dQq:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->dSv:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->ljo:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->lJz:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->dQq:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->dSv:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     new-instance v1, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$3;
 
@@ -258,8 +260,8 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 112
-    const v0, 0x7f0301a8
+    .line 113
+    const v0, 0x7f07000f
 
     new-instance v1, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$1;
 
@@ -267,14 +269,14 @@
 
     invoke-virtual {p0, v2, v0, v1}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->a(IILandroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 230
+    .line 231
     new-instance v0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$2;-><init>(Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;)V
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 238
+    .line 239
     return-void
 .end method
 
@@ -282,8 +284,8 @@
     .locals 1
 
     .prologue
-    .line 100
-    const v0, 0x7f0a007c
+    .line 101
+    const v0, 0x7f030165
 
     return v0
 .end method
@@ -294,10 +296,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 70
+    .line 71
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 74
+    .line 75
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -310,7 +312,7 @@
 
     iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->username:Ljava/lang/String;
 
-    .line 75
+    .line 76
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -321,9 +323,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->ljl:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->lJw:Ljava/lang/String;
 
-    .line 76
+    .line 77
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -334,9 +336,9 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->ljm:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->lJx:Z
 
-    .line 77
+    .line 78
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -347,27 +349,27 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->ljn:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->lJy:Z
 
-    .line 79
+    .line 80
     iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->username:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 80
+    .line 81
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->finish()V
 
-    .line 85
+    .line 86
     :goto_0
     return-void
 
-    .line 84
+    .line 85
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->Gb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->Gy()V
 
     goto :goto_0
 .end method
@@ -376,10 +378,10 @@
     .locals 0
 
     .prologue
-    .line 95
+    .line 96
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
 
-    .line 96
+    .line 97
     return-void
 .end method
 
@@ -387,7 +389,7 @@
     .locals 1
 
     .prologue
-    .line 286
+    .line 289
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_0
@@ -398,15 +400,15 @@
 
     if-nez v0, :cond_0
 
-    .line 287
+    .line 290
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->hV(Z)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->iy(Z)V
 
-    .line 288
+    .line 291
     const/4 v0, 0x1
 
-    .line 290
+    .line 293
     :goto_0
     return v0
 
@@ -422,9 +424,9 @@
     .locals 0
 
     .prologue
-    .line 89
+    .line 90
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
 
-    .line 90
+    .line 91
     return-void
 .end method

@@ -7,17 +7,17 @@ import com.tencent.mm.ui.MMImageView;
 
 final class SnsMsgUI$a$a
 {
-  View cHp;
-  TextView cHq;
-  TextView dFw;
-  TextView fya;
-  long gHt;
-  ImageView hga;
-  TextView hgb;
-  ImageView hgc;
-  TextView hgd;
-  MMImageView hge;
-  ImageView hgf;
+  View cEt;
+  TextView cEu;
+  TextView dGX;
+  TextView fHe;
+  long gOx;
+  ImageView huQ;
+  TextView huR;
+  ImageView huS;
+  TextView huT;
+  MMImageView huU;
+  ImageView huV;
   
   SnsMsgUI$a$a(SnsMsgUI.a parama) {}
 }

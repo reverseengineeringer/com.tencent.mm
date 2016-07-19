@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/base/stub/d;->FB()V
+    value = Lcom/tencent/mm/plugin/base/stub/d;->FX()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic cAW:Lcom/tencent/mm/plugin/base/stub/d;
+.field final synthetic cxR:Lcom/tencent/mm/plugin/base/stub/d;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 72
-    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/d$1;->cAW:Lcom/tencent/mm/plugin/base/stub/d;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/d$1;->cxR:Lcom/tencent/mm/plugin/base/stub/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,35 +41,35 @@
 
     .prologue
     .line 76
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyK:Lcom/tencent/mm/pluginsdk/i$p;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVg:Lcom/tencent/mm/pluginsdk/i$p;
 
     .line 77
     if-eqz v0, :cond_0
 
     .line 78
-    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/d$1;->cAW:Lcom/tencent/mm/plugin/base/stub/d;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/d$1;->cxR:Lcom/tencent/mm/plugin/base/stub/d;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/base/stub/d;->cAU:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/base/stub/d;->cxP:Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->sh()Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/base/stub/d$1;->cAW:Lcom/tencent/mm/plugin/base/stub/d;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/base/stub/d$1;->cxR:Lcom/tencent/mm/plugin/base/stub/d;
 
     iget-object v3, v3, Lcom/tencent/mm/plugin/base/stub/d;->appId:Ljava/lang/String;
 
-    invoke-interface {v0, v1, v2, v3}, Lcom/tencent/mm/pluginsdk/i$p;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2, v3}, Lcom/tencent/mm/pluginsdk/i$p;->y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 80
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/d$1;->cAW:Lcom/tencent/mm/plugin/base/stub/d;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/d$1;->cxR:Lcom/tencent/mm/plugin/base/stub/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/base/stub/d;->cAV:Lcom/tencent/mm/plugin/base/stub/d$a;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/base/stub/d;->cxQ:Lcom/tencent/mm/plugin/base/stub/d$a;
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/base/stub/d$a;->bq(Z)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/base/stub/d$a;->aY(Z)V
 
     .line 81
     return-void

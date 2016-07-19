@@ -13,29 +13,29 @@ final class h
   static final class a
     implements MenuItem.OnActionExpandListener
   {
-    private h.b eG;
+    private h.b fc;
     
     public a(h.b paramb)
     {
-      eG = paramb;
+      fc = paramb;
     }
     
     public final boolean onMenuItemActionCollapse(MenuItem paramMenuItem)
     {
-      return eG.ag();
+      return fc.ae();
     }
     
     public final boolean onMenuItemActionExpand(MenuItem paramMenuItem)
     {
-      return eG.af();
+      return fc.ad();
     }
   }
   
   static abstract interface b
   {
-    public abstract boolean af();
+    public abstract boolean ad();
     
-    public abstract boolean ag();
+    public abstract boolean ae();
   }
 }
 

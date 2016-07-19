@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+.field final synthetic lrR:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 771
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$4;->kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$4;->lrR:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,10 +38,19 @@
 # virtual methods
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
     .line 775
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$4;->kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$4;->lrR:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
     invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/chatting/ChatFooterCustom;->onClick(Landroid/view/View;)V
 

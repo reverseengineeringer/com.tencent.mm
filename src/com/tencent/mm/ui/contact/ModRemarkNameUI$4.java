@@ -12,10 +12,10 @@ final class ModRemarkNameUI$4
   
   public final void onClick(View paramView)
   {
-    ModRemarkNameUI.h(llQ).setVisibility(0);
-    ModRemarkNameUI.i(llQ).setVisibility(8);
-    ModRemarkNameUI.j(llQ).requestFocus();
-    llQ.apz();
+    ModRemarkNameUI.h(lMe).setVisibility(0);
+    ModRemarkNameUI.i(lMe).setVisibility(8);
+    ModRemarkNameUI.j(lMe).requestFocus();
+    lMe.asv();
   }
 }
 

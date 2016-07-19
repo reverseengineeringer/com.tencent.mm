@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.voicesearch;
 
 import android.graphics.Bitmap;
-import com.tencent.mm.q.b;
+import com.tencent.mm.s.b;
 import com.tencent.mm.ui.applet.b.a;
 
 final class a$1
@@ -9,7 +9,7 @@ final class a$1
 {
   a$1(a parama) {}
   
-  public final Bitmap hw(String paramString)
+  public final Bitmap hO(String paramString)
   {
     return b.a(paramString, false, -1);
   }

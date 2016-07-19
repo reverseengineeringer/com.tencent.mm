@@ -5,8 +5,8 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import com.tencent.mm.model.h;
 import com.tencent.mm.pluginsdk.ui.a.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.g;
 
 final class ChatFooter$22
@@ -14,21 +14,21 @@ final class ChatFooter$22
 {
   ChatFooter$22(ChatFooter paramChatFooter) {}
   
-  public final void AE(final String paramString)
+  public final void CF(final String paramString)
   {
-    u.e("!32@/B4Tb64lLpJ/7uFBkt7iPG30XecwVaGJ", "hakon onImageReceived, %s", new Object[] { paramString });
-    if ((ay.kz(ChatFooter.c(iLO))) || (ay.kz(paramString)))
+    v.e("MicroMsg.ChatFooter", "hakon onImageReceived, %s", new Object[] { paramString });
+    if ((be.kf(ChatFooter.c(jiL))) || (be.kf(paramString)))
     {
-      u.e("!32@/B4Tb64lLpJ/7uFBkt7iPG30XecwVaGJ", "onImageReceived, error args");
+      v.e("MicroMsg.ChatFooter", "onImageReceived, error args");
       return;
     }
-    g.a(iLO.getContext(), iLO.getContext().getString(2131431336), "", new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    g.a(jiL.getContext(), jiL.getContext().getString(2131232548), "", new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
         paramAnonymousInt = 1;
-        boolean bool = h.b(paramString, ChatFooter.c(iLO), true);
-        paramAnonymousDialogInterface = iLO;
+        boolean bool = h.b(paramString, ChatFooter.c(jiL), true);
+        paramAnonymousDialogInterface = jiL;
         if (bool) {}
         for (;;)
         {

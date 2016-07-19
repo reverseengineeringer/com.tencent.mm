@@ -10,32 +10,32 @@ import java.util.ArrayList;
 
 public final class p$d
 {
-  CharSequence cH;
-  CharSequence cI;
-  public PendingIntent cJ;
-  PendingIntent cK;
-  RemoteViews cL;
-  public Bitmap cM;
-  CharSequence cN;
-  int cO;
-  boolean cP = true;
-  boolean cQ;
-  p.p cR;
-  CharSequence cS;
-  int cT;
-  int cU;
-  boolean cV;
-  String cW;
-  boolean cX;
-  String cY;
-  ArrayList cZ = new ArrayList();
-  public boolean da = false;
-  public String db;
-  int dc = 0;
-  int dd = 0;
-  Notification de;
-  public Notification dg = new Notification();
-  public ArrayList dh;
+  CharSequence cX;
+  CharSequence cY;
+  public PendingIntent cZ;
+  PendingIntent da;
+  RemoteViews db;
+  public Bitmap dc;
+  CharSequence dd;
+  int de;
+  boolean dg = true;
+  boolean dh;
+  p.o di;
+  CharSequence dj;
+  int dk;
+  int dl;
+  boolean dm;
+  String dn;
+  boolean jdField_do;
+  String dp;
+  ArrayList<p.a> dq = new ArrayList();
+  public boolean dr = false;
+  public String ds;
+  int dt = 0;
+  int du = 0;
+  Notification dv;
+  public Notification dw = new Notification();
+  public ArrayList<String> dx;
   Context mContext;
   Bundle mExtras;
   int mPriority;
@@ -43,10 +43,10 @@ public final class p$d
   public p$d(Context paramContext)
   {
     mContext = paramContext;
-    dg.when = System.currentTimeMillis();
-    dg.audioStreamType = -1;
+    dw.when = System.currentTimeMillis();
+    dw.audioStreamType = -1;
     mPriority = 0;
-    dh = new ArrayList();
+    dx = new ArrayList();
   }
   
   protected static CharSequence d(CharSequence paramCharSequence)
@@ -60,44 +60,50 @@ public final class p$d
   
   public final d a(int paramInt, CharSequence paramCharSequence, PendingIntent paramPendingIntent)
   {
-    cZ.add(new p.a(paramInt, paramCharSequence, paramPendingIntent));
+    dq.add(new p.a(paramInt, paramCharSequence, paramPendingIntent));
     return this;
   }
   
   public final d a(CharSequence paramCharSequence)
   {
-    cH = d(paramCharSequence);
+    cX = d(paramCharSequence);
     return this;
   }
   
   public final d b(int paramInt1, int paramInt2, boolean paramBoolean)
   {
-    cT = paramInt1;
-    cU = paramInt2;
-    cV = paramBoolean;
+    dk = paramInt1;
+    dl = paramInt2;
+    dm = paramBoolean;
     return this;
   }
   
   public final d b(CharSequence paramCharSequence)
   {
-    cI = d(paramCharSequence);
+    cY = d(paramCharSequence);
     return this;
   }
   
   public final Notification build()
   {
-    return p.W().b(this);
+    return p.V().b(this);
   }
   
   public final d c(long paramLong)
   {
-    dg.when = paramLong;
+    dw.when = paramLong;
     return this;
   }
   
   public final d c(CharSequence paramCharSequence)
   {
-    dg.tickerText = d(paramCharSequence);
+    dw.tickerText = d(paramCharSequence);
+    return this;
+  }
+  
+  public final d i(boolean paramBoolean)
+  {
+    i(16, paramBoolean);
     return this;
   }
   
@@ -105,23 +111,17 @@ public final class p$d
   {
     if (paramBoolean)
     {
-      localNotification = dg;
+      localNotification = dw;
       flags |= paramInt;
       return;
     }
-    Notification localNotification = dg;
+    Notification localNotification = dw;
     flags &= (paramInt ^ 0xFFFFFFFF);
   }
   
-  public final d j(boolean paramBoolean)
+  public final d m(int paramInt)
   {
-    i(16, paramBoolean);
-    return this;
-  }
-  
-  public final d l(int paramInt)
-  {
-    dg.icon = paramInt;
+    dw.icon = paramInt;
     return this;
   }
 }

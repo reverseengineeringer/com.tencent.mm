@@ -4,28 +4,28 @@
 
 
 # instance fields
-.field public iGa:I
+.field public jcV:I
 
-.field public iGb:Z
+.field public jcW:Z
 
-.field public iGc:I
+.field public jcX:I
 
-.field public iGd:Z
+.field public jcY:Z
 
-.field public iGe:I
+.field public jcZ:I
 
-.field public iGf:Z
+.field public jda:Z
 
-.field public iGg:I
+.field public jdb:I
 
-.field public iGh:Z
+.field public jdc:Z
 
 .field private version:I
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
-    .locals 5
+    .locals 6
 
     .prologue
     const/4 v1, 0x0
@@ -39,40 +39,38 @@
     .line 17
     const v0, -0x777778
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGa:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jcV:I
 
     .line 18
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGb:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jcW:Z
 
     .line 19
     const v0, -0x5f000001
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGc:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jcX:I
 
     .line 20
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGd:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jcY:Z
 
     .line 22
     const/high16 v0, -0x1000000
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGe:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jcZ:I
 
     .line 23
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGf:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jda:Z
 
     .line 24
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGg:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jdb:I
 
     .line 25
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGh:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jdc:Z
 
     .line 28
     const-string/jumbo v0, "chatbg"
 
     .line 29
-    const/4 v1, 0x0
-
-    invoke-static {p1, v0, v1}, Lcom/tencent/mm/sdk/platformtools/q;->J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/r;->cr(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v1
 
@@ -121,7 +119,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->d(Ljava/lang/Integer;)I
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Integer;)I
 
     move-result v0
 
@@ -156,21 +154,21 @@
 
     invoke-static {v0, v3}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    const-wide/32 v3, -0x777778
+    const-wide/32 v4, -0x777778
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Long;J)J
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Long;J)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    long-to-int v0, v3
+    long-to-int v0, v4
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGa:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jcV:I
 
     .line 37
     new-instance v0, Ljava/lang/StringBuilder;
@@ -201,11 +199,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->d(Ljava/lang/Boolean;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->c(Ljava/lang/Boolean;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGb:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jcW:Z
 
     .line 38
     new-instance v0, Ljava/lang/StringBuilder;
@@ -236,21 +234,21 @@
 
     invoke-static {v0, v3}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Long;J)J
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Long;J)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    long-to-int v0, v3
+    long-to-int v0, v4
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGc:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jcX:I
 
     .line 39
     new-instance v0, Ljava/lang/StringBuilder;
@@ -281,11 +279,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->d(Ljava/lang/Boolean;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->c(Ljava/lang/Boolean;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGd:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jcY:Z
 
     .line 41
     new-instance v0, Ljava/lang/StringBuilder;
@@ -316,21 +314,21 @@
 
     invoke-static {v0, v3}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    const-wide/32 v3, -0x1000000
+    const-wide/32 v4, -0x1000000
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Long;J)J
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Long;J)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    long-to-int v0, v3
+    long-to-int v0, v4
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGe:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jcZ:I
 
     .line 42
     new-instance v0, Ljava/lang/StringBuilder;
@@ -361,11 +359,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->d(Ljava/lang/Boolean;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->c(Ljava/lang/Boolean;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGf:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jda:Z
 
     .line 43
     new-instance v0, Ljava/lang/StringBuilder;
@@ -396,21 +394,21 @@
 
     invoke-static {v0, v3}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Long;J)J
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Long;J)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    long-to-int v0, v3
+    long-to-int v0, v4
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGg:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jdb:I
 
     .line 44
     new-instance v0, Ljava/lang/StringBuilder;
@@ -441,11 +439,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->d(Ljava/lang/Boolean;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->c(Ljava/lang/Boolean;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->iGh:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/e;->jdc:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -457,11 +455,11 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpIvaLo4mBOuAvlEfDqYIBEB"
+    const-string/jumbo v0, "MicroMsg.ChatBgAttr"
 
     const-string/jumbo v1, "parse chatbgattr failed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

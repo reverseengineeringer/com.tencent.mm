@@ -7,7 +7,7 @@ final class MainSightContainerView$17
   
   public final void run()
   {
-    gCA.n(true, true);
+    gJb.q(true, true);
   }
 }
 

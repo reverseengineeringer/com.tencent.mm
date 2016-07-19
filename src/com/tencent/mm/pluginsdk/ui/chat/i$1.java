@@ -11,10 +11,10 @@ final class i$1
   
   public final void onClick(View paramView)
   {
-    if ((iMq.iMp != null) && (iMq.iMl != null)) {
-      iMq.iMp.AI(iMq.iMl.iMj);
+    if ((jjn.jjm != null) && (jjn.jji != null)) {
+      jjn.jjm.CO(jjn.jji.jjg);
     }
-    iMq.iMm.dismiss();
+    jjn.jjj.dismiss();
   }
 }
 

@@ -1,6 +1,6 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.d.a.lj;
+import com.tencent.mm.e.a.lp;
 import com.tencent.mm.sdk.c.a;
 import com.tencent.mm.ui.widget.MMEditText.a;
 
@@ -9,14 +9,14 @@ final class SightUploadUI$1
 {
   SightUploadUI$1(SightUploadUI paramSightUploadUI) {}
   
-  public final void ahl()
+  public final void ajQ()
   {
-    hbd.age();
-    lj locallj = new lj();
-    aHJ.type = 0;
-    aHJ.aHL = false;
-    a.jUF.j(locallj);
-    hbd.finish();
+    hoE.aiI();
+    lp locallp = new lp();
+    atZ.type = 0;
+    atZ.aub = false;
+    a.kug.y(locallp);
+    hoE.finish();
   }
 }
 

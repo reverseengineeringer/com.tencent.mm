@@ -7,7 +7,7 @@ final class ar$3$1
   
   public final void run()
   {
-    bBL.bBH.uh();
+    buT.buP.ui();
   }
 }
 

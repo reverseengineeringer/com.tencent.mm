@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/tencent/mm/protocal/s$b;,
         Lcom/tencent/mm/protocal/s$a;
     }
 .end annotation

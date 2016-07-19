@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/AbsListView$OnScrollListener;
+.implements Landroid/widget/AdapterView$OnItemLongClickListener;
 
 
 # annotations
@@ -18,16 +18,20 @@
 
 
 # instance fields
-.field final synthetic lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+.field final synthetic cED:Lcom/tencent/mm/ui/tools/m;
+
+.field final synthetic lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)V
+.method constructor <init>(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;Lcom/tencent/mm/ui/tools/m;)V
     .locals 0
 
     .prologue
-    .line 224
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$12;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+    .line 348
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$12;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+
+    iput-object p2, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$12;->cED:Lcom/tencent/mm/ui/tools/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,25 +40,75 @@
 
 
 # virtual methods
-.method public final onScroll(Landroid/widget/AbsListView;III)V
-    .locals 0
+.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
+    .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)Z"
+        }
+    .end annotation
 
     .prologue
-    .line 233
-    return-void
-.end method
+    const/4 v8, 0x1
 
-.method public final onScrollStateChanged(Landroid/widget/AbsListView;I)V
-    .locals 1
+    .line 352
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$12;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
-    .prologue
-    .line 227
-    invoke-static {}, Lcom/tencent/mm/ab/n;->As()Lcom/tencent/mm/ab/a/a;
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->e(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/conversation/EnterpriseFullHeightListView;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ab/a/a;->dz(I)V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/conversation/EnterpriseFullHeightListView;->getHeaderViewsCount()I
 
-    .line 228
-    return-void
+    move-result v0
+
+    if-ge p3, v0, :cond_0
+
+    .line 353
+    const-string/jumbo v0, "MicroMsg.BizChatConversationFmUI"
+
+    const-string/jumbo v1, "on header view long click, ignore"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 358
+    :goto_0
+    return v8
+
+    .line 356
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$12;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->e(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/conversation/EnterpriseFullHeightListView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/conversation/EnterpriseFullHeightListView;->getHeaderViewsCount()I
+
+    move-result v0
+
+    sub-int v3, p3, v0
+
+    .line 357
+    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$12;->cED:Lcom/tencent/mm/ui/tools/m;
+
+    iget-object v6, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$12;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$12;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->f(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/base/n$d;
+
+    move-result-object v7
+
+    move-object v2, p2
+
+    move-wide v4, p4
+
+    invoke-virtual/range {v1 .. v7}, Lcom/tencent/mm/ui/tools/m;->a(Landroid/view/View;IJLandroid/view/View$OnCreateContextMenuListener;Lcom/tencent/mm/ui/base/n$d;)V
+
+    goto :goto_0
 .end method

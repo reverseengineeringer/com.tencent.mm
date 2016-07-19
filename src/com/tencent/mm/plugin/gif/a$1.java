@@ -7,8 +7,8 @@ final class a$1
   
   public final void run()
   {
-    if (a.a(ewP) != null) {
-      a.a(ewP).onAnimationEnd();
+    if (a.a(eDi) != null) {
+      a.a(eDi).onAnimationEnd();
     }
   }
 }

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPv:Lcom/tencent/mm/ui/bindqq/BindQQUI;
+.field final synthetic loL:Lcom/tencent/mm/ui/bindqq/BindQQUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 154
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$7;->kPv:Lcom/tencent/mm/ui/bindqq/BindQQUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$7;->loL:Lcom/tencent/mm/ui/bindqq/BindQQUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,11 +43,11 @@
     .line 158
     new-instance v0, Lcom/tencent/mm/ui/tools/m;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$7;->kPv:Lcom/tencent/mm/ui/bindqq/BindQQUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$7;->loL:Lcom/tencent/mm/ui/bindqq/BindQQUI;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/ui/tools/m;-><init>(Landroid/content/Context;)V
 
@@ -56,17 +56,17 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/ui/bindqq/BindQQUI$7$1;-><init>(Lcom/tencent/mm/ui/bindqq/BindQQUI$7;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/tools/m;->hle:Lcom/tencent/mm/ui/base/n$c;
+    iput-object v1, v0, Lcom/tencent/mm/ui/tools/m;->hoS:Lcom/tencent/mm/ui/base/n$c;
 
     .line 168
     new-instance v1, Lcom/tencent/mm/ui/bindqq/BindQQUI$7$2;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/ui/bindqq/BindQQUI$7$2;-><init>(Lcom/tencent/mm/ui/bindqq/BindQQUI$7;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/tools/m;->hlf:Lcom/tencent/mm/ui/base/n$d;
+    iput-object v1, v0, Lcom/tencent/mm/ui/tools/m;->hoT:Lcom/tencent/mm/ui/base/n$d;
 
     .line 182
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/m;->biF()Landroid/app/Dialog;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/m;->boB()Landroid/app/Dialog;
 
     .line 183
     const/4 v0, 0x0

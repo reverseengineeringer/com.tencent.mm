@@ -3,54 +3,54 @@ package com.tencent.mm.ui.account;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.t;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.modelsimple.r;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
-import com.tencent.mm.ui.d.a.c;
-import com.tencent.mm.ui.d.a.c.a;
-import com.tencent.mm.ui.d.a.d;
+import com.tencent.mm.ui.e.a.c;
+import com.tencent.mm.ui.e.a.c.a;
+import com.tencent.mm.ui.e.a.d;
 
 final class FacebookLoginUI$a
   implements c.a
 {
   private FacebookLoginUI$a(FacebookLoginUI paramFacebookLoginUI) {}
   
-  public final void a(com.tencent.mm.ui.d.a.b paramb)
+  public final void a(com.tencent.mm.ui.e.a.b paramb)
   {
-    u.d("!44@/B4Tb64lLpKNEztPnVXez/m8ZdttX/a3Eg9smVocr9Y=", "onError:" + paramb.getMessage());
-    g.y(ksx, paramb.getMessage(), ksx.getString(2131429143));
-    FacebookLoginUI.hq(false);
-    com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + ksx.getClass().getName() + ",L14," + ah.fd("L14") + ",2");
+    v.d("MicroMsg.FacebookLoginUI", "onError:" + paramb.getMessage());
+    g.b(kRF, paramb.getMessage(), kRF.getString(2131231929), true);
+    FacebookLoginUI.hO(false);
+    com.tencent.mm.plugin.a.b.lm(ah.ty() + "," + kRF.getClass().getName() + ",L14," + ah.fq("L14") + ",2");
   }
   
   public final void a(d paramd)
   {
-    u.d("!44@/B4Tb64lLpKNEztPnVXez/m8ZdttX/a3Eg9smVocr9Y=", "onFacebookError:" + lqX);
-    g.y(ksx, paramd.getMessage(), ksx.getString(2131429143));
-    FacebookLoginUI.hq(false);
-    com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + ksx.getClass().getName() + ",L14," + ah.fd("L14") + ",2");
+    v.d("MicroMsg.FacebookLoginUI", "onFacebookError:" + lRC);
+    g.b(kRF, paramd.getMessage(), kRF.getString(2131231929), true);
+    FacebookLoginUI.hO(false);
+    com.tencent.mm.plugin.a.b.lm(ah.ty() + "," + kRF.getClass().getName() + ",L14," + ah.fq("L14") + ",2");
   }
   
-  public final void g(Bundle paramBundle)
+  public final void i(Bundle paramBundle)
   {
-    paramBundle = ksx.getString(2131430877);
-    String str = ksx.getString(2131429154);
-    FacebookLoginUI.a(ksx, ProgressDialog.show(ksx, paramBundle, str, true));
-    FacebookLoginUI.e(ksx).setOnCancelListener(FacebookLoginUI.d(ksx));
-    FacebookLoginUI.a(ksx, fksx).kMS);
-    u.i("!44@/B4Tb64lLpKNEztPnVXez/m8ZdttX/a3Eg9smVocr9Y=", "dkwt Ready to Facebook auth user[%s] token[%d][%s]", new Object[] { "facebook@wechat_auth", Integer.valueOf(FacebookLoginUI.a(ksx).length()), FacebookLoginUI.a(ksx).substring(0, 4) });
-    FacebookLoginUI.a(ksx, new t("facebook@wechat_auth", FacebookLoginUI.a(ksx), 0, "", "", "", 0, "", true, false));
-    ah.tE().d(FacebookLoginUI.b(ksx));
-    FacebookLoginUI.hq(true);
-    com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + ksx.getClass().getName() + ",L14," + ah.fd("L14") + ",2");
+    paramBundle = kRF.getString(2131231028);
+    String str = kRF.getString(2131232557);
+    FacebookLoginUI.a(kRF, ProgressDialog.show(kRF, paramBundle, str, true));
+    FacebookLoginUI.e(kRF).setOnCancelListener(FacebookLoginUI.d(kRF));
+    FacebookLoginUI.a(kRF, fkRF).lmh);
+    v.i("MicroMsg.FacebookLoginUI", "dkwt Ready to Facebook auth user[%s] token[%d][%s]", new Object[] { "facebook@wechat_auth", Integer.valueOf(FacebookLoginUI.a(kRF).length()), FacebookLoginUI.a(kRF).substring(0, 4) });
+    FacebookLoginUI.a(kRF, new r("facebook@wechat_auth", FacebookLoginUI.a(kRF), 0, "", "", "", 0, "", true, false));
+    ah.tF().a(FacebookLoginUI.b(kRF), 0);
+    FacebookLoginUI.hO(true);
+    com.tencent.mm.plugin.a.b.lm(ah.ty() + "," + kRF.getClass().getName() + ",L14," + ah.fq("L14") + ",2");
   }
   
   public final void onCancel()
   {
-    u.d("!44@/B4Tb64lLpKNEztPnVXez/m8ZdttX/a3Eg9smVocr9Y=", "onCancel");
-    FacebookLoginUI.hq(false);
-    com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + ksx.getClass().getName() + ",L14," + ah.fd("L14") + ",2");
+    v.d("MicroMsg.FacebookLoginUI", "onCancel");
+    FacebookLoginUI.hO(false);
+    com.tencent.mm.plugin.a.b.lm(ah.ty() + "," + kRF.getClass().getName() + ",L14," + ah.fq("L14") + ",2");
   }
 }
 

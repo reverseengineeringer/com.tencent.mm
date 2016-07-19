@@ -9,7 +9,7 @@ final class SnsStrangerCommentDetailUI$8
   
   public final void run()
   {
-    SnsStrangerCommentDetailUI.a(hiQ).setSelection(SnsStrangerCommentDetailUI.d(hiQ).getCount() - 1);
+    SnsStrangerCommentDetailUI.a(hxF).setSelection(SnsStrangerCommentDetailUI.d(hxF).getCount() - 1);
   }
 }
 

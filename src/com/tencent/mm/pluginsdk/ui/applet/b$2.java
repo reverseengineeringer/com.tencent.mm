@@ -11,13 +11,13 @@ final class b$2
   public final void a(boolean paramBoolean, String paramString, int paramInt)
   {
     if (paramBoolean) {
-      iId.I(fJt);
+      jfa.I(fSv);
     }
     for (;;)
     {
-      iId.iIa.dismiss();
+      jfa.jeX.dismiss();
       return;
-      iId.cd(0);
+      jfa.cx(0);
     }
   }
 }

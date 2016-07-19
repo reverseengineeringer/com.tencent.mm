@@ -4,111 +4,112 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.View;
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 final class g
   extends ActionBar
 {
-  final ActionBar.a js;
-  final Activity jx;
-  final android.app.ActionBar jy;
-  private ArrayList jz = new ArrayList();
+  final ActionBar.a jJ;
+  final Activity jO;
+  final android.app.ActionBar jP;
+  private ArrayList<WeakReference<Object>> jQ = new ArrayList();
   
   public g(Activity paramActivity, ActionBar.a parama)
   {
-    jx = paramActivity;
-    js = parama;
-    jy = paramActivity.getActionBar();
+    jO = paramActivity;
+    jJ = parama;
+    jP = paramActivity.getActionBar();
+  }
+  
+  public final void aI()
+  {
+    jP.setCustomView(2130903070);
   }
   
   public final void aJ()
   {
-    jy.setCustomView(2131363238);
+    jP.setIcon(2130839751);
   }
   
   public final void aK()
   {
-    jy.setIcon(2130968578);
+    jP.setDisplayShowHomeEnabled(false);
   }
   
   public final void aL()
   {
-    jy.setDisplayShowHomeEnabled(false);
+    jP.setDisplayShowTitleEnabled(false);
   }
   
   public final void aM()
   {
-    jy.setDisplayShowCustomEnabled(true);
+    jP.setDisplayShowCustomEnabled(true);
   }
   
   public final View getCustomView()
   {
-    return jy.getCustomView();
+    return jP.getCustomView();
   }
   
   public final int getDisplayOptions()
   {
-    return jy.getDisplayOptions();
+    return jP.getDisplayOptions();
   }
   
   public final int getHeight()
   {
-    return jy.getHeight();
+    return jP.getHeight();
   }
   
   public final Context getThemedContext()
   {
-    return jy.getThemedContext();
+    return jP.getThemedContext();
   }
   
   public final CharSequence getTitle()
   {
-    return jy.getTitle();
+    return jP.getTitle();
   }
   
   public final void hide()
   {
-    jy.hide();
+    jP.hide();
   }
   
   public final boolean isShowing()
   {
-    return jy.isShowing();
+    return jP.isShowing();
   }
   
   public final void setBackgroundDrawable(Drawable paramDrawable)
   {
-    jy.setBackgroundDrawable(paramDrawable);
+    jP.setBackgroundDrawable(paramDrawable);
   }
   
   public final void setCustomView(View paramView)
   {
-    jy.setCustomView(paramView);
+    jP.setCustomView(paramView);
   }
   
   public final void setDisplayHomeAsUpEnabled(boolean paramBoolean)
   {
-    jy.setDisplayHomeAsUpEnabled(paramBoolean);
+    jP.setDisplayHomeAsUpEnabled(paramBoolean);
   }
   
   public final void setDisplayOptions(int paramInt)
   {
-    jy.setDisplayOptions(paramInt);
-  }
-  
-  public final void setDisplayShowTitleEnabled(boolean paramBoolean)
-  {
-    jy.setDisplayShowTitleEnabled(paramBoolean);
+    jP.setDisplayOptions(paramInt);
   }
   
   public final void setLogo(Drawable paramDrawable)
   {
-    jy.setLogo(paramDrawable);
+    jP.setLogo(paramDrawable);
   }
   
   public final void show()
   {
-    jy.show();
+    jP.show();
   }
 }
 

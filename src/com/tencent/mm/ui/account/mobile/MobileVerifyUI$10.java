@@ -13,7 +13,7 @@ final class MobileVerifyUI$10
   {
     if ((paramInt == 6) || (paramInt == 5))
     {
-      MobileVerifyUI.e(kzc);
+      MobileVerifyUI.e(kYj);
       return true;
     }
     return false;

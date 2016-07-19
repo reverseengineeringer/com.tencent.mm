@@ -2,7 +2,7 @@ package com.tencent.mm.ui.bindlinkedin;
 
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ListLinkedInFriendUI$1
   implements AbsListView.OnScrollListener
@@ -11,15 +11,15 @@ final class ListLinkedInFriendUI$1
   
   public final void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3)
   {
-    if ((paramInt1 + paramInt2 >= paramInt3) && (!ListLinkedInFriendUI.a(kOk)))
+    if ((paramInt1 + paramInt2 >= paramInt3) && (!ListLinkedInFriendUI.a(lnA)))
     {
-      ListLinkedInFriendUI.b(kOk);
-      u.d("!44@/B4Tb64lLpJ4FHnyJpFGLC6Xej9PxJXB86Z93mHPIZQ=", "[oneliang][onScroll] want to pull data.");
-      if (ListLinkedInFriendUI.c(kOk))
+      ListLinkedInFriendUI.b(lnA);
+      v.d("MicroMsg.LinkedInFriendUI", "[oneliang][onScroll] want to pull data.");
+      if (ListLinkedInFriendUI.c(lnA))
       {
-        u.d("!44@/B4Tb64lLpJ4FHnyJpFGLC6Xej9PxJXB86Z93mHPIZQ=", "[oneliang][onScroll] has more data.");
-        ListLinkedInFriendUI.d(kOk);
-        ListLinkedInFriendUI.e(kOk);
+        v.d("MicroMsg.LinkedInFriendUI", "[oneliang][onScroll] has more data.");
+        ListLinkedInFriendUI.d(lnA);
+        ListLinkedInFriendUI.e(lnA);
       }
     }
   }

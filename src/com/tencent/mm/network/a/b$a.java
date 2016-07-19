@@ -43,7 +43,7 @@ public abstract class b$a
       }
     }
     paramParcel1.enforceInterface("com.tencent.mm.network.connpool.IConnPoolMoniter_AIDL");
-    d(paramParcel1.readInt(), paramParcel1.readInt(), paramParcel1.readInt(), paramParcel1.readInt());
+    b(paramParcel1.readInt(), paramParcel1.readInt(), paramParcel1.readInt(), paramParcel1.readInt());
     paramParcel2.writeNoException();
     return true;
   }
@@ -141,7 +141,7 @@ public abstract class b$a
       return mRemote;
     }
     
-    public final void d(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+    public final void b(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();

@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public bZP:I
+.field public bTA:I
 
-.field public bZQ:I
+.field public bTy:I
 
-.field public bZR:I
+.field public bTz:I
 
 .field public end:I
 
@@ -37,13 +37,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 86
-    iput v0, p0, Lcom/tencent/mm/modelsearch/m$g$a;->bZP:I
+    iput v0, p0, Lcom/tencent/mm/modelsearch/m$g$a;->bTy:I
 
     .line 87
-    iput v0, p0, Lcom/tencent/mm/modelsearch/m$g$a;->bZQ:I
+    iput v0, p0, Lcom/tencent/mm/modelsearch/m$g$a;->bTz:I
 
     .line 88
-    iput v0, p0, Lcom/tencent/mm/modelsearch/m$g$a;->bZR:I
+    iput v0, p0, Lcom/tencent/mm/modelsearch/m$g$a;->bTA:I
 
     .line 91
     iput p1, p0, Lcom/tencent/mm/modelsearch/m$g$a;->start:I

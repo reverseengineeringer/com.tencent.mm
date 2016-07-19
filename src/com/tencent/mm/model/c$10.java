@@ -1,15 +1,15 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.az.g.a;
+import com.tencent.mm.bc.g.b;
+import com.tencent.mm.storage.d;
 
 final class c$10
-  implements g.a
+  implements g.b
 {
-  c$10(c paramc) {}
-  
-  public final void rY() {}
-  
-  public final void rZ() {}
+  public final String[] kE()
+  {
+    return d.bkN;
+  }
 }
 
 /* Location:

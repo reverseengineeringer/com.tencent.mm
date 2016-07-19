@@ -1,41 +1,50 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.d.b.cg;
+import com.tencent.mm.e.b.cf;
 import com.tencent.mm.sdk.h.c.a;
 import java.lang.reflect.Field;
 import java.util.Map;
 
 public final class ar
-  extends cg
+  extends cf
 {
-  protected static c.a aot;
+  protected static c.a bjR;
   
   static
   {
     c.a locala = new c.a();
-    ceD = new Field[3];
-    blR = new String[4];
+    bZI = new Field[3];
+    aZx = new String[4];
     StringBuilder localStringBuilder = new StringBuilder();
-    blR[0] = "msgId";
-    jYx.put("msgId", "LONG PRIMARY KEY ");
-    localStringBuilder.append(" msgId LONG PRIMARY KEY ");
+    aZx[0] = "openId";
+    kyU.put("openId", "TEXT PRIMARY KEY ");
+    localStringBuilder.append(" openId TEXT PRIMARY KEY ");
     localStringBuilder.append(", ");
-    jYw = "msgId";
-    blR[1] = "cmsgId";
-    jYx.put("cmsgId", "TEXT");
-    localStringBuilder.append(" cmsgId TEXT");
+    kyT = "openId";
+    aZx[1] = "appId";
+    kyU.put("appId", "TEXT");
+    localStringBuilder.append(" appId TEXT");
     localStringBuilder.append(", ");
-    blR[2] = "content";
-    jYx.put("content", "TEXT default '' ");
-    localStringBuilder.append(" content TEXT default '' ");
-    blR[3] = "rowid";
-    jYy = localStringBuilder.toString();
-    aot = locala;
+    aZx[2] = "username";
+    kyU.put("username", "TEXT");
+    localStringBuilder.append(" username TEXT");
+    aZx[3] = "rowid";
+    kyV = localStringBuilder.toString();
+    bjR = locala;
   }
   
-  protected final c.a ls()
+  public ar() {}
+  
+  public ar(String paramString1, String paramString2, String paramString3)
   {
-    return null;
+    field_appId = paramString1;
+    field_username = paramString2;
+    field_openId = paramString3;
+  }
+  
+  protected final c.a ou()
+  {
+    return bjR;
   }
 }
 

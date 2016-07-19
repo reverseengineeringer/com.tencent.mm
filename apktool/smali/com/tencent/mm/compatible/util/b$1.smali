@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bug:Lcom/tencent/mm/compatible/util/b;
+.field final synthetic biG:Lcom/tencent/mm/compatible/util/b;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 27
-    iput-object p1, p0, Lcom/tencent/mm/compatible/util/b$1;->bug:Lcom/tencent/mm/compatible/util/b;
+    iput-object p1, p0, Lcom/tencent/mm/compatible/util/b$1;->biG:Lcom/tencent/mm/compatible/util/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,14 +41,14 @@
 
     .prologue
     .line 32
-    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b$1;->bug:Lcom/tencent/mm/compatible/util/b;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b$1;->biG:Lcom/tencent/mm/compatible/util/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/util/b;->bud:Lcom/tencent/mm/compatible/util/a$a;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/util/b;->biE:Lcom/tencent/mm/compatible/util/a$a;
 
     if-eqz v0, :cond_0
 
     .line 33
-    const-string/jumbo v0, "!44@/B4Tb64lLpLCq+BipdDzGSEj50wMwdFVuq5cXvM0LPk="
+    const-string/jumbo v0, "MicroMsg.AudioFocusHelper"
 
     const-string/jumbo v1, "jacks change: %d"
 
@@ -64,14 +64,14 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b$1;->bug:Lcom/tencent/mm/compatible/util/b;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b$1;->biG:Lcom/tencent/mm/compatible/util/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/util/b;->bud:Lcom/tencent/mm/compatible/util/a$a;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/util/b;->biE:Lcom/tencent/mm/compatible/util/a$a;
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/compatible/util/a$a;->bT(I)V
+    invoke-interface {v0, p1}, Lcom/tencent/mm/compatible/util/a$a;->cl(I)V
 
     .line 36
     :cond_0

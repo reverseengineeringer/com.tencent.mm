@@ -1,23 +1,14 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.d.a.aa;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.ab;
 import com.tencent.mm.sdk.c.c;
 
 final class ah$1
-  extends c
+  extends c<ab>
 {
   ah$1(ah paramah)
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    if ((paramb instanceof aa)) {
-      atp.atf = m.yG();
-    }
-    return false;
+    kum = ab.class.getName().hashCode();
   }
 }
 

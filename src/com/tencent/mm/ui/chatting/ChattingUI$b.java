@@ -2,7 +2,7 @@ package com.tencent.mm.ui.chatting;
 
 import android.annotation.TargetApi;
 import android.widget.ListView;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 @TargetApi(11)
 public final class ChattingUI$b
@@ -12,7 +12,7 @@ public final class ChattingUI$b
     if (paramListView == null) {
       return;
     }
-    u.i("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "setSelectionFromTop position %s smooth %s", new Object[] { Integer.valueOf(paramInt1), Boolean.valueOf(paramBoolean) });
+    v.i("MicroMsg.ChattingUI", "setSelectionFromTop position %s smooth %s", new Object[] { Integer.valueOf(paramInt1), Boolean.valueOf(paramBoolean) });
     paramListView.setItemChecked(paramInt1, true);
     paramListView.setSelectionFromTop(paramInt1, paramInt2);
   }
@@ -22,7 +22,7 @@ public final class ChattingUI$b
     if (paramListView == null) {
       return;
     }
-    u.i("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "setSelection position %s smooth %s", new Object[] { Integer.valueOf(paramInt), Boolean.valueOf(paramBoolean) });
+    v.i("MicroMsg.ChattingUI", "setSelection position %s smooth %s", new Object[] { Integer.valueOf(paramInt), Boolean.valueOf(paramBoolean) });
     paramListView.setItemChecked(paramInt, true);
     paramListView.setSelection(paramInt);
   }

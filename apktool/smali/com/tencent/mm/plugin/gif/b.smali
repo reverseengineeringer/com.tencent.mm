@@ -4,13 +4,37 @@
 
 
 # static fields
-.field private static ewQ:Lcom/tencent/mm/plugin/gif/b;
+.field private static eDj:Lcom/tencent/mm/plugin/gif/b;
 
 
 # instance fields
-.field ewR:Lcom/tencent/mm/a/f;
+.field public eDk:Lcom/tencent/mm/a/f;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/tencent/mm/a/f",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/tencent/mm/plugin/gif/c;",
+            ">;>;"
+        }
+    .end annotation
+.end field
 
-.field ewS:Lcom/tencent/mm/a/f;
+.field eDl:Lcom/tencent/mm/a/f;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/tencent/mm/a/f",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/tencent/mm/plugin/gif/a;",
+            ">;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -28,7 +52,7 @@
 
     invoke-direct {v0, v2}, Lcom/tencent/mm/a/f;-><init>(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/gif/b;->ewR:Lcom/tencent/mm/a/f;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/gif/b;->eDk:Lcom/tencent/mm/a/f;
 
     .line 26
     new-instance v0, Lcom/tencent/mm/a/f;
@@ -39,13 +63,13 @@
 
     invoke-direct {v0, v2, v1}, Lcom/tencent/mm/a/f;-><init>(ILcom/tencent/mm/a/f$a;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     .line 42
     return-void
 .end method
 
-.method public static declared-synchronized acx()Lcom/tencent/mm/plugin/gif/b;
+.method public static declared-synchronized aeV()Lcom/tencent/mm/plugin/gif/b;
     .locals 3
 
     .prologue
@@ -55,7 +79,7 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/plugin/gif/b;->ewQ:Lcom/tencent/mm/plugin/gif/b;
+    sget-object v0, Lcom/tencent/mm/plugin/gif/b;->eDj:Lcom/tencent/mm/plugin/gif/b;
 
     if-nez v0, :cond_1
 
@@ -68,7 +92,7 @@
 
     .line 47
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/plugin/gif/b;->ewQ:Lcom/tencent/mm/plugin/gif/b;
+    sget-object v0, Lcom/tencent/mm/plugin/gif/b;->eDj:Lcom/tencent/mm/plugin/gif/b;
 
     if-nez v0, :cond_0
 
@@ -77,7 +101,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/plugin/gif/b;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/plugin/gif/b;->ewQ:Lcom/tencent/mm/plugin/gif/b;
+    sput-object v0, Lcom/tencent/mm/plugin/gif/b;->eDj:Lcom/tencent/mm/plugin/gif/b;
 
     .line 50
     :cond_0
@@ -88,7 +112,7 @@
     .line 52
     :cond_1
     :try_start_2
-    sget-object v0, Lcom/tencent/mm/plugin/gif/b;->ewQ:Lcom/tencent/mm/plugin/gif/b;
+    sget-object v0, Lcom/tencent/mm/plugin/gif/b;->eDj:Lcom/tencent/mm/plugin/gif/b;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -121,7 +145,7 @@
 
 
 # virtual methods
-.method public final o(Ljava/lang/String;[B)Lcom/tencent/mm/plugin/gif/a;
+.method public final n(Ljava/lang/String;[B)Lcom/tencent/mm/plugin/gif/a;
     .locals 4
 
     .prologue
@@ -137,7 +161,7 @@
 
     .line 104
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     invoke-virtual {v1, p1}, Lcom/tencent/mm/a/f;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -146,7 +170,7 @@
     if-eqz v1, :cond_2
 
     .line 105
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/a/f;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -170,7 +194,7 @@
     invoke-direct {v0, p2}, Lcom/tencent/mm/plugin/gif/a;-><init>([B)V
 
     .line 109
-    iget-object v1, p0, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     new-instance v2, Ljava/lang/ref/WeakReference;
 
@@ -189,22 +213,22 @@
     .line 114
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/gif/a;->ewo:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/gif/a;->eCH:Z
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/gif/a;->ewn:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/gif/a;->eCG:Z
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/gif/a;->ewM:Ljava/lang/Runnable;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/gif/a;->eDf:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x12c
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/z/a;->a(Ljava/lang/Runnable;J)Z
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/ac/a;->a(Ljava/lang/Runnable;J)Z
 
     goto :goto_0
 .end method
 
-.method public final pq(Ljava/lang/String;)Lcom/tencent/mm/plugin/gif/a;
+.method public final qH(Ljava/lang/String;)Lcom/tencent/mm/plugin/gif/a;
     .locals 2
 
     .prologue
@@ -212,7 +236,7 @@
     const/4 v0, 0x0
 
     .line 63
-    iget-object v1, p0, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     invoke-virtual {v1, p1}, Lcom/tencent/mm/a/f;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -221,7 +245,7 @@
     if-eqz v1, :cond_0
 
     .line 64
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/a/f;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

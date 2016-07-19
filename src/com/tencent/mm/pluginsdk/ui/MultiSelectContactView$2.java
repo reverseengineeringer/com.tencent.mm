@@ -12,8 +12,8 @@ final class MultiSelectContactView$2
   
   public final boolean onKey(View paramView, int paramInt, KeyEvent paramKeyEvent)
   {
-    if ((paramInt == 67) && (paramKeyEvent.getAction() == 0) && (MultiSelectContactView.c(iHi).getSelectionStart() == 0) && (MultiSelectContactView.c(iHi).getSelectionEnd() == 0)) {
-      MultiSelectContactView.d(iHi);
+    if ((paramInt == 67) && (paramKeyEvent.getAction() == 0) && (MultiSelectContactView.c(jed).getSelectionStart() == 0) && (MultiSelectContactView.c(jed).getSelectionEnd() == 0)) {
+      MultiSelectContactView.d(jed);
     }
     return false;
   }

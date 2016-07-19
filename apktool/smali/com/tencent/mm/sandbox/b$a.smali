@@ -18,8 +18,8 @@
 
 
 # virtual methods
-.method public abstract J(II)V
+.method public abstract L(II)V
 .end method
 
-.method public abstract a(IILcom/tencent/mm/protocal/b/alq;)V
+.method public abstract a(IILcom/tencent/mm/protocal/b/amb;)V
 .end method

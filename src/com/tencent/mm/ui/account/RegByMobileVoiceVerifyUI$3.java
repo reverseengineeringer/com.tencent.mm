@@ -7,7 +7,7 @@ import android.view.View.OnClickListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.u;
 import com.tencent.mm.modelfriend.v;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 
 final class RegByMobileVoiceVerifyUI$3
@@ -17,28 +17,28 @@ final class RegByMobileVoiceVerifyUI$3
   
   public final void onClick(View paramView)
   {
-    if ((RegByMobileVoiceVerifyUI.b(kvq) == 0) || (RegByMobileVoiceVerifyUI.b(kvq) == 2) || (RegByMobileVoiceVerifyUI.b(kvq) == 3))
+    if ((RegByMobileVoiceVerifyUI.b(kUx) == 0) || (RegByMobileVoiceVerifyUI.b(kUx) == 2) || (RegByMobileVoiceVerifyUI.b(kUx) == 3))
     {
-      RegByMobileVoiceVerifyUI.a(kvq, new u(RegByMobileVoiceVerifyUI.c(kvq), RegByMobileVoiceVerifyUI.d(kvq), "", 1, RegByMobileVoiceVerifyUI.a(kvq)));
-      ah.tE().d(RegByMobileVoiceVerifyUI.e(kvq));
-      g.a(kvq, 2131428644, 2131430877, new DialogInterface.OnClickListener()
+      RegByMobileVoiceVerifyUI.a(kUx, new u(RegByMobileVoiceVerifyUI.c(kUx), RegByMobileVoiceVerifyUI.d(kUx), "", 1, RegByMobileVoiceVerifyUI.a(kUx)));
+      ah.tF().a(RegByMobileVoiceVerifyUI.e(kUx), 0);
+      g.a(kUx, 2131231318, 2131231028, new DialogInterface.OnClickListener()
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
         {
-          kvq.finish();
+          kUx.finish();
         }
       });
     }
-    while ((RegByMobileVoiceVerifyUI.b(kvq) != 4) && (RegByMobileVoiceVerifyUI.b(kvq) != 1)) {
+    while ((RegByMobileVoiceVerifyUI.b(kUx) != 4) && (RegByMobileVoiceVerifyUI.b(kUx) != 1)) {
       return;
     }
-    RegByMobileVoiceVerifyUI.a(kvq, new v(RegByMobileVoiceVerifyUI.c(kvq), 1, "", 1, RegByMobileVoiceVerifyUI.a(kvq)));
-    ah.tE().d(RegByMobileVoiceVerifyUI.f(kvq));
-    g.a(kvq, 2131428644, 2131430877, new DialogInterface.OnClickListener()
+    RegByMobileVoiceVerifyUI.a(kUx, new v(RegByMobileVoiceVerifyUI.c(kUx), 1, "", 1, RegByMobileVoiceVerifyUI.a(kUx)));
+    ah.tF().a(RegByMobileVoiceVerifyUI.f(kUx), 0);
+    g.a(kUx, 2131231318, 2131231028, new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        kvq.finish();
+        kUx.finish();
       }
     });
   }

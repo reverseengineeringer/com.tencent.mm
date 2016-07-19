@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic clo:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+.field final synthetic cgr:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 74
-    iput-object p1, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$4;->clo:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+    iput-object p1, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$4;->cgr:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$4;->clo:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$4;->cgr:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
 
     invoke-virtual {v0}, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;->finish()V
 

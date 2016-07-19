@@ -3,30 +3,30 @@ package com.tencent.mm.plugin.sns.ui;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.am;
-import com.tencent.mm.plugin.sns.data.h;
-import com.tencent.mm.plugin.sns.f.b;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.plugin.sns.data.i;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.al;
+import com.tencent.mm.plugin.sns.g.b;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class SnsInfoFlip$6
   implements AdapterView.OnItemLongClickListener
 {
   SnsInfoFlip$6(SnsInfoFlip paramSnsInfoFlip) {}
   
-  public final boolean onItemLongClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final boolean onItemLongClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (!SnsInfoFlip.g(heR)) {
+    if (!SnsInfoFlip.g(htI)) {
       return true;
     }
-    paramAdapterView = dheR).getItem(paramInt)).gSz;
-    if (ay.kz(paramAdapterView)) {
+    paramAdapterView = dhtI).getItem(paramInt)).haC;
+    if (be.kf(paramAdapterView)) {
       return false;
     }
-    paramView = dheR).getItem(paramInt)).aHW.iXW;
-    String str = am.bp(ad.ayV(), paramView) + h.k(dheR).getItem(paramInt)).aHW);
-    heR.c(str, paramAdapterView, paramView, true);
+    paramView = dhtI).getItem(paramInt)).aus.jvB;
+    String str = al.bx(ad.aBw(), paramView) + i.k(dhtI).getItem(paramInt)).aus);
+    htI.c(str, paramAdapterView, paramView, true);
     return true;
   }
 }

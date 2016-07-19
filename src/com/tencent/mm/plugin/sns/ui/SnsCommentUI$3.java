@@ -10,8 +10,8 @@ final class SnsCommentUI$3
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    hdQ.age();
-    hdQ.finish();
+    hsD.aiI();
+    hsD.finish();
     return true;
   }
 }

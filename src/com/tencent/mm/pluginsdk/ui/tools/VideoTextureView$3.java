@@ -2,6 +2,7 @@ package com.tencent.mm.pluginsdk.ui.tools;
 
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class VideoTextureView$3
   implements MediaPlayer.OnCompletionListener
@@ -10,8 +11,9 @@ final class VideoTextureView$3
   
   public final void onCompletion(MediaPlayer paramMediaPlayer)
   {
-    if (VideoTextureView.e(iTe) != null) {
-      VideoTextureView.e(iTe).lG();
+    VideoTextureView.a(jqr, be.Go());
+    if (VideoTextureView.e(jqr) != null) {
+      VideoTextureView.e(jqr).jQ();
     }
   }
 }

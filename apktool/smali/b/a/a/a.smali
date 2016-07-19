@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field public jwt:Ljava/lang/String;
+.field public jVb:Ljava/lang/String;
 
-.field public mdB:Ljava/lang/String;
+.field public mPF:Ljava/lang/String;
 
-.field public mdC:Ljava/lang/String;
+.field public mPG:Ljava/lang/String;
 
-.field public mdD:Ljava/lang/String;
+.field public mPH:Ljava/lang/String;
 
-.field public mdE:Lb/a/a/a/a;
+.field public mPI:Lb/a/a/a/a;
 
-.field public mdF:Lb/a/d/h;
+.field public mPJ:Lb/a/d/h;
 
-.field public mdG:Ljava/io/OutputStream;
+.field public mPK:Ljava/io/OutputStream;
 
 
 # direct methods
@@ -30,30 +30,40 @@
     .line 32
     const-string/jumbo v0, "oob"
 
-    iput-object v0, p0, Lb/a/a/a;->mdD:Ljava/lang/String;
+    iput-object v0, p0, Lb/a/a/a;->mPH:Ljava/lang/String;
 
     .line 33
-    sget-object v0, Lb/a/d/h;->mdX:Lb/a/d/h;
+    sget-object v0, Lb/a/d/h;->mQb:Lb/a/d/h;
 
-    iput-object v0, p0, Lb/a/a/a;->mdF:Lb/a/d/h;
+    iput-object v0, p0, Lb/a/a/a;->mPJ:Lb/a/d/h;
 
     .line 34
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lb/a/a/a;->mdG:Ljava/io/OutputStream;
+    iput-object v0, p0, Lb/a/a/a;->mPK:Ljava/io/OutputStream;
 
     .line 35
     return-void
 .end method
 
-.method public static j(Ljava/lang/Class;)Lb/a/a/a/a;
+.method public static m(Ljava/lang/Class;)Lb/a/a/a/a;
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class",
+            "<+",
+            "Lb/a/a/a/a;",
+            ">;)",
+            "Lb/a/a/a/a;"
+        }
+    .end annotation
 
     .prologue
     .line 51
     const-string/jumbo v0, "Api class cannot be null"
 
-    invoke-static {p0, v0}, Lb/a/g/d;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lb/a/g/d;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 55
     :try_start_0

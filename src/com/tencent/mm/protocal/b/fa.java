@@ -1,115 +1,86 @@
 package com.tencent.mm.protocal.b;
 
+import com.tencent.mm.ax.b;
+import java.util.LinkedList;
+
 public final class fa
-  extends com.tencent.mm.at.a
+  extends alt
 {
-  public int iAC;
-  public String jcu;
-  public String jcv;
-  public int jcw;
-  public int jcx;
-  public String jcy;
-  public String jcz;
-  public String name;
-  public int type;
+  public String jzX;
+  public b jzY;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jcu != null) {
-        paramVarArgs.d(1, jcu);
+      if (kfq != null)
+      {
+        paramVarArgs.cx(1, kfq.iO());
+        kfq.a(paramVarArgs);
       }
-      paramVarArgs.ci(2, type);
-      if (jcv != null) {
-        paramVarArgs.d(3, jcv);
+      if (jzX != null) {
+        paramVarArgs.e(2, jzX);
       }
-      if (name != null) {
-        paramVarArgs.d(4, name);
-      }
-      paramVarArgs.ci(5, iAC);
-      paramVarArgs.ci(6, jcw);
-      paramVarArgs.ci(7, jcx);
-      if (jcy != null) {
-        paramVarArgs.d(8, jcy);
-      }
-      if (jcz != null) {
-        paramVarArgs.d(9, jcz);
+      if (jzY != null) {
+        paramVarArgs.b(3, jzY);
       }
       return 0;
     }
     if (paramInt == 1) {
-      if (jcu == null) {
-        break label559;
+      if (kfq == null) {
+        break label380;
       }
     }
-    label559:
-    for (paramInt = a.a.a.b.b.a.e(1, jcu) + 0;; paramInt = 0)
+    label380:
+    for (int i = a.a.a.a.cv(1, kfq.iO()) + 0;; i = 0)
     {
-      int i = paramInt + a.a.a.a.cg(2, type);
       paramInt = i;
-      if (jcv != null) {
-        paramInt = i + a.a.a.b.b.a.e(3, jcv);
+      if (jzX != null) {
+        paramInt = i + a.a.a.b.b.a.f(2, jzX);
       }
       i = paramInt;
-      if (name != null) {
-        i = paramInt + a.a.a.b.b.a.e(4, name);
-      }
-      i = i + a.a.a.a.cg(5, iAC) + a.a.a.a.cg(6, jcw) + a.a.a.a.cg(7, jcx);
-      paramInt = i;
-      if (jcy != null) {
-        paramInt = i + a.a.a.b.b.a.e(8, jcy);
-      }
-      i = paramInt;
-      if (jcz != null) {
-        i = paramInt + a.a.a.b.b.a.e(9, jcz);
+      if (jzY != null) {
+        i = paramInt + a.a.a.a.a(3, jzY);
       }
       return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = alt.a(paramVarArgs); paramInt > 0; paramInt = alt.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
         break;
       }
       if (paramInt == 3)
       {
-        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
         fa localfa = (fa)paramVarArgs[1];
-        switch (((Integer)paramVarArgs[2]).intValue())
+        paramInt = ((Integer)paramVarArgs[2]).intValue();
+        switch (paramInt)
         {
         default: 
           return -1;
         case 1: 
-          jcu = maU.readString();
-          return 0;
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new df();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (boolean bool = true; bool; bool = ((df)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, alt.a((a.a.a.a.a)localObject2))) {}
+            kfq = ((df)localObject1);
+            paramInt += 1;
+          }
         case 2: 
-          type = maU.jC();
-          return 0;
-        case 3: 
-          jcv = maU.readString();
-          return 0;
-        case 4: 
-          name = maU.readString();
-          return 0;
-        case 5: 
-          iAC = maU.jC();
-          return 0;
-        case 6: 
-          jcw = maU.jC();
-          return 0;
-        case 7: 
-          jcx = maU.jC();
-          return 0;
-        case 8: 
-          jcy = maU.readString();
+          jzX = mMY.readString();
           return 0;
         }
-        jcz = maU.readString();
+        jzY = ((a.a.a.a.a)localObject1).bvd();
         return 0;
       }
       return -1;

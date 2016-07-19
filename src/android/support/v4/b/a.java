@@ -5,24 +5,24 @@ import android.os.Parcelable.Creator;
 
 public final class a
 {
-  public static final class a
-    implements Parcelable.Creator
+  public static final class a<T>
+    implements Parcelable.Creator<T>
   {
-    final b el;
+    final b<T> eG;
     
-    public a(b paramb)
+    public a(b<T> paramb)
     {
-      el = paramb;
+      eG = paramb;
     }
     
-    public final Object createFromParcel(Parcel paramParcel)
+    public final T createFromParcel(Parcel paramParcel)
     {
-      return el.createFromParcel(paramParcel, null);
+      return (T)eG.createFromParcel(paramParcel, null);
     }
     
-    public final Object[] newArray(int paramInt)
+    public final T[] newArray(int paramInt)
     {
-      return el.newArray(paramInt);
+      return eG.newArray(paramInt);
     }
   }
 }

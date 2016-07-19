@@ -1,10 +1,19 @@
 .class public final Lcom/tencent/mm/model/ba;
-.super Lcom/tencent/mm/at/a;
+.super Lcom/tencent/mm/ax/a;
 .source "SourceFile"
 
 
 # instance fields
-.field public bCH:Ljava/util/LinkedList;
+.field public bvR:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/model/az;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -13,14 +22,14 @@
 
     .prologue
     .line 11
-    invoke-direct {p0}, Lcom/tencent/mm/at/a;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/ax/a;-><init>()V
 
     .line 12
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/model/ba;->bCH:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/model/ba;->bvR:Ljava/util/LinkedList;
 
     return-void
 .end method
@@ -50,7 +59,7 @@
     check-cast v0, La/a/a/c/a;
 
     .line 17
-    iget-object v1, p0, Lcom/tencent/mm/model/ba;->bCH:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/model/ba;->bvR:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v5, v6, v1}, La/a/a/c/a;->d(IILjava/util/LinkedList;)V
 
@@ -65,7 +74,7 @@
     if-ne p1, v5, :cond_1
 
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/model/ba;->bCH:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/model/ba;->bvR:Ljava/util/LinkedList;
 
     invoke-static {v5, v6, v0}, La/a/a/a;->c(IILjava/util/LinkedList;)I
 
@@ -88,19 +97,19 @@
     check-cast v0, [B
 
     .line 27
-    iget-object v1, p0, Lcom/tencent/mm/model/ba;->bCH:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/model/ba;->bvR:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->clear()V
 
     .line 28
     new-instance v1, La/a/a/a/a;
 
-    sget-object v2, Lcom/tencent/mm/model/ba;->iTR:La/a/a/a/a/b;
+    sget-object v2, Lcom/tencent/mm/model/ba;->jrk:La/a/a/a/a/b;
 
     invoke-direct {v1, v0, v2}, La/a/a/a/a;-><init>([BLa/a/a/a/a/b;)V
 
     .line 29
-    invoke-static {v1}, Lcom/tencent/mm/at/a;->a(La/a/a/a/a;)I
+    invoke-static {v1}, Lcom/tencent/mm/ax/a;->a(La/a/a/a/a;)I
 
     move-result v0
 
@@ -109,18 +118,18 @@
     if-lez v0, :cond_3
 
     .line 32
-    invoke-super {p0, v1, p0, v0}, Lcom/tencent/mm/at/a;->a(La/a/a/a/a;Lcom/tencent/mm/at/a;I)Z
+    invoke-super {p0, v1, p0, v0}, Lcom/tencent/mm/ax/a;->a(La/a/a/a/a;Lcom/tencent/mm/ax/a;I)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 33
-    invoke-virtual {v1}, La/a/a/a/a;->bog()V
+    invoke-virtual {v1}, La/a/a/a/a;->bve()V
 
     .line 35
     :cond_2
-    invoke-static {v1}, Lcom/tencent/mm/at/a;->a(La/a/a/a/a;)I
+    invoke-static {v1}, Lcom/tencent/mm/ax/a;->a(La/a/a/a/a;)I
 
     move-result v0
 
@@ -167,7 +176,7 @@
 
     .line 46
     :pswitch_0
-    invoke-virtual {v0, v2}, La/a/a/a/a;->sJ(I)Ljava/util/LinkedList;
+    invoke-virtual {v0, v2}, La/a/a/a/a;->vC(I)Ljava/util/LinkedList;
 
     move-result-object v4
 
@@ -196,7 +205,7 @@
     .line 50
     new-instance v8, La/a/a/a/a;
 
-    sget-object v9, Lcom/tencent/mm/model/ba;->iTR:La/a/a/a/a/b;
+    sget-object v9, Lcom/tencent/mm/model/ba;->jrk:La/a/a/a/a/b;
 
     invoke-direct {v8, v0, v9}, La/a/a/a/a;-><init>([BLa/a/a/a/a/b;)V
 
@@ -207,12 +216,12 @@
     if-eqz v0, :cond_5
 
     .line 54
-    invoke-static {v8}, Lcom/tencent/mm/at/a;->a(La/a/a/a/a;)I
+    invoke-static {v8}, Lcom/tencent/mm/ax/a;->a(La/a/a/a/a;)I
 
     move-result v0
 
     .line 55
-    invoke-virtual {v7, v8, v7, v0}, Lcom/tencent/mm/model/az;->a(La/a/a/a/a;Lcom/tencent/mm/at/a;I)Z
+    invoke-virtual {v7, v8, v7, v0}, Lcom/tencent/mm/model/az;->a(La/a/a/a/a;Lcom/tencent/mm/ax/a;I)Z
 
     move-result v0
 
@@ -220,7 +229,7 @@
 
     .line 57
     :cond_5
-    iget-object v0, v1, Lcom/tencent/mm/model/ba;->bCH:Ljava/util/LinkedList;
+    iget-object v0, v1, Lcom/tencent/mm/model/ba;->bvR:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v7}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 

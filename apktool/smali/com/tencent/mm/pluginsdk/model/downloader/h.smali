@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field protected iCo:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+.field protected iYY:Lcom/tencent/mm/pluginsdk/model/downloader/a;
 
 
 # direct methods
@@ -19,18 +19,18 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 15
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/h;->iCo:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/h;->iYY:Lcom/tencent/mm/pluginsdk/model/downloader/a;
 
     .line 16
     return-void
 .end method
 
-.method public static Ah(Ljava/lang/String;)V
+.method public static Ch(Ljava/lang/String;)V
     .locals 5
 
     .prologue
     .line 29
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -54,7 +54,7 @@
     move-result v0
 
     .line 33
-    const-string/jumbo v1, "!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXMAMxEF9mAhnQ="
+    const-string/jumbo v1, "MicroMsg.FileDownloaderImplBase"
 
     const-string/jumbo v2, "Delete previous file result: %b"
 
@@ -70,15 +70,15 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 36
     :cond_0
     return-void
 .end method
 
-.method public static bn(Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
+.method public static ko(Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
 
     .prologue
     .line 23
@@ -92,9 +92,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -102,7 +102,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/x;->CO(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/z;->Fb(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

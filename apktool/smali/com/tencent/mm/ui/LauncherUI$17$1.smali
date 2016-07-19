@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/LauncherUI$17;->run()V
+    value = Lcom/tencent/mm/ui/LauncherUI$17;->bfV()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kno:Lcom/tencent/mm/ui/LauncherUI$17;
+.field final synthetic kMw:Lcom/tencent/mm/ui/LauncherUI$17;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 2756
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$17$1;->kno:Lcom/tencent/mm/ui/LauncherUI$17;
+    .line 3041
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$17$1;->kMw:Lcom/tencent/mm/ui/LauncherUI$17;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,71 +36,72 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 7
+.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 2
 
     .prologue
-    const-wide/16 v2, 0x1
+    .line 3060
+    const-string/jumbo v0, "MicroMsg.LauncherUI"
 
-    .line 2760
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    const-string/jumbo v1, "klem animationEnd"
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->isSDCardAvailable()Z
+    .line 3062
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$17$1;->kMw:Lcom/tencent/mm/ui/LauncherUI$17;
 
-    move-result v0
+    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$17;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->v(Lcom/tencent/mm/ui/LauncherUI;)V
 
-    .line 2761
-    new-instance v0, Landroid/content/Intent;
+    .line 3065
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$17$1;->kMw:Lcom/tencent/mm/ui/LauncherUI$17;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$17;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    .line 2762
-    const-string/jumbo v1, "had_detected_no_sdcard_space"
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    const/4 v4, 0x1
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->B(F)V
 
-    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 2763
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$17$1;->kno:Lcom/tencent/mm/ui/LauncherUI$17;
-
-    iget-object v1, v1, Lcom/tencent/mm/ui/LauncherUI$17;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    const-string/jumbo v4, "clean"
-
-    const-string/jumbo v5, ".ui.CleanUI"
-
-    invoke-static {v1, v4, v5, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
-
-    .line 2767
-    :goto_0
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
-
-    .line 2768
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
-
-    const-wide/16 v0, 0x11a
-
-    const/4 v6, 0x0
-
-    move-wide v4, v2
-
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
-
-    .line 2769
+    .line 3066
     return-void
+.end method
 
-    .line 2765
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$17$1;->kno:Lcom/tencent/mm/ui/LauncherUI$17;
+.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$17;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .prologue
+    .line 3056
+    return-void
+.end method
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/s;->em(Landroid/content/Context;)V
+.method public final onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 2
 
-    goto :goto_0
+    .prologue
+    .line 3045
+    const-string/jumbo v0, "MicroMsg.LauncherUI"
+
+    const-string/jumbo v1, "klem onAnimationStart"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3046
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$17$1;->kMw:Lcom/tencent/mm/ui/LauncherUI$17;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$17;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->u(Lcom/tencent/mm/ui/LauncherUI;)V
+
+    .line 3050
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$17$1;->kMw:Lcom/tencent/mm/ui/LauncherUI$17;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$17;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->c(Lcom/tencent/mm/ui/LauncherUI;Z)V
+
+    .line 3051
+    return-void
 .end method

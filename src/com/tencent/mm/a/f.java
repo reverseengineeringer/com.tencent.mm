@@ -1,21 +1,21 @@
 package com.tencent.mm.a;
 
-import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.sdk.platformtools.x;
 
-public final class f
-  extends v
+public final class f<K, O>
+  extends x<K, O>
 {
-  private a aku = null;
+  private a<K, O> Xn = null;
   
   public f(int paramInt)
   {
     super(paramInt);
   }
   
-  public f(int paramInt, a parama)
+  public f(int paramInt, a<K, O> parama)
   {
     super(paramInt);
-    aku = parama;
+    Xn = parama;
   }
   
   public final void clear()
@@ -23,35 +23,35 @@ public final class f
     super.trimToSize(-1);
   }
   
-  protected final Object create(Object paramObject)
+  protected final O create(K paramK)
   {
-    return super.create(paramObject);
+    return (O)super.create(paramK);
   }
   
-  public final void d(Object paramObject1, Object paramObject2)
+  protected final void entryRemoved(boolean paramBoolean, K paramK, O paramO1, O paramO2)
   {
-    if (paramObject2 == null) {
+    super.entryRemoved(paramBoolean, paramK, paramO1, paramO2);
+    if ((Xn != null) && (paramO2 == null)) {
+      Xn.h(paramK, paramO1);
+    }
+  }
+  
+  public final void g(K paramK, O paramO)
+  {
+    if (paramO == null) {
       return;
     }
-    put(paramObject1, paramObject2);
+    put(paramK, paramO);
   }
   
-  protected final void entryRemoved(boolean paramBoolean, Object paramObject1, Object paramObject2, Object paramObject3)
-  {
-    super.entryRemoved(paramBoolean, paramObject1, paramObject2, paramObject3);
-    if ((aku != null) && (paramObject3 == null)) {
-      aku.e(paramObject1, paramObject2);
-    }
-  }
-  
-  public final void kl()
+  public final void iM()
   {
     super.trimToSize(-1);
   }
   
-  protected final int sizeOf(Object paramObject1, Object paramObject2)
+  protected final int sizeOf(K paramK, O paramO)
   {
-    return super.sizeOf(paramObject1, paramObject2);
+    return super.sizeOf(paramK, paramO);
   }
   
   public final void trimToSize(int paramInt)
@@ -59,9 +59,9 @@ public final class f
     super.trimToSize(paramInt);
   }
   
-  public static abstract interface a
+  public static abstract interface a<K, O>
   {
-    public abstract void e(Object paramObject1, Object paramObject2);
+    public abstract void h(K paramK, O paramO);
   }
 }
 

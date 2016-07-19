@@ -12,7 +12,7 @@ public abstract interface i$o$e
   
   public abstract Intent e(Intent paramIntent, String paramString);
   
-  public abstract void uN(String paramString);
+  public abstract void vT(String paramString);
   
   public static abstract interface a
   {

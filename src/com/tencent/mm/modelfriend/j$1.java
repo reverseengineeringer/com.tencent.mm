@@ -1,7 +1,7 @@
 package com.tencent.mm.modelfriend;
 
 import android.graphics.Bitmap;
-import com.tencent.mm.q.b;
+import com.tencent.mm.s.b;
 import com.tencent.mm.ui.applet.b.a;
 
 final class j$1
@@ -9,7 +9,7 @@ final class j$1
 {
   j$1(j paramj) {}
   
-  public final Bitmap hw(String paramString)
+  public final Bitmap hO(String paramString)
   {
     return b.a(paramString, false, -1);
   }

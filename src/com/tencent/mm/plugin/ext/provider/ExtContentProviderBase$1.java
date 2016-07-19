@@ -5,8 +5,8 @@ import com.tencent.mm.model.as;
 import com.tencent.mm.model.as.a;
 import com.tencent.mm.network.e;
 import com.tencent.mm.pluginsdk.d.a.a;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 
 final class ExtContentProviderBase$1
   implements Runnable
@@ -17,23 +17,23 @@ final class ExtContentProviderBase$1
   {
     try
     {
-      if (!ah.rh()) {
+      if (!ah.rg()) {
         return;
       }
-      ah.tE().d(new as(new as.a()
+      ah.tF().a(new as(new as.a()
       {
         public final void a(e paramAnonymouse)
         {
-          u.i("!44@/B4Tb64lLpKAQbqlkU5I8mZxJJ4JsPX28ihhHV6igVo=", "checkIsLogin() onSceneEnd()");
-          dKP.countDown();
+          v.i("MicroMsg.ExtContentProviderBase", "checkIsLogin() onSceneEnd()");
+          dMy.countDown();
         }
-      }));
+      }), 0);
       return;
     }
     catch (Exception localException)
     {
-      u.e("!44@/B4Tb64lLpKAQbqlkU5I8mZxJJ4JsPX28ihhHV6igVo=", "exception in NetSceneLocalProxy");
-      dKP.countDown();
+      v.e("MicroMsg.ExtContentProviderBase", "exception in NetSceneLocalProxy");
+      dMy.countDown();
     }
   }
 }

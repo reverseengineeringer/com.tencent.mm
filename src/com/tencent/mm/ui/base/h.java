@@ -20,54 +20,54 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.ay.g;
-import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.az.a;
+import com.tencent.mm.bb.g;
 import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.p;
 
 public final class h
   extends Dialog
   implements DialogInterface
 {
-  private TextView dFY;
-  private boolean goQ;
-  public Button hZT;
-  public Button hug;
-  public LinearLayout kCH;
-  private TextView kCI;
-  private TextView kCJ;
-  private ImageView kCK;
-  private ImageView kCL;
-  private View kCM;
-  private LinearLayout kCN;
-  private ViewGroup kCO;
-  private ViewGroup kCP;
-  private View kCQ;
+  private TextView dHy;
+  private boolean gzi;
+  public Button hLU;
+  public Button itB;
+  public LinearLayout lbM;
+  private TextView lbN;
+  private TextView lbO;
+  private ImageView lbP;
+  private ImageView lbQ;
+  private View lbR;
+  private LinearLayout lbS;
+  private ViewGroup lbT;
+  private ViewGroup lbU;
+  private View lbV;
   public Context mContext;
-  private View ns;
+  private View nI;
   
   public h(Context paramContext)
   {
-    super(paramContext, 2131100061);
+    super(paramContext, 2131493483);
     mContext = paramContext;
-    if (a.da(mContext)) {}
-    for (kCH = ((LinearLayout)p.ee(mContext).inflate(2131363281, null));; kCH = ((LinearLayout)p.ee(mContext).inflate(2131363173, null)))
+    if (a.cY(mContext)) {}
+    for (lbM = ((LinearLayout)p.ef(mContext).inflate(2130903951, null));; lbM = ((LinearLayout)p.ef(mContext).inflate(2130903950, null)))
     {
-      hZT = ((Button)kCH.findViewById(2131168324));
-      hug = ((Button)kCH.findViewById(2131168414));
-      dFY = ((TextView)kCH.findViewById(2131168319));
-      kCI = ((TextView)kCH.findViewById(2131166167));
-      kCJ = ((TextView)kCH.findViewById(2131166168));
-      kCK = ((ImageView)kCH.findViewById(2131168318));
-      kCL = ((ImageView)kCH.findViewById(2131166166));
-      kCM = kCH.findViewById(2131168317);
-      kCN = ((LinearLayout)kCH.findViewById(2131166165));
-      kCO = ((ViewGroup)kCH.findViewById(2131168322));
-      kCQ = kCH.findViewById(2131168323);
-      kCP = ((ViewGroup)kCH.findViewById(2131168321));
+      itB = ((Button)lbM.findViewById(2131758041));
+      hLU = ((Button)lbM.findViewById(2131758040));
+      dHy = ((TextView)lbM.findViewById(2131758036));
+      lbN = ((TextView)lbM.findViewById(2131757169));
+      lbO = ((TextView)lbM.findViewById(2131757170));
+      lbP = ((ImageView)lbM.findViewById(2131758035));
+      lbQ = ((ImageView)lbM.findViewById(2131757168));
+      lbR = lbM.findViewById(2131758034);
+      lbS = ((LinearLayout)lbM.findViewById(2131757167));
+      lbT = ((ViewGroup)lbM.findViewById(2131758038));
+      lbV = lbM.findViewById(2131758039);
+      lbU = ((ViewGroup)lbM.findViewById(2131758037));
       setCanceledOnTouchOutside(true);
       return;
     }
@@ -84,119 +84,119 @@ public final class h
       setTitle(title);
     }
     int i;
-    if (iFa != 0)
+    if (jbV != 0)
     {
-      i = iFa;
-      dFY.setTextColor(ColorStateList.valueOf(i));
+      i = jbV;
+      dHy.setTextColor(ColorStateList.valueOf(i));
     }
-    if (kBz != 0)
+    if (laF != 0)
     {
-      i = kBz;
-      dFY.setGravity(i);
+      i = laF;
+      dHy.setGravity(i);
     }
     if (maxLines != 0)
     {
       i = maxLines;
-      dFY.setMaxLines(i);
+      dHy.setMaxLines(i);
     }
     Object localObject;
-    if (kBo != null)
+    if (lau != null)
     {
-      localObject = kBo;
-      kCM.setVisibility(0);
-      kCK.setVisibility(0);
-      kCK.setBackgroundDrawable((Drawable)localObject);
+      localObject = lau;
+      lbR.setVisibility(0);
+      lbP.setVisibility(0);
+      lbP.setBackgroundDrawable((Drawable)localObject);
     }
-    if (inG != null)
+    if (iIl != null)
     {
-      ns = inG;
-      if (ns != null)
+      nI = iIl;
+      if (nI != null)
       {
-        kCN.setVisibility(8);
-        kCP.setVisibility(0);
-        kCP.removeAllViews();
-        kCP.addView(ns, new LinearLayout.LayoutParams(-1, -1));
+        lbS.setVisibility(8);
+        lbU.setVisibility(0);
+        lbU.removeAllViews();
+        lbU.addView(nI, new LinearLayout.LayoutParams(-1, -1));
       }
-      if (kBx != null)
+      if (laD != null)
       {
-        if (kBA != null) {
+        if (laG != null) {
           break label569;
         }
-        localObject = kBx;
-        kCQ.setVisibility(8);
-        kCO.addView((View)localObject);
+        localObject = laD;
+        lbV.setVisibility(8);
+        lbT.addView((View)localObject);
       }
     }
     for (;;)
     {
-      if ((kBs != null) && (kBs.length() > 0)) {
-        a(kBs, kBB, kBv);
+      if ((lay != null) && (lay.length() > 0)) {
+        a(lay, laH, laB);
       }
-      if ((kBt != null) && (kBt.length() > 0)) {
-        b(kBt, true, kBw);
+      if ((laz != null) && (laz.length() > 0)) {
+        b(laz, true, laC);
       }
-      if ((kBs != null) && (kBs.length() != 0) && (kBt != null)) {
-        kBt.length();
+      if ((lay != null) && (lay.length() != 0) && (laz != null)) {
+        laz.length();
       }
-      if (ial != null) {
-        setOnCancelListener(ial);
+      if (itT != null) {
+        setOnCancelListener(itT);
       }
-      if (iRg != null) {
-        setOnDismissListener(iRg);
+      if (joq != null) {
+        setOnDismissListener(joq);
       }
-      if (kBy > 0) {
-        qx(kBy);
+      if (laE > 0) {
+        sq(laE);
       }
-      setCancelable(goQ);
-      goQ = goQ;
-      if (!goQ) {
-        super.setCancelable(kBu);
+      setCancelable(gzi);
+      gzi = gzi;
+      if (!gzi) {
+        super.setCancelable(laA);
       }
       return;
-      if (kBp != null)
+      if (lav != null)
       {
-        localObject = kBp;
-        if (ns == null)
+        localObject = lav;
+        if (nI == null)
         {
-          kCN.setGravity(19);
-          kCJ.setGravity(3);
-          kCI.setGravity(3);
-          dFY.setGravity(3);
-          kCN.setVisibility(0);
-          kCL.setVisibility(0);
-          kCL.setBackgroundDrawable((Drawable)localObject);
+          lbS.setGravity(19);
+          lbO.setGravity(3);
+          lbN.setGravity(3);
+          dHy.setGravity(3);
+          lbS.setVisibility(0);
+          lbQ.setVisibility(0);
+          lbQ.setBackgroundDrawable((Drawable)localObject);
         }
       }
-      if ((kBq != null) && (kBq.length() > 0)) {
-        setMessage(kBq);
+      if ((law != null) && (law.length() > 0)) {
+        setMessage(law);
       }
-      if ((kBr == null) || (kBr.length() <= 0)) {
+      if ((lax == null) || (lax.length() <= 0)) {
         break;
       }
-      localObject = kBr;
-      if (ns != null) {
+      localObject = lax;
+      if (nI != null) {
         break;
       }
-      kCN.setVisibility(0);
-      kCJ.setVisibility(0);
-      kCJ.setText((CharSequence)localObject);
+      lbS.setVisibility(0);
+      lbO.setVisibility(0);
+      lbO.setText((CharSequence)localObject);
       break;
       label569:
-      localObject = kBx;
-      ViewGroup.LayoutParams localLayoutParams = kBA;
-      kCQ.setVisibility(8);
-      kCO.addView((View)localObject, localLayoutParams);
+      localObject = laD;
+      ViewGroup.LayoutParams localLayoutParams = laG;
+      lbV.setVisibility(8);
+      lbT.addView((View)localObject, localLayoutParams);
     }
   }
   
   public final void a(CharSequence paramCharSequence, final boolean paramBoolean, final DialogInterface.OnClickListener paramOnClickListener)
   {
-    if (hZT == null) {
+    if (itB == null) {
       return;
     }
-    hZT.setVisibility(0);
-    hZT.setText(paramCharSequence);
-    hZT.setOnClickListener(new View.OnClickListener()
+    itB.setVisibility(0);
+    itB.setText(paramCharSequence);
+    itB.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
@@ -212,12 +212,12 @@ public final class h
   
   public final void b(CharSequence paramCharSequence, final boolean paramBoolean, final DialogInterface.OnClickListener paramOnClickListener)
   {
-    if (hug == null) {
+    if (hLU == null) {
       return;
     }
-    hug.setVisibility(0);
-    hug.setText(paramCharSequence);
-    hug.setOnClickListener(new View.OnClickListener()
+    hLU.setVisibility(0);
+    hLU.setText(paramCharSequence);
+    hLU.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
@@ -231,37 +231,37 @@ public final class h
     });
   }
   
-  public final void bcs()
+  public final void bhH()
   {
-    if (kCJ != null) {
-      kCJ.setText(g.aWe().c(kCJ.getContext(), kCJ.getText().toString(), kCJ.getTextSize()));
+    if (lbO != null) {
+      lbO.setText(g.bbq().c(lbO.getContext(), lbO.getText().toString(), lbO.getTextSize()));
     }
-    if (kCI != null) {
-      kCI.setText(g.aWe().c(kCI.getContext(), kCI.getText().toString(), kCI.getTextSize()));
+    if (lbN != null) {
+      lbN.setText(g.bbq().c(lbN.getContext(), lbN.getText().toString(), lbN.getTextSize()));
     }
   }
   
-  public final void bct()
+  public final void bhI()
   {
-    if (ns != null) {}
-    while (kCJ == null) {
+    if (nI != null) {}
+    while (lbO == null) {
       return;
     }
-    kCJ.setTextColor(-16777216);
+    lbO.setTextColor(-16777216);
   }
   
   public final void dismiss()
   {
     if (Looper.myLooper() != Looper.getMainLooper())
     {
-      ab.j(new Runnable()
+      ad.k(new Runnable()
       {
         public final void run()
         {
           dismiss();
         }
       });
-      u.e("!32@/B4Tb64lLpK6ZJSQRdrgGPCb19zAlM5/", ay.aVJ().toString());
+      v.e("MicroMsg.MMAlertDialog", be.baX().toString());
       return;
     }
     try
@@ -271,7 +271,7 @@ public final class h
     }
     catch (Exception localException)
     {
-      u.e("!32@/B4Tb64lLpK6ZJSQRdrgGPCb19zAlM5/", "dismiss exception, e = " + localException.getMessage());
+      v.e("MicroMsg.MMAlertDialog", "dismiss exception, e = " + localException.getMessage());
     }
   }
   
@@ -282,12 +282,12 @@ public final class h
     default: 
       return null;
     case -1: 
-      return hZT;
+      return itB;
     }
-    return hug;
+    return hLU;
   }
   
-  public final void hv(boolean paramBoolean)
+  public final void hT(boolean paramBoolean)
   {
     super.setCancelable(false);
   }
@@ -295,52 +295,38 @@ public final class h
   protected final void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(kCH);
-  }
-  
-  public final void qx(int paramInt)
-  {
-    if (ns != null) {}
-    while (kCJ == null) {
-      return;
-    }
-    kCJ.setTextSize(paramInt);
-  }
-  
-  public final void qy(int paramInt)
-  {
-    hZT.setTextColor(paramInt);
+    setContentView(lbM);
   }
   
   public final void setCancelable(boolean paramBoolean)
   {
     super.setCancelable(paramBoolean);
-    goQ = paramBoolean;
-    setCanceledOnTouchOutside(goQ);
+    gzi = paramBoolean;
+    setCanceledOnTouchOutside(gzi);
   }
   
   public final void setMessage(CharSequence paramCharSequence)
   {
-    if (ns != null) {
+    if (nI != null) {
       return;
     }
-    kCN.setVisibility(0);
-    kCI.setVisibility(0);
-    kCI.setText(paramCharSequence);
+    lbS.setVisibility(0);
+    lbN.setVisibility(0);
+    lbN.setText(paramCharSequence);
   }
   
   public final void setTitle(int paramInt)
   {
-    kCM.setVisibility(0);
-    dFY.setVisibility(0);
-    dFY.setText(paramInt);
+    lbR.setVisibility(0);
+    dHy.setVisibility(0);
+    dHy.setText(paramInt);
   }
   
   public final void setTitle(CharSequence paramCharSequence)
   {
-    kCM.setVisibility(0);
-    dFY.setVisibility(0);
-    dFY.setText(g.aWe().c(mContext, paramCharSequence.toString(), dFY.getTextSize()));
+    lbR.setVisibility(0);
+    dHy.setVisibility(0);
+    dHy.setText(g.bbq().c(mContext, paramCharSequence.toString(), dHy.getTextSize()));
   }
   
   public final void show()
@@ -352,37 +338,51 @@ public final class h
     }
     catch (Exception localException)
     {
-      u.printErrStackTrace("!32@/B4Tb64lLpK6ZJSQRdrgGPCb19zAlM5/", localException, "", new Object[0]);
+      v.printErrStackTrace("MicroMsg.MMAlertDialog", localException, "", new Object[0]);
     }
+  }
+  
+  public final void sq(int paramInt)
+  {
+    if (nI != null) {}
+    while (lbO == null) {
+      return;
+    }
+    lbO.setTextSize(paramInt);
+  }
+  
+  public final void sr(int paramInt)
+  {
+    itB.setTextColor(paramInt);
   }
   
   public static final class a
   {
-    public c kCW;
+    public c lcb;
     private Context mContext;
     
     public a(Context paramContext)
     {
       mContext = paramContext;
-      kCW = new c();
-      kCW.kBy = -1;
+      lcb = new c();
+      lcb.laE = -1;
     }
     
-    public final a GA(String paramString)
+    public final a IM(String paramString)
     {
-      kCW.kBr = paramString;
+      lcb.title = paramString;
       return this;
     }
     
-    public final a Gy(String paramString)
+    public final a IN(String paramString)
     {
-      kCW.title = paramString;
+      lcb.law = paramString;
       return this;
     }
     
-    public final a Gz(String paramString)
+    public final a IO(String paramString)
     {
-      kCW.kBq = paramString;
+      lcb.lax = paramString;
       return this;
     }
     
@@ -393,28 +393,28 @@ public final class h
     
     public final a a(DialogInterface.OnDismissListener paramOnDismissListener)
     {
-      kCW.iRg = paramOnDismissListener;
+      lcb.joq = paramOnDismissListener;
       return this;
     }
     
     public final a a(String paramString, DialogInterface.OnClickListener paramOnClickListener)
     {
-      kCW.kBs = paramString;
-      kCW.kBv = paramOnClickListener;
+      lcb.lay = paramString;
+      lcb.laB = paramOnClickListener;
       return this;
     }
     
     public final a a(String paramString, boolean paramBoolean, DialogInterface.OnClickListener paramOnClickListener)
     {
-      kCW.kBs = paramString;
-      kCW.kBv = paramOnClickListener;
-      kCW.kBB = paramBoolean;
+      lcb.lay = paramString;
+      lcb.laB = paramOnClickListener;
+      lcb.laH = paramBoolean;
       return this;
     }
     
-    public final a aq(View paramView)
+    public final a au(View paramView)
     {
-      kCW.inG = paramView;
+      lcb.iIl = paramView;
       return this;
     }
     
@@ -425,16 +425,16 @@ public final class h
     
     public final a b(String paramString, DialogInterface.OnClickListener paramOnClickListener)
     {
-      kCW.kBt = paramString;
-      kCW.kBw = paramOnClickListener;
+      lcb.laz = paramString;
+      lcb.laC = paramOnClickListener;
       return this;
     }
     
-    public final h bcu()
+    public final h bhJ()
     {
       h localh = new h(mContext);
-      localh.a(kCW);
-      localh.bcs();
+      localh.a(lcb);
+      localh.bhH();
       return localh;
     }
     
@@ -445,43 +445,43 @@ public final class h
     
     public final a c(DialogInterface.OnCancelListener paramOnCancelListener)
     {
-      kCW.ial = paramOnCancelListener;
+      lcb.itT = paramOnCancelListener;
       return this;
     }
     
-    public final a g(Drawable paramDrawable)
+    public final a h(Drawable paramDrawable)
     {
-      kCW.kBp = paramDrawable;
+      lcb.lav = paramDrawable;
       return this;
     }
     
-    public final a hw(boolean paramBoolean)
+    public final a hU(boolean paramBoolean)
     {
-      kCW.goQ = paramBoolean;
+      lcb.gzi = paramBoolean;
       return this;
     }
     
-    public final a hx(boolean paramBoolean)
+    public final a hV(boolean paramBoolean)
     {
-      kCW.kBu = paramBoolean;
+      lcb.laA = paramBoolean;
       return this;
     }
     
-    public final a qA(int paramInt)
+    public final a ss(int paramInt)
     {
-      kCW.kBq = mContext.getString(paramInt);
+      lcb.title = mContext.getString(paramInt);
       return this;
     }
     
-    public final a qB(int paramInt)
+    public final a st(int paramInt)
     {
-      kCW.kBr = mContext.getString(paramInt);
+      lcb.law = mContext.getString(paramInt);
       return this;
     }
     
-    public final a qz(int paramInt)
+    public final a su(int paramInt)
     {
-      kCW.title = mContext.getString(paramInt);
+      lcb.lax = mContext.getString(paramInt);
       return this;
     }
   }

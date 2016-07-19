@@ -1,12 +1,12 @@
 package com.tencent.mm.ui.friend;
 
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.bb;
 import com.tencent.mm.model.c;
 import com.tencent.mm.model.i;
 import com.tencent.mm.modelfriend.af;
 import com.tencent.mm.modelfriend.ag;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 
@@ -15,56 +15,56 @@ final class e$2
 {
   e$2(e parame) {}
   
-  public final void Hs(String paramString)
+  public final void JH(String paramString)
   {
-    Object localObject = com.tencent.mm.modelfriend.ah.zv();
-    af localaf = ((ag)localObject).hC(paramString);
+    Object localObject = com.tencent.mm.modelfriend.ah.zI();
+    af localaf = ((ag)localObject).hU(paramString);
     if (localaf == null)
     {
-      u.w("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "[cpan] dealSucc failed. qqlist is null. username is :%s", new Object[] { paramString });
+      v.w("MicroMsg.QQFriendAdapter", "[cpan] dealSucc failed. qqlist is null. username is :%s", new Object[] { paramString });
       return;
     }
-    bNl = 2;
-    ((ag)localObject).a(bNk, localaf);
-    lrX.notifyDataSetChanged();
-    localObject = com.tencent.mm.model.ah.tD().rq().Ep(paramString);
+    bGF = 2;
+    ((ag)localObject).a(bGE, localaf);
+    lSB.notifyDataSetChanged();
+    localObject = com.tencent.mm.model.ah.tE().rr().GD(paramString);
     if (localObject != null) {
-      if (((field_conRemark == null) || (field_conRemark.equals(""))) && (localaf != null) && (localaf.zl() != null) && (!localaf.zl().equals(""))) {
-        i.b((k)localObject, localaf.zl());
+      if (((field_conRemark == null) || (field_conRemark.equals(""))) && (localaf != null) && (localaf.zy() != null) && (!localaf.zy().equals(""))) {
+        i.b((k)localObject, localaf.zy());
       }
     }
     for (;;)
     {
-      bb.uE().b(26, new Object[0]);
+      bb.uG().c(26, new Object[0]);
       return;
-      localaf = com.tencent.mm.modelfriend.ah.zv().hC(paramString);
+      localaf = com.tencent.mm.modelfriend.ah.zI().hU(paramString);
       if (localaf != null)
       {
-        localaf.zo();
-        u.d("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "user " + paramString + " qq " + bNk);
-        com.tencent.mm.modelfriend.ah.zv().a(bNk, localaf);
+        localaf.zB();
+        v.d("MicroMsg.QQFriendAdapter", "user " + paramString + " qq " + bGE);
+        com.tencent.mm.modelfriend.ah.zI().a(bGE, localaf);
       }
     }
   }
   
-  public final void aw(String paramString, boolean paramBoolean)
+  public final void aG(String paramString, boolean paramBoolean)
   {
     if (paramBoolean)
     {
-      af localaf = com.tencent.mm.modelfriend.ah.zv().hC(paramString);
+      af localaf = com.tencent.mm.modelfriend.ah.zI().hU(paramString);
       if (localaf == null) {
         break label73;
       }
-      localaf.zo();
-      u.d("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "user " + paramString + " qq " + bNk);
-      com.tencent.mm.modelfriend.ah.zv().a(bNk, localaf);
+      localaf.zB();
+      v.d("MicroMsg.QQFriendAdapter", "user " + paramString + " qq " + bGE);
+      com.tencent.mm.modelfriend.ah.zI().a(bGE, localaf);
     }
     for (;;)
     {
-      lrX.notifyDataSetChanged();
+      lSB.notifyDataSetChanged();
       return;
       label73:
-      u.w("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "[cpan] dealFail failed. qqlist is null. username is :%s", new Object[] { paramString });
+      v.w("MicroMsg.QQFriendAdapter", "[cpan] dealFail failed. qqlist is null. username is :%s", new Object[] { paramString });
     }
   }
 }

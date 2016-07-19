@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic aqA:Lcom/tencent/mm/c/b/c;
+.field final synthetic abS:Lcom/tencent/mm/c/b/c;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 87
-    iput-object p1, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iput-object p1, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,18 +41,18 @@
 
     .prologue
     .line 91
-    iget-object v0, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget v1, v0, Lcom/tencent/mm/c/b/c;->aqp:I
+    iget v1, v0, Lcom/tencent/mm/c/b/c;->abH:I
 
     add-int/lit8 v1, v1, 0x1
 
-    iput v1, v0, Lcom/tencent/mm/c/b/c;->aqp:I
+    iput v1, v0, Lcom/tencent/mm/c/b/c;->abH:I
 
     .line 95
-    iget-object v0, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/c/b/c;->aqr:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/c/b/c;->abJ:Z
 
     if-eqz v0, :cond_0
 
@@ -60,9 +60,9 @@
 
     move-result-wide v0
 
-    iget-object v2, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v2, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget-wide v2, v2, Lcom/tencent/mm/c/b/c;->aqk:J
+    iget-wide v2, v2, Lcom/tencent/mm/c/b/c;->abC:J
 
     sub-long/2addr v0, v2
 
@@ -72,9 +72,9 @@
 
     if-gtz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget v0, v0, Lcom/tencent/mm/c/b/c;->aqp:I
+    iget v0, v0, Lcom/tencent/mm/c/b/c;->abH:I
 
     add-int/lit8 v0, v0, -0xa
 
@@ -84,15 +84,15 @@
 
     move-result-wide v2
 
-    iget-object v4, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v4, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget-wide v4, v4, Lcom/tencent/mm/c/b/c;->aqk:J
+    iget-wide v4, v4, Lcom/tencent/mm/c/b/c;->abC:J
 
     sub-long/2addr v2, v4
 
-    iget-object v4, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v4, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget v4, v4, Lcom/tencent/mm/c/b/c;->aqd:I
+    iget v4, v4, Lcom/tencent/mm/c/b/c;->abv:I
 
     int-to-long v4, v4
 
@@ -103,7 +103,7 @@
     if-lez v0, :cond_0
 
     .line 97
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0x97
 
@@ -113,10 +113,10 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     .line 98
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0x97
 
@@ -126,10 +126,10 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     .line 99
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4"
+    const-string/jumbo v0, "MicroMsg.MMPcmRecorder"
 
     const-string/jumbo v1, "return too many data, force stop, %d, %d"
 
@@ -139,9 +139,9 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v4, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget v4, v4, Lcom/tencent/mm/c/b/c;->aqp:I
+    iget v4, v4, Lcom/tencent/mm/c/b/c;->abH:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -155,15 +155,15 @@
 
     move-result-wide v4
 
-    iget-object v6, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v6, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget-wide v6, v6, Lcom/tencent/mm/c/b/c;->aqk:J
+    iget-wide v6, v6, Lcom/tencent/mm/c/b/c;->abC:J
 
     sub-long/2addr v4, v6
 
-    iget-object v6, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v6, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget v6, v6, Lcom/tencent/mm/c/b/c;->aqd:I
+    iget v6, v6, Lcom/tencent/mm/c/b/c;->abv:I
 
     int-to-long v6, v6
 
@@ -175,27 +175,27 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/c/b/c;->aqq:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/c/b/c;->abI:Z
 
     .line 106
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/c;->aqw:Lcom/tencent/mm/c/c/b;
+    iget-object v0, v0, Lcom/tencent/mm/c/b/c;->abO:Lcom/tencent/mm/c/c/b;
 
     if-eqz v0, :cond_1
 
     .line 107
-    iget-object v0, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/c;->aqw:Lcom/tencent/mm/c/c/b;
+    iget-object v0, v0, Lcom/tencent/mm/c/b/c;->abO:Lcom/tencent/mm/c/c/b;
 
     invoke-virtual {v0, p2, p1}, Lcom/tencent/mm/c/c/b;->h([BI)Z
 
@@ -204,43 +204,43 @@
     if-lez p1, :cond_6
 
     .line 111
-    iget-object v7, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v7, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget-boolean v0, v7, Lcom/tencent/mm/c/b/c;->aqm:Z
+    iget-boolean v0, v7, Lcom/tencent/mm/c/b/c;->abE:Z
 
     if-eqz v0, :cond_2
 
     const/4 v0, -0x2
 
-    iget v1, v7, Lcom/tencent/mm/c/b/c;->aqa:I
+    iget v1, v7, Lcom/tencent/mm/c/b/c;->abs:I
 
     if-eq v0, v1, :cond_6
 
     :cond_2
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->aql:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abD:I
 
     div-int v2, p1, v0
 
     const/4 v0, 0x5
 
     :goto_0
-    iget v1, v7, Lcom/tencent/mm/c/b/c;->aqn:I
+    iget v1, v7, Lcom/tencent/mm/c/b/c;->abF:I
 
     add-int/2addr v1, v2
 
     if-gt v0, v1, :cond_4
 
-    iget v1, v7, Lcom/tencent/mm/c/b/c;->aqn:I
+    iget v1, v7, Lcom/tencent/mm/c/b/c;->abF:I
 
     sub-int v1, v0, v1
 
     add-int/lit8 v1, v1, -0x1
 
-    iget v3, v7, Lcom/tencent/mm/c/b/c;->aql:I
+    iget v3, v7, Lcom/tencent/mm/c/b/c;->abD:I
 
     mul-int/2addr v1, v3
 
-    iget v3, v7, Lcom/tencent/mm/c/b/c;->aql:I
+    iget v3, v7, Lcom/tencent/mm/c/b/c;->abD:I
 
     add-int/2addr v3, v1
 
@@ -249,7 +249,7 @@
     if-le v3, p1, :cond_d
 
     :cond_3
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4"
+    const-string/jumbo v0, "MicroMsg.MMPcmRecorder"
 
     const-string/jumbo v4, "error start: %d, end: %d"
 
@@ -273,18 +273,18 @@
 
     aput-object v3, v5, v1
 
-    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_4
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->aqn:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abF:I
 
     add-int/2addr v0, v2
 
     rem-int/lit8 v0, v0, 0x5
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->aqn:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abF:I
 
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->aqa:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abs:I
 
     const/16 v1, 0x14
 
@@ -292,21 +292,21 @@
 
     const/4 v0, 0x6
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->apY:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abq:I
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4"
+    const-string/jumbo v0, "MicroMsg.MMPcmRecorder"
 
     const-string/jumbo v1, "[error] RECORDER_DATAZERO_ERROR"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->apZ:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abr:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_f
 
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->aqb:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abt:I
 
     const/4 v1, -0x1
 
@@ -314,17 +314,17 @@
 
     const/16 v0, 0xb
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->apY:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abq:I
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4"
+    const-string/jumbo v0, "MicroMsg.MMPcmRecorder"
 
     const-string/jumbo v1, "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
     :goto_1
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0x97
 
@@ -334,9 +334,9 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0x97
 
@@ -346,19 +346,19 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     const/4 v0, -0x2
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->aqa:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abs:I
 
-    invoke-virtual {v7}, Lcom/tencent/mm/c/b/c;->lO()V
+    invoke-virtual {v7}, Lcom/tencent/mm/c/b/c;->jZ()V
 
     .line 116
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/c/b/c;->aqf:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/c/b/c;->abx:Z
 
     if-eqz v0, :cond_b
 
@@ -366,9 +366,9 @@
     if-lez p1, :cond_14
 
     .line 118
-    iget-object v7, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v7, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->apZ:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abr:I
 
     const/4 v1, -0x1
 
@@ -419,14 +419,14 @@
 
     if-lt v1, v2, :cond_11
 
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->apZ:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abr:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->apZ:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abr:I
 
     :cond_9
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->apZ:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abr:I
 
     const/16 v1, 0x64
 
@@ -434,21 +434,21 @@
 
     const/4 v0, 0x7
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->apY:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abq:I
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4"
+    const-string/jumbo v0, "MicroMsg.MMPcmRecorder"
 
     const-string/jumbo v1, "[error] RECORDER_DISTORTION_ERROR"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->aqa:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abs:I
 
     const/4 v1, -0x2
 
     if-ne v0, v1, :cond_12
 
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->aqb:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abt:I
 
     const/4 v1, -0x1
 
@@ -456,17 +456,17 @@
 
     const/16 v0, 0xb
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->apY:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abq:I
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4"
+    const-string/jumbo v0, "MicroMsg.MMPcmRecorder"
 
     const-string/jumbo v1, "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_a
     :goto_3
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0x97
 
@@ -476,9 +476,9 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0x97
 
@@ -488,13 +488,13 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
-    invoke-virtual {v7}, Lcom/tencent/mm/c/b/c;->lO()V
+    invoke-virtual {v7}, Lcom/tencent/mm/c/b/c;->jZ()V
 
     const/4 v0, -0x1
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->apZ:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abr:I
 
     .line 123
     :cond_b
@@ -514,25 +514,25 @@
 
     const/4 v1, -0x1
 
-    iput v1, v7, Lcom/tencent/mm/c/b/c;->aqa:I
+    iput v1, v7, Lcom/tencent/mm/c/b/c;->abs:I
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v7, Lcom/tencent/mm/c/b/c;->aqm:Z
+    iput-boolean v1, v7, Lcom/tencent/mm/c/b/c;->abE:Z
 
     :cond_e
-    iget v1, v7, Lcom/tencent/mm/c/b/c;->aqa:I
+    iget v1, v7, Lcom/tencent/mm/c/b/c;->abs:I
 
     add-int/lit8 v1, v1, 0x1
 
-    iput v1, v7, Lcom/tencent/mm/c/b/c;->aqa:I
+    iput v1, v7, Lcom/tencent/mm/c/b/c;->abs:I
 
     add-int/lit8 v0, v0, 0x5
 
     goto/16 :goto_0
 
     :cond_f
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->apZ:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abr:I
 
     const/4 v1, -0x1
 
@@ -540,18 +540,18 @@
 
     const/16 v0, 0x8
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->apY:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abq:I
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4"
+    const-string/jumbo v0, "MicroMsg.MMPcmRecorder"
 
     const-string/jumbo v1, "[error] RECORDER_DATAZERO_DISTORTION_ERROR"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     :cond_10
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->aqb:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abt:I
 
     const/4 v1, -0x1
 
@@ -559,13 +559,13 @@
 
     const/16 v0, 0x9
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->apY:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abq:I
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4"
+    const-string/jumbo v0, "MicroMsg.MMPcmRecorder"
 
     const-string/jumbo v1, "[error] RECORDER_DATAZERO_READRET_ERROR"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -576,7 +576,7 @@
     goto/16 :goto_2
 
     :cond_12
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->aqa:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abs:I
 
     const/4 v1, -0x2
 
@@ -584,18 +584,18 @@
 
     const/16 v0, 0x8
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->apY:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abq:I
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4"
+    const-string/jumbo v0, "MicroMsg.MMPcmRecorder"
 
     const-string/jumbo v1, "[error] RECORDER_DATAZERO_DISTORTION_ERROR"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
     :cond_13
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->aqb:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abt:I
 
     const/4 v1, -0x1
 
@@ -603,21 +603,21 @@
 
     const/16 v0, 0xa
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->apY:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abq:I
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4"
+    const-string/jumbo v0, "MicroMsg.MMPcmRecorder"
 
     const-string/jumbo v1, "[error] RECORDER_DISTORTION_READRET_ERROR"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_3
 
     .line 120
     :cond_14
-    iget-object v7, p0, Lcom/tencent/mm/c/b/c$1;->aqA:Lcom/tencent/mm/c/b/c;
+    iget-object v7, p0, Lcom/tencent/mm/c/b/c$1;->abS:Lcom/tencent/mm/c/b/c;
 
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->aqb:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abt:I
 
     const/4 v1, -0x1
 
@@ -625,13 +625,13 @@
 
     if-gez p1, :cond_b
 
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->aqb:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abt:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->aqb:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abt:I
 
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->aqb:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abt:I
 
     const/16 v1, 0x32
 
@@ -639,21 +639,21 @@
 
     const/4 v0, 0x5
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->apY:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abq:I
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4"
+    const-string/jumbo v0, "MicroMsg.MMPcmRecorder"
 
     const-string/jumbo v1, "[error] RECORDER_READRET_ERROR"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->aqa:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abs:I
 
     const/4 v1, -0x2
 
     if-ne v0, v1, :cond_16
 
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->apZ:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abr:I
 
     const/4 v1, -0x1
 
@@ -661,17 +661,17 @@
 
     const/16 v0, 0xb
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->apY:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abq:I
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4"
+    const-string/jumbo v0, "MicroMsg.MMPcmRecorder"
 
     const-string/jumbo v1, "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_15
     :goto_5
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0x97
 
@@ -681,9 +681,9 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0x97
 
@@ -693,18 +693,18 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
-    invoke-virtual {v7}, Lcom/tencent/mm/c/b/c;->lO()V
+    invoke-virtual {v7}, Lcom/tencent/mm/c/b/c;->jZ()V
 
     const/4 v0, -0x1
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->aqb:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abt:I
 
     goto/16 :goto_4
 
     :cond_16
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->aqa:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abs:I
 
     const/4 v1, -0x2
 
@@ -712,18 +712,18 @@
 
     const/16 v0, 0x9
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->apY:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abq:I
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4"
+    const-string/jumbo v0, "MicroMsg.MMPcmRecorder"
 
     const-string/jumbo v1, "[error] RECORDER_DATAZERO_READRET_ERROR"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_5
 
     :cond_17
-    iget v0, v7, Lcom/tencent/mm/c/b/c;->apZ:I
+    iget v0, v7, Lcom/tencent/mm/c/b/c;->abr:I
 
     const/4 v1, -0x1
 
@@ -731,13 +731,13 @@
 
     const/16 v0, 0xa
 
-    iput v0, v7, Lcom/tencent/mm/c/b/c;->apY:I
+    iput v0, v7, Lcom/tencent/mm/c/b/c;->abq:I
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4"
+    const-string/jumbo v0, "MicroMsg.MMPcmRecorder"
 
     const-string/jumbo v1, "[error] RECORDER_DISTORTION_READRET_ERROR"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_5
 .end method

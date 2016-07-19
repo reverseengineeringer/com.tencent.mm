@@ -1,18 +1,12 @@
 package com.tencent.mm.protocal;
 
-public final class k$a
+public abstract interface k$a
 {
-  public final int[] iUR = null;
-  public final int[] iUS;
-  public final int iUT;
-  public final int iUU;
+  public abstract boolean aAi();
   
-  public k$a(int[] paramArrayOfInt, int paramInt1, int paramInt2)
-  {
-    iUS = paramArrayOfInt;
-    iUT = paramInt1;
-    iUU = paramInt2;
-  }
+  public abstract byte[] tZ();
+  
+  public abstract int ua();
 }
 
 /* Location:

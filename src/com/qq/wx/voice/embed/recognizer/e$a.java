@@ -9,27 +9,27 @@ final class e$a
   
   public final void run()
   {
-    if (ajf.ajn.begin() != 0)
+    if (UV.Vd.begin() != 0)
     {
-      ajf.ajo.a(-102);
+      UV.Ve.a(-102);
       return;
     }
-    if (ajf.ajn.recognize(ajf.ajp, ajf.ajp.length) != 0)
+    if (UV.Vd.recognize(UV.Vf, UV.Vf.length) != 0)
     {
-      ajf.ajo.a(-103);
+      UV.Ve.a(-103);
       return;
     }
-    if (ajf.ajn.end() != 0)
+    if (UV.Vd.end() != 0)
     {
-      ajf.ajo.a(-104);
+      UV.Ve.a(-104);
       return;
     }
     a locala = new a();
-    if (ajf.ajn.getResult(locala) != 0) {
-      ajf.ajo.a(-105);
+    if (UV.Vd.getResult(locala) != 0) {
+      UV.Ve.a(-105);
     }
-    g localg = ajf.ajo;
-    ajr.sendMessage(ajr.obtainMessage(200, locala));
+    g localg = UV.Ve;
+    Vh.sendMessage(Vh.obtainMessage(200, locala));
   }
 }
 

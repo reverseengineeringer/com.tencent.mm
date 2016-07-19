@@ -1,14 +1,14 @@
 .class public final Lcom/tencent/mm/app/PusherProfile;
-.super Lcom/tencent/mm/compatible/loader/h;
+.super Lcom/tencent/mm/compatible/loader/e;
 .source "SourceFile"
 
 
 # static fields
-.field public static final alg:Ljava/lang/String;
+.field public static final Yf:Ljava/lang/String;
 
 
 # instance fields
-.field private alY:Lcom/tencent/mm/console/Shell;
+.field private YN:Lcom/tencent/mm/console/Shell;
 
 
 # direct methods
@@ -21,7 +21,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -39,7 +39,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/app/PusherProfile;->alg:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/app/PusherProfile;->Yf:Ljava/lang/String;
 
     return-void
 .end method
@@ -49,14 +49,14 @@
 
     .prologue
     .line 26
-    invoke-direct {p0}, Lcom/tencent/mm/compatible/loader/h;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/compatible/loader/e;-><init>()V
 
     .line 29
     new-instance v0, Lcom/tencent/mm/console/Shell;
 
     invoke-direct {v0}, Lcom/tencent/mm/console/Shell;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/app/PusherProfile;->alY:Lcom/tencent/mm/console/Shell;
+    iput-object v0, p0, Lcom/tencent/mm/app/PusherProfile;->YN:Lcom/tencent/mm/console/Shell;
 
     return-void
 .end method
@@ -67,7 +67,7 @@
     .locals 0
 
     .prologue
-    .line 105
+    .line 91
     return-void
 .end method
 
@@ -80,7 +80,7 @@
     const/4 v6, 0x0
 
     .line 34
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -96,182 +96,182 @@
     invoke-static {v1, v2}, Lcom/tencent/mm/compatible/util/i;->b(Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
     .line 42
-    invoke-static {v0}, Lcom/tencent/mm/booter/c;->an(Landroid/content/Context;)Lcom/tencent/mm/booter/c;
+    invoke-static {v0}, Lcom/tencent/mm/booter/c;->ak(Landroid/content/Context;)Lcom/tencent/mm/booter/c;
 
     move-result-object v0
 
     .line 43
     const-string/jumbo v1, "PUSH"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cv(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cA(Ljava/lang/String;)V
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.display_errcode"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmz:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chE:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.display_msgstate"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmA:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chF:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.network.simulate_fault"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmB:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chG:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.network.force_touch"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmC:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chH:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.outputToSdCardlog"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmD:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chI:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.crashIsExit"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmE:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chJ:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.album_show_info"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmI:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chN:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.location_help"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmJ:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chO:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.force_soso"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmM:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chR:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.simulatePostServerError"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmN:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chS:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.simulateUploadServerError"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmO:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chT:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.snsNotwirteThumb"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmP:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chU:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.filterfpnp"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmS:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chX:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.testForPull"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmT:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chY:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.cdnDownloadThread"
 
@@ -279,25 +279,25 @@
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Integer;I)I
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/lang/Integer;I)I
 
     move-result v1
 
-    sput v1, Lcom/tencent/mm/platformtools/r;->cmQ:I
+    sput v1, Lcom/tencent/mm/platformtools/q;->chV:I
 
     const/4 v2, 0x4
 
     if-eq v1, v2, :cond_0
 
-    sget v1, Lcom/tencent/mm/platformtools/r;->cmQ:I
+    sget v1, Lcom/tencent/mm/platformtools/q;->chV:I
 
     if-lez v1, :cond_0
 
-    sget v1, Lcom/tencent/mm/platformtools/r;->cmQ:I
+    sget v1, Lcom/tencent/mm/platformtools/q;->chV:I
 
-    sput v1, Lcom/tencent/mm/storage/i;->kaj:I
+    sput v1, Lcom/tencent/mm/storage/i;->kAF:I
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX"
+    const-string/jumbo v1, "MicroMsg.Debugger"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -305,7 +305,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget v3, Lcom/tencent/mm/platformtools/r;->cmQ:I
+    sget v3, Lcom/tencent/mm/platformtools/q;->chV:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -315,32 +315,32 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     const-string/jumbo v1, ".com.tencent.mm.debug.test.logShowSnsItemXml"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmR:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chW:Z
 
     const-string/jumbo v1, ".com.tencent.mm.debug.test.skip_getdns"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmW:Z
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cib:Z
 
     :try_start_0
     const-string/jumbo v1, ".com.tencent.mm.debug.log.setversion"
@@ -357,7 +357,7 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/tencent/mm/protocal/b;->oR(I)V
+    invoke-static {v1}, Lcom/tencent/mm/protocal/c;->qE(I)V
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -381,7 +381,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -401,7 +401,7 @@
 
     move-result-object v2
 
-    sput-object v2, Lcom/tencent/mm/protocal/b;->bwR:Ljava/lang/String;
+    sput-object v2, Lcom/tencent/mm/protocal/c;->boS:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -417,11 +417,11 @@
 
     move-result-object v2
 
-    sput-object v2, Lcom/tencent/mm/protocal/b;->iUa:Ljava/lang/String;
+    sput-object v2, Lcom/tencent/mm/protocal/c;->jrt:Ljava/lang/String;
 
-    sput-object v1, Lcom/tencent/mm/protocal/b;->iUc:Ljava/lang/String;
+    sput-object v1, Lcom/tencent/mm/protocal/c;->jrv:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/b/b;->Cy(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/tencent/mm/sdk/b/b;->EL(Ljava/lang/String;)V
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -429,7 +429,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v2, Lcom/tencent/mm/protocal/b;->bwR:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/protocal/c;->boS:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -441,7 +441,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/tencent/mm/sdk/b/b;->aUp()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/b/b;->aZp()Ljava/lang/String;
 
     move-result-object v2
 
@@ -472,9 +472,9 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-wide v3, Lcom/tencent/mm/protocal/b;->iUe:J
+    sget-wide v4, Lcom/tencent/mm/protocal/c;->jrx:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -486,9 +486,9 @@
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    sput-wide v1, Lcom/tencent/mm/protocal/b;->iUe:J
+    sput-wide v2, Lcom/tencent/mm/protocal/c;->jrx:J
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
@@ -508,7 +508,7 @@
 
     move-result v1
 
-    iput v1, v0, Lcom/tencent/mm/booter/c;->blQ:I
+    iput v1, v0, Lcom/tencent/mm/booter/c;->aZw:I
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
@@ -516,53 +516,53 @@
     :try_start_4
     const-string/jumbo v1, ".com.tencent.mm.debug.report.debugmodel"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
     const-string/jumbo v2, ".com.tencent.mm.debug.report.kvstat"
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v2
 
     const-string/jumbo v3, ".com.tencent.mm.debug.report.clientpref"
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v3
 
     const/4 v4, 0x0
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v3
 
     const-string/jumbo v4, ".com.tencent.mm.debug.report.useraction"
 
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/booter/c;->cw(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/booter/c;->cB(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v0
 
-    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/plugin/report/a/c;->a(ZZZZ)V
+    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/plugin/report/a/c;->b(ZZZZ)V
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -612,7 +612,7 @@
 
     .line 45
     :goto_4
-    invoke-static {v6}, Lcom/tencent/mm/booter/m;->aq(Z)V
+    invoke-static {v6}, Lcom/tencent/mm/booter/m;->T(Z)V
 
     .line 47
     const-string/jumbo v0, "wechatxlog"
@@ -637,23 +637,23 @@
     invoke-static {v0, v1}, Lcom/tencent/mm/compatible/util/i;->b(Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
     .line 49
-    sget v0, Lcom/tencent/mm/protocal/b;->iUf:I
+    sget v0, Lcom/tencent/mm/protocal/c;->jry:I
 
     invoke-static {v0}, Lcom/tencent/mm/protocal/MMProtocalJni;->setClientPackVersion(I)Z
 
     .line 56
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Landroid/support/a/a;->a(Landroid/content/Context;Z)Z
+    invoke-static {v0, v1}, Lcom/tencent/mm/d/a;->b(Landroid/content/Context;Z)Z
 
     .line 58
-    sget-object v0, Lcom/tencent/mm/app/PusherProfile;->alg:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/app/PusherProfile;->Yf:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/app/h;->aP(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/app/g;->aU(Ljava/lang/String;)Z
 
     .line 62
     invoke-static {}, Lcom/tencent/mm/compatible/util/i;->setupBrokenLibraryHandler()V
@@ -661,28 +661,26 @@
     .line 64
     const-string/jumbo v0, "gcm"
 
-    invoke-static {v0, v7, v7}, Lcom/tencent/mm/ar/c;->a(Ljava/lang/String;Lcom/tencent/mm/pluginsdk/g;Lcom/tencent/mm/pluginsdk/f;)V
+    invoke-static {v0, v7, v7}, Lcom/tencent/mm/av/c;->a(Ljava/lang/String;Lcom/tencent/mm/pluginsdk/g;Lcom/tencent/mm/pluginsdk/f;)V
 
     const-string/jumbo v0, "gcm"
 
-    invoke-static {v0, v7}, Lcom/tencent/mm/ar/c;->j(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-static {v0, v7}, Lcom/tencent/mm/av/c;->g(Ljava/lang/String;Ljava/util/Map;)V
 
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "GCMDoSync"
+    new-instance v1, Lcom/tencent/mm/app/PusherProfile$1;
 
-    new-instance v2, Lcom/tencent/mm/app/PusherProfile$1;
+    invoke-direct {v1, p0}, Lcom/tencent/mm/app/PusherProfile$1;-><init>(Lcom/tencent/mm/app/PusherProfile;)V
 
-    invoke-direct {v2, p0}, Lcom/tencent/mm/app/PusherProfile$1;-><init>(Lcom/tencent/mm/app/PusherProfile;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 69
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->dS(Landroid/content/Context;)Ljava/util/Locale;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->dT(Landroid/content/Context;)Ljava/util/Locale;
 
     .line 70
     return-void
@@ -691,55 +689,55 @@
     :catch_0
     move-exception v1
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX"
+    const-string/jumbo v1, "MicroMsg.Debugger"
 
     const-string/jumbo v2, "no debugger was got"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :catch_1
     move-exception v1
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX"
+    const-string/jumbo v1, "MicroMsg.Debugger"
 
     const-string/jumbo v2, "no debugger was got"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     :catch_2
     move-exception v1
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX"
+    const-string/jumbo v1, "MicroMsg.Debugger"
 
     const-string/jumbo v2, "no debugger was got"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_2
 
     :catch_3
     move-exception v1
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX"
+    const-string/jumbo v1, "MicroMsg.Debugger"
 
     const-string/jumbo v2, "no debugger was got"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_3
 
     :catch_4
     move-exception v0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX"
+    const-string/jumbo v0, "MicroMsg.Debugger"
 
     const-string/jumbo v1, "no debugger was got"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_4
 .end method
@@ -748,8 +746,8 @@
     .locals 1
 
     .prologue
-    .line 109
-    sget-object v0, Lcom/tencent/mm/app/PusherProfile;->alg:Ljava/lang/String;
+    .line 95
+    sget-object v0, Lcom/tencent/mm/app/PusherProfile;->Yf:Ljava/lang/String;
 
     return-object v0
 .end method

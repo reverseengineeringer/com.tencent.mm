@@ -1,7 +1,7 @@
 package com.tencent.mm.model.a;
 
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.ByteArrayInputStream;
 import java.util.HashMap;
 import javax.xml.parsers.DocumentBuilder;
@@ -15,34 +15,34 @@ import org.xml.sax.InputSource;
 
 public final class b
 {
-  a bDl = null;
-  a bDm = null;
+  a bwv = null;
+  a bww = null;
   
-  public final d fw(String paramString)
+  public final d fJ(String paramString)
   {
     d locald1 = null;
-    if (bDl != null) {
-      locald1 = bDl.fw(paramString);
+    if (bwv != null) {
+      locald1 = bwv.fJ(paramString);
     }
     d locald2 = locald1;
     if (locald1 == null)
     {
       locald2 = locald1;
-      if (bDm != null) {
-        locald2 = bDm.fw(paramString);
+      if (bww != null) {
+        locald2 = bww.fJ(paramString);
       }
     }
     return locald2;
   }
   
-  final void fx(String paramString)
+  final void fK(String paramString)
   {
-    if (ay.kz(paramString))
+    if (be.kf(paramString))
     {
-      u.w("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] parse xml faild. xml is null.");
+      v.w("MicroMsg.abtest.AbTestManager", "[Abtest] parse xml faild. xml is null.");
       return;
     }
-    u.i("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] parseXML content:%s", new Object[] { paramString });
+    v.i("MicroMsg.abtest.AbTestManager", "[Abtest] parseXML content:%s", new Object[] { paramString });
     Object localObject1 = DocumentBuilderFactory.newInstance();
     for (;;)
     {
@@ -80,60 +80,60 @@ public final class b
             if (localObject5 != null)
             {
               localObject5 = ((Node)localObject5).getNodeValue();
-              u.d("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] idValue:%s", new Object[] { localObject5 });
+              v.d("MicroMsg.abtest.AbTestManager", "[Abtest] idValue:%s", new Object[] { localObject5 });
               id = ((String)localObject5);
             }
             localObject4 = ((NamedNodeMap)localObject4).getNamedItem("reportid");
             if (localObject4 != null)
             {
               localObject4 = ((Node)localObject4).getNodeValue();
-              u.d("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] reportIdValue:%s", new Object[] { localObject4 });
-              bDn = ((String)localObject4);
+              v.d("MicroMsg.abtest.AbTestManager", "[Abtest] reportIdValue:%s", new Object[] { localObject4 });
+              bwx = ((String)localObject4);
             }
           }
           localObject3 = ((Node)localObject3).getTextContent();
-          u.d("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] casePointContent:%s", new Object[] { localObject3 });
+          v.d("MicroMsg.abtest.AbTestManager", "[Abtest] casePointContent:%s", new Object[] { localObject3 });
           value = ((String)localObject3);
           localObject3 = id;
-          bDk.put(localObject3, localObject2);
+          bwu.put(localObject3, localObject2);
         }
         else if ((localObject3 != null) && (((Node)localObject3).getNodeName() != null) && (((Node)localObject3).getNodeName().equals("verifymd5")))
         {
           localObject2 = ((Node)localObject3).getTextContent();
-          u.d("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] verifymd5Content:%s", new Object[] { localObject2 });
-          bDg = ((String)localObject2);
+          v.d("MicroMsg.abtest.AbTestManager", "[Abtest] verifymd5Content:%s", new Object[] { localObject2 });
+          bwq = ((String)localObject2);
         }
       }
       catch (Exception paramString)
       {
-        u.e("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] parseXML exception:%s", new Object[] { paramString.toString() });
+        v.e("MicroMsg.abtest.AbTestManager", "[Abtest] parseXML exception:%s", new Object[] { paramString.toString() });
         return;
       }
       if ((localObject3 != null) && (((Node)localObject3).getNodeName() != null) && (((Node)localObject3).getNodeName().equals("testcaseid")))
       {
         localObject2 = ((Node)localObject3).getTextContent();
-        u.d("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] testcaseidContent:%s", new Object[] { localObject2 });
-        bDh = ((String)localObject2);
+        v.d("MicroMsg.abtest.AbTestManager", "[Abtest] testcaseidContent:%s", new Object[] { localObject2 });
+        bwr = ((String)localObject2);
       }
       else if ((localObject3 != null) && (((Node)localObject3).getNodeName() != null) && (((Node)localObject3).getNodeName().equals("starttime")))
       {
         localObject2 = ((Node)localObject3).getTextContent();
-        u.d("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] starttimeContent:%s", new Object[] { localObject2 });
-        bDi = ((String)localObject2);
+        v.d("MicroMsg.abtest.AbTestManager", "[Abtest] starttimeContent:%s", new Object[] { localObject2 });
+        bws = ((String)localObject2);
       }
       else if ((localObject3 != null) && (((Node)localObject3).getNodeName() != null) && (((Node)localObject3).getNodeName().equals("endtime")))
       {
         localObject2 = ((Node)localObject3).getTextContent();
-        u.d("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] endtimeContent:%s", new Object[] { localObject2 });
-        bDj = ((String)localObject2);
+        v.d("MicroMsg.abtest.AbTestManager", "[Abtest] endtimeContent:%s", new Object[] { localObject2 });
+        bwt = ((String)localObject2);
         break label674;
         label632:
-        if ((!ay.kz(bDh)) && ("0".equals(bDh)))
+        if ((!be.kf(bwr)) && ("0".equals(bwr)))
         {
-          bDm = ((a)localObject1);
+          bww = ((a)localObject1);
           break label681;
         }
-        bDl = ((a)localObject1);
+        bwv = ((a)localObject1);
         break label681;
       }
       label674:
@@ -144,9 +144,9 @@ public final class b
     }
   }
   
-  public final boolean uM()
+  public final boolean uO()
   {
-    return bDl != null;
+    return bwv != null;
   }
 }
 

@@ -2,113 +2,113 @@ package com.tencent.mm.sandbox.updater;
 
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
 import com.tencent.mm.sdk.platformtools.ah;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class e
 {
-  private static long jTI = 125829120L;
-  private static long jTJ = 314572800L;
-  af anF = new af(new af.a()
+  private static long ktg = 125829120L;
+  private static long kth = 314572800L;
+  ah aat = new ah(new ah.a()
   {
-    public final boolean lj()
+    public final boolean jK()
     {
       e.a(e.this, true);
       return true;
     }
   }, true);
-  private boolean bvP = false;
-  boolean dPt = false;
-  private long jTK = 0L;
-  private long jTL = 0L;
-  private String jTM = null;
-  private i jTN;
+  private boolean ble = false;
+  boolean dRy = false;
+  private long kti = 0L;
+  private long ktj = 0L;
+  private String ktk = null;
+  private i ktl;
   
   public e(i parami)
   {
-    jTN = parami;
+    ktl = parami;
   }
   
-  public static boolean Cu(String paramString)
+  public static boolean EH(String paramString)
   {
-    if (h.Cw(paramString) > jTI)
+    if (h.EJ(paramString) > ktg)
     {
-      u.e("!44@/B4Tb64lLpIoz7uBiEqQZS70cVT/Q61Ax49vraaHmec=", "overTrafficAlertLine reach traffic alert line!");
+      v.e("MicroMsg.TrafficStatistic", "overTrafficAlertLine reach traffic alert line!");
       return true;
     }
     return false;
   }
   
-  public final void aJ(String paramString, int paramInt)
+  public final void aT(String paramString, int paramInt)
   {
-    if (ay.kz(paramString)) {}
+    if (be.kf(paramString)) {}
     do
     {
       return;
-      if (!paramString.equals(jTM)) {
+      if (!paramString.equals(ktk)) {
         stop();
       }
-      u.i("!44@/B4Tb64lLpIoz7uBiEqQZS70cVT/Q61Ax49vraaHmec=", "pack size: " + paramInt);
-      u.i("!44@/B4Tb64lLpIoz7uBiEqQZS70cVT/Q61Ax49vraaHmec=", "TRAFFIC_ALERT_LINE before : %s", new Object[] { Long.valueOf(jTI) });
-      jTI = Math.max(paramInt * 4, jTI);
-      jTI = Math.min(jTJ, jTI);
-      u.i("!44@/B4Tb64lLpIoz7uBiEqQZS70cVT/Q61Ax49vraaHmec=", "TRAFFIC_ALERT_LINE after : %s", new Object[] { Long.valueOf(jTI) });
-    } while (bvP);
-    if (jTN.mContext != null) {
-      dPt = ah.dB(jTN.mContext);
+      v.i("MicroMsg.TrafficStatistic", "pack size: " + paramInt);
+      v.i("MicroMsg.TrafficStatistic", "TRAFFIC_ALERT_LINE before : %s", new Object[] { Long.valueOf(ktg) });
+      ktg = Math.max(paramInt * 4, ktg);
+      ktg = Math.min(kth, ktg);
+      v.i("MicroMsg.TrafficStatistic", "TRAFFIC_ALERT_LINE after : %s", new Object[] { Long.valueOf(ktg) });
+    } while (ble);
+    if (ktl.mContext != null) {
+      dRy = ak.dC(ktl.mContext);
     }
-    anF.ds(30000L);
-    bvP = true;
-    jTM = paramString;
+    aat.dJ(30000L);
+    ble = true;
+    ktk = paramString;
   }
   
-  final void gG(boolean paramBoolean)
+  final void he(boolean paramBoolean)
   {
     long l = 0L;
-    if ((paramBoolean) || (jTK + jTL >= 524288L))
+    if ((paramBoolean) || (kti + ktj >= 524288L))
     {
-      if (jTK + jTL > 0L)
+      if (kti + ktj > 0L)
       {
         Intent localIntent = new Intent();
         localIntent.setAction("com.tencent.mm.sandbox.updater.intent.ACTION_UPDATE");
-        localIntent.putExtra("intent_extra_flow_stat_upstream", jTK);
-        localIntent.putExtra("intent_extra_flow_stat_downstream", jTL);
-        if (jTN.mContext != null) {
-          dPt = ah.dB(jTN.mContext);
+        localIntent.putExtra("intent_extra_flow_stat_upstream", kti);
+        localIntent.putExtra("intent_extra_flow_stat_downstream", ktj);
+        if (ktl.mContext != null) {
+          dRy = ak.dC(ktl.mContext);
         }
-        localIntent.putExtra("intent_extra_flow_stat_is_wifi", dPt);
-        if (jTN.mContext != null) {
-          jTN.mContext.sendBroadcast(localIntent, "com.tencent.mm.permission.MM_MESSAGE");
+        localIntent.putExtra("intent_extra_flow_stat_is_wifi", dRy);
+        if (ktl.mContext != null) {
+          ktl.mContext.sendBroadcast(localIntent, "com.tencent.mm.permission.MM_MESSAGE");
         }
       }
-      if (!ay.kz(jTM)) {
+      if (!be.kf(ktk)) {
         break label188;
       }
-      u.e("!44@/B4Tb64lLpIoz7uBiEqQZS70cVT/Q61Ax49vraaHmec=", "traffic is null!");
+      v.e("MicroMsg.TrafficStatistic", "traffic is null!");
     }
     for (;;)
     {
-      if ((l >= jTI) && (jTN.jSR == 2))
+      if ((l >= ktg) && (ktl.ksl == 2))
       {
-        u.e("!44@/B4Tb64lLpIoz7uBiEqQZS70cVT/Q61Ax49vraaHmec=", "checkIfTrafficAlert reach traffic alert line!");
-        jTN.cancel();
+        v.e("MicroMsg.TrafficStatistic", "checkIfTrafficAlert reach traffic alert line!");
+        ktl.cancel();
       }
       return;
       label188:
-      l = h.b(jTM, jTK, jTL);
-      jTK = 0L;
-      jTL = 0L;
+      l = h.c(ktk, kti, ktj);
+      kti = 0L;
+      ktj = 0L;
     }
   }
   
   public final void stop()
   {
-    gG(true);
-    anF.aUF();
-    bvP = false;
+    he(true);
+    aat.aZJ();
+    ble = false;
   }
 }
 

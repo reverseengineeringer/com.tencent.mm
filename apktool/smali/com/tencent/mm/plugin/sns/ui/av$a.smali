@@ -1,4 +1,4 @@
-.class final Lcom/tencent/mm/plugin/sns/ui/av$a;
+.class public interface abstract Lcom/tencent/mm/plugin/sns/ui/av$a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -9,40 +9,54 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x609
     name = "a"
 .end annotation
 
 
-# instance fields
-.field gFN:Landroid/view/View;
+# virtual methods
+.method public abstract D(IZ)V
+.end method
 
-.field gRB:Ljava/lang/String;
+.method public abstract a(ILjava/util/List;Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;)V"
+        }
+    .end annotation
+.end method
 
-.field final synthetic hmD:Lcom/tencent/mm/plugin/sns/ui/av;
+.method public abstract aFH()V
+.end method
 
+.method public abstract aFI()Landroid/widget/ListView;
+.end method
 
-# direct methods
-.method public constructor <init>(Lcom/tencent/mm/plugin/sns/ui/av;Ljava/lang/String;Landroid/view/View;)V
-    .locals 1
+.method public abstract aFJ()Lcom/tencent/mm/ui/base/MMPullDownView;
+.end method
 
-    .prologue
-    .line 61
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/av$a;->hmD:Lcom/tencent/mm/plugin/sns/ui/av;
+.method public abstract aFK()Z
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract aFL()V
+.end method
 
-    .line 55
-    const/4 v0, 0x0
+.method public abstract aFM()V
+.end method
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av$a;->gFN:Landroid/view/View;
+.method public abstract aFN()V
+.end method
 
-    .line 62
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/av$a;->gRB:Ljava/lang/String;
+.method public abstract fo(Z)V
+.end method
 
-    .line 63
-    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/ui/av$a;->gFN:Landroid/view/View;
-
-    .line 64
-    return-void
+.method public abstract getType()I
 .end method

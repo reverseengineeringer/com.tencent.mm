@@ -1,21 +1,16 @@
 package com.tencent.mm.ui.conversation;
 
-import android.content.Intent;
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.ar.c;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 
 final class BizConversationUI$a$4
-  implements MenuItem.OnMenuItemClickListener
+  implements DialogInterface.OnCancelListener
 {
   BizConversationUI$a$4(BizConversationUI.a parama) {}
   
-  public final boolean onMenuItemClick(MenuItem paramMenuItem)
+  public final void onCancel(DialogInterface paramDialogInterface)
   {
-    paramMenuItem = new Intent();
-    paramMenuItem.putExtra("Contact_User", BizConversationUI.a.f(loi));
-    c.c(loi.getActivity(), "profile", ".ui.ContactInfoUI", paramMenuItem);
-    return true;
+    BizConversationUI.a.f(lOA);
   }
 }
 

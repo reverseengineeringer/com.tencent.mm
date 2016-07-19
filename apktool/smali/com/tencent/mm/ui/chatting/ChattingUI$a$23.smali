@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/aa;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
@@ -23,41 +32,47 @@
     .locals 1
 
     .prologue
-    .line 1046
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$23;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 952
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$23;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/aa;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$23;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final bridge synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 2
 
     .prologue
-    .line 1049
-    instance-of v0, p1, Lcom/tencent/mm/d/a/y;
+    .line 952
+    check-cast p1, Lcom/tencent/mm/e/a/aa;
+
+    instance-of v0, p1, Lcom/tencent/mm/e/a/aa;
 
     if-eqz v0, :cond_0
 
-    .line 1050
-    check-cast p1, Lcom/tencent/mm/d/a/y;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/aa;->aeR:Lcom/tencent/mm/e/a/aa$a;
 
-    .line 1051
-    iget-object v0, p1, Lcom/tencent/mm/d/a/y;->ath:Lcom/tencent/mm/d/a/y$a;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/aa$a;->aec:Lcom/tencent/mm/storage/ai;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/y$a;->ask:Lcom/tencent/mm/storage/ag;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$23;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    .line 1052
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$23;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    invoke-static {v1, v0, p1}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->a(Lcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ai;Lcom/tencent/mm/e/a/aa;)V
 
-    invoke-static {v1, v0, p1}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->a(Lcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ag;Lcom/tencent/mm/d/a/y;)V
-
-    .line 1056
     :cond_0
     const/4 v0, 0x0
 

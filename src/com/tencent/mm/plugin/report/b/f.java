@@ -1,42 +1,42 @@
 package com.tencent.mm.plugin.report.b;
 
-import com.tencent.mm.at.b;
+import com.tencent.mm.ax.b;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
 import com.tencent.mm.plugin.report.service.KVReportJni.KVReportJava2C;
-import com.tencent.mm.protocal.b.rr;
-import com.tencent.mm.protocal.b.rs;
-import com.tencent.mm.protocal.z;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.ac;
+import com.tencent.mm.protocal.b.sc;
+import com.tencent.mm.protocal.b.sd;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.c;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.m;
 
 public final class f
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  private a anN;
-  private rr fTW = null;
+  private a bkQ;
+  private d bkT;
+  private sc gdq = null;
   
   public f(byte[] paramArrayOfByte)
   {
     try
     {
-      fTW = new rr();
-      fTW.am(paramArrayOfByte);
+      gdq = new sc();
+      gdq.au(paramArrayOfByte);
       return;
     }
     catch (Exception paramArrayOfByte)
     {
-      u.e("!56@/B4Tb64lLpK+IBX8XDgnviS8K3r6m3u3/UxPXtya4NqTZ/byEWyAJA==", "parse data error");
-      ah.tv().r(new Runnable()
+      v.e("MicroMsg.NetSceneGetCliKVStrategy", "parse data error");
+      ah.tw().t(new Runnable()
       {
         public final void run()
         {
@@ -48,19 +48,19 @@ public final class f
   
   public final int a(e parame, d paramd)
   {
-    anM = paramd;
+    bkT = paramd;
     int i;
     a.a locala;
-    if (!ay.J(ah.tq()))
+    if (!be.P(ah.tr()))
     {
       i = 1;
       if (i == 0) {
-        fTW.jgC = b.aH(ay.aVA());
+        gdq.jEz = b.aO(be.baN());
       }
       locala = new a.a();
-      bFe = false;
-      bFa = fTW;
-      bFb = new rs();
+      byp = false;
+      byl = gdq;
+      bym = new sd();
       if (i == 0) {
         break label168;
       }
@@ -69,16 +69,16 @@ public final class f
     for (paramd = "/cgi-bin/micromsg-bin/getkvidkeystrategy";; paramd = "/cgi-bin/micromsg-bin/getkvidkeystrategyrsa")
     {
       uri = paramd;
-      bEY = getType();
-      anN = locala.vy();
+      byj = getType();
+      bkQ = locala.vA();
       if (i == 0)
       {
-        anN.a(z.aTw());
-        anN.bEZ = 1;
+        bkQ.a(ac.aYt());
+        bkQ.byk = 1;
       }
-      i = a(parame, anN, this);
+      i = a(parame, bkQ, this);
       if (i < 0) {
-        u.i("!56@/B4Tb64lLpK+IBX8XDgnviS8K3r6m3u3/UxPXtya4NqTZ/byEWyAJA==", "mark all failed. do scene %d", new Object[] { Integer.valueOf(i) });
+        v.i("MicroMsg.NetSceneGetCliKVStrategy", "mark all failed. do scene %d", new Object[] { Integer.valueOf(i) });
       }
       try
       {
@@ -87,7 +87,7 @@ public final class f
       }
       catch (Exception parame)
       {
-        u.e("!56@/B4Tb64lLpK+IBX8XDgnviS8K3r6m3u3/UxPXtya4NqTZ/byEWyAJA==", "onReportStrategyResp failed  hash:%d  , ex:%s", new Object[] { Integer.valueOf(hashCode()), ay.b(parame) });
+        v.e("MicroMsg.NetSceneGetCliKVStrategy", "onReportStrategyResp failed  hash:%d  , ex:%s", new Object[] { Integer.valueOf(hashCode()), be.f(parame) });
       }
       i = 0;
       break;
@@ -97,39 +97,39 @@ public final class f
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    if ((ah.tE() == null) || (tEbFO == null))
+    if ((ah.tF() == null) || (tFbyZ == null))
     {
-      u.f("!56@/B4Tb64lLpK+IBX8XDgnviS8K3r6m3u3/UxPXtya4NqTZ/byEWyAJA==", "null == MMCore.getNetSceneQueue().getDispatcher(), can't give response to kvcomm.");
-      anM.a(paramInt2, paramInt3, paramString, this);
+      v.f("MicroMsg.NetSceneGetCliKVStrategy", "null == MMCore.getNetSceneQueue().getDispatcher(), can't give response to kvcomm.");
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
       return;
     }
     if (paramInt2 != 0)
     {
-      u.e("!56@/B4Tb64lLpK+IBX8XDgnviS8K3r6m3u3/UxPXtya4NqTZ/byEWyAJA==", "get report strategy err, errType:" + paramInt2 + ", errCode:" + paramInt3);
+      v.e("MicroMsg.NetSceneGetCliKVStrategy", "get report strategy err, errType:" + paramInt2 + ", errCode:" + paramInt3);
       KVReportJni.KVReportJava2C.onReportStrategyResp(paramInt2, paramInt3, null);
-      anM.a(paramInt2, paramInt3, paramString, this);
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
       return;
     }
-    u.d("!56@/B4Tb64lLpK+IBX8XDgnviS8K3r6m3u3/UxPXtya4NqTZ/byEWyAJA==", "get report strategy ok");
-    paramo = (rs)anN.bEX.bFf;
+    v.d("MicroMsg.NetSceneGetCliKVStrategy", "get report strategy ok");
+    paramo = (sd)bkQ.byi.byq;
     try
     {
       KVReportJni.KVReportJava2C.onReportStrategyResp(0, 0, paramo.toByteArray());
-      anM.a(paramInt2, paramInt3, paramString, this);
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
       return;
     }
     catch (Exception paramo)
     {
       for (;;)
       {
-        u.e("!56@/B4Tb64lLpK+IBX8XDgnviS8K3r6m3u3/UxPXtya4NqTZ/byEWyAJA==", "onReportStrategyResp failed  hash:%d  , ex:%s", new Object[] { Integer.valueOf(hashCode()), ay.b(paramo) });
+        v.e("MicroMsg.NetSceneGetCliKVStrategy", "onReportStrategyResp failed  hash:%d  , ex:%s", new Object[] { Integer.valueOf(hashCode()), be.f(paramo) });
       }
     }
   }
   
   public final int getType()
   {
-    if (!ay.J(ah.tq())) {}
+    if (!be.P(ah.tr())) {}
     for (int i = 1; i != 0; i = 0) {
       return 988;
     }

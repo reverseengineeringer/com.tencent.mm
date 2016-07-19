@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/aq6" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" style="@style/FTSListNormalItem">
+        <ImageView android:id="@id/l4" android:layout_width="@dimen/hw" android:layout_height="@dimen/hw" android:layout_marginRight="@dimen/f7" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/h4" android:textColor="#ff999999" android:ellipsize="end" android:id="@id/i1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="{title}" android:singleLine="true" />
+            <TextView android:textSize="@dimen/h4" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/ar3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="{content}" android:maxLines="2" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:id="@id/ar4" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip">
+                    <ImageView android:id="@id/ar5" android:layout_width="13.0dip" android:layout_height="13.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="5.0dip" />
+                    <TextView android:textSize="@dimen/h4" android:textColor="#ff999999" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/ar6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="{link}" android:singleLine="true" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/ar7" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip">
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <com.tencent.mm.ui.MMCenterCropImageView android:id="@id/ar8" android:visibility="gone" android:layout_width="93.0dip" android:layout_height="66.0dip" android:scaleType="centerCrop" />
+                        <ImageView android:id="@id/ar9" android:paddingLeft="2.0dip" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/acr" android:layout_alignParentBottom="true" />
+                    </RelativeLayout>
+                    <com.tencent.mm.ui.MMCenterCropImageView android:id="@id/ar_" android:visibility="gone" android:layout_width="66.0dip" android:layout_height="66.0dip" android:scaleType="centerCrop" />
+                    <com.tencent.mm.ui.MMCenterCropImageView android:id="@id/ara" android:visibility="gone" android:layout_width="66.0dip" android:layout_height="66.0dip" android:layout_marginLeft="5.0dip" android:scaleType="centerCrop" />
+                    <com.tencent.mm.ui.MMCenterCropImageView android:id="@id/arb" android:visibility="gone" android:layout_width="66.0dip" android:layout_height="66.0dip" android:layout_marginLeft="5.0dip" android:scaleType="centerCrop" />
+                    <com.tencent.mm.ui.MMCenterCropImageView android:id="@id/arc" android:visibility="gone" android:layout_width="66.0dip" android:layout_height="66.0dip" android:layout_marginLeft="5.0dip" android:scaleType="centerCrop" />
+                    <TextView android:textSize="11.0dip" android:textColor="#ff999999" android:gravity="center" android:id="@id/ard" android:background="#fff7f7f7" android:visibility="gone" android:layout_width="66.0dip" android:layout_height="66.0dip" android:layout_marginLeft="5.0dip" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

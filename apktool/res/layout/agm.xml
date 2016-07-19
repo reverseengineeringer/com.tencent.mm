@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffefeef2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/cry" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0dip" android:textColor="@color/g4" android:layout_gravity="left" android:id="@id/crz" android:background="@drawable/om" android:padding="16.0dip" android:text="@string/dla" style="@style/MMSmallButton" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/aai" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/i8" android:textColor="@color/ar" android:layout_gravity="center_horizontal" android:id="@id/cs0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:text="@string/dlh" />
+    <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:layout_gravity="center_horizontal" android:id="@id/cs1" android:paddingTop="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dlf" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="54.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/cs2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="60.0dip">
+            <ImageButton android:id="@id/cs3" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/au2" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/gn" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/cs4" android:layout_width="48.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/dl4" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/cs5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="60.0dip">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageButton android:id="@id/cs6" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/au4" />
+                <com.tencent.mm.ui.widget.MMProgressWheel android:id="@id/cs7" android:visibility="invisible" android:layout_width="48.0dip" android:layout_height="48.0dip" app:matProg_progressIndeterminate="true" app:matProg_barColor="@color/ax" app:matProg_fillRadius="true" app:matProg_barWidth="1.0dip" />
+            </FrameLayout>
+            <TextView android:textSize="10.0sp" android:textColor="@color/gn" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/cs8" android:layout_width="48.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/dl8" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:id="@id/cs9" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/au3" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/gn" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="48.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/dl7" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginBottom="24.0dip">
+        <Button android:ellipsize="end" android:gravity="center" android:id="@id/cs_" android:padding="4.0dip" android:layout_width="@dimen/hq" android:layout_marginBottom="16.0dip" android:text="@string/dlg" android:singleLine="true" android:layout_alignParentBottom="true" style="@style/MMlineGreenMiddleButton" />
+    </RelativeLayout>
+</LinearLayout>

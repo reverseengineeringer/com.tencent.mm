@@ -1,5 +1,5 @@
-.class final synthetic Lcom/tencent/mm/aa/a$1;
-.super Ljava/lang/Object;
+.class final Lcom/tencent/mm/aa/a$1;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -9,68 +9,51 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic bPm:[I
+# instance fields
+.field final synthetic bED:Lcom/tencent/mm/aa/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/tencent/mm/aa/a;)V
+    .locals 0
 
     .prologue
-    .line 38
-    invoke-static {}, Lcom/tencent/mm/aa/a$a;->zN()[I
+    .line 25
+    iput-object p1, p0, Lcom/tencent/mm/aa/a$1;->bED:Lcom/tencent/mm/aa/a;
 
-    move-result-object v0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/tencent/mm/aa/a$1;->bPm:[I
-
-    :try_start_0
-    sget-object v0, Lcom/tencent/mm/aa/a$1;->bPm:[I
-
-    sget v1, Lcom/tencent/mm/aa/a$a;->bPn:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/tencent/mm/aa/a$1;->bPm:[I
-
-    sget v1, Lcom/tencent/mm/aa/a$a;->bPo:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
-
-    :goto_1
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
 
-    goto :goto_1
+# virtual methods
+.method public final handleMessage(Landroid/os/Message;)V
+    .locals 7
 
-    :catch_1
-    move-exception v0
+    .prologue
+    const/4 v5, 0x0
 
-    goto :goto_0
+    const/4 v2, 0x0
+
+    .line 29
+    iget-object v0, p0, Lcom/tencent/mm/aa/a$1;->bED:Lcom/tencent/mm/aa/a;
+
+    const/16 v1, 0x3e7
+
+    const-string/jumbo v4, ""
+
+    move v3, v2
+
+    move-object v6, v5
+
+    invoke-virtual/range {v0 .. v6}, Lcom/tencent/mm/aa/a;->a(IIILjava/lang/String;Lcom/tencent/mm/network/o;[B)V
+
+    .line 30
+    return-void
 .end method

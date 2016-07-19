@@ -10,9 +10,9 @@ import java.util.List;
 public final class p$e
   implements p.f
 {
-  private Bitmap cM;
-  private int dc = 0;
-  public a di;
+  private Bitmap dc;
+  private int dt = 0;
+  public a dy;
   
   public final p.d a(p.d paramd)
   {
@@ -20,14 +20,14 @@ public final class p$e
       return paramd;
     }
     Bundle localBundle = new Bundle();
-    if (cM != null) {
-      localBundle.putParcelable("large_icon", cM);
+    if (dc != null) {
+      localBundle.putParcelable("large_icon", dc);
     }
-    if (dc != 0) {
-      localBundle.putInt("app_color", dc);
+    if (dt != 0) {
+      localBundle.putInt("app_color", dt);
     }
-    if (di != null) {
-      localBundle.putBundle("car_conversation", p.W().a(di));
+    if (dy != null) {
+      localBundle.putBundle("car_conversation", p.V().a(dy));
     }
     if (mExtras == null) {
       mExtras = new Bundle();
@@ -39,61 +39,61 @@ public final class p$e
   public static final class a
     extends s.b
   {
-    static final s.b.a dp = new s.b.a() {};
-    private final String[] dj;
-    private final w dk;
-    private final PendingIntent dl;
-    private final PendingIntent dm;
-    private final String[] dn;
-    private final long jdField_do;
+    static final s.b.a dF = new s.b.a() {};
+    private final w dA;
+    private final PendingIntent dB;
+    private final PendingIntent dC;
+    private final String[] dD;
+    private final long dE;
+    private final String[] dz;
     
     public a(String[] paramArrayOfString1, w paramw, PendingIntent paramPendingIntent1, PendingIntent paramPendingIntent2, String[] paramArrayOfString2, long paramLong)
     {
-      dj = paramArrayOfString1;
-      dk = paramw;
-      dm = paramPendingIntent2;
-      dl = paramPendingIntent1;
-      dn = paramArrayOfString2;
-      jdField_do = paramLong;
+      dz = paramArrayOfString1;
+      dA = paramw;
+      dC = paramPendingIntent2;
+      dB = paramPendingIntent1;
+      dD = paramArrayOfString2;
+      dE = paramLong;
     }
     
     public final long getLatestTimestamp()
     {
-      return jdField_do;
+      return dE;
     }
     
     public final String[] getMessages()
     {
-      return dj;
+      return dz;
     }
     
     public final String[] getParticipants()
     {
-      return dn;
+      return dD;
     }
     
     public final PendingIntent getReadPendingIntent()
     {
-      return dm;
+      return dC;
     }
     
     public final PendingIntent getReplyPendingIntent()
     {
-      return dl;
+      return dB;
     }
     
     public static final class a
     {
-      public w dk;
-      public PendingIntent dl;
-      public PendingIntent dm;
-      public long jdField_do;
-      public final List dq = new ArrayList();
-      public final String dr;
+      public w dA;
+      public PendingIntent dB;
+      public PendingIntent dC;
+      public long dE;
+      public final List<String> dG = new ArrayList();
+      public final String dH;
       
       public a(String paramString)
       {
-        dr = paramString;
+        dH = paramString;
       }
     }
   }

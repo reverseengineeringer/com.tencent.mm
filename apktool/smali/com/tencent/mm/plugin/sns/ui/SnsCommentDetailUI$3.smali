@@ -15,129 +15,88 @@
 
 
 # instance fields
-.field final synthetic hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+.field final synthetic hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Landroid/app/Activity;Lcom/tencent/mm/plugin/sns/d/ac;)V
+.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Landroid/app/Activity;Lcom/tencent/mm/plugin/sns/e/ac;)V
     .locals 1
 
     .prologue
-    .line 634
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 638
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0, p2, p3}, Lcom/tencent/mm/plugin/sns/ui/c/b;-><init>(ILandroid/app/Activity;Lcom/tencent/mm/plugin/sns/d/ac;)V
+    invoke-direct {p0, v0, p2, p3}, Lcom/tencent/mm/plugin/sns/ui/c/b;-><init>(ILandroid/app/Activity;Lcom/tencent/mm/plugin/sns/e/ac;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final Z(Landroid/view/View;)V
+.method public final aDL()V
     .locals 0
 
     .prologue
-    .line 670
+    .line 656
     return-void
 .end method
 
-.method public final aAT()V
-    .locals 0
-
-    .prologue
-    .line 652
-    return-void
-.end method
-
-.method public final aAU()V
+.method public final aDM()V
     .locals 3
 
     .prologue
-    .line 681
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 685
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->o(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/a;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->o(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/a;->azM()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/b;->aCn()Z
 
-    .line 682
+    .line 686
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 683
+    .line 687
     const-string/jumbo v1, "result_finish"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 684
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 688
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     const/4 v2, -0x1
 
     invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->setResult(ILandroid/content/Intent;)V
 
-    .line 685
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 689
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->finish()V
 
-    .line 686
+    .line 690
     return-void
 .end method
 
-.method public final aa(Landroid/view/View;)V
-    .locals 0
-
-    .prologue
-    .line 664
-    return-void
-.end method
-
-.method public final ab(Landroid/view/View;)V
-    .locals 0
-
-    .prologue
-    .line 658
-    return-void
-.end method
-
-.method public final ac(Landroid/view/View;)V
-    .locals 1
-
-    .prologue
-    .line 675
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->o(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sns/ui/a;->Y(Landroid/view/View;)Z
-
-    .line 676
-    return-void
-.end method
-
-.method public final aq(Ljava/lang/Object;)V
+.method public final aJ(Ljava/lang/Object;)V
     .locals 3
 
     .prologue
-    .line 644
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 648
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->g(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    .line 645
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 649
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->n(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/af;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->n(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/aj;
 
     move-result-object v0
 
@@ -147,9 +106,50 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/af;->a(Landroid/view/View;ILcom/tencent/mm/plugin/sns/d/aq;)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/aj;->a(Landroid/view/View;ILcom/tencent/mm/plugin/sns/e/ap;)V
 
-    .line 646
+    .line 650
+    return-void
+.end method
+
+.method public final aa(Landroid/view/View;)V
+    .locals 0
+
+    .prologue
+    .line 674
+    return-void
+.end method
+
+.method public final ab(Landroid/view/View;)V
+    .locals 0
+
+    .prologue
+    .line 668
+    return-void
+.end method
+
+.method public final ac(Landroid/view/View;)V
+    .locals 0
+
+    .prologue
+    .line 662
+    return-void
+.end method
+
+.method public final ad(Landroid/view/View;)V
+    .locals 1
+
+    .prologue
+    .line 679
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->o(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sns/ui/b;->Z(Landroid/view/View;)Z
+
+    .line 680
     return-void
 .end method
 
@@ -157,6 +157,6 @@
     .locals 0
 
     .prologue
-    .line 640
+    .line 644
     return-void
 .end method

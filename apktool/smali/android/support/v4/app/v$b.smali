@@ -15,11 +15,11 @@
 
 
 # virtual methods
+.method public abstract Z()I
+.end method
+
 .method public abstract a(Landroid/app/NotificationManager;Ljava/lang/String;I)V
 .end method
 
 .method public abstract a(Landroid/app/NotificationManager;Ljava/lang/String;ILandroid/app/Notification;)V
-.end method
-
-.method public abstract ab()I
 .end method

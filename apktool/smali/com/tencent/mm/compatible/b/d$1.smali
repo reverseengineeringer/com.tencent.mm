@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bpB:Lcom/tencent/mm/compatible/b/d;
+.field final synthetic bdB:Lcom/tencent/mm/compatible/b/d;
 
 
 # direct methods
@@ -23,8 +23,8 @@
     .locals 0
 
     .prologue
-    .line 90
-    iput-object p1, p0, Lcom/tencent/mm/compatible/b/d$1;->bpB:Lcom/tencent/mm/compatible/b/d;
+    .line 91
+    iput-object p1, p0, Lcom/tencent/mm/compatible/b/d$1;->bdB:Lcom/tencent/mm/compatible/b/d;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -37,20 +37,20 @@
     .locals 4
 
     .prologue
-    .line 94
+    .line 95
     if-nez p2, :cond_0
 
-    .line 100
+    .line 101
     :goto_0
     return-void
 
-    .line 97
+    .line 98
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 98
+    .line 99
     const-string/jumbo v1, "existing"
 
     const/4 v2, 0x0
@@ -59,10 +59,10 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/tencent/mm/compatible/b/d;->aw(Z)Z
+    invoke-static {v1}, Lcom/tencent/mm/compatible/b/d;->Z(Z)Z
 
-    .line 99
-    const-string/jumbo v1, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 100
+    const-string/jumbo v1, "MicroMsg.MMAudioManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -80,7 +80,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/compatible/b/d;->nV()Z
+    invoke-static {}, Lcom/tencent/mm/compatible/b/d;->ml()Z
 
     move-result v2
 
@@ -92,7 +92,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/pluginsdk/model/app/w;
-.super Lcom/tencent/mm/r/j;
+.super Lcom/tencent/mm/t/j;
 .source "SourceFile"
 
 # interfaces
@@ -7,13 +7,13 @@
 
 
 # instance fields
-.field private anM:Lcom/tencent/mm/r/d;
+.field private bkQ:Lcom/tencent/mm/t/a;
 
-.field private anN:Lcom/tencent/mm/r/a;
+.field private bkT:Lcom/tencent/mm/t/d;
 
-.field iBe:I
+.field iXK:I
 
-.field iBf:Lcom/tencent/mm/pluginsdk/model/app/v;
+.field iXL:Lcom/tencent/mm/pluginsdk/model/app/v;
 
 
 # direct methods
@@ -24,64 +24,64 @@
     const/4 v2, 0x0
 
     .line 24
-    invoke-direct {p0}, Lcom/tencent/mm/r/j;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/t/j;-><init>()V
 
     .line 25
-    iput p1, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->iBe:I
+    iput p1, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->iXK:I
 
     .line 27
-    new-instance v0, Lcom/tencent/mm/r/a$a;
+    new-instance v0, Lcom/tencent/mm/t/a$a;
 
-    invoke-direct {v0}, Lcom/tencent/mm/r/a$a;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/t/a$a;-><init>()V
 
     .line 28
-    new-instance v1, Lcom/tencent/mm/protocal/b/ay;
+    new-instance v1, Lcom/tencent/mm/protocal/b/bb;
 
-    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/ay;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/bb;-><init>()V
 
-    iput-object v1, v0, Lcom/tencent/mm/r/a$a;->bFa:Lcom/tencent/mm/at/a;
+    iput-object v1, v0, Lcom/tencent/mm/t/a$a;->byl:Lcom/tencent/mm/ax/a;
 
     .line 29
-    new-instance v1, Lcom/tencent/mm/protocal/b/az;
+    new-instance v1, Lcom/tencent/mm/protocal/b/bc;
 
-    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/az;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/bc;-><init>()V
 
-    iput-object v1, v0, Lcom/tencent/mm/r/a$a;->bFb:Lcom/tencent/mm/at/a;
+    iput-object v1, v0, Lcom/tencent/mm/t/a$a;->bym:Lcom/tencent/mm/ax/a;
 
     .line 30
     const-string/jumbo v1, "/cgi-bin/micromsg-bin/appcenter"
 
-    iput-object v1, v0, Lcom/tencent/mm/r/a$a;->uri:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/t/a$a;->uri:Ljava/lang/String;
 
     .line 31
     const/16 v1, 0x1c4
 
-    iput v1, v0, Lcom/tencent/mm/r/a$a;->bEY:I
+    iput v1, v0, Lcom/tencent/mm/t/a$a;->byj:I
 
     .line 32
-    iput v2, v0, Lcom/tencent/mm/r/a$a;->bFc:I
+    iput v2, v0, Lcom/tencent/mm/t/a$a;->byn:I
 
     .line 33
-    iput v2, v0, Lcom/tencent/mm/r/a$a;->bFd:I
+    iput v2, v0, Lcom/tencent/mm/t/a$a;->byo:I
 
     .line 35
-    invoke-virtual {v0}, Lcom/tencent/mm/r/a$a;->vy()Lcom/tencent/mm/r/a;
+    invoke-virtual {v0}, Lcom/tencent/mm/t/a$a;->vA()Lcom/tencent/mm/t/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->anN:Lcom/tencent/mm/r/a;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->bkQ:Lcom/tencent/mm/t/a;
 
     .line 36
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->anN:Lcom/tencent/mm/r/a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->bkQ:Lcom/tencent/mm/t/a;
 
-    iget-object v0, v0, Lcom/tencent/mm/r/a;->bEW:Lcom/tencent/mm/r/a$b;
+    iget-object v0, v0, Lcom/tencent/mm/t/a;->byh:Lcom/tencent/mm/t/a$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/r/a$b;->bFf:Lcom/tencent/mm/at/a;
+    iget-object v0, v0, Lcom/tencent/mm/t/a$b;->byq:Lcom/tencent/mm/ax/a;
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/ay;
+    check-cast v0, Lcom/tencent/mm/protocal/b/bb;
 
     .line 37
-    invoke-virtual {p2}, Lcom/tencent/mm/pluginsdk/model/app/v;->abk()[B
+    invoke-virtual {p2}, Lcom/tencent/mm/pluginsdk/model/app/v;->adE()[B
 
     move-result-object v1
 
@@ -89,22 +89,22 @@
     if-eqz v1, :cond_0
 
     .line 39
-    new-instance v2, Lcom/tencent/mm/protocal/b/alx;
+    new-instance v2, Lcom/tencent/mm/protocal/b/ami;
 
-    invoke-direct {v2}, Lcom/tencent/mm/protocal/b/alx;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/protocal/b/ami;-><init>()V
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/protocal/b/alx;->aO([B)Lcom/tencent/mm/protocal/b/alx;
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/protocal/b/ami;->aV([B)Lcom/tencent/mm/protocal/b/ami;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/ay;->iXU:Lcom/tencent/mm/protocal/b/alx;
+    iput-object v1, v0, Lcom/tencent/mm/protocal/b/bb;->jvz:Lcom/tencent/mm/protocal/b/ami;
 
     .line 41
     :cond_0
-    iput p1, v0, Lcom/tencent/mm/protocal/b/ay;->dzC:I
+    iput p1, v0, Lcom/tencent/mm/protocal/b/bb;->Type:I
 
     .line 42
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->iBf:Lcom/tencent/mm/pluginsdk/model/app/v;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->iXL:Lcom/tencent/mm/pluginsdk/model/app/v;
 
     .line 43
     return-void
@@ -112,15 +112,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/r/d;)I
+.method public final a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/t/d;)I
     .locals 1
 
     .prologue
     .line 66
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->anM:Lcom/tencent/mm/r/d;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->bkT:Lcom/tencent/mm/t/d;
 
     .line 67
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->anN:Lcom/tencent/mm/r/a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->bkQ:Lcom/tencent/mm/t/a;
 
     invoke-virtual {p0, p1, v0, p0}, Lcom/tencent/mm/pluginsdk/model/app/w;->a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/network/o;Lcom/tencent/mm/network/j;)I
 
@@ -134,7 +134,7 @@
 
     .prologue
     .line 47
-    const-string/jumbo v0, "!44@/B4Tb64lLpK+IBX8XDgnvhHbXbegBzoVbS15fEWkRq0="
+    const-string/jumbo v0, "MicroMsg.NetSceneAppCenter"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -160,7 +160,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 48
     if-nez p2, :cond_0
@@ -169,7 +169,7 @@
 
     .line 49
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpK+IBX8XDgnvhHbXbegBzoVbS15fEWkRq0="
+    const-string/jumbo v0, "MicroMsg.NetSceneAppCenter"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -195,12 +195,12 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 50
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->anM:Lcom/tencent/mm/r/d;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->bkT:Lcom/tencent/mm/t/d;
 
-    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/r/d;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/t/d;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 
     .line 57
     :goto_0
@@ -208,28 +208,28 @@
 
     .line 54
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->iBf:Lcom/tencent/mm/pluginsdk/model/app/v;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->iXL:Lcom/tencent/mm/pluginsdk/model/app/v;
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->anN:Lcom/tencent/mm/r/a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->bkQ:Lcom/tencent/mm/t/a;
 
-    iget-object v0, v0, Lcom/tencent/mm/r/a;->bEX:Lcom/tencent/mm/r/a$c;
+    iget-object v0, v0, Lcom/tencent/mm/t/a;->byi:Lcom/tencent/mm/t/a$c;
 
-    iget-object v0, v0, Lcom/tencent/mm/r/a$c;->bFf:Lcom/tencent/mm/at/a;
+    iget-object v0, v0, Lcom/tencent/mm/t/a$c;->byq:Lcom/tencent/mm/ax/a;
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/az;
+    check-cast v0, Lcom/tencent/mm/protocal/b/bc;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/az;->iXV:Lcom/tencent/mm/protocal/b/alx;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/bc;->jvA:Lcom/tencent/mm/protocal/b/ami;
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/n;->a(Lcom/tencent/mm/protocal/b/alx;)[B
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/m;->a(Lcom/tencent/mm/protocal/b/ami;)[B
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/pluginsdk/model/app/v;->af([B)V
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/pluginsdk/model/app/v;->an([B)V
 
     .line 55
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->iBf:Lcom/tencent/mm/pluginsdk/model/app/v;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->iXL:Lcom/tencent/mm/pluginsdk/model/app/v;
 
-    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->anN:Lcom/tencent/mm/r/a;
+    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->bkQ:Lcom/tencent/mm/t/a;
 
     move v1, p1
 
@@ -244,9 +244,9 @@
     invoke-virtual/range {v0 .. v6}, Lcom/tencent/mm/pluginsdk/model/app/v;->a(IIILjava/lang/String;Lcom/tencent/mm/network/o;[B)V
 
     .line 56
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->anM:Lcom/tencent/mm/r/d;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/w;->bkT:Lcom/tencent/mm/t/d;
 
-    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/r/d;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/t/d;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 
     goto :goto_0
 .end method

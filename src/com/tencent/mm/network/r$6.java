@@ -1,29 +1,29 @@
 package com.tencent.mm.network;
 
 import android.os.RemoteException;
-import com.tencent.mm.sdk.platformtools.at;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.az;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class r$6
-  extends at
+  extends az<Integer>
 {
   r$6(r paramr, Integer paramInteger, p paramp, k paramk)
   {
     super(3000L, paramInteger);
   }
   
-  private Integer ES()
+  private Integer Fn()
   {
     try
     {
-      int i = r.a(ciT, ciZ, cja);
+      int i = r.a(cek, ceq, cer);
       return Integer.valueOf(i);
     }
     catch (RemoteException localRemoteException)
     {
-      u.e("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", "exception:%s", new Object[] { ay.b(localRemoteException) });
-      r.a(ciT);
+      v.e("MicroMsg.AutoAuth", "exception:%s", new Object[] { be.f(localRemoteException) });
+      r.a(cek);
     }
     return Integer.valueOf(-1);
   }

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/base/MMSlideDelView;->getItemStatusCallBack()Lcom/tencent/mm/ui/base/MMSlideDelView$d;
+    value = Lcom/tencent/mm/ui/base/MMSlideDelView;->bil()Lcom/tencent/mm/ui/base/MMSlideDelView$d;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -38,7 +38,7 @@
     if-eqz p2, :cond_0
 
     .line 75
-    sget-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$1;->hfY:Ljava/util/Set;
+    sget-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$1;->eLI:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -48,19 +48,19 @@
 
     .line 77
     :cond_0
-    sget-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$1;->hfY:Ljava/util/Set;
+    sget-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$1;->eLI:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     goto :goto_0
 .end method
 
-.method public final aCe()Z
+.method public final agI()Z
     .locals 1
 
     .prologue
     .line 83
-    sget-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$1;->hfY:Ljava/util/Set;
+    sget-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$1;->eLI:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
@@ -79,12 +79,12 @@
     goto :goto_0
 .end method
 
-.method public final aCf()V
+.method public final agJ()V
     .locals 2
 
     .prologue
     .line 88
-    sget-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$1;->hfY:Ljava/util/Set;
+    sget-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$1;->eLI:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -108,13 +108,13 @@
     if-eqz v0, :cond_0
 
     .line 90
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMSlideDelView;->bcR()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMSlideDelView;->biq()V
 
     goto :goto_0
 
     .line 93
     :cond_1
-    sget-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$1;->hfY:Ljava/util/Set;
+    sget-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$1;->eLI:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
@@ -122,12 +122,12 @@
     return-void
 .end method
 
-.method public final aCg()V
+.method public final agK()V
     .locals 2
 
     .prologue
     .line 98
-    sget-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$1;->hfY:Ljava/util/Set;
+    sget-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$1;->eLI:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -151,13 +151,13 @@
     if-eqz v0, :cond_0
 
     .line 100
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMSlideDelView;->bcQ()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMSlideDelView;->bip()V
 
     goto :goto_0
 
     .line 103
     :cond_1
-    sget-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$1;->hfY:Ljava/util/Set;
+    sget-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$1;->eLI:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 

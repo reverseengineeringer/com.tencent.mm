@@ -5,27 +5,27 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.t;
+import com.tencent.mm.modelsimple.r;
 import com.tencent.mm.plugin.a.b;
 import com.tencent.mm.ui.MMActivity;
 
 final class LoginUI$7
   implements DialogInterface.OnClickListener
 {
-  LoginUI$7(LoginUI paramLoginUI, com.tencent.mm.r.j paramj) {}
+  LoginUI$7(LoginUI paramLoginUI, com.tencent.mm.t.j paramj) {}
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b.kC("R400_100_login");
+    b.ll("R400_100_login");
     paramDialogInterface = new Intent();
-    paramDialogInterface.putExtra("regsetinfo_binduin", ektY).cbh);
-    paramDialogInterface.putExtra("regsetinfo_pwd", ektY).ktJ);
+    paramDialogInterface.putExtra("regsetinfo_binduin", ekTf).bUU);
+    paramDialogInterface.putExtra("regsetinfo_pwd", ekTf).kSQ);
     paramDialogInterface.putExtra("regsetinfo_ismobile", 0);
-    paramDialogInterface.putExtra("regsetinfo_ticket", LoginUI.h(ktY));
-    paramDialogInterface.putExtra("regsetinfo_NextControl", ((t)aoT).yQ());
-    paramDialogInterface.setClass(ktY, RegSetInfoUI.class);
-    ktY.koJ.kpc.startActivity(paramDialogInterface);
-    b.kD(ah.tx() + "," + ktY.getClass().getName() + ",R400_100_login," + ah.fd("R400_100_login") + ",2");
+    paramDialogInterface.putExtra("regsetinfo_ticket", LoginUI.h(kTf));
+    paramDialogInterface.putExtra("regsetinfo_NextControl", ((r)acZ).zd());
+    paramDialogInterface.setClass(kTf, RegSetInfoUI.class);
+    kTf.kNN.kOg.startActivity(paramDialogInterface);
+    b.lm(ah.ty() + "," + kTf.getClass().getName() + ",R400_100_login," + ah.fq("R400_100_login") + ",2");
   }
 }
 

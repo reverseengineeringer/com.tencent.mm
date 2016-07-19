@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/transmit/SelectConversationUI;->iQ(Z)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+.field final synthetic mci:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 710
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$9;->lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+    .line 739
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$9;->mci:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,6 +40,6 @@
     .locals 0
 
     .prologue
-    .line 714
+    .line 743
     return-void
 .end method

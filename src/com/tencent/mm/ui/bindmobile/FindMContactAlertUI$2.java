@@ -12,7 +12,7 @@ final class FindMContactAlertUI$2
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface.dismiss();
-    kOV.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    lol.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
   }
 }
 

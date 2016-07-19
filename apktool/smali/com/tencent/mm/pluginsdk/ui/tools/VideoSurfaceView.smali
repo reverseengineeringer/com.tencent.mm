@@ -7,33 +7,33 @@
 
 
 # instance fields
-.field private bsY:I
+.field private bhj:I
 
-.field private bsZ:I
+.field private bhk:I
 
-.field private gDN:Landroid/media/MediaPlayer;
+.field private gEU:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
-.field private gDP:Landroid/view/SurfaceHolder;
+.field private gKo:Landroid/media/MediaPlayer;
 
-.field private gyx:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
+.field private gKq:Landroid/view/SurfaceHolder;
 
-.field private iSU:Ljava/lang/String;
+.field private jqg:Ljava/lang/String;
 
-.field private iSV:Z
+.field private jqh:Z
 
-.field private iSW:Z
+.field private jqi:Z
 
-.field iSX:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
+.field jqj:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
-.field iSY:Landroid/media/MediaPlayer$OnPreparedListener;
+.field jqk:Landroid/media/MediaPlayer$OnPreparedListener;
 
-.field private iSZ:Landroid/media/MediaPlayer$OnCompletionListener;
+.field private jql:Landroid/media/MediaPlayer$OnCompletionListener;
 
-.field private iTa:Landroid/media/MediaPlayer$OnErrorListener;
+.field private jqm:Landroid/media/MediaPlayer$OnErrorListener;
 
-.field iTb:Landroid/view/SurfaceHolder$Callback;
+.field jqn:Landroid/view/SurfaceHolder$Callback;
 
-.field private qu:I
+.field private qH:I
 
 
 # direct methods
@@ -77,56 +77,56 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 24
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDP:Landroid/view/SurfaceHolder;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKq:Landroid/view/SurfaceHolder;
 
     .line 25
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     .line 157
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSX:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqj:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
     .line 167
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$2;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSY:Landroid/media/MediaPlayer$OnPreparedListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqk:Landroid/media/MediaPlayer$OnPreparedListener;
 
     .line 194
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$3;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$3;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSZ:Landroid/media/MediaPlayer$OnCompletionListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jql:Landroid/media/MediaPlayer$OnCompletionListener;
 
     .line 204
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$4;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$4;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iTa:Landroid/media/MediaPlayer$OnErrorListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqm:Landroid/media/MediaPlayer$OnErrorListener;
 
     .line 215
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$5;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$5;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iTb:Landroid/view/SurfaceHolder$Callback;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqn:Landroid/view/SurfaceHolder$Callback;
 
     .line 84
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bsY:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bhj:I
 
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bsZ:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bhk:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iTb:Landroid/view/SurfaceHolder$Callback;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqn:Landroid/view/SurfaceHolder$Callback;
 
     invoke-interface {v0, v1}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
 
@@ -153,7 +153,7 @@
 
     .prologue
     .line 15
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bsY:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bhj:I
 
     return v0
 .end method
@@ -163,7 +163,7 @@
 
     .prologue
     .line 15
-    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bsY:I
+    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bhj:I
 
     return p1
 .end method
@@ -173,12 +173,12 @@
 
     .prologue
     .line 15
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDP:Landroid/view/SurfaceHolder;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKq:Landroid/view/SurfaceHolder;
 
     return-object p1
 .end method
 
-.method private aSS()V
+.method private aXL()V
     .locals 6
 
     .prologue
@@ -187,11 +187,11 @@
     const/4 v5, 0x0
 
     .line 122
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSU:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqg:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDP:Landroid/view/SurfaceHolder;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKq:Landroid/view/SurfaceHolder;
 
     if-nez v0, :cond_1
 
@@ -202,24 +202,24 @@
 
     .line 128
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_2
 
     .line 129
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
     .line 130
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
     .line 131
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     .line 134
     :cond_2
@@ -228,103 +228,103 @@
 
     invoke-direct {v0}, Landroid/media/MediaPlayer;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     .line 135
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSY:Landroid/media/MediaPlayer$OnPreparedListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqk:Landroid/media/MediaPlayer$OnPreparedListener;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
 
     .line 136
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSX:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqj:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnVideoSizeChangedListener(Landroid/media/MediaPlayer$OnVideoSizeChangedListener;)V
 
     .line 137
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSV:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqh:Z
 
     .line 138
-    const-string/jumbo v0, "!44@/B4Tb64lLpLgrm9mXlz+2R9wKDl1q0NLtcNP/YgCPeE="
+    const-string/jumbo v0, "MicroMsg.VideoSurfaceView"
 
     const-string/jumbo v1, "reset duration to -1 in openVideo"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 139
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->qu:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->qH:I
 
     .line 140
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSZ:Landroid/media/MediaPlayer$OnCompletionListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jql:Landroid/media/MediaPlayer$OnCompletionListener;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
     .line 141
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iTa:Landroid/media/MediaPlayer$OnErrorListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqm:Landroid/media/MediaPlayer$OnErrorListener;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
 
     .line 142
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSU:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqg:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;)V
 
     .line 143
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDP:Landroid/view/SurfaceHolder;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKq:Landroid/view/SurfaceHolder;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setDisplay(Landroid/view/SurfaceHolder;)V
 
     .line 144
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
     .line 145
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setScreenOnWhilePlaying(Z)V
 
     .line 146
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->prepareAsync()V
 
     .line 147
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getVideoHeight()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bsZ:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bhk:I
 
     .line 148
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getVideoWidth()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bsY:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bhj:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -335,7 +335,7 @@
     move-exception v0
 
     .line 152
-    const-string/jumbo v1, "!44@/B4Tb64lLpLgrm9mXlz+2R9wKDl1q0NLtcNP/YgCPeE="
+    const-string/jumbo v1, "MicroMsg.VideoSurfaceView"
 
     const-string/jumbo v2, "prepare async error %s"
 
@@ -347,7 +347,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 .end method
@@ -357,7 +357,7 @@
 
     .prologue
     .line 15
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bsZ:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bhk:I
 
     return v0
 .end method
@@ -367,7 +367,7 @@
 
     .prologue
     .line 15
-    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bsZ:I
+    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bhk:I
 
     return p1
 .end method
@@ -379,11 +379,11 @@
     const/high16 v6, 0x3f800000    # 1.0f
 
     .line 15
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bsZ:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bhk:I
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bsY:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bhj:I
 
     if-nez v0, :cond_1
 
@@ -392,11 +392,11 @@
     return-void
 
     :cond_1
-    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bsY:I
+    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bhj:I
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bsZ:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->bhk:I
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpLgrm9mXlz+2R9wKDl1q0NLtcNP/YgCPeE="
+    const-string/jumbo v0, "MicroMsg.VideoSurfaceView"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -422,9 +422,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpLgrm9mXlz+2R9wKDl1q0NLtcNP/YgCPeE="
+    const-string/jumbo v0, "MicroMsg.VideoSurfaceView"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -458,7 +458,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->getWidth()I
 
@@ -521,7 +521,7 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpLgrm9mXlz+2R9wKDl1q0NLtcNP/YgCPeE="
+    const-string/jumbo v1, "MicroMsg.VideoSurfaceView"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -529,7 +529,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v3}, Landroid/media/MediaPlayer;->getVideoWidth()I
 
@@ -545,7 +545,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v3}, Landroid/media/MediaPlayer;->getVideoHeight()I
 
@@ -559,9 +559,9 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpLgrm9mXlz+2R9wKDl1q0NLtcNP/YgCPeE="
+    const-string/jumbo v1, "MicroMsg.VideoSurfaceView"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -591,7 +591,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -626,7 +626,7 @@
     .line 15
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSV:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqh:Z
 
     return v0
 .end method
@@ -636,7 +636,7 @@
 
     .prologue
     .line 15
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gyx:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gEU:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
     return-object v0
 .end method
@@ -646,7 +646,7 @@
 
     .prologue
     .line 15
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSW:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqi:Z
 
     return v0
 .end method
@@ -656,7 +656,7 @@
 
     .prologue
     .line 15
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     return-object v0
 .end method
@@ -668,7 +668,7 @@
     .line 15
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSW:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqi:Z
 
     return v0
 .end method
@@ -678,7 +678,7 @@
 
     .prologue
     .line 15
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqh:Z
 
     return v0
 .end method
@@ -688,7 +688,7 @@
 
     .prologue
     .line 15
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->aSS()V
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->aXL()V
 
     return-void
 .end method
@@ -700,13 +700,71 @@
     .line 15
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     return-object v0
 .end method
 
 
 # virtual methods
+.method public final a(Lcom/tencent/mm/pluginsdk/ui/tools/f$a;)V
+    .locals 0
+
+    .prologue
+    .line 295
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gEU:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
+
+    .line 296
+    return-void
+.end method
+
+.method public final axW()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 109
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqg:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final ayx()D
+    .locals 2
+
+    .prologue
+    .line 328
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final ew(Z)V
+    .locals 1
+
+    .prologue
+    .line 288
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
+
+    if-eqz v0, :cond_0
+
+    .line 289
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0, p1}, Landroid/media/MediaPlayer;->setLooping(Z)V
+
+    .line 291
+    :cond_0
+    return-void
+.end method
+
+.method public final ex(Z)V
+    .locals 0
+
+    .prologue
+    .line 338
+    return-void
+.end method
+
 .method public final f(Landroid/content/Context;Z)Z
     .locals 1
 
@@ -719,29 +777,21 @@
     return v0
 .end method
 
-.method public final g(D)V
-    .locals 0
-
-    .prologue
-    .line 334
-    return-void
-.end method
-
-.method public getCurrentPosition()I
+.method public final getCurrentPosition()I
     .locals 1
 
     .prologue
     .line 272
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqh:Z
 
     if-eqz v0, :cond_0
 
     .line 273
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getCurrentPosition()I
 
@@ -757,26 +807,26 @@
     goto :goto_0
 .end method
 
-.method public getDuration()I
+.method public final getDuration()I
     .locals 1
 
     .prologue
     .line 259
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqh:Z
 
     if-eqz v0, :cond_1
 
     .line 260
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->qu:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->qH:I
 
     if-lez v0, :cond_0
 
     .line 261
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->qu:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->qH:I
 
     .line 267
     :goto_0
@@ -784,16 +834,16 @@
 
     .line 263
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getDuration()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->qu:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->qH:I
 
     .line 264
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->qu:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->qH:I
 
     goto :goto_0
 
@@ -801,32 +851,12 @@
     :cond_1
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->qu:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->qH:I
 
     .line 267
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->qu:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->qH:I
 
     goto :goto_0
-.end method
-
-.method public getLastProgresstime()D
-    .locals 2
-
-    .prologue
-    .line 328
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public getVideoPath()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 109
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSU:Ljava/lang/String;
-
-    return-object v0
 .end method
 
 .method public final isPlaying()Z
@@ -834,16 +864,16 @@
 
     .prologue
     .line 280
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqh:Z
 
     if-eqz v0, :cond_0
 
     .line 281
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
 
@@ -859,6 +889,14 @@
     goto :goto_0
 .end method
 
+.method public final j(D)V
+    .locals 0
+
+    .prologue
+    .line 334
+    return-void
+.end method
+
 .method public final onDetach()V
     .locals 0
 
@@ -872,16 +910,16 @@
 
     .prologue
     .line 249
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqh:Z
 
     if-eqz v0, :cond_0
 
     .line 250
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
 
@@ -890,7 +928,7 @@
     if-eqz v0, :cond_0
 
     .line 251
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->pause()V
 
@@ -898,72 +936,26 @@
     :cond_0
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSW:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqi:Z
 
     .line 255
     return-void
 .end method
 
-.method public setLoop(Z)V
-    .locals 1
-
-    .prologue
-    .line 288
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
-
-    if-eqz v0, :cond_0
-
-    .line 289
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v0, p1}, Landroid/media/MediaPlayer;->setLooping(Z)V
-
-    .line 291
-    :cond_0
-    return-void
-.end method
-
-.method public setPlayProgressCallback(Z)V
-    .locals 0
-
-    .prologue
-    .line 338
-    return-void
-.end method
-
-.method public setThumb(Landroid/graphics/Bitmap;)V
-    .locals 0
-
-    .prologue
-    .line 324
-    return-void
-.end method
-
-.method public setVideoCallback(Lcom/tencent/mm/pluginsdk/ui/tools/f$a;)V
-    .locals 0
-
-    .prologue
-    .line 295
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gyx:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
-
-    .line 296
-    return-void
-.end method
-
-.method public setVideoPath(Ljava/lang/String;)V
+.method public final setVideoPath(Ljava/lang/String;)V
     .locals 1
 
     .prologue
     .line 101
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSU:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqg:Ljava/lang/String;
 
     .line 102
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSW:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqi:Z
 
     .line 103
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->aSS()V
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->aXL()V
 
     .line 104
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->requestLayout()V
@@ -979,23 +971,23 @@
     const/4 v1, 0x1
 
     .line 306
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqh:Z
 
     if-eqz v0, :cond_0
 
     .line 307
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
 
     .line 308
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSW:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqi:Z
 
     .line 312
     :goto_0
@@ -1003,7 +995,7 @@
 
     .line 310
     :cond_0
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->iSW:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->jqi:Z
 
     goto :goto_0
 .end method
@@ -1013,24 +1005,24 @@
 
     .prologue
     .line 114
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
     .line 115
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
     .line 116
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
     .line 117
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gDN:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->gKo:Landroid/media/MediaPlayer;
 
     .line 119
     :cond_0

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/conversation/BaseConversationUI;->bay()V
+    value = Lcom/tencent/mm/ui/conversation/BaseConversationUI;->bfP()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+.field final synthetic lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 695
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$8;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 706
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$8;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 698
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$8;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 709
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$8;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->finish()V
 
-    .line 699
+    .line 710
     return-void
 .end method

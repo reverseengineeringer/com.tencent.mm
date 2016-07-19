@@ -13,8 +13,8 @@ final class FindMContactAlertUI$5
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ah.tD().rn().set(12322, Boolean.valueOf(true));
-    FindMContactAlertUI.e(kOV);
+    ah.tE().ro().set(12322, Boolean.valueOf(true));
+    FindMContactAlertUI.e(lol);
     paramDialogInterface.dismiss();
   }
 }

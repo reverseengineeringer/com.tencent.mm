@@ -25,7 +25,7 @@ class URISpanHandlerSet$BindMobileUrilSpanHandler
       if (paramb != null) {
         paramb.a(paramg);
       }
-      MMWizardActivity.v(URISpanHandlerSet.a(ang), new Intent(URISpanHandlerSet.a(ang), BindMContactIntroUI.class));
+      MMWizardActivity.v(URISpanHandlerSet.a(ZU), new Intent(URISpanHandlerSet.a(ZU), BindMContactIntroUI.class));
       return true;
     }
     return false;
@@ -35,17 +35,17 @@ class URISpanHandlerSet$BindMobileUrilSpanHandler
   {
     if (paramString.equals("weixin://setting/bindphone"))
     {
-      paramString = new Intent(URISpanHandlerSet.a(ang), BindMContactIntroUI.class);
-      if ((URISpanHandlerSet.a(ang) instanceof Service)) {
+      paramString = new Intent(URISpanHandlerSet.a(ZU), BindMContactIntroUI.class);
+      if ((URISpanHandlerSet.a(ZU) instanceof Service)) {
         paramString.addFlags(268435456);
       }
-      MMWizardActivity.v(URISpanHandlerSet.a(ang), paramString);
+      MMWizardActivity.v(URISpanHandlerSet.a(ZU), paramString);
       return true;
     }
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().startsWith("weixin://setting/bindphone")) {
       return new g(paramString, 5, null);
@@ -53,7 +53,7 @@ class URISpanHandlerSet$BindMobileUrilSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 5 };
   }

@@ -2,85 +2,89 @@ package com.tencent.mm.plugin.sight.decode.ui;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.an.j;
-import com.tencent.mm.an.n;
-import com.tencent.mm.an.o;
-import com.tencent.mm.d.a.ke;
-import com.tencent.mm.d.a.ke.a;
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.aq.n;
+import com.tencent.mm.aq.q;
+import com.tencent.mm.aq.r;
+import com.tencent.mm.aq.s;
+import com.tencent.mm.e.a.kk;
+import com.tencent.mm.e.a.kk.a;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.modelcdntran.b;
 import com.tencent.mm.modelcdntran.e;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.aj;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 import java.lang.ref.WeakReference;
 
 final class c$a
-  extends com.tencent.mm.sdk.c.c
+  extends com.tencent.mm.sdk.c.c<kk>
 {
-  WeakReference gyK = null;
+  WeakReference<c> gFj = null;
   
-  public c$a()
+  private c$a()
   {
-    super(0);
+    kum = kk.class.getName().hashCode();
   }
   
-  public final boolean a(final com.tencent.mm.sdk.c.b paramb)
+  private boolean a(kk paramkk)
   {
-    if (!(paramb instanceof ke))
+    if (!(paramkk instanceof kk))
     {
-      u.e("!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk=", "can not be here");
+      v.e("MicroMsg.VideoPopupHelper", "can not be here");
       return false;
     }
-    ke localke = (ke)paramb;
-    long l = aGE.avg;
-    Object localObject = com.tencent.mm.model.ah.tD().rs().dz(l);
-    paramb = (com.tencent.mm.sdk.c.b)localObject;
+    long l = asN.agU;
+    Object localObject2 = ah.tE().rt().dQ(l);
+    Object localObject1 = localObject2;
     if (field_msgId <= 0L) {
-      paramb = aGE.aGG;
+      localObject1 = asN.asP;
     }
     if (62 != field_type)
     {
-      u.e("!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk=", "not short video type !!! cur type %d", new Object[] { Integer.valueOf(field_type) });
+      v.e("MicroMsg.VideoPopupHelper", "not short video type !!! cur type %d", new Object[] { Integer.valueOf(field_type) });
       return false;
     }
-    paramb = o.jV(field_imgPath);
-    if (paramb != null) {
-      localObject = com.tencent.mm.modelcdntran.c.a("downvideo", cfW, paramb.Ei(), paramb.getFileName());
+    localObject1 = s.kC(field_imgPath);
+    if (localObject1 != null) {
+      localObject2 = com.tencent.mm.modelcdntran.c.a("downvideo", cbi, ((q)localObject1).Ez(), ((q)localObject1).getFileName());
     }
     try
     {
-      e.xW().hk((String)localObject);
-      u.i("!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk=", "[oneliang][revokeMsgVideo] cancel result:%s", new Object[] { Boolean.valueOf(true) });
-      com.tencent.mm.model.ah.tE().cancel(150);
-      j.Ea().jK(paramb.getFileName());
-      if (gyK == null)
+      e.xZ().hB((String)localObject2);
+      v.i("MicroMsg.VideoPopupHelper", "[oneliang][revokeMsgVideo] cancel result:%s", new Object[] { Boolean.valueOf(true) });
+      ah.tF().cancel(150);
+      n.Es().kn(((q)localObject1).getFileName());
+      if (gFj == null)
       {
-        u.w("!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk=", "popup view ref is null");
+        v.w("MicroMsg.VideoPopupHelper", "popup view ref is null");
         return false;
       }
     }
-    catch (Exception paramb)
+    catch (Exception localException)
     {
       for (;;)
       {
-        u.printErrStackTrace("!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk=", paramb, "[oneliang][revokeMsgVideo] chatting item video,cancel failure:%s", new Object[] { paramb.getMessage() });
+        v.printErrStackTrace("MicroMsg.VideoPopupHelper", localException, "[oneliang][revokeMsgVideo] chatting item video,cancel failure:%s", new Object[] { localException.getMessage() });
       }
-      paramb = (c)gyK.get();
-      if (paramb == null)
+      final c localc = (c)gFj.get();
+      if (localc == null)
       {
-        u.w("!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk=", "popup view is null");
-        gyK = null;
+        v.w("MicroMsg.VideoPopupHelper", "popup view is null");
+        gFj = null;
         return false;
       }
-      c.a(paramb);
-      g.a(paramb.getContext(), aGE.aGF, "", false, new DialogInterface.OnClickListener()
+      c.a(localc);
+      g.a(localc.getContext(), asN.asO, "", false, new DialogInterface.OnClickListener()
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
         {
           paramAnonymousDialogInterface.dismiss();
-          paramb.dismiss();
+          localc.dismiss();
         }
       });
-      gyK = null;
+      gFj = null;
     }
     return false;
   }

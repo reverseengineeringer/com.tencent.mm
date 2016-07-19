@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/tencent/mm/ae/a/c/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/q;->aZk()V
+    value = Lcom/tencent/mm/ui/q;->bgB()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic klv:Landroid/view/View;
+.field final synthetic kPU:Lcom/tencent/mm/ui/q;
 
-.field final synthetic kqP:Lcom/tencent/mm/ui/q;
+.field final synthetic kPV:Lcom/tencent/mm/ui/base/preference/IconPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/q;Landroid/view/View;)V
+.method constructor <init>(Lcom/tencent/mm/ui/q;Lcom/tencent/mm/ui/base/preference/IconPreference;)V
     .locals 0
 
     .prologue
-    .line 562
-    iput-object p1, p0, Lcom/tencent/mm/ui/q$2;->kqP:Lcom/tencent/mm/ui/q;
+    .line 506
+    iput-object p1, p0, Lcom/tencent/mm/ui/q$2;->kPU:Lcom/tencent/mm/ui/q;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/q$2;->klv:Landroid/view/View;
+    iput-object p2, p0, Lcom/tencent/mm/ui/q$2;->kPV:Lcom/tencent/mm/ui/base/preference/IconPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,34 +40,48 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final a(Ljava/lang/String;Landroid/view/View;Lcom/tencent/mm/ae/a/d/b;)V
+    .locals 2
 
     .prologue
-    .line 566
-    iget-object v0, p0, Lcom/tencent/mm/ui/q$2;->klv:Landroid/view/View;
+    .line 513
+    iget v0, p3, Lcom/tencent/mm/ae/a/d/b;->status:I
 
-    const/16 v1, 0x8
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    iget-object v0, p3, Lcom/tencent/mm/ae/a/d/b;->bitmap:Landroid/graphics/Bitmap;
 
-    .line 567
-    iget-object v0, p0, Lcom/tencent/mm/ui/q$2;->klv:Landroid/view/View;
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/q$2;->kqP:Lcom/tencent/mm/ui/q;
+    .line 514
+    iget-object v0, p3, Lcom/tencent/mm/ae/a/d/b;->bitmap:Landroid/graphics/Bitmap;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    .line 515
+    new-instance v1, Lcom/tencent/mm/ui/q$2$1;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    invoke-direct {v1, p0, v0}, Lcom/tencent/mm/ui/q$2$1;-><init>(Lcom/tencent/mm/ui/q$2;Landroid/graphics/Bitmap;)V
 
-    const v2, 0x7f020063
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
-    invoke-static {v1, v2}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+    .line 530
+    :goto_0
+    return-void
 
-    move-result-object v1
+    .line 523
+    :cond_0
+    new-instance v0, Lcom/tencent/mm/ui/q$2$2;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/q$2$2;-><init>(Lcom/tencent/mm/ui/q$2;)V
 
-    .line 568
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+.end method
+
+.method public final iv(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 509
     return-void
 .end method

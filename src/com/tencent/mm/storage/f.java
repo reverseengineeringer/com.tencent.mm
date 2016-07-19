@@ -1,29 +1,29 @@
 package com.tencent.mm.storage;
 
 import android.database.Cursor;
-import com.tencent.mm.az.f.a;
+import com.tencent.mm.bc.f.a;
 import com.tencent.mm.sdk.h.d;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.LinkedList;
 import java.util.List;
 import junit.framework.Assert;
 
 public final class f
-  extends com.tencent.mm.sdk.h.f
+  extends com.tencent.mm.sdk.h.f<e>
   implements f.a
 {
-  public static final String[] aLn = { "CREATE INDEX IF NOT EXISTS serverChatRoomUserIndex ON chatroom ( chatroomname )" };
-  public static final String[] aoY = { com.tencent.mm.sdk.h.f.a(e.aot, "chatroom") };
-  public d aoX;
+  public static final String[] axS = { "CREATE INDEX IF NOT EXISTS serverChatRoomUserIndex ON chatroom ( chatroomname )" };
+  public static final String[] bkN = { com.tencent.mm.sdk.h.f.a(e.bjR, "chatroom") };
+  public d bkP;
   
   public f(d paramd)
   {
-    super(paramd, e.aot, "chatroom", aLn);
-    aoX = paramd;
+    super(paramd, e.bjR, "chatroom", axS);
+    bkP = paramd;
   }
   
-  private static List DS(String paramString)
+  private static List<String> Gh(String paramString)
   {
     LinkedList localLinkedList = new LinkedList();
     if (paramString.equals("")) {
@@ -39,7 +39,7 @@ public final class f
     return localLinkedList;
   }
   
-  public final e DT(String paramString)
+  public final e Gi(String paramString)
   {
     e locale = new e();
     field_chatroomname = paramString;
@@ -49,7 +49,7 @@ public final class f
     return null;
   }
   
-  public final e DU(String paramString)
+  public final e Gj(String paramString)
   {
     e locale = new e();
     field_chatroomname = paramString;
@@ -57,7 +57,7 @@ public final class f
     return locale;
   }
   
-  public final String DV(String paramString)
+  public final String Gk(String paramString)
   {
     boolean bool2 = true;
     Object localObject;
@@ -66,8 +66,8 @@ public final class f
     {
       bool1 = true;
       Assert.assertTrue(bool1);
-      localObject = "select memberlist from chatroom where chatroomname='" + ay.kx(paramString) + "'";
-      localObject = aoX.rawQuery((String)localObject, null);
+      localObject = "select memberlist from chatroom where chatroomname='" + be.lh(paramString) + "'";
+      localObject = bkP.rawQuery((String)localObject, null);
       i = ((Cursor)localObject).getCount();
       if (i > 1) {
         break label120;
@@ -80,7 +80,7 @@ public final class f
       if (i > 0) {
         break label125;
       }
-      u.e("!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc=", "getMemberListByChatroomName chatroomName:" + paramString + " getCount ==0");
+      v.e("MicroMsg.ChatroomStorage", "getMemberListByChatroomName chatroomName:" + paramString + " getCount ==0");
       ((Cursor)localObject).close();
       return null;
       bool1 = false;
@@ -89,44 +89,55 @@ public final class f
     label125:
     ((Cursor)localObject).moveToFirst();
     paramString = new e();
-    paramString.c((Cursor)localObject);
+    paramString.b((Cursor)localObject);
     ((Cursor)localObject).close();
     return field_memberlist;
   }
   
-  public final List DW(String paramString)
+  public final List<String> Gl(String paramString)
   {
-    paramString = DV(paramString);
+    paramString = Gk(paramString);
     if (paramString == null) {
       return null;
     }
-    return DS(paramString);
+    return Gh(paramString);
   }
   
-  public final boolean DX(String paramString)
+  public final boolean Gm(String paramString)
   {
     if (paramString.length() > 0) {}
     for (boolean bool = true;; bool = false)
     {
       Assert.assertTrue(bool);
-      if (aoX.delete("chatroom", "chatroomname=?", new String[] { paramString }) != 0) {
+      if (bkP.delete("chatroom", "chatroomname=?", new String[] { paramString }) != 0) {
         break;
       }
       return false;
     }
-    DI(paramString);
+    FX(paramString);
     return true;
   }
   
-  public final int a(com.tencent.mm.az.f paramf)
+  public final int a(com.tencent.mm.bc.f paramf)
   {
     return 0;
   }
   
-  public final List aWn()
+  public final boolean b(e parame)
   {
-    u.d("!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc=", "getAllGroupCard : select * from chatroom where chatroomname like '%@groupcard'");
-    Cursor localCursor = aoX.rawQuery("select * from chatroom where chatroomname like '%@groupcard'", null);
+    if (super.b(parame))
+    {
+      FX(field_chatroomname);
+      return true;
+    }
+    v.w("MicroMsg.ChatroomStorage", "replace error");
+    return false;
+  }
+  
+  public final List<String> bbA()
+  {
+    v.d("MicroMsg.ChatroomStorage", "getAllGroupCard : select * from chatroom where chatroomname like '%@groupcard'");
+    Cursor localCursor = bkP.rawQuery("select * from chatroom where chatroomname like '%@groupcard'", null);
     int i = localCursor.getCount();
     Object localObject1 = "";
     if (i == 0)
@@ -139,26 +150,15 @@ public final class f
     do
     {
       localObject2 = new e();
-      ((e)localObject2).c(localCursor);
+      ((e)localObject2).b(localCursor);
       localObject2 = (String)localObject1 + field_chatroomname + ";";
       localObject1 = localObject2;
     } while (localCursor.moveToNext());
     localCursor.close();
-    return DS((String)localObject2);
+    return Gh((String)localObject2);
   }
   
-  public final boolean b(e parame)
-  {
-    if (super.b(parame))
-    {
-      DI(field_chatroomname);
-      return true;
-    }
-    u.w("!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc=", "replace error");
-    return false;
-  }
-  
-  public final String dY(String paramString)
+  public final String ej(String paramString)
   {
     boolean bool2 = true;
     Object localObject;
@@ -167,8 +167,8 @@ public final class f
     {
       bool1 = true;
       Assert.assertTrue(bool1);
-      localObject = "select displayname from chatroom where chatroomname='" + ay.kx(paramString) + "'";
-      localObject = aoX.rawQuery((String)localObject, null);
+      localObject = "select displayname from chatroom where chatroomname='" + be.lh(paramString) + "'";
+      localObject = bkP.rawQuery((String)localObject, null);
       i = ((Cursor)localObject).getCount();
       if (i > 1) {
         break label120;
@@ -181,7 +181,7 @@ public final class f
       if (i > 0) {
         break label125;
       }
-      u.e("!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc=", "getDisplayName:" + paramString + " getCount ==0");
+      v.e("MicroMsg.ChatroomStorage", "getDisplayName:" + paramString + " getCount ==0");
       ((Cursor)localObject).close();
       return null;
       bool1 = false;
@@ -190,7 +190,7 @@ public final class f
     label125:
     ((Cursor)localObject).moveToFirst();
     paramString = new e();
-    paramString.c((Cursor)localObject);
+    paramString.b((Cursor)localObject);
     ((Cursor)localObject).close();
     return field_displayname;
   }

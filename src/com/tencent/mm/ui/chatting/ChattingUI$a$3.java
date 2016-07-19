@@ -1,17 +1,17 @@
 package com.tencent.mm.ui.chatting;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import com.tencent.mm.pluginsdk.model.h;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 
 final class ChattingUI$a$3
-  implements DialogInterface.OnCancelListener
+  implements DialogInterface.OnClickListener
 {
-  ChattingUI$a$3(ChattingUI.a parama, h paramh) {}
+  ChattingUI$a$3(ChattingUI.a parama, Intent paramIntent) {}
   
-  public final void onCancel(DialogInterface paramDialogInterface)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    laH.aPo();
+    ChattingUI.a.a(lAY, fhw);
   }
 }
 

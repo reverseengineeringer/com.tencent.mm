@@ -10,15 +10,15 @@ final class SnsUploadConfigView$8
   
   public final void onClick(View paramView)
   {
-    paramView = hlL;
-    if (SnsUploadConfigView.g(hlL)) {}
+    paramView = hBN;
+    if (SnsUploadConfigView.g(hBN)) {}
     for (boolean bool = false;; bool = true)
     {
       SnsUploadConfigView.c(paramView, bool);
-      if (SnsUploadConfigView.g(hlL)) {
-        SnsUploadConfigView.e(hlL);
+      if (SnsUploadConfigView.g(hBN)) {
+        SnsUploadConfigView.e(hBN);
       }
-      SnsUploadConfigView.h(hlL);
+      SnsUploadConfigView.h(hBN);
       return;
     }
   }

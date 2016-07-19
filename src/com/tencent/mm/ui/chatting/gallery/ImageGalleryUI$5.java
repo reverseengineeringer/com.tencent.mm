@@ -7,12 +7,12 @@ public final class ImageGalleryUI$5
   
   public final void run()
   {
-    if (ImageGalleryUI.e(lgM) == null) {
+    if (ImageGalleryUI.e(lGY) == null) {
       return;
     }
-    b localb = ImageGalleryUI.e(lgM);
-    int i = bMq;
-    let.pause(i);
+    b localb = ImageGalleryUI.e(lGY);
+    int i = bFK;
+    lEF.pause(i);
   }
 }
 

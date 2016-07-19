@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bmQ:Lcom/tencent/mm/booter/NotifyReceiver$NotifyService;
+.field final synthetic bax:Lcom/tencent/mm/booter/NotifyReceiver$NotifyService;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 261
-    iput-object p1, p0, Lcom/tencent/mm/booter/NotifyReceiver$NotifyService$1;->bmQ:Lcom/tencent/mm/booter/NotifyReceiver$NotifyService;
+    .line 282
+    iput-object p1, p0, Lcom/tencent/mm/booter/NotifyReceiver$NotifyService$1;->bax:Lcom/tencent/mm/booter/NotifyReceiver$NotifyService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,13 +40,13 @@
     .locals 2
 
     .prologue
-    .line 264
-    iget-object v0, p0, Lcom/tencent/mm/booter/NotifyReceiver$NotifyService$1;->bmQ:Lcom/tencent/mm/booter/NotifyReceiver$NotifyService;
+    .line 285
+    iget-object v0, p0, Lcom/tencent/mm/booter/NotifyReceiver$NotifyService$1;->bax:Lcom/tencent/mm/booter/NotifyReceiver$NotifyService;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/NotifyReceiver$NotifyService;->stopForeground(Z)V
 
-    .line 265
+    .line 286
     return-void
 .end method

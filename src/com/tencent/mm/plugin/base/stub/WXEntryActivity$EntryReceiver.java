@@ -9,19 +9,21 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import com.jg.JgClassChecked;
 import com.tencent.mm.a.e;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.pluginsdk.i.a;
 import com.tencent.mm.pluginsdk.i.p;
-import com.tencent.mm.pluginsdk.model.app.aj;
+import com.tencent.mm.pluginsdk.model.app.al;
 import com.tencent.mm.pluginsdk.model.app.f;
 import com.tencent.mm.pluginsdk.model.app.g;
 import com.tencent.mm.pluginsdk.model.app.h;
 import com.tencent.mm.pluginsdk.model.app.i;
 import com.tencent.mm.pluginsdk.model.app.m;
+import com.tencent.mm.pluginsdk.model.app.p;
 import com.tencent.mm.pluginsdk.ui.tools.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.v;
 
 @JgClassChecked(author=20, fComment="checked", lastDate="20140429", reviewer=20, vComment={com.jg.EType.RECEIVERCHECK})
 public class WXEntryActivity$EntryReceiver
@@ -29,40 +31,40 @@ public class WXEntryActivity$EntryReceiver
 {
   private String appId;
   private String appName;
-  private String cAX;
-  private int cAY;
-  private long cBt;
   private Context context;
+  private String cxS;
+  private int cxT;
+  private long cyn;
   
   public void onReceive(Context paramContext, Intent paramIntent)
   {
     if ((paramContext == null) || (paramIntent == null)) {
       return;
     }
-    c.aSY();
+    c.aXR();
     context = paramContext;
-    paramContext = com.tencent.mm.sdk.platformtools.p.g(paramIntent, "_mmessage_content");
-    cBt = com.tencent.mm.sdk.platformtools.p.f(paramIntent, "_mmessage_support_content_type");
-    cAY = com.tencent.mm.sdk.platformtools.p.a(paramIntent, "_mmessage_sdkVersion", 0);
-    if (!WXEntryActivity.ej(cAY))
+    paramContext = q.g(paramIntent, "_mmessage_content");
+    cyn = q.f(paramIntent, "_mmessage_support_content_type");
+    cxT = q.a(paramIntent, "_mmessage_sdkVersion", 0);
+    if (!WXEntryActivity.eS(cxT))
     {
-      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "sdk version is not supported, sdkVersion = " + cAY);
+      v.e("MicroMsg.WXEntryActivity", "sdk version is not supported, sdkVersion = " + cxT);
       return;
     }
-    cAX = com.tencent.mm.sdk.platformtools.p.g(paramIntent, "_mmessage_appPackage");
-    if ((cAX == null) || (cAX.length() <= 0))
+    cxS = q.g(paramIntent, "_mmessage_appPackage");
+    if ((cxS == null) || (cxS.length() <= 0))
     {
-      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "unknown package, ignore");
+      v.e("MicroMsg.WXEntryActivity", "unknown package, ignore");
       return;
     }
-    if (!WXEntryActivity.i(com.tencent.mm.sdk.platformtools.p.h(paramIntent, "_mmessage_checksum"), WXEntryActivity.h(paramContext, cAY, cAX)))
+    if (!WXEntryActivity.g(q.h(paramIntent, "_mmessage_checksum"), WXEntryActivity.f(paramContext, cxT, cxS)))
     {
-      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "checksum fail");
+      v.e("MicroMsg.WXEntryActivity", "checksum fail");
       return;
     }
     if (paramContext == null)
     {
-      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "check appid failed, null content");
+      v.e("MicroMsg.WXEntryActivity", "check appid failed, null content");
       return;
     }
     paramContext = Uri.parse(paramContext);
@@ -70,51 +72,51 @@ public class WXEntryActivity$EntryReceiver
     try
     {
       appId = paramContext.getQueryParameter("appid");
-      u.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "onReceive, appId = " + appId);
+      v.i("MicroMsg.WXEntryActivity", "onReceive, appId = " + appId);
       if ((appId == null) || (appId.length() <= 0))
       {
-        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "invalid appid, ignore");
+        v.e("MicroMsg.WXEntryActivity", "invalid appid, ignore");
         return;
       }
     }
     catch (Exception paramContext)
     {
-      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "init: %s", new Object[] { paramContext.toString() });
+      v.e("MicroMsg.WXEntryActivity", "init: %s", new Object[] { paramContext.toString() });
       return;
     }
-    if ((!ah.rh()) || (ah.tM()))
+    if ((!ah.rg()) || (ah.tN()))
     {
-      u.w("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "not login, just save the appid : %s", new Object[] { appId });
-      com.tencent.mm.pluginsdk.model.app.p.zW(appId);
+      v.w("MicroMsg.WXEntryActivity", "not login, just save the appid : %s", new Object[] { appId });
+      p.BT(appId);
       return;
     }
-    if (ah.tK())
+    if (ah.tL())
     {
-      u.w("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "not login accInitializing, just save the appid : %s", new Object[] { appId });
-      com.tencent.mm.pluginsdk.model.app.p.zW(appId);
+      v.w("MicroMsg.WXEntryActivity", "not login accInitializing, just save the appid : %s", new Object[] { appId });
+      p.BT(appId);
       return;
     }
     f localf;
     if ("registerapp".equals(paramIntent))
     {
-      u.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handle app registeration: " + cAX + ", sdkver=" + cAY);
-      if (!ah.rh())
+      v.i("MicroMsg.WXEntryActivity", "handle app registeration: " + cxS + ", sdkver=" + cxT);
+      if (!ah.rg())
       {
-        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "no available account");
+        v.e("MicroMsg.WXEntryActivity", "no available account");
         return;
       }
-      localf = g.ai(appId, true);
-      if (!com.tencent.mm.pluginsdk.model.app.p.b(context, localf, cAX))
+      localf = g.ar(appId, true);
+      if (!p.b(context, localf, cxS))
       {
-        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "reg fail, check app fail");
-        aj.aPQ().zN(appId);
+        v.e("MicroMsg.WXEntryActivity", "reg fail, check app fail");
+        al.aUz().BJ(appId);
         return;
       }
-      if ((localf != null) && (localf.aPB()))
+      if ((localf != null) && (localf.aUj()))
       {
-        paramContext = i.a.iyK;
+        paramContext = i.a.iVg;
         if (paramContext != null) {
-          paramContext.m(context, appId, cAX);
+          paramContext.k(context, appId, cxS);
         }
       }
     }
@@ -124,17 +126,17 @@ public class WXEntryActivity$EntryReceiver
       try
       {
         paramIntent = context.getPackageManager();
-        localApplicationInfo = paramIntent.getApplicationInfo(cAX, 0);
+        localApplicationInfo = paramIntent.getApplicationInfo(cxS, 0);
         if (localApplicationInfo == null)
         {
-          u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "package not installed");
+          v.e("MicroMsg.WXEntryActivity", "package not installed");
           return;
         }
       }
       catch (IncompatibleClassChangeError paramContext)
       {
         ApplicationInfo localApplicationInfo;
-        u.printErrStackTrace("MicroMsg.Crash", paramContext, "May cause dvmFindCatchBlock crash!", new Object[0]);
+        v.printErrStackTrace("MicroMsg.Crash", paramContext, "May cause dvmFindCatchBlock crash!", new Object[0]);
         throw ((IncompatibleClassChangeError)new IncompatibleClassChangeError("May cause dvmFindCatchBlock crash!").initCause(paramContext));
         appName = localApplicationInfo.loadLabel(paramIntent).toString();
         paramIntent = localApplicationInfo.loadIcon(paramIntent);
@@ -145,39 +147,39 @@ public class WXEntryActivity$EntryReceiver
         paramContext = paramIntent;
         if (localf != null)
         {
-          aj.aPR();
+          al.aUA();
           paramIntent = appId;
           if ((paramIntent != null) && (paramIntent.length() != 0)) {
             break label784;
           }
-          u.e("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "hasIcon, appId is null");
+          v.e("MicroMsg.AppInfoStorage", "hasIcon, appId is null");
           bool = false;
           if (bool) {}
         }
         else
         {
-          aj.aPR().t(appId, paramContext);
+          al.aUA().q(appId, paramContext);
         }
         if (localf == null)
         {
           paramContext = new f();
           field_appId = appId;
           field_appName = "";
-          field_packageName = cAX;
+          field_packageName = cxS;
           field_status = 0;
-          paramIntent = com.tencent.mm.pluginsdk.model.app.p.aI(context, cAX);
+          paramIntent = p.aH(context, cxS);
           if (paramIntent != null) {
             field_signature = paramIntent;
           }
           field_modifyTime = System.currentTimeMillis();
-          field_appSupportContentType = cBt;
-          bool = aj.aPR().m(paramContext);
-          b.AR(appId);
-          if ((!bool) || (!t.kz(field_openId))) {
+          field_appSupportContentType = cyn;
+          bool = al.aUA().m(paramContext);
+          b.CY(appId);
+          if ((!bool) || (!s.kf(field_openId))) {
             break;
           }
-          u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, trigger getAppSetting, appId = " + appId);
-          aj.aPV().zT(appId);
+          v.d("MicroMsg.WXEntryActivity", "handleAppRegisteration, trigger getAppSetting, appId = " + appId);
+          al.aUE().BQ(appId);
           return;
         }
       }
@@ -185,61 +187,61 @@ public class WXEntryActivity$EntryReceiver
       {
         for (;;)
         {
-          u.printErrStackTrace("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", paramIntent, "package not installed", new Object[0]);
+          v.printErrStackTrace("MicroMsg.WXEntryActivity", paramIntent, "package not installed", new Object[0]);
           continue;
           label784:
-          bool = e.ax(i.aG(paramIntent, 1));
+          bool = e.aB(i.aQ(paramIntent, 1));
         }
       }
       int i;
-      if ((field_appInfoFlag & 0x2000) == 0) {
-        if (cBt != field_appSupportContentType)
+      if ((field_appInfoFlag & 0x2000) != 0) {
+        if (cyn != field_appSupportContentType)
         {
           i = 1;
           label824:
-          field_appSupportContentType = cBt;
+          field_appSupportContentType = cyn;
         }
       }
       for (;;)
       {
         if ((field_status == 2) || (field_status == 3) || (field_status == 4) || (i != 0))
         {
-          if (!localf.aPB()) {
-            b.AR(appId);
+          if (!localf.aUj()) {
+            b.CY(appId);
           }
           field_status = 0;
-          bool = aj.aPR().a(localf, new String[0]);
-          u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, updateRet = " + bool);
+          bool = al.aUA().a(localf, new String[0]);
+          v.d("MicroMsg.WXEntryActivity", "handleAppRegisteration, updateRet = " + bool);
         }
-        if (!t.kz(field_openId)) {
+        if (!s.kf(field_openId)) {
           break;
         }
-        u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, trigger getAppSetting, appId = " + appId);
-        aj.aPV().zT(appId);
+        v.d("MicroMsg.WXEntryActivity", "handleAppRegisteration, trigger getAppSetting, appId = " + appId);
+        al.aUE().BQ(appId);
         return;
         i = 0;
         break label824;
         if (!"unregisterapp".equals(paramIntent)) {
           break;
         }
-        u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handle app unregisteration: " + cAX + ", sdkver=" + cAY);
-        if (!ah.rh())
+        v.d("MicroMsg.WXEntryActivity", "handle app unregisteration: " + cxS + ", sdkver=" + cxT);
+        if (!ah.rg())
         {
-          u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "no available account");
+          v.e("MicroMsg.WXEntryActivity", "no available account");
           return;
         }
-        paramContext = g.ai(appId, false);
-        if (!com.tencent.mm.pluginsdk.model.app.p.b(context, paramContext, cAX))
+        paramContext = g.ar(appId, false);
+        if (!p.b(context, paramContext, cxS))
         {
-          u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "unreg fail, check app fail");
+          v.e("MicroMsg.WXEntryActivity", "unreg fail, check app fail");
           return;
         }
         if ((paramContext == null) || (field_status == 5)) {
           break;
         }
         field_status = 4;
-        aj.aPR().a(paramContext, new String[0]);
-        b.AS(appId);
+        al.aUA().a(paramContext, new String[0]);
+        b.CZ(appId);
         return;
         i = 0;
       }

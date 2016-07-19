@@ -4,31 +4,40 @@
 
 
 # instance fields
-.field private eVA:Z
+.field private dyx:Ljava/lang/String;
 
-.field eVB:Landroid/widget/AbsListView$OnScrollListener;
+.field private fdH:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/protocal/b/aqq;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private eVe:Landroid/widget/ListView;
+.field private fdK:Ljava/lang/String;
 
-.field private eVw:Ljava/util/List;
+.field private fdL:Z
 
-.field private eVz:Ljava/lang/String;
+.field fdM:Landroid/widget/AbsListView$OnScrollListener;
 
-.field private final eWn:I
+.field private fdp:Landroid/widget/ListView;
 
-.field private final eWo:I
+.field private final feA:I
 
-.field private gER:Lcom/tencent/mm/plugin/sns/h/k;
+.field private final feB:I
 
-.field private gJH:Ljava/lang/String;
+.field private gLs:Lcom/tencent/mm/plugin/sns/i/k;
 
-.field private gJI:Ljava/lang/String;
+.field private gRi:Ljava/lang/String;
 
-.field private gJJ:Lcom/tencent/mm/protocal/b/aqi;
+.field private gRj:Lcom/tencent/mm/protocal/b/aqt;
 
-.field private gJK:Lcom/tencent/mm/protocal/b/add;
+.field private gRk:Lcom/tencent/mm/protocal/b/adw;
 
-.field private gJL:Lcom/tencent/mm/plugin/sns/lucky/ui/c;
+.field private gRl:Lcom/tencent/mm/plugin/sns/lucky/ui/c;
 
 
 # direct methods
@@ -44,34 +53,34 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->eVw:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->fdH:Ljava/util/List;
 
     .line 77
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->eVz:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->fdK:Ljava/lang/String;
 
     .line 79
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->eVA:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->fdL:Z
 
     .line 81
     new-instance v0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;-><init>(Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->eVB:Landroid/widget/AbsListView$OnScrollListener;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->fdM:Landroid/widget/AbsListView$OnScrollListener;
 
     .line 273
     const/16 v0, 0x2ee
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->eWn:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->feA:I
 
     .line 274
     const/16 v0, 0xf0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->eWo:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->feB:I
 
     return-void
 .end method
@@ -83,7 +92,7 @@
     .line 52
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->d(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->e(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -93,14 +102,14 @@
 
     .prologue
     .line 52
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->d(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->e(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final Gb()V
+.method protected final Gy()V
     .locals 2
 
     .prologue
@@ -109,18 +118,18 @@
 
     move-result-object v0
 
-    const v1, 0x7f040354
+    const v1, 0x7f02044f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->d(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->e(Landroid/graphics/drawable/Drawable;)V
 
     .line 172
-    const v0, 0x7f0b10d0
+    const v0, 0x7f08129b
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->qb(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->rR(I)V
 
     .line 173
     new-instance v0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$2;
@@ -130,7 +139,7 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 179
-    const v0, 0x7f070a47
+    const v0, 0x7f100a66
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->findViewById(I)Landroid/view/View;
 
@@ -138,35 +147,35 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->eVe:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->fdp:Landroid/widget/ListView;
 
     .line 180
     new-instance v0, Lcom/tencent/mm/plugin/sns/lucky/ui/c;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/plugin/sns/lucky/ui/c;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gJL:Lcom/tencent/mm/plugin/sns/lucky/ui/c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gRl:Lcom/tencent/mm/plugin/sns/lucky/ui/c;
 
     .line 183
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->eVe:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->fdp:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gJL:Lcom/tencent/mm/plugin/sns/lucky/ui/c;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gRl:Lcom/tencent/mm/plugin/sns/lucky/ui/c;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 185
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->eVe:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->fdp:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->eVB:Landroid/widget/AbsListView$OnScrollListener;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->fdM:Landroid/widget/AbsListView$OnScrollListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
 
     .line 186
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->eVe:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->fdp:Landroid/widget/ListView;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$3;
 
@@ -176,6 +185,16 @@
 
     .line 195
     return-void
+.end method
+
+.method public final d(IILjava/lang/String;Lcom/tencent/mm/t/j;)Z
+    .locals 1
+
+    .prologue
+    .line 230
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
@@ -190,22 +209,12 @@
     return v0
 .end method
 
-.method public final e(IILjava/lang/String;Lcom/tencent/mm/r/j;)Z
-    .locals 1
-
-    .prologue
-    .line 230
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method protected final getLayoutId()I
     .locals 1
 
     .prologue
     .line 236
-    const v0, 0x7f0a044a
+    const v0, 0x7f0305b7
 
     return v0
 .end method
@@ -220,7 +229,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/plugin/luckymoney/ui/LuckyMoneyBaseUI;->onCreate(Landroid/os/Bundle;)V
 
     .line 129
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->Gb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->Gy()V
 
     .line 130
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->getIntent()Landroid/content/Intent;
@@ -233,45 +242,45 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gJH:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->dyx:Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azi()Lcom/tencent/mm/plugin/sns/h/l;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gJH:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/sns/h/l;->vo(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBI()Lcom/tencent/mm/plugin/sns/i/l;
 
     move-result-object v0
 
-    iget-wide v2, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_snsId:J
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->dyx:Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azi()Lcom/tencent/mm/plugin/sns/h/l;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/plugin/sns/h/l;->cx(J)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/sns/i/l;->wA(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gER:Lcom/tencent/mm/plugin/sns/h/k;
+    iget-wide v2, v0, Lcom/tencent/mm/plugin/sns/i/k;->field_snsId:J
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gER:Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBI()Lcom/tencent/mm/plugin/sns/i/l;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/plugin/sns/i/l;->cM(J)Lcom/tencent/mm/plugin/sns/i/k;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gLs:Lcom/tencent/mm/plugin/sns/i/k;
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gLs:Lcom/tencent/mm/plugin/sns/i/k;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gER:Lcom/tencent/mm/plugin/sns/h/k;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gLs:Lcom/tencent/mm/plugin/sns/i/k;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->azR()Lcom/tencent/mm/protocal/b/atp;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCD()Lcom/tencent/mm/protocal/b/auf;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -283,42 +292,42 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/add;
+    check-cast v0, Lcom/tencent/mm/protocal/b/adw;
 
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/add;->eiq:Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/protocal/b/adw;->emu:Ljava/lang/String;
 
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gJI:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gRi:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gJK:Lcom/tencent/mm/protocal/b/add;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gRk:Lcom/tencent/mm/protocal/b/adw;
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gER:Lcom/tencent/mm/plugin/sns/h/k;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gLs:Lcom/tencent/mm/plugin/sns/i/k;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/d/ai;->l(Lcom/tencent/mm/plugin/sns/h/k;)Lcom/tencent/mm/protocal/b/aqi;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/e/ah;->l(Lcom/tencent/mm/plugin/sns/i/k;)Lcom/tencent/mm/protocal/b/aqt;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gJJ:Lcom/tencent/mm/protocal/b/aqi;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gRj:Lcom/tencent/mm/protocal/b/aqt;
 
     .line 131
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gJJ:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gRj:Lcom/tencent/mm/protocal/b/aqt;
 
     if-eqz v0, :cond_2
 
     .line 132
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gJJ:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gRj:Lcom/tencent/mm/protocal/b/aqt;
 
     if-eqz v0, :cond_2
 
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aqi;->jKj:Lcom/tencent/mm/protocal/b/aqw;
+    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aqt;->kiG:Lcom/tencent/mm/protocal/b/ari;
 
     if-nez v2, :cond_4
 
     .line 135
     :cond_2
     :goto_0
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->baP()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->bga()V
 
     .line 137
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -332,7 +341,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080127
+    const v1, 0x7f0f01ea
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -349,20 +358,20 @@
     :cond_3
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->Gk(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->Iy(Ljava/lang/String;)V
 
     .line 144
     return-void
 
     .line 132
     :cond_4
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aqi;->jKj:Lcom/tencent/mm/protocal/b/aqw;
+    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aqt;->kiG:Lcom/tencent/mm/protocal/b/ari;
 
-    iget v2, v2, Lcom/tencent/mm/protocal/b/aqw;->jKy:I
+    iget v2, v2, Lcom/tencent/mm/protocal/b/ari;->kiZ:I
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqi;->jKj:Lcom/tencent/mm/protocal/b/aqw;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqt;->kiG:Lcom/tencent/mm/protocal/b/ari;
 
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aqw;->jKz:Ljava/util/LinkedList;
+    iget-object v2, v0, Lcom/tencent/mm/protocal/b/ari;->kja:Ljava/util/LinkedList;
 
     if-eqz v2, :cond_2
 
@@ -377,7 +386,7 @@
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->eVw:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->fdH:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -390,9 +399,9 @@
     goto :goto_1
 
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gJL:Lcom/tencent/mm/plugin/sns/lucky/ui/c;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->gRl:Lcom/tencent/mm/plugin/sns/lucky/ui/c;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->eVw:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->fdH:Ljava/util/List;
 
     if-nez v1, :cond_6
 
@@ -406,7 +415,7 @@
     goto :goto_0
 
     :cond_6
-    iput-object v1, v0, Lcom/tencent/mm/plugin/sns/lucky/ui/c;->eVw:Ljava/util/List;
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sns/lucky/ui/c;->fdH:Ljava/util/List;
 
     goto :goto_2
 .end method

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/i7" android:paddingTop="@dimen/hb" android:paddingRight="@dimen/i7" android:paddingBottom="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/l4" android:layout_width="@dimen/cq" android:layout_height="@dimen/cq" />
+        <View android:layout_width="@dimen/hb" style="@style/MMSplit" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/a_o" android:text="{nick name}" style="@style/MMFontPreferenceProfile" />
+            <View style="@style/MMSplit" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@id/aq8" android:text="{installed|uninstalled|hide}" style="@style/MMFontPreferenceSmall" />
+                <View android:layout_width="fill_parent" android:layout_weight="1.0" style="@style/MMSplit" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:gravity="center|left" android:id="@id/bq5" android:background="@color/ow" android:paddingLeft="@dimen/iy" android:paddingTop="@dimen/j8" android:paddingRight="@dimen/iy" android:paddingBottom="@dimen/j8" android:minHeight="@dimen/j7" android:singleLine="false" style="@style/MMBriefText" />
+</LinearLayout>

@@ -12,3 +12,8 @@
     accessFlags = 0x609
     name = "e"
 .end annotation
+
+
+# virtual methods
+.method public abstract at(Ljava/lang/Object;)V
+.end method

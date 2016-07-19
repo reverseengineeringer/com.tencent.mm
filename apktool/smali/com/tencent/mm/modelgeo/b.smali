@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/d;
+.implements Lcom/tencent/mm/t/d;
 
 
 # annotations
@@ -19,19 +19,42 @@
 # static fields
 .field public static TAG:Ljava/lang/String;
 
-.field private static bOb:Lcom/tencent/mm/modelgeo/b;
+.field private static bHw:Lcom/tencent/mm/modelgeo/b;
 
 
 # instance fields
-.field private bOc:Lcom/tencent/mm/modelgeo/b$c;
+.field private bHA:Lcom/tencent/mm/sdk/platformtools/ap;
 
-.field private bOd:Ljava/util/LinkedList;
+.field private bHB:Z
 
-.field private bOe:Ljava/util/HashMap;
+.field private bHx:Lcom/tencent/mm/modelgeo/b$c;
 
-.field private bOf:Lcom/tencent/mm/sdk/platformtools/am;
+.field private bHy:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/modelgeo/b$c;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public bOg:Z
+.field private bHz:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/tencent/mm/modelgeo/b$a;",
+            ">;>;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -40,7 +63,7 @@
 
     .prologue
     .line 28
-    const-string/jumbo v0, "!32@/B4Tb64lLpIu6Y+BscdrxLFPH/GImPSD"
+    const-string/jumbo v0, "MicroMsg.LocationAddr"
 
     sput-object v0, Lcom/tencent/mm/modelgeo/b;->TAG:Ljava/lang/String;
 
@@ -59,33 +82,33 @@
     .line 41
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iput-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
     .line 42
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     .line 43
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
     .line 44
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/am;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ap;
 
     const-string/jumbo v1, "addr_worker"
 
-    invoke-direct {v0, v2, v1}, Lcom/tencent/mm/sdk/platformtools/am;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v2, v1}, Lcom/tencent/mm/sdk/platformtools/ap;-><init>(ILjava/lang/String;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOf:Lcom/tencent/mm/sdk/platformtools/am;
+    iput-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHA:Lcom/tencent/mm/sdk/platformtools/ap;
 
     .line 45
-    iput-boolean v2, p0, Lcom/tencent/mm/modelgeo/b;->bOg:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/modelgeo/b;->bHB:Z
 
     .line 104
     return-void
@@ -106,7 +129,7 @@
     const/4 v4, 0x0
 
     .line 381
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZF()Ljava/lang/String;
 
     move-result-object v0
 
@@ -159,7 +182,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 394
     const/4 v1, 0x0
@@ -205,7 +228,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 398
     new-instance v1, Ljava/io/InputStreamReader;
@@ -261,7 +284,7 @@
 
     const-string/jumbo v6, "error e"
 
-    invoke-static {v3, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 451
     sget-object v3, Lcom/tencent/mm/modelgeo/b;->TAG:Ljava/lang/String;
@@ -274,13 +297,13 @@
 
     const/4 v8, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v7, v8
 
-    invoke-static {v3, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
@@ -288,7 +311,7 @@
     if-eqz v2, :cond_0
 
     .line 457
-    iget-object v0, v2, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, v2, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
 
@@ -359,7 +382,7 @@
 
     move-result-object v6
 
-    invoke-static {v0, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 407
     new-instance v0, Lorg/json/JSONObject;
@@ -391,7 +414,7 @@
 
     move-result-object v2
 
-    iput-object v2, v5, Lcom/tencent/mm/modelgeo/Addr;->bNN:Ljava/lang/String;
+    iput-object v2, v5, Lcom/tencent/mm/modelgeo/Addr;->bHj:Ljava/lang/String;
 
     .line 412
     const/4 v2, 0x0
@@ -458,7 +481,7 @@
     if-eqz v8, :cond_5
 
     .line 421
-    iput-object v7, v5, Lcom/tencent/mm/modelgeo/Addr;->bNP:Ljava/lang/String;
+    iput-object v7, v5, Lcom/tencent/mm/modelgeo/Addr;->bHl:Ljava/lang/String;
 
     .line 414
     :cond_4
@@ -478,7 +501,7 @@
     if-eqz v8, :cond_6
 
     .line 423
-    iput-object v7, v5, Lcom/tencent/mm/modelgeo/Addr;->bNQ:Ljava/lang/String;
+    iput-object v7, v5, Lcom/tencent/mm/modelgeo/Addr;->bHm:Ljava/lang/String;
 
     goto :goto_6
 
@@ -498,7 +521,7 @@
     if-eqz v8, :cond_8
 
     .line 425
-    iput-object v7, v5, Lcom/tencent/mm/modelgeo/Addr;->bNS:Ljava/lang/String;
+    iput-object v7, v5, Lcom/tencent/mm/modelgeo/Addr;->bHo:Ljava/lang/String;
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
@@ -514,7 +537,7 @@
     if-eqz v3, :cond_7
 
     .line 457
-    iget-object v1, v3, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v1, v3, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
 
@@ -533,7 +556,7 @@
     if-eqz v8, :cond_9
 
     .line 427
-    iput-object v7, v5, Lcom/tencent/mm/modelgeo/Addr;->bNT:Ljava/lang/String;
+    iput-object v7, v5, Lcom/tencent/mm/modelgeo/Addr;->bHp:Ljava/lang/String;
 
     goto :goto_6
 
@@ -548,7 +571,7 @@
     if-eqz v8, :cond_a
 
     .line 429
-    iput-object v7, v5, Lcom/tencent/mm/modelgeo/Addr;->bNU:Ljava/lang/String;
+    iput-object v7, v5, Lcom/tencent/mm/modelgeo/Addr;->bHq:Ljava/lang/String;
 
     goto :goto_6
 
@@ -563,7 +586,7 @@
     if-eqz v8, :cond_b
 
     .line 431
-    iput-object v7, v5, Lcom/tencent/mm/modelgeo/Addr;->bNV:Ljava/lang/String;
+    iput-object v7, v5, Lcom/tencent/mm/modelgeo/Addr;->bHr:Ljava/lang/String;
 
     goto :goto_6
 
@@ -578,7 +601,7 @@
     if-eqz v6, :cond_4
 
     .line 433
-    iput-object v7, v5, Lcom/tencent/mm/modelgeo/Addr;->bNO:Ljava/lang/String;
+    iput-object v7, v5, Lcom/tencent/mm/modelgeo/Addr;->bHk:Ljava/lang/String;
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_0
@@ -588,7 +611,7 @@
 
     .line 456
     :cond_c
-    iget-object v0, v3, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, v3, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
 
@@ -609,7 +632,7 @@
 
     const-string/jumbo v6, "error Exception"
 
-    invoke-static {v2, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 454
     sget-object v2, Lcom/tencent/mm/modelgeo/b;->TAG:Ljava/lang/String;
@@ -622,13 +645,13 @@
 
     const/4 v8, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v7, v8
 
-    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
@@ -636,7 +659,7 @@
     if-eqz v3, :cond_0
 
     .line 457
-    iget-object v0, v3, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, v3, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
 
@@ -653,13 +676,13 @@
 
     new-array v3, v9, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_4
 
@@ -714,7 +737,7 @@
 
     .prologue
     .line 27
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
     return-object v0
 .end method
@@ -737,9 +760,9 @@
 
     .line 270
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelgeo/b$c;->bOa:Ljava/lang/Object;
+    iget-object v0, v0, Lcom/tencent/mm/modelgeo/b$c;->tag:Ljava/lang/Object;
 
     if-nez v0, :cond_3
 
@@ -748,37 +771,37 @@
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     :goto_0
-    iput-object v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bOa:Ljava/lang/Object;
+    iput-object v0, p1, Lcom/tencent/mm/modelgeo/Addr;->tag:Ljava/lang/Object;
 
     .line 271
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
     iget-wide v0, v0, Lcom/tencent/mm/modelgeo/b$c;->lat:D
 
     double-to-float v0, v0
 
-    iput v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bNY:F
+    iput v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bHu:F
 
     .line 272
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
     iget-wide v0, v0, Lcom/tencent/mm/modelgeo/b$c;->lng:D
 
     double-to-float v0, v0
 
-    iput v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bNZ:F
+    iput v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bHv:F
 
     .line 273
-    iget-object v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bNQ:Ljava/lang/String;
+    iget-object v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bHm:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 274
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -786,7 +809,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b0ecd
+    const v1, 0x7f0807dc
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -801,22 +824,22 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 276
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->AL()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->AX()Z
 
     move-result v1
 
     if-nez v1, :cond_4
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_4
 
-    iget-object v1, p1, Lcom/tencent/mm/modelgeo/Addr;->bNQ:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/modelgeo/Addr;->bHm:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -825,14 +848,14 @@
     if-eqz v1, :cond_4
 
     .line 277
-    iget-object v1, p1, Lcom/tencent/mm/modelgeo/Addr;->bNQ:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/modelgeo/Addr;->bHm:Ljava/lang/String;
 
-    iput-object v1, p1, Lcom/tencent/mm/modelgeo/Addr;->bNR:Ljava/lang/String;
+    iput-object v1, p1, Lcom/tencent/mm/modelgeo/Addr;->bHn:Ljava/lang/String;
 
     .line 278
-    iget-object v1, p1, Lcom/tencent/mm/modelgeo/Addr;->bNQ:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/modelgeo/Addr;->bHm:Ljava/lang/String;
 
-    iget-object v2, p1, Lcom/tencent/mm/modelgeo/Addr;->bNQ:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/modelgeo/Addr;->bHm:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -848,14 +871,14 @@
 
     move-result-object v0
 
-    iput-object v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bNQ:Ljava/lang/String;
+    iput-object v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bHm:Ljava/lang/String;
 
     .line 286
     :cond_1
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
-    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
     invoke-virtual {v1}, Lcom/tencent/mm/modelgeo/b$c;->toString()Ljava/lang/String;
 
@@ -911,27 +934,27 @@
 
     .line 270
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelgeo/b$c;->bOa:Ljava/lang/Object;
+    iget-object v0, v0, Lcom/tencent/mm/modelgeo/b$c;->tag:Ljava/lang/Object;
 
     goto/16 :goto_0
 
     .line 279
     :cond_4
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->AL()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->AX()Z
 
     move-result v1
 
     if-nez v1, :cond_5
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_5
 
-    iget-object v1, p1, Lcom/tencent/mm/modelgeo/Addr;->bNN:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/modelgeo/Addr;->bHj:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
@@ -944,7 +967,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p1, Lcom/tencent/mm/modelgeo/Addr;->bNQ:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/modelgeo/Addr;->bHm:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -958,23 +981,23 @@
 
     move-result-object v0
 
-    iput-object v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bNR:Ljava/lang/String;
+    iput-object v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bHn:Ljava/lang/String;
 
     goto :goto_1
 
     .line 282
     :cond_5
-    iget-object v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bNQ:Ljava/lang/String;
+    iget-object v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bHm:Ljava/lang/String;
 
-    iput-object v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bNR:Ljava/lang/String;
+    iput-object v0, p1, Lcom/tencent/mm/modelgeo/Addr;->bHn:Ljava/lang/String;
 
     goto :goto_1
 
     .line 294
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
-    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
     invoke-virtual {v1}, Lcom/tencent/mm/modelgeo/b$c;->toString()Ljava/lang/String;
 
@@ -989,7 +1012,7 @@
 
     new-array v2, v5, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->size()I
 
@@ -1001,22 +1024,22 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 296
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iput-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
     .line 297
-    invoke-direct {p0}, Lcom/tencent/mm/modelgeo/b;->zC()V
+    invoke-direct {p0}, Lcom/tencent/mm/modelgeo/b;->zP()V
 
     .line 298
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
     if-nez v0, :cond_7
 
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -1025,13 +1048,13 @@
     if-lez v0, :cond_7
 
     .line 299
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x28f
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     .line 301
     :cond_7
@@ -1050,6 +1073,19 @@
 
 .method private static a(Ljava/util/LinkedList;Lcom/tencent/mm/modelgeo/b$a;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/tencent/mm/modelgeo/b$a;",
+            ">;>;",
+            "Lcom/tencent/mm/modelgeo/b$a;",
+            ")Z"
+        }
+    .end annotation
 
     .prologue
     .line 167
@@ -1105,7 +1141,7 @@
 .end method
 
 .method static synthetic b(DDZ)Lcom/tencent/mm/modelgeo/Addr;
-    .locals 1
+    .locals 2
 
     .prologue
     .line 27
@@ -1121,13 +1157,26 @@
 
     .prologue
     .line 27
-    iget-boolean v0, p0, Lcom/tencent/mm/modelgeo/b;->bOg:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/modelgeo/b;->bHB:Z
 
     return v0
 .end method
 
 .method private static b(Ljava/util/LinkedList;Lcom/tencent/mm/modelgeo/b$a;)Z
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/tencent/mm/modelgeo/b$a;",
+            ">;>;",
+            "Lcom/tencent/mm/modelgeo/b$a;",
+            ")Z"
+        }
+    .end annotation
 
     .prologue
     const/4 v2, 0x0
@@ -1203,17 +1252,17 @@
     .line 27
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/modelgeo/b;->bOg:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/modelgeo/b;->bHB:Z
 
     return v0
 .end method
 
-.method public static zB()Lcom/tencent/mm/modelgeo/b;
+.method public static zO()Lcom/tencent/mm/modelgeo/b;
     .locals 1
 
     .prologue
     .line 107
-    sget-object v0, Lcom/tencent/mm/modelgeo/b;->bOb:Lcom/tencent/mm/modelgeo/b;
+    sget-object v0, Lcom/tencent/mm/modelgeo/b;->bHw:Lcom/tencent/mm/modelgeo/b;
 
     if-nez v0, :cond_0
 
@@ -1222,29 +1271,29 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/modelgeo/b;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/modelgeo/b;->bOb:Lcom/tencent/mm/modelgeo/b;
+    sput-object v0, Lcom/tencent/mm/modelgeo/b;->bHw:Lcom/tencent/mm/modelgeo/b;
 
     .line 110
     :cond_0
-    sget-object v0, Lcom/tencent/mm/modelgeo/b;->bOb:Lcom/tencent/mm/modelgeo/b;
+    sget-object v0, Lcom/tencent/mm/modelgeo/b;->bHw:Lcom/tencent/mm/modelgeo/b;
 
     return-object v0
 .end method
 
-.method private zC()V
+.method private zP()V
     .locals 6
 
     .prologue
     .line 225
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -1253,7 +1302,7 @@
     if-lez v0, :cond_0
 
     .line 226
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
 
@@ -1261,22 +1310,22 @@
 
     check-cast v0, Lcom/tencent/mm/modelgeo/b$c;
 
-    iput-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iput-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
     .line 227
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->AL()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->AX()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOf:Lcom/tencent/mm/sdk/platformtools/am;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHA:Lcom/tencent/mm/sdk/platformtools/ap;
 
     new-instance v1, Lcom/tencent/mm/modelgeo/b$b;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/modelgeo/b$b;-><init>(Lcom/tencent/mm/modelgeo/b;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/am;->c(Lcom/tencent/mm/sdk/platformtools/am$a;)I
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ap;->c(Lcom/tencent/mm/sdk/platformtools/ap$a;)I
 
     .line 231
     :cond_0
@@ -1285,113 +1334,55 @@
 
     .line 227
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x28f
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     new-instance v1, Lcom/tencent/mm/modelgeo/d;
 
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iget-object v2, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
     iget-wide v2, v2, Lcom/tencent/mm/modelgeo/b$c;->lat:D
 
-    iget-object v4, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iget-object v4, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
     iget-wide v4, v4, Lcom/tencent/mm/modelgeo/b$c;->lng:D
 
     invoke-direct {v1, v2, v3, v4, v5}, Lcom/tencent/mm/modelgeo/d;-><init>(DD)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
-    .locals 3
-
-    .prologue
-    .line 472
-    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
-
-    move-result v0
-
-    const/16 v1, 0x28f
-
-    if-ne v0, v1, :cond_1
-
-    .line 473
-    check-cast p4, Lcom/tencent/mm/modelgeo/d;
-
-    .line 474
-    invoke-virtual {p4}, Lcom/tencent/mm/modelgeo/d;->zG()Lcom/tencent/mm/modelgeo/Addr;
-
-    move-result-object v0
-
-    .line 475
-    if-eqz v0, :cond_0
-
-    iget-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNN:Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNN:Ljava/lang/String;
-
-    const-string/jumbo v2, ""
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 476
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOf:Lcom/tencent/mm/sdk/platformtools/am;
-
-    new-instance v1, Lcom/tencent/mm/modelgeo/b$b;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/modelgeo/b$b;-><init>(Lcom/tencent/mm/modelgeo/b;)V
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/am;->c(Lcom/tencent/mm/sdk/platformtools/am$a;)I
-
-    .line 481
-    :cond_1
-    :goto_0
-    return-void
-
-    .line 478
-    :cond_2
-    invoke-direct {p0, v0}, Lcom/tencent/mm/modelgeo/b;->a(Lcom/tencent/mm/modelgeo/Addr;)V
-
-    goto :goto_0
-.end method
-
 .method public final a(DDLcom/tencent/mm/modelgeo/b$a;)Z
-    .locals 7
+    .locals 9
 
     .prologue
     .line 221
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v0, p0
+    move-object v1, p0
 
-    move-wide v1, p1
+    move-wide v2, p1
 
-    move-wide v3, p3
+    move-wide v4, p3
 
-    move-object v5, p5
+    move-object v6, p5
 
-    invoke-virtual/range {v0 .. v6}, Lcom/tencent/mm/modelgeo/b;->a(DDLcom/tencent/mm/modelgeo/b$a;Ljava/lang/Object;)Z
+    invoke-virtual/range {v1 .. v7}, Lcom/tencent/mm/modelgeo/b;->a(DDLcom/tencent/mm/modelgeo/b$a;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1409,7 +1400,7 @@
     .line 189
     if-eqz p6, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -1430,11 +1421,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v2, v0, Lcom/tencent/mm/modelgeo/b$c;->bOa:Ljava/lang/Object;
+    iget-object v2, v0, Lcom/tencent/mm/modelgeo/b$c;->tag:Ljava/lang/Object;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, v0, Lcom/tencent/mm/modelgeo/b$c;->bOa:Ljava/lang/Object;
+    iget-object v2, v0, Lcom/tencent/mm/modelgeo/b$c;->tag:Ljava/lang/Object;
 
     invoke-virtual {v2, p6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1442,7 +1433,7 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
@@ -1461,7 +1452,7 @@
     invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/modelgeo/b$c;-><init>(Lcom/tencent/mm/modelgeo/b;DDLjava/lang/Object;)V
 
     .line 191
-    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Lcom/tencent/mm/modelgeo/b$c;->toString()Ljava/lang/String;
 
@@ -1499,7 +1490,7 @@
 
     .line 200
     :cond_3
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Lcom/tencent/mm/modelgeo/b$c;->toString()Ljava/lang/String;
 
@@ -1508,7 +1499,7 @@
     invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 202
-    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -1535,7 +1526,7 @@
     if-eqz v1, :cond_4
 
     .line 204
-    invoke-direct {p0}, Lcom/tencent/mm/modelgeo/b;->zC()V
+    invoke-direct {p0}, Lcom/tencent/mm/modelgeo/b;->zP()V
 
     move v0, v7
 
@@ -1545,11 +1536,11 @@
 
     .line 208
     :cond_5
-    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
     if-eqz v1, :cond_6
 
-    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bOc:Lcom/tencent/mm/modelgeo/b$c;
+    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bHx:Lcom/tencent/mm/modelgeo/b$c;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/modelgeo/b$c;->equals(Ljava/lang/Object;)Z
 
@@ -1564,7 +1555,7 @@
 
     .line 211
     :cond_6
-    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
@@ -1577,7 +1568,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iget-object v3, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     invoke-virtual {v3}, Ljava/util/LinkedList;->size()I
 
@@ -1589,7 +1580,7 @@
 
     aput-object v3, v2, v7
 
-    iget-object v3, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->size()I
 
@@ -1601,12 +1592,12 @@
 
     aput-object v3, v2, v8
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 213
     :cond_7
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -1621,9 +1612,9 @@
 
     const-string/jumbo v1, "force remove task"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
 
@@ -1633,7 +1624,7 @@
 
     if-eqz v0, :cond_7
 
-    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Lcom/tencent/mm/modelgeo/b$c;->toString()Ljava/lang/String;
 
@@ -1645,7 +1636,7 @@
 
     .line 216
     :cond_8
-    invoke-direct {p0}, Lcom/tencent/mm/modelgeo/b;->zC()V
+    invoke-direct {p0}, Lcom/tencent/mm/modelgeo/b;->zP()V
 
     move v0, v8
 
@@ -1670,7 +1661,7 @@
     invoke-direct {v3}, Ljava/util/LinkedList;-><init>()V
 
     .line 125
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -1695,7 +1686,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 126
-    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1707,7 +1698,7 @@
     invoke-static {v1, p1}, Lcom/tencent/mm/modelgeo/b;->b(Ljava/util/LinkedList;Lcom/tencent/mm/modelgeo/b$a;)Z
 
     .line 129
-    iget-object v5, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iget-object v5, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
     invoke-virtual {v5, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1746,7 +1737,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 136
-    iget-object v3, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
     invoke-virtual {v3, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1754,7 +1745,7 @@
 
     .line 139
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -1775,7 +1766,7 @@
     check-cast v0, Lcom/tencent/mm/modelgeo/b$c;
 
     .line 140
-    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Lcom/tencent/mm/modelgeo/b$c;->toString()Ljava/lang/String;
 
@@ -1800,7 +1791,7 @@
     invoke-virtual {v2, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     .line 143
-    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Lcom/tencent/mm/modelgeo/b$c;->toString()Ljava/lang/String;
 
@@ -1830,7 +1821,7 @@
     check-cast v0, Lcom/tencent/mm/modelgeo/b$c;
 
     .line 147
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     invoke-virtual {v2, v0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
@@ -1848,7 +1839,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/modelgeo/b;->bOd:Ljava/util/LinkedList;
+    iget-object v4, p0, Lcom/tencent/mm/modelgeo/b;->bHy:Ljava/util/LinkedList;
 
     invoke-virtual {v4}, Ljava/util/LinkedList;->size()I
 
@@ -1860,7 +1851,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v3, p0, Lcom/tencent/mm/modelgeo/b;->bOe:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/tencent/mm/modelgeo/b;->bHz:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->size()I
 
@@ -1872,8 +1863,68 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 150
     return v6
+.end method
+
+.method public final onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
+    .locals 3
+
+    .prologue
+    .line 472
+    invoke-virtual {p4}, Lcom/tencent/mm/t/j;->getType()I
+
+    move-result v0
+
+    const/16 v1, 0x28f
+
+    if-ne v0, v1, :cond_1
+
+    .line 473
+    check-cast p4, Lcom/tencent/mm/modelgeo/d;
+
+    .line 474
+    invoke-virtual {p4}, Lcom/tencent/mm/modelgeo/d;->zT()Lcom/tencent/mm/modelgeo/Addr;
+
+    move-result-object v0
+
+    .line 475
+    if-eqz v0, :cond_0
+
+    iget-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHj:Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHj:Ljava/lang/String;
+
+    const-string/jumbo v2, ""
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 476
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/b;->bHA:Lcom/tencent/mm/sdk/platformtools/ap;
+
+    new-instance v1, Lcom/tencent/mm/modelgeo/b$b;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/modelgeo/b$b;-><init>(Lcom/tencent/mm/modelgeo/b;)V
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ap;->c(Lcom/tencent/mm/sdk/platformtools/ap$a;)I
+
+    .line 481
+    :cond_1
+    :goto_0
+    return-void
+
+    .line 478
+    :cond_2
+    invoke-direct {p0, v0}, Lcom/tencent/mm/modelgeo/b;->a(Lcom/tencent/mm/modelgeo/Addr;)V
+
+    goto :goto_0
 .end method

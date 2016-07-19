@@ -2,11 +2,16 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.f.b;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.h.l;
-import com.tencent.mm.sdk.platformtools.u;
+import android.widget.Gallery;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.g.b;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.plugin.sns.i.l;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.je;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.LinkedList;
 
 final class SnsGalleryUI$3
   implements MenuItem.OnMenuItemClickListener
@@ -15,14 +20,59 @@ final class SnsGalleryUI$3
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    Object localObject = hea.hbK.getSelectId();
-    String str = hea.hbK.getSelectedMediaId();
-    paramMenuItem = hea.hbK.getSelectItem();
-    u.d("!32@/B4Tb64lLpL5nUOxCB2IdIDTx0UukK9o", "click selectLocalId " + (String)localObject);
-    u.d("!32@/B4Tb64lLpL5nUOxCB2IdIDTx0UukK9o", "click position " + str);
-    localObject = ad.azi().vo((String)localObject);
-    hea.hbH.a(heb, (k)localObject, aHW, true);
-    return true;
+    paramMenuItem = hsL.hqA;
+    if (htc == null) {
+      paramMenuItem = "";
+    }
+    for (;;)
+    {
+      Object localObject = hsL.hqA;
+      label38:
+      b localb;
+      if (htc == null)
+      {
+        localObject = null;
+        localb = hsL.hqA.aER();
+        v.d("MicroMsg.SnsGalleryUI", "click selectLocalId " + paramMenuItem);
+        v.d("MicroMsg.SnsGalleryUI", "click position " + (String)localObject);
+        paramMenuItem = ad.aBI().wA(paramMenuItem);
+      }
+      try
+      {
+        int i = hsL.hqA.htt;
+        int j = aCDkli.jFv.size();
+        if ((j > 1) && (i > 1) && (i <= j)) {
+          i -= 1;
+        }
+        for (;;)
+        {
+          hsL.hqx.a(hsM, paramMenuItem, aus, true, i);
+          return true;
+          paramMenuItem = (b)htc.getSelectedItem();
+          if (paramMenuItem == null)
+          {
+            paramMenuItem = "";
+            break;
+          }
+          paramMenuItem = haC;
+          break;
+          localObject = (b)htc.getSelectedItem();
+          if (localObject == null)
+          {
+            localObject = null;
+            break label38;
+          }
+          localObject = aus.jvB;
+          break label38;
+          i = 0;
+        }
+        return true;
+      }
+      catch (Exception paramMenuItem)
+      {
+        v.printErrStackTrace("MicroMsg.SnsGalleryUI", paramMenuItem, "", new Object[0]);
+      }
+    }
   }
 }
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <com.tencent.mm.pluginsdk.ui.preference.HelperHeaderPreference android:layout="@layout/a2x" android:key="contact_info_header_helper" />
+    <PreferenceSmallCategory android:key="contact_info_floatbottle_hide_cat" />
+    <Preference android:layout="@layout/yk" android:title="@string/a_y" android:key="contact_info_goto_floatbottle" />
+    <Preference android:layout="@layout/yk" android:title="@string/a5b" android:key="contact_info_floatbottle_clear_data" />
+    <Preference android:layout="@layout/yk" android:title="@string/a5b" android:key="bottle_settings_clear_data" />
+    <PreferenceSmallCategory android:key="contact_info_floatbottle_hide_cat2" />
+    <Preference android:layout="@layout/t8" android:title="@string/cge" android:key="contact_info_floatbottle_install" />
+    <Preference android:layout="@layout/uy" android:title="@string/cgk" android:key="contact_info_floatbottle_uninstall" />
+</PreferenceScreen>

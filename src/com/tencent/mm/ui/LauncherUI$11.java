@@ -1,22 +1,40 @@
 package com.tencent.mm.ui;
 
 import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.u;
+import android.os.MessageQueue.IdleHandler;
+import com.tencent.mm.model.h;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.base.w;
+import com.tencent.mm.ui.chatting.ChattingUI.a;
+import com.tencent.mm.ui.tools.TestTimeForChatting;
 
 final class LauncherUI$11
-  implements Runnable
+  implements MessageQueue.IdleHandler
 {
   LauncherUI$11(LauncherUI paramLauncherUI) {}
   
-  public final void run()
+  public final boolean queueIdle()
   {
-    u.d("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "onMainTabCreate, send refresh broadcast");
-    knl.sendBroadcast(new Intent("com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP"));
-  }
-  
-  public final String toString()
-  {
-    return super.toString() + "|sendBroadcast";
+    long l = System.currentTimeMillis();
+    if (LauncherUI.o(kMs) == null)
+    {
+      Object localObject = h.se();
+      localObject = new Intent().putExtra("Chat_User", (String)localObject);
+      LauncherUI.a(kMs, (Intent)localObject, true);
+      gkMs).eXw = true;
+      LauncherUI.g(kMs).bkL();
+      LauncherUI.o(kMs).setVisibility(8);
+      gkMs).kPs = true;
+      LauncherUI.g(kMs).onPause();
+      LauncherUI.g(kMs).bkH();
+      gkMs).bQo = false;
+      LauncherUI.r(kMs);
+      w.a(true, new Intent().putExtra("classname", LauncherUI.class.getName()));
+    }
+    LauncherUI.a(kMs, null);
+    LauncherUI.b(kMs, null);
+    v.d("MicroMsg.LauncherUI", "prepare chattingUI logic use %dms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+    return false;
   }
 }
 

@@ -12,13 +12,22 @@
 
 
 # instance fields
-.field private dno:Lcom/tencent/mm/ui/widget/DragSortListView;
+.field private dmT:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-.field private krk:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
+.field private kQr:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
 
-.field private krl:J
+.field private kQs:J
 
-.field private krm:Ljava/util/List;
+.field private kQt:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/model/app/f;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -38,14 +47,14 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->krk:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->kQr:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final Gb()V
+.method protected final Gy()V
     .locals 2
 
     .prologue
@@ -57,16 +66,16 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/Sort3rdAppUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 64
-    const v0, 0x7f0b0932
+    const v0, 0x7f08002b
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/Sort3rdAppUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/Sort3rdAppUI;->Gj(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/Sort3rdAppUI;->Ah(Ljava/lang/String;)V
 
     .line 65
-    const v0, 0x7f0700ab
+    const v0, 0x7f100261
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/Sort3rdAppUI;->findViewById(I)Landroid/view/View;
 
@@ -74,16 +83,16 @@
 
     check-cast v0, Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->dno:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->dmT:Lcom/tencent/mm/ui/widget/DragSortListView;
 
     .line 66
-    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->dno:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->dmT:Lcom/tencent/mm/ui/widget/DragSortListView;
 
     new-instance v1, Lcom/tencent/mm/ui/Sort3rdAppUI$2;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/ui/Sort3rdAppUI$2;-><init>(Lcom/tencent/mm/ui/Sort3rdAppUI;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/DragSortListView;->setDropListener(Lcom/tencent/mm/ui/widget/DragSortListView$h;)V
+    iput-object v1, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->men:Lcom/tencent/mm/ui/widget/DragSortListView$g;
 
     .line 74
     return-void
@@ -94,7 +103,7 @@
 
     .prologue
     .line 43
-    const v0, 0x7f0a050f
+    const v0, 0x7f0305b9
 
     return v0
 .end method
@@ -119,25 +128,29 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->krl:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->kQs:J
 
     .line 50
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/Sort3rdAppUI;->Gb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/Sort3rdAppUI;->Gy()V
 
     .line 51
-    new-instance v0, Ljava/util/ArrayList;
+    iget-wide v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->kQs:J
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/4 v2, 0x1
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->krm:Ljava/util/List;
-
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->aPT()Lcom/tencent/mm/pluginsdk/model/app/o;
+    invoke-static {p0, v0, v1, v2}, Lcom/tencent/mm/pluginsdk/model/app/g;->b(Landroid/content/Context;JZ)Ljava/util/List;
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->krl:J
+    iput-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->kQt:Ljava/util/List;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/model/app/o;->cV(J)Ljava/util/List;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/al;->aUC()Lcom/tencent/mm/pluginsdk/model/app/o;
+
+    move-result-object v0
+
+    iget-wide v2, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->kQs:J
+
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/pluginsdk/model/app/o;->dm(J)Ljava/util/List;
 
     move-result-object v0
 
@@ -149,7 +162,7 @@
 
     if-lez v1, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->krm:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->kQt:Ljava/util/List;
 
     new-instance v2, Lcom/tencent/mm/ui/Sort3rdAppUI$3;
 
@@ -160,17 +173,17 @@
     :cond_0
     new-instance v0, Lcom/tencent/mm/ui/Sort3rdAppUI$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->krm:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->kQt:Ljava/util/List;
 
-    iget-wide v2, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->krl:J
+    iget-wide v2, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->kQs:J
 
     invoke-direct {v0, p0, v1, v2, v3}, Lcom/tencent/mm/ui/Sort3rdAppUI$a;-><init>(Landroid/content/Context;Ljava/util/List;J)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->krk:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->kQr:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->dno:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->dmT:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->krk:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->kQr:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/DragSortListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
@@ -190,44 +203,44 @@
 .end method
 
 .method protected onPause()V
-    .locals 9
+    .locals 10
 
     .prologue
     .line 98
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
 
     .line 99
-    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->krk:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->kQr:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
 
     if-eqz v0, :cond_1
 
     .line 100
-    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->krk:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->kQr:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/Sort3rdAppUI$a;->dfX:Ljava/util/List;
+    iget-object v2, v0, Lcom/tencent/mm/ui/Sort3rdAppUI$a;->deZ:Ljava/util/List;
 
     .line 101
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->aPT()Lcom/tencent/mm/pluginsdk/model/app/o;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/al;->aUC()Lcom/tencent/mm/pluginsdk/model/app/o;
 
     move-result-object v0
 
-    iget-wide v3, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->krl:J
+    iget-wide v4, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->kQs:J
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "delete from AppSort"
+    const-string/jumbo v3, "delete from AppSort"
 
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v5, " where flag = "
+    const-string/jumbo v3, " where flag = "
 
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v3
 
-    invoke-virtual {v5, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -239,11 +252,11 @@
 
     move-result-object v1
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/app/o;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/app/o;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v3, "AppSort"
 
-    invoke-interface {v0, v3, v1}, Lcom/tencent/mm/sdk/h/d;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {v0, v3, v1}, Lcom/tencent/mm/sdk/h/d;->cx(Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 102
     if-eqz v2, :cond_1
@@ -255,11 +268,11 @@
     if-lez v0, :cond_1
 
     .line 103
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/model/c;->bzA:Lcom/tencent/mm/az/g;
+    iget-object v0, v0, Lcom/tencent/mm/model/c;->bsy:Lcom/tencent/mm/bc/g;
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -267,16 +280,16 @@
 
     invoke-virtual {v1}, Ljava/lang/Thread;->getId()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/az/g;->dH(J)J
+    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/bc/g;->dY(J)J
 
-    move-result-wide v3
+    move-result-wide v4
 
     .line 104
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->aPT()Lcom/tencent/mm/pluginsdk/model/app/o;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/al;->aUC()Lcom/tencent/mm/pluginsdk/model/app/o;
 
-    move-result-object v5
+    move-result-object v3
 
     .line 105
     const/4 v0, 0x0
@@ -296,9 +309,9 @@
     invoke-direct {v6}, Lcom/tencent/mm/pluginsdk/model/app/n;-><init>()V
 
     .line 107
-    iget-wide v7, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->krl:J
+    iget-wide v8, p0, Lcom/tencent/mm/ui/Sort3rdAppUI;->kQs:J
 
-    iput-wide v7, v6, Lcom/tencent/mm/pluginsdk/model/app/n;->field_flag:J
+    iput-wide v8, v6, Lcom/tencent/mm/pluginsdk/model/app/n;->field_flag:J
 
     .line 108
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -315,7 +328,7 @@
     iput v1, v6, Lcom/tencent/mm/pluginsdk/model/app/n;->field_sortId:I
 
     .line 110
-    invoke-virtual {v5, v6}, Lcom/tencent/mm/pluginsdk/model/app/o;->a(Lcom/tencent/mm/pluginsdk/model/app/n;)Z
+    invoke-virtual {v3, v6}, Lcom/tencent/mm/pluginsdk/model/app/o;->a(Lcom/tencent/mm/pluginsdk/model/app/n;)Z
 
     .line 105
     add-int/lit8 v0, v1, 0x1
@@ -326,13 +339,13 @@
 
     .line 112
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/model/c;->bzA:Lcom/tencent/mm/az/g;
+    iget-object v0, v0, Lcom/tencent/mm/model/c;->bsy:Lcom/tencent/mm/bc/g;
 
-    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/az/g;->dI(J)I
+    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/bc/g;->dZ(J)I
 
     .line 115
     :cond_1

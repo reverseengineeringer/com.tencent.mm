@@ -2,13 +2,13 @@ package com.tencent.mm.ui.account;
 
 import android.widget.EditText;
 import com.tencent.mm.modelsimple.c;
-import com.tencent.mm.sdk.platformtools.ab.a;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ad.a;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class RegByMobileRegAIOUI$4
-  implements ab.a
+  implements ad.a
 {
-  String daR;
+  String cZx;
   
   RegByMobileRegAIOUI$4(RegByMobileRegAIOUI paramRegByMobileRegAIOUI) {}
   
@@ -17,24 +17,24 @@ final class RegByMobileRegAIOUI$4
     return super.toString() + "|initView1";
   }
   
-  public final boolean vd()
+  public final boolean vf()
   {
-    daR = c.v(kuT, RegByMobileRegAIOUI.j(kuT));
+    cZx = c.w(kUa, RegByMobileRegAIOUI.j(kUa));
     return true;
   }
   
-  public final boolean ve()
+  public final boolean vg()
   {
     EditText localEditText;
-    if (ay.kz(RegByMobileRegAIOUI.f(kuT).getText().trim()))
+    if (be.kf(RegByMobileRegAIOUI.f(kUa).getText().trim()))
     {
-      localEditText = RegByMobileRegAIOUI.f(kuT);
-      if (!ay.kz(daR)) {
+      localEditText = RegByMobileRegAIOUI.f(kUa);
+      if (!be.kf(cZx)) {
         break label60;
       }
     }
     label60:
-    for (String str = "";; str = daR)
+    for (String str = "";; str = cZx)
     {
       localEditText.setText(str);
       return true;

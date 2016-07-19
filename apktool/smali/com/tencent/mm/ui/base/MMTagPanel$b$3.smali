@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic kHv:Lcom/tencent/mm/ui/base/MMTagPanel$b;
+.field final synthetic lgx:Lcom/tencent/mm/ui/base/MMTagPanel$b;
 
-.field final synthetic kHw:Ljava/lang/String;
+.field final synthetic lgy:Ljava/lang/String;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 425
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$3;->kHv:Lcom/tencent/mm/ui/base/MMTagPanel$b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$3;->lgx:Lcom/tencent/mm/ui/base/MMTagPanel$b;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$3;->kHw:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$3;->lgy:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
 
     .prologue
     .line 428
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$3;->kHv:Lcom/tencent/mm/ui/base/MMTagPanel$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$3;->lgx:Lcom/tencent/mm/ui/base/MMTagPanel$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->a(Lcom/tencent/mm/ui/base/MMTagPanel;)Lcom/tencent/mm/ui/widget/MMEditText;
 
@@ -58,15 +58,15 @@
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 429
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$3;->kHv:Lcom/tencent/mm/ui/base/MMTagPanel$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$3;->lgx:Lcom/tencent/mm/ui/base/MMTagPanel$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->a(Lcom/tencent/mm/ui/base/MMTagPanel;)Lcom/tencent/mm/ui/widget/MMEditText;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$3;->kHw:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$3;->lgy:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->append(Ljava/lang/CharSequence;)V
 

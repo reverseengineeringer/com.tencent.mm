@@ -3,8 +3,8 @@ package com.tencent.mm.ui.conversation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class BaseConversationUI$7
   implements Animation.AnimationListener
@@ -13,20 +13,20 @@ final class BaseConversationUI$7
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    ah.tv().aUY();
-    ab.pq(0);
-    BaseConversationUI.e(lnn);
-    u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "klem pop out onAnimationEnd");
+    ah.tw().bac();
+    ad.rh(0);
+    BaseConversationUI.e(lNH);
+    v.i("MicroMsg.BaseConversationUI", "klem pop out onAnimationEnd");
   }
   
   public final void onAnimationRepeat(Animation paramAnimation) {}
   
   public final void onAnimationStart(Animation paramAnimation)
   {
-    ah.tv().aUV();
-    ab.pq(-8);
-    u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "klem pop out onAnimationStart");
-    BaseConversationUI.a(lnn, true);
+    ah.tw().aZZ();
+    ad.rh(-8);
+    v.i("MicroMsg.BaseConversationUI", "klem pop out onAnimationStart");
+    BaseConversationUI.a(lNH, true);
   }
 }
 

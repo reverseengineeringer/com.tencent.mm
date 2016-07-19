@@ -1,17 +1,17 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.app.e.a;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.app.d.a;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class g$1
-  implements e.a
+  implements d.a
 {
-  public final void aI(int paramInt)
+  public final void ba(int paramInt)
   {
-    u.i("!44@/B4Tb64lLpIuznxMDiXSbOAIHvxP9kj34in5ft1NlOg=", "CrashStatus report: key %s ", new Object[] { Integer.valueOf(paramInt) });
-    h localh = h.fUJ;
-    h.b(25L, paramInt, 1L, false);
+    v.i("MicroMsg.PostTaskLightweightJob", "CrashStatus report: key %s ", new Object[] { Integer.valueOf(paramInt) });
+    g localg = g.gdY;
+    g.b(25L, paramInt, 1L, false);
   }
 }
 

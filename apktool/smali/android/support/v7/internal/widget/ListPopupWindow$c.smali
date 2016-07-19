@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic qi:Landroid/support/v7/internal/widget/ListPopupWindow;
+.field final synthetic qw:Landroid/support/v7/internal/widget/ListPopupWindow;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 1357
-    iput-object p1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$c;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$c;->qw:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
@@ -48,9 +48,9 @@
 
     .prologue
     .line 1361
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$c;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$c;->qw:Landroid/support/v7/internal/widget/ListPopupWindow;
 
-    iget-object v0, v0, Landroid/support/v7/internal/widget/ListPopupWindow;->pK:Landroid/widget/PopupWindow;
+    iget-object v0, v0, Landroid/support/v7/internal/widget/ListPopupWindow;->pY:Landroid/widget/PopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/PopupWindow;->isShowing()Z
 
@@ -59,7 +59,7 @@
     if-eqz v0, :cond_0
 
     .line 1363
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$c;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$c;->qw:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/widget/ListPopupWindow;->show()V
 
@@ -73,7 +73,7 @@
 
     .prologue
     .line 1369
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$c;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$c;->qw:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/widget/ListPopupWindow;->dismiss()V
 

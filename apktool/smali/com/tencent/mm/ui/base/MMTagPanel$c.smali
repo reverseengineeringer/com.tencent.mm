@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field final synthetic kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+.field private lgA:I
 
-.field kHx:I
+.field private lgB:I
 
-.field private kHy:I
+.field final synthetic lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
-.field private kHz:I
+.field lgz:I
 
 
 # direct methods
@@ -33,19 +33,19 @@
 
     .prologue
     .line 274
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 275
     const/16 v0, 0x24
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHx:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgz:I
 
     .line 277
     const/16 v0, 0x100
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHy:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgA:I
 
     .line 279
     return-void
@@ -56,7 +56,7 @@
 
     .prologue
     .line 263
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHz:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgB:I
 
     return v0
 .end method
@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/i;->HB(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/i;->JR(Ljava/lang/String;)I
 
     move-result v0
 
@@ -85,7 +85,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/tools/i;->HB(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/ui/tools/i;->JR(Ljava/lang/String;)I
 
     move-result v1
 
@@ -100,12 +100,12 @@
 
     sub-int v1, v0, v1
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHx:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgz:I
 
     if-le v1, v2, :cond_2
 
     .line 295
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-static {v1, v4}, Lcom/tencent/mm/ui/base/MMTagPanel;->a(Lcom/tencent/mm/ui/base/MMTagPanel;Z)Z
 
@@ -114,15 +114,15 @@
 
     sub-int v1, v0, v1
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHx:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgz:I
 
     sub-int/2addr v1, v2
 
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHz:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgB:I
 
     .line 309
     :goto_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/base/MMTagPanel;->e(Lcom/tencent/mm/ui/base/MMTagPanel;)Lcom/tencent/mm/ui/base/MMTagPanel$a;
 
@@ -131,7 +131,7 @@
     if-eqz v1, :cond_0
 
     .line 310
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     new-instance v2, Lcom/tencent/mm/ui/base/MMTagPanel$c$1;
 
@@ -141,7 +141,7 @@
 
     .line 319
     :cond_0
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHy:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgA:I
 
     if-le v0, v1, :cond_1
 
@@ -154,7 +154,7 @@
 
     .line 298
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-static {v1, v3}, Lcom/tencent/mm/ui/base/MMTagPanel;->a(Lcom/tencent/mm/ui/base/MMTagPanel;Z)Z
 
@@ -162,27 +162,27 @@
 
     .line 301
     :cond_3
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHx:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgz:I
 
     if-le v0, v1, :cond_4
 
     .line 302
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-static {v1, v4}, Lcom/tencent/mm/ui/base/MMTagPanel;->a(Lcom/tencent/mm/ui/base/MMTagPanel;Z)Z
 
     .line 303
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHx:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgz:I
 
     sub-int v1, v0, v1
 
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHz:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgB:I
 
     goto :goto_0
 
     .line 305
     :cond_4
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$c;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-static {v1, v3}, Lcom/tencent/mm/ui/base/MMTagPanel;->a(Lcom/tencent/mm/ui/base/MMTagPanel;Z)Z
 

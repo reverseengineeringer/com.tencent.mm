@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/LoginUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/account/LoginUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic aoT:Lcom/tencent/mm/r/j;
+.field final synthetic acZ:Lcom/tencent/mm/t/j;
 
-.field final synthetic ktY:Lcom/tencent/mm/ui/account/LoginUI;
+.field final synthetic kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/account/LoginUI;Lcom/tencent/mm/r/j;)V
+.method constructor <init>(Lcom/tencent/mm/ui/account/LoginUI;Lcom/tencent/mm/t/j;)V
     .locals 0
 
     .prologue
     .line 543
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->ktY:Lcom/tencent/mm/ui/account/LoginUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->aoT:Lcom/tencent/mm/r/j;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->acZ:Lcom/tencent/mm/t/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,18 +45,18 @@
 
     .prologue
     .line 547
-    const-string/jumbo v0, "!32@/B4Tb64lLpJTKkcMldEZqYg5eKm6NcjH"
+    const-string/jumbo v0, "MicroMsg.LoginUI"
 
     const-string/jumbo v1, "onSceneEnd, in runnable"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 548
-    sget-object v0, Lcom/tencent/mm/plugin/a/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    sget-object v0, Lcom/tencent/mm/plugin/a/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->ktY:Lcom/tencent/mm/ui/account/LoginUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/g;->ak(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/g;->ag(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v1
 
@@ -68,11 +68,11 @@
     .line 550
     const-string/jumbo v2, "kstyle_show_bind_mobile_afterauth"
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->aoT:Lcom/tencent/mm/r/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->acZ:Lcom/tencent/mm/t/j;
 
-    check-cast v0, Lcom/tencent/mm/modelsimple/t;
+    check-cast v0, Lcom/tencent/mm/modelsimple/r;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/modelsimple/t;->CA()I
+    invoke-virtual {v0}, Lcom/tencent/mm/modelsimple/r;->CN()I
 
     move-result v0
 
@@ -81,11 +81,11 @@
     .line 551
     const-string/jumbo v2, "kstyle_bind_wording"
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->aoT:Lcom/tencent/mm/r/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->acZ:Lcom/tencent/mm/t/j;
 
-    check-cast v0, Lcom/tencent/mm/modelsimple/t;
+    check-cast v0, Lcom/tencent/mm/modelsimple/r;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/modelsimple/t;->CB()Lcom/tencent/mm/modelsimple/BindWordingContent;
+    invoke-virtual {v0}, Lcom/tencent/mm/modelsimple/r;->CO()Lcom/tencent/mm/modelsimple/BindWordingContent;
 
     move-result-object v0
 
@@ -94,23 +94,23 @@
     .line 552
     const-string/jumbo v2, "kstyle_bind_recommend_show"
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->aoT:Lcom/tencent/mm/r/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->acZ:Lcom/tencent/mm/t/j;
 
-    check-cast v0, Lcom/tencent/mm/modelsimple/t;
+    check-cast v0, Lcom/tencent/mm/modelsimple/r;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/modelsimple/t;->CC()I
+    invoke-virtual {v0}, Lcom/tencent/mm/modelsimple/r;->CP()I
 
     move-result v0
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 553
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->ktY:Lcom/tencent/mm/ui/account/LoginUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/account/LoginUI;->startActivity(Landroid/content/Intent;)V
 
     .line 554
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->ktY:Lcom/tencent/mm/ui/account/LoginUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginUI$6;->kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/account/LoginUI;->finish()V
 

@@ -10,7 +10,7 @@ final class AppAttachFileListUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    kQj.finish();
+    lpY.finish();
     return true;
   }
 }

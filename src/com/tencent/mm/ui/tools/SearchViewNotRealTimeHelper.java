@@ -8,13 +8,14 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnFocusChangeListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.p;
 import com.tencent.mm.ui.tools.a.c;
 import java.util.ArrayList;
@@ -23,12 +24,12 @@ public class SearchViewNotRealTimeHelper
   extends LinearLayout
   implements g
 {
-  public EditText kLd;
-  private ActionBarSearchView.a ltD;
-  private View ltw;
-  private ImageButton lty;
-  public Button lxL;
-  private a lxM;
+  private ActionBarSearchView.a lUE;
+  public View lUx;
+  private ImageButton lUz;
+  public Button lYA;
+  public a lYB;
+  public EditText lks;
   
   public SearchViewNotRealTimeHelper(Context paramContext)
   {
@@ -44,13 +45,13 @@ public class SearchViewNotRealTimeHelper
   
   private void init()
   {
-    p.ee(getContext()).inflate(2131363234, this, true);
-    kLd = ((EditText)findViewById(2131166420));
-    lty = ((ImageButton)findViewById(2131168501));
-    ltw = findViewById(2131166435);
-    lxL = ((Button)findViewById(2131165632));
-    lxL.setEnabled(false);
-    kLd.addTextChangedListener(new TextWatcher()
+    p.ef(getContext()).inflate(2130903067, this, true);
+    lks = ((EditText)findViewById(2131755215));
+    lUz = ((ImageButton)findViewById(2131755216));
+    lUx = findViewById(2131755211);
+    lYA = ((Button)findViewById(2131755217));
+    lYA.setEnabled(false);
+    lks.addTextChangedListener(new TextWatcher()
     {
       public final void afterTextChanged(Editable paramAnonymousEditable)
       {
@@ -68,73 +69,100 @@ public class SearchViewNotRealTimeHelper
       
       public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
     });
-    kLd.setOnEditorActionListener(new TextView.OnEditorActionListener()
+    lks.setOnEditorActionListener(new TextView.OnEditorActionListener()
     {
       public final boolean onEditorAction(TextView paramAnonymousTextView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
       {
         if ((3 == paramAnonymousInt) && (SearchViewNotRealTimeHelper.c(SearchViewNotRealTimeHelper.this) != null)) {
-          return SearchViewNotRealTimeHelper.c(SearchViewNotRealTimeHelper.this).kE(getSearchContent());
+          return SearchViewNotRealTimeHelper.c(SearchViewNotRealTimeHelper.this).ln(aVM());
         }
         return false;
       }
     });
-    c.a(kLd).rZ(100).a(null);
-    lty.setOnClickListener(new View.OnClickListener()
+    c.a(lks).ud(100).a(null);
+    lUz.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
         SearchViewNotRealTimeHelper.d(SearchViewNotRealTimeHelper.this).setText("");
         if (SearchViewNotRealTimeHelper.c(SearchViewNotRealTimeHelper.this) != null) {
-          SearchViewNotRealTimeHelper.c(SearchViewNotRealTimeHelper.this).KY();
+          SearchViewNotRealTimeHelper.c(SearchViewNotRealTimeHelper.this).LM();
         }
       }
     });
-    ltw.setOnClickListener(new View.OnClickListener()
+    lUx.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        u.v("!56@/B4Tb64lLpLefBCxqnmMg3WMfx9nFLyovQojYDyB2OJFMJ1DPCcm+g==", "home btn click");
+        v.v("MicroMsg.SearchViewNotRealTimeHelper", "home btn click");
         if (SearchViewNotRealTimeHelper.c(SearchViewNotRealTimeHelper.this) != null) {
-          SearchViewNotRealTimeHelper.c(SearchViewNotRealTimeHelper.this).KZ();
+          SearchViewNotRealTimeHelper.c(SearchViewNotRealTimeHelper.this).LN();
         }
         if (SearchViewNotRealTimeHelper.e(SearchViewNotRealTimeHelper.this) != null) {
-          SearchViewNotRealTimeHelper.e(SearchViewNotRealTimeHelper.this).bil();
+          SearchViewNotRealTimeHelper.e(SearchViewNotRealTimeHelper.this).boi();
         }
       }
     });
-    lxL.setOnClickListener(new View.OnClickListener()
+    lYA.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
         if (SearchViewNotRealTimeHelper.c(SearchViewNotRealTimeHelper.this) != null) {
-          SearchViewNotRealTimeHelper.c(SearchViewNotRealTimeHelper.this).lq(getSearchContent());
+          SearchViewNotRealTimeHelper.c(SearchViewNotRealTimeHelper.this).mb(aVM());
         }
       }
     });
   }
   
-  public final void bii()
+  public final void I(CharSequence paramCharSequence)
   {
-    kLd.clearFocus();
+    lks.setHint(paramCharSequence);
   }
   
-  public final boolean bij()
+  public final void JL(String paramString)
   {
-    return false;
+    lks.setText("");
+    lks.append(paramString);
   }
   
-  public final boolean bik()
+  public final void U(ArrayList<String> paramArrayList) {}
+  
+  public final void a(View.OnFocusChangeListener paramOnFocusChangeListener) {}
+  
+  public final void a(ActionBarSearchView.a parama)
   {
-    return false;
+    lUE = parama;
   }
   
-  public String getSearchContent()
+  public final void a(ActionBarSearchView.b paramb) {}
+  
+  public final void a(a parama)
   {
-    Editable localEditable = kLd.getEditableText();
+    lYB = parama;
+  }
+  
+  public final String aVM()
+  {
+    Editable localEditable = lks.getEditableText();
     if (localEditable == null) {
       return "";
     }
     return localEditable.toString();
+  }
+  
+  public final void bof()
+  {
+    lks.clearFocus();
+  }
+  
+  public final boolean bog()
+  {
+    return false;
+  }
+  
+  public final boolean boh()
+  {
+    return false;
   }
   
   public boolean hasFocus()
@@ -142,106 +170,37 @@ public class SearchViewNotRealTimeHelper
     return false;
   }
   
-  public final void id(boolean paramBoolean) {}
+  public final void iI(boolean paramBoolean) {}
   
-  public final void ie(boolean paramBoolean)
+  public final void iJ(boolean paramBoolean) {}
+  
+  public final void iK(boolean paramBoolean) {}
+  
+  public final void iL(boolean paramBoolean)
   {
-    kLd.setText("");
+    lks.setText("");
   }
   
-  public void setAutoMatchKeywords(boolean paramBoolean) {}
+  public final void iM(boolean paramBoolean) {}
   
-  public void setBackClickCallback(ActionBarSearchView.a parama)
+  public final void setHint(CharSequence paramCharSequence)
   {
-    ltD = parama;
+    I(paramCharSequence);
   }
   
-  public void setCallBack(ActionBarSearchView.b paramb) {}
+  public final void setOnEditorActionListener(TextView.OnEditorActionListener paramOnEditorActionListener) {}
   
-  public void setCallBack(a parama)
-  {
-    lxM = parama;
-  }
-  
-  public void setEditTextEnabled(boolean paramBoolean) {}
-  
-  public void setHint(CharSequence paramCharSequence)
-  {
-    setSearchHint(paramCharSequence);
-  }
-  
-  public void setKeywords(ArrayList paramArrayList) {}
-  
-  public void setNotRealCallBack(a parama)
-  {
-    lxM = parama;
-  }
-  
-  public void setOnEditorActionListener(TextView.OnEditorActionListener paramOnEditorActionListener) {}
-  
-  public void setSearchBtnText(CharSequence paramCharSequence)
-  {
-    lxL.setText(paramCharSequence);
-  }
-  
-  public void setSearchColor(int paramInt)
-  {
-    kLd.setTextColor(paramInt);
-  }
-  
-  public void setSearchContent(CharSequence paramCharSequence)
-  {
-    kLd.setText("");
-    kLd.append(paramCharSequence);
-  }
-  
-  public void setSearchContent(String paramString)
-  {
-    setSearchContent(paramString);
-  }
-  
-  public void setSearchHint(CharSequence paramCharSequence)
-  {
-    kLd.setHint(paramCharSequence);
-  }
-  
-  public void setSearchHintColor(int paramInt)
-  {
-    kLd.setHintTextColor(paramInt);
-  }
-  
-  public void setSearchIcon(int paramInt)
-  {
-    kLd.setCompoundDrawablesWithIntrinsicBounds(paramInt, 0, 0, 0);
-  }
-  
-  public void setSearchTipIcon(int paramInt) {}
-  
-  public void setShowBackIcon(boolean paramBoolean)
-  {
-    if (ltw != null)
-    {
-      if (paramBoolean) {
-        ltw.setVisibility(0);
-      }
-    }
-    else {
-      return;
-    }
-    ltw.setVisibility(8);
-  }
-  
-  public void setStatusBtnEnabled(boolean paramBoolean) {}
+  public final void tU(int paramInt) {}
   
   public static abstract interface a
   {
-    public abstract void KY();
+    public abstract void LM();
     
-    public abstract void KZ();
+    public abstract void LN();
     
-    public abstract boolean kE(String paramString);
+    public abstract boolean ln(String paramString);
     
-    public abstract void lq(String paramString);
+    public abstract void mb(String paramString);
   }
 }
 

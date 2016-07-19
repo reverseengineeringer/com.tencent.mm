@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/t$a;
+.implements Lcom/tencent/mm/t/t$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/report/b/c$1;->aq(Ljava/lang/String;)V
+    value = Lcom/tencent/mm/plugin/report/b/c$1;->au(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic fTS:Lcom/tencent/mm/plugin/report/b/c$1;
+.field final synthetic gdm:Lcom/tencent/mm/plugin/report/b/c$1;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 58
-    iput-object p1, p0, Lcom/tencent/mm/plugin/report/b/c$1$1;->fTS:Lcom/tencent/mm/plugin/report/b/c$1;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/report/b/c$1$1;->gdm:Lcom/tencent/mm/plugin/report/b/c$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,14 +36,14 @@
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/a;Lcom/tencent/mm/r/j;)I
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/t/a;Lcom/tencent/mm/t/j;)I
     .locals 6
 
     .prologue
     const/4 v5, 0x0
 
     .line 61
-    const-string/jumbo v0, "!32@/B4Tb64lLpKISRvsDhywQKz8I7hoCJH1"
+    const-string/jumbo v0, "MicroMsg.MidHelper"
 
     const-string/jumbo v1, "onGYNetEnd errType:%d errCode:%d msg:%s"
 
@@ -69,7 +69,7 @@
 
     aput-object p3, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 62
     return v5

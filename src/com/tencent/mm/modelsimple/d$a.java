@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 public abstract interface d$a
 {
-  public abstract void h(Bundle paramBundle);
+  public abstract void j(Bundle paramBundle);
 }
 
 /* Location:

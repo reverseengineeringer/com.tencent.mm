@@ -14,12 +14,12 @@ final class SnsCommentUI$4
   
   public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    if (SnsCommentUI.b(hdQ).getText().toString().trim().length() > 0)
+    if (SnsCommentUI.b(hsD).getText().toString().trim().length() > 0)
     {
-      hdQ.bC(true);
+      hsD.bp(true);
       return;
     }
-    hdQ.bC(false);
+    hsD.bp(false);
   }
 }
 

@@ -19,52 +19,80 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/widget/ArrayAdapter",
+        "<",
+        "Lcom/tencent/mm/pluginsdk/model/app/f;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field private dCP:Lcom/tencent/mm/ab/a/a/c;
+.field private dEk:Lcom/tencent/mm/ae/a/a/c;
 
-.field dfX:Ljava/util/List;
+.field deZ:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/model/app/f;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private krl:J
+.field private kQs:J
 
 .field private mContext:Landroid/content/Context;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/util/List;J)V
-    .locals 2
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/model/app/f;",
+            ">;J)V"
+        }
+    .end annotation
 
     .prologue
     .line 126
-    const v0, 0x7f0a04bf
+    const v0, 0x7f0305ba
 
     invoke-direct {p0, p1, v0, p2}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
     .line 127
-    iput-wide p3, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a;->krl:J
+    iput-wide p3, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a;->kQs:J
 
     .line 128
     iput-object p1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a;->mContext:Landroid/content/Context;
 
     .line 129
-    iput-object p2, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a;->dfX:Ljava/util/List;
+    iput-object p2, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a;->deZ:Ljava/util/List;
 
     .line 130
-    new-instance v0, Lcom/tencent/mm/ab/a/a/c$a;
+    new-instance v0, Lcom/tencent/mm/ae/a/a/c$a;
 
-    invoke-direct {v0}, Lcom/tencent/mm/ab/a/a/c$a;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/ae/a/a/c$a;-><init>()V
 
     .line 131
-    const v1, 0x7f04003a
+    const v1, 0x7f020551
 
-    iput v1, v0, Lcom/tencent/mm/ab/a/a/c$a;->bTO:I
+    iput v1, v0, Lcom/tencent/mm/ae/a/a/c$a;->bNp:I
 
     .line 132
-    invoke-virtual {v0}, Lcom/tencent/mm/ab/a/a/c$a;->AA()Lcom/tencent/mm/ab/a/a/c;
+    invoke-virtual {v0}, Lcom/tencent/mm/ae/a/a/c$a;->AM()Lcom/tencent/mm/ae/a/a/c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a;->dCP:Lcom/tencent/mm/ab/a/a/c;
+    iput-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a;->dEk:Lcom/tencent/mm/ae/a/a/c;
 
     .line 133
     return-void
@@ -86,7 +114,7 @@
     .line 154
     iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0a04bf
+    const v1, 0x7f0305ba
 
     const/4 v4, 0x0
 
@@ -113,7 +141,7 @@
     check-cast v0, Lcom/tencent/mm/pluginsdk/model/app/f;
 
     .line 163
-    iget-object v4, v1, Lcom/tencent/mm/ui/Sort3rdAppUI$a$a;->cNT:Landroid/widget/TextView;
+    iget-object v4, v1, Lcom/tencent/mm/ui/Sort3rdAppUI$a$a;->cuj:Landroid/widget/TextView;
 
     iget-object v5, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appName:Ljava/lang/String;
 
@@ -124,7 +152,7 @@
 
     iget-object v5, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a;->mContext:Landroid/content/Context;
 
-    invoke-static {v5}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {v5}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v5
 
@@ -142,13 +170,13 @@
     if-nez v5, :cond_1
 
     .line 167
-    iget-object v5, v1, Lcom/tencent/mm/ui/Sort3rdAppUI$a$a;->cNV:Landroid/widget/ImageView;
+    iget-object v5, v1, Lcom/tencent/mm/ui/Sort3rdAppUI$a$a;->cKV:Landroid/widget/ImageView;
 
     invoke-virtual {v5, v4}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 171
     :goto_1
-    iget-object v4, v1, Lcom/tencent/mm/ui/Sort3rdAppUI$a$a;->krr:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    iget-object v4, v1, Lcom/tencent/mm/ui/Sort3rdAppUI$a$a;->kQy:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
 
     iget v5, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appInfoFlag:I
 
@@ -157,16 +185,16 @@
     if-nez v5, :cond_2
 
     :goto_2
-    invoke-virtual {v4, v2}, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->setCheck(Z)V
+    invoke-virtual {v4, v2}, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->iV(Z)V
 
     .line 172
-    iget-object v1, v1, Lcom/tencent/mm/ui/Sort3rdAppUI$a$a;->krr:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    iget-object v1, v1, Lcom/tencent/mm/ui/Sort3rdAppUI$a$a;->kQy:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
 
     new-instance v2, Lcom/tencent/mm/ui/Sort3rdAppUI$a$1;
 
     invoke-direct {v2, p0, v0}, Lcom/tencent/mm/ui/Sort3rdAppUI$a$1;-><init>(Lcom/tencent/mm/ui/Sort3rdAppUI$a;Lcom/tencent/mm/pluginsdk/model/app/f;)V
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->setSwitchListener(Lcom/tencent/mm/ui/widget/MMSwitchBtn$a;)V
+    iput-object v2, v1, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->mgU:Lcom/tencent/mm/ui/widget/MMSwitchBtn$a;
 
     .line 184
     invoke-virtual {p2, v3}, Landroid/view/View;->setVisibility(I)V
@@ -188,17 +216,17 @@
 
     .line 169
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/ab/n;->As()Lcom/tencent/mm/ab/a/a;
+    invoke-static {}, Lcom/tencent/mm/ae/n;->AC()Lcom/tencent/mm/ae/a/a;
 
     move-result-object v4
 
     iget-object v5, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appIconUrl:Ljava/lang/String;
 
-    iget-object v6, v1, Lcom/tencent/mm/ui/Sort3rdAppUI$a$a;->cNV:Landroid/widget/ImageView;
+    iget-object v6, v1, Lcom/tencent/mm/ui/Sort3rdAppUI$a$a;->cKV:Landroid/widget/ImageView;
 
-    iget-object v7, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a;->dCP:Lcom/tencent/mm/ab/a/a/c;
+    iget-object v7, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a;->dEk:Lcom/tencent/mm/ae/a/a/c;
 
-    invoke-virtual {v4, v5, v6, v7}, Lcom/tencent/mm/ab/a/a;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/tencent/mm/ab/a/a/c;)V
+    invoke-virtual {v4, v5, v6, v7}, Lcom/tencent/mm/ae/a/a;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/tencent/mm/ae/a/a/c;)V
 
     goto :goto_1
 

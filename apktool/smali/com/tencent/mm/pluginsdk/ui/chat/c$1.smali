@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iMg:Lcom/tencent/mm/pluginsdk/ui/chat/c;
+.field final synthetic jjd:Lcom/tencent/mm/pluginsdk/ui/chat/c;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 72
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c$1;->iMg:Lcom/tencent/mm/pluginsdk/ui/chat/c;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c$1;->jjd:Lcom/tencent/mm/pluginsdk/ui/chat/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c$1;->iMg:Lcom/tencent/mm/pluginsdk/ui/chat/c;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c$1;->jjd:Lcom/tencent/mm/pluginsdk/ui/chat/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->iMc:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->jiZ:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/o;->dismiss()V
 

@@ -1,8 +1,8 @@
 package com.tencent.mm.ui.voicesearch;
 
-import com.tencent.mm.protocal.b.aly;
-import com.tencent.mm.protocal.b.ami;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.amj;
+import com.tencent.mm.protocal.b.amt;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.applet.b.b;
 import java.util.LinkedList;
 
@@ -11,26 +11,26 @@ final class b$8
 {
   b$8(b paramb) {}
   
-  public final String dd(int paramInt)
+  public final String dI(int paramInt)
   {
     if (paramInt < 0) {
-      u.e("!44@/B4Tb64lLpIwWRoRNv7NY4nYWcMLVN9cmAcB8VcA6vM=", "pos is invalid");
+      v.e("MicroMsg.SearchResultAdapter", "pos is invalid");
     }
-    ami localami;
+    amt localamt;
     do
     {
       return null;
-      localami = lCw.sb(b.e(lCw) + paramInt + 1);
-    } while (localami == null);
-    return jhS.jHw;
+      localamt = mdn.uf(b.e(mdn) + paramInt + 1);
+    } while (localamt == null);
+    return jFX.kfU;
   }
   
-  public final int yz()
+  public final int yM()
   {
-    if (b.f(lCw) == null) {
+    if (b.f(mdn) == null) {
       return 0;
     }
-    return b.f(lCw).size();
+    return b.f(mdn).size();
   }
 }
 

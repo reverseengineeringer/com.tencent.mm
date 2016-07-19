@@ -11,18 +11,17 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.ab.a.a.c.a;
+import com.tencent.mm.ae.a.a.c.a;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.pluginsdk.model.app.aj;
+import com.tencent.mm.pluginsdk.model.app.al;
 import com.tencent.mm.pluginsdk.model.app.f;
 import com.tencent.mm.pluginsdk.model.app.i;
 import com.tencent.mm.pluginsdk.model.app.o;
 import com.tencent.mm.sdk.h.d;
 import com.tencent.mm.ui.widget.DragSortListView;
-import com.tencent.mm.ui.widget.DragSortListView.h;
+import com.tencent.mm.ui.widget.DragSortListView.g;
 import com.tencent.mm.ui.widget.MMSwitchBtn;
 import com.tencent.mm.ui.widget.MMSwitchBtn.a;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -30,12 +29,12 @@ import java.util.List;
 public class Sort3rdAppUI
   extends MMActivity
 {
-  private DragSortListView dno;
-  private a krk;
-  private long krl;
-  private List krm;
+  private DragSortListView dmT;
+  private a kQr;
+  private long kQs;
+  private List<f> kQt;
   
-  protected final void Gb()
+  protected final void Gy()
   {
     b(new MenuItem.OnMenuItemClickListener()
     {
@@ -45,36 +44,36 @@ public class Sort3rdAppUI
         return true;
       }
     });
-    Gj(getString(2131429682));
-    dno = ((DragSortListView)findViewById(2131165355));
-    dno.setDropListener(new DragSortListView.h()
+    Ah(getString(2131230763));
+    dmT = ((DragSortListView)findViewById(2131755617));
+    dmT.men = new DragSortListView.g()
     {
-      public final void at(int paramAnonymousInt1, int paramAnonymousInt2)
+      public final void ay(int paramAnonymousInt1, int paramAnonymousInt2)
       {
         f localf = (f)Sort3rdAppUI.a(Sort3rdAppUI.this).getItem(paramAnonymousInt1);
         Sort3rdAppUI.a(Sort3rdAppUI.this).remove(localf);
         Sort3rdAppUI.a(Sort3rdAppUI.this).insert(localf, paramAnonymousInt2);
       }
-    });
+    };
   }
   
   protected final int getLayoutId()
   {
-    return 2131363087;
+    return 2130904505;
   }
   
   public void onCreate(final Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    krl = getIntent().getLongExtra("KFlag", -1L);
-    Gb();
-    krm = new ArrayList();
-    paramBundle = aj.aPT().cV(krl);
+    kQs = getIntent().getLongExtra("KFlag", -1L);
+    Gy();
+    kQt = com.tencent.mm.pluginsdk.model.app.g.b(this, kQs, true);
+    paramBundle = al.aUC().dm(kQs);
     if ((paramBundle != null) && (paramBundle.size() > 0)) {
-      Collections.sort(krm, new Comparator() {});
+      Collections.sort(kQt, new Comparator() {});
     }
-    krk = new a(this, krm, krl);
-    dno.setAdapter(krk);
+    kQr = new a(this, kQt, kQs);
+    dmT.setAdapter(kQr);
   }
   
   protected void onDestroy()
@@ -85,52 +84,52 @@ public class Sort3rdAppUI
   protected void onPause()
   {
     super.onPause();
-    if (krk != null)
+    if (kQr != null)
     {
-      List localList = krk.dfX;
-      o localo = aj.aPT();
-      long l = krl;
+      List localList = kQr.deZ;
+      o localo = al.aUC();
+      long l = kQs;
       Object localObject = new StringBuilder();
       ((StringBuilder)localObject).append("delete from AppSort");
       ((StringBuilder)localObject).append(" where flag = ").append(l).append(" ");
       localObject = ((StringBuilder)localObject).toString();
-      aoX.cj("AppSort", (String)localObject);
+      bkP.cx("AppSort", (String)localObject);
       if ((localList != null) && (localList.size() > 0))
       {
-        l = tDbzA.dH(Thread.currentThread().getId());
-        localo = aj.aPT();
+        l = tEbsy.dY(Thread.currentThread().getId());
+        localo = al.aUC();
         int i = 0;
         while (i < localList.size())
         {
           localObject = new com.tencent.mm.pluginsdk.model.app.n();
-          field_flag = krl;
+          field_flag = kQs;
           field_appId = getfield_appId;
           field_sortId = i;
           localo.a((com.tencent.mm.pluginsdk.model.app.n)localObject);
           i += 1;
         }
-        tDbzA.dI(l);
+        tEbsy.dZ(l);
       }
     }
   }
   
   private static final class a
-    extends ArrayAdapter
+    extends ArrayAdapter<f>
   {
-    private com.tencent.mm.ab.a.a.c dCP;
-    List dfX;
-    private long krl;
+    private com.tencent.mm.ae.a.a.c dEk;
+    List<f> deZ;
+    private long kQs;
     private Context mContext;
     
-    public a(Context paramContext, List paramList, long paramLong)
+    public a(Context paramContext, List<f> paramList, long paramLong)
     {
-      super(2131363007, paramList);
-      krl = paramLong;
+      super(2130904506, paramList);
+      kQs = paramLong;
       mContext = paramContext;
-      dfX = paramList;
+      deZ = paramList;
       paramContext = new c.a();
-      bTO = 2130968634;
-      dCP = paramContext.AA();
+      bNp = 2130838865;
+      dEk = paramContext.AM();
     }
     
     public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
@@ -140,28 +139,28 @@ public class Sort3rdAppUI
       Object localObject;
       if (paramView == null)
       {
-        paramView = View.inflate(mContext, 2131363007, null);
+        paramView = View.inflate(mContext, 2130904506, null);
         paramViewGroup = new a(paramView);
         paramView.setTag(paramViewGroup);
         localf = (f)getItem(paramInt);
-        cNT.setText(field_appName);
-        localObject = com.tencent.mm.pluginsdk.model.app.g.b(field_appId, 1, com.tencent.mm.aw.a.getDensity(mContext));
+        cuj.setText(field_appName);
+        localObject = com.tencent.mm.pluginsdk.model.app.g.b(field_appId, 1, com.tencent.mm.az.a.getDensity(mContext));
         if ((localObject == null) || (((Bitmap)localObject).isRecycled())) {
           break label154;
         }
-        cNV.setImageBitmap((Bitmap)localObject);
+        cKV.setImageBitmap((Bitmap)localObject);
         label94:
-        localObject = krr;
+        localObject = kQy;
         if ((field_appInfoFlag & 0x4000) != 0) {
           break label176;
         }
       }
       for (;;)
       {
-        ((MMSwitchBtn)localObject).setCheck(bool);
-        krr.setSwitchListener(new MMSwitchBtn.a()
+        ((MMSwitchBtn)localObject).iV(bool);
+        kQy.mgU = new MMSwitchBtn.a()
         {
-          public final void fg(boolean paramAnonymousBoolean)
+          public final void ft(boolean paramAnonymousBoolean)
           {
             f localf;
             if (paramAnonymousBoolean) {
@@ -169,18 +168,18 @@ public class Sort3rdAppUI
             }
             for (field_appInfoFlag &= 0xBFFF;; field_appInfoFlag |= 0x4000)
             {
-              aj.aPR().a(localf, new String[0]);
+              al.aUA().a(localf, new String[0]);
               return;
               localf = localf;
             }
           }
-        });
+        };
         paramView.setVisibility(0);
         return paramView;
         paramViewGroup = (a)paramView.getTag();
         break;
         label154:
-        com.tencent.mm.ab.n.As().a(field_appIconUrl, cNV, dCP);
+        com.tencent.mm.ae.n.AC().a(field_appIconUrl, cKV, dEk);
         break label94;
         label176:
         bool = false;
@@ -189,19 +188,19 @@ public class Sort3rdAppUI
     
     static final class a
     {
-      TextView cNT;
-      ImageView cNV;
-      View dfY;
-      ImageView dfZ;
-      MMSwitchBtn krr;
+      ImageView cKV;
+      TextView cuj;
+      View dfa;
+      ImageView dfb;
+      MMSwitchBtn kQy;
       
       public a(View paramView)
       {
-        dfZ = ((ImageView)paramView.findViewById(2131168982));
-        cNV = ((ImageView)paramView.findViewById(2131165364));
-        cNT = ((TextView)paramView.findViewById(2131166509));
-        krr = ((MMSwitchBtn)paramView.findViewById(2131168983));
-        dfY = paramView.findViewById(2131165347);
+        dfb = ((ImageView)paramView.findViewById(2131759293));
+        cKV = ((ImageView)paramView.findViewById(2131756616));
+        cuj = ((TextView)paramView.findViewById(2131756615));
+        kQy = ((MMSwitchBtn)paramView.findViewById(2131759294));
+        dfa = paramView.findViewById(2131755259);
       }
     }
   }

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+.field final synthetic lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 506
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$2;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$2;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,7 +44,7 @@
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     .line 510
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$2;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$2;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
     new-instance v1, Landroid/content/Intent;
 

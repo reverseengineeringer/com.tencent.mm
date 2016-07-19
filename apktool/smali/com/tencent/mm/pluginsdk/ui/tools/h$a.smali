@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public iSM:Lcom/tencent/mm/ui/widget/MMEditText$b;
+.field public jpV:Lcom/tencent/mm/ui/widget/MMEditText$b;
 
 
 # direct methods
@@ -32,7 +32,7 @@
     .line 25
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/h$a;->iSM:Lcom/tencent/mm/ui/widget/MMEditText$b;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/h$a;->jpV:Lcom/tencent/mm/ui/widget/MMEditText$b;
 
     return-void
 .end method
@@ -60,14 +60,14 @@
 
     .prologue
     .line 43
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/h$a;->iSM:Lcom/tencent/mm/ui/widget/MMEditText$b;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/h$a;->jpV:Lcom/tencent/mm/ui/widget/MMEditText$b;
 
     if-eqz v0, :cond_0
 
     .line 44
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/h$a;->iSM:Lcom/tencent/mm/ui/widget/MMEditText$b;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/h$a;->jpV:Lcom/tencent/mm/ui/widget/MMEditText$b;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/widget/MMEditText$b;->aqD()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/widget/MMEditText$b;->atE()V
 
     .line 46
     :cond_0

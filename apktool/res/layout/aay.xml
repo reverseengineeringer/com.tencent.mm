@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/c8e" android:background="@color/nl" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/ayz" android:background="@color/ak" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/alr" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+        <TextView android:textSize="@dimen/h4" android:textColor="@color/j9" android:gravity="right" android:id="@id/ccs" android:padding="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:layout_below="@id/alr" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/c70" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+        <TextView android:textColor="@color/ow" android:gravity="center" android:id="@id/alx" android:padding="@dimen/hb" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hf" android:text="@string/cmz" android:layout_alignParentBottom="true" />
+        <ImageView android:id="@id/als" android:background="@color/cz" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+        <com.tencent.mm.ui.widget.MMPinProgressBtn android:id="@id/c71" android:visibility="gone" android:layout_width="@dimen/oo" android:layout_height="@dimen/oo" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/c72" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/acn" android:scaleType="center" android:layout_centerInParent="true" />
+        <include layout="@layout/sight_player_tip" />
+    </RelativeLayout>
+</LinearLayout>

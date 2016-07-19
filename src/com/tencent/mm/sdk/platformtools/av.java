@@ -1,61 +1,80 @@
 package com.tencent.mm.sdk.platformtools;
 
-import com.tencent.mm.a.d;
+import android.content.Context;
+import android.hardware.SensorListener;
+import android.hardware.SensorManager;
+import java.util.List;
 
 public final class av
 {
-  private final d jXS;
-  private v jXT = new v(256);
+  private SensorManager jcB;
+  private a kyk;
   
-  public av(String paramString)
+  public av(Context paramContext)
   {
-    jXS = new d(paramString);
+    jcB = ((SensorManager)paramContext.getSystemService("sensor"));
   }
   
-  public final String CZ(String paramString)
+  public final void baE()
   {
-    String str1 = paramString;
-    try
-    {
-      if (paramString.startsWith("!"))
-      {
-        if (jXT.ad(paramString)) {
-          return (String)jXT.get(paramString);
-        }
-        str1 = paramString.substring(1);
-        Object localObject;
-        String str3;
-        int i;
-        str2 = "[td]" + paramString;
-      }
+    if ((jcB != null) && (kyk != null)) {
+      jcB.unregisterListener(kyk, 2);
     }
-    catch (Exception localException)
+  }
+  
+  public final boolean z(Runnable paramRunnable)
+  {
+    if (jcB == null) {}
+    List localList;
+    do
     {
-      try
+      return false;
+      localList = jcB.getSensorList(1);
+    } while ((localList == null) || (localList.size() <= 0));
+    kyk = new a(paramRunnable);
+    jcB.registerListener(kyk, 2, 3);
+    return true;
+  }
+  
+  static final class a
+    implements SensorListener
+  {
+    private Runnable auX;
+    private float[] jcE = { 0.0F, 0.0F, 0.0F };
+    
+    public a(Runnable paramRunnable)
+    {
+      auX = paramRunnable;
+    }
+    
+    public final void onAccuracyChanged(int paramInt1, int paramInt2) {}
+    
+    public final void onSensorChanged(int paramInt, float[] paramArrayOfFloat)
+    {
+      int i = 0;
+      float[] arrayOfFloat = new float[3];
+      paramInt = 0;
+      while (paramInt < 3)
       {
-        localObject = str1.split("@");
-        if (localObject.length <= 1) {
-          break label178;
-        }
-        str3 = localObject[0];
-        i = Integer.valueOf(localObject[0]).intValue();
-        localObject = str1.substring(str3.length() + 1, str3.length() + 1 + i);
-        str3 = str1.substring(i + (str3.length() + 1));
-        str3 = jXS.av((String)localObject) + str3;
-        jXT.put(paramString, str3);
-        return str3;
-      }
-      catch (Exception paramString)
-      {
-        for (;;)
+        arrayOfFloat[paramInt] = Math.abs(paramArrayOfFloat[paramInt] - jcE[paramInt]);
+        int j = i;
+        if (jcE[paramInt] != 0.0F)
         {
-          String str2;
-          paramString = str2;
+          j = i;
+          if (arrayOfFloat[paramInt] > 1.0F)
+          {
+            j = 1;
+            v.d("MicroMsg.ShakeManager", "isONShake:" + arrayOfFloat[paramInt]);
+          }
         }
+        jcE[paramInt] = paramArrayOfFloat[paramInt];
+        paramInt += 1;
+        i = j;
       }
-      localException = localException;
+      if (i != 0) {
+        auX.run();
+      }
     }
-    return str2;
   }
 }
 

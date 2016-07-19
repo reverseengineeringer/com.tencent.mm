@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract tT()Lcom/tencent/mm/network/e;
+.method public abstract tU()Lcom/tencent/mm/network/e;
 .end method

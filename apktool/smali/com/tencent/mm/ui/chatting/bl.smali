@@ -1,355 +1,313 @@
 .class final Lcom/tencent/mm/ui/chatting/bl;
-.super Ljava/lang/Object;
+.super Lcom/tencent/mm/ui/chatting/ab$b;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/tencent/mm/ui/chatting/bq$a;
 
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/ui/chatting/bl$c;,
-        Lcom/tencent/mm/ui/chatting/bl$a;,
-        Lcom/tencent/mm/ui/chatting/bl$b;
-    }
-.end annotation
+# instance fields
+.field private ltl:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 118
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 23
+    const/16 v0, 0x8
 
-    .line 253
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/ab$b;-><init>(I)V
+
+    .line 24
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/ui/chatting/aa$a;ILcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ag;)V
-    .locals 13
+.method public final a(Landroid/view/LayoutInflater;Landroid/view/View;)Landroid/view/View;
+    .locals 2
 
     .prologue
-    .line 125
-    move-object v5, p1
+    .line 28
+    if-eqz p2, :cond_0
 
-    check-cast v5, Lcom/tencent/mm/ui/chatting/bq$b;
-
-    .line 126
-    const/4 v0, 0x0
-
-    :try_start_0
-    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/storage/ag;->aXu()Ljava/util/LinkedList;
-    :try_end_0
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    move-object v1, v0
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/ui/chatting/ab$a;
+
+    iget v0, v0, Lcom/tencent/mm/ui/chatting/ab$a;->type:I
+
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/bl;->cTv:I
+
+    if-eq v0, v1, :cond_1
+
+    .line 29
+    :cond_0
+    const v0, 0x7f0300ff
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object p2
+
+    .line 30
+    new-instance v1, Lcom/tencent/mm/ui/chatting/dl;
+
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/bl;->cTv:I
+
+    invoke-direct {v1, v0}, Lcom/tencent/mm/ui/chatting/dl;-><init>(I)V
+
+    const v0, 0x7f10000a
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v1, Lcom/tencent/mm/ui/chatting/dl;->dXd:Landroid/widget/TextView;
+
+    const v0, 0x7f100118
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v1, Lcom/tencent/mm/ui/chatting/dl;->gtM:Landroid/widget/TextView;
+
+    const v0, 0x7f100428
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, v1, Lcom/tencent/mm/ui/chatting/dl;->lqq:Landroid/widget/ImageView;
+
+    const v0, 0x7f100429
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v1, Lcom/tencent/mm/ui/chatting/dl;->iRf:Landroid/widget/TextView;
+
+    const v0, 0x7f100119
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v1, Lcom/tencent/mm/ui/chatting/dl;->iRg:Landroid/widget/TextView;
+
+    const v0, 0x7f1003f5
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/tencent/mm/ui/chatting/dl;->lth:Landroid/view/View;
+
+    invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    .line 33
+    :cond_1
+    return-object p2
+.end method
+
+.method public final a(Lcom/tencent/mm/ui/chatting/ab$a;ILcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ai;Ljava/lang/String;)V
+    .locals 8
+
+    .prologue
+    const/4 v5, 0x0
+
+    .line 38
+    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/bl;->ltl:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+
+    .line 39
+    check-cast p1, Lcom/tencent/mm/ui/chatting/dl;
+
+    .line 41
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/aj;
+
+    move-result-object v0
+
+    iget-object v1, p4, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/aj;->Hy(Ljava/lang/String;)Lcom/tencent/mm/storage/ai$d;
+
+    move-result-object v0
+
+    .line 42
+    iget-object v1, p1, Lcom/tencent/mm/ui/chatting/dl;->iRf:Landroid/widget/TextView;
+
+    iget-object v2, v0, Lcom/tencent/mm/storage/ai$d;->title:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 43
+    iget-object v1, p1, Lcom/tencent/mm/ui/chatting/dl;->iRg:Landroid/widget/TextView;
+
+    iget-object v2, v0, Lcom/tencent/mm/storage/ai$d;->content:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 44
+    iget-object v1, v0, Lcom/tencent/mm/storage/ai$d;->bUD:Ljava/lang/String;
+
+    invoke-static {p1, v1}, Lcom/tencent/mm/ui/chatting/bl;->a(Lcom/tencent/mm/ui/chatting/ab$a;Ljava/lang/CharSequence;)V
+
+    .line 45
+    iget-object v1, p1, Lcom/tencent/mm/ui/chatting/dl;->lqq:Landroid/widget/ImageView;
+
+    iget-boolean v0, v0, Lcom/tencent/mm/storage/ai$d;->dUH:Z
+
+    if-eqz v0, :cond_0
+
+    move v0, v5
 
     :goto_0
-    if-nez v1, :cond_0
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    iget-object v0, v5, Lcom/tencent/mm/ui/chatting/bq$b;->hnE:Landroid/view/View;
+    .line 47
+    iget-object v7, p1, Lcom/tencent/mm/ui/chatting/dl;->lth:Landroid/view/View;
 
-    const/16 v1, 0x8
+    new-instance v0, Lcom/tencent/mm/ui/chatting/dh;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    iget-boolean v2, p3, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->kZE:Z
 
-    .line 127
-    :goto_1
-    iget-object v0, v5, Lcom/tencent/mm/ui/chatting/bq$b;->ivL:Landroid/widget/TextView;
+    const/4 v4, 0x0
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->invalidate()V
+    move-object v1, p4
 
-    .line 128
+    move v3, p2
+
+    move v6, v5
+
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/ui/chatting/dh;-><init>(Lcom/tencent/mm/storage/ai;ZILjava/lang/String;IB)V
+
+    invoke-virtual {v7, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    .line 48
+    iget-object v0, p1, Lcom/tencent/mm/ui/chatting/dl;->lth:Landroid/view/View;
+
+    iget-object v1, p3, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->lsL:Lcom/tencent/mm/ui/chatting/cm;
+
+    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/cm;->lvy:Lcom/tencent/mm/ui/chatting/cn;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 49
+    iget-object v0, p1, Lcom/tencent/mm/ui/chatting/dl;->lth:Landroid/view/View;
+
+    iget-object v1, p3, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->lsL:Lcom/tencent/mm/ui/chatting/cm;
+
+    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/cm;->lvA:Lcom/tencent/mm/ui/chatting/cp;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+
+    .line 50
     return-void
 
-    .line 126
-    :catch_0
-    move-exception v1
-
-    const-string/jumbo v2, "!56@/B4Tb64lLpKwUcOR+EdWcgxdOLd5rQX9fwQ2MyY5uxRFmfXAt7iZRQ=="
-
-    const-string/jumbo v3, "XmlPullParserException"
-
-    const/4 v4, 0x0
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    move-object v1, v0
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v1
-
-    const-string/jumbo v2, "!56@/B4Tb64lLpKwUcOR+EdWcgxdOLd5rQX9fwQ2MyY5uxRFmfXAt7iZRQ=="
-
-    const-string/jumbo v3, "IOException"
-
-    const/4 v4, 0x0
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    move-object v1, v0
-
-    goto :goto_0
-
+    .line 45
     :cond_0
-    iget-object v0, v5, Lcom/tencent/mm/ui/chatting/bq$b;->hnE:Landroid/view/View;
+    const/16 v0, 0x8
 
-    const/4 v2, 0x0
+    goto :goto_0
+.end method
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+.method public final a(Landroid/view/ContextMenu;Landroid/view/View;Lcom/tencent/mm/storage/ai;)Z
+    .locals 5
 
-    iget-object v0, v5, Lcom/tencent/mm/ui/chatting/bq$b;->ivL:Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .prologue
+    .line 59
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    const v2, 0x7f08018e
+    check-cast v0, Lcom/tencent/mm/ui/chatting/dh;
 
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
+    .line 60
+    iget v0, v0, Lcom/tencent/mm/ui/chatting/dh;->position:I
 
-    move-result v2
+    .line 61
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/bl;->ltl:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    iget-object v0, v5, Lcom/tencent/mm/ui/chatting/bq$b;->ivL:Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v3, 0x7f08018f
-
-    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v3
-
-    const-string/jumbo v0, ""
-
-    new-instance v10, Ljava/util/LinkedList;
-
-    invoke-direct {v10}, Ljava/util/LinkedList;-><init>()V
-
-    invoke-virtual {v1}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v11
-
-    move-object v9, v0
-
-    :goto_2
-    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v1, v0, Ljava/lang/String;
-
-    if-eqz v1, :cond_1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    move-object v9, v0
-
-    goto :goto_2
-
-    :cond_1
-    instance-of v1, v0, Lcom/tencent/mm/storage/ag$a;
-
-    if-eqz v1, :cond_4
-
-    move-object v8, v0
-
-    check-cast v8, Lcom/tencent/mm/storage/ag$a;
-
-    new-instance v12, Lcom/tencent/mm/ui/chatting/bl$b;
-
-    invoke-direct {v12}, Lcom/tencent/mm/ui/chatting/bl$b;-><init>()V
-
-    new-instance v0, Lcom/tencent/mm/ui/chatting/bl$1;
-
-    move-object v1, p0
-
-    move-object/from16 v4, p3
-
-    move-object/from16 v6, p4
-
-    move v7, p2
-
-    invoke-direct/range {v0 .. v8}, Lcom/tencent/mm/ui/chatting/bl$1;-><init>(Lcom/tencent/mm/ui/chatting/bl;IILcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/ui/chatting/bq$b;Lcom/tencent/mm/storage/ag;ILcom/tencent/mm/storage/ag$a;)V
-
-    iput-object v0, v12, Lcom/tencent/mm/ui/chatting/bl$b;->kUA:Landroid/text/style/ClickableSpan;
-
-    invoke-virtual {v9}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    iput v0, v12, Lcom/tencent/mm/ui/chatting/bl$b;->start:I
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, v8, Lcom/tencent/mm/storage/ag$a;->text:Ljava/lang/String;
-
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bln()Z
 
     move-result v1
 
-    iput v1, v12, Lcom/tencent/mm/ui/chatting/bl$b;->end:I
+    if-nez v1, :cond_0
 
-    invoke-virtual {v10, v12}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+    .line 62
+    const/16 v1, 0x64
 
-    :goto_3
-    move-object v9, v0
+    const/4 v2, 0x0
 
-    goto :goto_2
+    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    :cond_2
-    iget-object v0, v5, Lcom/tencent/mm/ui/chatting/bq$b;->ivL:Landroid/widget/TextView;
+    move-result-object v3
 
-    iget-object v1, v5, Lcom/tencent/mm/ui/chatting/bq$b;->ivL:Landroid/widget/TextView;
+    const v4, 0x7f0803d4
 
-    invoke-virtual {v1}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    iget-object v2, v5, Lcom/tencent/mm/ui/chatting/bq$b;->ivL:Landroid/widget/TextView;
+    invoke-interface {p1, v0, v1, v2, v3}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
-    invoke-virtual {v2}, Landroid/widget/TextView;->getTextSize()F
+    .line 65
+    :cond_0
+    const/4 v0, 0x1
 
-    move-result v2
+    return v0
+.end method
 
-    invoke-static {v1, v9, v2}, Lcom/tencent/mm/pluginsdk/ui/d/e;->a(Landroid/content/Context;Ljava/lang/CharSequence;F)Landroid/text/SpannableString;
+.method public final a(Landroid/view/MenuItem;Lcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ai;)Z
+    .locals 1
 
-    move-result-object v1
+    .prologue
+    .line 70
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    return v0
+.end method
 
-    iget-object v0, v5, Lcom/tencent/mm/ui/chatting/bq$b;->ivL:Landroid/widget/TextView;
+.method public final a(Landroid/view/View;Lcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ai;)Z
+    .locals 1
 
-    new-instance v1, Lcom/tencent/mm/ui/chatting/bl$a;
+    .prologue
+    .line 75
+    const/4 v0, 0x0
 
-    invoke-direct {v1}, Lcom/tencent/mm/ui/chatting/bl$a;-><init>()V
+    return v0
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
+.method protected final bjZ()Z
+    .locals 1
 
-    invoke-static {}, Landroid/text/Spannable$Factory;->getInstance()Landroid/text/Spannable$Factory;
+    .prologue
+    .line 54
+    const/4 v0, 0x0
 
-    move-result-object v0
-
-    iget-object v1, v5, Lcom/tencent/mm/ui/chatting/bq$b;->ivL:Landroid/widget/TextView;
-
-    invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/text/Spannable$Factory;->newSpannable(Ljava/lang/CharSequence;)Landroid/text/Spannable;
-
-    move-result-object v1
-
-    invoke-virtual {v10}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_4
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/ui/chatting/bl$b;
-
-    iget-object v3, v0, Lcom/tencent/mm/ui/chatting/bl$b;->kUA:Landroid/text/style/ClickableSpan;
-
-    iget v4, v0, Lcom/tencent/mm/ui/chatting/bl$b;->start:I
-
-    iget v0, v0, Lcom/tencent/mm/ui/chatting/bl$b;->end:I
-
-    const/16 v6, 0x21
-
-    invoke-interface {v1, v3, v4, v0, v6}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
-
-    goto :goto_4
-
-    :cond_3
-    iget-object v0, v5, Lcom/tencent/mm/ui/chatting/bq$b;->ivL:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, v5, Lcom/tencent/mm/ui/chatting/bq$b;->ivL:Landroid/widget/TextView;
-
-    new-instance v1, Lcom/tencent/mm/ui/chatting/bl$2;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/chatting/bl$2;-><init>(Lcom/tencent/mm/ui/chatting/bl;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    goto/16 :goto_1
-
-    :cond_4
-    move-object v0, v9
-
-    goto :goto_3
+    return v0
 .end method

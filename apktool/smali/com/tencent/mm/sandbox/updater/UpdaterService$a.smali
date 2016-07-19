@@ -42,22 +42,22 @@
 
     .prologue
     .line 237
-    invoke-static {}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->aUl()Lcom/tencent/mm/sandbox/updater/UpdaterService;
+    invoke-static {}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->aZk()Lcom/tencent/mm/sandbox/updater/UpdaterService;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 238
-    invoke-static {}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->aUl()Lcom/tencent/mm/sandbox/updater/UpdaterService;
+    invoke-static {}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->aZk()Lcom/tencent/mm/sandbox/updater/UpdaterService;
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ah;->dB(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ak;->dC(Landroid/content/Context;)Z
 
     move-result v1
 
-    iget-object v2, v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUp:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktQ:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->size()I
 
@@ -65,7 +65,7 @@
 
     if-lez v2, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUp:Ljava/util/Map;
+    iget-object v0, v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktQ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
@@ -88,7 +88,7 @@
 
     check-cast v0, Lcom/tencent/mm/sandbox/updater/a;
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/sandbox/updater/a;->gF(Z)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/sandbox/updater/a;->hd(Z)V
 
     goto :goto_0
 

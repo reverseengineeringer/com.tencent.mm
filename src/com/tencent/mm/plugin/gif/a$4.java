@@ -7,7 +7,7 @@ final class a$4
   
   public final void run()
   {
-    MMGIFJNI.reset(a.d(ewP));
+    MMGIFJNI.reset(a.d(eDi));
   }
 }
 

@@ -4,11 +4,39 @@
 
 
 # instance fields
-.field private kIp:Ljava/util/Queue;
+.field private lhF:Ljava/util/Queue;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Queue",
+            "<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private kIq:Ljava/util/HashMap;
+.field private lhG:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Object;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public kIr:Landroid/util/SparseArray;
+.field public lhH:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray",
+            "<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -24,21 +52,21 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/t;->kIp:Ljava/util/Queue;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/t;->lhF:Ljava/util/Queue;
 
     .line 20
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/t;->kIq:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/t;->lhG:Ljava/util/HashMap;
 
     .line 21
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/t;->kIr:Landroid/util/SparseArray;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/t;->lhH:Landroid/util/SparseArray;
 
     return-void
 .end method
@@ -62,7 +90,7 @@
     const/4 v0, 0x0
 
     .line 32
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/t;->kIp:Ljava/util/Queue;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/t;->lhF:Ljava/util/Queue;
 
     invoke-interface {v1}, Ljava/util/Queue;->size()I
 
@@ -71,7 +99,7 @@
     if-lez v1, :cond_0
 
     .line 33
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->kIp:Ljava/util/Queue;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->lhF:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
 
@@ -86,7 +114,7 @@
     move-result-object v1
 
     .line 38
-    const-string/jumbo v4, "!44@/B4Tb64lLpKZ4LN+4c7XrHVaeqV45lDZOKwVPe7jRBU="
+    const-string/jumbo v4, "MicroMsg.MMViewPagerAdapter"
 
     const-string/jumbo v5, "instantiateItem object %s, parent %s"
 
@@ -114,10 +142,10 @@
 
     aput-object v0, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 40
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->kIq:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->lhG:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -126,7 +154,7 @@
     invoke-virtual {v0, v1, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->kIr:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->lhH:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -150,7 +178,7 @@
 
     .line 47
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpKZ4LN+4c7XrHVaeqV45lDZOKwVPe7jRBU="
+    const-string/jumbo v0, "MicroMsg.MMViewPagerAdapter"
 
     const-string/jumbo v4, "instantiateItem spent : %s"
 
@@ -168,7 +196,7 @@
 
     aput-object v2, v5, v8
 
-    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 49
     return-object v1
@@ -183,7 +211,7 @@
     const/4 v4, 0x0
 
     .line 56
-    const-string/jumbo v0, "!44@/B4Tb64lLpKZ4LN+4c7XrHVaeqV45lDZOKwVPe7jRBU="
+    const-string/jumbo v0, "MicroMsg.MMViewPagerAdapter"
 
     const-string/jumbo v1, "destroyItem position %s"
 
@@ -195,10 +223,10 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 57
-    const-string/jumbo v0, "!44@/B4Tb64lLpKZ4LN+4c7XrHVaeqV45lDZOKwVPe7jRBU="
+    const-string/jumbo v0, "MicroMsg.MMViewPagerAdapter"
 
     const-string/jumbo v1, "destroyItem object %s"
 
@@ -214,10 +242,10 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 59
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/t;->kIp:Ljava/util/Queue;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/t;->lhF:Ljava/util/Queue;
 
     move-object v0, p3
 
@@ -226,12 +254,12 @@
     invoke-interface {v1, v0}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
     .line 60
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->kIq:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->lhG:Ljava/util/HashMap;
 
     invoke-virtual {v0, p3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 61
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->kIr:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->lhH:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p2}, Landroid/util/SparseArray;->remove(I)V
 
@@ -257,7 +285,7 @@
     goto :goto_0
 .end method
 
-.method public al()I
+.method public ak()I
     .locals 1
 
     .prologue
@@ -267,7 +295,7 @@
     return v0
 .end method
 
-.method public am()I
+.method public al()I
     .locals 1
 
     .prologue
@@ -285,15 +313,15 @@
 
     .prologue
     .line 136
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->kIp:Ljava/util/Queue;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->lhF:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->clear()V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->kIq:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->lhG:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->kIr:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->lhH:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
@@ -306,7 +334,7 @@
 
     .prologue
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->kIq:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->lhG:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -315,7 +343,7 @@
     if-eqz v0, :cond_0
 
     .line 69
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->kIq:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->lhG:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -337,15 +365,15 @@
     goto :goto_0
 .end method
 
-.method public abstract hn(I)Lcom/tencent/mm/ui/base/MultiTouchImageView;
+.method public abstract ir(I)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 .end method
 
-.method public final qI(I)Landroid/view/View;
+.method public final sG(I)Landroid/view/View;
     .locals 1
 
     .prologue
     .line 87
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->kIr:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/t;->lhH:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 

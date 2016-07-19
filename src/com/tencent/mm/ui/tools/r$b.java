@@ -2,17 +2,17 @@ package com.tencent.mm.ui.tools;
 
 public abstract interface r$b
 {
-  public abstract void Gd();
+  public abstract void GA();
   
-  public abstract void Ge();
+  public abstract void GB();
   
-  public abstract void Gf();
+  public abstract void GC();
   
-  public abstract void Gg();
+  public abstract void GD();
   
-  public abstract boolean kE(String paramString);
+  public abstract boolean ln(String paramString);
   
-  public abstract void kF(String paramString);
+  public abstract void lo(String paramString);
 }
 
 /* Location:

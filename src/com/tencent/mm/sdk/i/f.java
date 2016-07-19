@@ -8,26 +8,26 @@ import java.util.concurrent.TimeUnit;
 final class f
   extends ThreadPoolExecutor
 {
-  private a jZi;
+  private a kzF;
   
-  public f(int paramInt, TimeUnit paramTimeUnit, BlockingQueue paramBlockingQueue, a parama)
+  public f(int paramInt, TimeUnit paramTimeUnit, BlockingQueue<Runnable> paramBlockingQueue, a parama)
   {
     super(0, paramInt, 120L, paramTimeUnit, paramBlockingQueue, new d(), new ThreadPoolExecutor.CallerRunsPolicy());
-    jZi = parama;
+    kzF = parama;
   }
   
   protected final void afterExecute(Runnable paramRunnable, Throwable paramThrowable)
   {
     super.afterExecute(paramRunnable, paramThrowable);
-    if (jZi != null) {
-      jZi.w(paramRunnable);
+    if (kzF != null) {
+      kzF.A(paramRunnable);
     }
   }
   
   protected final void beforeExecute(Thread paramThread, Runnable paramRunnable)
   {
-    if (jZi != null) {
-      jZi.beforeExecute(paramThread, paramRunnable);
+    if (kzF != null) {
+      kzF.beforeExecute(paramThread, paramRunnable);
     }
     super.beforeExecute(paramThread, paramRunnable);
   }
@@ -39,9 +39,9 @@ final class f
   
   static abstract interface a
   {
-    public abstract void beforeExecute(Thread paramThread, Runnable paramRunnable);
+    public abstract void A(Runnable paramRunnable);
     
-    public abstract void w(Runnable paramRunnable);
+    public abstract void beforeExecute(Thread paramThread, Runnable paramRunnable);
   }
 }
 

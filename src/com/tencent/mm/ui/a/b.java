@@ -7,20 +7,20 @@ import java.util.List;
 
 public final class b
 {
-  private final String TAG = "!44@/B4Tb64lLpIdP5qD4tOAzJ8XwC8LkQH47n23jHVKHks=";
-  private List krC = new ArrayList();
+  private final String TAG = "MicroMsg.Accessibility.Tool";
+  private List<String> kQL = new ArrayList();
   
-  public final b Gn(String paramString)
+  public final b IC(String paramString)
   {
-    krC.add(paramString);
+    kQL.add(paramString);
     return this;
   }
   
-  public final void an(View paramView)
+  public final void ar(View paramView)
   {
-    if ((paramView != null) && (krC.size() > 0))
+    if ((paramView != null) && (kQL.size() > 0))
     {
-      Iterator localIterator = krC.iterator();
+      Iterator localIterator = kQL.iterator();
       String str2;
       for (String str1 = ""; localIterator.hasNext(); str1 = str1 + str2 + ",") {
         str2 = (String)localIterator.next();

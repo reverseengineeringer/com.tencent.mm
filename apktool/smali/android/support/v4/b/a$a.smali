@@ -16,21 +16,46 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<TT;>;"
+    }
+.end annotation
+
 
 # instance fields
-.field final el:Landroid/support/v4/b/b;
+.field final eG:Landroid/support/v4/b/b;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/support/v4/b/b",
+            "<TT;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>(Landroid/support/v4/b/b;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/support/v4/b/b",
+            "<TT;>;)V"
+        }
+    .end annotation
 
     .prologue
     .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 46
-    iput-object p1, p0, Landroid/support/v4/b/a$a;->el:Landroid/support/v4/b/b;
+    iput-object p1, p0, Landroid/support/v4/b/a$a;->eG:Landroid/support/v4/b/b;
 
     .line 47
     return-void
@@ -40,10 +65,17 @@
 # virtual methods
 .method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/os/Parcel;",
+            ")TT;"
+        }
+    .end annotation
 
     .prologue
     .line 51
-    iget-object v0, p0, Landroid/support/v4/b/a$a;->el:Landroid/support/v4/b/b;
+    iget-object v0, p0, Landroid/support/v4/b/a$a;->eG:Landroid/support/v4/b/b;
 
     const/4 v1, 0x0
 
@@ -56,10 +88,15 @@
 
 .method public final newArray(I)[Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)[TT;"
+        }
+    .end annotation
 
     .prologue
     .line 56
-    iget-object v0, p0, Landroid/support/v4/b/a$a;->el:Landroid/support/v4/b/b;
+    iget-object v0, p0, Landroid/support/v4/b/a$a;->eG:Landroid/support/v4/b/b;
 
     invoke-interface {v0, p1}, Landroid/support/v4/b/b;->newArray(I)[Ljava/lang/Object;
 

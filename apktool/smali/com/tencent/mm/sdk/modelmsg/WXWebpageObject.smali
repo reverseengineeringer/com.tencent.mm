@@ -9,10 +9,12 @@
 # static fields
 .field private static final LENGTH_LIMIT:I = 0x2800
 
-.field private static final TAG:Ljava/lang/String; = "!44@/B4Tb64lLpI5xTkrII12QyxP0GmFMufcOhP+yzzJUyY="
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXWebpageObject"
 
 
 # instance fields
+.field public canvasPageXml:Ljava/lang/String;
+
 .field public extInfo:Ljava/lang/String;
 
 .field public webpageUrl:Ljava/lang/String;
@@ -23,10 +25,10 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
+    .line 39
     return-void
 .end method
 
@@ -34,13 +36,13 @@
     .locals 0
 
     .prologue
-    .line 47
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
+    .line 50
     iput-object p1, p0, Lcom/tencent/mm/sdk/modelmsg/WXWebpageObject;->webpageUrl:Ljava/lang/String;
 
-    .line 49
+    .line 51
     return-void
 .end method
 
@@ -50,7 +52,7 @@
     .locals 2
 
     .prologue
-    .line 70
+    .line 74
     iget-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXWebpageObject;->webpageUrl:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -73,18 +75,18 @@
 
     if-le v0, v1, :cond_1
 
-    .line 71
+    .line 75
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpI5xTkrII12QyxP0GmFMufcOhP+yzzJUyY="
+    const-string/jumbo v0, "MicroMsg.SDK.WXWebpageObject"
 
     const-string/jumbo v1, "checkArgs fail, webpageUrl is invalid"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 72
+    .line 76
     const/4 v0, 0x0
 
-    .line 75
+    .line 79
     :goto_0
     return v0
 
@@ -98,21 +100,28 @@
     .locals 2
 
     .prologue
-    .line 53
+    .line 55
     const-string/jumbo v0, "_wxwebpageobject_extInfo"
 
     iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXWebpageObject;->extInfo:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 54
+    .line 56
     const-string/jumbo v0, "_wxwebpageobject_webpageUrl"
 
     iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXWebpageObject;->webpageUrl:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 55
+    .line 57
+    const-string/jumbo v0, "_wxwebpageobject_canvaspagexml"
+
+    iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXWebpageObject;->canvasPageXml:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 58
     return-void
 .end method
 
@@ -120,7 +129,7 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 69
     const/4 v0, 0x5
 
     return v0
@@ -130,7 +139,7 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 62
     const-string/jumbo v0, "_wxwebpageobject_extInfo"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -139,7 +148,7 @@
 
     iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXWebpageObject;->extInfo:Ljava/lang/String;
 
-    .line 60
+    .line 63
     const-string/jumbo v0, "_wxwebpageobject_webpageUrl"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -148,6 +157,15 @@
 
     iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXWebpageObject;->webpageUrl:Ljava/lang/String;
 
-    .line 61
+    .line 64
+    const-string/jumbo v0, "_wxwebpageobject_canvaspagexml"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXWebpageObject;->canvasPageXml:Ljava/lang/String;
+
+    .line 65
     return-void
 .end method

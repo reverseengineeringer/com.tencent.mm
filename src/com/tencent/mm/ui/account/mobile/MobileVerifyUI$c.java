@@ -2,36 +2,36 @@ package com.tencent.mm.ui.account.mobile;
 
 import android.app.Activity;
 import android.database.ContentObserver;
-import com.tencent.mm.pluginsdk.g.a;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.pluginsdk.h.a;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class MobileVerifyUI$c
   extends ContentObserver
 {
-  private Activity asX;
+  private Activity aeH;
   
   public MobileVerifyUI$c(MobileVerifyUI paramMobileVerifyUI, Activity paramActivity)
   {
-    super(aa.fetchFreeHandler());
-    asX = paramActivity;
+    super(ac.fetchFreeHandler());
+    aeH = paramActivity;
   }
   
   public final void onChange(boolean paramBoolean)
   {
     super.onChange(paramBoolean);
-    if ((MobileVerifyUI.f(kzc) != 3) && (MobileVerifyUI.f(kzc) != 1))
+    if ((MobileVerifyUI.f(kYj) != 3) && (MobileVerifyUI.f(kYj) != 1))
     {
-      paramBoolean = a.a(asX, "android.permission.READ_SMS", 2048, "", "");
-      u.d("!32@/B4Tb64lLpKNhhU94SG29vC9zoVXGkMM", "summerper checkPermission checkSMS[%b], stack[%s], activity[%s]", new Object[] { Boolean.valueOf(paramBoolean), ay.aVJ(), asX });
+      paramBoolean = a.a(aeH, "android.permission.READ_SMS", 2048, "", "");
+      v.d("MicroMsg.MobileVerifyUI", "summerper checkPermission checkSMS[%b], stack[%s], activity[%s]", new Object[] { Boolean.valueOf(paramBoolean), be.baX(), aeH });
       if (paramBoolean) {}
     }
     else
     {
       return;
     }
-    MobileVerifyUI.j(kzc);
+    MobileVerifyUI.j(kYj);
   }
 }
 

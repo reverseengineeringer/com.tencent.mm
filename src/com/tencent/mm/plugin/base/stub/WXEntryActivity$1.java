@@ -10,7 +10,7 @@ final class WXEntryActivity$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    WXEntryActivity.a(cBs);
+    WXEntryActivity.a(cym);
     return false;
   }
 }

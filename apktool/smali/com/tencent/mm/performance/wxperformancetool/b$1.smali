@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic cls:Lcom/tencent/mm/performance/wxperformancetool/b;
+.field final synthetic cgw:Lcom/tencent/mm/performance/wxperformancetool/b;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 25
-    iput-object p1, p0, Lcom/tencent/mm/performance/wxperformancetool/b$1;->cls:Lcom/tencent/mm/performance/wxperformancetool/b;
+    iput-object p1, p0, Lcom/tencent/mm/performance/wxperformancetool/b$1;->cgw:Lcom/tencent/mm/performance/wxperformancetool/b;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
@@ -52,13 +52,13 @@
 
     .line 32
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b$1;->cls:Lcom/tencent/mm/performance/wxperformancetool/b;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b$1;->cgw:Lcom/tencent/mm/performance/wxperformancetool/b;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/wxperformancetool/b;->a(Lcom/tencent/mm/performance/wxperformancetool/b;)Lcom/tencent/mm/performance/wxperformancetool/c;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/performance/wxperformancetool/c;->clt:Ljava/util/HashSet;
+    iget-object v0, v0, Lcom/tencent/mm/performance/wxperformancetool/c;->cgx:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -76,21 +76,21 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/performance/e/a;
+    check-cast v0, Lcom/tencent/mm/performance/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/performance/e/a;->Fu()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/performance/d/a;->FR()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v0}, Lcom/tencent/mm/performance/e/a;->Ft()V
+    invoke-virtual {v0}, Lcom/tencent/mm/performance/d/a;->FQ()V
 
     goto :goto_1
 
     .line 33
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b$1;->cls:Lcom/tencent/mm/performance/wxperformancetool/b;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b$1;->cgw:Lcom/tencent/mm/performance/wxperformancetool/b;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/wxperformancetool/b;->b(Lcom/tencent/mm/performance/wxperformancetool/b;)Z
 
@@ -99,13 +99,13 @@
     if-nez v0, :cond_0
 
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b$1;->cls:Lcom/tencent/mm/performance/wxperformancetool/b;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b$1;->cgw:Lcom/tencent/mm/performance/wxperformancetool/b;
 
     iget-object v0, v0, Lcom/tencent/mm/performance/wxperformancetool/b;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
-    sget v2, Lcom/tencent/mm/performance/wxperformancetool/b;->clq:I
+    sget v2, Lcom/tencent/mm/performance/wxperformancetool/b;->cgu:I
 
     int-to-long v2, v2
 

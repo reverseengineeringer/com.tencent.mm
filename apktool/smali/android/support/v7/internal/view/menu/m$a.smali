@@ -18,8 +18,8 @@
 .method public abstract a(Landroid/support/v7/internal/view/menu/h;)V
 .end method
 
-.method public abstract bc()Z
+.method public abstract bc()Landroid/support/v7/internal/view/menu/h;
 .end method
 
-.method public abstract getItemData()Landroid/support/v7/internal/view/menu/h;
+.method public abstract bd()Z
 .end method

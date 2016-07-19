@@ -4,41 +4,41 @@ import android.os.Looper;
 
 public abstract class j
 {
-  private final h jYB = new h() {};
+  private final h<b, a> kyY = new h() {};
   
   public final void a(b paramb)
   {
     if (paramb != null) {
-      jYB.a(paramb, Looper.getMainLooper());
+      kyY.a(paramb, Looper.getMainLooper());
     }
   }
   
   public final void b(int paramInt, j paramj, Object paramObject)
   {
-    jYB.aw(new a(paramInt, paramj, paramObject));
-    jYB.Ep();
+    kyY.aR(new a(paramInt, paramj, paramObject));
+    kyY.EJ();
   }
   
   public final void b(b paramb)
   {
     if (paramb != null) {
-      jYB.remove(paramb);
+      kyY.remove(paramb);
     }
   }
   
-  public abstract boolean yv();
+  public abstract boolean yH();
   
   private final class a
   {
-    int ayY;
-    j jYN;
+    int ala;
+    j kzk;
     Object obj;
     
     a(int paramInt, j paramj, Object paramObject)
     {
-      ayY = paramInt;
+      ala = paramInt;
       obj = paramObject;
-      jYN = paramj;
+      kzk = paramj;
     }
   }
   

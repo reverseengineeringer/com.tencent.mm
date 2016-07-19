@@ -3,7 +3,7 @@ package com.tencent.mm.booter.notification;
 import android.os.Parcelable.Creator;
 
 final class NotificationItem$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<NotificationItem>
 {}
 
 /* Location:

@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.ai;
-import com.tencent.mm.plugin.sns.f.b;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.ah;
+import com.tencent.mm.plugin.sns.g.b;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -20,52 +20,52 @@ import java.util.List;
 
 public class SnsUploadBrowseUI
   extends SnsBaseGalleryUI
-  implements o.a
+  implements q.a
 {
-  private int hbL = 0;
-  private ArrayList hlv = new ArrayList();
-  private HashMap hlw = new HashMap();
+  private ArrayList<String> hBy = new ArrayList();
+  private HashMap<Integer, Boolean> hBz = new HashMap();
+  private int hqB = 0;
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    String str = ay.ad(getIntent().getStringExtra("sns_gallery_userName"), "");
-    hlv = getIntent().getStringArrayListExtra("sns_gallery_temp_paths");
-    if (hlv == null) {
+    String str = be.ab(getIntent().getStringExtra("sns_gallery_userName"), "");
+    hBy = getIntent().getStringArrayListExtra("sns_gallery_temp_paths");
+    if (hBy == null) {
       return;
     }
-    hbL = getIntent().getIntExtra("sns_gallery_position", 0);
-    hbK = new SnsInfoFlip(this);
-    hbK.setEnableHorLongBmpMode(false);
-    hbK.setShowTitle(true);
-    ad.ayW();
-    List localList = ai.aS(hlv);
-    hbK.a(localList, str, hbL, hbF, this);
-    hbK.setOnPageSelectListener(new SnsInfoFlip.c()
+    hqB = getIntent().getIntExtra("sns_gallery_position", 0);
+    hqA = new SnsInfoFlip(this);
+    hqA.htl = false;
+    hqA.htk = true;
+    ad.aBx();
+    List localList = ah.aY(hBy);
+    hqA.a(localList, str, hqB, hqv, this);
+    hqA.htB = new SnsInfoFlip.c()
     {
-      public final void mc(int paramAnonymousInt)
+      public final void nu(int paramAnonymousInt)
       {
         SnsUploadBrowseUI.a(SnsUploadBrowseUI.this).put(Integer.valueOf(paramAnonymousInt), Boolean.valueOf(true));
       }
-    });
-    addView(hbK);
+    };
+    addView(hqA);
     b(new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
       {
-        aCN();
+        aFS();
         return true;
       }
     });
-    a(0, 2131430890, 2130969841, new MenuItem.OnMenuItemClickListener()
+    a(0, 2131230884, 2130838804, new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
       {
-        com.tencent.mm.ui.base.g.a(SnsUploadBrowseUI.this, 2131433089, 2131430877, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+        com.tencent.mm.ui.base.g.a(SnsUploadBrowseUI.this, 2131235434, 2131231028, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
         {
           public final void onClick(DialogInterface paramAnonymous2DialogInterface, int paramAnonymous2Int)
           {
-            if (hbK.aBV() == 0) {
-              aCN();
+            if (hqA.aEV() == 0) {
+              aFS();
             }
           }
         }, new DialogInterface.OnClickListener()
@@ -77,58 +77,58 @@ public class SnsUploadBrowseUI
     });
   }
   
-  protected final int Kj()
+  protected final int KT()
   {
     return 4;
   }
   
-  public final void aCN()
+  public final void aFS()
   {
     Intent localIntent = new Intent();
-    Object localObject = hbK.getFlipList();
+    Object localObject = hqA.clW;
     if (localObject == null) {
       return;
     }
-    hlv.clear();
+    hBy.clear();
     Iterator localIterator = ((List)localObject).iterator();
     if (localIterator.hasNext())
     {
       b localb = (b)localIterator.next();
-      localObject = ad.ayW() + aHW.iXW;
-      if (!aHW.iXW.startsWith("pre_temp_extend_pic")) {
+      localObject = ad.aBx() + aus.jvB;
+      if (!aus.jvB.startsWith("pre_temp_extend_pic")) {
         break label168;
       }
-      localObject = aHW.iXW.substring(19);
+      localObject = aus.jvB.substring(19);
     }
     label168:
     for (;;)
     {
-      hlv.add(localObject);
+      hBy.add(localObject);
       break;
-      localIntent.putExtra("sns_gallery_temp_paths", hlv);
-      localIntent.putExtra("sns_update_preview_image_count", hlw.size());
-      hlw.clear();
+      localIntent.putExtra("sns_gallery_temp_paths", hBy);
+      localIntent.putExtra("sns_update_preview_image_count", hBz.size());
+      hBz.clear();
       setResult(-1, localIntent);
       finish();
       return;
     }
   }
   
-  public final void an(String paramString, int paramInt)
+  public final void ap(String paramString, int paramInt)
   {
-    if (hbK != null) {
-      hbK.aBT();
+    if (hqA != null) {
+      hqA.aET();
     }
   }
   
-  public final void ao(String paramString, int paramInt) {}
+  public final void aq(String paramString, int paramInt) {}
   
   public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
   {
     if ((paramKeyEvent.getKeyCode() == 4) && (paramKeyEvent.getAction() == 0))
     {
-      u.d("!44@/B4Tb64lLpJ9RADwjweyFmLDFFXKbUWPLoOH5G6um6E=", "dispatchKeyEvent");
-      aCN();
+      v.d("MicroMsg.SnsUploadBrowseUI", "dispatchKeyEvent");
+      aFS();
       return true;
     }
     return super.dispatchKeyEvent(paramKeyEvent);
@@ -136,36 +136,36 @@ public class SnsUploadBrowseUI
   
   protected final int getLayoutId()
   {
-    return 2131362926;
+    return 2130904419;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
-    u.i("!44@/B4Tb64lLpJ9RADwjweyFmLDFFXKbUWPLoOH5G6um6E=", "onAcvityResult requestCode:" + paramInt1);
+    v.i("MicroMsg.SnsUploadBrowseUI", "onAcvityResult requestCode:" + paramInt1);
     if (paramInt2 != -1) {}
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    Gb();
+    Gy();
   }
   
   public void onDestroy()
   {
-    if (hbK != null)
+    if (hqA != null)
     {
-      hbK.aBU();
-      hbK.onDestroy();
+      hqA.aEU();
+      hqA.onDestroy();
     }
-    ad.azg().L(this);
+    ad.aBG().G(this);
     super.onDestroy();
   }
   
   protected void onPause()
   {
-    if (hbK != null) {
-      hbK.onPause();
+    if (hqA != null) {
+      hqA.onPause();
     }
     super.onPause();
   }
@@ -173,8 +173,8 @@ public class SnsUploadBrowseUI
   public void onResume()
   {
     super.onResume();
-    if (hbK != null) {
-      hbK.aBT();
+    if (hqA != null) {
+      hqA.aET();
     }
   }
 }

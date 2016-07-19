@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+.field final synthetic htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 199
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$2;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    .line 223
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$2;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,25 +36,25 @@
 
 
 # virtual methods
-.method public final aBX()V
+.method public final aFa()V
     .locals 1
 
     .prologue
-    .line 204
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$2;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    .line 228
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$2;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gXN:Lcom/tencent/mm/plugin/sns/ui/o$a;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hkZ:Lcom/tencent/mm/plugin/sns/ui/q$a;
 
     if-eqz v0, :cond_0
 
-    .line 205
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$2;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    .line 229
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$2;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gXN:Lcom/tencent/mm/plugin/sns/ui/o$a;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hkZ:Lcom/tencent/mm/plugin/sns/ui/q$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/o$a;->aBa()V
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/q$a;->aDV()V
 
-    .line 207
+    .line 231
     :cond_0
     return-void
 .end method

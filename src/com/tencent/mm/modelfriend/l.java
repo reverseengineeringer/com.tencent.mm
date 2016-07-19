@@ -2,28 +2,28 @@ package com.tencent.mm.modelfriend;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.platformtools.aw;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.bc;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.List;
 
 public final class l
   extends com.tencent.mm.sdk.h.g
 {
-  public static final String[] aoY = { "CREATE TABLE IF NOT EXISTS friend_ext ( username text  PRIMARY KEY , sex int  , personalcard int  , province text  , city text  , signature text  , reserved1 text  , reserved2 text  , reserved3 text  , reserved4 text  , reserved5 int  , reserved6 int  , reserved7 int  , reserved8 int  ) " };
-  private com.tencent.mm.az.g bCw;
+  public static final String[] bkN = { "CREATE TABLE IF NOT EXISTS friend_ext ( username text  PRIMARY KEY , sex int  , personalcard int  , province text  , city text  , signature text  , reserved1 text  , reserved2 text  , reserved3 text  , reserved4 text  , reserved5 int  , reserved6 int  , reserved7 int  , reserved8 int  ) " };
+  private com.tencent.mm.bc.g bvG;
   
-  public l(com.tencent.mm.az.g paramg)
+  public l(com.tencent.mm.bc.g paramg)
   {
-    bCw = paramg;
+    bvG = paramg;
   }
   
   public final boolean a(k paramk)
   {
     boolean bool = true;
     Object localObject = paramk.getUsername();
-    localObject = "select friend_ext.username,friend_ext.sex,friend_ext.personalcard,friend_ext.province,friend_ext.city,friend_ext.signature from friend_ext   where friend_ext.username = \"" + ay.kx((String)localObject) + "\"";
-    localObject = bCw.rawQuery((String)localObject, null);
+    localObject = "select friend_ext.username,friend_ext.sex,friend_ext.personalcard,friend_ext.province,friend_ext.city,friend_ext.signature from friend_ext   where friend_ext.username = \"" + be.lh((String)localObject) + "\"";
+    localObject = bvG.rawQuery((String)localObject, null);
     if (((Cursor)localObject).getCount() > 0)
     {
       i = 1;
@@ -34,7 +34,7 @@ public final class l
       if (paramk == null) {
         break label123;
       }
-      paramk = paramk.lX();
+      paramk = paramk.kn();
       if (paramk.size() <= 0) {
         break label164;
       }
@@ -42,12 +42,12 @@ public final class l
     label123:
     label128:
     label164:
-    for (int i = bCw.update("friend_ext", paramk, "username=?", new String[] { "username" });; i = 0)
+    for (int i = bvG.update("friend_ext", paramk, "username=?", new String[] { "username" });; i = 0)
     {
       if (i > 0) {}
       for (;;)
       {
-        Ep();
+        EJ();
         return bool;
         i = 0;
         break;
@@ -55,9 +55,9 @@ public final class l
         continue;
         if (paramk != null)
         {
-          aou = -1;
-          paramk = paramk.lX();
-          if ((int)bCw.insert("friend_ext", "username", paramk) != -1) {}
+          aqQ = -1;
+          paramk = paramk.kn();
+          if ((int)bvG.insert("friend_ext", "username", paramk) != -1) {}
         }
         else
         {
@@ -67,11 +67,11 @@ public final class l
     }
   }
   
-  public final k hx(String paramString)
+  public final k hP(String paramString)
   {
     Object localObject = null;
-    paramString = "select friend_ext.username,friend_ext.sex,friend_ext.personalcard,friend_ext.province,friend_ext.city,friend_ext.signature from friend_ext   where friend_ext.username = \"" + ay.kx(paramString) + "\"";
-    Cursor localCursor = bCw.rawQuery(paramString, null);
+    paramString = "select friend_ext.username,friend_ext.sex,friend_ext.personalcard,friend_ext.province,friend_ext.city,friend_ext.signature from friend_ext   where friend_ext.username = \"" + be.lh(paramString) + "\"";
+    Cursor localCursor = bvG.rawQuery(paramString, null);
     if (localCursor == null) {
       return null;
     }
@@ -80,24 +80,24 @@ public final class l
     {
       paramString = new k();
       username = localCursor.getString(0);
-      aSu = localCursor.getInt(1);
-      aSD = localCursor.getInt(2);
-      aSF = localCursor.getString(3);
-      aSG = localCursor.getString(4);
-      aSE = localCursor.getString(5);
+      aFd = localCursor.getInt(1);
+      aFm = localCursor.getInt(2);
+      aFo = localCursor.getString(3);
+      aFp = localCursor.getString(4);
+      aFn = localCursor.getString(5);
     }
     localCursor.close();
     return paramString;
   }
   
-  public final boolean q(List paramList)
+  public final boolean v(List<k> paramList)
   {
     if (paramList.size() <= 0) {
       return false;
     }
-    aw localaw = new aw("!44@/B4Tb64lLpLakB5kto6z7ZqDoGWblGk+4pheC3MTT7Q=", "batchSetFriendExt transaction");
-    localaw.addSplit("transation begin");
-    long l = bCw.dH(Thread.currentThread().getId());
+    bc localbc = new bc("MicroMsg.FriendExtStorage", "batchSetFriendExt transaction");
+    localbc.addSplit("transation begin");
+    long l = bvG.dY(Thread.currentThread().getId());
     int i = 0;
     try
     {
@@ -115,14 +115,14 @@ public final class l
     {
       for (;;)
       {
-        u.e("!44@/B4Tb64lLpLakB5kto6z7ZqDoGWblGk+4pheC3MTT7Q=", paramList.getMessage());
+        v.e("MicroMsg.FriendExtStorage", paramList.getMessage());
         boolean bool = false;
       }
     }
-    bCw.dI(l);
-    localaw.addSplit("transation end");
-    localaw.dumpToLog();
-    Ep();
+    bvG.dZ(l);
+    localbc.addSplit("transation end");
+    localbc.dumpToLog();
+    EJ();
     return bool;
   }
 }

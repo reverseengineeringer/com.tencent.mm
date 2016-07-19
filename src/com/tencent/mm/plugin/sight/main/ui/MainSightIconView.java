@@ -1,6 +1,5 @@
 package com.tencent.mm.plugin.sight.main.ui;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -9,33 +8,32 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
-import android.os.Build.VERSION;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.RelativeLayout.LayoutParams;
 import com.tencent.mm.sdk.platformtools.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class MainSightIconView
   extends View
 {
-  private int cFj;
-  private Paint cZX = new Paint();
-  private int ewY;
-  private Rect fKX;
-  private Canvas gEB = new Canvas();
-  private Bitmap gEC;
-  private int gED;
-  private int gEE;
-  private int gEF;
-  private int gEG;
-  private Bitmap gEH;
-  private final float gEI = 0.4F;
-  public int gEJ;
-  public int gEK;
-  public Animation gEL;
+  private int cCm;
+  private Paint cYD = new Paint();
+  private int dqk;
+  private Rect fUa;
+  private Canvas gLc = new Canvas();
+  private Bitmap gLd;
+  private int gLe;
+  public int gLf;
+  public int gLg;
+  private int gLh;
+  private Bitmap gLi;
+  private final float gLj = 0.4F;
+  public int gLk;
+  public int gLl;
+  public Animation gLm;
   
   public MainSightIconView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -47,96 +45,66 @@ public class MainSightIconView
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  @TargetApi(11)
-  public final void a(float paramFloat, boolean paramBoolean)
-  {
-    gEF = ((int)(gEE * paramFloat));
-    if ((paramFloat < 1.0F) || (!paramBoolean)) {
-      paramFloat = 0.4F;
-    }
-    if (Build.VERSION.SDK_INT >= 11) {
-      setAlpha(paramFloat);
-    }
-    invalidate();
-  }
-  
   public void draw(Canvas paramCanvas)
   {
-    cZX.reset();
-    cZX.setAntiAlias(true);
-    if ((gEC == null) || (gEC.isRecycled()))
+    cYD.reset();
+    cYD.setAntiAlias(true);
+    if ((gLd == null) || (gLd.isRecycled()))
     {
-      u.e("!44@/B4Tb64lLpKAfMIFnYlds+qJ5gHvUJOo2DngW8iViHE=", "MainSightIconView error, mEysBmp is null or recycled");
+      v.e("MicroMsg.MainSightIconView", "MainSightIconView error, mEysBmp is null or recycled");
       return;
     }
-    if (gEF == 0)
+    if (gLg == 0)
     {
       paramCanvas.drawARGB(0, 0, 0, 0);
       return;
     }
-    if (gEF == gEE)
+    if (gLg == gLf)
     {
-      paramCanvas.drawBitmap(gEC, fKX, fKX, cZX);
+      paramCanvas.drawBitmap(gLd, fUa, fUa, cYD);
       return;
     }
-    if ((gEF == gEG) && (gEH != null) && (!gEH.isRecycled()))
+    if ((gLg == gLh) && (gLi != null) && (!gLi.isRecycled()))
     {
-      paramCanvas.drawBitmap(gEH, fKX, fKX, cZX);
+      paramCanvas.drawBitmap(gLi, fUa, fUa, cYD);
       return;
     }
-    if ((gEH == null) || (gEH.isRecycled())) {
-      gEH = Bitmap.createBitmap(ewY, cFj, Bitmap.Config.ARGB_4444);
+    if ((gLi == null) || (gLi.isRecycled())) {
+      gLi = Bitmap.createBitmap(dqk, cCm, Bitmap.Config.ARGB_4444);
     }
     for (;;)
     {
-      gEB.setBitmap(gEH);
-      gEB.drawCircle(ewY / 2, cFj / 2, gEF, cZX);
-      cZX.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
-      gEB.drawBitmap(gEC, fKX, fKX, cZX);
-      cZX.setXfermode(null);
-      paramCanvas.drawBitmap(gEH, fKX, fKX, cZX);
+      gLc.setBitmap(gLi);
+      gLc.drawCircle(dqk / 2, cCm / 2, gLg, cYD);
+      cYD.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+      gLc.drawBitmap(gLd, fUa, fUa, cYD);
+      cYD.setXfermode(null);
+      paramCanvas.drawBitmap(gLi, fUa, fUa, cYD);
       return;
-      gEH.eraseColor(0);
+      gLi.eraseColor(0);
     }
   }
   
-  public final void gV(int paramInt)
+  public final void hU(int paramInt)
   {
-    if ((gEC == null) || (gEC.isRecycled())) {
-      gEC = d.pk(2130903359);
+    if ((gLd == null) || (gLd.isRecycled())) {
+      gLd = d.ra(2131165519);
     }
     RelativeLayout.LayoutParams localLayoutParams = (RelativeLayout.LayoutParams)getLayoutParams();
-    if ((localLayoutParams != null) && (gEC != null))
+    if ((localLayoutParams != null) && (gLd != null))
     {
-      width = gEC.getWidth();
-      height = gEC.getHeight();
+      width = gLd.getWidth();
+      height = gLd.getHeight();
     }
-    if (gEC != null)
+    if (gLd != null)
     {
-      ewY = gEC.getWidth();
-      cFj = gEC.getHeight();
-      gEE = (gEC.getWidth() / 2);
+      dqk = gLd.getWidth();
+      cCm = gLd.getHeight();
+      gLf = (gLd.getWidth() / 2);
     }
-    fKX = new Rect(0, 0, ewY, cFj);
-    gED = paramInt;
-    topMargin = (gED - cFj / 2);
-    setLayoutParams(localLayoutParams);
-  }
-  
-  public int getIconHeight()
-  {
-    return cFj;
-  }
-  
-  public int getIconWidth()
-  {
-    return ewY;
-  }
-  
-  public void setMarginTop(int paramInt)
-  {
-    RelativeLayout.LayoutParams localLayoutParams = (RelativeLayout.LayoutParams)getLayoutParams();
-    topMargin = (gED + paramInt - cFj / 2);
+    fUa = new Rect(0, 0, dqk, cCm);
+    gLe = paramInt;
+    topMargin = (gLe - cCm / 2);
     setLayoutParams(localLayoutParams);
   }
   

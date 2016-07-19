@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rx" android:background="@drawable/ag2" android:padding="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="186.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/xf" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/re" android:layout_width="@dimen/l4" android:layout_height="@dimen/l4" android:src="@drawable/amw" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/cu" android:textColor="@color/bw" android:ellipsize="end" android:id="@id/h_" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hr" android:layout_marginRight="@dimen/hr" android:singleLine="true" android:layout_weight="1.0" />
+        <ImageView android:id="@id/rz" android:layout_width="21.0dip" android:layout_height="21.0dip" android:src="@drawable/af9" android:scaleType="fitCenter" />
+    </LinearLayout>
+    <RelativeLayout android:layout_gravity="center" android:id="@id/xg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/l2">
+        <ViewStub android:id="@id/xh" android:layout="@layout/e2" android:inflatedId="@id/xi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/l2" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/h4" android:textColor="@color/g8" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/xc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+</LinearLayout>

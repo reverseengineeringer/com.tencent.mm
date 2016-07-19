@@ -1,8 +1,8 @@
 package com.tencent.mm.ui.contact;
 
 import com.tencent.mm.model.i;
-import com.tencent.mm.modelmulti.l;
-import com.tencent.mm.modelmulti.n;
+import com.tencent.mm.modelmulti.m;
+import com.tencent.mm.modelmulti.o;
 import com.tencent.mm.pluginsdk.ui.ProfileEditPhoneNumberView.a;
 
 final class ContactRemarkInfoModUI$12
@@ -10,15 +10,15 @@ final class ContactRemarkInfoModUI$12
 {
   ContactRemarkInfoModUI$12(ContactRemarkInfoModUI paramContactRemarkInfoModUI) {}
   
-  public final void KH()
+  public final void Lt()
   {
-    ContactRemarkInfoModUI.b(ljV);
+    ContactRemarkInfoModUI.b(lKg);
   }
   
-  public final void aRe()
+  public final void aVQ()
   {
-    i.p(ContactRemarkInfoModUI.e(ljV));
-    l.Be().dC(7);
+    i.p(ContactRemarkInfoModUI.e(lKg));
+    m.Bd().eh(7);
   }
 }
 

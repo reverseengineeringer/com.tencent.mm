@@ -7,8 +7,8 @@ final class CropImageNewUI$2
   
   public final void run()
   {
-    CropImageNewUI.a(luq, CropImageNewUI.e(luq).getCropImageIV(), CropImageNewUI.e(luq).getCropAreaView());
-    luq.finish();
+    CropImageNewUI.a(lVs, elVs).lWt, elVs).lWr);
+    lVs.finish();
   }
 }
 

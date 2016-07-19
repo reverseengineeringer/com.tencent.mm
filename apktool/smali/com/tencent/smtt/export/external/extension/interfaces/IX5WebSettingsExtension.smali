@@ -1,10 +1,15 @@
 .class public interface abstract Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebSettingsExtension;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # virtual methods
+.method public abstract GetApplicationLocale()Ljava/lang/String;
+.end method
+
 .method public abstract getPageSolarEnableFlag()Z
+.end method
+
+.method public abstract getWebTranslation()Z
 .end method
 
 .method public abstract isFitScreen()Z
@@ -19,6 +24,25 @@
 .method public abstract isWebViewInBackground()Z
 .end method
 
+.method public abstract setAcceptCookie(Z)V
+.end method
+
+.method public abstract setAdditionalHttpHeaders(Ljava/util/Map;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract setContentCacheEnable(Z)V
+.end method
+
 .method public abstract setDayOrNight(Z)V
 .end method
 
@@ -29,6 +53,9 @@
 .end method
 
 .method public abstract setImgAsDownloadFile(Z)V
+.end method
+
+.method public abstract setOnContextMenuEnable(Z)V
 .end method
 
 .method public abstract setOnlyDomTreeBuild(Z)V
@@ -49,6 +76,9 @@
 .method public abstract setReadModeWebView(Z)V
 .end method
 
+.method public abstract setRecordRequestEnabled(Z)V
+.end method
+
 .method public abstract setRememberScaleValue(Z)V
 .end method
 
@@ -56,6 +86,9 @@
 .end method
 
 .method public abstract setWapSitePreferred(Z)V
+.end method
+
+.method public abstract setWebTranslationEnabled(Z)V
 .end method
 
 .method public abstract setWebViewInBackground(Z)V

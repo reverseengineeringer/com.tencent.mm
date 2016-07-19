@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bCO:Lcom/tencent/mm/model/bb;
+.field final synthetic bvY:Lcom/tencent/mm/model/bb;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 273
-    iput-object p1, p0, Lcom/tencent/mm/model/bb$17;->bCO:Lcom/tencent/mm/model/bb;
+    iput-object p1, p0, Lcom/tencent/mm/model/bb$17;->bvY:Lcom/tencent/mm/model/bb;
 
     const/4 v0, 0x0
 
@@ -56,7 +56,7 @@
 
     move-result-object v0
 
-    iput-object v0, p1, Lcom/tencent/mm/model/az;->bCF:Ljava/lang/String;
+    iput-object v0, p1, Lcom/tencent/mm/model/az;->bvP:Ljava/lang/String;
 
     .line 287
     return-void
@@ -71,7 +71,7 @@
 
     move-result-wide v0
 
-    iget-wide v2, p1, Lcom/tencent/mm/model/az;->bCG:J
+    iget-wide v2, p1, Lcom/tencent/mm/model/az;->bvQ:J
 
     sub-long/2addr v0, v2
 
@@ -81,7 +81,7 @@
 
     if-lez v0, :cond_0
 
-    iget-object v0, p1, Lcom/tencent/mm/model/az;->bCF:Ljava/lang/String;
+    iget-object v0, p1, Lcom/tencent/mm/model/az;->bvP:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -92,21 +92,21 @@
     .line 292
     iget v0, p1, Lcom/tencent/mm/model/az;->key:I
 
-    iget-object v1, p1, Lcom/tencent/mm/model/az;->bCF:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/model/az;->bvP:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/model/bb;->n(ILjava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/model/bb;->o(ILjava/lang/String;)V
 
     .line 293
     const-string/jumbo v0, ""
 
-    iput-object v0, p1, Lcom/tencent/mm/model/az;->bCF:Ljava/lang/String;
+    iput-object v0, p1, Lcom/tencent/mm/model/az;->bvP:Ljava/lang/String;
 
     .line 294
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    iput-wide v0, p1, Lcom/tencent/mm/model/az;->bCG:J
+    iput-wide v0, p1, Lcom/tencent/mm/model/az;->bvQ:J
 
     .line 295
     const/4 v0, 0x1
@@ -121,8 +121,8 @@
     goto :goto_0
 .end method
 
-.method public final varargs c(I[Ljava/lang/Object;)Lcom/tencent/mm/model/az;
-    .locals 3
+.method public final varargs d(I[Ljava/lang/Object;)Lcom/tencent/mm/model/az;
+    .locals 4
 
     .prologue
     .line 277
@@ -150,12 +150,12 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/model/az;->bCF:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/model/az;->bvP:Ljava/lang/String;
 
     .line 280
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iput-wide v1, v0, Lcom/tencent/mm/model/az;->bCG:J
+    iput-wide v2, v0, Lcom/tencent/mm/model/az;->bvQ:J
 
     .line 281
     return-object v0

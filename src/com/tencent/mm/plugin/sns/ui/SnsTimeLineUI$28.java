@@ -1,5 +1,8 @@
 package com.tencent.mm.plugin.sns.ui;
 
+import android.widget.ListView;
+import com.tencent.mm.ui.base.MMPullDownView;
+
 final class SnsTimeLineUI$28
   implements Runnable
 {
@@ -7,10 +10,12 @@ final class SnsTimeLineUI$28
   
   public final void run()
   {
-    if (SnsTimeLineUI.b(hkJ) != null) {
-      SnsTimeLineUI.b(hkJ).uF("");
+    if (SnsTimeLineUI.g(hzE) == null) {
+      return;
     }
-    SnsTimeLineUI.G(hkJ);
+    ghzE).hkd.hra = jhzE).eLC.getBottom();
+    ghzE).hkd.hCQ = jhzE).fjR.getTop();
+    xhzE).hzX = jhzE).haS.getTop();
   }
 }
 

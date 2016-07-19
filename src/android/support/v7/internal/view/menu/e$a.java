@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public final class e$a
   extends BaseAdapter
 {
-  private int lI = -1;
+  private int lY = -1;
   
   public e$a(e parame)
   {
@@ -18,34 +18,34 @@ public final class e$a
   
   private void bo()
   {
-    h localh = lJ.iO.mf;
+    h localh = lZ.jf.mv;
     if (localh != null)
     {
-      ArrayList localArrayList = lJ.iO.bw();
+      ArrayList localArrayList = lZ.jf.bw();
       int j = localArrayList.size();
       int i = 0;
       while (i < j)
       {
         if ((h)localArrayList.get(i) == localh)
         {
-          lI = i;
+          lY = i;
           return;
         }
         i += 1;
       }
     }
-    lI = -1;
+    lY = -1;
   }
   
-  public final h B(int paramInt)
+  public final h G(int paramInt)
   {
-    ArrayList localArrayList = lJ.iO.bw();
-    int i = e.a(lJ) + paramInt;
+    ArrayList localArrayList = lZ.jf.bw();
+    int i = e.a(lZ) + paramInt;
     paramInt = i;
-    if (lI >= 0)
+    if (lY >= 0)
     {
       paramInt = i;
-      if (i >= lI) {
+      if (i >= lY) {
         paramInt = i + 1;
       }
     }
@@ -54,8 +54,8 @@ public final class e$a
   
   public final int getCount()
   {
-    int i = lJ.iO.bw().size() - e.a(lJ);
-    if (lI < 0) {
+    int i = lZ.jf.bw().size() - e.a(lZ);
+    if (lY < 0) {
       return i;
     }
     return i - 1;
@@ -69,11 +69,11 @@ public final class e$a
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
     if (paramView == null) {
-      paramView = lJ.hI.inflate(lJ.ln, paramViewGroup, false);
+      paramView = lZ.ib.inflate(lZ.lE, paramViewGroup, false);
     }
     for (;;)
     {
-      ((m.a)paramView).a(B(paramInt));
+      ((m.a)paramView).a(G(paramInt));
       return paramView;
     }
   }

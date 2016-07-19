@@ -9,7 +9,7 @@ final class a$1
   
   public final void run()
   {
-    bub.bua = new b(bub.mContext);
+    biC.biB = new b(biC.mContext);
   }
 }
 

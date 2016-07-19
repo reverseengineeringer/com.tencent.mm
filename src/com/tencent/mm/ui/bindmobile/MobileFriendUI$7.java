@@ -12,7 +12,7 @@ final class MobileFriendUI$7
   
   public final void onClick(View paramView)
   {
-    MMWizardActivity.v(kPt, new Intent(kPt, BindMContactIntroUI.class));
+    MMWizardActivity.v(loJ, new Intent(loJ, BindMContactIntroUI.class));
   }
 }
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+.field final synthetic lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 297
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 303
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,18 +42,18 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 301
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
+    .line 307
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tw()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->aUY()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->bac()V
 
-    .line 302
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ab;->pq(I)V
+    .line 308
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ad;->rh(I)V
 
-    .line 303
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 309
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->a(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/tools/TestTimeForChatting;
 
@@ -61,7 +61,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->d(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
@@ -69,17 +69,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 304
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 310
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->a(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/tools/TestTimeForChatting;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/TestTimeForChatting;->biP()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/TestTimeForChatting;->boM()V
 
-    .line 305
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 311
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->d(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
@@ -87,33 +87,33 @@
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->ePD:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->eXw:Z
 
-    .line 306
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->d(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bfc()V
-
-    .line 307
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 312
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->d(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->hN(Z)V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bkL()V
 
-    .line 309
+    .line 313
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->d(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->iq(Z)V
+
+    .line 315
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$3;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->e(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)V
 
-    .line 310
+    .line 316
     return-void
 .end method
 
@@ -121,7 +121,7 @@
     .locals 2
 
     .prologue
-    .line 314
+    .line 320
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

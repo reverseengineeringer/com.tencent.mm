@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field aou:I
+.field aqQ:I
 
-.field private bCs:I
+.field public bBD:I
 
-.field private bCu:Ljava/lang/String;
+.field public bGa:I
 
-.field private bCv:Ljava/lang/String;
+.field private bGb:I
 
-.field public bIs:I
+.field private bvC:I
 
-.field public bMG:I
+.field private bvE:Ljava/lang/String;
 
-.field private bMH:I
+.field private bvF:Ljava/lang/String;
 
 .field public username:Ljava/lang/String;
 
@@ -34,28 +34,28 @@
     .line 33
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/modelfriend/q;->aou:I
+    iput v0, p0, Lcom/tencent/mm/modelfriend/q;->aqQ:I
 
     .line 46
     const-string/jumbo v0, ""
 
     iput-object v0, p0, Lcom/tencent/mm/modelfriend/q;->username:Ljava/lang/String;
 
-    iput v1, p0, Lcom/tencent/mm/modelfriend/q;->bMG:I
+    iput v1, p0, Lcom/tencent/mm/modelfriend/q;->bGa:I
 
-    iput v1, p0, Lcom/tencent/mm/modelfriend/q;->bIs:I
+    iput v1, p0, Lcom/tencent/mm/modelfriend/q;->bBD:I
 
-    iput v1, p0, Lcom/tencent/mm/modelfriend/q;->bCs:I
+    iput v1, p0, Lcom/tencent/mm/modelfriend/q;->bvC:I
 
-    iput v1, p0, Lcom/tencent/mm/modelfriend/q;->bMH:I
-
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/q;->bCu:Ljava/lang/String;
+    iput v1, p0, Lcom/tencent/mm/modelfriend/q;->bGb:I
 
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/q;->bCv:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/q;->bvE:Ljava/lang/String;
+
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/q;->bvF:Ljava/lang/String;
 
     .line 47
     return-void
@@ -83,7 +83,7 @@
     goto :goto_0
 .end method
 
-.method public final lX()Landroid/content/ContentValues;
+.method public final kn()Landroid/content/ContentValues;
     .locals 3
 
     .prologue
@@ -93,7 +93,7 @@
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
     .line 71
-    iget v0, p0, Lcom/tencent/mm/modelfriend/q;->aou:I
+    iget v0, p0, Lcom/tencent/mm/modelfriend/q;->aqQ:I
 
     and-int/lit8 v0, v0, 0x1
 
@@ -110,7 +110,7 @@
 
     .line 74
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/modelfriend/q;->aou:I
+    iget v0, p0, Lcom/tencent/mm/modelfriend/q;->aqQ:I
 
     and-int/lit8 v0, v0, 0x2
 
@@ -119,7 +119,7 @@
     .line 75
     const-string/jumbo v0, "friendtype"
 
-    iget v2, p0, Lcom/tencent/mm/modelfriend/q;->bMG:I
+    iget v2, p0, Lcom/tencent/mm/modelfriend/q;->bGa:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -129,7 +129,7 @@
 
     .line 77
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/modelfriend/q;->aou:I
+    iget v0, p0, Lcom/tencent/mm/modelfriend/q;->aqQ:I
 
     and-int/lit8 v0, v0, 0x4
 
@@ -138,7 +138,7 @@
     .line 78
     const-string/jumbo v0, "updatetime"
 
-    iget v2, p0, Lcom/tencent/mm/modelfriend/q;->bIs:I
+    iget v2, p0, Lcom/tencent/mm/modelfriend/q;->bBD:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -148,7 +148,7 @@
 
     .line 80
     :cond_2
-    iget v0, p0, Lcom/tencent/mm/modelfriend/q;->aou:I
+    iget v0, p0, Lcom/tencent/mm/modelfriend/q;->aqQ:I
 
     and-int/lit8 v0, v0, 0x8
 
@@ -157,7 +157,7 @@
     .line 81
     const-string/jumbo v0, "reserved1"
 
-    iget v2, p0, Lcom/tencent/mm/modelfriend/q;->bCs:I
+    iget v2, p0, Lcom/tencent/mm/modelfriend/q;->bvC:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -167,7 +167,7 @@
 
     .line 83
     :cond_3
-    iget v0, p0, Lcom/tencent/mm/modelfriend/q;->aou:I
+    iget v0, p0, Lcom/tencent/mm/modelfriend/q;->aqQ:I
 
     and-int/lit8 v0, v0, 0x10
 
@@ -176,7 +176,7 @@
     .line 84
     const-string/jumbo v0, "reserved2"
 
-    iget v2, p0, Lcom/tencent/mm/modelfriend/q;->bMH:I
+    iget v2, p0, Lcom/tencent/mm/modelfriend/q;->bGb:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -186,7 +186,7 @@
 
     .line 86
     :cond_4
-    iget v0, p0, Lcom/tencent/mm/modelfriend/q;->aou:I
+    iget v0, p0, Lcom/tencent/mm/modelfriend/q;->aqQ:I
 
     and-int/lit8 v0, v0, 0x20
 
@@ -195,7 +195,7 @@
     .line 87
     const-string/jumbo v2, "reserved3"
 
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/q;->bCu:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/q;->bvE:Ljava/lang/String;
 
     if-nez v0, :cond_7
 
@@ -206,7 +206,7 @@
 
     .line 89
     :cond_5
-    iget v0, p0, Lcom/tencent/mm/modelfriend/q;->aou:I
+    iget v0, p0, Lcom/tencent/mm/modelfriend/q;->aqQ:I
 
     and-int/lit8 v0, v0, 0x40
 
@@ -215,7 +215,7 @@
     .line 90
     const-string/jumbo v2, "reserved4"
 
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/q;->bCv:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/q;->bvF:Ljava/lang/String;
 
     if-nez v0, :cond_8
 
@@ -230,13 +230,13 @@
 
     .line 87
     :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/q;->bCu:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/q;->bvE:Ljava/lang/String;
 
     goto :goto_0
 
     .line 90
     :cond_8
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/q;->bCv:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/q;->bvF:Ljava/lang/String;
 
     goto :goto_1
 .end method

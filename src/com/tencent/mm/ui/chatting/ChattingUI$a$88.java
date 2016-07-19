@@ -1,16 +1,23 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import com.tencent.mm.pluginsdk.ui.chat.ChatFooter;
 
 final class ChattingUI$a$88
-  implements MenuItem.OnMenuItemClickListener
+  implements View.OnTouchListener
 {
   ChattingUI$a$88(ChattingUI.a parama) {}
   
-  public final boolean onMenuItemClick(MenuItem paramMenuItem)
+  public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    return ChattingUI.a.Q(laF);
+    ChattingUI.a.aa(lAY);
+    if (!lAY.lzf) {
+      return false;
+    }
+    lAY.fjo.j(0, -1, false);
+    return false;
   }
 }
 

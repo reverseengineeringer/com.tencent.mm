@@ -10,8 +10,8 @@ final class JSAPIUploadLogHelperUI$2
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    if (!klC.isFinishing()) {
-      klC.finish();
+    if (!kLd.isFinishing()) {
+      kLd.finish();
     }
   }
 }

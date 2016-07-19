@@ -1,11 +1,11 @@
 package com.tencent.mm.pluginsdk.model.downloader;
 
-import com.tencent.mm.storage.z;
+import com.tencent.mm.storage.aa;
 
 public final class f
 {
   /* Error */
-  public static String Ag(String paramString)
+  public static String Cg(String paramString)
   {
     // Byte code:
     //   0: aconst_null
@@ -47,7 +47,7 @@ public final class f
     //   63: iconst_1
     //   64: aload_2
     //   65: aastore
-    //   66: invokestatic 53	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   66: invokestatic 53	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   69: aload_0
     //   70: ifnull +7 -> 77
     //   73: aload_0
@@ -76,7 +76,7 @@ public final class f
     //   107: aload_3
     //   108: invokevirtual 65	java/lang/Exception:getMessage	()Ljava/lang/String;
     //   111: aastore
-    //   112: invokestatic 68	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   112: invokestatic 68	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   115: aload_0
     //   116: ifnull -29 -> 87
     //   119: aload_0
@@ -117,19 +117,19 @@ public final class f
     //   23	69	145	java/lang/Exception
   }
   
-  public static z b(d paramd)
+  public static aa b(d paramd)
   {
-    z localz = new z();
-    field_downloadUrl = iCq;
-    field_downloadUrlHashCode = iCq.hashCode();
+    aa localaa = new aa();
+    field_downloadUrl = iZe;
+    field_downloadUrlHashCode = iZe.hashCode();
     field_fileName = mFileName;
-    field_fileType = iCs;
-    field_md5 = iCr;
-    field_appId = ehh;
-    field_autoInstall = iCt;
-    field_showNotification = iCu;
-    field_packageName = elm;
-    return localz;
+    field_fileType = iZg;
+    field_md5 = iZf;
+    field_appId = ekS;
+    field_autoInstall = iZh;
+    field_showNotification = iZi;
+    field_packageName = eqa;
+    return localaa;
   }
 }
 

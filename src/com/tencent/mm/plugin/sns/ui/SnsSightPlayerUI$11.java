@@ -1,6 +1,6 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.ui.tools.h.b;
 
 final class SnsSightPlayerUI$11
@@ -10,12 +10,12 @@ final class SnsSightPlayerUI$11
   
   public final void onAnimationEnd()
   {
-    new aa().post(new Runnable()
+    new ac().post(new Runnable()
     {
       public final void run()
       {
-        his.finish();
-        his.overridePendingTransition(0, 0);
+        hxh.finish();
+        hxh.overridePendingTransition(0, 0);
       }
     });
   }

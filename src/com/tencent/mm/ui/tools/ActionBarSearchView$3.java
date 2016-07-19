@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ActionBarSearchView$3
   implements View.OnClickListener
@@ -11,20 +11,20 @@ final class ActionBarSearchView$3
   
   public final void onClick(View paramView)
   {
-    if (ActionBarSearchView.c.ltJ == ActionBarSearchView.d(ltH))
+    if (ActionBarSearchView.c.lUL == ActionBarSearchView.e(lUJ))
     {
-      u.d("!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE=", "on status btn click, cur status is clear");
-      ltH.ie(true);
-      if (ActionBarSearchView.c(ltH) != null) {
-        ActionBarSearchView.c(ltH).Gf();
+      v.d("MicroMsg.ActionBarSearchView", "on status btn click, cur status is clear");
+      lUJ.iL(true);
+      if (ActionBarSearchView.c(lUJ) != null) {
+        ActionBarSearchView.c(lUJ).GC();
       }
     }
     do
     {
       return;
-      u.d("!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE=", "on status btn click, cur status is voice search");
-    } while (ActionBarSearchView.c(ltH) == null);
-    ActionBarSearchView.c(ltH).bin();
+      v.d("MicroMsg.ActionBarSearchView", "on status btn click, cur status is voice search");
+    } while (ActionBarSearchView.c(lUJ) == null);
+    ActionBarSearchView.c(lUJ).bok();
   }
 }
 

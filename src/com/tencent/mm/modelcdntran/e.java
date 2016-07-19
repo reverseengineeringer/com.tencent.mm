@@ -1,93 +1,92 @@
 package com.tencent.mm.modelcdntran;
 
+import com.tencent.mm.bc.g.b;
 import com.tencent.mm.model.ae;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.bc;
 import com.tencent.mm.model.c;
-import com.tencent.mm.protocal.b.gh;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.m;
+import com.tencent.mm.protocal.b.gm;
 import com.tencent.mm.sdk.h.j.b;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.m;
 import java.io.File;
 import java.util.HashMap;
 
 public class e
   implements ae
 {
-  private static e bLb;
-  private CdnTransportEngine bLc = null;
-  private b bLd = null;
+  private static e bEv;
+  private CdnTransportEngine bEw = null;
+  private b bEx = null;
   
-  public static e xU()
+  public static e xX()
   {
-    e locale = (e)ah.tk().fu(e.class.getName());
-    bLb = locale;
+    e locale = (e)ah.tl().fH(e.class.getName());
+    bEv = locale;
     if (locale == null)
     {
-      bLb = new e();
-      ah.tk().a(e.class.getName(), bLb);
+      bEv = new e();
+      ah.tl().a(e.class.getName(), bEv);
     }
-    return bLb;
+    return bEv;
   }
   
-  public static String xV()
+  public static String xY()
   {
-    if (tDuin == 0) {
+    if (tEuin == 0) {
       throw new com.tencent.mm.model.b();
     }
-    return tDcachePath + "cdndnsinfo/";
+    return tEcachePath + "cdndnsinfo/";
   }
   
-  public static b xW()
+  public static b xZ()
   {
-    if (tDuin == 0) {
+    if (tEuin == 0) {
       throw new com.tencent.mm.model.b();
     }
-    return xUbLd;
+    return xXbEx;
   }
   
-  public static CdnTransportEngine xX()
+  public static CdnTransportEngine ya()
   {
-    if (tDuin == 0) {
+    if (tEuin == 0) {
       throw new com.tencent.mm.model.b();
     }
-    if (xUbLc == null) {
-      xUbLc = new CdnTransportEngine(tDcachePath, xW());
+    if (xXbEw == null) {
+      xXbEw = new CdnTransportEngine(tEcachePath, xZ());
     }
-    return xUbLc;
+    return xXbEw;
   }
   
-  public final void aN(int paramInt) {}
-  
-  public final void ai(boolean paramBoolean)
+  public final void aj(boolean paramBoolean)
   {
-    if (xUbLd == null) {
-      xUbLd = new b();
+    if (xXbEx == null) {
+      xXbEx = new b();
     }
-    if (tDuin == 0) {
+    if (tEuin == 0) {
       throw new com.tencent.mm.model.b();
     }
-    File localFile = new File(xV());
+    File localFile = new File(xY());
     if (!localFile.exists()) {
       localFile.mkdir();
     }
-    ah.a(new com.tencent.mm.r.b()
+    ah.a(new com.tencent.mm.t.b()
     {
-      public final void a(gh paramAnonymousgh1, gh paramAnonymousgh2, gh paramAnonymousgh3)
+      public final void a(gm paramAnonymousgm1, gm paramAnonymousgm2, gm paramAnonymousgm3)
       {
-        u.d("!44@/B4Tb64lLpIAhUt0Bg2QToookYEZHCVFCAb/yW4GbfY=", "cdntra infoUpdate dns info " + paramAnonymousgh1.toString() + " getCore().engine:" + e.xX());
-        if (e.xX() != null)
+        v.d("MicroMsg.SubCoreCdnTransport", "cdntra infoUpdate dns info " + paramAnonymousgm1.toString() + " getCore().engine:" + e.ya());
+        if (e.ya() != null)
         {
-          e.xX().a(paramAnonymousgh1, paramAnonymousgh2, paramAnonymousgh3, null);
-          ah.tv().r(new Runnable()
+          e.ya().a(paramAnonymousgm1, paramAnonymousgm2, paramAnonymousgm3, null);
+          ah.tw().t(new Runnable()
           {
             public final void run()
             {
-              if (e.xW() != null) {
-                e.xW().aS(false);
+              if (e.xZ() != null) {
+                e.xZ().ay(false);
               }
             }
             
@@ -101,34 +100,36 @@ public class e
     });
   }
   
-  public final void aj(boolean paramBoolean) {}
+  public final void ak(boolean paramBoolean) {}
   
-  public final HashMap lo()
-  {
-    return null;
-  }
+  public final void cu(int paramInt) {}
   
-  public final void lp()
+  public final void ok()
   {
     ah.a(null);
     Object localObject;
-    if (bLc != null)
+    if (bEw != null)
     {
-      localObject = bLc;
+      localObject = bEw;
       ((CdnTransportEngine)localObject).uninit();
-      bKq = null;
-      bLc = null;
+      bDK = null;
+      bEw = null;
     }
-    if (bLd != null)
+    if (bEx != null)
     {
-      localObject = bLd;
-      if (ah.rh()) {
-        ah.tD().rn().b((j.b)localObject);
+      localObject = bEx;
+      if (ah.rg()) {
+        ah.tE().ro().b((j.b)localObject);
       }
-      ah.b(bKw);
-      ah.tE().b(379, (d)localObject);
-      bLd = null;
+      ah.b(bDQ);
+      ah.tF().b(379, (d)localObject);
+      bEx = null;
     }
+  }
+  
+  public final HashMap<Integer, g.b> ol()
+  {
+    return null;
   }
 }
 

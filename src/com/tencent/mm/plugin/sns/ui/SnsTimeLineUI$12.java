@@ -1,28 +1,14 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.d.a.le;
-import com.tencent.mm.d.a.le.a;
-import com.tencent.mm.pluginsdk.ui.j;
-import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.oa;
 import com.tencent.mm.sdk.c.c;
-import com.tencent.mm.sdk.platformtools.u;
 
 final class SnsTimeLineUI$12
-  extends c
+  extends c<oa>
 {
   SnsTimeLineUI$12(SnsTimeLineUI paramSnsTimeLineUI)
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    u.i("!32@/B4Tb64lLpIApwzsVfw/GSpHowATRrWf", "shakeLuckyTriggerQueryPushTipsListener: query has push tips");
-    paramb = new le();
-    a.jUF.j(paramb);
-    j.aO(hkJ, aHF.aHG);
-    return true;
+    kum = oa.class.getName().hashCode();
   }
 }
 

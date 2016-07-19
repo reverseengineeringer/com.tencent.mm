@@ -14,41 +14,41 @@ final class SnsMsgUI$a$1
   {
     if (paramBoolean)
     {
-      hfY.add(paramMMSlideDelView);
+      eLI.add(paramMMSlideDelView);
       return;
     }
-    hfY.remove(paramMMSlideDelView);
+    eLI.remove(paramMMSlideDelView);
   }
   
-  public final boolean aCe()
+  public final boolean agI()
   {
-    return hfY.size() > 0;
+    return eLI.size() > 0;
   }
   
-  public final void aCf()
+  public final void agJ()
   {
-    Iterator localIterator = hfY.iterator();
+    Iterator localIterator = eLI.iterator();
     while (localIterator.hasNext())
     {
       MMSlideDelView localMMSlideDelView = (MMSlideDelView)localIterator.next();
       if (localMMSlideDelView != null) {
-        localMMSlideDelView.bcR();
+        localMMSlideDelView.biq();
       }
     }
-    hfY.clear();
+    eLI.clear();
   }
   
-  public final void aCg()
+  public final void agK()
   {
-    Iterator localIterator = hfY.iterator();
+    Iterator localIterator = eLI.iterator();
     while (localIterator.hasNext())
     {
       MMSlideDelView localMMSlideDelView = (MMSlideDelView)localIterator.next();
       if (localMMSlideDelView != null) {
-        localMMSlideDelView.bcQ();
+        localMMSlideDelView.bip();
       }
     }
-    hfY.clear();
+    eLI.clear();
   }
 }
 

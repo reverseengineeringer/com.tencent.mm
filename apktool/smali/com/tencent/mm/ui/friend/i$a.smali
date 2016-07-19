@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract qo(I)V
+.method public abstract sg(I)V
 .end method

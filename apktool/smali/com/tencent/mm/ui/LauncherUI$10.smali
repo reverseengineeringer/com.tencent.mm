@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/os/MessageQueue$IdleHandler;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/LauncherUI;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/LauncherUI;->bfK()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 2580
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$10;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 2438
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$10;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,68 +36,105 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final queueIdle()Z
+    .locals 8
 
     .prologue
-    .line 2584
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$10;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    const/4 v6, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->m(Lcom/tencent/mm/ui/LauncherUI;)V
+    const/4 v5, 0x0
 
-    .line 2587
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 2442
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-object v0
+    move-result-wide v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    .line 2443
+    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$10;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    move-result-object v0
-
-    const v1, 0x5010b
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$10;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v2}, Lcom/tencent/mm/ui/LauncherUI;->n(Lcom/tencent/mm/ui/LauncherUI;)Landroid/support/v7/app/ActionBar;
+    invoke-static {v2}, Lcom/tencent/mm/ui/LauncherUI;->o(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/tools/TestTimeForChatting;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/support/v7/app/ActionBar;->getHeight()I
+    if-nez v2, :cond_1
 
-    move-result v2
+    .line 2444
+    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$10;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->setInt(II)V
+    invoke-static {v2}, Lcom/tencent/mm/ui/LauncherUI;->p(Lcom/tencent/mm/ui/LauncherUI;)Landroid/view/View;
 
-    .line 2588
-    return-void
-.end method
+    move-result-object v2
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    if-nez v2, :cond_0
 
-    .prologue
-    .line 2592
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 2445
+    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$10;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v3, p0, Lcom/tencent/mm/ui/LauncherUI$10;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-static {v3}, Lcom/tencent/mm/ui/p;->ef(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const v4, 0x7f0300d8
+
+    invoke-virtual {v3, v4, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;Landroid/view/View;)Landroid/view/View;
+
+    .line 2447
+    :cond_0
+    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$10;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    invoke-static {v2}, Lcom/tencent/mm/ui/LauncherUI;->q(Lcom/tencent/mm/ui/LauncherUI;)Landroid/view/View;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    .line 2448
+    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$10;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    iget-object v3, p0, Lcom/tencent/mm/ui/LauncherUI$10;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    invoke-static {v3}, Lcom/tencent/mm/ui/p;->ef(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v3
+
+    const v4, 0x7f030018
+
+    invoke-virtual {v3, v4, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/ui/LauncherUI;->b(Lcom/tencent/mm/ui/LauncherUI;Landroid/view/View;)Landroid/view/View;
+
+    .line 2451
+    :cond_1
+    const-string/jumbo v2, "MicroMsg.LauncherUI"
+
+    const-string/jumbo v3, "prepare chattingUI view use %dms"
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    sub-long v0, v6, v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    const-string/jumbo v1, "|updateTitle"
+    aput-object v0, v4, v5
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    .line 2452
+    return v5
 .end method

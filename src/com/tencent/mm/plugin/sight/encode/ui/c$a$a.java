@@ -6,8 +6,8 @@ import com.tencent.mm.ui.contact.a.e.a;
 public final class c$a$a
   extends e.a
 {
-  public View gCP;
-  public View gzA;
+  public View gGc;
+  public View gJq;
   
   public c$a$a(c.a parama)
   {

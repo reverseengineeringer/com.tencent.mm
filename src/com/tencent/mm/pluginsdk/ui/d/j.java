@@ -5,36 +5,36 @@ import android.view.View;
 public class j
   extends i
 {
-  private Object bOa;
-  private a iQj;
+  private a jnr;
+  private Object tag;
   
   public j() {}
   
   public j(Object paramObject, a parama)
   {
     super(2, null);
-    iQj = parama;
-    bOa = paramObject;
+    jnr = parama;
+    tag = paramObject;
   }
   
   public j(Object paramObject, a parama, int paramInt)
   {
     super(2, null);
-    iQj = parama;
-    bOa = paramObject;
-    oK(paramInt);
+    jnr = parama;
+    tag = paramObject;
+    qx(paramInt);
   }
   
   public void onClick(View paramView)
   {
-    if (iQj != null) {
-      iQj.ao(bOa);
+    if (jnr != null) {
+      jnr.aH(tag);
     }
   }
   
   public static abstract interface a
   {
-    public abstract void ao(Object paramObject);
+    public abstract void aH(Object paramObject);
   }
 }
 

@@ -10,11 +10,11 @@ final class ProfileEditPhoneNumberView$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    iHt.iHm = "";
-    iHt.iHr.aRe();
-    ProfileEditPhoneNumberView.a(iHt, iHs);
-    if (!ProfileEditPhoneNumberView.a(iHt)) {
-      ProfileEditPhoneNumberView.b(iHt);
+    jeo.jeh = "";
+    jeo.jem.aVQ();
+    ProfileEditPhoneNumberView.a(jeo, jen);
+    if (!ProfileEditPhoneNumberView.a(jeo)) {
+      ProfileEditPhoneNumberView.b(jeo);
     }
   }
 }

@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field private bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
+.field private bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
 
-.field public bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+.field public bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
-.field private pX:Landroid/database/DataSetObserver;
+.field private ql:Landroid/database/DataSetObserver;
 
 
 # direct methods
@@ -21,174 +21,123 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 31
+    .line 28
     invoke-direct {p0}, Lcom/tencent/kingkong/AbstractCursor;-><init>()V
 
-    .line 16
+    .line 13
     new-instance v1, Lcom/tencent/mm/dbsupport/newcursor/f$1;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/dbsupport/newcursor/f$1;-><init>(Lcom/tencent/mm/dbsupport/newcursor/f;)V
 
-    iput-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->pX:Landroid/database/DataSetObserver;
+    iput-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->ql:Landroid/database/DataSetObserver;
 
-    .line 33
-    iput-object p1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 29
+    iput-object p1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
-    .line 34
+    .line 30
     aget-object v1, p1, v0
 
-    iput-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
+    iput-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
 
-    .line 36
+    .line 32
     :goto_0
-    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v1, v1
 
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_1
 
-    .line 41
-    return-void
-
-    .line 37
-    :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 33
+    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v1, v1, v0
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_0
 
-    .line 39
-    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 34
+    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v1, v1, v0
 
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->pX:Landroid/database/DataSetObserver;
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->ql:Landroid/database/DataSetObserver;
 
     invoke-interface {v1, v2}, Lcom/tencent/mm/dbsupport/newcursor/e;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 36
-    :cond_1
+    .line 32
+    :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    .line 38
+    :cond_1
+    return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/dbsupport/newcursor/f;)V
+.method static synthetic a(Lcom/tencent/mm/dbsupport/newcursor/f;)I
     .locals 1
 
     .prologue
-    .line 15
+    .line 12
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/kingkong/AbstractCursor;->mPos:I
+    iput v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->mPos:I
 
-    return-void
+    return v0
+.end method
+
+.method static synthetic b(Lcom/tencent/mm/dbsupport/newcursor/f;)I
+    .locals 1
+
+    .prologue
+    .line 12
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->mPos:I
+
+    return v0
 .end method
 
 
 # virtual methods
-.method public final T(Ljava/lang/Object;)Z
-    .locals 4
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 336
-    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
-
-    array-length v2, v1
-
-    move v1, v0
-
-    .line 338
-    :goto_0
-    if-lt v1, v2, :cond_0
-
-    .line 345
-    return v0
-
-    .line 339
-    :cond_0
-    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
-
-    aget-object v3, v3, v1
-
-    if-eqz v3, :cond_1
-
-    .line 340
-    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
-
-    aget-object v3, v3, v1
-
-    invoke-interface {v3, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->T(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    .line 341
-    const/4 v0, 0x1
-
-    .line 338
-    :cond_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-.end method
-
-.method public final V(Ljava/lang/Object;)Lcom/tencent/mm/dbsupport/newcursor/a;
-    .locals 1
-
-    .prologue
-    .line 357
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
-
-    invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->V(Ljava/lang/Object;)Lcom/tencent/mm/dbsupport/newcursor/a;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public final a(Lcom/tencent/mm/dbsupport/newcursor/j$a;)V
     .locals 3
 
     .prologue
-    .line 235
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 215
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v1, v0
 
-    .line 236
+    .line 216
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_1
 
-    .line 241
-    return-void
-
-    .line 237
-    :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 217
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
-    .line 238
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 218
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
     invoke-interface {v2, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->a(Lcom/tencent/mm/dbsupport/newcursor/j$a;)V
 
-    .line 236
-    :cond_1
+    .line 216
+    :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    .line 221
+    :cond_1
+    return-void
 .end method
 
 .method public final a(Ljava/lang/Object;Lcom/tencent/mm/dbsupport/newcursor/a;)Z
@@ -197,30 +146,26 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 284
-    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 264
+    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v2, v1
 
     move v1, v0
 
-    .line 286
+    .line 266
     :goto_0
-    if-lt v1, v2, :cond_0
+    if-ge v1, v2, :cond_1
 
-    .line 293
-    return v0
-
-    .line 287
-    :cond_0
-    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 267
+    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v3, v3, v1
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_0
 
-    .line 288
-    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 268
+    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v3, v3, v1
 
@@ -228,82 +173,142 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_0
 
-    .line 289
+    .line 269
     const/4 v0, 0x1
 
-    .line 286
-    :cond_1
+    .line 266
+    :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
+
+    .line 273
+    :cond_1
+    return v0
 .end method
 
-.method public final aG(Z)V
+.method public final ae(Ljava/lang/Object;)Z
+    .locals 4
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 316
+    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
+
+    array-length v2, v1
+
+    move v1, v0
+
+    .line 318
+    :goto_0
+    if-ge v1, v2, :cond_1
+
+    .line 319
+    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
+
+    aget-object v3, v3, v1
+
+    if-eqz v3, :cond_0
+
+    .line 320
+    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
+
+    aget-object v3, v3, v1
+
+    invoke-interface {v3, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->ae(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 321
+    const/4 v0, 0x1
+
+    .line 318
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 325
+    :cond_1
+    return v0
+.end method
+
+.method public final ag(Ljava/lang/Object;)Lcom/tencent/mm/dbsupport/newcursor/a;
+    .locals 1
+
+    .prologue
+    .line 337
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
+
+    invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->ag(Ljava/lang/Object;)Lcom/tencent/mm/dbsupport/newcursor/a;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final al(Z)V
     .locals 3
 
     .prologue
-    .line 245
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 225
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v1, v0
 
-    .line 246
+    .line 226
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_1
 
-    .line 251
-    return-void
+    .line 227
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
-    .line 247
+    aget-object v2, v2, v0
+
+    if-eqz v2, :cond_0
+
+    .line 228
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
+
+    aget-object v2, v2, v0
+
+    invoke-interface {v2, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->al(Z)V
+
+    .line 226
     :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
-
-    aget-object v2, v2, v0
-
-    if-eqz v2, :cond_1
-
-    .line 248
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
-
-    aget-object v2, v2, v0
-
-    invoke-interface {v2, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->aG(Z)V
-
-    .line 246
-    :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    .line 231
+    :cond_1
+    return-void
 .end method
 
-.method public final cj(I)Lcom/tencent/mm/dbsupport/newcursor/a;
+.method public final cJ(I)Lcom/tencent/mm/dbsupport/newcursor/a;
     .locals 3
 
     .prologue
-    .line 269
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 249
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v1, v0
 
-    .line 271
+    .line 251
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_1
 
-    .line 279
-    const/4 v0, 0x0
-
-    :goto_1
-    return-object v0
-
-    .line 272
-    :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 252
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
@@ -311,169 +316,177 @@
 
     move-result v2
 
-    .line 273
-    if-ge p1, v2, :cond_1
+    .line 253
+    if-ge p1, v2, :cond_0
 
-    .line 274
-    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 254
+    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v0, v1, v0
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->cj(I)Lcom/tencent/mm/dbsupport/newcursor/a;
+    invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->cJ(I)Lcom/tencent/mm/dbsupport/newcursor/a;
 
     move-result-object v0
 
-    goto :goto_1
+    .line 259
+    :goto_1
+    return-object v0
 
-    .line 276
-    :cond_1
+    .line 256
+    :cond_0
     sub-int/2addr p1, v2
 
-    .line 271
+    .line 251
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    .line 259
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_1
 .end method
 
-.method public final ck(I)V
+.method public final cK(I)V
     .locals 3
 
     .prologue
-    .line 362
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 342
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v1, v0
 
-    .line 363
+    .line 343
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_1
 
-    .line 368
-    return-void
+    .line 344
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
-    .line 364
+    aget-object v2, v2, v0
+
+    if-eqz v2, :cond_0
+
+    .line 345
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
+
+    aget-object v2, v2, v0
+
+    invoke-interface {v2, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->cK(I)V
+
+    .line 343
     :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
-
-    aget-object v2, v2, v0
-
-    if-eqz v2, :cond_1
-
-    .line 365
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
-
-    aget-object v2, v2, v0
-
-    invoke-interface {v2, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->ck(I)V
-
-    .line 363
-    :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    .line 348
+    :cond_1
+    return-void
 .end method
 
-.method public final cl(I)Z
+.method public final cL(I)Z
     .locals 5
 
     .prologue
     const/4 v1, 0x0
 
-    .line 322
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 302
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v3, v0
 
-    .line 323
+    .line 303
     const/4 v0, 0x1
 
     move v2, v1
 
-    .line 324
+    .line 304
     :goto_0
-    if-lt v2, v3, :cond_0
+    if-ge v2, v3, :cond_1
 
-    .line 331
-    return v0
-
-    .line 325
-    :cond_0
-    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 305
+    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v4, v4, v2
 
-    if-eqz v4, :cond_1
+    if-eqz v4, :cond_0
 
-    .line 326
-    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 306
+    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v4, v4, v2
 
-    invoke-interface {v4, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->cl(I)Z
+    invoke-interface {v4, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->cL(I)Z
 
     move-result v4
 
-    if-nez v4, :cond_1
+    if-nez v4, :cond_0
 
     move v0, v1
 
-    .line 324
-    :cond_1
+    .line 304
+    :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
+
+    .line 311
+    :cond_1
+    return v0
 .end method
 
 .method public final close()V
     .locals 3
 
     .prologue
-    .line 158
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 141
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v1, v0
 
-    .line 159
+    .line 142
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_1
 
-    .line 163
-    invoke-super {p0}, Lcom/tencent/kingkong/AbstractCursor;->close()V
-
-    .line 164
-    return-void
-
-    .line 160
-    :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 143
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
-    .line 161
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 144
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
     invoke-interface {v2}, Lcom/tencent/mm/dbsupport/newcursor/e;->close()V
 
-    .line 159
-    :cond_1
+    .line 142
+    :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    .line 147
+    :cond_1
+    invoke-super {p0}, Lcom/tencent/kingkong/AbstractCursor;->close()V
+
+    .line 148
+    return-void
 .end method
 
 .method public final copyStringToBuffer(ILandroid/database/CharArrayBuffer;)V
     .locals 0
 
     .prologue
-    .line 373
+    .line 353
     return-void
 .end method
 
@@ -481,51 +494,51 @@
     .locals 3
 
     .prologue
-    .line 147
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 130
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v1, v0
 
-    .line 148
+    .line 131
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_1
 
-    .line 153
-    invoke-super {p0}, Lcom/tencent/kingkong/AbstractCursor;->deactivate()V
-
-    .line 154
-    return-void
-
-    .line 149
-    :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 132
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
-    .line 150
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 133
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
     invoke-interface {v2}, Lcom/tencent/mm/dbsupport/newcursor/e;->deactivate()V
 
-    .line 148
-    :cond_1
+    .line 131
+    :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    .line 136
+    :cond_1
+    invoke-super {p0}, Lcom/tencent/kingkong/AbstractCursor;->deactivate()V
+
+    .line 137
+    return-void
 .end method
 
 .method public final getBlob(I)[B
     .locals 1
 
     .prologue
-    .line 131
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 116
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
 
     invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->getBlob(I)[B
 
@@ -538,19 +551,19 @@
     .locals 1
 
     .prologue
-    .line 137
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 121
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
 
     if-eqz v0, :cond_0
 
-    .line 138
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 122
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
 
     invoke-interface {v0}, Lcom/tencent/mm/dbsupport/newcursor/e;->getColumnNames()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 140
+    .line 124
     :goto_0
     return-object v0
 
@@ -568,31 +581,27 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 46
-    .line 47
-    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 42
+    .line 43
+    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v2, v1
 
     move v1, v0
 
-    .line 48
+    .line 44
     :goto_0
-    if-lt v1, v2, :cond_0
+    if-ge v1, v2, :cond_1
 
-    .line 53
-    return v0
-
-    .line 49
-    :cond_0
-    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 45
+    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v3, v3, v1
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_0
 
-    .line 50
-    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 46
+    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v3, v3, v1
 
@@ -602,19 +611,23 @@
 
     add-int/2addr v0, v3
 
-    .line 48
-    :cond_1
+    .line 44
+    :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
+
+    .line 49
+    :cond_1
+    return v0
 .end method
 
 .method public final getDouble(I)D
     .locals 2
 
     .prologue
-    .line 119
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 106
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
 
     invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->getDouble(I)D
 
@@ -627,8 +640,8 @@
     .locals 1
 
     .prologue
-    .line 113
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 101
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
 
     invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->getFloat(I)F
 
@@ -641,8 +654,8 @@
     .locals 1
 
     .prologue
-    .line 101
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 91
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
 
     invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->getInt(I)I
 
@@ -655,8 +668,8 @@
     .locals 2
 
     .prologue
-    .line 107
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 96
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
 
     invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->getLong(I)J
 
@@ -669,8 +682,8 @@
     .locals 1
 
     .prologue
-    .line 95
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 86
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
 
     invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->getShort(I)S
 
@@ -683,8 +696,8 @@
     .locals 1
 
     .prologue
-    .line 89
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 81
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
 
     invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->getString(I)Ljava/lang/String;
 
@@ -697,8 +710,8 @@
     .locals 1
 
     .prologue
-    .line 125
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 111
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
 
     invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->isNull(I)Z
 
@@ -713,13 +726,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 60
+    .line 55
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
+    iput-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
 
-    .line 62
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 57
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v3, v0
 
@@ -727,39 +740,19 @@
 
     move v0, v1
 
-    .line 63
+    .line 58
     :goto_0
-    if-lt v2, v3, :cond_0
+    if-ge v2, v3, :cond_0
 
-    .line 77
-    :goto_1
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
-
-    if-eqz v2, :cond_3
-
-    .line 78
-    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
-
-    sub-int v0, p2, v0
-
-    invoke-interface {v1, v0}, Lcom/tencent/mm/dbsupport/newcursor/e;->moveToPosition(I)Z
-
-    move-result v0
-
-    .line 81
-    :goto_2
-    return v0
-
-    .line 64
-    :cond_0
-    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 59
+    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v4, v4, v2
 
     if-eqz v4, :cond_2
 
-    .line 65
-    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 60
+    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v4, v4, v2
 
@@ -771,18 +764,35 @@
 
     if-ge p2, v4, :cond_1
 
-    .line 69
-    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 64
+    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v3, v2
 
-    iput-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvw:Lcom/tencent/mm/dbsupport/newcursor/e;
+    iput-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
 
-    goto :goto_1
+    .line 72
+    :cond_0
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
+
+    if-eqz v2, :cond_3
 
     .line 73
+    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkp:Lcom/tencent/mm/dbsupport/newcursor/e;
+
+    sub-int v0, p2, v0
+
+    invoke-interface {v1, v0}, Lcom/tencent/mm/dbsupport/newcursor/e;->moveToPosition(I)Z
+
+    move-result v0
+
+    .line 76
+    :goto_1
+    return v0
+
+    .line 68
     :cond_1
-    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v4, v4, v2
 
@@ -792,7 +802,7 @@
 
     add-int/2addr v0, v4
 
-    .line 63
+    .line 58
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
@@ -801,91 +811,96 @@
     :cond_3
     move v0, v1
 
-    .line 81
-    goto :goto_2
+    .line 76
+    goto :goto_1
 .end method
 
-.method public final qG()Z
+.method public final pk()Z
     .locals 5
 
     .prologue
     const/4 v1, 0x0
 
-    .line 255
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 235
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v3, v0
 
-    .line 256
+    .line 236
     const/4 v0, 0x1
 
     move v2, v1
 
-    .line 257
+    .line 237
     :goto_0
-    if-lt v2, v3, :cond_0
+    if-ge v2, v3, :cond_1
 
-    .line 264
-    return v0
-
-    .line 258
-    :cond_0
-    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 238
+    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v4, v4, v2
 
-    if-eqz v4, :cond_1
+    if-eqz v4, :cond_0
 
-    .line 259
-    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 239
+    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v4, v4, v2
 
-    invoke-interface {v4}, Lcom/tencent/mm/dbsupport/newcursor/e;->qG()Z
+    invoke-interface {v4}, Lcom/tencent/mm/dbsupport/newcursor/e;->pk()Z
 
     move-result v4
 
-    if-nez v4, :cond_1
+    if-nez v4, :cond_0
 
     move v0, v1
 
-    .line 257
-    :cond_1
+    .line 237
+    :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
+
+    .line 244
+    :cond_1
+    return v0
 .end method
 
-.method public final qH()[Landroid/util/SparseArray;
+.method public final pl()[Landroid/util/SparseArray;
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()[",
+            "Landroid/util/SparseArray",
+            "<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x0
 
-    .line 298
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 278
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v2, v0
 
-    .line 299
+    .line 279
     new-array v3, v2, [Landroid/util/SparseArray;
 
     move v0, v1
 
-    .line 300
+    .line 280
     :goto_0
-    if-lt v0, v2, :cond_0
+    if-ge v0, v2, :cond_0
 
-    .line 303
-    return-object v3
-
-    .line 301
-    :cond_0
-    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 281
+    iget-object v4, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v4, v4, v0
 
-    invoke-interface {v4}, Lcom/tencent/mm/dbsupport/newcursor/e;->qH()[Landroid/util/SparseArray;
+    invoke-interface {v4}, Lcom/tencent/mm/dbsupport/newcursor/e;->pl()[Landroid/util/SparseArray;
 
     move-result-object v4
 
@@ -893,90 +908,94 @@
 
     aput-object v4, v3, v0
 
-    .line 300
+    .line 280
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    .line 283
+    :cond_0
+    return-object v3
 .end method
 
 .method public final registerContentObserver(Landroid/database/ContentObserver;)V
     .locals 3
 
     .prologue
-    .line 168
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 152
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v1, v0
 
-    .line 169
+    .line 153
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_1
 
-    .line 174
-    return-void
-
-    .line 170
-    :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 154
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
-    .line 171
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 155
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
     invoke-interface {v2, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->registerContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 169
-    :cond_1
+    .line 153
+    :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    .line 158
+    :cond_1
+    return-void
 .end method
 
 .method public final registerDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 3
 
     .prologue
-    .line 187
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 172
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v1, v0
 
-    .line 188
+    .line 173
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_1
 
-    .line 193
-    return-void
-
-    .line 189
-    :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 174
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
-    .line 190
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 175
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
     invoke-interface {v2, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 188
-    :cond_1
+    .line 173
+    :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    .line 178
+    :cond_1
+    return-void
 .end method
 
 .method public final requery()Z
@@ -985,33 +1004,26 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 208
-    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 192
+    iget-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v2, v1
 
     move v1, v0
 
-    .line 209
+    .line 193
     :goto_0
-    if-lt v1, v2, :cond_1
+    if-ge v1, v2, :cond_1
 
-    .line 219
-    const/4 v0, 0x1
-
-    :cond_0
-    return v0
-
-    .line 210
-    :cond_1
-    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 194
+    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v3, v3, v1
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_0
 
-    .line 211
-    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 195
+    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v3, v3, v1
 
@@ -1019,91 +1031,101 @@
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    if-nez v3, :cond_0
 
-    .line 209
-    :cond_2
+    .line 203
+    :goto_1
+    return v0
+
+    .line 193
+    :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
+
+    .line 203
+    :cond_1
+    const/4 v0, 0x1
+
+    goto :goto_1
 .end method
 
 .method public final unregisterContentObserver(Landroid/database/ContentObserver;)V
     .locals 3
 
     .prologue
-    .line 177
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 162
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v1, v0
 
-    .line 178
+    .line 163
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_1
 
-    .line 183
-    return-void
-
-    .line 179
-    :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 164
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
-    .line 180
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 165
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
     invoke-interface {v2, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 178
-    :cond_1
+    .line 163
+    :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    .line 168
+    :cond_1
+    return-void
 .end method
 
 .method public final unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 3
 
     .prologue
-    .line 197
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 182
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     array-length v1, v0
 
-    .line 198
+    .line 183
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_1
 
-    .line 203
-    return-void
-
-    .line 199
-    :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 184
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
-    .line 200
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    .line 185
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v2, v2, v0
 
     invoke-interface {v2, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 198
-    :cond_1
+    .line 183
+    :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    .line 188
+    :cond_1
+    return-void
 .end method

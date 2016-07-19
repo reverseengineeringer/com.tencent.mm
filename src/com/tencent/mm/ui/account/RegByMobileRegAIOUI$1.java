@@ -5,9 +5,9 @@ final class RegByMobileRegAIOUI$1
 {
   RegByMobileRegAIOUI$1(RegByMobileRegAIOUI paramRegByMobileRegAIOUI) {}
   
-  public final void bJ(int paramInt1, int paramInt2)
+  public final void bP(int paramInt1, int paramInt2)
   {
-    RegByMobileRegAIOUI.a(kuT);
+    RegByMobileRegAIOUI.a(kUa);
   }
 }
 

@@ -12,12 +12,12 @@
 
     const/4 v2, 0x0
 
-    .line 163
+    .line 161
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->dL(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->dM(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -33,9 +33,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -43,8 +43,8 @@
 
     move-result-object v4
 
-    .line 164
-    const-string/jumbo v0, "!32@/B4Tb64lLpIuR0pnyyOcE/EHK3T1JIiy"
+    .line 162
+    const-string/jumbo v0, "MicroMsg.ForgotPwdMenu"
 
     const-string/jumbo v3, "cpan showProblemH5 randomID:%s"
 
@@ -52,13 +52,13 @@
 
     aput-object v4, v5, v2
 
-    invoke-static {v0, v3, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 166
+    .line 164
     if-eqz p1, :cond_0
 
-    .line 168
-    const v0, 0x7f0b135b
+    .line 166
+    const v0, 0x7f080afd
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -68,9 +68,9 @@
 
     move v0, v1
 
-    .line 174
+    .line 172
     :goto_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZF()Ljava/lang/String;
 
     move-result-object v5
 
@@ -82,7 +82,7 @@
 
     if-eqz v5, :cond_1
 
-    .line 175
+    .line 173
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -101,7 +101,7 @@
 
     move-result-object v3
 
-    .line 181
+    .line 179
     :goto_1
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -125,11 +125,11 @@
 
     move-result-object v3
 
-    .line 183
+    .line 181
     invoke-static {p0, v3, v0}, Lcom/tencent/mm/ui/account/e;->g(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 184
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 182
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v3, 0x2e9a
 
@@ -145,10 +145,10 @@
 
     aput-object v2, v5, v1
 
-    invoke-virtual {v0, v3, v5}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v3, v5}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
-    .line 185
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 183
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -160,7 +160,7 @@
 
     move-result-object v0
 
-    .line 186
+    .line 184
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -173,12 +173,12 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 187
+    .line 185
     return-void
 
-    .line 171
+    .line 169
     :cond_0
-    const v0, 0x7f0b135c
+    const v0, 0x7f080afc
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -188,12 +188,12 @@
 
     move v0, v2
 
-    .line 172
+    .line 170
     goto :goto_0
 
-    .line 176
+    .line 174
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZF()Ljava/lang/String;
 
     move-result-object v5
 
@@ -205,7 +205,7 @@
 
     if-nez v5, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZF()Ljava/lang/String;
 
     move-result-object v5
 
@@ -217,7 +217,7 @@
 
     if-eqz v5, :cond_3
 
-    .line 177
+    .line 175
     :cond_2
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -239,7 +239,7 @@
 
     goto :goto_1
 
-    .line 179
+    .line 177
     :cond_3
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -262,23 +262,23 @@
     goto/16 :goto_1
 .end method
 
-.method public static g(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public static f(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
     .prologue
     const/4 v3, 0x1
 
-    .line 130
+    .line 128
     const-string/jumbo v0, "F100_100_phone"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ll(Ljava/lang/String;)V
 
-    .line 131
+    .line 129
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v1
 
@@ -312,7 +312,7 @@
 
     const-string/jumbo v1, "F100_100_phone"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v1
 
@@ -332,13 +332,13 @@
 
     invoke-static {v3, v0}, Lcom/tencent/mm/plugin/a/b;->b(ZLjava/lang/String;)V
 
-    .line 133
-    sget-boolean v0, Lcom/tencent/mm/protocal/b;->iUg:Z
+    .line 131
+    sget-boolean v0, Lcom/tencent/mm/protocal/c;->jrz:Z
 
     if-eqz v0, :cond_0
 
-    .line 134
-    const v0, 0x7f0b01ba
+    .line 132
+    const v0, 0x7f08008c
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -352,11 +352,11 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 157
+    .line 155
     :goto_0
     return-void
 
-    .line 138
+    .line 136
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -364,17 +364,17 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 140
+    .line 138
     if-eqz p2, :cond_2
 
-    .line 141
+    .line 139
     const-string/jumbo v1, "+"
 
     invoke-virtual {p2, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 143
+    .line 141
     const/4 v2, -0x1
 
     if-eq v1, v2, :cond_1
@@ -385,44 +385,44 @@
 
     if-lez v2, :cond_1
 
-    .line 144
+    .line 142
     add-int/lit8 v1, v1, 0x1
 
     invoke-virtual {p2, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 146
+    .line 144
     :cond_1
     const-string/jumbo v1, "couttry_code"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 148
+    .line 146
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 149
+    .line 147
     const-string/jumbo v1, "country_name"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 151
+    .line 149
     :cond_3
     if-eqz p3, :cond_4
 
-    .line 152
+    .line 150
     const-string/jumbo v1, "bindmcontact_shortmobile"
 
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 155
+    .line 153
     :cond_4
     const-string/jumbo v1, "mobile_input_purpose"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 156
+    .line 154
     invoke-virtual {p0, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
@@ -434,64 +434,64 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 117
+    .line 115
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 118
+    .line 116
     const-string/jumbo v1, "rawUrl"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 119
+    .line 117
     const-string/jumbo v1, "showShare"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 120
+    .line 118
     const-string/jumbo v1, "show_bottom"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 121
+    .line 119
     const-string/jumbo v1, "needRedirect"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 122
+    .line 120
     const-string/jumbo v1, "neverGetA8Key"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 123
+    .line 121
     const-string/jumbo v1, "hardcode_jspermission"
 
-    sget-object v2, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUp:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
+    sget-object v2, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrI:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 124
+    .line 122
     const-string/jumbo v1, "hardcode_general_ctrl"
 
-    sget-object v2, Lcom/tencent/mm/protocal/GeneralControlWrapper;->iUm:Lcom/tencent/mm/protocal/GeneralControlWrapper;
+    sget-object v2, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrF:Lcom/tencent/mm/protocal/GeneralControlWrapper;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 125
+    .line 123
     const-string/jumbo v1, "KFromLoginHistory"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 126
+    .line 124
     const-string/jumbo v1, "webview"
 
     const-string/jumbo v2, "com.tencent.mm.plugin.webview.ui.tools.WebViewUI"
 
-    invoke-static {p0, v1, v2, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p0, v1, v2, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 127
+    .line 125
     return-void
 .end method

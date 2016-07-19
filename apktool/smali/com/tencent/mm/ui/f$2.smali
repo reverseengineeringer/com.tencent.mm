@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/f;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/f;->a(Lcom/tencent/mm/ui/base/preference/f;Lcom/tencent/mm/ui/base/preference/Preference;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic klo:Lcom/tencent/mm/ui/f;
+.field final synthetic kKO:Lcom/tencent/mm/ui/f;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1193
-    iput-object p1, p0, Lcom/tencent/mm/ui/f$2;->klo:Lcom/tencent/mm/ui/f;
+    .line 971
+    iput-object p1, p0, Lcom/tencent/mm/ui/f$2;->kKO:Lcom/tencent/mm/ui/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,81 +36,38 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+.method public final run()V
+    .locals 4
 
     .prologue
-    .line 1197
-    iget-object v0, p0, Lcom/tencent/mm/ui/f$2;->klo:Lcom/tencent/mm/ui/f;
+    .line 974
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/f;->g(Lcom/tencent/mm/ui/f;)Landroid/widget/CheckBox;
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    move-result-object v0
+    .line 975
+    new-instance v1, Landroid/content/ComponentName;
 
-    if-eqz v0, :cond_0
+    sget-object v2, Lcom/tencent/mm/ui/d$e;->kJT:Ljava/lang/String;
 
-    .line 1198
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    const-string/jumbo v3, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"
 
-    move-result-object v0
+    invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    move-result-object v1
+    .line 976
+    const-string/jumbo v1, "tools_process_action_code_key"
 
-    const/16 v2, 0x1008
+    const-string/jumbo v2, "com.tencent.mm.intent.ACTION_START_TOOLS_PROCESS"
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/f$2;->klo:Lcom/tencent/mm/ui/f;
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/f;->g(Lcom/tencent/mm/ui/f;)Landroid/widget/CheckBox;
+    .line 977
+    iget-object v1, p0, Lcom/tencent/mm/ui/f$2;->kKO:Lcom/tencent/mm/ui/f;
 
-    move-result-object v0
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/f;->sendBroadcast(Landroid/content/Intent;)V
 
-    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
-
-    .line 1201
-    :cond_0
-    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bat()Lcom/tencent/mm/ui/LauncherUI;
-
-    move-result-object v0
-
-    .line 1202
-    if-eqz v0, :cond_1
-
-    .line 1203
-    const-string/jumbo v1, "tab_find_friend"
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->Gi(Ljava/lang/String;)V
-
-    .line 1206
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/f$2;->klo:Lcom/tencent/mm/ui/f;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
-
-    invoke-static {v0}, Lcom/tencent/mm/ap/a;->cC(Landroid/content/Context;)V
-
-    .line 1207
+    .line 981
     return-void
-
-    .line 1198
-    :cond_2
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

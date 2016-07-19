@@ -8,16 +8,16 @@ final class ContactRemarkInfoModUI$5
 {
   ContactRemarkInfoModUI$5(ContactRemarkInfoModUI paramContactRemarkInfoModUI) {}
   
-  public final void Om() {}
+  public final void Px() {}
   
-  public final void On()
+  public final void Py()
   {
-    g.e(ljV, 2131428202, 2131428198);
+    g.f(lKg, 2131235040, 2131235047);
   }
   
-  public final void mm(String paramString)
+  public final void ng(String paramString)
   {
-    ContactRemarkInfoModUI.t(ljV);
+    ContactRemarkInfoModUI.t(lKg);
   }
 }
 

@@ -13,15 +13,15 @@
 
 
 # instance fields
-.field private arc:Lcom/tencent/mm/compatible/util/a;
+.field private acv:Lcom/tencent/mm/compatible/util/a;
 
-.field private bzN:Landroid/content/Context;
+.field private bsQ:Landroid/content/Context;
 
-.field private bzO:Lcom/tencent/mm/compatible/util/a$a;
+.field private bsR:Lcom/tencent/mm/compatible/util/a$a;
 
-.field bzP:Lcom/tencent/mm/model/d$a;
+.field bsS:Lcom/tencent/mm/model/d$a;
 
-.field private bzQ:Z
+.field private bsT:Z
 
 
 # direct methods
@@ -35,14 +35,14 @@
     .line 44
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/model/d;->bzQ:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/model/d;->bsT:Z
 
     .line 31
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/model/d;->bzN:Landroid/content/Context;
+    iput-object v0, p0, Lcom/tencent/mm/model/d;->bsQ:Landroid/content/Context;
 
     .line 33
     return-void
@@ -57,47 +57,47 @@
     const/4 v0, 0x0
 
     .line 40
-    iput-object p1, p0, Lcom/tencent/mm/model/d;->bzP:Lcom/tencent/mm/model/d$a;
+    iput-object p1, p0, Lcom/tencent/mm/model/d;->bsS:Lcom/tencent/mm/model/d$a;
 
     .line 41
     new-instance v1, Lcom/tencent/mm/model/d$b;
 
     invoke-direct {v1, p0, v0}, Lcom/tencent/mm/model/d$b;-><init>(Lcom/tencent/mm/model/d;B)V
 
-    iget-object v2, p0, Lcom/tencent/mm/model/d;->arc:Lcom/tencent/mm/compatible/util/a;
+    iget-object v2, p0, Lcom/tencent/mm/model/d;->acv:Lcom/tencent/mm/compatible/util/a;
 
     if-nez v2, :cond_0
 
     new-instance v2, Lcom/tencent/mm/compatible/util/a;
 
-    iget-object v3, p0, Lcom/tencent/mm/model/d;->bzN:Landroid/content/Context;
+    iget-object v3, p0, Lcom/tencent/mm/model/d;->bsQ:Landroid/content/Context;
 
     invoke-direct {v2, v3}, Lcom/tencent/mm/compatible/util/a;-><init>(Landroid/content/Context;)V
 
-    iput-object v2, p0, Lcom/tencent/mm/model/d;->arc:Lcom/tencent/mm/compatible/util/a;
+    iput-object v2, p0, Lcom/tencent/mm/model/d;->acv:Lcom/tencent/mm/compatible/util/a;
 
     :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/model/d;->bzO:Lcom/tencent/mm/compatible/util/a$a;
+    iget-object v2, p0, Lcom/tencent/mm/model/d;->bsR:Lcom/tencent/mm/compatible/util/a$a;
 
     if-eq v2, v1, :cond_1
 
-    iput-object v1, p0, Lcom/tencent/mm/model/d;->bzO:Lcom/tencent/mm/compatible/util/a$a;
+    iput-object v1, p0, Lcom/tencent/mm/model/d;->bsR:Lcom/tencent/mm/compatible/util/a$a;
 
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/model/d;->arc:Lcom/tencent/mm/compatible/util/a;
+    iget-object v1, p0, Lcom/tencent/mm/model/d;->acv:Lcom/tencent/mm/compatible/util/a;
 
-    iget-object v2, p0, Lcom/tencent/mm/model/d;->bzO:Lcom/tencent/mm/compatible/util/a$a;
+    iget-object v2, p0, Lcom/tencent/mm/model/d;->bsR:Lcom/tencent/mm/compatible/util/a$a;
 
-    iget-object v3, v1, Lcom/tencent/mm/compatible/util/a;->bua:Lcom/tencent/mm/compatible/util/a$b;
+    iget-object v3, v1, Lcom/tencent/mm/compatible/util/a;->biB:Lcom/tencent/mm/compatible/util/a$b;
 
     if-eqz v3, :cond_2
 
-    iget-object v1, v1, Lcom/tencent/mm/compatible/util/a;->bua:Lcom/tencent/mm/compatible/util/a$b;
+    iget-object v1, v1, Lcom/tencent/mm/compatible/util/a;->biB:Lcom/tencent/mm/compatible/util/a$b;
 
     invoke-interface {v1, v2}, Lcom/tencent/mm/compatible/util/a$b;->a(Lcom/tencent/mm/compatible/util/a$a;)V
 
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/model/d;->arc:Lcom/tencent/mm/compatible/util/a;
+    iget-object v1, p0, Lcom/tencent/mm/model/d;->acv:Lcom/tencent/mm/compatible/util/a;
 
     if-nez v1, :cond_4
 
@@ -106,24 +106,24 @@
     return v0
 
     :cond_4
-    iget-boolean v1, p0, Lcom/tencent/mm/model/d;->bzQ:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/model/d;->bsT:Z
 
     if-nez v1, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/model/d;->arc:Lcom/tencent/mm/compatible/util/a;
+    iget-object v0, p0, Lcom/tencent/mm/model/d;->acv:Lcom/tencent/mm/compatible/util/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/compatible/util/a;->requestFocus()Z
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/model/d;->bzQ:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/model/d;->bsT:Z
 
-    iget-boolean v0, p0, Lcom/tencent/mm/model/d;->bzQ:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/model/d;->bsT:Z
 
     goto :goto_0
 .end method
 
-.method public final aH(Z)Z
+.method public final am(Z)Z
     .locals 3
 
     .prologue
@@ -133,32 +133,32 @@
 
     .line 86
     .line 87
-    iget-object v0, p0, Lcom/tencent/mm/model/d;->arc:Lcom/tencent/mm/compatible/util/a;
+    iget-object v0, p0, Lcom/tencent/mm/model/d;->acv:Lcom/tencent/mm/compatible/util/a;
 
     if-eqz v0, :cond_1
 
     .line 88
-    iget-object v0, p0, Lcom/tencent/mm/model/d;->arc:Lcom/tencent/mm/compatible/util/a;
+    iget-object v0, p0, Lcom/tencent/mm/model/d;->acv:Lcom/tencent/mm/compatible/util/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/util/a;->oV()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/util/a;->nn()Z
 
     move-result v0
 
     .line 90
     :goto_0
-    iput-boolean v1, p0, Lcom/tencent/mm/model/d;->bzQ:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/model/d;->bsT:Z
 
     .line 91
     if-eqz p1, :cond_0
 
     .line 92
-    iput-object v2, p0, Lcom/tencent/mm/model/d;->arc:Lcom/tencent/mm/compatible/util/a;
+    iput-object v2, p0, Lcom/tencent/mm/model/d;->acv:Lcom/tencent/mm/compatible/util/a;
 
     .line 93
-    iput-object v2, p0, Lcom/tencent/mm/model/d;->bzO:Lcom/tencent/mm/compatible/util/a$a;
+    iput-object v2, p0, Lcom/tencent/mm/model/d;->bsR:Lcom/tencent/mm/compatible/util/a$a;
 
     .line 94
-    iput-object v2, p0, Lcom/tencent/mm/model/d;->bzP:Lcom/tencent/mm/model/d$a;
+    iput-object v2, p0, Lcom/tencent/mm/model/d;->bsS:Lcom/tencent/mm/model/d$a;
 
     .line 97
     :cond_0

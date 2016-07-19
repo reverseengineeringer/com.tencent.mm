@@ -8,23 +8,23 @@ final class CountryCodeUI$5
 {
   CountryCodeUI$5(CountryCodeUI paramCountryCodeUI) {}
   
-  public final void ls(String paramString)
+  public final void md(String paramString)
   {
     int i = 0;
-    if (luc.getString(2131431014).equals(paramString)) {
-      CountryCodeUI.b(luc).setSelection(0);
+    if (lVe.getString(2131234783).equals(paramString)) {
+      CountryCodeUI.b(lVe).setSelection(0);
     }
     for (;;)
     {
       return;
       int j = Integer.decode(paramString.substring(0, paramString.length() - 1)).intValue();
-      paramString = cluc).eEs;
+      paramString = clVe).eKH;
       if (paramString != null) {
         while (i < paramString.length)
         {
           if (paramString[i] == j)
           {
-            CountryCodeUI.b(luc).setSelection(i + CountryCodeUI.b(luc).getHeaderViewsCount());
+            CountryCodeUI.b(lVe).setSelection(i + CountryCodeUI.b(lVe).getHeaderViewsCount());
             return;
           }
           i += 1;

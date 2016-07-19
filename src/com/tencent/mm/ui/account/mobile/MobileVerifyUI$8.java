@@ -14,29 +14,29 @@ import com.tencent.mm.ui.tools.m;
 final class MobileVerifyUI$8
   implements View.OnClickListener
 {
-  private final int kze = 0;
-  private final int kzf = 1;
-  private final int kzg = 2;
+  private final int kYl = 0;
+  private final int kYm = 1;
+  private final int kYn = 2;
   
   MobileVerifyUI$8(MobileVerifyUI paramMobileVerifyUI) {}
   
   public final void onClick(View paramView)
   {
-    paramView = new m(kzc);
-    hle = new n.c()
+    paramView = new m(kYj);
+    hoS = new n.c()
     {
       public final void a(l paramAnonymousl)
       {
-        paramAnonymousl.b(0, kzc.getString(2131427715));
-        if (com.tencent.mm.ac.b.ih(kzc.aBH)) {
-          paramAnonymousl.b(1, kzc.getString(2131428638));
+        paramAnonymousl.b(0, kYj.getString(2131233858));
+        if (com.tencent.mm.af.b.iy(kYj.anZ)) {
+          paramAnonymousl.b(1, kYj.getString(2131231315));
         }
-        if ((MobileVerifyUI.f(kzc) == 2) && (kzc.kyY)) {
-          paramAnonymousl.b(2, kzc.getString(2131427659));
+        if ((MobileVerifyUI.f(kYj) == 2) && (kYj.kYf)) {
+          paramAnonymousl.b(2, kYj.getString(2131234396));
         }
       }
     };
-    hlf = new n.d()
+    hoT = new n.d()
     {
       public final void d(MenuItem paramAnonymousMenuItem, int paramAnonymousInt)
       {
@@ -45,31 +45,31 @@ final class MobileVerifyUI$8
         default: 
           return;
         case 0: 
-          MobileVerifyUI.g(kzc);
+          MobileVerifyUI.g(kYj);
           return;
         }
-        kzc.age();
-        if (MobileVerifyUI.f(kzc) == 2) {
-          com.tencent.mm.plugin.a.b.kC("R200_500");
+        kYj.aiI();
+        if (MobileVerifyUI.f(kYj) == 2) {
+          com.tencent.mm.plugin.a.b.ll("R200_500");
         }
         for (;;)
         {
-          paramAnonymousMenuItem = new Intent(kzc, RegByMobileVoiceVerifyUI.class);
+          paramAnonymousMenuItem = new Intent(kYj, RegByMobileVoiceVerifyUI.class);
           Bundle localBundle = new Bundle();
-          localBundle.putString("bindmcontact_mobile", kzc.aBH);
-          localBundle.putInt("voice_verify_type", MobileVerifyUI.h(kzc));
+          localBundle.putString("bindmcontact_mobile", kYj.anZ);
+          localBundle.putInt("voice_verify_type", MobileVerifyUI.h(kYj));
           paramAnonymousMenuItem.putExtras(localBundle);
-          kzc.startActivity(paramAnonymousMenuItem);
+          kYj.startActivity(paramAnonymousMenuItem);
           return;
-          if (MobileVerifyUI.f(kzc) == 1) {
-            com.tencent.mm.plugin.a.b.kC("L600_400");
-          } else if (MobileVerifyUI.f(kzc) == 3) {
-            com.tencent.mm.plugin.a.b.kC("F200_300");
+          if (MobileVerifyUI.f(kYj) == 1) {
+            com.tencent.mm.plugin.a.b.ll("L600_400");
+          } else if (MobileVerifyUI.f(kYj) == 3) {
+            com.tencent.mm.plugin.a.b.ll("F200_300");
           }
         }
       }
     };
-    paramView.biF();
+    paramView.boB();
   }
 }
 

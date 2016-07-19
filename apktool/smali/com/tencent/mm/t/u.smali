@@ -1,9 +1,6 @@
 .class public final Lcom/tencent/mm/t/u;
-.super Lcom/tencent/mm/r/j;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcom/tencent/mm/network/j;
 
 
 # annotations
@@ -15,225 +12,1023 @@
 
 
 # instance fields
-.field private anM:Lcom/tencent/mm/r/d;
+.field private bAa:J
 
-.field anN:Lcom/tencent/mm/r/a;
-
-.field private bJo:Lcom/tencent/mm/t/u$a;
-
-.field private bnU:Ljava/lang/String;
+.field private bzZ:Loicq/wlogin_sdk/request/b;
 
 
 # direct methods
-.method private constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
+.method public constructor <init>()V
+    .locals 7
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v6, 0x0
 
-    .line 36
-    invoke-direct {p0}, Lcom/tencent/mm/r/j;-><init>()V
+    .line 63
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
-    iput-object p1, p0, Lcom/tencent/mm/t/u;->bnU:Ljava/lang/String;
+    .line 27
+    const-wide/16 v0, 0x0
 
-    .line 38
-    const-string/jumbo v0, "!44@/B4Tb64lLpK+IBX8XDgnvi1y6TS/fhc5+AD2kgLTL0k="
+    iput-wide v0, p0, Lcom/tencent/mm/t/u;->bAa:J
 
-    const-string/jumbo v1, "[BizAttr] NetSceneBizAttrSync (%s)"
+    .line 64
+    const/4 v0, 0x0
 
+    iput-object v0, p0, Lcom/tencent/mm/t/u;->bzZ:Loicq/wlogin_sdk/request/b;
+
+    .line 66
+    :try_start_0
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
+
+    move-result-wide v0
+
+    .line 67
+    new-instance v2, Loicq/wlogin_sdk/request/b;
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    sget v4, Lcom/tencent/mm/protocal/c;->jry:I
+
+    invoke-direct {v2, v3, v4}, Loicq/wlogin_sdk/request/b;-><init>(Landroid/content/Context;I)V
+
+    iput-object v2, p0, Lcom/tencent/mm/t/u;->bzZ:Loicq/wlogin_sdk/request/b;
+
+    .line 68
     const/4 v2, 0x1
 
-    new-array v2, v2, [Ljava/lang/Object;
+    sput v2, Loicq/wlogin_sdk/tools/util;->mPB:I
 
-    aput-object p1, v2, v3
+    .line 69
+    new-instance v2, Lcom/tencent/mm/t/u$a;
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-direct {v2, p0}, Lcom/tencent/mm/t/u$a;-><init>(Lcom/tencent/mm/t/u;)V
 
-    .line 40
-    new-instance v0, Lcom/tencent/mm/r/a$a;
+    sput-object v2, Loicq/wlogin_sdk/tools/util;->mPC:Loicq/wlogin_sdk/tools/b;
 
-    invoke-direct {v0}, Lcom/tencent/mm/r/a$a;-><init>()V
+    .line 70
+    const-string/jumbo v2, "MicroMsg.WtloginMgr"
 
-    .line 41
-    const/16 v1, 0x433
+    const-string/jumbo v3, "dkstart wtlogin init :%d"
 
-    iput v1, v0, Lcom/tencent/mm/r/a$a;->bEY:I
+    const/4 v4, 0x1
 
-    .line 42
-    const-string/jumbo v1, "/cgi-bin/mmbiz-bin/bizattr/bizattrsync"
+    new-array v4, v4, [Ljava/lang/Object;
 
-    iput-object v1, v0, Lcom/tencent/mm/r/a$a;->uri:Ljava/lang/String;
+    const/4 v5, 0x0
 
-    .line 43
-    new-instance v1, Lcom/tencent/mm/protocal/b/ex;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
 
-    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/ex;-><init>()V
+    move-result-wide v0
 
-    iput-object v1, v0, Lcom/tencent/mm/r/a$a;->bFa:Lcom/tencent/mm/at/a;
-
-    .line 44
-    new-instance v1, Lcom/tencent/mm/protocal/b/ey;
-
-    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/ey;-><init>()V
-
-    iput-object v1, v0, Lcom/tencent/mm/r/a$a;->bFb:Lcom/tencent/mm/at/a;
-
-    .line 45
-    iput v3, v0, Lcom/tencent/mm/r/a$a;->bFc:I
-
-    .line 46
-    iput v3, v0, Lcom/tencent/mm/r/a$a;->bFd:I
-
-    .line 47
-    invoke-virtual {v0}, Lcom/tencent/mm/r/a$a;->vy()Lcom/tencent/mm/r/a;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/t/u;->anN:Lcom/tencent/mm/r/a;
+    aput-object v0, v4, v5
 
-    .line 48
-    iget-object v0, p0, Lcom/tencent/mm/t/u;->anN:Lcom/tencent/mm/r/a;
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, v0, Lcom/tencent/mm/r/a;->bEW:Lcom/tencent/mm/r/a$b;
-
-    iget-object v0, v0, Lcom/tencent/mm/r/a$b;->bFf:Lcom/tencent/mm/at/a;
-
-    check-cast v0, Lcom/tencent/mm/protocal/b/ex;
-
-    .line 49
-    iget-object v1, p0, Lcom/tencent/mm/t/u;->bnU:Ljava/lang/String;
-
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/ex;->iYR:Ljava/lang/String;
-
-    .line 50
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 51
-    new-instance v2, Lcom/tencent/mm/at/b;
-
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kA(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    invoke-direct {v2, v1}, Lcom/tencent/mm/at/b;-><init>([B)V
-
-    iput-object v2, v0, Lcom/tencent/mm/protocal/b/ex;->jcr:Lcom/tencent/mm/at/b;
-
-    .line 52
+    .line 74
+    :goto_0
     return-void
-.end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/t/u$a;)V
-    .locals 0
+    .line 71
+    :catch_0
+    move-exception v0
 
-    .prologue
-    .line 32
-    invoke-direct {p0, p1, p2}, Lcom/tencent/mm/t/u;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    .line 72
+    const-string/jumbo v1, "MicroMsg.WtloginMgr"
 
-    .line 33
-    iput-object p3, p0, Lcom/tencent/mm/t/u;->bJo:Lcom/tencent/mm/t/u$a;
+    const-string/jumbo v2, "Failed initializing WtloginMgr."
 
-    .line 34
-    return-void
+    new-array v3, v6, [Ljava/lang/Object;
+
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/r/d;)I
-    .locals 1
+.method public final M(J)[B
+    .locals 9
 
     .prologue
-    .line 72
-    iput-object p2, p0, Lcom/tencent/mm/t/u;->anM:Lcom/tencent/mm/r/d;
+    const/4 v7, 0x1
 
-    .line 73
-    iget-object v0, p0, Lcom/tencent/mm/t/u;->anN:Lcom/tencent/mm/r/a;
+    const/4 v6, 0x0
 
-    invoke-virtual {p0, p1, v0, p0}, Lcom/tencent/mm/t/u;->a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/network/o;Lcom/tencent/mm/network/j;)I
+    .line 144
+    iget-wide v0, p0, Lcom/tencent/mm/t/u;->bAa:J
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public final a(IIILjava/lang/String;Lcom/tencent/mm/network/o;[B)V
-    .locals 5
-
-    .prologue
-    .line 56
-    const-string/jumbo v0, "!44@/B4Tb64lLpK+IBX8XDgnvi1y6TS/fhc5+AD2kgLTL0k="
-
-    const-string/jumbo v1, "[BizAttr] onGYNetEnd netId %d, errType %d, errCode %d, errMsg %s"
-
-    const/4 v2, 0x4
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x2
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x3
-
-    aput-object p4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 57
-    iget-object v0, p0, Lcom/tencent/mm/t/u;->anM:Lcom/tencent/mm/r/d;
+    cmp-long v0, p1, v0
 
     if-eqz v0, :cond_0
 
-    .line 58
-    iget-object v0, p0, Lcom/tencent/mm/t/u;->anM:Lcom/tencent/mm/r/d;
+    .line 145
+    const-string/jumbo v0, "MicroMsg.WtloginMgr"
 
-    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/r/d;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    const-string/jumbo v1, "dkwt getVerifyImg Error uin ReqUin:%d RespUin:%d"
 
-    .line 60
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    iget-wide v4, p0, Lcom/tencent/mm/t/u;->bAa:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    aput-object v3, v2, v6
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    aput-object v3, v2, v7
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 146
+    new-array v0, v6, [B
+
+    .line 154
+    :goto_0
+    return-object v0
+
+    .line 150
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/t/u;->bJo:Lcom/tencent/mm/t/u$a;
+    :try_start_0
+    iget-object v0, p0, Lcom/tencent/mm/t/u;->bzZ:Loicq/wlogin_sdk/request/b;
+
+    invoke-virtual {v0, p1, p2}, Loicq/wlogin_sdk/request/b;->ew(J)[B
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 151
+    :catch_0
+    move-exception v0
+
+    .line 152
+    const-string/jumbo v1, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v2, "dkwt getVerifyImg e:%s"
+
+    new-array v3, v7, [Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v3, v6
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 153
+    const-string/jumbo v1, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v2, "exception:%s"
+
+    new-array v3, v7, [Ljava/lang/Object;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v3, v6
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 154
+    new-array v0, v6, [B
+
+    goto :goto_0
+.end method
+
+.method public final N(J)[B
+    .locals 9
+
+    .prologue
+    const/4 v7, 0x1
+
+    const/4 v6, 0x0
+
+    .line 181
+    iget-wide v0, p0, Lcom/tencent/mm/t/u;->bAa:J
+
+    cmp-long v0, p1, v0
+
+    if-eqz v0, :cond_0
+
+    .line 182
+    const-string/jumbo v0, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v1, "dkwt getA2KeyByRespBuf Error uin ReqUin:%d RespUin:%d"
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    iget-wide v4, p0, Lcom/tencent/mm/t/u;->bAa:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    aput-object v3, v2, v6
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    aput-object v3, v2, v7
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 183
+    new-array v0, v6, [B
+
+    .line 192
+    :goto_0
+    return-object v0
+
+    .line 187
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lcom/tencent/mm/t/u;->bzZ:Loicq/wlogin_sdk/request/b;
+
+    iget-object v0, v0, Loicq/wlogin_sdk/request/b;->mNg:Loicq/wlogin_sdk/request/i;
+
+    const-wide/32 v2, 0x1f1d5a7a
+
+    invoke-virtual {v0, p1, p2, v2, v3}, Loicq/wlogin_sdk/request/i;->s(JJ)Loicq/wlogin_sdk/sharemem/WloginSigInfo;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    const/4 v0, 0x0
+
+    .line 188
+    :goto_1
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [B
+
+    goto :goto_0
+
+    .line 187
+    :cond_1
+    new-instance v0, Loicq/wlogin_sdk/request/WUserSigInfo;
+
+    invoke-direct {v0}, Loicq/wlogin_sdk/request/WUserSigInfo;-><init>()V
+
+    invoke-virtual {v0, v1}, Loicq/wlogin_sdk/request/WUserSigInfo;->get_clone(Loicq/wlogin_sdk/sharemem/WloginSigInfo;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    .line 189
+    :catch_0
+    move-exception v0
+
+    .line 190
+    const-string/jumbo v1, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v2, "dkwt getA2KeyByRespBuf e:%s"
+
+    new-array v3, v7, [Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v3, v6
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 191
+    const-string/jumbo v1, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v2, "exception:%s"
+
+    new-array v3, v7, [Ljava/lang/Object;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v3, v6
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 192
+    new-array v0, v6, [B
+
+    goto :goto_0
+
+    .line 188
+    :cond_2
+    :try_start_1
+    iget-object v0, v0, Loicq/wlogin_sdk/request/WUserSigInfo;->_A2:[B
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_0
+.end method
+
+.method public final O(J)V
+    .locals 9
+
+    .prologue
+    const/4 v7, 0x1
+
+    const/4 v6, 0x0
+
+    .line 197
+    iget-wide v0, p0, Lcom/tencent/mm/t/u;->bAa:J
+
+    cmp-long v0, p1, v0
+
+    if-eqz v0, :cond_0
+
+    .line 198
+    const-string/jumbo v0, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v1, "dkwt clearUserWtInfo Error uin ReqUin:%d RespUin:%d"
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    iget-wide v4, p0, Lcom/tencent/mm/t/u;->bAa:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    aput-object v3, v2, v6
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    aput-object v3, v2, v7
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 208
+    :goto_0
+    return-void
+
+    .line 203
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lcom/tencent/mm/t/u;->bzZ:Loicq/wlogin_sdk/request/b;
+
+    invoke-virtual {v0, p1, p2}, Loicq/wlogin_sdk/request/b;->ex(J)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 204
+    :catch_0
+    move-exception v0
+
+    .line 205
+    const-string/jumbo v1, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v2, "dkwt clearUserWtInfo e:%s"
+
+    new-array v3, v7, [Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v3, v6
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 206
+    const-string/jumbo v1, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v2, "exception:%s"
+
+    new-array v3, v7, [Ljava/lang/Object;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v3, v6
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
+.method public final a(J[B)Z
+    .locals 9
+
+    .prologue
+    const/4 v4, 0x2
+
+    const/4 v1, 0x1
+
+    const/4 v0, 0x0
+
+    .line 123
+    iget-wide v2, p0, Lcom/tencent/mm/t/u;->bAa:J
+
+    cmp-long v2, p1, v2
+
+    if-eqz v2, :cond_1
+
+    .line 124
+    const-string/jumbo v2, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v3, "dkwt parseRespLoginBuf Error uin ReqUin:%d RespUin:%d"
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    iget-wide v6, p0, Lcom/tencent/mm/t/u;->bAa:J
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    aput-object v5, v4, v0
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    aput-object v5, v4, v1
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 139
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 127
+    :cond_1
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 128
+    const-string/jumbo v1, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v2, "dkwt parseRespLoginBuf respBuf is null."
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 133
+    :cond_2
+    :try_start_0
+    iget-object v3, p0, Lcom/tencent/mm/t/u;->bzZ:Loicq/wlogin_sdk/request/b;
+
+    if-eqz p3, :cond_3
+
+    array-length v2, p3
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, v3, Loicq/wlogin_sdk/request/b;->mNm:Loicq/wlogin_sdk/request/d;
+
+    if-nez v2, :cond_4
+
+    :cond_3
+    const/16 v2, -0x3f9
+
+    .line 134
+    :goto_1
+    const-string/jumbo v3, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v4, "dkwt parseRespLoginBuf buflen:%d ret:%d"
+
+    const/4 v5, 0x2
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    array-length v7, p3
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    aput-object v7, v5, v6
+
+    const/4 v6, 0x1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    aput-object v7, v5, v6
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 135
+    if-nez v2, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    .line 133
+    :cond_4
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v4, "user:"
+
+    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v4, v3, Loicq/wlogin_sdk/request/b;->mNg:Loicq/wlogin_sdk/request/i;
+
+    iget-wide v4, v4, Loicq/wlogin_sdk/request/i;->_uin:J
+
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string/jumbo v4, " ResolveSvrData ..."
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Loicq/wlogin_sdk/tools/util;->Lo(Ljava/lang/String;)V
+
+    iget-object v2, v3, Loicq/wlogin_sdk/request/b;->mNm:Loicq/wlogin_sdk/request/d;
+
+    array-length v4, p3
+
+    invoke-virtual {v2, p3, v4}, Loicq/wlogin_sdk/request/d;->z([BI)I
+
+    move-result v2
+
+    if-ne v2, v1, :cond_5
+
+    iget-object v4, v3, Loicq/wlogin_sdk/request/b;->mNg:Loicq/wlogin_sdk/request/i;
+
+    iget-wide v4, v4, Loicq/wlogin_sdk/request/i;->_uin:J
+
+    invoke-virtual {v3, v4, v5}, Loicq/wlogin_sdk/request/b;->ex(J)V
+
+    :cond_5
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "user:"
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, v3, Loicq/wlogin_sdk/request/b;->mNg:Loicq/wlogin_sdk/request/i;
+
+    iget-wide v6, v3, Loicq/wlogin_sdk/request/i;->_uin:J
+
+    invoke-virtual {v4, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string/jumbo v4, " ResolveSvrData ret="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Loicq/wlogin_sdk/tools/util;->Lo(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    .line 136
+    :catch_0
+    move-exception v2
+
+    .line 137
+    const-string/jumbo v3, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v4, "dkwt parseRespLoginBuf e:%s"
+
+    new-array v5, v1, [Ljava/lang/Object;
+
+    invoke-virtual {v2}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v6
+
+    aput-object v6, v5, v0
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 138
+    const-string/jumbo v3, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v4, "exception:%s"
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v2
+
+    aput-object v2, v1, v0
+
+    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto/16 :goto_0
+.end method
+
+.method public final a(JLjava/lang/String;Z)[B
+    .locals 9
+
+    .prologue
+    const/16 v7, 0x2716
+
+    const/4 v6, 0x2
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 88
+    const-string/jumbo v3, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v4, "dkwt isTestWtLogin:%b val:%d"
+
+    new-array v5, v6, [Ljava/lang/Object;
+
+    sget v0, Lcom/tencent/mm/platformtools/q;->ciq:I
+
+    if-ne v0, v7, :cond_1
+
+    move v0, v1
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    aput-object v0, v5, v2
+
+    sget v0, Lcom/tencent/mm/platformtools/q;->cir:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v5, v1
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 89
+    sget v0, Lcom/tencent/mm/platformtools/q;->ciq:I
+
+    if-ne v0, v7, :cond_3
+
+    .line 90
+    sget v0, Lcom/tencent/mm/platformtools/q;->cir:I
+
+    if-ne v0, v1, :cond_2
+
+    .line 91
+    sput v2, Lcom/tencent/mm/platformtools/q;->cir:I
+
+    .line 92
+    new-array v0, v2, [B
+
+    .line 118
+    :cond_0
+    :goto_1
+    return-object v0
+
+    :cond_1
+    move v0, v2
+
+    .line 88
+    goto :goto_0
+
+    .line 94
+    :cond_2
+    sget v0, Lcom/tencent/mm/platformtools/q;->cir:I
+
+    if-ne v0, v6, :cond_3
+
+    .line 95
+    new-array v0, v2, [B
+
+    goto :goto_1
+
+    .line 100
+    :cond_3
+    :try_start_0
+    iput-wide p1, p0, Lcom/tencent/mm/t/u;->bAa:J
+
+    .line 101
+    if-eqz p4, :cond_4
+
+    const/4 v0, 0x0
+
+    .line 106
+    :goto_2
+    const-string/jumbo v4, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v5, "dkwt getReqLoginBuf sig:%d uin:%d manualauth:%b  byA1Buf:%b "
+
+    const/4 v3, 0x4
+
+    new-array v6, v3, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    const/16 v7, 0x2040
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    aput-object v7, v6, v3
+
+    const/4 v3, 0x1
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    aput-object v7, v6, v3
+
+    const/4 v3, 0x2
+
+    invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v7
+
+    aput-object v7, v6, v3
+
+    const/4 v7, 0x3
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
+
+    move-result v3
+
+    if-nez v3, :cond_5
+
+    move v3, v1
+
+    :goto_3
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    aput-object v3, v6, v7
+
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 109
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 112
+    iget-object v0, p0, Lcom/tencent/mm/t/u;->bzZ:Loicq/wlogin_sdk/request/b;
+
+    sget-object v3, Loicq/wlogin_sdk/request/b$a;->mNr:Loicq/wlogin_sdk/request/b$a;
+
+    new-instance v4, Ljava/lang/String;
+
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->lj(Ljava/lang/String;)[B
+
+    move-result-object v5
+
+    const-string/jumbo v6, "ISO-8859-1"
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+
+    invoke-virtual {v0, p1, p2, v3, v4}, Loicq/wlogin_sdk/request/b;->a(JLoicq/wlogin_sdk/request/b$a;Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    goto :goto_1
+
+    .line 101
+    :cond_4
+    iget-object v0, p0, Lcom/tencent/mm/t/u;->bzZ:Loicq/wlogin_sdk/request/b;
+
+    sget-object v3, Loicq/wlogin_sdk/request/b$a;->mNs:Loicq/wlogin_sdk/request/b$a;
+
+    const-string/jumbo v4, ""
+
+    invoke-virtual {v0, p1, p2, v3, v4}, Loicq/wlogin_sdk/request/b;->a(JLoicq/wlogin_sdk/request/b$a;Ljava/lang/String;)[B
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    goto :goto_2
+
+    :cond_5
+    move v3, v2
+
+    .line 106
+    goto :goto_3
+
+    .line 115
+    :catch_0
+    move-exception v0
+
+    .line 116
+    const-string/jumbo v3, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v4, "dkwt getReqLoginBuf e:%s"
+
+    new-array v5, v1, [Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v6
+
+    aput-object v6, v5, v2
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 117
+    const-string/jumbo v3, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v4, "exception:%s"
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v1, v2
+
+    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 118
+    new-array v0, v2, [B
+
+    goto/16 :goto_1
+.end method
+
+.method public final b(JLjava/lang/String;)[B
+    .locals 9
+
+    .prologue
+    const/4 v7, 0x1
+
+    const/4 v6, 0x0
+
+    .line 160
+    iget-wide v0, p0, Lcom/tencent/mm/t/u;->bAa:J
+
+    cmp-long v0, p1, v0
+
+    if-eqz v0, :cond_0
+
+    .line 161
+    const-string/jumbo v0, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v1, "dkwt getReqLoginBufbyVerifyImg Error uin ReqUin:%d RespUin:%d"
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    iget-wide v4, p0, Lcom/tencent/mm/t/u;->bAa:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    aput-object v3, v2, v6
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    aput-object v3, v2, v7
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 162
+    new-array v0, v6, [B
+
+    .line 176
+    :goto_0
+    return-object v0
+
+    .line 164
+    :cond_0
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 61
-    iget-object v0, p0, Lcom/tencent/mm/t/u;->bJo:Lcom/tencent/mm/t/u$a;
+    .line 166
+    const-string/jumbo v0, "****"
 
-    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/t/u$a;->c(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
-    .line 63
+    move-result-object v0
+
+    .line 172
+    :goto_1
+    :try_start_0
+    iget-object v1, p0, Lcom/tencent/mm/t/u;->bzZ:Loicq/wlogin_sdk/request/b;
+
+    invoke-virtual {v1, p1, p2, v0}, Loicq/wlogin_sdk/request/b;->e(J[B)[B
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 168
     :cond_1
-    return-void
-.end method
+    invoke-virtual {p3}, Ljava/lang/String;->getBytes()[B
 
-.method public final getType()I
-    .locals 1
+    move-result-object v0
 
-    .prologue
-    .line 67
-    const/16 v0, 0x433
+    goto :goto_1
 
-    return v0
+    .line 173
+    :catch_0
+    move-exception v0
+
+    .line 174
+    const-string/jumbo v1, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v2, "dkwt getReqLoginBufbyVerifyImg e:%s"
+
+    new-array v3, v7, [Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v3, v6
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 175
+    const-string/jumbo v1, "MicroMsg.WtloginMgr"
+
+    const-string/jumbo v2, "exception:%s"
+
+    new-array v3, v7, [Ljava/lang/Object;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v3, v6
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 176
+    new-array v0, v6, [B
+
+    goto :goto_0
 .end method

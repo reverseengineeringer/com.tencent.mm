@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic ktY:Lcom/tencent/mm/ui/account/LoginUI;
+.field final synthetic kSE:Lcom/tencent/mm/modelsimple/r;
 
-.field final synthetic ktw:Lcom/tencent/mm/modelsimple/t;
+.field final synthetic kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/account/LoginUI;Lcom/tencent/mm/modelsimple/t;)V
+.method constructor <init>(Lcom/tencent/mm/ui/account/LoginUI;Lcom/tencent/mm/modelsimple/r;)V
     .locals 0
 
     .prologue
-    .line 687
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginUI$9;->ktY:Lcom/tencent/mm/ui/account/LoginUI;
+    .line 666
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginUI$9;->kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/LoginUI$9;->ktw:Lcom/tencent/mm/modelsimple/t;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/LoginUI$9;->kSE:Lcom/tencent/mm/modelsimple/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,26 +44,26 @@
     .locals 3
 
     .prologue
-    .line 691
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 670
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginUI$9;->ktw:Lcom/tencent/mm/modelsimple/t;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginUI$9;->kSE:Lcom/tencent/mm/modelsimple/r;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
-    .line 692
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 671
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x2bd
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/LoginUI$9;->ktY:Lcom/tencent/mm/ui/account/LoginUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/LoginUI$9;->kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
-    .line 693
+    .line 672
     return-void
 .end method

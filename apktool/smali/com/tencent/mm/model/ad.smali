@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract tf()V
+.method public abstract tg()V
 .end method

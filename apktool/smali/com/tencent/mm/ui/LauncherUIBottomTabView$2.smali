@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/LauncherUIBottomTabView$2;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+.field final synthetic kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
 
 # direct methods
@@ -24,9 +24,9 @@
 
     .prologue
     .line 111
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$2;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$2;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     return-void
 .end method
@@ -38,14 +38,14 @@
 
     .prologue
     .line 114
-    const-string/jumbo v0, "!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ="
+    const-string/jumbo v0, "MicroMsg.LauncherUITabView"
 
     const-string/jumbo v1, "onMainTabClick"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 115
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$2;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$2;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->d(Lcom/tencent/mm/ui/LauncherUIBottomTabView;)Lcom/tencent/mm/ui/c$a;
 
@@ -53,7 +53,7 @@
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/c$a;->gr(I)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/c$a;->ho(I)V
 
     .line 116
     return-void

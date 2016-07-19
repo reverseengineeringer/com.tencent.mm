@@ -16,55 +16,111 @@
 
 
 # static fields
-.field private static final lK:[I
+.field private static final ma:[I
 
 
 # instance fields
-.field fD:Ljava/util/ArrayList;
-
-.field final lL:Landroid/content/res/Resources;
-
-.field private lM:Z
-
-.field private lN:Z
-
-.field lO:Landroid/support/v7/internal/view/menu/f$a;
-
-.field private lP:Ljava/util/ArrayList;
-
-.field lQ:Z
-
-.field lR:Ljava/util/ArrayList;
-
-.field private lS:Ljava/util/ArrayList;
-
-.field private lT:Z
-
-.field public lU:I
-
-.field private lV:Landroid/view/ContextMenu$ContextMenuInfo;
-
-.field lW:Ljava/lang/CharSequence;
-
-.field lX:Landroid/graphics/drawable/Drawable;
-
-.field lY:Landroid/view/View;
-
-.field private lZ:Z
+.field fZ:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v7/internal/view/menu/h;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field final mContext:Landroid/content/Context;
 
-.field private ma:Z
-
-.field mb:Z
+.field final mb:Landroid/content/res/Resources;
 
 .field private mc:Z
 
-.field private md:Ljava/util/ArrayList;
+.field private md:Z
 
-.field private me:Ljava/util/concurrent/CopyOnWriteArrayList;
+.field me:Landroid/support/v7/internal/view/menu/f$a;
 
-.field mf:Landroid/support/v7/internal/view/menu/h;
+.field private mf:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v7/internal/view/menu/h;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field mg:Z
+
+.field mh:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v7/internal/view/menu/h;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private mi:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v7/internal/view/menu/h;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private mj:Z
+
+.field public mk:I
+
+.field private ml:Landroid/view/ContextMenu$ContextMenuInfo;
+
+.field mm:Ljava/lang/CharSequence;
+
+.field mn:Landroid/graphics/drawable/Drawable;
+
+.field mo:Landroid/view/View;
+
+.field private mp:Z
+
+.field private mq:Z
+
+.field mr:Z
+
+.field private ms:Z
+
+.field private mt:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v7/internal/view/menu/h;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private mu:Ljava/util/concurrent/CopyOnWriteArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/CopyOnWriteArrayList",
+            "<",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Landroid/support/v7/internal/view/menu/l;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field mv:Landroid/support/v7/internal/view/menu/h;
 
 
 # direct methods
@@ -79,7 +135,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Landroid/support/v7/internal/view/menu/f;->lK:[I
+    sput-object v0, Landroid/support/v7/internal/view/menu/f;->ma:[I
 
     return-void
 
@@ -108,33 +164,33 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 115
-    iput v1, p0, Landroid/support/v7/internal/view/menu/f;->lU:I
+    iput v1, p0, Landroid/support/v7/internal/view/menu/f;->mk:I
 
     .line 143
-    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->lZ:Z
+    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->mp:Z
 
     .line 145
-    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->ma:Z
+    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->mq:Z
 
     .line 147
-    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->mb:Z
+    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->mr:Z
 
     .line 149
-    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->mc:Z
+    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->ms:Z
 
     .line 151
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v2, p0, Landroid/support/v7/internal/view/menu/f;->md:Ljava/util/ArrayList;
+    iput-object v2, p0, Landroid/support/v7/internal/view/menu/f;->mt:Ljava/util/ArrayList;
 
     .line 153
     new-instance v2, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
-    iput-object v2, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iput-object v2, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .line 194
     iput-object p1, p0, Landroid/support/v7/internal/view/menu/f;->mContext:Landroid/content/Context;
@@ -144,44 +200,44 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Landroid/support/v7/internal/view/menu/f;->lL:Landroid/content/res/Resources;
+    iput-object v2, p0, Landroid/support/v7/internal/view/menu/f;->mb:Landroid/content/res/Resources;
 
     .line 197
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v2, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iput-object v2, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     .line 199
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v2, p0, Landroid/support/v7/internal/view/menu/f;->lP:Ljava/util/ArrayList;
+    iput-object v2, p0, Landroid/support/v7/internal/view/menu/f;->mf:Ljava/util/ArrayList;
 
     .line 200
-    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->lQ:Z
+    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mg:Z
 
     .line 202
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v2, p0, Landroid/support/v7/internal/view/menu/f;->lR:Ljava/util/ArrayList;
+    iput-object v2, p0, Landroid/support/v7/internal/view/menu/f;->mh:Ljava/util/ArrayList;
 
     .line 203
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v2, p0, Landroid/support/v7/internal/view/menu/f;->lS:Ljava/util/ArrayList;
+    iput-object v2, p0, Landroid/support/v7/internal/view/menu/f;->mi:Ljava/util/ArrayList;
 
     .line 204
-    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->lT:Z
+    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mj:Z
 
     .line 206
-    iget-object v2, p0, Landroid/support/v7/internal/view/menu/f;->lL:Landroid/content/res/Resources;
+    iget-object v2, p0, Landroid/support/v7/internal/view/menu/f;->mb:Landroid/content/res/Resources;
 
     invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -191,9 +247,9 @@
 
     if-eq v2, v0, :cond_0
 
-    iget-object v2, p0, Landroid/support/v7/internal/view/menu/f;->lL:Landroid/content/res/Resources;
+    iget-object v2, p0, Landroid/support/v7/internal/view/menu/f;->mb:Landroid/content/res/Resources;
 
-    const v3, 0x7f0f0005
+    const v3, 0x7f0d0005
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -202,7 +258,7 @@
     if-eqz v2, :cond_0
 
     :goto_0
-    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->lN:Z
+    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->md:Z
 
     .line 207
     return-void
@@ -223,7 +279,7 @@
     const/4 v4, 0x0
 
     .line 872
-    iget-object v5, p0, Landroid/support/v7/internal/view/menu/f;->md:Ljava/util/ArrayList;
+    iget-object v5, p0, Landroid/support/v7/internal/view/menu/f;->mt:Ljava/util/ArrayList;
 
     .line 873
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
@@ -376,7 +432,7 @@
 
     if-ltz v0, :cond_0
 
-    sget-object v1, Landroid/support/v7/internal/view/menu/f;->lK:[I
+    sget-object v1, Landroid/support/v7/internal/view/menu/f;->ma:[I
 
     array-length v1, v1
 
@@ -392,7 +448,7 @@
     throw v0
 
     :cond_1
-    sget-object v1, Landroid/support/v7/internal/view/menu/f;->lK:[I
+    sget-object v1, Landroid/support/v7/internal/view/menu/f;->ma:[I
 
     aget v0, v1, v0
 
@@ -407,7 +463,7 @@
     .line 403
     new-instance v0, Landroid/support/v7/internal/view/menu/h;
 
-    iget v7, p0, Landroid/support/v7/internal/view/menu/f;->lU:I
+    iget v7, p0, Landroid/support/v7/internal/view/menu/f;->mk:I
 
     move-object v1, p0
 
@@ -422,20 +478,20 @@
     invoke-direct/range {v0 .. v7}, Landroid/support/v7/internal/view/menu/h;-><init>(Landroid/support/v7/internal/view/menu/f;IIIILjava/lang/CharSequence;I)V
 
     .line 406
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->lV:Landroid/view/ContextMenu$ContextMenuInfo;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->ml:Landroid/view/ContextMenu$ContextMenuInfo;
 
     if-eqz v1, :cond_2
 
     .line 408
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->lV:Landroid/view/ContextMenu$ContextMenuInfo;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->ml:Landroid/view/ContextMenu$ContextMenuInfo;
 
-    iput-object v1, v0, Landroid/support/v7/internal/view/menu/h;->mq:Landroid/view/ContextMenu$ContextMenuInfo;
+    iput-object v1, v0, Landroid/support/v7/internal/view/menu/h;->mG:Landroid/view/ContextMenu$ContextMenuInfo;
 
     .line 411
     :cond_2
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
-    iget-object v2, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v2, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-static {v2, v5}, Landroid/support/v7/internal/view/menu/f;->b(Ljava/util/ArrayList;I)I
 
@@ -446,7 +502,7 @@
     .line 412
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1}, Landroid/support/v7/internal/view/menu/f;->s(Z)V
+    invoke-virtual {p0, v1}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
 
     .line 414
     return-object v0
@@ -454,6 +510,17 @@
 
 .method private a(Ljava/util/List;ILandroid/view/KeyEvent;)V
     .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Landroid/support/v7/internal/view/menu/h;",
+            ">;I",
+            "Landroid/view/KeyEvent;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
     const/16 v10, 0x43
@@ -491,7 +558,7 @@
 
     .line 837
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -504,7 +571,7 @@
     if-ge v2, v7, :cond_0
 
     .line 839
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -595,6 +662,15 @@
 
 .method private static b(Ljava/util/ArrayList;I)I
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v7/internal/view/menu/h;",
+            ">;I)I"
+        }
+    .end annotation
 
     .prologue
     .line 791
@@ -617,7 +693,7 @@
     check-cast v0, Landroid/support/v7/internal/view/menu/h;
 
     .line 793
-    iget v0, v0, Landroid/support/v7/internal/view/menu/h;->kl:I
+    iget v0, v0, Landroid/support/v7/internal/view/menu/h;->kC:I
 
     if-gt v0, p1, :cond_0
 
@@ -650,7 +726,7 @@
     .line 522
     if-ltz p1, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -665,7 +741,7 @@
 
     .line 526
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
@@ -675,7 +751,7 @@
     .line 529
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->s(Z)V
+    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
 
     goto :goto_0
 .end method
@@ -700,7 +776,7 @@
 
     .prologue
     .line 394
-    iput-object p1, p0, Landroid/support/v7/internal/view/menu/f;->lO:Landroid/support/v7/internal/view/menu/f$a;
+    iput-object p1, p0, Landroid/support/v7/internal/view/menu/f;->me:Landroid/support/v7/internal/view/menu/f$a;
 
     .line 395
     return-void
@@ -711,7 +787,7 @@
 
     .prologue
     .line 221
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     new-instance v1, Ljava/lang/ref/WeakReference;
 
@@ -727,7 +803,7 @@
     .line 223
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->lT:Z
+    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mj:Z
 
     .line 224
     return-void
@@ -743,19 +819,19 @@
     if-eqz p3, :cond_0
 
     .line 1158
-    iput-object p3, p0, Landroid/support/v7/internal/view/menu/f;->lY:Landroid/view/View;
+    iput-object p3, p0, Landroid/support/v7/internal/view/menu/f;->mo:Landroid/view/View;
 
     .line 1161
-    iput-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lW:Ljava/lang/CharSequence;
+    iput-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mm:Ljava/lang/CharSequence;
 
     .line 1162
-    iput-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lX:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mn:Landroid/graphics/drawable/Drawable;
 
     .line 1181
     :goto_0
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->s(Z)V
+    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
 
     .line 1182
     return-void
@@ -765,18 +841,18 @@
     if-eqz p1, :cond_1
 
     .line 1167
-    iput-object p1, p0, Landroid/support/v7/internal/view/menu/f;->lW:Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroid/support/v7/internal/view/menu/f;->mm:Ljava/lang/CharSequence;
 
     .line 1170
     :cond_1
     if-eqz p2, :cond_2
 
     .line 1173
-    iput-object p2, p0, Landroid/support/v7/internal/view/menu/f;->lX:Landroid/graphics/drawable/Drawable;
+    iput-object p2, p0, Landroid/support/v7/internal/view/menu/f;->mn:Landroid/graphics/drawable/Drawable;
 
     .line 1177
     :cond_2
-    iput-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lY:Landroid/view/View;
+    iput-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mo:Landroid/view/View;
 
     goto :goto_0
 .end method
@@ -786,11 +862,11 @@
 
     .prologue
     .line 778
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lO:Landroid/support/v7/internal/view/menu/f$a;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->me:Landroid/support/v7/internal/view/menu/f$a;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lO:Landroid/support/v7/internal/view/menu/f$a;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->me:Landroid/support/v7/internal/view/menu/f$a;
 
     invoke-interface {v0, p2}, Landroid/support/v7/internal/view/menu/f$a;->d(Landroid/view/MenuItem;)Z
 
@@ -816,7 +892,7 @@
     const/4 v1, 0x0
 
     .line 424
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lL:Landroid/content/res/Resources;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mb:Landroid/content/res/Resources;
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -834,7 +910,7 @@
 
     .prologue
     .line 434
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lL:Landroid/content/res/Resources;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mb:Landroid/content/res/Resources;
 
     invoke-virtual {v0, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1023,7 +1099,7 @@
     const/4 v1, 0x0
 
     .line 444
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lL:Landroid/content/res/Resources;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mb:Landroid/content/res/Resources;
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1041,7 +1117,7 @@
 
     .prologue
     .line 458
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lL:Landroid/content/res/Resources;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mb:Landroid/content/res/Resources;
 
     invoke-virtual {v0, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1098,7 +1174,7 @@
 
     .prologue
     .line 233
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1132,7 +1208,7 @@
 
     .line 236
     :cond_1
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
@@ -1148,7 +1224,7 @@
 
     .prologue
     .line 737
-    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->lM:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mc:Z
 
     return v0
 .end method
@@ -1158,7 +1234,7 @@
 
     .prologue
     .line 766
-    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->lN:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->md:Z
 
     return v0
 .end method
@@ -1168,19 +1244,19 @@
 
     .prologue
     .line 1012
-    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->lZ:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mp:Z
 
     if-nez v0, :cond_0
 
     .line 1013
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->lZ:Z
+    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mp:Z
 
     .line 1014
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->ma:Z
+    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mq:Z
 
     .line 1016
     :cond_0
@@ -1194,20 +1270,20 @@
     const/4 v1, 0x0
 
     .line 1019
-    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->lZ:Z
+    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->mp:Z
 
     .line 1021
-    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->ma:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mq:Z
 
     if-eqz v0, :cond_0
 
     .line 1022
-    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->ma:Z
+    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->mq:Z
 
     .line 1023
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->s(Z)V
+    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
 
     .line 1025
     :cond_0
@@ -1221,10 +1297,10 @@
     const/4 v0, 0x1
 
     .line 1045
-    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->lT:Z
+    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mj:Z
 
     .line 1046
-    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->s(Z)V
+    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
 
     .line 1047
     return-void
@@ -1232,17 +1308,26 @@
 
 .method final bu()Ljava/util/ArrayList;
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v7/internal/view/menu/h;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     const/4 v2, 0x0
 
     .line 1050
-    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->lQ:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mg:Z
 
     if-nez v0, :cond_0
 
     .line 1051
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lP:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mf:Ljava/util/ArrayList;
 
     .line 1069
     :goto_0
@@ -1250,12 +1335,12 @@
 
     .line 1055
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lP:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mf:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 1057
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -1268,7 +1353,7 @@
     if-ge v1, v3, :cond_2
 
     .line 1060
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -1284,7 +1369,7 @@
     if-eqz v4, :cond_1
 
     .line 1062
-    iget-object v4, p0, Landroid/support/v7/internal/view/menu/f;->lP:Ljava/util/ArrayList;
+    iget-object v4, p0, Landroid/support/v7/internal/view/menu/f;->mf:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1298,15 +1383,15 @@
 
     .line 1066
     :cond_2
-    iput-boolean v2, p0, Landroid/support/v7/internal/view/menu/f;->lQ:Z
+    iput-boolean v2, p0, Landroid/support/v7/internal/view/menu/f;->mg:Z
 
     .line 1067
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->lT:Z
+    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mj:Z
 
     .line 1069
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lP:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mf:Ljava/util/ArrayList;
 
     goto :goto_0
 .end method
@@ -1318,7 +1403,7 @@
     const/4 v3, 0x0
 
     .line 1097
-    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->lT:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mj:Z
 
     if-nez v0, :cond_0
 
@@ -1328,7 +1413,7 @@
 
     .line 1103
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1360,7 +1445,7 @@
     if-nez v1, :cond_1
 
     .line 1106
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
@@ -1368,7 +1453,7 @@
 
     .line 1108
     :cond_1
-    invoke-interface {v1}, Landroid/support/v7/internal/view/menu/l;->bj()Z
+    invoke-interface {v1}, Landroid/support/v7/internal/view/menu/l;->bk()Z
 
     move-result v0
 
@@ -1384,12 +1469,12 @@
     if-eqz v2, :cond_4
 
     .line 1113
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lR:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mh:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 1114
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lS:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mi:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
@@ -1424,7 +1509,7 @@
     if-eqz v5, :cond_3
 
     .line 1120
-    iget-object v5, p0, Landroid/support/v7/internal/view/menu/f;->lR:Ljava/util/ArrayList;
+    iget-object v5, p0, Landroid/support/v7/internal/view/menu/f;->mh:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1438,7 +1523,7 @@
 
     .line 1122
     :cond_3
-    iget-object v5, p0, Landroid/support/v7/internal/view/menu/f;->lS:Ljava/util/ArrayList;
+    iget-object v5, p0, Landroid/support/v7/internal/view/menu/f;->mi:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1446,17 +1531,17 @@
 
     .line 1128
     :cond_4
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lR:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mh:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 1129
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lS:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mi:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 1130
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lS:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mi:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Landroid/support/v7/internal/view/menu/f;->bu()Ljava/util/ArrayList;
 
@@ -1466,20 +1551,29 @@
 
     .line 1132
     :cond_5
-    iput-boolean v3, p0, Landroid/support/v7/internal/view/menu/f;->lT:Z
+    iput-boolean v3, p0, Landroid/support/v7/internal/view/menu/f;->mj:Z
 
     goto :goto_0
 .end method
 
 .method final bw()Ljava/util/ArrayList;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v7/internal/view/menu/h;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 1141
     invoke-virtual {p0}, Landroid/support/v7/internal/view/menu/f;->bv()V
 
     .line 1142
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lS:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mi:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -1544,7 +1638,7 @@
     if-eqz v0, :cond_1
 
     .line 930
-    invoke-virtual {p0, v6}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
+    invoke-virtual {p0, v6}, Landroid/support/v7/internal/view/menu/f;->q(Z)V
 
     goto :goto_0
 
@@ -1557,7 +1651,7 @@
     if-eqz v0, :cond_8
 
     .line 933
-    invoke-virtual {p0, v1}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
+    invoke-virtual {p0, v1}, Landroid/support/v7/internal/view/menu/f;->q(Z)V
 
     .line 935
     invoke-virtual {p1}, Landroid/support/v7/internal/view/menu/h;->hasSubMenu()Z
@@ -1584,7 +1678,7 @@
     check-cast v0, Landroid/support/v7/internal/view/menu/p;
 
     .line 940
-    iget-object v2, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v2, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->isEmpty()Z
 
@@ -1599,13 +1693,13 @@
     if-nez v0, :cond_1
 
     .line 945
-    invoke-virtual {p0, v6}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
+    invoke-virtual {p0, v6}, Landroid/support/v7/internal/view/menu/f;->q(Z)V
 
     goto :goto_0
 
     .line 940
     :cond_5
-    iget-object v2, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v2, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1634,7 +1728,7 @@
 
     if-nez v2, :cond_6
 
-    iget-object v2, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v2, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
@@ -1664,7 +1758,7 @@
     if-nez v0, :cond_9
 
     .line 949
-    invoke-virtual {p0, v6}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
+    invoke-virtual {p0, v6}, Landroid/support/v7/internal/view/menu/f;->q(Z)V
 
     :cond_9
     move v0, v4
@@ -1682,25 +1776,25 @@
 
     .prologue
     .line 548
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mf:Landroid/support/v7/internal/view/menu/h;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mv:Landroid/support/v7/internal/view/menu/h;
 
     if-eqz v0, :cond_0
 
     .line 549
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mf:Landroid/support/v7/internal/view/menu/h;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mv:Landroid/support/v7/internal/view/menu/h;
 
     invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->g(Landroid/support/v7/internal/view/menu/h;)Z
 
     .line 551
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 553
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->s(Z)V
+    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
 
     .line 554
     return-void
@@ -1713,18 +1807,18 @@
     const/4 v0, 0x0
 
     .line 1146
-    iput-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lX:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mn:Landroid/graphics/drawable/Drawable;
 
     .line 1147
-    iput-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lW:Ljava/lang/CharSequence;
+    iput-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mm:Ljava/lang/CharSequence;
 
     .line 1148
-    iput-object v0, p0, Landroid/support/v7/internal/view/menu/f;->lY:Landroid/view/View;
+    iput-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mo:Landroid/view/View;
 
     .line 1150
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->s(Z)V
+    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
 
     .line 1151
     return-void
@@ -1737,7 +1831,7 @@
     .line 983
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
+    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->q(Z)V
 
     .line 984
     return-void
@@ -1763,7 +1857,7 @@
     const/4 v0, 0x0
 
     .line 1285
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->isEmpty()Z
 
@@ -1781,7 +1875,7 @@
     invoke-virtual {p0}, Landroid/support/v7/internal/view/menu/f;->br()V
 
     .line 1292
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1813,7 +1907,7 @@
     if-nez v1, :cond_2
 
     .line 1295
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
@@ -1835,7 +1929,7 @@
     if-eqz v0, :cond_0
 
     .line 1303
-    iput-object p1, p0, Landroid/support/v7/internal/view/menu/f;->mf:Landroid/support/v7/internal/view/menu/h;
+    iput-object p1, p0, Landroid/support/v7/internal/view/menu/f;->mv:Landroid/support/v7/internal/view/menu/h;
 
     goto :goto_0
 
@@ -1868,7 +1962,7 @@
     if-ge v1, v2, :cond_3
 
     .line 641
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -1930,7 +2024,7 @@
     const/4 v0, 0x0
 
     .line 1309
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->isEmpty()Z
 
@@ -1938,7 +2032,7 @@
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->mf:Landroid/support/v7/internal/view/menu/h;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->mv:Landroid/support/v7/internal/view/menu/h;
 
     if-eq v1, p1, :cond_1
 
@@ -1952,7 +2046,7 @@
     invoke-virtual {p0}, Landroid/support/v7/internal/view/menu/f;->br()V
 
     .line 1316
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1984,7 +2078,7 @@
     if-nez v1, :cond_2
 
     .line 1319
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
@@ -2008,7 +2102,7 @@
     .line 1327
     const/4 v1, 0x0
 
-    iput-object v1, p0, Landroid/support/v7/internal/view/menu/f;->mf:Landroid/support/v7/internal/view/menu/h;
+    iput-object v1, p0, Landroid/support/v7/internal/view/menu/f;->mv:Landroid/support/v7/internal/view/menu/h;
 
     goto :goto_0
 
@@ -2028,7 +2122,7 @@
 
     .prologue
     .line 698
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -2057,7 +2151,7 @@
     if-ge v2, v3, :cond_1
 
     .line 628
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -2161,19 +2255,19 @@
     .line 812
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
+    invoke-virtual {p0, v1}, Landroid/support/v7/internal/view/menu/f;->q(Z)V
 
     .line 815
     :cond_1
     return v0
 .end method
 
-.method final r(Z)V
+.method final q(Z)V
     .locals 3
 
     .prologue
     .line 965
-    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mc:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->ms:Z
 
     if-eqz v0, :cond_0
 
@@ -2185,10 +2279,10 @@
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mc:Z
+    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->ms:Z
 
     .line 970
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2218,7 +2312,7 @@
     if-nez v1, :cond_1
 
     .line 973
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
@@ -2234,9 +2328,94 @@
     :cond_2
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mc:Z
+    iput-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->ms:Z
 
     goto :goto_0
+.end method
+
+.method final r(Z)V
+    .locals 3
+
+    .prologue
+    const/4 v1, 0x1
+
+    .line 994
+    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->mp:Z
+
+    if-nez v0, :cond_4
+
+    .line 995
+    if-eqz p1, :cond_0
+
+    .line 996
+    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->mg:Z
+
+    .line 997
+    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->mj:Z
+
+    .line 1000
+    :cond_0
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    invoke-virtual {p0}, Landroid/support/v7/internal/view/menu/f;->br()V
+
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/support/v7/internal/view/menu/l;
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->mu:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    invoke-interface {v1, p1}, Landroid/support/v7/internal/view/menu/l;->p(Z)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p0}, Landroid/support/v7/internal/view/menu/f;->bs()V
+
+    .line 1004
+    :cond_3
+    :goto_1
+    return-void
+
+    .line 1002
+    :cond_4
+    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->mq:Z
+
+    goto :goto_1
 .end method
 
 .method public removeGroup(I)V
@@ -2255,7 +2434,7 @@
     :goto_0
     if-ge v2, v3, :cond_1
 
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -2276,7 +2455,7 @@
     if-ltz v3, :cond_3
 
     .line 501
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -2292,7 +2471,7 @@
 
     if-ge v0, v4, :cond_2
 
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -2330,7 +2509,7 @@
     :cond_2
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->s(Z)V
+    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
 
     .line 511
     :cond_3
@@ -2351,7 +2530,7 @@
     :goto_0
     if-ge v1, v2, :cond_1
 
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -2387,97 +2566,12 @@
     goto :goto_1
 .end method
 
-.method final s(Z)V
-    .locals 3
-
-    .prologue
-    const/4 v1, 0x1
-
-    .line 994
-    iget-boolean v0, p0, Landroid/support/v7/internal/view/menu/f;->lZ:Z
-
-    if-nez v0, :cond_4
-
-    .line 995
-    if-eqz p1, :cond_0
-
-    .line 996
-    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->lQ:Z
-
-    .line 997
-    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->lT:Z
-
-    .line 1000
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    invoke-virtual {p0}, Landroid/support/v7/internal/view/menu/f;->br()V
-
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/support/v7/internal/view/menu/l;
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/f;->me:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    invoke-interface {v1, p1}, Landroid/support/v7/internal/view/menu/l;->q(Z)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p0}, Landroid/support/v7/internal/view/menu/f;->bs()V
-
-    .line 1004
-    :cond_3
-    :goto_1
-    return-void
-
-    .line 1002
-    :cond_4
-    iput-boolean v1, p0, Landroid/support/v7/internal/view/menu/f;->ma:Z
-
-    goto :goto_1
-.end method
-
 .method public setGroupCheckable(IZZ)V
     .locals 4
 
     .prologue
     .line 578
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -2492,7 +2586,7 @@
     if-ge v1, v2, :cond_1
 
     .line 581
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -2508,7 +2602,7 @@
     if-ne v3, p1, :cond_0
 
     .line 583
-    invoke-virtual {v0, p3}, Landroid/support/v7/internal/view/menu/h;->t(Z)V
+    invoke-virtual {v0, p3}, Landroid/support/v7/internal/view/menu/h;->s(Z)V
 
     .line 584
     invoke-virtual {v0, p2}, Landroid/support/v7/internal/view/menu/h;->setCheckable(Z)Landroid/view/MenuItem;
@@ -2531,7 +2625,7 @@
 
     .prologue
     .line 613
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -2546,7 +2640,7 @@
     if-ge v1, v2, :cond_1
 
     .line 616
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -2586,7 +2680,7 @@
     const/4 v0, 0x0
 
     .line 591
-    iget-object v2, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v2, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -2601,7 +2695,7 @@
     if-ge v3, v4, :cond_0
 
     .line 598
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -2617,7 +2711,7 @@
     if-ne v5, p1, :cond_2
 
     .line 600
-    invoke-virtual {v0, p2}, Landroid/support/v7/internal/view/menu/h;->v(Z)Z
+    invoke-virtual {v0, p2}, Landroid/support/v7/internal/view/menu/h;->u(Z)Z
 
     move-result v0
 
@@ -2640,7 +2734,7 @@
     if-eqz v2, :cond_1
 
     .line 607
-    invoke-virtual {p0, v1}, Landroid/support/v7/internal/view/menu/f;->s(Z)V
+    invoke-virtual {p0, v1}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
 
     .line 609
     :cond_1
@@ -2657,12 +2751,12 @@
 
     .prologue
     .line 708
-    iput-boolean p1, p0, Landroid/support/v7/internal/view/menu/f;->lM:Z
+    iput-boolean p1, p0, Landroid/support/v7/internal/view/menu/f;->mc:Z
 
     .line 710
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->s(Z)V
+    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
 
     .line 711
     return-void
@@ -2673,7 +2767,7 @@
 
     .prologue
     .line 693
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fD:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/f;->fZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 

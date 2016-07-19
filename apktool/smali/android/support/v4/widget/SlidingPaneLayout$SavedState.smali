@@ -16,10 +16,19 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Landroid/support/v4/widget/SlidingPaneLayout$SavedState;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field ig:Z
+.field iz:Z
 
 
 # direct methods
@@ -54,7 +63,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    iput-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;->ig:Z
+    iput-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;->iz:Z
 
     .line 1313
     return-void
@@ -97,7 +106,7 @@
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 1318
-    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;->ig:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;->iz:Z
 
     if-eqz v0, :cond_0
 

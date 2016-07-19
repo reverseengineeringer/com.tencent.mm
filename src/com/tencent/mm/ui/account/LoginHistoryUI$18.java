@@ -15,16 +15,16 @@ final class LoginHistoryUI$18
     default: 
       return;
     case 7001: 
-      LoginHistoryUI.l(ktx);
+      LoginHistoryUI.l(kSF);
       return;
     case 7002: 
-      LoginHistoryUI.m(ktx);
+      LoginHistoryUI.m(kSF);
       return;
     case 7003: 
-      LoginHistoryUI.n(ktx);
+      LoginHistoryUI.n(kSF);
       return;
     }
-    LoginHistoryUI.o(ktx);
+    LoginHistoryUI.o(kSF);
   }
 }
 

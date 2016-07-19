@@ -1,20 +1,20 @@
 package com.tencent.mm.model;
 
 import android.content.Context;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.h.a;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.i.a;
+import com.tencent.mm.sdk.platformtools.aa;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.storage.s;
 
 public final class o
 {
-  c bAq;
+  c btt;
   
   public o(c paramc)
   {
-    bAq = paramc;
+    btt = paramc;
   }
   
   public static void u(k paramk)
@@ -23,188 +23,188 @@ public final class o
     if (paramk == null) {
       localk = new k();
     }
-    if ((int)bvi == 0)
+    if ((int)bjS == 0)
     {
       localk.setUsername("filehelper");
-      if (ah.tD().rt().EA(field_username) != null) {
+      if (ah.tE().ru().GO(field_username) != null) {
         break label65;
       }
-      localk.qb();
+      localk.oz();
     }
     for (;;)
     {
-      localk.aY(3);
-      ah.tD().rq().L(localk);
+      localk.bo(3);
+      ah.tE().rr().L(localk);
       return;
       label65:
-      localk.qa();
+      localk.oy();
     }
   }
   
   static void v(k paramk)
   {
     String str = field_username;
-    Context localContext = y.getContext();
+    Context localContext = aa.getContext();
     if (str.equals("qqsync"))
     {
-      paramk.bH(localContext.getString(2131427418));
-      paramk.bI(localContext.getString(2131427419));
-      paramk.bJ(localContext.getString(2131427420));
+      paramk.bC(localContext.getString(2131233246));
+      paramk.bD(localContext.getString(2131233247));
+      paramk.bE(localContext.getString(2131233248));
     }
     if (str.equals("floatbottle"))
     {
-      paramk.bH(localContext.getString(2131427421));
-      paramk.bI(localContext.getString(2131427422));
-      paramk.bJ(localContext.getString(2131427423));
+      paramk.bC(localContext.getString(2131233197));
+      paramk.bD(localContext.getString(2131233198));
+      paramk.bE(localContext.getString(2131233199));
     }
     if (str.equals("shakeapp"))
     {
-      paramk.bH(localContext.getString(2131427427));
-      paramk.bI(localContext.getString(2131427428));
-      paramk.bJ(localContext.getString(2131427429));
+      paramk.bC(localContext.getString(2131233253));
+      paramk.bD(localContext.getString(2131233254));
+      paramk.bE(localContext.getString(2131233255));
     }
     if (str.equals("lbsapp"))
     {
-      paramk.bH(localContext.getString(2131427424));
-      paramk.bI(localContext.getString(2131427425));
-      paramk.bJ(localContext.getString(2131427426));
+      paramk.bC(localContext.getString(2131233218));
+      paramk.bD(localContext.getString(2131233219));
+      paramk.bE(localContext.getString(2131233220));
     }
     if (str.equals("medianote"))
     {
-      paramk.bH(localContext.getString(2131427430));
-      paramk.bI(localContext.getString(2131427431));
-      paramk.bJ(localContext.getString(2131427432));
+      paramk.bC(localContext.getString(2131233227));
+      paramk.bD(localContext.getString(2131233228));
+      paramk.bE(localContext.getString(2131233229));
     }
     if (str.equals("newsapp"))
     {
-      paramk.bH(localContext.getString(2131427454));
-      paramk.bI(localContext.getString(2131427455));
-      paramk.bJ(localContext.getString(2131427456));
+      paramk.bC(localContext.getString(2131233249));
+      paramk.bD(localContext.getString(2131233250));
+      paramk.bE(localContext.getString(2131233251));
     }
     if (str.equals("facebookapp"))
     {
-      paramk.bH(localContext.getString(2131427433));
-      paramk.bI(localContext.getString(2131427434));
-      paramk.bJ(localContext.getString(2131427435));
+      paramk.bC(localContext.getString(2131233203));
+      paramk.bD(localContext.getString(2131233204));
+      paramk.bE(localContext.getString(2131233205));
     }
     if (str.equals("qqfriend"))
     {
-      paramk.bH(localContext.getString(2131427436));
-      paramk.bI(localContext.getString(2131427437));
-      paramk.bJ(localContext.getString(2131427438));
+      paramk.bC(localContext.getString(2131233238));
+      paramk.bD(localContext.getString(2131233239));
+      paramk.bE(localContext.getString(2131233240));
     }
     if (str.equals("googlecontact"))
     {
-      paramk.bH(localContext.getString(2131427439));
-      paramk.bI(localContext.getString(2131427440));
-      paramk.bJ(localContext.getString(2131427441));
+      paramk.bC(localContext.getString(2131233212));
+      paramk.bD(localContext.getString(2131233213));
+      paramk.bE(localContext.getString(2131233214));
     }
     if (str.equals("masssendapp"))
     {
-      paramk.bH(localContext.getString(2131427448));
-      paramk.bI(localContext.getString(2131427449));
-      paramk.bJ(localContext.getString(2131427450));
+      paramk.bC(localContext.getString(2131233224));
+      paramk.bD(localContext.getString(2131233225));
+      paramk.bE(localContext.getString(2131233226));
     }
     if (str.equals("feedsapp"))
     {
-      paramk.bH(localContext.getString(2131432996));
-      paramk.bI(localContext.getString(2131427452));
-      paramk.bJ(localContext.getString(2131427453));
+      paramk.bC(localContext.getString(2131233206));
+      paramk.bD(localContext.getString(2131233207));
+      paramk.bE(localContext.getString(2131233208));
     }
     if (str.equals("qmessage"))
     {
-      paramk.bH(localContext.getString(2131427415));
-      paramk.bI(localContext.getString(2131427416));
-      paramk.bJ(localContext.getString(2131427417));
+      paramk.bC(localContext.getString(2131233237));
+      paramk.bD(localContext.getString(2131233244));
+      paramk.bE(localContext.getString(2131233245));
     }
     if (str.equals("fmessage"))
     {
-      paramk.bH(localContext.getString(2131427412));
-      paramk.bI(localContext.getString(2131427413));
-      paramk.bJ(localContext.getString(2131427414));
+      paramk.bC(localContext.getString(2131233209));
+      paramk.bD(localContext.getString(2131233210));
+      paramk.bE(localContext.getString(2131233211));
     }
     if (str.equals("voipapp"))
     {
-      paramk.bH(localContext.getString(2131427457));
-      paramk.bI(localContext.getString(2131427458));
-      paramk.bJ(localContext.getString(2131427459));
+      paramk.bC(localContext.getString(2131233259));
+      paramk.bD(localContext.getString(2131233260));
+      paramk.bE(localContext.getString(2131233261));
     }
     if (str.equals("officialaccounts"))
     {
-      paramk.bH(localContext.getString(2131427442));
-      paramk.bI(localContext.getString(2131427443));
-      paramk.bJ(localContext.getString(2131427444));
+      paramk.bC(localContext.getString(2131233234));
+      paramk.bD(localContext.getString(2131233235));
+      paramk.bE(localContext.getString(2131233236));
     }
     if (str.equals("helper_entry"))
     {
-      paramk.bH(localContext.getString(2131427445));
-      paramk.bI(localContext.getString(2131427446));
-      paramk.bJ(localContext.getString(2131427447));
+      paramk.bC(localContext.getString(2131233215));
+      paramk.bD(localContext.getString(2131233216));
+      paramk.bE(localContext.getString(2131233217));
     }
     if (str.equals("cardpackage"))
     {
-      paramk.bH(localContext.getString(2131427460));
-      paramk.bI(localContext.getString(2131427461));
-      paramk.bJ(localContext.getString(2131427462));
+      paramk.bC(localContext.getString(2131233200));
+      paramk.bD(localContext.getString(2131233201));
+      paramk.bE(localContext.getString(2131233202));
     }
     if (str.equals("voicevoipapp"))
     {
-      paramk.bH(localContext.getString(2131427464));
-      paramk.bI(localContext.getString(2131427465));
-      paramk.bJ(localContext.getString(2131427466));
+      paramk.bC(localContext.getString(2131233262));
+      paramk.bD(localContext.getString(2131233263));
+      paramk.bE(localContext.getString(2131233264));
     }
     if (str.equals("voiceinputapp"))
     {
-      paramk.bH(localContext.getString(2131427467));
-      paramk.bI(localContext.getString(2131427468));
-      paramk.bJ(localContext.getString(2131427469));
+      paramk.bC(localContext.getString(2131233256));
+      paramk.bD(localContext.getString(2131233257));
+      paramk.bE(localContext.getString(2131233258));
     }
     if (str.equals("qqmail"))
     {
-      paramk.bH(localContext.getString(2131427409));
-      paramk.bI(localContext.getString(2131427410));
-      paramk.bJ(localContext.getString(2131427411));
+      paramk.bC(localContext.getString(2131233241));
+      paramk.bD(localContext.getString(2131233242));
+      paramk.bE(localContext.getString(2131233243));
     }
     if (str.equals("linkedinplugin"))
     {
-      paramk.bH(localContext.getString(2131427470));
-      paramk.bI(localContext.getString(2131427471));
-      paramk.bJ(localContext.getString(2131427472));
+      paramk.bC(localContext.getString(2131233221));
+      paramk.bD(localContext.getString(2131233222));
+      paramk.bE(localContext.getString(2131233223));
     }
     if (str.equals("notifymessage"))
     {
-      paramk.bH(localContext.getString(2131427473));
-      paramk.bI(localContext.getString(2131427474));
-      paramk.bJ(localContext.getString(2131427475));
+      paramk.bC(localContext.getString(2131233231));
+      paramk.bD(localContext.getString(2131233232));
+      paramk.bE(localContext.getString(2131233233));
     }
   }
   
   final int a(boolean paramBoolean1, String paramString, boolean paramBoolean2)
   {
     int i = 3;
-    k localk2 = bAq.rq().Ep(paramString);
+    k localk2 = btt.rr().GD(paramString);
     k localk1 = localk2;
     if (localk2 == null) {
       localk1 = new k();
     }
-    if ((int)bvi == 0)
+    if ((int)bjS == 0)
     {
       localk1.setUsername(paramString);
-      localk1.qa();
+      localk1.oy();
       v(localk1);
       if (paramBoolean2) {
         i = 4;
       }
-      localk1.aY(i);
-      localk1.qg();
-      bAq.rq().M(localk1);
+      localk1.bo(i);
+      localk1.oF();
+      btt.rr().M(localk1);
       i = 1;
     }
     while (!paramBoolean1) {
       return i;
     }
-    localk1.qg();
-    bAq.rq().a(paramString, localk1);
+    localk1.oF();
+    btt.rr().a(paramString, localk1);
     return 2;
   }
 }

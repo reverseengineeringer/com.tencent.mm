@@ -1,14 +1,14 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.d.b.c;
+import com.tencent.mm.e.b.c;
 import com.tencent.mm.sdk.h.c.a;
 
 public final class d$a
   extends c
 {
-  protected final c.a ls()
+  protected final c.a ou()
   {
-    return c.lY();
+    return c.ko();
   }
 }
 

@@ -9,7 +9,7 @@ final class SnsUploadUI$3
   
   public final void run()
   {
-    h.i(hlY);
+    h.e(hCb);
   }
 }
 

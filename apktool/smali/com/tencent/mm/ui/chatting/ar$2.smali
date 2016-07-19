@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kTA:Lcom/tencent/mm/ui/chatting/ar;
+.field final synthetic ltF:Lcom/tencent/mm/ui/chatting/ar;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1972
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ar$2;->kTA:Lcom/tencent/mm/ui/chatting/ar;
+    .line 312
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ar$2;->ltF:Lcom/tencent/mm/ui/chatting/ar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,6 +40,6 @@
     .locals 0
 
     .prologue
-    .line 1976
+    .line 316
     return-void
 .end method

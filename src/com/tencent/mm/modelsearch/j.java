@@ -5,23 +5,23 @@ import com.tencent.kingkong.database.SQLiteStatement;
 
 public abstract interface j
 {
-  public abstract boolean X(int paramInt1, int paramInt2);
+  public abstract boolean Z(int paramInt1, int paramInt2);
   
   public abstract void beginTransaction();
+  
+  public abstract long c(long paramLong1, long paramLong2);
   
   public abstract void commit();
   
   public abstract SQLiteStatement compileStatement(String paramString);
   
-  public abstract long d(long paramLong1, long paramLong2);
-  
-  public abstract void e(long paramLong1, long paramLong2);
+  public abstract void d(long paramLong1, long paramLong2);
   
   public abstract void execSQL(String paramString);
   
   public abstract void execSQL(String paramString, Object[] paramArrayOfObject);
   
-  public abstract boolean iB(String paramString);
+  public abstract boolean iS(String paramString);
   
   public abstract boolean inTransaction();
   

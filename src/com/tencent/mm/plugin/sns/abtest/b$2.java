@@ -10,18 +10,18 @@ final class b$2
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    if (gFE.gFn != null) {
-      gFE.gFn.setVisibility(0);
+    if (gMg.gLP != null) {
+      gMg.gLP.setVisibility(0);
     }
-    gFE.gFC = false;
-    gFE.gFA = true;
+    gMg.gMe = false;
+    gMg.gMc = true;
   }
   
   public final void onAnimationRepeat(Animation paramAnimation) {}
   
   public final void onAnimationStart(Animation paramAnimation)
   {
-    gFE.gFC = true;
+    gMg.gMe = true;
   }
 }
 

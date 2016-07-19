@@ -20,38 +20,38 @@
     return-void
 .end method
 
-.method public static FD()Ljava/lang/String;
+.method public static FY()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 413
-    invoke-static {}, Lcom/tencent/mm/platformtools/e;->FD()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/platformtools/d;->FY()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static P(Landroid/app/Activity;)Z
+.method public static L(Landroid/app/Activity;)Z
     .locals 4
 
     .prologue
     const/4 v3, 0x1
 
     .line 175
-    new-instance v0, Lcom/tencent/mm/d/a/mu;
+    new-instance v0, Lcom/tencent/mm/e/a/nh;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/mu;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/nh;-><init>()V
 
     .line 176
-    iget-object v1, v0, Lcom/tencent/mm/d/a/mu;->aJg:Lcom/tencent/mm/d/a/mu$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/nh;->avA:Lcom/tencent/mm/e/a/nh$a;
 
-    iput-boolean v3, v1, Lcom/tencent/mm/d/a/mu$a;->aJh:Z
+    iput-boolean v3, v1, Lcom/tencent/mm/e/a/nh$a;->avB:Z
 
     .line 177
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 179
     const/4 v0, 0x0
@@ -66,26 +66,26 @@
     return v3
 .end method
 
-.method public static Q(Landroid/app/Activity;)Z
+.method public static M(Landroid/app/Activity;)Z
     .locals 4
 
     .prologue
     const/4 v3, 0x1
 
     .line 197
-    new-instance v0, Lcom/tencent/mm/d/a/mu;
+    new-instance v0, Lcom/tencent/mm/e/a/nh;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/mu;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/nh;-><init>()V
 
     .line 198
-    iget-object v1, v0, Lcom/tencent/mm/d/a/mu;->aJg:Lcom/tencent/mm/d/a/mu$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/nh;->avA:Lcom/tencent/mm/e/a/nh$a;
 
-    iput-boolean v3, v1, Lcom/tencent/mm/d/a/mu$a;->aJh:Z
+    iput-boolean v3, v1, Lcom/tencent/mm/e/a/nh$a;->avB:Z
 
     .line 199
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 200
     const/4 v0, 0x2
@@ -136,7 +136,7 @@
 
     sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/k;->filePath:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/a/e;->aB(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -154,7 +154,7 @@
     :cond_2
     sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/k;->filePath:Ljava/lang/String;
 
-    invoke-static {v0, p0}, Lcom/tencent/mm/platformtools/e;->d(Ljava/lang/String;Landroid/content/Context;)V
+    invoke-static {v0, p0}, Lcom/tencent/mm/platformtools/d;->c(Ljava/lang/String;Landroid/content/Context;)V
 
     .line 387
     sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/k;->filePath:Ljava/lang/String;
@@ -203,13 +203,13 @@
 
     const-string/jumbo v2, ".ui.GalleryEntryUI"
 
-    invoke-static {p0, v1, v2, v0, p1}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {p0, v1, v2, v0, p1}, Lcom/tencent/mm/av/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
 
     .line 240
     return-void
 .end method
 
-.method public static a(Landroid/app/Activity;Ljava/lang/String;IIIIZ)V
+.method public static a(Landroid/app/Activity;Ljava/lang/String;IIIZ)V
     .locals 3
 
     .prologue
@@ -247,12 +247,12 @@
     .line 313
     const-string/jumbo v0, "android.intent.extra.videoQuality"
 
-    invoke-virtual {v1, v0, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v1, v0, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 314
     const-string/jumbo v2, "android.intent.extras.CAMERA_FACING"
 
-    if-eqz p6, :cond_3
+    if-eqz p5, :cond_2
 
     const/4 v0, 0x1
 
@@ -269,15 +269,6 @@
 
     .line 318
     :cond_1
-    if-lez p4, :cond_2
-
-    .line 319
-    const-string/jumbo v0, "android.intent.extra.sizeLimit"
-
-    invoke-virtual {v1, v0, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 321
-    :cond_2
     const-string/jumbo v0, "android.media.action.VIDEO_CAPTURE"
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
@@ -294,7 +285,7 @@
     return-void
 
     .line 314
-    :cond_3
+    :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
@@ -310,7 +301,7 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 260
-    invoke-static {p6}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p6}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -352,7 +343,7 @@
 
     const-string/jumbo v2, ".ui.AlbumPreviewUI"
 
-    invoke-static {p0, v1, v2, v0, p1}, Lcom/tencent/mm/ar/c;->a(Landroid/support/v4/app/Fragment;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {p0, v1, v2, v0, p1}, Lcom/tencent/mm/av/c;->a(Landroid/support/v4/app/Fragment;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
 
     .line 269
     return-void
@@ -415,19 +406,19 @@
     const/4 v2, 0x1
 
     .line 163
-    new-instance v0, Lcom/tencent/mm/d/a/mu;
+    new-instance v0, Lcom/tencent/mm/e/a/nh;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/mu;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/nh;-><init>()V
 
     .line 164
-    iget-object v1, v0, Lcom/tencent/mm/d/a/mu;->aJg:Lcom/tencent/mm/d/a/mu$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/nh;->avA:Lcom/tencent/mm/e/a/nh$a;
 
-    iput-boolean v2, v1, Lcom/tencent/mm/d/a/mu$a;->aJh:Z
+    iput-boolean v2, v1, Lcom/tencent/mm/e/a/nh$a;->avB:Z
 
     .line 165
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 167
     const/4 v0, 0x0
@@ -455,23 +446,23 @@
     if-eqz v0, :cond_0
 
     .line 51
-    new-instance v1, Lcom/tencent/mm/d/a/mu;
+    new-instance v1, Lcom/tencent/mm/e/a/nh;
 
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/mu;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/e/a/nh;-><init>()V
 
     .line 52
-    iget-object v2, v1, Lcom/tencent/mm/d/a/mu;->aJg:Lcom/tencent/mm/d/a/mu$a;
+    iget-object v2, v1, Lcom/tencent/mm/e/a/nh;->avA:Lcom/tencent/mm/e/a/nh$a;
 
-    iput-boolean v5, v2, Lcom/tencent/mm/d/a/mu$a;->aJh:Z
+    iput-boolean v5, v2, Lcom/tencent/mm/e/a/nh$a;->avB:Z
 
     .line 53
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v2, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 55
     :cond_0
-    const-string/jumbo v1, "!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp"
+    const-string/jumbo v1, "MicroMsg.TakePhotoUtil"
 
     const-string/jumbo v2, "takePhoto(), dir = [%s], filename = [%s], cmd = [%s], result = [%s]"
 
@@ -501,7 +492,7 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 56
     return v0
@@ -514,21 +505,21 @@
     const/4 v0, 0x0
 
     .line 60
-    iget-object v1, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {v1}, Lcom/tencent/mm/an/r;->be(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/tencent/mm/aq/v;->bb(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {v1}, Lcom/tencent/mm/ae/a;->aR(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/tencent/mm/ah/a;->aN(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -560,7 +551,7 @@
     sput-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/k;->filePath:Ljava/lang/String;
 
     .line 66
-    const-string/jumbo v1, "!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp"
+    const-string/jumbo v1, "MicroMsg.TakePhotoUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -578,16 +569,16 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 67
-    iget-object v1, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     sget-object v2, Lcom/tencent/mm/pluginsdk/ui/tools/k;->filePath:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/pluginsdk/ui/tools/k;->aS(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/pluginsdk/ui/tools/k;->aQ(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 69
     new-instance v1, Landroid/content/Intent;
@@ -624,7 +615,7 @@
     if-nez v2, :cond_3
 
     .line 80
-    const-string/jumbo v1, "!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp"
+    const-string/jumbo v1, "MicroMsg.TakePhotoUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -640,7 +631,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -680,7 +671,7 @@
     move-exception v1
 
     .line 91
-    const-string/jumbo v2, "!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp"
+    const-string/jumbo v2, "MicroMsg.TakePhotoUtil"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -700,7 +691,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -710,7 +701,7 @@
     goto :goto_1
 .end method
 
-.method private static aS(Landroid/content/Context;Ljava/lang/String;)V
+.method private static aQ(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
 
     .prologue
@@ -740,7 +731,7 @@
     return-void
 .end method
 
-.method public static aSR()Ljava/lang/String;
+.method public static aXK()Ljava/lang/String;
     .locals 1
     .annotation build Landroid/annotation/TargetApi;
         value = 0x8
@@ -748,7 +739,7 @@
 
     .prologue
     .line 404
-    sget-object v0, Lcom/tencent/mm/compatible/util/d;->buk:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/compatible/util/d;->biK:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -789,7 +780,7 @@
 
     const-string/jumbo v2, ".ui.GalleryEntryUI"
 
-    invoke-static {p0, v1, v2, v0, p1}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {p0, v1, v2, v0, p1}, Lcom/tencent/mm/av/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
 
     .line 255
     return-void
@@ -828,18 +819,18 @@
 
     const/4 v2, 0x4
 
-    invoke-static {p0, v0, v1, p3, v2}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {p0, v0, v1, p3, v2}, Lcom/tencent/mm/av/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
 
     .line 288
     return-void
 .end method
 
-.method public static d(Ljava/lang/String;Landroid/content/Context;)V
+.method public static c(Ljava/lang/String;Landroid/content/Context;)V
     .locals 0
 
     .prologue
     .line 399
-    invoke-static {p0, p1}, Lcom/tencent/mm/platformtools/e;->d(Ljava/lang/String;Landroid/content/Context;)V
+    invoke-static {p0, p1}, Lcom/tencent/mm/platformtools/d;->c(Ljava/lang/String;Landroid/content/Context;)V
 
     .line 400
     return-void
@@ -860,23 +851,23 @@
     if-eqz v0, :cond_0
 
     .line 102
-    new-instance v1, Lcom/tencent/mm/d/a/mu;
+    new-instance v1, Lcom/tencent/mm/e/a/nh;
 
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/mu;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/e/a/nh;-><init>()V
 
     .line 103
-    iget-object v2, v1, Lcom/tencent/mm/d/a/mu;->aJg:Lcom/tencent/mm/d/a/mu$a;
+    iget-object v2, v1, Lcom/tencent/mm/e/a/nh;->avA:Lcom/tencent/mm/e/a/nh$a;
 
-    iput-boolean v5, v2, Lcom/tencent/mm/d/a/mu$a;->aJh:Z
+    iput-boolean v5, v2, Lcom/tencent/mm/e/a/nh$a;->avB:Z
 
     .line 104
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v2, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 106
     :cond_0
-    const-string/jumbo v1, "!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp"
+    const-string/jumbo v1, "MicroMsg.TakePhotoUtil"
 
     const-string/jumbo v2, "takePhoto(), dir = [%s], filename = [%s], cmd = [%s], result = [%s]"
 
@@ -906,7 +897,7 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 107
     return v0
@@ -919,13 +910,13 @@
     const/4 v0, 0x0
 
     .line 111
-    invoke-static {p0}, Lcom/tencent/mm/an/r;->be(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/aq/v;->bb(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-static {p0}, Lcom/tencent/mm/ae/a;->aR(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/ah/a;->aN(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -957,7 +948,7 @@
     sput-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/k;->filePath:Ljava/lang/String;
 
     .line 117
-    const-string/jumbo v1, "!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp"
+    const-string/jumbo v1, "MicroMsg.TakePhotoUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -975,12 +966,12 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 118
     sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/k;->filePath:Ljava/lang/String;
 
-    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/k;->aS(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/k;->aQ(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 120
     new-instance v1, Landroid/content/Intent;
@@ -1017,7 +1008,7 @@
     if-nez v2, :cond_3
 
     .line 131
-    const-string/jumbo v1, "!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp"
+    const-string/jumbo v1, "MicroMsg.TakePhotoUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1033,7 +1024,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1071,7 +1062,7 @@
     move-exception v1
 
     .line 142
-    const-string/jumbo v2, "!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp"
+    const-string/jumbo v2, "MicroMsg.TakePhotoUtil"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1091,7 +1082,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1108,32 +1099,32 @@
     .line 391
     const/4 v0, 0x1
 
-    invoke-static {p0, p1, v0}, Lcom/tencent/mm/platformtools/e;->a(Ljava/lang/String;Landroid/content/Context;Z)Z
+    invoke-static {p0, p1, v0}, Lcom/tencent/mm/platformtools/d;->a(Ljava/lang/String;Landroid/content/Context;Z)Z
 
     .line 392
     return-void
 .end method
 
-.method public static j(Landroid/support/v4/app/Fragment;)Z
+.method public static i(Landroid/support/v4/app/Fragment;)Z
     .locals 7
 
     .prologue
     const/4 v2, 0x1
 
     .line 187
-    new-instance v0, Lcom/tencent/mm/d/a/mu;
+    new-instance v0, Lcom/tencent/mm/e/a/nh;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/mu;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/nh;-><init>()V
 
     .line 188
-    iget-object v1, v0, Lcom/tencent/mm/d/a/mu;->aJg:Lcom/tencent/mm/d/a/mu$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/nh;->avA:Lcom/tencent/mm/e/a/nh$a;
 
-    iput-boolean v2, v1, Lcom/tencent/mm/d/a/mu$a;->aJh:Z
+    iput-boolean v2, v1, Lcom/tencent/mm/e/a/nh$a;->avB:Z
 
     .line 189
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 191
     const/16 v1, 0xc8
@@ -1154,12 +1145,12 @@
     return v2
 .end method
 
-.method public static kt(Ljava/lang/String;)Ljava/lang/String;
+.method public static lc(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 395
-    invoke-static {p0}, Lcom/tencent/mm/platformtools/e;->kt(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/platformtools/d;->lc(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

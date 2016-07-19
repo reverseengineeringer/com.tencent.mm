@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic haX:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
+.field final synthetic hoo:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 300
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$6;->haX:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$6;->hoo:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 303
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$6;->haX:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$6;->hoo:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
 
     new-instance v1, Landroid/content/Intent;
 

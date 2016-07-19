@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/pluginsdk/ui/tools/g$a",
+        "<",
+        "Lcom/tencent/mm/pluginsdk/ui/tools/g$b;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+.field final synthetic jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
 
 # direct methods
@@ -23,8 +32,8 @@
     .locals 1
 
     .prologue
-    .line 77
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$2;->iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    .line 75
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$2;->jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
     const/16 v0, 0x10
 
@@ -35,14 +44,14 @@
 
 
 # virtual methods
-.method protected final synthetic aSP()Ljava/lang/Object;
+.method protected final synthetic aXI()Ljava/lang/Object;
     .locals 3
 
     .prologue
-    .line 77
+    .line 75
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/g$b;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$2;->iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$2;->jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
     const/4 v2, 0x0
 

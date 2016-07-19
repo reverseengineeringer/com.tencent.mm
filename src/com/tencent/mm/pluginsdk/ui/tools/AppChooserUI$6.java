@@ -4,8 +4,8 @@ import com.tencent.mm.a.e;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.pluginsdk.model.downloader.k;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
 
 final class AppChooserUI$6
@@ -13,56 +13,56 @@ final class AppChooserUI$6
 {
   AppChooserUI$6(AppChooserUI paramAppChooserUI) {}
   
-  public final void bu(long paramLong) {}
+  public final void bF(long paramLong) {}
   
-  public final void bv(long paramLong) {}
+  public final void bG(long paramLong) {}
   
-  public final void c(long paramLong, String paramString)
+  public final void d(long paramLong, String paramString)
   {
-    u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskFinished downloadId: %d, savedPath: %s", new Object[] { Long.valueOf(paramLong), paramString });
-    if ((!ay.kz(paramString)) && (e.ax(paramString)))
+    v.d("MicroMsg.AppChooserUI", "onTaskFinished downloadId: %d, savedPath: %s", new Object[] { Long.valueOf(paramLong), paramString });
+    if ((!be.kf(paramString)) && (e.aB(paramString)))
     {
-      ah.tD().rn().set(AppChooserUI.a(iRi, 274560), Long.valueOf(AppChooserUI.j(iRi)));
-      if ((AppChooserUI.a(iRi) != null) && (AppChooserUI.j(iRi) == paramLong))
+      ah.tE().ro().set(AppChooserUI.a(jos, 274560), Long.valueOf(AppChooserUI.j(jos)));
+      if ((AppChooserUI.a(jos) != null) && (AppChooserUI.j(jos) == paramLong))
       {
-        aiRi).iRj = AppChooserUI.f.iRB;
-        AppChooserUI.a(iRi).notifyDataSetChanged();
+        ajos).jot = AppChooserUI.f.joK;
+        AppChooserUI.a(jos).notifyDataSetChanged();
       }
     }
   }
   
   public final void onTaskFailed(long paramLong)
   {
-    u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskFailed downloadId:%s", new Object[] { Long.valueOf(paramLong) });
-    ah.tD().rn().set(AppChooserUI.a(iRi, 274560), Long.valueOf(0L));
-    if (AppChooserUI.a(iRi) != null)
+    v.d("MicroMsg.AppChooserUI", "onTaskFailed downloadId:%s", new Object[] { Long.valueOf(paramLong) });
+    ah.tE().ro().set(AppChooserUI.a(jos, 274560), Long.valueOf(0L));
+    if (AppChooserUI.a(jos) != null)
     {
-      aiRi).iRj = AppChooserUI.f.iRz;
-      AppChooserUI.a(iRi).notifyDataSetChanged();
+      ajos).jot = AppChooserUI.f.joI;
+      AppChooserUI.a(jos).notifyDataSetChanged();
     }
   }
   
   public final void onTaskPaused(long paramLong)
   {
-    u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskPaused downloadId:%s", new Object[] { Long.valueOf(paramLong) });
-    ah.tD().rn().set(AppChooserUI.a(iRi, 274560), Long.valueOf(0L));
-    if (AppChooserUI.a(iRi) != null)
+    v.d("MicroMsg.AppChooserUI", "onTaskPaused downloadId:%s", new Object[] { Long.valueOf(paramLong) });
+    ah.tE().ro().set(AppChooserUI.a(jos, 274560), Long.valueOf(0L));
+    if (AppChooserUI.a(jos) != null)
     {
-      aiRi).iRj = AppChooserUI.f.iRz;
-      AppChooserUI.a(iRi).notifyDataSetChanged();
+      ajos).jot = AppChooserUI.f.joI;
+      AppChooserUI.a(jos).notifyDataSetChanged();
     }
   }
   
   public final void onTaskRemoved(long paramLong)
   {
-    u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskRemove downloadId:%s", new Object[] { Long.valueOf(paramLong) });
+    v.d("MicroMsg.AppChooserUI", "onTaskRemove downloadId:%s", new Object[] { Long.valueOf(paramLong) });
   }
   
   public final void onTaskStarted(long paramLong, String paramString)
   {
-    AppChooserUI.a(iRi, paramLong);
-    ah.tD().rn().set(AppChooserUI.a(iRi, 274560), Long.valueOf(AppChooserUI.j(iRi)));
-    u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskStarted downloadId:%s savedFilePath:%s", new Object[] { String.valueOf(paramLong), paramString });
+    AppChooserUI.a(jos, paramLong);
+    ah.tE().ro().set(AppChooserUI.a(jos, 274560), Long.valueOf(AppChooserUI.j(jos)));
+    v.d("MicroMsg.AppChooserUI", "onTaskStarted downloadId:%s savedFilePath:%s", new Object[] { String.valueOf(paramLong), paramString });
   }
 }
 

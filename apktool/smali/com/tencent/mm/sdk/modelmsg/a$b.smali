@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+.field public kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
 
 # direct methods
@@ -38,7 +38,7 @@
     invoke-direct {p0}, Lcom/tencent/mm/sdk/e/b;-><init>()V
 
     .line 123
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/sdk/modelmsg/a$b;->m(Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/sdk/modelmsg/a$b;->o(Landroid/os/Bundle;)V
 
     .line 124
     return-void
@@ -56,15 +56,15 @@
     return v0
 .end method
 
-.method public final l(Landroid/os/Bundle;)V
+.method public final n(Landroid/os/Bundle;)V
     .locals 1
 
     .prologue
     .line 139
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/b;->l(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/b;->n(Landroid/os/Bundle;)V
 
     .line 140
-    iget-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/a$b;->jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/a$b;->kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     invoke-static {v0}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$a;->b(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Landroid/os/Bundle;
 
@@ -76,19 +76,19 @@
     return-void
 .end method
 
-.method public final m(Landroid/os/Bundle;)V
+.method public final o(Landroid/os/Bundle;)V
     .locals 1
 
     .prologue
     .line 133
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/b;->m(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/b;->o(Landroid/os/Bundle;)V
 
     .line 134
-    invoke-static {p1}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$a;->J(Landroid/os/Bundle;)Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$a;->P(Landroid/os/Bundle;)Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/a$b;->jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/a$b;->kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     .line 135
     return-void

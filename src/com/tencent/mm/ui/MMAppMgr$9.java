@@ -13,7 +13,7 @@ final class MMAppMgr$9
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ah.tD().rn().set(65, Integer.valueOf(bWP + 1));
+    ah.tE().ro().set(65, Integer.valueOf(bQs + 1));
   }
 }
 

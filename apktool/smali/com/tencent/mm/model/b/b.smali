@@ -17,11 +17,11 @@
 
 
 # virtual methods
-.method public final uQ()Ljava/lang/String;
+.method public final uS()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 16
+    .line 14
     const-string/jumbo v0, "ChattingBannerHelper_user_status_"
 
     return-object v0

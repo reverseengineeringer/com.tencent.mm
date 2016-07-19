@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field private asK:Z
-
-.field private cTx:Landroid/view/View;
+.field private cQS:Landroid/view/View;
 
 .field private count:I
 
-.field private eEb:Landroid/widget/TextView;
+.field private eKc:Landroid/widget/TextView;
 
-.field private lji:I
+.field lJt:I
+
+.field private visible:Z
 
 
 # direct methods
@@ -31,10 +31,10 @@
     iput v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->count:I
 
     .line 25
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->asK:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->visible:Z
 
     .line 27
-    iput v1, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->lji:I
+    iput v1, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->lJt:I
 
     .line 36
     invoke-direct {p0}, Lcom/tencent/mm/ui/contact/ContactCountView;->init()V
@@ -58,10 +58,10 @@
     iput v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->count:I
 
     .line 25
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->asK:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->visible:Z
 
     .line 27
-    iput v1, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->lji:I
+    iput v1, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->lJt:I
 
     .line 31
     invoke-direct {p0}, Lcom/tencent/mm/ui/contact/ContactCountView;->init()V
@@ -79,7 +79,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a000a
+    const v1, 0x7f030153
 
     invoke-static {v0, v1, p0}, Lcom/tencent/mm/ui/contact/ContactCountView;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -89,7 +89,7 @@
 
 
 # virtual methods
-.method public final bhb()V
+.method public final bmK()V
     .locals 13
 
     .prologue
@@ -104,25 +104,25 @@
     const/4 v1, 0x0
 
     .line 61
-    sget-object v2, Lcom/tencent/mm/model/i;->bAc:[Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/model/i;->btf:[Ljava/lang/String;
 
     .line 62
-    iget v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->lji:I
+    iget v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->lJt:I
 
     if-ne v0, v10, :cond_1
 
     .line 63
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v0
 
     new-array v3, v12, [Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v4
 
@@ -148,7 +148,7 @@
 
     .line 67
     :goto_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpLSOpQlr7qYXSk7cqwPRO/WN0MHMKg7BqI="
+    const-string/jumbo v0, "MicroMsg.ContactCountView"
 
     const-string/jumbo v2, "contact count %d"
 
@@ -162,20 +162,20 @@
 
     aput-object v4, v3, v1
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->eEb:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->eKc:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
     .line 69
-    iget v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->lji:I
+    iget v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->lJt:I
 
     if-ne v0, v10, :cond_4
 
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->eEb:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->eKc:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/ContactCountView;->getContext()Landroid/content/Context;
 
@@ -185,7 +185,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f100008
+    const v3, 0x7f0a0001
 
     iget v4, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->count:I
 
@@ -208,7 +208,7 @@
     .line 76
     :cond_0
     :goto_1
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->asK:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->visible:Z
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/ContactCountView;->setVisible(Z)V
 
@@ -217,17 +217,17 @@
 
     .line 65
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v3
 
     new-array v4, v12, [Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v0
 
@@ -259,7 +259,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/h/a;->qk()I
+    invoke-static {}, Lcom/tencent/mm/i/a;->oN()I
 
     move-result v6
 
@@ -277,7 +277,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/h/a;->qn()I
+    invoke-static {}, Lcom/tencent/mm/i/a;->oQ()I
 
     move-result v6
 
@@ -295,7 +295,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/h/a;->ql()I
+    invoke-static {}, Lcom/tencent/mm/i/a;->oO()I
 
     move-result v6
 
@@ -397,7 +397,7 @@
 
     move-result-object v2
 
-    iget-object v0, v3, Lcom/tencent/mm/storage/q;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v0, v3, Lcom/tencent/mm/storage/q;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const/4 v3, 0x0
 
@@ -416,7 +416,7 @@
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
     :goto_4
-    const-string/jumbo v3, "!32@/B4Tb64lLpLSOpQlr7qYXa3KX0iP+QzT"
+    const-string/jumbo v3, "MicroMsg.ContactStorage"
 
     const-string/jumbo v4, "getChatroomContactCount, sql:%s, result:%d"
 
@@ -430,7 +430,7 @@
 
     aput-object v2, v5, v10
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     iput v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->count:I
 
@@ -438,7 +438,7 @@
 
     .line 72
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->eEb:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->eKc:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/ContactCountView;->getContext()Landroid/content/Context;
 
@@ -448,7 +448,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f100009
+    const/high16 v3, 0x7f0a0000
 
     iget v4, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->count:I
 
@@ -481,19 +481,19 @@
 
     .prologue
     .line 45
-    const-string/jumbo v0, "!44@/B4Tb64lLpLSOpQlr7qYXSk7cqwPRO/WN0MHMKg7BqI="
+    const-string/jumbo v0, "MicroMsg.ContactCountView"
 
     const-string/jumbo v1, "onMeasure"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 46
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->cTx:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->cQS:Landroid/view/View;
 
     if-nez v0, :cond_0
 
     .line 47
-    const v0, 0x7f07005a
+    const v0, 0x7f1004fb
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/ContactCountView;->findViewById(I)Landroid/view/View;
 
@@ -501,10 +501,10 @@
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->cTx:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->cQS:Landroid/view/View;
 
     .line 48
-    const v0, 0x7f07005b
+    const v0, 0x7f1004fc
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/ContactCountView;->findViewById(I)Landroid/view/View;
 
@@ -512,11 +512,11 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->eEb:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->eKc:Landroid/widget/TextView;
 
     .line 51
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/ContactCountView;->bhb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/ContactCountView;->bmK()V
 
     .line 53
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
@@ -525,31 +525,20 @@
     return-void
 .end method
 
-.method public setContactType(I)V
-    .locals 0
-
-    .prologue
-    .line 57
-    iput p1, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->lji:I
-
-    .line 58
-    return-void
-.end method
-
-.method public setVisible(Z)V
+.method public final setVisible(Z)V
     .locals 2
 
     .prologue
     .line 80
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->asK:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->visible:Z
 
     .line 81
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->cTx:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->cQS:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     .line 82
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->cTx:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactCountView;->cQS:Landroid/view/View;
 
     if-eqz p1, :cond_1
 

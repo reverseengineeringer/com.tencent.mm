@@ -7,10 +7,10 @@
 
 
 # virtual methods
-.method public abstract aiE()Z
+.method public abstract alm()Z
 .end method
 
-.method public abstract aiF()Z
+.method public abstract aln()Z
 .end method
 
 .method public abstract i(Lcom/tencent/mm/storage/a/c;)V

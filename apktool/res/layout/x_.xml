@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/bfs" android:background="@color/h9" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/mall_order_transaction_item" />
+        <TextView android:id="@id/bft" android:background="@drawable/io" android:layout_width="fill_parent" android:layout_height="13.0dip" />
+    </LinearLayout>
+</ScrollView>

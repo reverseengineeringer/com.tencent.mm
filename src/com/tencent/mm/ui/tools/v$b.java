@@ -2,15 +2,15 @@ package com.tencent.mm.ui.tools;
 
 final class v$b
 {
+  boolean lZp;
   int length;
-  boolean lyB;
   int start;
   
   v$b(int paramInt1, int paramInt2, boolean paramBoolean)
   {
     start = paramInt1;
     length = paramInt2;
-    lyB = paramBoolean;
+    lZp = paramBoolean;
   }
 }
 

@@ -1,44 +1,42 @@
 package com.tencent.mm.booter;
 
 import android.media.MediaPlayer;
-import com.tencent.mm.model.v;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah.a;
 import java.util.Iterator;
 import java.util.List;
 
 final class d$1
-  implements af.a
+  implements ah.a
 {
   d$1(d paramd) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
     try
     {
-      if ((d.a(bmw) != null) && (d.a(bmw).isPlaying())) {
-        synchronized (d.b(bmw))
+      if ((d.a(bac) != null) && (d.a(bac).isPlaying())) {
+        synchronized (d.b(bac))
         {
-          if (d.a(bmw).getCurrentPosition() > 0) {
-            d.a(bmw, d.a(bmw).getCurrentPosition());
+          if (d.a(bac).getCurrentPosition() > 0) {
+            d.a(bac, d.a(bac).getCurrentPosition());
           }
-          Iterator localIterator = d.c(bmw).iterator();
-          v localv;
+          Iterator localIterator = d.c(bac).iterator();
+          com.tencent.mm.model.v localv;
           do
           {
             if (!localIterator.hasNext()) {
               break;
             }
-            localv = (v)localIterator.next();
+            localv = (com.tencent.mm.model.v)localIterator.next();
           } while (localv == null);
-          localv.J(d.a(bmw).getCurrentPosition(), d.a(bmw).getDuration());
+          localv.L(d.a(bac).getCurrentPosition(), d.a(bac).getDuration());
         }
       }
       return false;
     }
     catch (Exception localException)
     {
-      u.e("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", localException.getMessage());
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.DownloadPlayer", localException.getMessage());
     }
     return true;
   }

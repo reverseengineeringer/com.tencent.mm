@@ -17,13 +17,30 @@
     name = "c"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Landroid/util/LongSparseArray",
+        "<TT;>;"
+    }
+.end annotation
+
 
 # static fields
-.field public static kiv:Z
+.field public static kIT:Z
 
 
 # instance fields
-.field kio:Landroid/util/LongSparseArray;
+.field kIM:Landroid/util/LongSparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/LongSparseArray",
+            "<TT;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -31,10 +48,10 @@
     .locals 1
 
     .prologue
-    .line 335
+    .line 354
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/svg/b/e$c;->kiv:Z
+    sput-boolean v0, Lcom/tencent/mm/svg/b/e$c;->kIT:Z
 
     return-void
 .end method
@@ -43,13 +60,13 @@
     .locals 1
 
     .prologue
-    .line 329
+    .line 348
     invoke-direct {p0}, Landroid/util/LongSparseArray;-><init>()V
 
-    .line 333
+    .line 352
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/svg/b/e$c;->kio:Landroid/util/LongSparseArray;
+    iput-object v0, p0, Lcom/tencent/mm/svg/b/e$c;->kIM:Landroid/util/LongSparseArray;
 
     return-void
 .end method
@@ -60,11 +77,11 @@
     .locals 3
 
     .prologue
-    .line 370
+    .line 389
     invoke-super {p0}, Landroid/util/LongSparseArray;->clear()V
 
-    .line 371
-    const-string/jumbo v0, "!44@/B4Tb64lLpJckM7c+vhG/jcgEUqr3+h3BV5ANN/TXgU="
+    .line 390
+    const-string/jumbo v0, "MicroMsg.SVGLongSparseArray"
 
     const-string/jumbo v1, "Found u! clear."
 
@@ -72,9 +89,9 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 372
+    .line 391
     return-void
 .end method
 
@@ -82,11 +99,11 @@
     .locals 5
 
     .prologue
-    .line 358
+    .line 377
     invoke-super {p0, p1, p2}, Landroid/util/LongSparseArray;->delete(J)V
 
-    .line 359
-    const-string/jumbo v0, "!44@/B4Tb64lLpJckM7c+vhG/jcgEUqr3+h3BV5ANN/TXgU="
+    .line 378
+    const-string/jumbo v0, "MicroMsg.SVGLongSparseArray"
 
     const-string/jumbo v1, "Found u! delete key %s"
 
@@ -102,18 +119,23 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 360
+    .line 379
     return-void
 .end method
 
 .method public final get(JLjava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(JTT;)TT;"
+        }
+    .end annotation
 
     .prologue
-    .line 347
-    iget-object v0, p0, Lcom/tencent/mm/svg/b/e$c;->kio:Landroid/util/LongSparseArray;
+    .line 366
+    iget-object v0, p0, Lcom/tencent/mm/svg/b/e$c;->kIM:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/LongSparseArray;->indexOfKey(J)I
 
@@ -121,25 +143,25 @@
 
     if-ltz v0, :cond_1
 
-    .line 348
-    invoke-static {}, Lcom/tencent/mm/svg/b/e;->nV()Z
+    .line 367
+    invoke-static {}, Lcom/tencent/mm/svg/b/e;->ml()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 349
-    invoke-static {}, Lcom/tencent/mm/svg/b/e;->aYW()V
+    .line 368
+    invoke-static {}, Lcom/tencent/mm/svg/b/e;->bep()V
 
-    .line 351
+    .line 370
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/svg/b/e$c;->kio:Landroid/util/LongSparseArray;
+    iget-object v0, p0, Lcom/tencent/mm/svg/b/e$c;->kIM:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/util/LongSparseArray;->get(JLjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 353
+    .line 372
     :goto_0
     return-object v0
 
@@ -155,11 +177,11 @@
     .locals 5
 
     .prologue
-    .line 364
+    .line 383
     invoke-super {p0, p1, p2}, Landroid/util/LongSparseArray;->remove(J)V
 
-    .line 365
-    const-string/jumbo v0, "!44@/B4Tb64lLpJckM7c+vhG/jcgEUqr3+h3BV5ANN/TXgU="
+    .line 384
+    const-string/jumbo v0, "MicroMsg.SVGLongSparseArray"
 
     const-string/jumbo v1, "Found u! remove key %s"
 
@@ -175,8 +197,8 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 366
+    .line 385
     return-void
 .end method

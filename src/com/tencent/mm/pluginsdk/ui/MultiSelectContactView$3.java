@@ -12,17 +12,17 @@ final class MultiSelectContactView$3
   {
     if (paramBoolean)
     {
-      MultiSelectContactView.e(iHi).setBackgroundResource(2130970444);
-      MultiSelectContactView.e(iHi).setPadding(MultiSelectContactView.f(iHi), MultiSelectContactView.f(iHi), MultiSelectContactView.f(iHi), MultiSelectContactView.f(iHi));
+      MultiSelectContactView.e(jed).setBackgroundResource(2130838514);
+      MultiSelectContactView.e(jed).setPadding(MultiSelectContactView.f(jed), MultiSelectContactView.f(jed), MultiSelectContactView.f(jed), MultiSelectContactView.f(jed));
     }
     for (;;)
     {
-      if (MultiSelectContactView.g(iHi) != null) {
-        MultiSelectContactView.g(iHi).aRc();
+      if (MultiSelectContactView.g(jed) != null) {
+        MultiSelectContactView.g(jed).aVN();
       }
       return;
-      MultiSelectContactView.e(iHi).setBackgroundResource(2130970418);
-      MultiSelectContactView.e(iHi).setPadding(MultiSelectContactView.f(iHi), MultiSelectContactView.f(iHi), MultiSelectContactView.f(iHi), MultiSelectContactView.f(iHi));
+      MultiSelectContactView.e(jed).setBackgroundResource(2130838515);
+      MultiSelectContactView.e(jed).setPadding(MultiSelectContactView.f(jed), MultiSelectContactView.f(jed), MultiSelectContactView.f(jed), MultiSelectContactView.f(jed));
     }
   }
 }

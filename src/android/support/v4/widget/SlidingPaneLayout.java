@@ -35,38 +35,37 @@ import java.util.ArrayList;
 public class SlidingPaneLayout
   extends ViewGroup
 {
-  static final e hZ = new f();
-  private float eW;
-  private float eX;
-  private boolean fY;
-  private boolean gn = true;
-  private int hL = -858993460;
-  private int hM;
-  private Drawable hN;
-  private final int hO;
-  private boolean hP;
-  private View hQ;
-  private float hR;
-  private float hS;
-  private int hT;
-  private int hU;
-  private d hV;
-  private final f hW;
-  private boolean hX;
-  private final ArrayList hY = new ArrayList();
-  private final Rect ht = new Rect();
+  static final d it = new e();
+  private float ft;
+  private float fu;
+  private boolean gJ = true;
+  private boolean gu;
+  private final Rect hM = new Rect();
+  private int jdField_if = -858993460;
+  private int ig;
+  private Drawable ih;
+  private final int ii;
+  private boolean ij;
+  private View ik;
+  private float il;
+  private float im;
+  private int in;
+  private int io;
+  private final f iq;
+  private boolean ir;
+  private final ArrayList<b> is = new ArrayList();
   
   static
   {
     int i = Build.VERSION.SDK_INT;
     if (i >= 17)
     {
-      hZ = new h();
+      it = new g();
       return;
     }
     if (i >= 16)
     {
-      hZ = new g();
+      it = new f();
       return;
     }
   }
@@ -80,19 +79,19 @@ public class SlidingPaneLayout
   {
     super(paramContext, paramAttributeSet, paramInt);
     float f = getResourcesgetDisplayMetricsdensity;
-    hO = ((int)(32.0F * f + 0.5F));
+    ii = ((int)(32.0F * f + 0.5F));
     ViewConfiguration.get(paramContext);
     setWillNotDraw(false);
     m.a(this, new a());
     m.i(this);
-    hW = f.a(this, 0.5F, new c((byte)0));
-    hW.ix = 1;
-    hW.iv = (f * 400.0F);
+    iq = f.a(this, 0.5F, new c((byte)0));
+    iq.iO = 1;
+    iq.iM = (f * 400.0F);
   }
   
   private void B(View paramView)
   {
-    hZ.b(this, paramView);
+    it.b(this, paramView);
   }
   
   private void a(View paramView, float paramFloat, int paramInt)
@@ -101,12 +100,12 @@ public class SlidingPaneLayout
     if ((paramFloat > 0.0F) && (paramInt != 0))
     {
       i = (int)(((0xFF000000 & paramInt) >>> 24) * paramFloat);
-      if (jdField_if == null) {
-        jdField_if = new Paint();
+      if (iy == null) {
+        iy = new Paint();
       }
-      jdField_if.setColorFilter(new PorterDuffColorFilter(i << 24 | 0xFFFFFF & paramInt, PorterDuff.Mode.SRC_OVER));
+      iy.setColorFilter(new PorterDuffColorFilter(i << 24 | 0xFFFFFF & paramInt, PorterDuff.Mode.SRC_OVER));
       if (m.j(paramView) != 2) {
-        m.a(paramView, 2, jdField_if);
+        m.a(paramView, 2, iy);
       }
       B(paramView);
     }
@@ -115,60 +114,60 @@ public class SlidingPaneLayout
       int i;
       return;
     }
-    if (jdField_if != null) {
-      jdField_if.setColorFilter(null);
+    if (iy != null) {
+      iy.setColorFilter(null);
     }
     paramView = new b(paramView);
-    hY.add(paramView);
+    is.add(paramView);
     m.a(this, paramView);
   }
   
-  private boolean aG()
+  private boolean aF()
   {
     boolean bool = false;
-    if ((gn) || (g(0.0F)))
+    if ((gJ) || (f(0.0F)))
     {
-      hX = false;
+      ir = false;
       bool = true;
     }
     return bool;
   }
   
-  private boolean g(float paramFloat)
+  private boolean f(float paramFloat)
   {
-    if (!hP) {
+    if (!ij) {
       return false;
     }
-    LayoutParams localLayoutParams = (LayoutParams)hQ.getLayoutParams();
+    LayoutParams localLayoutParams = (LayoutParams)ik.getLayoutParams();
     int i = getPaddingLeft();
-    i = (int)(leftMargin + i + hT * paramFloat);
-    if (hW.b(hQ, i, hQ.getTop()))
+    i = (int)(leftMargin + i + in * paramFloat);
+    if (iq.b(ik, i, ik.getTop()))
     {
-      aF();
+      aE();
       m.g(this);
       return true;
     }
     return false;
   }
   
-  private void h(float paramFloat)
+  private void g(float paramFloat)
   {
     int j = 0;
-    Object localObject = (LayoutParams)hQ.getLayoutParams();
-    if ((ie) && (leftMargin <= 0)) {}
+    Object localObject = (LayoutParams)ik.getLayoutParams();
+    if ((ix) && (leftMargin <= 0)) {}
     for (int i = 1;; i = 0)
     {
       int k = getChildCount();
       while (j < k)
       {
         localObject = getChildAt(j);
-        if (localObject != hQ)
+        if (localObject != ik)
         {
-          int m = (int)((1.0F - hS) * hU);
-          hS = paramFloat;
-          ((View)localObject).offsetLeftAndRight(m - (int)((1.0F - paramFloat) * hU));
+          int m = (int)((1.0F - im) * io);
+          im = paramFloat;
+          ((View)localObject).offsetLeftAndRight(m - (int)((1.0F - paramFloat) * io));
           if (i != 0) {
-            a((View)localObject, 1.0F - hS, hM);
+            a((View)localObject, 1.0F - im, ig);
           }
         }
         j += 1;
@@ -258,10 +257,10 @@ public class SlidingPaneLayout
       return false;
     }
     paramView = (LayoutParams)paramView.getLayoutParams();
-    return (hP) && (ie) && (hR > 0.0F);
+    return (ij) && (ix) && (il > 0.0F);
   }
   
-  final void aF()
+  final void aE()
   {
     int j = getChildCount();
     int i = 0;
@@ -282,10 +281,10 @@ public class SlidingPaneLayout
   
   public void computeScroll()
   {
-    if (hW.aH())
+    if (iq.aG())
     {
-      if (!hP) {
-        hW.abort();
+      if (!ij) {
+        iq.abort();
       }
     }
     else {
@@ -298,31 +297,31 @@ public class SlidingPaneLayout
   {
     super.draw(paramCanvas);
     if (getChildCount() > 1) {}
-    for (View localView = getChildAt(1); (localView == null) || (hN == null); localView = null) {
+    for (View localView = getChildAt(1); (localView == null) || (ih == null); localView = null) {
       return;
     }
-    int i = hN.getIntrinsicWidth();
+    int i = ih.getIntrinsicWidth();
     int j = localView.getLeft();
     int k = localView.getTop();
     int m = localView.getBottom();
-    hN.setBounds(j - i, k, j, m);
-    hN.draw(paramCanvas);
+    ih.setBounds(j - i, k, j, m);
+    ih.draw(paramCanvas);
   }
   
   protected boolean drawChild(Canvas paramCanvas, View paramView, long paramLong)
   {
     LayoutParams localLayoutParams = (LayoutParams)paramView.getLayoutParams();
     int i = paramCanvas.save(2);
-    if ((hP) && (!ic) && (hQ != null))
+    if ((ij) && (!iw) && (ik != null))
     {
-      paramCanvas.getClipBounds(ht);
-      ht.right = Math.min(ht.right, hQ.getLeft());
-      paramCanvas.clipRect(ht);
+      paramCanvas.getClipBounds(hM);
+      hM.right = Math.min(hM.right, ik.getLeft());
+      paramCanvas.clipRect(hM);
     }
     boolean bool;
     if (Build.VERSION.SDK_INT < 11)
     {
-      if ((!ie) || (hR <= 0.0F)) {
+      if ((!ix) || (il <= 0.0F)) {
         break label194;
       }
       if (!paramView.isDrawingCacheEnabled()) {
@@ -331,7 +330,7 @@ public class SlidingPaneLayout
       Bitmap localBitmap = paramView.getDrawingCache();
       if (localBitmap != null)
       {
-        paramCanvas.drawBitmap(localBitmap, paramView.getLeft(), paramView.getTop(), jdField_if);
+        paramCanvas.drawBitmap(localBitmap, paramView.getLeft(), paramView.getTop(), iy);
         bool = false;
         paramCanvas.restoreToCount(i);
         return bool;
@@ -367,46 +366,31 @@ public class SlidingPaneLayout
     return new LayoutParams(paramLayoutParams);
   }
   
-  public int getCoveredFadeColor()
-  {
-    return hM;
-  }
-  
-  public int getParallaxDistance()
-  {
-    return hU;
-  }
-  
-  public int getSliderFadeColor()
-  {
-    return hL;
-  }
-  
   protected void onAttachedToWindow()
   {
     super.onAttachedToWindow();
-    gn = true;
+    gJ = true;
   }
   
   protected void onDetachedFromWindow()
   {
     super.onDetachedFromWindow();
-    gn = true;
-    int j = hY.size();
+    gJ = true;
+    int j = is.size();
     int i = 0;
     while (i < j)
     {
-      ((b)hY.get(i)).run();
+      ((b)is.get(i)).run();
       i += 1;
     }
-    hY.clear();
+    is.clear();
   }
   
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
   {
     boolean bool2 = false;
     int i = i.d(paramMotionEvent);
-    if ((!hP) && (i == 0) && (getChildCount() > 1))
+    if ((!ij) && (i == 0) && (getChildCount() > 1))
     {
       View localView = getChildAt(1);
       if (localView != null) {
@@ -418,17 +402,17 @@ public class SlidingPaneLayout
     label104:
     for (boolean bool1 = true;; bool1 = false)
     {
-      hX = bool1;
-      if ((hP) && ((!fY) || (i == 0))) {
+      ir = bool1;
+      if ((ij) && ((!gu) || (i == 0))) {
         break;
       }
-      hW.cancel();
+      iq.cancel();
       bool1 = super.onInterceptTouchEvent(paramMotionEvent);
       return bool1;
     }
     if ((i == 3) || (i == 1))
     {
-      hW.cancel();
+      iq.cancel();
       return false;
     }
     switch (i)
@@ -441,7 +425,7 @@ public class SlidingPaneLayout
     {
       for (i = 0;; i = 1)
       {
-        if (!hW.i(paramMotionEvent))
+        if (!iq.i(paramMotionEvent))
         {
           bool1 = bool2;
           if (i == 0) {
@@ -449,22 +433,22 @@ public class SlidingPaneLayout
           }
         }
         return true;
-        fY = false;
+        gu = false;
         f1 = paramMotionEvent.getX();
         f2 = paramMotionEvent.getY();
-        eW = f1;
-        eX = f2;
-        if ((!f.c(hQ, (int)f1, (int)f2)) || (!C(hQ))) {
+        ft = f1;
+        fu = f2;
+        if ((!f.c(ik, (int)f1, (int)f2)) || (!C(ik))) {
           break label160;
         }
       }
       f2 = paramMotionEvent.getX();
       f1 = paramMotionEvent.getY();
-      f2 = Math.abs(f2 - eW);
-      f1 = Math.abs(f1 - eX);
-    } while ((f2 <= hW.eY) || (f1 <= f2));
-    hW.cancel();
-    fY = true;
+      f2 = Math.abs(f2 - ft);
+      f1 = Math.abs(f1 - fu);
+    } while ((f2 <= iq.fv) || (f1 <= f2));
+    iq.cancel();
+    gu = true;
     return false;
   }
   
@@ -476,12 +460,12 @@ public class SlidingPaneLayout
     int m = getPaddingTop();
     int i = getChildCount();
     float f;
-    if (gn)
+    if (gJ)
     {
-      if ((hP) && (hX))
+      if ((ij) && (ir))
       {
         f = 1.0F;
-        hR = f;
+        il = f;
       }
     }
     else
@@ -499,20 +483,20 @@ public class SlidingPaneLayout
       LayoutParams localLayoutParams = (LayoutParams)localView.getLayoutParams();
       int n = localView.getMeasuredWidth();
       paramInt4 = 0;
-      if (!ic) {
+      if (!iw) {
         break label270;
       }
       int i1 = leftMargin;
       int i2 = rightMargin;
-      i1 = Math.min(paramInt1, j - k - hO) - paramInt2 - (i1 + i2);
-      hT = i1;
+      i1 = Math.min(paramInt1, j - k - ii) - paramInt2 - (i1 + i2);
+      in = i1;
       if (leftMargin + paramInt2 + i1 + n / 2 <= j - k) {
         break label265;
       }
       paramBoolean = true;
       label186:
-      ie = paramBoolean;
-      i1 = (int)(i1 * hR);
+      ix = paramBoolean;
+      i1 = (int)(i1 * il);
       paramInt2 = leftMargin + i1 + paramInt2;
       paramInt4 = paramInt2 - paramInt4;
       localView.layout(paramInt4, m, paramInt4 + n, localView.getMeasuredHeight() + m);
@@ -531,33 +515,33 @@ public class SlidingPaneLayout
       break;
       paramBoolean = false;
       break label186;
-      if ((hP) && (hU != 0)) {}
-      for (paramInt2 = (int)((1.0F - hR) * hU);; paramInt2 = 0)
+      if ((ij) && (io != 0)) {}
+      for (paramInt2 = (int)((1.0F - il) * io);; paramInt2 = 0)
       {
         paramInt4 = paramInt2;
         paramInt2 = paramInt1;
         break;
-        if (gn)
+        if (gJ)
         {
-          if (!hP) {
+          if (!ij) {
             break label381;
           }
-          if (hU != 0) {
-            h(hR);
+          if (io != 0) {
+            g(il);
           }
-          if (hQ.getLayoutParams()).ie) {
-            a(hQ, hR, hL);
+          if (ik.getLayoutParams()).ix) {
+            a(ik, il, jdField_if);
           }
         }
         for (;;)
         {
-          A(hQ);
-          gn = false;
+          A(ik);
+          gJ = false;
           return;
           paramInt1 = 0;
           while (paramInt1 < i)
           {
-            a(getChildAt(paramInt1), 0.0F, hL);
+            a(getChildAt(paramInt1), 0.0F, jdField_if);
             paramInt1 += 1;
           }
         }
@@ -600,7 +584,7 @@ public class SlidingPaneLayout
         bool1 = false;
         paramInt2 = j - getPaddingLeft() - getPaddingRight();
         i2 = getChildCount();
-        hQ = null;
+        ik = null;
         i1 = 0;
         f1 = 0.0F;
         if (i1 < i2)
@@ -609,7 +593,7 @@ public class SlidingPaneLayout
           localLayoutParams = (LayoutParams)localView.getLayoutParams();
           if (localView.getVisibility() == 8)
           {
-            ie = false;
+            ix = false;
             m = paramInt2;
             paramInt2 = paramInt1;
             paramInt1 = m;
@@ -689,9 +673,9 @@ public class SlidingPaneLayout
           label560:
           for (boolean bool2 = true;; bool2 = false)
           {
-            ic = bool2;
-            if (ic) {
-              hQ = localView;
+            iw = bool2;
+            if (iw) {
+              ik = localView;
             }
             f1 = f2;
             bool1 = bool2 | bool1;
@@ -714,7 +698,7 @@ public class SlidingPaneLayout
           }
           if ((bool1) || (f1 > 0.0F))
           {
-            i1 = j - hO;
+            i1 = j - ii;
             m = 0;
             if (m < i2)
             {
@@ -734,7 +718,7 @@ public class SlidingPaneLayout
                   }
                   n = 0;
                   label663:
-                  if ((!bool1) || (localView == hQ)) {
+                  if ((!bool1) || (localView == ik)) {
                     break label821;
                   }
                   if ((width < 0) && ((n > i1) || (weight > 0.0F)))
@@ -812,9 +796,9 @@ public class SlidingPaneLayout
             }
           }
           setMeasuredDimension(j, paramInt1);
-          hP = bool1;
-          if ((hW.ij != 0) && (!bool1)) {
-            hW.abort();
+          ij = bool1;
+          if ((iq.iC != 0) && (!bool1)) {
+            iq.abort();
           }
           return;
         }
@@ -834,16 +818,16 @@ public class SlidingPaneLayout
   {
     paramParcelable = (SavedState)paramParcelable;
     super.onRestoreInstanceState(paramParcelable.getSuperState());
-    if (ig) {
-      if ((gn) || (g(1.0F))) {
-        hX = true;
+    if (iz) {
+      if ((gJ) || (f(1.0F))) {
+        ir = true;
       }
     }
     for (;;)
     {
-      hX = ig;
+      ir = iz;
       return;
-      aG();
+      aF();
     }
   }
   
@@ -851,18 +835,18 @@ public class SlidingPaneLayout
   {
     SavedState localSavedState = new SavedState(super.onSaveInstanceState());
     boolean bool;
-    if (hP) {
-      if ((!hP) || (hR == 1.0F)) {
+    if (ij) {
+      if ((!ij) || (il == 1.0F)) {
         bool = true;
       }
     }
     for (;;)
     {
-      ig = bool;
+      iz = bool;
       return localSavedState;
       bool = false;
       continue;
-      bool = hX;
+      bool = ir;
     }
   }
   
@@ -870,16 +854,16 @@ public class SlidingPaneLayout
   {
     super.onSizeChanged(paramInt1, paramInt2, paramInt3, paramInt4);
     if (paramInt1 != paramInt3) {
-      gn = true;
+      gJ = true;
     }
   }
   
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
   {
-    if (!hP) {
+    if (!ij) {
       return super.onTouchEvent(paramMotionEvent);
     }
-    hW.j(paramMotionEvent);
+    iq.j(paramMotionEvent);
     switch (paramMotionEvent.getAction() & 0xFF)
     {
     }
@@ -888,18 +872,18 @@ public class SlidingPaneLayout
       return true;
       float f1 = paramMotionEvent.getX();
       float f2 = paramMotionEvent.getY();
-      eW = f1;
-      eX = f2;
+      ft = f1;
+      fu = f2;
       continue;
-      if (C(hQ))
+      if (C(ik))
       {
         f1 = paramMotionEvent.getX();
         f2 = paramMotionEvent.getY();
-        float f3 = f1 - eW;
-        float f4 = f2 - eX;
-        int i = hW.eY;
-        if ((f3 * f3 + f4 * f4 < i * i) && (f.c(hQ, (int)f1, (int)f2))) {
-          aG();
+        float f3 = f1 - ft;
+        float f4 = f2 - fu;
+        int i = iq.fv;
+        if ((f3 * f3 + f4 * f4 < i * i) && (f.c(ik, (int)f1, (int)f2))) {
+          aF();
         }
       }
     }
@@ -908,57 +892,26 @@ public class SlidingPaneLayout
   public void requestChildFocus(View paramView1, View paramView2)
   {
     super.requestChildFocus(paramView1, paramView2);
-    if ((!isInTouchMode()) && (!hP)) {
-      if (paramView1 != hQ) {
+    if ((!isInTouchMode()) && (!ij)) {
+      if (paramView1 != ik) {
         break label36;
       }
     }
     label36:
     for (boolean bool = true;; bool = false)
     {
-      hX = bool;
+      ir = bool;
       return;
     }
-  }
-  
-  public void setCoveredFadeColor(int paramInt)
-  {
-    hM = paramInt;
-  }
-  
-  public void setPanelSlideListener(d paramd)
-  {
-    hV = paramd;
-  }
-  
-  public void setParallaxDistance(int paramInt)
-  {
-    hU = paramInt;
-    requestLayout();
-  }
-  
-  public void setShadowDrawable(Drawable paramDrawable)
-  {
-    hN = paramDrawable;
-  }
-  
-  public void setShadowResource(int paramInt)
-  {
-    setShadowDrawable(getResources().getDrawable(paramInt));
-  }
-  
-  public void setSliderFadeColor(int paramInt)
-  {
-    hL = paramInt;
   }
   
   public static class LayoutParams
     extends ViewGroup.MarginLayoutParams
   {
-    private static final int[] fn = { 16843137 };
-    boolean ic;
-    boolean ie;
-    Paint jdField_if;
+    private static final int[] fJ = { 16843137 };
+    boolean iw;
+    boolean ix;
+    Paint iy;
     public float weight = 0.0F;
     
     public LayoutParams()
@@ -969,7 +922,7 @@ public class SlidingPaneLayout
     public LayoutParams(Context paramContext, AttributeSet paramAttributeSet)
     {
       super(paramAttributeSet);
-      paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, fn);
+      paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, fJ);
       weight = paramContext.getFloat(0, 0.0F);
       paramContext.recycle();
     }
@@ -988,8 +941,8 @@ public class SlidingPaneLayout
   static class SavedState
     extends View.BaseSavedState
   {
-    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-    boolean ig;
+    public static final Parcelable.Creator<SavedState> CREATOR = new Parcelable.Creator() {};
+    boolean iz;
     
     private SavedState(Parcel paramParcel)
     {
@@ -997,7 +950,7 @@ public class SlidingPaneLayout
       if (paramParcel.readInt() != 0) {}
       for (boolean bool = true;; bool = false)
       {
-        ig = bool;
+        iz = bool;
         return;
       }
     }
@@ -1010,7 +963,7 @@ public class SlidingPaneLayout
     public void writeToParcel(Parcel paramParcel, int paramInt)
     {
       super.writeToParcel(paramParcel, paramInt);
-      if (ig) {}
+      if (iz) {}
       for (paramInt = 1;; paramInt = 0)
       {
         paramParcel.writeInt(paramInt);
@@ -1022,7 +975,7 @@ public class SlidingPaneLayout
   final class a
     extends android.support.v4.view.a
   {
-    private final Rect ht = new Rect();
+    private final Rect hM = new Rect();
     
     a() {}
     
@@ -1035,7 +988,7 @@ public class SlidingPaneLayout
     {
       android.support.v4.view.a.a locala = android.support.v4.view.a.a.a(parama);
       super.a(paramView, locala);
-      Rect localRect = ht;
+      Rect localRect = hM;
       locala.getBoundsInParent(localRect);
       parama.setBoundsInParent(localRect);
       locala.getBoundsInScreen(localRect);
@@ -1052,8 +1005,8 @@ public class SlidingPaneLayout
       parama.setSelected(locala.isSelected());
       parama.setLongClickable(locala.isLongClickable());
       parama.addAction(locala.getActions());
-      int i = android.support.v4.view.a.a.gK.w(gL);
-      android.support.v4.view.a.a.gK.c(gL, i);
+      int i = android.support.v4.view.a.a.hf.w(hg);
+      android.support.v4.view.a.a.hf.c(hg, i);
       locala.recycle();
       parama.setClassName(SlidingPaneLayout.class.getName());
       parama.setSource(paramView);
@@ -1093,19 +1046,19 @@ public class SlidingPaneLayout
   private final class b
     implements Runnable
   {
-    final View ib;
+    final View iv;
     
     b(View paramView)
     {
-      ib = paramView;
+      iv = paramView;
     }
     
     public final void run()
     {
-      if (ib.getParent() == SlidingPaneLayout.this)
+      if (iv.getParent() == SlidingPaneLayout.this)
       {
-        m.a(ib, 0, null);
-        SlidingPaneLayout.a(SlidingPaneLayout.this, ib);
+        m.a(iv, 0, null);
+        SlidingPaneLayout.a(SlidingPaneLayout.this, iv);
       }
       SlidingPaneLayout.f(SlidingPaneLayout.this).remove(this);
     }
@@ -1134,7 +1087,7 @@ public class SlidingPaneLayout
       {
         i = j + SlidingPaneLayout.e(SlidingPaneLayout.this);
       }
-      SlidingPaneLayout.b(SlidingPaneLayout.this).i(i, paramView.getTop());
+      SlidingPaneLayout.b(SlidingPaneLayout.this).g(i, paramView.getTop());
       invalidate();
     }
     
@@ -1149,7 +1102,7 @@ public class SlidingPaneLayout
       if (SlidingPaneLayout.a(SlidingPaneLayout.this)) {
         return false;
       }
-      return getLayoutParamsic;
+      return getLayoutParamsiw;
     }
     
     public final int e(View paramView, int paramInt)
@@ -1161,14 +1114,24 @@ public class SlidingPaneLayout
       return Math.min(Math.max(paramInt, i), j + i);
     }
     
-    public final void h(int paramInt1, int paramInt2)
+    public final void f(int paramInt1, int paramInt2)
     {
       SlidingPaneLayout.b(SlidingPaneLayout.this).f(SlidingPaneLayout.d(SlidingPaneLayout.this), paramInt2);
     }
     
-    public final void t(int paramInt)
+    public final void x(View paramView)
     {
-      if (bij == 0)
+      aE();
+    }
+    
+    public final int y(View paramView)
+    {
+      return SlidingPaneLayout.e(SlidingPaneLayout.this);
+    }
+    
+    public final void y(int paramInt)
+    {
+      if (biC == 0)
       {
         if (SlidingPaneLayout.c(SlidingPaneLayout.this) == 0.0F)
         {
@@ -1187,27 +1150,15 @@ public class SlidingPaneLayout
       localSlidingPaneLayout.sendAccessibilityEvent(32);
       SlidingPaneLayout.a(SlidingPaneLayout.this, true);
     }
-    
-    public final void x(View paramView)
-    {
-      aF();
-    }
-    
-    public final int y(View paramView)
-    {
-      return SlidingPaneLayout.e(SlidingPaneLayout.this);
-    }
   }
   
-  public static abstract interface d {}
-  
-  static abstract interface e
+  static abstract interface d
   {
     public abstract void b(SlidingPaneLayout paramSlidingPaneLayout, View paramView);
   }
   
-  static class f
-    implements SlidingPaneLayout.e
+  static class e
+    implements SlidingPaneLayout.d
   {
     public void b(SlidingPaneLayout paramSlidingPaneLayout, View paramView)
     {
@@ -1215,21 +1166,21 @@ public class SlidingPaneLayout
     }
   }
   
-  static final class g
-    extends SlidingPaneLayout.f
+  static final class f
+    extends SlidingPaneLayout.e
   {
-    private Method ih;
-    private Field ii;
+    private Method iA;
+    private Field iB;
     
-    g()
+    f()
     {
       try
       {
-        ih = View.class.getDeclaredMethod("getDisplayList", null);
+        iA = View.class.getDeclaredMethod("getDisplayList", null);
         try
         {
-          ii = View.class.getDeclaredField("mRecreateDisplayList");
-          ii.setAccessible(true);
+          iB = View.class.getDeclaredField("mRecreateDisplayList");
+          iB.setAccessible(true);
           return;
         }
         catch (NoSuchFieldException localNoSuchFieldException) {}
@@ -1242,11 +1193,11 @@ public class SlidingPaneLayout
     
     public final void b(SlidingPaneLayout paramSlidingPaneLayout, View paramView)
     {
-      if ((ih != null) && (ii != null)) {}
+      if ((iA != null) && (iB != null)) {}
       try
       {
-        ii.setBoolean(paramView, true);
-        ih.invoke(paramView, null);
+        iB.setBoolean(paramView, true);
+        iA.invoke(paramView, null);
         super.b(paramSlidingPaneLayout, paramView);
         return;
         paramView.invalidate();
@@ -1259,12 +1210,12 @@ public class SlidingPaneLayout
     }
   }
   
-  static final class h
-    extends SlidingPaneLayout.f
+  static final class g
+    extends SlidingPaneLayout.e
   {
     public final void b(SlidingPaneLayout paramSlidingPaneLayout, View paramView)
     {
-      m.a(paramView, getLayoutParamsjdField_if);
+      m.a(paramView, getLayoutParamsiy);
     }
   }
 }

@@ -4,22 +4,22 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.AudioManager.OnAudioFocusChangeListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 @TargetApi(8)
 public final class b
   implements a.b
 {
-  private AudioManager buc;
-  a.a bud;
-  private AudioManager.OnAudioFocusChangeListener bue = new AudioManager.OnAudioFocusChangeListener()
+  private AudioManager biD;
+  a.a biE;
+  private AudioManager.OnAudioFocusChangeListener biF = new AudioManager.OnAudioFocusChangeListener()
   {
     public final void onAudioFocusChange(int paramAnonymousInt)
     {
-      if (bud != null)
+      if (biE != null)
       {
-        u.d("!44@/B4Tb64lLpLCq+BipdDzGSEj50wMwdFVuq5cXvM0LPk=", "jacks change: %d", new Object[] { Integer.valueOf(paramAnonymousInt) });
-        bud.bT(paramAnonymousInt);
+        v.d("MicroMsg.AudioFocusHelper", "jacks change: %d", new Object[] { Integer.valueOf(paramAnonymousInt) });
+        biE.cl(paramAnonymousInt);
       }
     }
   };
@@ -32,23 +32,23 @@ public final class b
   
   public final void a(a.a parama)
   {
-    bud = parama;
+    biE = parama;
   }
   
-  public final boolean oV()
+  public final boolean nn()
   {
-    if ((buc == null) && (context != null)) {
-      buc = ((AudioManager)context.getSystemService("audio"));
+    if ((biD == null) && (context != null)) {
+      biD = ((AudioManager)context.getSystemService("audio"));
     }
     boolean bool;
-    if (buc != null) {
-      if (1 == buc.abandonAudioFocus(bue)) {
+    if (biD != null) {
+      if (1 == biD.abandonAudioFocus(biF)) {
         bool = true;
       }
     }
     for (;;)
     {
-      u.d("!44@/B4Tb64lLpLCq+BipdDzGSEj50wMwdFVuq5cXvM0LPk=", "jacks abandonFocus: %B, %x", new Object[] { Boolean.valueOf(bool), Integer.valueOf(bue.hashCode()) });
+      v.d("MicroMsg.AudioFocusHelper", "jacks abandonFocus: %B, %x", new Object[] { Boolean.valueOf(bool), Integer.valueOf(biF.hashCode()) });
       return bool;
       bool = false;
       continue;
@@ -58,18 +58,18 @@ public final class b
   
   public final boolean requestFocus()
   {
-    if ((buc == null) && (context != null)) {
-      buc = ((AudioManager)context.getSystemService("audio"));
+    if ((biD == null) && (context != null)) {
+      biD = ((AudioManager)context.getSystemService("audio"));
     }
     boolean bool;
-    if (buc != null) {
-      if (1 == buc.requestAudioFocus(bue, 3, 2)) {
+    if (biD != null) {
+      if (1 == biD.requestAudioFocus(biF, 3, 2)) {
         bool = true;
       }
     }
     for (;;)
     {
-      u.d("!44@/B4Tb64lLpLCq+BipdDzGSEj50wMwdFVuq5cXvM0LPk=", "jacks requestFocus: %B, %x", new Object[] { Boolean.valueOf(bool), Integer.valueOf(bue.hashCode()) });
+      v.d("MicroMsg.AudioFocusHelper", "jacks requestFocus: %B, %x", new Object[] { Boolean.valueOf(bool), Integer.valueOf(biF.hashCode()) });
       return bool;
       bool = false;
       continue;

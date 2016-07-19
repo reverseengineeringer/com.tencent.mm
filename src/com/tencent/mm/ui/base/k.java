@@ -7,27 +7,27 @@ import android.view.View;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.az.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class k
   extends AlertDialog
 {
-  private View cRn;
-  public BaseAdapter cTk;
-  private ListView cUz;
-  public AdapterView.OnItemClickListener iRx;
-  private CharSequence km;
+  private View cOS;
+  public BaseAdapter cQB;
+  private ListView cSm;
+  public AdapterView.OnItemClickListener joG;
+  private CharSequence kD;
   private Context mContext;
   
   public k(Context paramContext)
   {
-    super(paramContext, 2131100061);
+    super(paramContext, 2131493483);
     mContext = paramContext;
-    if (a.da(mContext)) {}
-    for (cRn = View.inflate(mContext, 2131363212, null);; cRn = View.inflate(mContext, 2131363261, null))
+    if (a.cY(mContext)) {}
+    for (cOS = View.inflate(mContext, 2130903973, null);; cOS = View.inflate(mContext, 2130903972, null))
     {
-      cUz = ((ListView)cRn.findViewById(2131165441));
+      cSm = ((ListView)cOS.findViewById(2131756581));
       return;
     }
   }
@@ -41,36 +41,36 @@ public final class k
     }
     catch (Exception localException)
     {
-      u.e("!32@/B4Tb64lLpL18YAaU+LIVl5n0KRiRLyV", "dismiss exception, e = " + localException.getMessage());
+      v.e("MicroMsg.MMListDialog", "dismiss exception, e = " + localException.getMessage());
     }
   }
   
   protected final void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(cRn);
+    setContentView(cOS);
   }
   
   public final void setTitle(CharSequence paramCharSequence)
   {
     if (paramCharSequence != null)
     {
-      km = paramCharSequence;
+      kD = paramCharSequence;
       return;
     }
-    km = null;
+    kD = null;
   }
   
   public final void show()
   {
-    if (km != null) {
-      km.length();
+    if (kD != null) {
+      kD.length();
     }
-    if (iRx != null) {
-      cUz.setOnItemClickListener(iRx);
+    if (joG != null) {
+      cSm.setOnItemClickListener(joG);
     }
-    if (cTk != null) {
-      cUz.setAdapter(cTk);
+    if (cQB != null) {
+      cSm.setAdapter(cQB);
     }
     super.show();
   }

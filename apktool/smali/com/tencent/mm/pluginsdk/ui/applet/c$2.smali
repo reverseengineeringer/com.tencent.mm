@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic iIg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+.field final synthetic jfd:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
-.field final synthetic iIh:Lcom/tencent/mm/ui/base/o;
+.field final synthetic jfe:Lcom/tencent/mm/ui/base/o;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 1169
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$2;->iIg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$2;->jfd:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$2;->iIh:Lcom/tencent/mm/ui/base/o;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$2;->jfe:Lcom/tencent/mm/ui/base/o;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,12 +47,12 @@
     const/4 v2, 0x0
 
     .line 1173
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$2;->iIg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$2;->jfd:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
     if-eqz v0, :cond_0
 
     .line 1174
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$2;->iIg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$2;->jfd:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
     const/4 v1, 0x0
 
@@ -60,17 +60,17 @@
 
     .line 1176
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$2;->iIh:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$2;->jfe:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/o;->dismiss()V
 
     .line 1177
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$2;->iIh:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$2;->jfe:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/o;->setFocusable(Z)V
 
     .line 1178
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$2;->iIh:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$2;->jfe:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/o;->setTouchable(Z)V
 

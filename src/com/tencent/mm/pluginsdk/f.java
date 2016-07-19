@@ -5,83 +5,88 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import com.tencent.mm.protocal.b.amk;
-import com.tencent.mm.r.e;
-import com.tencent.mm.r.j;
-import com.tencent.mm.storage.ag.b;
+import com.tencent.mm.protocal.b.aem;
+import com.tencent.mm.protocal.b.amv;
+import com.tencent.mm.storage.ai.b;
 import com.tencent.mm.storage.k;
-import com.tencent.mm.t.l;
+import com.tencent.mm.t.e;
+import com.tencent.mm.t.j;
+import com.tencent.mm.v.m;
 
 @Deprecated
 public abstract interface f
 {
+  public abstract j K(boolean paramBoolean);
+  
   public abstract Bitmap a(Activity paramActivity, int paramInt1, int paramInt2, Intent paramIntent);
   
   public abstract j a(e parame);
   
   public abstract String a(String paramString1, String paramString2, boolean paramBoolean);
   
-  public abstract void a(Context paramContext, ag.b paramb, Bundle paramBundle);
+  public abstract void a(Context paramContext, ai.b paramb, Bundle paramBundle);
   
-  public abstract void a(Context paramContext, k paramk, ag.b paramb, Bundle paramBundle, String paramString);
+  public abstract void a(Context paramContext, k paramk, ai.b paramb, Bundle paramBundle, String paramString);
   
   public abstract void a(Context paramContext, String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, int paramInt3, String paramString4);
   
   public abstract void a(Context paramContext, String paramString1, String paramString2, String paramString3, long paramLong);
   
-  public abstract void a(Intent paramIntent, amk paramamk, int paramInt);
+  public abstract void a(Intent paramIntent, amv paramamv, int paramInt);
   
   public abstract void a(Intent paramIntent, String paramString);
   
-  public abstract void a(l paraml, Activity paramActivity, k paramk, boolean paramBoolean, Runnable paramRunnable);
+  public abstract void a(aem paramaem);
+  
+  public abstract void a(m paramm, Activity paramActivity, k paramk, boolean paramBoolean, Runnable paramRunnable);
   
   public abstract boolean a(Context paramContext, int paramInt1, int paramInt2, String paramString);
   
   public abstract boolean a(k paramk);
   
-  public abstract void aJ(int paramInt);
+  public abstract String aX(String paramString);
   
-  public abstract String aS(String paramString);
+  public abstract boolean aY(String paramString);
   
-  public abstract boolean aT(String paramString);
+  public abstract boolean aZ(String paramString);
   
-  public abstract boolean aU(String paramString);
-  
-  public abstract void aV(String paramString);
-  
-  public abstract j af(boolean paramBoolean);
-  
-  public abstract void ah(Context paramContext);
+  public abstract void ad(Context paramContext);
   
   public abstract boolean b(Context paramContext, int paramInt1, int paramInt2, String paramString);
   
-  public abstract String e(Context paramContext, String paramString1, String paramString2);
+  public abstract void ba(String paramString);
   
-  public abstract boolean g(Activity paramActivity);
+  public abstract void bb(int paramInt);
   
-  public abstract void h(Activity paramActivity);
+  public abstract boolean c(Activity paramActivity);
   
-  public abstract void kG();
+  public abstract String d(Context paramContext, String paramString1, String paramString2);
   
-  public abstract com.tencent.mm.r.f kH();
+  public abstract void d(Activity paramActivity);
   
-  public abstract void kI();
+  public abstract void jg();
   
-  public abstract void kJ();
+  public abstract com.tencent.mm.t.f jh();
   
-  public abstract void kK();
+  public abstract void ji();
   
-  public abstract void kL();
+  public abstract void jj();
   
-  public abstract Intent kM();
+  public abstract void jk();
   
-  public abstract boolean kN();
+  public abstract void jl();
   
-  public abstract void kO();
+  public abstract Intent jm();
   
-  public abstract String l(Context paramContext, String paramString);
+  public abstract boolean jn();
   
-  public abstract boolean m(Context paramContext, String paramString);
+  public abstract void jo();
+  
+  public abstract boolean jp();
+  
+  public abstract String m(Context paramContext, String paramString);
+  
+  public abstract boolean n(Context paramContext, String paramString);
 }
 
 /* Location:

@@ -11,7 +11,7 @@ final class ChattingUI$a$102
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    laF.VC();
+    lAY.Xk();
     return false;
   }
 }

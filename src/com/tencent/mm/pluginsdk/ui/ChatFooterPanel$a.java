@@ -2,13 +2,13 @@ package com.tencent.mm.pluginsdk.ui;
 
 public abstract interface ChatFooterPanel$a
 {
-  public abstract void ahA();
+  public abstract void akl();
   
-  public abstract void ahB();
+  public abstract void akm();
   
   public abstract void append(String paramString);
   
-  public abstract void dr(boolean paramBoolean);
+  public abstract void dq(boolean paramBoolean);
 }
 
 /* Location:

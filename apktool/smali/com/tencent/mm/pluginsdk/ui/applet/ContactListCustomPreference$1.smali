@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iJf:Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;
+.field final synthetic jgb:Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 23
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference$1;->iJf:Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference$1;->jgb:Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

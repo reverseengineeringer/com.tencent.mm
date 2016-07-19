@@ -7,47 +7,47 @@ import com.tencent.mm.ui.tools.i;
 public final class MMTagPanel$c
   implements InputFilter
 {
-  int kHx = 36;
-  private int kHy = 256;
-  private int kHz;
+  private int lgA = 256;
+  private int lgB;
+  int lgz = 36;
   
   public MMTagPanel$c(MMTagPanel paramMMTagPanel) {}
   
   public final CharSequence filter(CharSequence paramCharSequence, int paramInt1, int paramInt2, Spanned paramSpanned, int paramInt3, int paramInt4)
   {
-    paramInt1 = i.HB(paramSpanned.toString()) + i.HB(paramCharSequence.toString());
+    paramInt1 = i.JR(paramSpanned.toString()) + i.JR(paramCharSequence.toString());
     if (paramInt4 > paramInt3) {
-      if (paramInt1 - (paramInt4 - paramInt3) > kHx)
+      if (paramInt1 - (paramInt4 - paramInt3) > lgz)
       {
-        MMTagPanel.a(kHq, true);
-        kHz = (paramInt1 - (paramInt4 - paramInt3) - kHx);
+        MMTagPanel.a(lgs, true);
+        lgB = (paramInt1 - (paramInt4 - paramInt3) - lgz);
       }
     }
     for (;;)
     {
-      if (MMTagPanel.e(kHq) != null) {
-        kHq.post(new Runnable()
+      if (MMTagPanel.e(lgs) != null) {
+        lgs.post(new Runnable()
         {
           public final void run()
           {
-            MMTagPanel.e(kHq).f(MMTagPanel.h(kHq), i.ai(MMTagPanel.c.a(MMTagPanel.c.this), ""));
+            MMTagPanel.e(lgs).e(MMTagPanel.h(lgs), i.as(MMTagPanel.c.a(MMTagPanel.c.this), ""));
           }
         });
       }
-      if (paramInt1 > kHy) {
+      if (paramInt1 > lgA) {
         paramCharSequence = "";
       }
       return paramCharSequence;
-      MMTagPanel.a(kHq, false);
+      MMTagPanel.a(lgs, false);
       continue;
-      if (paramInt1 > kHx)
+      if (paramInt1 > lgz)
       {
-        MMTagPanel.a(kHq, true);
-        kHz = (paramInt1 - kHx);
+        MMTagPanel.a(lgs, true);
+        lgB = (paramInt1 - lgz);
       }
       else
       {
-        MMTagPanel.a(kHq, false);
+        MMTagPanel.a(lgs, false);
       }
     }
   }

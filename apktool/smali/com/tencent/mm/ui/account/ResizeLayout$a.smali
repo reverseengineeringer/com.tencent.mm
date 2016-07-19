@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract bJ(II)V
+.method public abstract bP(II)V
 .end method

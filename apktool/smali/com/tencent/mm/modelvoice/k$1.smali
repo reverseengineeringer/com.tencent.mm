@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic chD:Lcom/tencent/mm/modelvoice/k;
+.field final synthetic ccU:Lcom/tencent/mm/modelvoice/k;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 37
-    iput-object p1, p0, Lcom/tencent/mm/modelvoice/k$1;->chD:Lcom/tencent/mm/modelvoice/k;
+    iput-object p1, p0, Lcom/tencent/mm/modelvoice/k$1;->ccU:Lcom/tencent/mm/modelvoice/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,7 +49,7 @@
 
     .prologue
     .line 41
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/k$1;->chD:Lcom/tencent/mm/modelvoice/k;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/k$1;->ccU:Lcom/tencent/mm/modelvoice/k;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/k;->a(Lcom/tencent/mm/modelvoice/k;)Lcom/tencent/mm/c/c/d;
 
@@ -58,7 +58,7 @@
     if-eqz v0, :cond_0
 
     .line 42
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/k$1;->chD:Lcom/tencent/mm/modelvoice/k;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/k$1;->ccU:Lcom/tencent/mm/modelvoice/k;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/k;->a(Lcom/tencent/mm/modelvoice/k;)Lcom/tencent/mm/c/c/d;
 
@@ -74,7 +74,7 @@
 
     .line 45
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/k$1;->chD:Lcom/tencent/mm/modelvoice/k;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/k$1;->ccU:Lcom/tencent/mm/modelvoice/k;
 
     invoke-static {v0, p1, p2}, Lcom/tencent/mm/modelvoice/k;->a(Lcom/tencent/mm/modelvoice/k;[BI)V
 

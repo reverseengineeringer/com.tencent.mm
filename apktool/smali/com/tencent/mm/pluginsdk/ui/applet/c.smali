@@ -50,35 +50,35 @@
     const/4 v5, 0x0
 
     .line 544
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v1, 0x7f0a05b5
+    const v1, 0x7f03014d
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->t(Landroid/content/Context;I)Landroid/view/View;
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->x(Landroid/content/Context;I)Landroid/view/View;
 
     move-result-object v1
 
     .line 545
     new-instance v2, Lcom/tencent/mm/ui/base/h$a;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v2, v0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 546
-    invoke-virtual {v2, v5}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v5}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 547
-    invoke-virtual {v2, v5}, Lcom/tencent/mm/ui/base/h$a;->hx(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v5}, Lcom/tencent/mm/ui/base/h$a;->hV(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 548
-    invoke-static {v1, p5}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->c(Landroid/view/View;Z)V
+    invoke-static {v1, p5}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->d(Landroid/view/View;Z)V
 
     .line 549
     invoke-static {p0, v2, p7, v1, p6}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/j;Lcom/tencent/mm/ui/base/h$a;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Landroid/view/View;Ljava/lang/String;)V
 
     .line 552
-    const v0, 0x7f0710a8
+    const v0, 0x7f1004f1
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -87,7 +87,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 553
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -100,7 +100,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 555
-    const v0, 0x7f07108e
+    const v0, 0x7f1004eb
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -109,7 +109,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 556
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -122,7 +122,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 558
-    const v0, 0x7f07108f
+    const v0, 0x7f1004ec
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -145,7 +145,7 @@
 
     .line 565
     :goto_0
-    const v0, 0x7f07108d
+    const v0, 0x7f1004ea
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -162,10 +162,10 @@
     .line 566
     :cond_1
     :goto_1
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 567
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -189,6 +189,127 @@
     invoke-virtual {v0, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_1
+.end method
+
+.method public static a(Lcom/tencent/mm/ui/j;Ljava/lang/String;Landroid/view/View;Ljava/lang/String;Lcom/tencent/mm/pluginsdk/ui/applet/c$b;)Lcom/tencent/mm/ui/base/h;
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 1041
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 1042
+    :cond_0
+    const-string/jumbo v0, "MicroMsg.MMConfirmDialog"
+
+    const-string/jumbo v1, "showDialogItem1 fail, title message both are empty"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1043
+    const/4 v0, 0x0
+
+    .line 1054
+    :goto_0
+    return-object v0
+
+    .line 1045
+    :cond_1
+    new-instance v0, Lcom/tencent/mm/ui/base/h$a;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
+
+    .line 1046
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
+
+    .line 1047
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/h$a;->hV(Z)Lcom/tencent/mm/ui/base/h$a;
+
+    .line 1048
+    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    invoke-static {v0, v1, p1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/base/h$a;Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 1049
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    invoke-virtual {p3}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    :cond_2
+    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    invoke-virtual {v1}, Landroid/support/v7/app/ActionBarActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f080478
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p3
+
+    :cond_3
+    const/4 v1, 0x1
+
+    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/applet/c$12;
+
+    invoke-direct {v2, p4}, Lcom/tencent/mm/pluginsdk/ui/applet/c$12;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/c$b;)V
+
+    invoke-virtual {v0, p3, v1, v2}, Lcom/tencent/mm/ui/base/h$a;->a(Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
+
+    const v1, 0x7f080099
+
+    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/applet/c$13;
+
+    invoke-direct {v2, p4}, Lcom/tencent/mm/pluginsdk/ui/applet/c$13;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/c$b;)V
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/h$a;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
+
+    .line 1050
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+
+    .line 1051
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
+
+    move-result-object v0
+
+    .line 1052
+    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    invoke-virtual {v1}, Landroid/support/v7/app/ActionBarActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f0f023e
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h;->sr(I)V
+
+    .line 1053
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->show()V
+
+    goto :goto_0
 .end method
 
 .method public static a(Lcom/tencent/mm/ui/j;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;)Lcom/tencent/mm/ui/base/h;
@@ -215,11 +336,11 @@
 
     .line 377
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc="
+    const-string/jumbo v0, "MicroMsg.MMConfirmDialog"
 
     const-string/jumbo v1, "showDialogItem4 fail, title message both are empty"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 378
     const/4 v0, 0x0
@@ -230,54 +351,54 @@
 
     .line 381
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v1, 0x7f0a05b5
+    const v1, 0x7f03014d
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->t(Landroid/content/Context;I)Landroid/view/View;
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->x(Landroid/content/Context;I)Landroid/view/View;
 
     move-result-object v1
 
     .line 382
     new-instance v2, Lcom/tencent/mm/ui/base/h$a;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v2, v0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 383
     const/4 v0, 0x0
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 384
     const/4 v0, 0x0
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/ui/base/h$a;->hx(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/ui/base/h$a;->hV(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 385
     const/4 v0, 0x0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->c(Landroid/view/View;Z)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->d(Landroid/view/View;Z)V
 
     .line 386
     invoke-static {p0, v2, p10, v1, p9}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/j;Lcom/tencent/mm/ui/base/h$a;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Landroid/view/View;Ljava/lang/String;)V
 
     .line 388
-    invoke-static {p4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
     .line 393
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-static {v2, v0, p4}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/base/h$a;Landroid/content/Context;Ljava/lang/String;)V
 
     .line 403
     :cond_3
-    const v0, 0x7f0710a8
+    const v0, 0x7f1004f1
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -302,7 +423,7 @@
 
     .line 411
     :goto_1
-    const v0, 0x7f07108e
+    const v0, 0x7f1004eb
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -311,7 +432,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 412
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -324,7 +445,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 414
-    const v0, 0x7f07108f
+    const v0, 0x7f1004ec
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -346,7 +467,7 @@
 
     .line 422
     :goto_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const/high16 v3, 0x42f00000    # 120.0f
 
@@ -355,7 +476,7 @@
     move-result v3
 
     .line 423
-    const v0, 0x7f07108d
+    const v0, 0x7f1004ea
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -367,22 +488,22 @@
     if-eqz v0, :cond_5
 
     .line 425
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_8
 
     .line 426
-    invoke-static {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/a$b;->b(Landroid/widget/ImageView;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/a$b;->a(Landroid/widget/ImageView;Ljava/lang/String;)V
 
     .line 447
     :cond_5
     :goto_3
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 448
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -393,7 +514,7 @@
 
     .line 407
     :cond_6
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -425,14 +546,14 @@
 
     .line 427
     :cond_8
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_9
 
     .line 428
-    invoke-virtual {v0, p2, v3, v3}, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->u(Ljava/lang/String;II)V
+    invoke-virtual {v0, p2, v3, v3}, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->v(Ljava/lang/String;II)V
 
     goto :goto_3
 
@@ -482,11 +603,11 @@
 
     .line 150
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc="
+    const-string/jumbo v1, "MicroMsg.MMConfirmDialog"
 
     const-string/jumbo v2, "showDialogItem1 fail, title message both are empty"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 179
     :goto_0
@@ -494,9 +615,9 @@
 
     .line 153
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v2, 0x7f0a0571
+    const v2, 0x7f03014a
 
     invoke-static {v1, v2, v0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -505,25 +626,25 @@
     .line 154
     new-instance v2, Lcom/tencent/mm/ui/base/h$a;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v2, v0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 155
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 156
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/base/h$a;->hx(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/base/h$a;->hV(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 157
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-static {v2, v0, p1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/base/h$a;Landroid/content/Context;Ljava/lang/String;)V
 
     .line 158
     if-eqz v1, :cond_4
 
-    const v0, 0x7f071090
+    const v0, 0x7f1004e9
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -543,7 +664,7 @@
     invoke-static {p0, v2, p6, v1, p5}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/j;Lcom/tencent/mm/ui/base/h$a;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Landroid/view/View;Ljava/lang/String;)V
 
     .line 162
-    const v0, 0x7f07108e
+    const v0, 0x7f1004eb
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -552,7 +673,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 163
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -565,7 +686,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 164
-    const v0, 0x7f07108f
+    const v0, 0x7f1004ec
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -576,7 +697,7 @@
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 167
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const/high16 v3, 0x42f00000    # 120.0f
 
@@ -585,7 +706,7 @@
     move-result v3
 
     .line 170
-    const v0, 0x7f07108d
+    const v0, 0x7f1004ea
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -597,14 +718,14 @@
     if-eqz v0, :cond_5
 
     .line 172
-    invoke-virtual {v0, p2, v3, v3}, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->u(Ljava/lang/String;II)V
+    invoke-virtual {v0, p2, v3, v3}, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->v(Ljava/lang/String;II)V
 
     .line 175
     :cond_5
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 176
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -642,11 +763,11 @@
 
     .line 73
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc="
+    const-string/jumbo v1, "MicroMsg.MMConfirmDialog"
 
     const-string/jumbo v2, "showDialogItem1 fail, title message both are empty"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 101
     :goto_0
@@ -654,9 +775,9 @@
 
     .line 76
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v2, 0x7f0a0571
+    const v2, 0x7f03014a
 
     invoke-static {v1, v2, v0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -665,29 +786,29 @@
     .line 77
     new-instance v2, Lcom/tencent/mm/ui/base/h$a;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v2, v0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 78
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 79
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/base/h$a;->hx(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/base/h$a;->hV(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 80
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-static {v2, v0, p1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/base/h$a;Landroid/content/Context;Ljava/lang/String;)V
 
     .line 81
-    invoke-static {v1, p4}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->c(Landroid/view/View;Z)V
+    invoke-static {v1, p4}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->d(Landroid/view/View;Z)V
 
     .line 82
     invoke-static {p0, v2, p6, v1, p5}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/j;Lcom/tencent/mm/ui/base/h$a;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Landroid/view/View;Ljava/lang/String;)V
 
     .line 83
-    const v0, 0x7f07108e
+    const v0, 0x7f1004eb
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -696,7 +817,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 84
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -709,7 +830,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 85
-    const v0, 0x7f07108f
+    const v0, 0x7f1004ec
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -720,7 +841,7 @@
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 88
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const/high16 v3, 0x42f00000    # 120.0f
 
@@ -729,7 +850,7 @@
     move-result v3
 
     .line 92
-    const v0, 0x7f07108d
+    const v0, 0x7f1004ea
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -741,14 +862,14 @@
     if-eqz v0, :cond_3
 
     .line 94
-    invoke-virtual {v0, p2, v3, v3}, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->u(Ljava/lang/String;II)V
+    invoke-virtual {v0, p2, v3, v3}, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->v(Ljava/lang/String;II)V
 
     .line 97
     :cond_3
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 98
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -786,7 +907,7 @@
     .locals 6
 
     .prologue
-    const v5, 0x7f07108f
+    const v5, 0x7f1004ec
 
     const/4 v3, 0x0
 
@@ -801,11 +922,11 @@
 
     .line 238
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc="
+    const-string/jumbo v0, "MicroMsg.MMConfirmDialog"
 
     const-string/jumbo v1, "showDialogItem2 fail, message is empty"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 239
     const/4 v0, 0x0
@@ -816,35 +937,35 @@
 
     .line 242
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v1, 0x7f0a05e1
+    const v1, 0x7f03014b
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->t(Landroid/content/Context;I)Landroid/view/View;
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->x(Landroid/content/Context;I)Landroid/view/View;
 
     move-result-object v1
 
     .line 243
     new-instance v2, Lcom/tencent/mm/ui/base/h$a;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v2, v0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 244
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 245
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/base/h$a;->hx(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/base/h$a;->hV(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 246
-    invoke-static {v1, p3}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->c(Landroid/view/View;Z)V
+    invoke-static {v1, p3}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->d(Landroid/view/View;Z)V
 
     .line 247
     invoke-static {p0, v2, p5, v1, p4}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/j;Lcom/tencent/mm/ui/base/h$a;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Landroid/view/View;Ljava/lang/String;)V
 
     .line 249
-    const v0, 0x7f07108e
+    const v0, 0x7f1004eb
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -853,7 +974,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 250
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -886,10 +1007,10 @@
 
     .line 256
     :goto_1
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 257
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -917,7 +1038,7 @@
     .prologue
     const/4 v0, 0x0
 
-    const v7, 0x7f07108f
+    const v7, 0x7f1004ec
 
     const/16 v6, 0x8
 
@@ -943,11 +1064,11 @@
 
     .line 107
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc="
+    const-string/jumbo v1, "MicroMsg.MMConfirmDialog"
 
     const-string/jumbo v2, "showDialogItem1 fail, title message both are empty"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 144
     :goto_0
@@ -955,9 +1076,9 @@
 
     .line 110
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v2, 0x7f0a0571
+    const v2, 0x7f03014a
 
     invoke-static {v1, v2, v0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -966,29 +1087,29 @@
     .line 111
     new-instance v2, Lcom/tencent/mm/ui/base/h$a;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v2, v0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 112
-    invoke-virtual {v2, v5}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v5}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 113
-    invoke-virtual {v2, v5}, Lcom/tencent/mm/ui/base/h$a;->hx(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v5}, Lcom/tencent/mm/ui/base/h$a;->hV(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 114
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-static {v2, v0, p1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/base/h$a;Landroid/content/Context;Ljava/lang/String;)V
 
     .line 115
-    invoke-static {v1, p5}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->c(Landroid/view/View;Z)V
+    invoke-static {v1, p5}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->d(Landroid/view/View;Z)V
 
     .line 116
     invoke-static {p0, v2, p7, v1, p6}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/j;Lcom/tencent/mm/ui/base/h$a;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Landroid/view/View;Ljava/lang/String;)V
 
     .line 118
-    const v0, 0x7f07108e
+    const v0, 0x7f1004eb
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -997,7 +1118,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 119
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -1028,7 +1149,7 @@
 
     .line 125
     :goto_1
-    const v0, 0x7f07108d
+    const v0, 0x7f1004ea
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1065,10 +1186,10 @@
     .line 140
     :cond_4
     :goto_2
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 141
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1141,35 +1262,35 @@
     const/4 v5, 0x0
 
     .line 582
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v1, 0x7f0a05b5
+    const v1, 0x7f03014d
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->t(Landroid/content/Context;I)Landroid/view/View;
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->x(Landroid/content/Context;I)Landroid/view/View;
 
     move-result-object v2
 
     .line 583
     new-instance v3, Lcom/tencent/mm/ui/base/h$a;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v3, v0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 584
-    invoke-virtual {v3, v5}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v3, v5}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 585
-    invoke-virtual {v3, v5}, Lcom/tencent/mm/ui/base/h$a;->hx(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v3, v5}, Lcom/tencent/mm/ui/base/h$a;->hV(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 586
-    invoke-static {v2, p5}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->c(Landroid/view/View;Z)V
+    invoke-static {v2, p5}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->d(Landroid/view/View;Z)V
 
     .line 587
     invoke-static {p0, v3, p8, v2, p7}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/j;Lcom/tencent/mm/ui/base/h$a;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Landroid/view/View;Ljava/lang/String;)V
 
     .line 589
-    const v0, 0x7f0710a8
+    const v0, 0x7f1004f1
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1178,7 +1299,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 590
-    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -1191,7 +1312,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 592
-    const v0, 0x7f07108e
+    const v0, 0x7f1004eb
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1200,7 +1321,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 593
-    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -1213,7 +1334,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 595
-    const v0, 0x7f07108f
+    const v0, 0x7f1004ec
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1236,7 +1357,7 @@
 
     .line 603
     :goto_0
-    const v0, 0x7f07108d
+    const v0, 0x7f1004ea
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1245,7 +1366,7 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 604
-    const v1, 0x7f0710c4
+    const v1, 0x7f1004f0
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1265,11 +1386,11 @@
 
     .line 609
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc="
+    const-string/jumbo v1, "MicroMsg.MMConfirmDialog"
 
     const-string/jumbo v4, "showDialogItem4, thumbData is null"
 
-    invoke-static {v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 610
     invoke-virtual {v0, v6}, Landroid/widget/ImageView;->setVisibility(I)V
@@ -1277,10 +1398,10 @@
     .line 632
     :cond_2
     :goto_1
-    invoke-virtual {v3, v2}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 633
-    invoke-virtual {v3}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v3}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1332,7 +1453,7 @@
 
     .line 620
     :pswitch_0
-    const v0, 0x7f040788
+    const v0, 0x7f0207ea
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1340,7 +1461,7 @@
 
     .line 623
     :pswitch_1
-    const v0, 0x7f040777
+    const v0, 0x7f0701c3
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1382,7 +1503,7 @@
     .locals 6
 
     .prologue
-    const v5, 0x7f07108f
+    const v5, 0x7f1004ec
 
     const/4 v4, 0x0
 
@@ -1395,11 +1516,11 @@
 
     .line 315
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc="
+    const-string/jumbo v0, "MicroMsg.MMConfirmDialog"
 
     const-string/jumbo v1, "showDialogItem3 fail, imgData is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 316
     const/4 v0, 0x0
@@ -1410,35 +1531,35 @@
 
     .line 319
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v1, 0x7f0a05d8
+    const v1, 0x7f03014c
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->t(Landroid/content/Context;I)Landroid/view/View;
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->x(Landroid/content/Context;I)Landroid/view/View;
 
     move-result-object v1
 
     .line 320
     new-instance v2, Lcom/tencent/mm/ui/base/h$a;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v2, v0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 321
-    invoke-virtual {v2, v4}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v4}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 322
-    invoke-virtual {v2, v4}, Lcom/tencent/mm/ui/base/h$a;->hx(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v4}, Lcom/tencent/mm/ui/base/h$a;->hV(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 323
-    invoke-static {v1, p3}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->c(Landroid/view/View;Z)V
+    invoke-static {v1, p3}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->d(Landroid/view/View;Z)V
 
     .line 324
     invoke-static {p0, v2, p5, v1, p4}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/j;Lcom/tencent/mm/ui/base/h$a;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Landroid/view/View;Ljava/lang/String;)V
 
     .line 326
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const/high16 v3, 0x42f00000    # 120.0f
 
@@ -1459,7 +1580,7 @@
     move-result-object v3
 
     .line 330
-    const v0, 0x7f0710f1
+    const v0, 0x7f1004ee
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1503,10 +1624,10 @@
 
     .line 336
     :goto_1
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 337
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1528,40 +1649,40 @@
     goto :goto_1
 .end method
 
-.method public static a(Lcom/tencent/mm/ui/j;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;)Lcom/tencent/mm/ui/base/o;
-    .locals 8
+.method public static a(Lcom/tencent/mm/ui/j;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;)Lcom/tencent/mm/ui/base/o;
+    .locals 9
 
     .prologue
     .line 872
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v1, 0x7f0a058a
+    const v1, 0x7f030151
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->t(Landroid/content/Context;I)Landroid/view/View;
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->x(Landroid/content/Context;I)Landroid/view/View;
 
     move-result-object v5
 
     .line 873
-    invoke-static {v5}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->ag(Landroid/view/View;)Lcom/tencent/mm/ui/base/o;
+    invoke-static {v5}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->aj(Landroid/view/View;)Lcom/tencent/mm/ui/base/o;
 
     move-result-object v4
 
     .line 875
-    invoke-static {v5, p7, v4}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Landroid/view/View;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Lcom/tencent/mm/ui/base/o;)V
+    invoke-static {v5, p6, v4}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Landroid/view/View;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Lcom/tencent/mm/ui/base/o;)V
 
     .line 877
-    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 878
-    const-string/jumbo v0, "!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc="
+    const-string/jumbo v0, "MicroMsg.MMConfirmDialog"
 
     const-string/jumbo v1, "showDialogItem8 fail,title or  message is empty"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 879
     const/4 v0, 0x0
@@ -1572,7 +1693,7 @@
 
     .line 883
     :cond_0
-    const v0, 0x7f0710a8
+    const v0, 0x7f1004f1
 
     const/4 v1, 0x0
 
@@ -1581,7 +1702,7 @@
     invoke-static {v5, v0, p3, v1, v2}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Landroid/view/View;ILjava/lang/String;ZI)V
 
     .line 885
-    const v0, 0x7f07108e
+    const v0, 0x7f1004eb
 
     invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1592,81 +1713,81 @@
     .line 886
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setShouldEllipsize(Z)V
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->liR:Z
 
     .line 887
-    const/4 v1, 0x0
+    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    invoke-virtual {v1}, Landroid/support/v7/app/ActionBarActivity;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {v2}, Landroid/support/v7/app/ActionBarActivity;->getResources()Landroid/content/res/Resources;
+    move-result-object v1
 
-    move-result-object v2
+    const v2, 0x7f0b008c
 
-    const v3, 0x7f0501c3
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
+    move-result v1
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    invoke-static {v2}, Lcom/tencent/mm/az/a;->cW(Landroid/content/Context;)F
 
     move-result v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    mul-float/2addr v1, v2
 
-    invoke-static {v3}, Lcom/tencent/mm/aw/a;->cY(Landroid/content/Context;)F
-
-    move-result v3
-
-    mul-float/2addr v2, v3
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setTextSize(IF)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->j(F)V
 
     .line 889
-    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v2, 0x7f08019f
+    const v2, 0x7f0f0171
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/aw/a;->x(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {v1, v2}, Lcom/tencent/mm/az/a;->B(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
     .line 891
-    invoke-static {}, Lcom/tencent/mm/t/aj;->xH()Lcom/tencent/mm/t/e;
+    invoke-static {}, Lcom/tencent/mm/v/an;->xJ()Lcom/tencent/mm/v/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1, p2}, Lcom/tencent/mm/t/e;->Q(J)Lcom/tencent/mm/t/d;
+    invoke-virtual {v1, p1, p2}, Lcom/tencent/mm/v/e;->V(J)Lcom/tencent/mm/v/d;
 
     move-result-object v1
 
     .line 893
-    invoke-virtual {v1}, Lcom/tencent/mm/t/d;->wt()Z
+    invoke-virtual {v1}, Lcom/tencent/mm/v/d;->wv()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
     .line 894
-    iget-object v3, v1, Lcom/tencent/mm/t/d;->field_chatName:Ljava/lang/String;
+    iget-object v3, v1, Lcom/tencent/mm/v/d;->field_chatName:Ljava/lang/String;
 
     .line 895
-    iget-object v2, v1, Lcom/tencent/mm/t/d;->field_headImageUrl:Ljava/lang/String;
+    iget-object v2, v1, Lcom/tencent/mm/v/d;->field_headImageUrl:Ljava/lang/String;
 
     .line 896
-    iget-object v1, v1, Lcom/tencent/mm/t/d;->field_brandUserName:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/v/d;->field_brandUserName:Ljava/lang/String;
 
     .line 909
     :goto_1
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_5
 
     .line 910
-    iget-object v6, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v6, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getTextSize()F
+    iget-object v7, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dIf:Landroid/text/TextPaint;
+
+    invoke-virtual {v7}, Landroid/text/TextPaint;->getTextSize()F
 
     move-result v7
 
@@ -1678,16 +1799,18 @@
 
     .line 915
     :goto_2
-    const v0, 0x7f0710a9
+    const v0, 0x7f1004f7
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    const/16 v6, 0x8
+    const/4 v6, 0x1
 
-    invoke-static {v5, v0, p5, v3, v6}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Landroid/view/View;ILjava/lang/String;ZI)V
+    const/16 v7, 0x8
+
+    invoke-static {v5, v0, v3, v6, v7}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Landroid/view/View;ILjava/lang/String;ZI)V
 
     .line 917
-    const v0, 0x7f071092
+    const v0, 0x7f1004e7
 
     invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1696,68 +1819,68 @@
     check-cast v0, Landroid/widget/Button;
 
     .line 918
-    invoke-static {p6}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p5}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
     .line 919
-    invoke-virtual {v0, p6}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p5}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
     .line 922
     :cond_1
     new-instance v3, Lcom/tencent/mm/pluginsdk/ui/applet/c$9;
 
-    invoke-direct {v3, p7, v5, v4}, Lcom/tencent/mm/pluginsdk/ui/applet/c$9;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Landroid/view/View;Lcom/tencent/mm/ui/base/o;)V
+    invoke-direct {v3, p6, v5, v4}, Lcom/tencent/mm/pluginsdk/ui/applet/c$9;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Landroid/view/View;Lcom/tencent/mm/ui/base/o;)V
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 935
-    new-instance v0, Lcom/tencent/mm/ab/a/a/c$a;
+    new-instance v0, Lcom/tencent/mm/ae/a/a/c$a;
 
-    invoke-direct {v0}, Lcom/tencent/mm/ab/a/a/c$a;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/ae/a/a/c$a;-><init>()V
 
     .line 936
-    invoke-static {v1}, Lcom/tencent/mm/t/f;->gt(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/v/f;->gL(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/ab/a/a/c$a;->bTG:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/ae/a/a/c$a;->bNf:Ljava/lang/String;
 
     .line 937
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/ab/a/a/c$a;->bTD:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/ae/a/a/c$a;->bNc:Z
 
     .line 938
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/ab/a/a/c$a;->bTV:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/ae/a/a/c$a;->bNw:Z
 
     .line 940
-    const v1, 0x7f0301b1
+    const v1, 0x7f0700af
 
-    iput v1, v0, Lcom/tencent/mm/ab/a/a/c$a;->bTO:I
+    iput v1, v0, Lcom/tencent/mm/ae/a/a/c$a;->bNp:I
 
     .line 941
-    invoke-virtual {v0}, Lcom/tencent/mm/ab/a/a/c$a;->AA()Lcom/tencent/mm/ab/a/a/c;
+    invoke-virtual {v0}, Lcom/tencent/mm/ae/a/a/c$a;->AM()Lcom/tencent/mm/ae/a/a/c;
 
     move-result-object v1
 
     .line 943
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 945
-    invoke-static {}, Lcom/tencent/mm/ab/n;->As()Lcom/tencent/mm/ab/a/a;
+    invoke-static {}, Lcom/tencent/mm/ae/n;->AC()Lcom/tencent/mm/ae/a/a;
 
     move-result-object v3
 
-    const v0, 0x7f07108d
+    const v0, 0x7f1004ea
 
     invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1765,7 +1888,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    invoke-virtual {v3, v2, v0, v1}, Lcom/tencent/mm/ab/a/a;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/tencent/mm/ab/a/a/c;)V
+    invoke-virtual {v3, v2, v0, v1}, Lcom/tencent/mm/ae/a/a;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/tencent/mm/ae/a/a/c;)V
 
     .line 948
     :cond_2
@@ -1778,13 +1901,13 @@
 
     .line 898
     :cond_3
-    invoke-static {}, Lcom/tencent/mm/t/aj;->xJ()Lcom/tencent/mm/t/k;
+    invoke-static {}, Lcom/tencent/mm/v/an;->xL()Lcom/tencent/mm/v/l;
 
     move-result-object v2
 
-    iget-object v1, v1, Lcom/tencent/mm/t/d;->field_bizChatServId:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/v/d;->field_bizChatServId:Ljava/lang/String;
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/t/k;->gz(Ljava/lang/String;)Lcom/tencent/mm/t/j;
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/v/l;->gP(Ljava/lang/String;)Lcom/tencent/mm/v/k;
 
     move-result-object v1
 
@@ -1792,23 +1915,23 @@
     if-eqz v1, :cond_4
 
     .line 900
-    iget-object v3, v1, Lcom/tencent/mm/t/j;->field_userName:Ljava/lang/String;
+    iget-object v3, v1, Lcom/tencent/mm/v/k;->field_userName:Ljava/lang/String;
 
     .line 901
-    iget-object v2, v1, Lcom/tencent/mm/t/j;->field_headImageUrl:Ljava/lang/String;
+    iget-object v2, v1, Lcom/tencent/mm/v/k;->field_headImageUrl:Ljava/lang/String;
 
     .line 902
-    iget-object v1, v1, Lcom/tencent/mm/t/j;->field_brandUserName:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/v/k;->field_brandUserName:Ljava/lang/String;
 
-    goto :goto_1
+    goto/16 :goto_1
 
     .line 904
     :cond_4
-    const-string/jumbo v0, "!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc="
+    const-string/jumbo v0, "MicroMsg.MMConfirmDialog"
 
     const-string/jumbo v1, "showDialogItem8 userInfo is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 905
     const/4 v0, 0x0
@@ -1817,9 +1940,11 @@
 
     .line 912
     :cond_5
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getTextSize()F
+    iget-object v6, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dIf:Landroid/text/TextPaint;
+
+    invoke-virtual {v6}, Landroid/text/TextPaint;->getTextSize()F
 
     move-result v6
 
@@ -1836,21 +1961,21 @@
     .locals 6
 
     .prologue
-    const v4, 0x7f071092
+    const v4, 0x7f1004e7
 
-    const v5, 0x7f071093
+    const v5, 0x7f1004f4
 
     .line 713
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v1, 0x7f0a0573
+    const v1, 0x7f03014e
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->t(Landroid/content/Context;I)Landroid/view/View;
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->x(Landroid/content/Context;I)Landroid/view/View;
 
     move-result-object v1
 
     .line 714
-    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->ag(Landroid/view/View;)Lcom/tencent/mm/ui/base/o;
+    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->aj(Landroid/view/View;)Lcom/tencent/mm/ui/base/o;
 
     move-result-object v2
 
@@ -1886,14 +2011,14 @@
     invoke-static {v1, v5, p3}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Landroid/view/View;ILjava/lang/String;)V
 
     .line 719
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 720
-    const v0, 0x7f07108e
+    const v0, 0x7f1004eb
 
     const/4 v3, 0x1
 
@@ -1985,7 +2110,7 @@
     if-eqz p3, :cond_1
 
     .line 1325
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -2016,7 +2141,7 @@
 
     .prologue
     .line 1154
-    const v0, 0x7f071092
+    const v0, 0x7f1004e7
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2031,7 +2156,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 1167
-    const v0, 0x7f071098
+    const v0, 0x7f1004e6
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2054,37 +2179,37 @@
     return-void
 .end method
 
-.method public static a(Lcom/tencent/mm/ui/base/h$a;Landroid/content/Context;Ljava/lang/String;)V
+.method private static a(Lcom/tencent/mm/ui/base/h$a;Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
 
     .prologue
     .line 1147
-    invoke-virtual {p0, p2}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {p0, p2}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 1148
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f08019f
+    const v1, 0x7f0f0171
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/h$a;->kCW:Lcom/tencent/mm/ui/base/c;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/h$a;->lcb:Lcom/tencent/mm/ui/base/c;
 
-    iput v0, v1, Lcom/tencent/mm/ui/base/c;->iFa:I
+    iput v0, v1, Lcom/tencent/mm/ui/base/c;->jbV:I
 
     .line 1149
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/h$a;->kCW:Lcom/tencent/mm/ui/base/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/h$a;->lcb:Lcom/tencent/mm/ui/base/c;
 
     const/4 v1, 0x3
 
-    iput v1, v0, Lcom/tencent/mm/ui/base/c;->kBz:I
+    iput v1, v0, Lcom/tencent/mm/ui/base/c;->laF:I
 
     .line 1150
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/h$a;->kCW:Lcom/tencent/mm/ui/base/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/h$a;->lcb:Lcom/tencent/mm/ui/base/c;
 
     const/4 v1, 0x2
 
@@ -2114,7 +2239,7 @@
 
     .prologue
     .line 1069
-    invoke-static {p4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2128,13 +2253,13 @@
 
     .line 1070
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/support/v7/app/ActionBarActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0b0e9c
+    const v1, 0x7f080478
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2151,7 +2276,7 @@
     invoke-virtual {p1, p4, v0, v1}, Lcom/tencent/mm/ui/base/h$a;->a(Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 1081
-    const v0, 0x7f0b0de4
+    const v0, 0x7f080099
 
     new-instance v1, Lcom/tencent/mm/pluginsdk/ui/applet/c$11;
 
@@ -2173,7 +2298,7 @@
 
     .line 1372
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/support/v7/app/ActionBarActivity;->isFinishing()Z
 
@@ -2202,7 +2327,7 @@
     invoke-virtual {p1, v0}, Lcom/tencent/mm/ui/base/o;->setTouchable(Z)V
 
     .line 1377
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/support/v7/app/ActionBarActivity;->getWindow()Landroid/view/Window;
 
@@ -2232,7 +2357,7 @@
     move-exception v0
 
     .line 1380
-    const-string/jumbo v1, "!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc="
+    const-string/jumbo v1, "MicroMsg.MMConfirmDialog"
 
     const-string/jumbo v2, "show dialog fail: %s"
 
@@ -2244,12 +2369,12 @@
 
     aput-object v0, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method static ag(Landroid/view/View;)Lcom/tencent/mm/ui/base/o;
+.method static aj(Landroid/view/View;)Lcom/tencent/mm/ui/base/o;
     .locals 2
 
     .prologue
@@ -2264,12 +2389,12 @@
     return-object v0
 .end method
 
-.method static synthetic ah(Landroid/view/View;)Ljava/lang/String;
+.method static synthetic ak(Landroid/view/View;)Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 48
-    const v0, 0x7f071090
+    const v0, 0x7f1004e9
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2296,12 +2421,12 @@
     goto :goto_0
 .end method
 
-.method static synthetic ai(Landroid/view/View;)I
+.method static synthetic al(Landroid/view/View;)I
     .locals 2
 
     .prologue
     .line 48
-    const v0, 0x7f071090
+    const v0, 0x7f1004e9
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2315,9 +2440,7 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/PasterEditText;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/PasterEditText;->getPasterLen()I
-
-    move-result v0
+    iget v0, v0, Lcom/tencent/mm/ui/base/PasterEditText;->hsG:I
 
     :goto_0
     return v0
@@ -2358,14 +2481,14 @@
     .prologue
     const/4 v0, 0x0
 
-    const v6, 0x7f07108f
+    const v6, 0x7f1004ec
 
     const/4 v5, 0x0
 
     .line 271
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/a/e;->aB(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -2373,11 +2496,11 @@
 
     .line 272
     :cond_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc="
+    const-string/jumbo v1, "MicroMsg.MMConfirmDialog"
 
     const-string/jumbo v2, "showDialogItem3 fail, img does not exist"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 303
     :goto_0
@@ -2385,35 +2508,35 @@
 
     .line 276
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v2, 0x7f0a05d8
+    const v2, 0x7f03014c
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->t(Landroid/content/Context;I)Landroid/view/View;
+    invoke-static {v1, v2}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->x(Landroid/content/Context;I)Landroid/view/View;
 
     move-result-object v1
 
     .line 277
     new-instance v2, Lcom/tencent/mm/ui/base/h$a;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v2, v3}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 278
-    invoke-virtual {v2, v5}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v5}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 279
-    invoke-virtual {v2, v5}, Lcom/tencent/mm/ui/base/h$a;->hx(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v5}, Lcom/tencent/mm/ui/base/h$a;->hV(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 280
-    invoke-static {v1, p3}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->c(Landroid/view/View;Z)V
+    invoke-static {v1, p3}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->d(Landroid/view/View;Z)V
 
     .line 281
     invoke-static {p0, v2, p5, v1, p4}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/j;Lcom/tencent/mm/ui/base/h$a;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Landroid/view/View;Ljava/lang/String;)V
 
     .line 284
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const/high16 v4, 0x42f00000    # 120.0f
 
@@ -2430,17 +2553,17 @@
     if-nez v3, :cond_2
 
     .line 287
-    const-string/jumbo v1, "!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc="
+    const-string/jumbo v1, "MicroMsg.MMConfirmDialog"
 
     const-string/jumbo v2, "showDialogItem3 fail, bmp is null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 291
     :cond_2
-    const v0, 0x7f0710f1
+    const v0, 0x7f1004ee
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2475,10 +2598,10 @@
 
     .line 299
     :goto_1
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 300
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -2506,19 +2629,19 @@
     .prologue
     const/4 v6, 0x1
 
-    const/4 v5, 0x0
+    const/4 v3, 0x0
 
     .line 816
-    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v1, 0x7f0a058a
+    const v1, 0x7f030151
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->t(Landroid/content/Context;I)Landroid/view/View;
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->x(Landroid/content/Context;I)Landroid/view/View;
 
     move-result-object v2
 
     .line 817
-    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->ag(Landroid/view/View;)Lcom/tencent/mm/ui/base/o;
+    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->aj(Landroid/view/View;)Lcom/tencent/mm/ui/base/o;
 
     move-result-object v1
 
@@ -2526,18 +2649,18 @@
     invoke-static {v2, p6, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Landroid/view/View;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Lcom/tencent/mm/ui/base/o;)V
 
     .line 821
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 822
-    const-string/jumbo v0, "!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc="
+    const-string/jumbo v0, "MicroMsg.MMConfirmDialog"
 
     const-string/jumbo v1, "showDialogItem8 fail,title or  message is empty"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 823
     const/4 v0, 0x0
@@ -2548,12 +2671,12 @@
 
     .line 827
     :cond_0
-    const v0, 0x7f0710a8
+    const v0, 0x7f1004f1
 
-    invoke-static {v2, v0, p2, v5, v5}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Landroid/view/View;ILjava/lang/String;ZI)V
+    invoke-static {v2, v0, p2, v3, v3}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Landroid/view/View;ILjava/lang/String;ZI)V
 
     .line 829
-    const v0, 0x7f07108e
+    const v0, 0x7f1004eb
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2562,57 +2685,59 @@
     check-cast v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;
 
     .line 830
-    invoke-virtual {v0, v6}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setShouldEllipsize(Z)V
+    iput-boolean v6, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->liR:Z
 
     .line 831
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v3}, Landroid/support/v7/app/ActionBarActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0501c3
+    const v4, 0x7f0b008c
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v4, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {v4}, Lcom/tencent/mm/aw/a;->cY(Landroid/content/Context;)F
+    invoke-static {v4}, Lcom/tencent/mm/az/a;->cW(Landroid/content/Context;)F
 
     move-result v4
 
     mul-float/2addr v3, v4
 
-    invoke-virtual {v0, v5, v3}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setTextSize(IF)V
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->j(F)V
 
     .line 833
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v4, 0x7f08019f
+    const v4, 0x7f0f0171
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/aw/a;->x(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {v3, v4}, Lcom/tencent/mm/az/a;->B(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object v3
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
     .line 834
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
     .line 835
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {p1}, Lcom/tencent/mm/model/i;->dY(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/model/i;->ej(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getTextSize()F
+    iget-object v5, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dIf:Landroid/text/TextPaint;
+
+    invoke-virtual {v5}, Landroid/text/TextPaint;->getTextSize()F
 
     move-result v5
 
@@ -2624,14 +2749,14 @@
 
     .line 840
     :goto_1
-    const v0, 0x7f0710a9
+    const v0, 0x7f1004f7
 
     const/16 v3, 0x8
 
     invoke-static {v2, v0, p4, v6, v3}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Landroid/view/View;ILjava/lang/String;ZI)V
 
     .line 842
-    const v0, 0x7f071092
+    const v0, 0x7f1004e7
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2640,7 +2765,7 @@
     check-cast v0, Landroid/widget/Button;
 
     .line 843
-    invoke-static {p5}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p5}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -2658,14 +2783,14 @@
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 860
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 861
-    const v0, 0x7f07108d
+    const v0, 0x7f1004ea
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2673,7 +2798,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    invoke-static {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/a$b;->b(Landroid/widget/ImageView;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/a$b;->a(Landroid/widget/ImageView;Ljava/lang/String;)V
 
     .line 862
     :cond_2
@@ -2686,9 +2811,11 @@
 
     .line 837
     :cond_3
-    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getTextSize()F
+    iget-object v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dIf:Landroid/text/TextPaint;
+
+    invoke-virtual {v4}, Landroid/text/TextPaint;->getTextSize()F
 
     move-result v4
 
@@ -2701,7 +2828,7 @@
     goto :goto_1
 .end method
 
-.method public static c(Landroid/view/View;Z)V
+.method public static d(Landroid/view/View;Z)V
     .locals 2
 
     .prologue
@@ -2709,7 +2836,7 @@
     if-eqz p0, :cond_0
 
     .line 1250
-    const v0, 0x7f071090
+    const v0, 0x7f1004e9
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2739,7 +2866,7 @@
     goto :goto_0
 .end method
 
-.method public static t(Landroid/content/Context;I)Landroid/view/View;
+.method public static x(Landroid/content/Context;I)Landroid/view/View;
     .locals 2
 
     .prologue

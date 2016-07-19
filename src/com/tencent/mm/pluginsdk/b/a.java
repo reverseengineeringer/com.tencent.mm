@@ -6,11 +6,11 @@ import com.tencent.mm.ui.base.preference.f;
 
 public abstract interface a
 {
-  public abstract boolean Kt();
+  public abstract boolean Ld();
   
   public abstract boolean a(f paramf, k paramk, boolean paramBoolean, int paramInt);
   
-  public abstract boolean lp(String paramString);
+  public abstract boolean ma(String paramString);
   
   public abstract void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent);
 }

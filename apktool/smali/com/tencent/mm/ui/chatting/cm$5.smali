@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/chatting/cm;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/chatting/cm;->aUs()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kWf:Lcom/tencent/mm/ui/chatting/cm;
+.field final synthetic lwj:Lcom/tencent/mm/ui/chatting/cm;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 520
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/cm$5;->kWf:Lcom/tencent/mm/ui/chatting/cm;
+    .line 1434
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/cm$5;->lwj:Lcom/tencent/mm/ui/chatting/cm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,10 +36,15 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+.method public final run()V
+    .locals 1
 
     .prologue
-    .line 524
+    .line 1437
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/cm$5;->lwj:Lcom/tencent/mm/ui/chatting/cm;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/cm;->notifyDataSetChanged()V
+
+    .line 1438
     return-void
 .end method

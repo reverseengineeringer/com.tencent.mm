@@ -1,333 +1,317 @@
 package com.tencent.mm.ui.chatting;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.Color;
-import android.graphics.PorterDuff.Mode;
-import android.graphics.Rect;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.Build.VERSION;
-import android.os.Looper;
-import android.util.DisplayMetrics;
-import android.view.MotionEvent;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.graphics.BitmapFactory;
+import android.view.ContextMenu;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnHoverListener;
-import android.view.View.OnTouchListener;
-import android.view.Window;
+import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageView;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.base.o;
+import android.widget.TextView;
+import com.tencent.mm.a.e;
+import com.tencent.mm.ae.n;
+import com.tencent.mm.e.a.bz;
+import com.tencent.mm.e.a.bz.b;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.ar;
+import com.tencent.mm.p.a.a;
+import com.tencent.mm.pluginsdk.model.app.al;
+import com.tencent.mm.pluginsdk.model.app.l;
+import com.tencent.mm.pluginsdk.model.app.p;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.ui.base.s;
+import com.tencent.mm.ui.j;
+import com.tencent.mm.ui.o;
+import com.tencent.mm.ui.tools.ShowImageUI;
+import com.tencent.mm.ui.transmit.MsgRetransmitUI;
 
-public final class at
+final class at
+  extends ab.c
 {
-  public static b kTC = new b();
+  ChattingUI.a ltl;
   
-  public static void aD(View paramView)
+  public at()
   {
-    Object localObject = kTC;
-    if ((paramView == null) || (localObject == null)) {
-      u.w("!56@/B4Tb64lLpLHJwTl6U1PaxsGdAoY4PefA4rSHuprks+kQc95WkyTbQ==", "view or callback is null.");
-    }
-    do
-    {
-      do
-      {
-        return;
-      } while (Build.VERSION.SDK_INT < 14);
-      dn localdn = dn.bgi();
-      if ((Build.VERSION.SDK_INT >= 14) && (ldd == null)) {
-        ldd = new dn.a((dn.b)localObject);
-      }
-      localObject = ldd;
-    } while ((localObject == null) || (Build.VERSION.SDK_INT < 14) || (!(localObject instanceof View.OnHoverListener)));
-    paramView.setOnHoverListener((View.OnHoverListener)localObject);
+    super(21);
   }
   
-  public static void dismiss()
+  public final View a(LayoutInflater paramLayoutInflater, View paramView)
   {
-    try
+    Object localObject;
+    if ((paramView != null) && (paramView.getTag() != null) && ((paramView.getTag() instanceof h)))
     {
-      if (kTC != null) {
-        b.a(kTC);
-      }
-      return;
+      localObject = paramView;
+      if (getTagtype == cTv) {}
     }
-    catch (Exception localException)
+    else
     {
-      u.e("!64@/B4Tb64lLpKwUcOR+EdWcgUrCDYYt5XKNxI73I2a4RomBdAK4qpVVWMkFHlOIfex", "exception in dismiss, %s", new Object[] { localException.getMessage() });
+      localObject = new ay(paramLayoutInflater, 2130903316);
+      ((View)localObject).setTag(new h(cTv).aB((View)localObject));
     }
+    return (View)localObject;
   }
   
-  public static final class a
-    implements View.OnTouchListener
+  public final void a(ab.a parama, int paramInt, ChattingUI.a parama1, ai paramai, String paramString)
   {
-    private int dc;
-    
-    public a()
+    final h localh = (h)parama;
+    ltl = parama1;
+    String str = field_content;
+    if (str != null) {}
+    for (parama = a.a.y(str, field_reserved);; parama = null)
     {
-      this(Color.argb(255, 136, 136, 136));
-    }
-    
-    private a(int paramInt)
-    {
-      dc = paramInt;
-    }
-    
-    public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
-    {
-      int i = paramMotionEvent.getAction();
-      if ((paramView instanceof ImageView))
-      {
-        paramView = ((ImageView)paramView).getDrawable();
-        if (paramView != null)
-        {
-          if (i != 0) {
-            break label49;
-          }
-          paramView.setColorFilter(dc, PorterDuff.Mode.MULTIPLY);
-        }
-      }
-      for (;;)
-      {
-        return false;
-        paramView = paramView.getBackground();
-        break;
-        label49:
-        if ((i == 3) || (i == 1)) {
-          paramView.clearColorFilter();
-        }
-      }
-    }
-  }
-  
-  public static final class b
-    implements View.OnClickListener, View.OnTouchListener, dn.b
-  {
-    private View cRI;
-    private af coj;
-    private int gFu;
-    private o kTD;
-    private View kTE;
-    private View kTF;
-    private int kTG;
-    private int kTH;
-    private int kTI;
-    private int kTJ;
-    private int kTK;
-    private boolean kTL;
-    private at.a kTM = new at.a();
-    private View.OnTouchListener kTN = new View.OnTouchListener()
-    {
-      public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
-      {
-        if (at.b.b(at.b.this) != null) {
-          at.b.b(at.b.this).onTouch(at.b.c(at.b.this), paramAnonymousMotionEvent);
-        }
-        return false;
-      }
-    };
-    private View kTO;
-    private int kTP = 300;
-    private af.a kTQ = new af.a()
-    {
-      public final boolean lj()
-      {
-        if ((at.b.d(at.b.this) != null) && (at.b.e(at.b.this) != null)) {
-          at.b.e(at.b.this).showAsDropDown(at.b.d(at.b.this), at.b.f(at.b.this), at.b.g(at.b.this));
-        }
-        return false;
-      }
-    };
-    
-    private void dismiss()
-    {
-      if (kTD != null) {
-        kTD.dismiss();
-      }
-    }
-    
-    public final boolean c(View paramView, MotionEvent paramMotionEvent)
-    {
-      int k = 8;
-      Object localObject1 = paramView.getTag();
-      if ((localObject1 == null) || (!(localObject1 instanceof dg))) {
-        u.i("!64@/B4Tb64lLpKwUcOR+EdWcgUrCDYYt5XKNxI73I2a4RomBdAK4qpVVWMkFHlOIfex", "The Tag of the View is not a instance of ItemDataTag or is null.");
-      }
-      Object localObject3;
+      com.tencent.mm.pluginsdk.model.app.f localf;
+      label167:
+      label180:
+      label204:
       int i;
-      do
+      if (parama != null)
       {
-        return false;
-        localObject1 = (dg)paramView.getTag();
-        localObject2 = ajh;
-        localObject3 = com.tencent.mm.model.h.sc();
-        if ((!t.kz((String)localObject3)) && (!((String)localObject3).equals(localObject2))) {
-          break;
-        }
-        u.v("!64@/B4Tb64lLpKwUcOR+EdWcgUrCDYYt5XKNxI73I2a4RomBdAK4qpVVWMkFHlOIfex", "Can't talk to self and self username can't be null.");
-        i = 0;
-      } while (i == 0);
-      Object localObject2 = paramView.getContext();
-      if (kTD == null)
-      {
-        localObject3 = ((Context)localObject2).getResources();
-        float f = ((Resources)localObject3).getDimension(2131034637);
-        kTG = ((int)(((Resources)localObject3).getDimension(2131034576) * 2.0F + f));
-        cRI = View.inflate((Context)localObject2, 2131361947, null);
-        kTE = cRI.findViewById(2131165677);
-        kTF = cRI.findViewById(2131165678);
-        kTF.setOnClickListener(this);
-        kTE.setOnClickListener(this);
-        kTF.setOnTouchListener(kTN);
-        kTE.setOnTouchListener(kTN);
-        kTD = new o(cRI, -2, kTG, false);
-        kTD.setOutsideTouchable(true);
-        localObject3 = new Rect();
-        if ((localObject2 instanceof Activity)) {
-          ((Activity)localObject2).getWindow().getDecorView().getWindowVisibleDisplayFrame((Rect)localObject3);
-        }
-        gFu = top;
-        localObject3 = ((Context)localObject2).getResources().getDisplayMetrics();
-        if (widthPixels > heightPixels)
+        localf = com.tencent.mm.pluginsdk.model.app.g.ar(appId, true);
+        if ((localf == null) || (field_appName == null) || (field_appName.trim().length() <= 0))
         {
-          kTH = ((Context)localObject2).getResources().getDimensionPixelSize(2131034626);
-          label315:
-          kTD.setBackgroundDrawable(new ColorDrawable(16777215));
-          kTK = 0;
-          coj = new af(Looper.getMainLooper(), kTQ, false);
-          u.i("!64@/B4Tb64lLpKwUcOR+EdWcgUrCDYYt5XKNxI73I2a4RomBdAK4qpVVWMkFHlOIfex", "Create a new PopupWindow.");
+          paramString = appName;
+          if ((appId == null) || (appId.length() <= 0) || (!com.tencent.mm.pluginsdk.model.app.g.aY(paramString))) {
+            break label385;
+          }
+          dXi.setText(com.tencent.mm.pluginsdk.model.app.g.a(kNN.kOg, localf, paramString));
+          dXi.setVisibility(0);
+          if ((localf == null) || (!localf.aUj())) {
+            break label369;
+          }
+          a(parama1, dXi, paramai, parama, field_packageName);
+          a(parama1, dXi, appId);
         }
       }
       else
       {
-        localObject2 = kTD;
-        switch (paramMotionEvent.getAction())
+        switch (type)
         {
+        default: 
+          lth.setTag(new dh(paramai, kZE, paramInt, null, 0, (byte)0));
+          lth.setOnClickListener(lsL.lvy);
+          if (jqM) {
+            lth.setOnLongClickListener(lsL.lvA);
+          }
+          i = l.BO(str);
+          if ((i == -1) || (i >= 100) || (bpX <= 0) || (field_status == 5))
+          {
+            dVF.setVisibility(8);
+            ehk.setAlpha(255);
+            ehk.setBackgroundDrawable(null);
+          }
+          break;
         }
       }
-      label396:
+      for (;;)
+      {
+        a(paramInt, localh, paramai, lsL.bxU, kZE, lsL.lvy);
+        return;
+        paramString = field_appName;
+        break;
+        label369:
+        a(parama1, dXi, appId);
+        break label167;
+        label385:
+        dXi.setVisibility(8);
+        break label180;
+        ehk.setVisibility(0);
+        if (n.Ay().a(ehk, field_imgPath, com.tencent.mm.az.a.getDensity(kNN.kOg), bqn, bqm, 2130837950, ehn, 2130837952)) {
+          break label204;
+        }
+        if (jqM) {
+          ehk.setImageResource(2131165301);
+        }
+        for (;;)
+        {
+          ehk.post(new Runnable()
+          {
+            public final void run()
+            {
+              localhehk.setLayoutParams(new FrameLayout.LayoutParams(-2, -2));
+              FrameLayout.LayoutParams localLayoutParams = new FrameLayout.LayoutParams(localhehk.getWidth(), localhehk.getHeight());
+              localhehn.setLayoutParams(localLayoutParams);
+            }
+          });
+          break;
+          ehk.setImageBitmap(BitmapFactory.decodeResource(parama1.getResources(), 2130838926));
+        }
+        dVF.setVisibility(0);
+        lqt.setText(i + "%");
+        ehk.setAlpha(64);
+        ehk.setBackgroundResource(2130839234);
+      }
+    }
+  }
+  
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
+  {
+    int i = getTagposition;
+    if (com.tencent.mm.av.c.zM("favorite")) {
+      paramContextMenu.add(i, 116, 0, ltl.getString(2131234160));
+    }
+    Object localObject = new bz();
+    ahe.agU = field_msgId;
+    com.tencent.mm.sdk.c.a.kug.y((com.tencent.mm.sdk.c.b)localObject);
+    boolean bool = com.tencent.mm.pluginsdk.model.app.g.j(ltl.kNN.kOg, 2L);
+    if ((ahf.agF) || (bool)) {
+      paramContextMenu.add(i, 128, 0, paramView.getContext().getString(2131231704));
+    }
+    localObject = field_content;
+    localObject = a.a.dI(ltl.bm((String)localObject, field_isSend));
+    if ((localObject != null) && (com.tencent.mm.pluginsdk.model.app.g.i(com.tencent.mm.pluginsdk.model.app.g.ar(appId, false)))) {
+      paramContextMenu.add(i, 111, 0, ltl.getString(2131234525));
+    }
+    if ((!paramai.bco()) && (paramai.bcF()) && ((field_status == 2) || (aQo == 1)) && (bka()) && (IZ(field_talker))) {
+      paramContextMenu.add(i, 123, 0, paramView.getContext().getString(2131231706));
+    }
+    if (!ltl.bln()) {
+      paramContextMenu.add(i, 100, 0, ltl.getString(2131231700));
+    }
+    return true;
+  }
+  
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ai paramai)
+  {
+    switch (paramMenuItem.getItemId())
+    {
+    default: 
+    case 100: 
+      Object localObject;
       do
       {
+        return false;
+        localObject = field_content;
+        paramMenuItem = null;
+        if (localObject != null) {
+          paramMenuItem = a.a.dI((String)localObject);
+        }
+        if (paramMenuItem != null) {
+          l.BN(bpZ);
+        }
+        ar.H(field_msgId);
+        localObject = com.tencent.mm.pluginsdk.model.app.g.ar(appId, false);
+      } while ((localObject == null) || (!((com.tencent.mm.pluginsdk.model.app.f)localObject).aUj()));
+      a(parama, paramMenuItem, paramai, (com.tencent.mm.pluginsdk.model.app.f)localObject);
+      return false;
+    }
+    paramMenuItem = new Intent(kNN.kOg, MsgRetransmitUI.class);
+    paramMenuItem.putExtra("Retr_Msg_content", field_content);
+    paramMenuItem.putExtra("Retr_Msg_Type", 2);
+    paramMenuItem.putExtra("Retr_Msg_Id", field_msgId);
+    parama.startActivity(paramMenuItem);
+    return false;
+  }
+  
+  public final boolean a(View paramView, ChattingUI.a parama, final ai paramai)
+  {
+    if (!ah.tE().isSDCardAvailable())
+    {
+      s.ep(kNN.kOg);
+      return true;
+    }
+    if ((getTagcTv == 5) && (field_isSend == 1))
+    {
+      if (paramai != null) {
+        com.tencent.mm.ui.base.g.b(ltl.kNN.kOg, ltl.getString(2131231744), "", ltl.getString(2131231004), ltl.getString(2131230873), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+        {
+          public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+          {
+            l.B(paramai);
+            ar.H(paramaifield_msgId);
+            ltl.blj();
+          }
+        }, new DialogInterface.OnClickListener()
+        {
+          public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
+        });
+      }
+      return true;
+    }
+    paramView = null;
+    Object localObject = field_content;
+    if (localObject != null) {
+      paramView = a.a.dI((String)localObject);
+    }
+    if (paramView == null)
+    {
+      v.e("MicroMsg.ChattingItemAppMsgToImg", "content is null");
+      return true;
+    }
+    localObject = com.tencent.mm.pluginsdk.model.app.g.ar(appId, false);
+    if ((localObject != null) && (((com.tencent.mm.pluginsdk.model.app.f)localObject).aUj())) {
+      a(parama, paramView, com.tencent.mm.model.h.se(), (com.tencent.mm.pluginsdk.model.app.f)localObject);
+    }
+    String str;
+    PackageInfo localPackageInfo;
+    if ((bpZ != null) && (bpZ.length() > 0))
+    {
+      paramView = al.Jk().BG(bpZ);
+      if (paramView != null)
+      {
+        if (!ah.tE().isSDCardAvailable()) {
+          s.ep(kNN.kOg);
+        }
         for (;;)
         {
           return true;
-          i = 1;
-          break;
-          kTH = ((Context)localObject2).getResources().getDimensionPixelSize(2131034625);
-          break label315;
-          kTL = false;
-          kTO = null;
-        }
-        kTO = paramView;
-        paramView.setOnTouchListener(this);
-        if (((o)localObject2).isShowing()) {
-          ((o)localObject2).dismiss();
-        }
-      } while (kTL);
-      kTF.setTag(localObject1);
-      kTE.setTag(localObject1);
-      label496:
-      boolean bool;
-      label512:
-      int j;
-      if ((com.tencent.mm.model.h.sm() & 0x100000) == 0)
-      {
-        i = 1;
-        com.tencent.mm.g.h.pT();
-        if (com.tencent.mm.g.c.pz() == 2) {
-          break label685;
-        }
-        bool = com.tencent.mm.ar.c.aSY();
-        if ((!bool) && (i == 0)) {
-          break label705;
-        }
-        paramMotionEvent = kTF;
-        if (!bool) {
-          break label707;
-        }
-        j = 0;
-        label535:
-        paramMotionEvent.setVisibility(j);
-        paramMotionEvent = kTE;
-        j = k;
-        if (i != 0)
-        {
-          j = k;
-          if (!bool) {
-            j = 0;
+          if (field_isSend == 1)
+          {
+            paramView = field_fileFullPath;
+            if (!e.aB(paramView)) {
+              break;
+            }
+            i = (int)field_msgId;
+            long l = field_msgSvrId;
+            parama = field_talker;
+            if ((paramView == null) || (paramView.equals("")) || (!e.aB(paramView)))
+            {
+              v.d("MicroMsg.ChattingItemAppMsgToImg", "showImg : imgPath is null");
+            }
+            else
+            {
+              parama = new Intent(ltl.kNN.kOg, ShowImageUI.class);
+              parama.putExtra("key_favorite", true);
+              parama.putExtra("key_image_path", paramView);
+              parama.putExtra("key_message_id", i);
+              ltl.startActivity(parama);
+            }
           }
         }
-        paramMotionEvent.setVisibility(j);
-        paramMotionEvent = new int[2];
-        paramView.getLocationInWindow(paramMotionEvent);
-        i = paramMotionEvent[1];
-        paramView.getWidth();
-        j = paramView.getHeight();
-        kTJ = kTK;
-        if (i > gFu + kTH + kTG) {
-          kTJ = (-j - kTG - kTK);
-        }
-        kTI = 0;
-        if (kTJ < 0) {
-          break label714;
-        }
-        cRI.setBackgroundResource(2130968617);
-      }
-      for (;;)
-      {
-        coj.ds(kTP);
-        break label396;
-        i = 0;
-        break label496;
-        label685:
-        if ((com.tencent.mm.model.h.sm() & 0x400000) == 0)
-        {
-          bool = true;
-          break label512;
-        }
-        bool = false;
-        break label512;
-        label705:
-        break;
-        label707:
-        j = 8;
-        break label535;
-        label714:
-        cRI.setBackgroundResource(2130968627);
+        v.i("MicroMsg.ChattingItemAppMsgToImg", "onItemClick::bigImgPath: %s, msgId: %d, msgSvrId: %d", new Object[] { paramView, Long.valueOf(field_msgId), Long.valueOf(field_msgSvrId) });
+        paramView = new Intent(kNN.kOg, ResourcesExceedUI.class);
+        paramView.putExtra("clean_view_type", 1);
+        parama.startActivity(paramView);
+        return true;
       }
     }
-    
-    public final void onClick(View paramView)
+    else if ((url != null) && (url.length() > 0))
     {
-      dg localdg = (dg)paramView.getTag();
-      if (paramView == kTF) {
-        at.i(paramView.getContext(), ajh, 3);
+      boolean bool = bb(kNN.kOg, appId);
+      str = p.a(url, "message", bool);
+      localPackageInfo = ar(kNN.kOg, appId);
+      if (localPackageInfo != null) {
+        break label544;
       }
-      for (;;)
-      {
-        dismiss();
-        return;
-        at.i(paramView.getContext(), ajh, 2);
+      localObject = null;
+      if (localPackageInfo != null) {
+        break label554;
       }
     }
-    
-    public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+    label544:
+    label554:
+    for (int i = 0;; i = versionCode)
     {
-      switch (paramMotionEvent.getAction())
-      {
-      }
-      for (;;)
-      {
-        return false;
-        kTL = true;
-        dismiss();
-      }
+      a(parama, str, str, (String)localObject, i, appId, false, field_msgId, field_msgSvrId, paramai);
+      return false;
+      localObject = versionName;
+      break;
     }
   }
 }

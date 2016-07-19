@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/ArtistUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/ArtistUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gWk:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
+.field final synthetic hjG:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 151
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistUI$4;->gWk:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistUI$4;->hjG:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 155
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistUI$4;->gWk:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistUI$4;->hjG:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/ArtistUI;->finish()V
 

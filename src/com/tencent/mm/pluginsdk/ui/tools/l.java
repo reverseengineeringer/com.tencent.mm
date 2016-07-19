@@ -5,12 +5,12 @@ import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.webkit.MimeTypeMap;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.File;
 
 public final class l
 {
-  public int ayS = 0;
+  public int akU = 0;
   public Context context;
   public String filePath;
   public Uri uri;
@@ -21,12 +21,12 @@ public final class l
     uri = paramUri;
     if (paramUri == null)
     {
-      u.e("!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+", "initFileTypeAndPath uri == null");
+      v.e("MicroMsg.UriFileHelper", "initFileTypeAndPath uri == null");
       return;
     }
     if (context == null)
     {
-      u.e("!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+", "initFileTypeAndPath context == null");
+      v.e("MicroMsg.UriFileHelper", "initFileTypeAndPath context == null");
       return;
     }
     Object localObject2 = MimeTypeMap.getSingleton();
@@ -39,18 +39,18 @@ public final class l
         localObject1 = new File(paramUri.getPath());
         if (!((File)localObject1).exists())
         {
-          u.e("!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+", "File is null");
-          ayS = 0;
+          v.e("MicroMsg.UriFileHelper", "File is null");
+          akU = 0;
           return;
         }
         filePath = ((File)localObject1).getAbsolutePath();
         i = filePath.lastIndexOf(".");
         if ((i == -1) || (i >= filePath.length() - 1)) {
-          ayS = 1;
+          akU = 1;
         }
         while ((paramContext == null) || (filePath == null))
         {
-          ayS = 0;
+          akU = 0;
           return;
           paramContext = ((MimeTypeMap)localObject2).getMimeTypeFromExtension(filePath.substring(i + 1));
         }
@@ -61,7 +61,7 @@ public final class l
       if (context != null) {
         break label219;
       }
-      u.e("!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+", "getFilePath context == null");
+      v.e("MicroMsg.UriFileHelper", "getFilePath context == null");
     }
     for (;;)
     {
@@ -71,12 +71,12 @@ public final class l
       localObject2 = context.getContentResolver().query(paramUri, null, null, null, null);
       if (localObject2 == null)
       {
-        u.e("!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+", "getFilePath : fail, cursor is null");
+        v.e("MicroMsg.UriFileHelper", "getFilePath : fail, cursor is null");
       }
       else if ((((Cursor)localObject2).getCount() <= 0) || (!((Cursor)localObject2).moveToFirst()))
       {
         ((Cursor)localObject2).close();
-        u.e("!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+", "getFilePath : fail, cursor getCount is 0 or moveToFirst fail");
+        v.e("MicroMsg.UriFileHelper", "getFilePath : fail, cursor getCount is 0 or moveToFirst fail");
       }
       else
       {
@@ -84,7 +84,7 @@ public final class l
         if (i == -1)
         {
           ((Cursor)localObject2).close();
-          u.e("!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+", "getFilePath : columnIdx is -1, column with columnName = _data does not exist");
+          v.e("MicroMsg.UriFileHelper", "getFilePath : columnIdx is -1, column with columnName = _data does not exist");
         }
         else
         {
@@ -94,20 +94,20 @@ public final class l
       }
     }
     if (paramContext.contains("image")) {
-      ayS = 3;
+      akU = 3;
     }
     for (;;)
     {
-      u.d("!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+", "MimeType[%s], filePath = [%s], fileType = [%s], type = [%s], Uri[%s]", new Object[] { paramContext, filePath, Integer.valueOf(ayS), paramContext, paramUri.toString() });
+      v.d("MicroMsg.UriFileHelper", "MimeType[%s], filePath = [%s], fileType = [%s], type = [%s], Uri[%s]", new Object[] { paramContext, filePath, Integer.valueOf(akU), paramContext, paramUri.toString() });
       return;
       if (paramContext.contains("video")) {
-        ayS = 4;
+        akU = 4;
       } else if (paramContext.contains("audio")) {
-        ayS = 5;
+        akU = 5;
       } else if (paramContext.contains("mm_item")) {
-        ayS = 2;
+        akU = 2;
       } else {
-        ayS = 1;
+        akU = 1;
       }
     }
   }

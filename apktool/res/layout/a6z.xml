@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/j4" android:paddingTop="@dimen/j8" android:paddingBottom="@dimen/cp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.ui.widget.FoursquareRelativeLayout android:layout_width="@dimen/ml" android:layout_height="@dimen/ml" android:layout_marginRight="@dimen/i7">
+        <ImageView android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/aop" android:scaleType="center" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/c26" android:background="@drawable/aqb" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/aop" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/azz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/aa4" android:layout_centerInParent="true" />
+    </com.tencent.mm.ui.widget.FoursquareRelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:ellipsize="end" android:id="@id/c27" android:paddingRight="@dimen/cp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/fn" android:maxLines="2" />
+        <TextView android:textSize="@dimen/jc" android:textColor="@color/gn" android:ellipsize="end" android:id="@id/c28" android:paddingRight="@dimen/cp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/cp" android:text="@string/fn" android:singleLine="true" />
+    </LinearLayout>
+    <ImageView android:id="@id/c29" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/hb" android:src="@raw/round_selector_checked" />
+</LinearLayout>

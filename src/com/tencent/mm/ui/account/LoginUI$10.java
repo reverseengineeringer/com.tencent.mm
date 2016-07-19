@@ -12,7 +12,7 @@ final class LoginUI$10
   
   public final void onClick(View paramView)
   {
-    e.b(ktY.koJ.kpc, false, 3);
+    e.b(kTf.kNN.kOg, false, 3);
   }
 }
 

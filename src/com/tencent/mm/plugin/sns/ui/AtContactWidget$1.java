@@ -10,7 +10,7 @@ final class AtContactWidget$1
   
   public final void onClick(View paramView)
   {
-    AtContactWidget.a(gWy);
+    AtContactWidget.a(hjX);
   }
 }
 

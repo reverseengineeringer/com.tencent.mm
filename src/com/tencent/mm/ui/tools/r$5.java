@@ -8,15 +8,15 @@ final class r$5
 {
   r$5(r paramr, FragmentActivity paramFragmentActivity) {}
   
-  public final boolean af()
+  public final boolean ad()
   {
-    lxI.a(lxJ);
+    lYx.d(lYy);
     return true;
   }
   
-  public final boolean ag()
+  public final boolean ae()
   {
-    lxI.b(lxJ);
+    lYx.e(lYy);
     return true;
   }
 }

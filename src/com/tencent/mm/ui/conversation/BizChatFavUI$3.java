@@ -1,19 +1,19 @@
 package com.tencent.mm.ui.conversation;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
-import com.tencent.mm.t.w;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import com.tencent.mm.v.d;
 
 final class BizChatFavUI$3
-  implements DialogInterface.OnCancelListener
+  implements AdapterView.OnItemClickListener
 {
-  BizChatFavUI$3(BizChatFavUI paramBizChatFavUI, w paramw) {}
+  BizChatFavUI$3(BizChatFavUI paramBizChatFavUI) {}
   
-  public final void onCancel(DialogInterface paramDialogInterface)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    ah.tE().c(cMf);
+    paramAdapterView = (d)BizChatFavUI.c(lOv).getItem(paramInt);
+    BizChatFavUI.b(lOv, field_bizChatLocalId);
   }
 }
 

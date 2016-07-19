@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kKT:Lcom/tencent/mm/ui/base/preference/CheckBoxPreference;
+.field final synthetic lki:Lcom/tencent/mm/ui/base/preference/CheckBoxPreference;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 51
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/CheckBoxPreference$1;->kKT:Lcom/tencent/mm/ui/base/preference/CheckBoxPreference;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/CheckBoxPreference$1;->lki:Lcom/tencent/mm/ui/base/preference/CheckBoxPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +36,12 @@
 
 
 # virtual methods
-.method public final fg(Z)V
+.method public final ft(Z)V
     .locals 2
 
     .prologue
     .line 55
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/CheckBoxPreference$1;->kKT:Lcom/tencent/mm/ui/base/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/CheckBoxPreference$1;->lki:Lcom/tencent/mm/ui/base/preference/CheckBoxPreference;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 

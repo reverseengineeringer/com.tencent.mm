@@ -10,7 +10,7 @@ final class LoginIndepPass$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    LoginIndepPass.a(ktE);
+    LoginIndepPass.a(kSL);
     return true;
   }
 }

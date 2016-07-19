@@ -2,9 +2,9 @@ package com.tencent.mm.compatible.d;
 
 public final class n
 {
-  public boolean bsA = false;
-  public int bsB;
-  public int bsC;
+  public boolean bgE = false;
+  public int bgF;
+  public int bgG;
   
   public n()
   {
@@ -13,9 +13,9 @@ public final class n
   
   public final void reset()
   {
-    bsA = false;
-    bsB = 0;
-    bsC = 0;
+    bgE = false;
+    bgF = 0;
+    bgG = 0;
   }
 }
 

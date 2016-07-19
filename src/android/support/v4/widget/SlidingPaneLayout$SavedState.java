@@ -8,8 +8,8 @@ import android.view.View.BaseSavedState;
 class SlidingPaneLayout$SavedState
   extends View.BaseSavedState
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  boolean ig;
+  public static final Parcelable.Creator<SavedState> CREATOR = new Parcelable.Creator() {};
+  boolean iz;
   
   private SlidingPaneLayout$SavedState(Parcel paramParcel)
   {
@@ -17,7 +17,7 @@ class SlidingPaneLayout$SavedState
     if (paramParcel.readInt() != 0) {}
     for (boolean bool = true;; bool = false)
     {
-      ig = bool;
+      iz = bool;
       return;
     }
   }
@@ -30,7 +30,7 @@ class SlidingPaneLayout$SavedState
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
     super.writeToParcel(paramParcel, paramInt);
-    if (ig) {}
+    if (iz) {}
     for (paramInt = 1;; paramInt = 0)
     {
       paramParcel.writeInt(paramInt);

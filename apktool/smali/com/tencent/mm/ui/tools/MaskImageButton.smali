@@ -10,11 +10,11 @@
 
 .field private g:I
 
-.field private gWl:Lcom/tencent/mm/sdk/platformtools/aa;
+.field private hjH:Lcom/tencent/mm/sdk/platformtools/ac;
 
-.field private gWm:Ljava/lang/Runnable;
+.field private hjI:Ljava/lang/Runnable;
 
-.field public lxa:Ljava/lang/Object;
+.field public lXN:Ljava/lang/Object;
 
 .field private r:I
 
@@ -26,35 +26,39 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 33
+    .line 35
     invoke-direct {p0, p1, p2}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 22
+    .line 24
     const/16 v0, 0x5a
 
     iput v0, p0, Lcom/tencent/mm/ui/tools/MaskImageButton;->a:I
 
-    .line 23
+    .line 25
     iput v1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton;->r:I
 
-    .line 24
+    .line 26
     iput v1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton;->g:I
 
-    .line 25
+    .line 27
     iput v1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton;->b:I
 
-    .line 34
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 36
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MaskImageButton;->gWl:Lcom/tencent/mm/sdk/platformtools/aa;
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MaskImageButton;->hjH:Lcom/tencent/mm/sdk/platformtools/ac;
 
     new-instance v0, Lcom/tencent/mm/ui/tools/MaskImageButton$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/MaskImageButton$1;-><init>(Lcom/tencent/mm/ui/tools/MaskImageButton;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MaskImageButton;->gWm:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MaskImageButton;->hjI:Ljava/lang/Runnable;
 
     new-instance v0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;
 
@@ -62,7 +66,7 @@
 
     invoke-super {p0, v0}, Landroid/widget/ImageButton;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 35
+    .line 37
     return-void
 .end method
 
@@ -70,18 +74,18 @@
     .locals 1
 
     .prologue
-    .line 16
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MaskImageButton;->gWm:Ljava/lang/Runnable;
+    .line 18
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MaskImageButton;->hjI:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/tencent/mm/ui/tools/MaskImageButton;)Lcom/tencent/mm/sdk/platformtools/aa;
+.method static synthetic b(Lcom/tencent/mm/ui/tools/MaskImageButton;)Lcom/tencent/mm/sdk/platformtools/ac;
     .locals 1
 
     .prologue
-    .line 16
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MaskImageButton;->gWl:Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 18
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MaskImageButton;->hjH:Lcom/tencent/mm/sdk/platformtools/ac;
 
     return-object v0
 .end method
@@ -92,17 +96,17 @@
     .locals 4
 
     .prologue
-    .line 69
+    .line 71
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 70
+    .line 72
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/MaskImageButton;->isPressed()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 71
+    .line 73
     iget v0, p0, Lcom/tencent/mm/ui/tools/MaskImageButton;->a:I
 
     iget v1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton;->r:I
@@ -113,7 +117,7 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawARGB(IIII)V
 
-    .line 73
+    .line 75
     :cond_0
     return-void
 .end method
@@ -124,11 +128,11 @@
     .end annotation
 
     .prologue
-    .line 81
+    .line 83
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
 
-    .line 82
+    .line 84
     return-void
 .end method

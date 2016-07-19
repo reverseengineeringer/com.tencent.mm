@@ -15,37 +15,37 @@
 
 
 # instance fields
-.field bsG:I
+.field bgK:I
 
-.field private bsH:J
+.field private bgL:J
 
-.field final synthetic bsI:Lcom/tencent/mm/compatible/d/o;
+.field final synthetic bgM:Lcom/tencent/mm/compatible/d/o;
 
 .field private mLastIdle:J
 
 
 # direct methods
 .method public constructor <init>(Lcom/tencent/mm/compatible/d/o;)V
-    .locals 3
+    .locals 4
 
     .prologue
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     .line 143
-    iput-object p1, p0, Lcom/tencent/mm/compatible/d/o$a;->bsI:Lcom/tencent/mm/compatible/d/o;
+    iput-object p1, p0, Lcom/tencent/mm/compatible/d/o$a;->bgM:Lcom/tencent/mm/compatible/d/o;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 144
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/o$a;->bsG:I
+    iput v0, p0, Lcom/tencent/mm/compatible/d/o$a;->bgK:I
 
     .line 145
-    iput-wide v1, p0, Lcom/tencent/mm/compatible/d/o$a;->bsH:J
+    iput-wide v2, p0, Lcom/tencent/mm/compatible/d/o$a;->bgL:J
 
     .line 146
-    iput-wide v1, p0, Lcom/tencent/mm/compatible/d/o$a;->mLastIdle:J
+    iput-wide v2, p0, Lcom/tencent/mm/compatible/d/o$a;->mLastIdle:J
 
     .line 147
     return-void
@@ -53,7 +53,7 @@
 
 
 # virtual methods
-.method public final f([Ljava/lang/String;)V
+.method public final e([Ljava/lang/String;)V
     .locals 11
 
     .prologue
@@ -68,7 +68,7 @@
 
     invoke-static {v0, v10}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
 
-    move-result-wide v5
+    move-result-wide v6
 
     .line 166
     const-wide/16 v2, 0x0
@@ -77,12 +77,12 @@
     const/4 v0, 0x1
 
     .line 168
-    array-length v7, p1
+    array-length v5, p1
 
     move v4, v1
 
     :goto_0
-    if-ge v4, v7, :cond_1
+    if-ge v4, v5, :cond_1
 
     aget-object v8, p1, v4
 
@@ -111,19 +111,19 @@
     :cond_1
     iget-wide v0, p0, Lcom/tencent/mm/compatible/d/o$a;->mLastIdle:J
 
-    sub-long v0, v5, v0
+    sub-long v0, v6, v0
 
     .line 176
-    iget-wide v7, p0, Lcom/tencent/mm/compatible/d/o$a;->bsH:J
+    iget-wide v4, p0, Lcom/tencent/mm/compatible/d/o$a;->bgL:J
 
-    sub-long v7, v2, v7
+    sub-long v4, v2, v4
 
     .line 177
-    sub-long v0, v7, v0
+    sub-long v0, v4, v0
 
     long-to-float v0, v0
 
-    long-to-float v1, v7
+    long-to-float v1, v4
 
     div-float/2addr v0, v1
 
@@ -133,16 +133,16 @@
 
     float-to-int v0, v0
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/o$a;->bsG:I
+    iput v0, p0, Lcom/tencent/mm/compatible/d/o$a;->bgK:I
 
     .line 178
-    iput-wide v2, p0, Lcom/tencent/mm/compatible/d/o$a;->bsH:J
+    iput-wide v2, p0, Lcom/tencent/mm/compatible/d/o$a;->bgL:J
 
     .line 179
-    iput-wide v5, p0, Lcom/tencent/mm/compatible/d/o$a;->mLastIdle:J
+    iput-wide v6, p0, Lcom/tencent/mm/compatible/d/o$a;->mLastIdle:J
 
     .line 180
-    const-string/jumbo v0, "!32@l31zBa06gKv3g5PVsxQDw6xSkq6dzCWS"
+    const-string/jumbo v0, " MicroMsg.CpuUsage"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -160,7 +160,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -170,7 +170,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/o$a;->bsG:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/o$a;->bgK:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -180,7 +180,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 181
     return-void

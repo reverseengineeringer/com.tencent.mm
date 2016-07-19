@@ -1,17 +1,18 @@
 package com.tencent.mm.storage;
 
 import android.database.Cursor;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.g.c;
-import com.tencent.mm.g.h;
-import com.tencent.mm.h.a;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.h.c;
+import com.tencent.mm.h.h;
+import com.tencent.mm.i.a;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class k
   extends a
+  implements Cloneable
 {
-  public CharSequence jZZ;
-  public String keM = null;
+  public CharSequence kAv;
+  public String kET = null;
   
   public k() {}
   
@@ -20,7 +21,7 @@ public final class k
     super(paramString);
   }
   
-  public static boolean DY(String paramString)
+  public static boolean Gn(String paramString)
   {
     if (paramString != null) {
       return paramString.endsWith("@t.qq.com");
@@ -28,7 +29,7 @@ public final class k
     return false;
   }
   
-  public static boolean DZ(String paramString)
+  public static boolean Go(String paramString)
   {
     if (paramString != null) {
       return paramString.endsWith("@qr");
@@ -36,7 +37,7 @@ public final class k
     return false;
   }
   
-  public static boolean Ea(String paramString)
+  public static boolean Gp(String paramString)
   {
     if (paramString != null) {
       return paramString.endsWith("@qqim");
@@ -44,7 +45,7 @@ public final class k
     return false;
   }
   
-  public static boolean Eb(String paramString)
+  public static boolean Gq(String paramString)
   {
     if (paramString != null) {
       return paramString.endsWith("@fb");
@@ -52,7 +53,56 @@ public final class k
     return false;
   }
   
-  public static boolean Ec(String paramString)
+  public static boolean Gr(String paramString)
+  {
+    if (be.kf(paramString)) {}
+    for (;;)
+    {
+      return false;
+      String str = h.on().u("HideWechatID", "idprefix");
+      Object localObject = str;
+      if (str == null) {
+        localObject = "wx_;wxid_;gh_;a0;a1;a2;a3;a4;a5;a6;a7;a8;a9;q0;q1;q2;q3;q4;q5;q6;q7;q8;q9;qq0;qq1;qq2;qq3;qq4;qq5;qq6;qq7;qq8;qq9;f0;f1;f2;f3;f4;f5;f6;f7;f8;f9;F0;F1;F2;F3;F4;F5;F6;F7;F8;F9;";
+      }
+      localObject = ((String)localObject).split(";");
+      int i = 0;
+      while (i < localObject.length)
+      {
+        if ((localObject[i] != null) && (paramString.startsWith(localObject[i]))) {
+          return true;
+        }
+        i += 1;
+      }
+    }
+  }
+  
+  public static String Gs(String paramString)
+  {
+    if (eb(paramString))
+    {
+      String[] arrayOfString = paramString.split(":");
+      if ((arrayOfString == null) || (arrayOfString.length <= 0)) {
+        return paramString;
+      }
+      return arrayOfString[0];
+    }
+    if ((paramString != null) && (paramString.contains("@"))) {
+      return "";
+    }
+    return paramString + "@bottle";
+  }
+  
+  public static int bbD()
+  {
+    return 16;
+  }
+  
+  public static int bbE()
+  {
+    return 8;
+  }
+  
+  public static boolean eb(String paramString)
   {
     boolean bool2 = false;
     boolean bool1 = bool2;
@@ -70,117 +120,20 @@ public final class k
     return bool1;
   }
   
-  public static boolean Ed(String paramString)
-  {
-    if (ay.kz(paramString)) {}
-    for (;;)
-    {
-      return false;
-      String str = h.pT().z("HideWechatID", "idprefix");
-      Object localObject = str;
-      if (str == null) {
-        localObject = "wx_;wxid_;gh_;a0;a1;a2;a3;a4;a5;a6;a7;a8;a9;q0;q1;q2;q3;q4;q5;q6;q7;q8;q9;qq0;qq1;qq2;qq3;qq4;qq5;qq6;qq7;qq8;qq9;f0;f1;f2;f3;f4;f5;f6;f7;f8;f9;F0;F1;F2;F3;F4;F5;F6;F7;F8;F9;";
-      }
-      localObject = ((String)localObject).split(";");
-      int i = 0;
-      while (i < localObject.length)
-      {
-        if ((localObject[i] != null) && (paramString.startsWith(localObject[i]))) {
-          return true;
-        }
-        i += 1;
-      }
-    }
-  }
-  
-  public static String Ee(String paramString)
-  {
-    if (Ec(paramString))
-    {
-      String[] arrayOfString = paramString.split(":");
-      if ((arrayOfString == null) || (arrayOfString.length <= 0)) {
-        return paramString;
-      }
-      return arrayOfString[0];
-    }
-    if ((paramString != null) && (paramString.contains("@"))) {
-      return "";
-    }
-    return paramString + "@bottle";
-  }
-  
-  public static int aWq()
-  {
-    return 16;
-  }
-  
-  public static int aWr()
-  {
-    return 8;
-  }
-  
-  public static String h(Cursor paramCursor)
+  public static String f(Cursor paramCursor)
   {
     return paramCursor.getString(paramCursor.getColumnIndex("username"));
   }
   
-  public static boolean pD(int paramInt)
+  public static boolean rs(int paramInt)
   {
     return (paramInt & 0x8) > 0;
   }
   
-  public final boolean aWp()
+  @Deprecated
+  public final void bQ(String paramString)
   {
-    return (field_verifyFlag & 0x8) > 0;
-  }
-  
-  public final boolean aWs()
-  {
-    return (int)ay.FR() - aSM > 86400L;
-  }
-  
-  public final String aWt()
-  {
-    Object localObject = aSL;
-    if (ay.kz((String)localObject)) {
-      return "";
-    }
-    localObject = ((String)localObject).split("_");
-    if ((localObject == null) || (localObject.length < 2)) {
-      return "";
-    }
-    return ay.ky(localObject[1]);
-  }
-  
-  public final void aWu()
-  {
-    Object localObject = aSL;
-    if (ay.kz((String)localObject)) {}
-    do
-    {
-      return;
-      localObject = ((String)localObject).split("_");
-    } while (localObject.length <= 0);
-    if (localObject.length > 2)
-    {
-      if (RegionCodeDecoder.Fz(localObject[0])) {
-        super.bR(RegionCodeDecoder.aXU().cq(localObject[0], localObject[1]));
-      }
-      for (;;)
-      {
-        super.bS(RegionCodeDecoder.aXU().N(localObject[0], localObject[1], localObject[2]));
-        return;
-        super.bR(RegionCodeDecoder.aXU().FA(localObject[0]));
-      }
-    }
-    if (localObject.length == 2)
-    {
-      super.bR(RegionCodeDecoder.aXU().FA(localObject[0]));
-      super.bS(RegionCodeDecoder.aXU().cq(localObject[0], localObject[1]));
-      return;
-    }
-    super.bR(RegionCodeDecoder.aXU().FA(localObject[0]));
-    super.bS("");
+    super.bQ(paramString);
   }
   
   @Deprecated
@@ -189,16 +142,78 @@ public final class k
     super.bR(paramString);
   }
   
-  @Deprecated
-  public final void bS(String paramString)
+  public final void bV(String paramString)
   {
-    super.bS(paramString);
+    super.bV(paramString);
+    bbH();
   }
   
-  public final void bW(String paramString)
+  public final boolean bbC()
   {
-    super.bW(paramString);
-    aWu();
+    return (field_verifyFlag & 0x8) > 0;
+  }
+  
+  public final boolean bbF()
+  {
+    return (int)be.Go() - aFv > 86400L;
+  }
+  
+  public final String bbG()
+  {
+    Object localObject = aFu;
+    if (be.kf((String)localObject)) {
+      return "";
+    }
+    localObject = ((String)localObject).split("_");
+    if ((localObject == null) || (localObject.length < 2)) {
+      return "";
+    }
+    return be.li(localObject[1]);
+  }
+  
+  public final void bbH()
+  {
+    Object localObject = aFu;
+    if (be.kf((String)localObject)) {}
+    do
+    {
+      return;
+      localObject = ((String)localObject).split("_");
+    } while (localObject.length <= 0);
+    if (localObject.length > 2)
+    {
+      if (RegionCodeDecoder.HP(localObject[0])) {
+        super.bQ(RegionCodeDecoder.bdm().cE(localObject[0], localObject[1]));
+      }
+      for (;;)
+      {
+        super.bR(RegionCodeDecoder.bdm().P(localObject[0], localObject[1], localObject[2]));
+        return;
+        super.bQ(RegionCodeDecoder.bdm().HQ(localObject[0]));
+      }
+    }
+    if (localObject.length == 2)
+    {
+      super.bQ(RegionCodeDecoder.bdm().HQ(localObject[0]));
+      super.bR(RegionCodeDecoder.bdm().cE(localObject[0], localObject[1]));
+      return;
+    }
+    super.bQ(RegionCodeDecoder.bdm().HQ(localObject[0]));
+    super.bR("");
+  }
+  
+  public final k bbI()
+  {
+    try
+    {
+      k localk = (k)super.clone();
+      return localk;
+    }
+    catch (Exception localException)
+    {
+      new StringBuilder("clone Contact error. e: ").append(localException.toString());
+    }
+    return null;
   }
   
   public final String getCity()
@@ -208,28 +223,28 @@ public final class k
   
   public final String getCityCode()
   {
-    Object localObject = aSL;
-    if (ay.kz((String)localObject)) {
+    Object localObject = aFu;
+    if (be.kf((String)localObject)) {
       return "";
     }
     localObject = ((String)localObject).split("_");
     if ((localObject == null) || (localObject.length < 3)) {
       return "";
     }
-    return ay.ky(localObject[2]);
+    return be.li(localObject[2]);
   }
   
   public final String getCountryCode()
   {
-    Object localObject = aSL;
-    if (ay.kz((String)localObject)) {
+    Object localObject = aFu;
+    if (be.kf((String)localObject)) {
       return "";
     }
     localObject = ((String)localObject).split("_");
     if ((localObject == null) || (localObject.length <= 0)) {
       return "";
     }
-    return ay.ky(localObject[0]);
+    return be.li(localObject[0]);
   }
   
   public final String getProvince()

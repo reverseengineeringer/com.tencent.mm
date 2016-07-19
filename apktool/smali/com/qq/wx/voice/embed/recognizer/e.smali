@@ -11,11 +11,11 @@
 
 
 # instance fields
-.field public ajn:Lcom/qq/wx/voice/embed/recognizer/Grammar;
+.field public Vd:Lcom/qq/wx/voice/embed/recognizer/Grammar;
 
-.field ajo:Lcom/qq/wx/voice/embed/recognizer/g;
+.field Ve:Lcom/qq/wx/voice/embed/recognizer/g;
 
-.field ajp:[B
+.field Vf:[B
 
 .field public d:Z
 
@@ -32,15 +32,15 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v2, p0, Lcom/qq/wx/voice/embed/recognizer/e;->ajn:Lcom/qq/wx/voice/embed/recognizer/Grammar;
+    iput-object v2, p0, Lcom/qq/wx/voice/embed/recognizer/e;->Vd:Lcom/qq/wx/voice/embed/recognizer/Grammar;
 
     new-instance v0, Lcom/qq/wx/voice/embed/recognizer/g;
 
     invoke-direct {v0}, Lcom/qq/wx/voice/embed/recognizer/g;-><init>()V
 
-    iput-object v0, p0, Lcom/qq/wx/voice/embed/recognizer/e;->ajo:Lcom/qq/wx/voice/embed/recognizer/g;
+    iput-object v0, p0, Lcom/qq/wx/voice/embed/recognizer/e;->Ve:Lcom/qq/wx/voice/embed/recognizer/g;
 
-    iput-object v2, p0, Lcom/qq/wx/voice/embed/recognizer/e;->ajp:[B
+    iput-object v2, p0, Lcom/qq/wx/voice/embed/recognizer/e;->Vf:[B
 
     iput-boolean v1, p0, Lcom/qq/wx/voice/embed/recognizer/e;->d:Z
 
@@ -50,7 +50,7 @@
 
     invoke-direct {v0}, Lcom/qq/wx/voice/embed/recognizer/Grammar;-><init>()V
 
-    iput-object v0, p0, Lcom/qq/wx/voice/embed/recognizer/e;->ajn:Lcom/qq/wx/voice/embed/recognizer/Grammar;
+    iput-object v0, p0, Lcom/qq/wx/voice/embed/recognizer/e;->Vd:Lcom/qq/wx/voice/embed/recognizer/Grammar;
 
     return-void
 .end method
@@ -79,13 +79,13 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/qq/wx/voice/embed/recognizer/e;->ajo:Lcom/qq/wx/voice/embed/recognizer/g;
+    iget-object v2, p0, Lcom/qq/wx/voice/embed/recognizer/e;->Ve:Lcom/qq/wx/voice/embed/recognizer/g;
 
-    iput-object p1, v2, Lcom/qq/wx/voice/embed/recognizer/g;->ajq:Lcom/qq/wx/voice/embed/recognizer/c;
+    iput-object p1, v2, Lcom/qq/wx/voice/embed/recognizer/g;->Vg:Lcom/qq/wx/voice/embed/recognizer/c;
 
-    iput-object p2, p0, Lcom/qq/wx/voice/embed/recognizer/e;->ajp:[B
+    iput-object p2, p0, Lcom/qq/wx/voice/embed/recognizer/e;->Vf:[B
 
-    iget-object v2, p0, Lcom/qq/wx/voice/embed/recognizer/e;->ajp:[B
+    iget-object v2, p0, Lcom/qq/wx/voice/embed/recognizer/e;->Vf:[B
 
     if-nez v2, :cond_2
 

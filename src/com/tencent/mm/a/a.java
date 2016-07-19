@@ -1,8 +1,8 @@
 package com.tencent.mm.a;
 
 import android.util.Base64;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,7 +16,24 @@ import javax.crypto.spec.SecretKeySpec;
 
 public final class a
 {
-  private static byte[] au(String paramString)
+  private static byte[] a(byte[] paramArrayOfByte, String paramString)
+  {
+    try
+    {
+      paramString = new SecretKeySpec(paramString.getBytes(), "AES");
+      Cipher localCipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
+      localCipher.init(2, paramString);
+      paramArrayOfByte = localCipher.doFinal(paramArrayOfByte);
+      return paramArrayOfByte;
+    }
+    catch (Exception paramArrayOfByte)
+    {
+      v.e("MicroMsg.AESUtils", be.f(paramArrayOfByte));
+    }
+    return null;
+  }
+  
+  private static byte[] ay(String paramString)
   {
     if (paramString.length() <= 0) {
       return null;
@@ -31,27 +48,10 @@ public final class a
     return arrayOfByte;
   }
   
-  private static byte[] c(byte[] paramArrayOfByte, String paramString)
-  {
-    try
-    {
-      paramString = new SecretKeySpec(paramString.getBytes(), "AES");
-      Cipher localCipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
-      localCipher.init(2, paramString);
-      paramArrayOfByte = localCipher.doFinal(paramArrayOfByte);
-      return paramArrayOfByte;
-    }
-    catch (Exception paramArrayOfByte)
-    {
-      u.e("!32@/B4Tb64lLpJxeqvX38nFlhZ4ZHYt2ISy", ay.b(paramArrayOfByte));
-    }
-    return null;
-  }
-  
-  public static boolean e(String paramString1, String paramString2, String paramString3)
+  public static boolean g(String paramString1, String paramString2, String paramString3)
   {
     boolean bool2 = false;
-    if (ay.kz("AES/CBC/PKCS7Padding")) {
+    if (be.kf("AES/CBC/PKCS7Padding")) {
       throw new InvalidParameterException("invalid cipherTransformation");
     }
     paramString2 = new File(paramString2);
@@ -92,19 +92,19 @@ public final class a
     return bool1;
   }
   
-  public static String n(String paramString1, String paramString2)
+  public static String m(String paramString1, String paramString2)
   {
-    if (ay.kz(paramString1)) {
+    if (be.kf(paramString1)) {
       return "";
     }
     try
     {
-      paramString2 = new String(c(au(paramString1), paramString2));
+      paramString2 = new String(a(ay(paramString1), paramString2));
       return paramString2;
     }
     catch (Exception paramString2)
     {
-      u.e("!32@/B4Tb64lLpJxeqvX38nFlhZ4ZHYt2ISy", ay.b(paramString2));
+      v.e("MicroMsg.AESUtils", be.f(paramString2));
     }
     return paramString1;
   }

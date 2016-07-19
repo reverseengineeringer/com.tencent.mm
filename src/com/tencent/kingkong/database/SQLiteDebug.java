@@ -39,18 +39,14 @@ public final class SQLiteDebug
     boolean bool = false;
     int j = paramArrayOfString.length;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j)
-      {
-        SQLiteDatabase.dumpAll(bool);
-        return;
-      }
       if (paramArrayOfString[i].equals("-v")) {
         bool = true;
       }
       i += 1;
     }
+    SQLiteDatabase.dumpAll(bool);
   }
   
   public static PagerStats getDatabaseInfo()
@@ -144,7 +140,7 @@ public final class SQLiteDebug
   
   public static class PagerStats
   {
-    public ArrayList dbStats;
+    public ArrayList<SQLiteDebug.DbStats> dbStats;
     public int largestMemAlloc;
     public int memoryUsed;
     public int pageCacheOverflow;

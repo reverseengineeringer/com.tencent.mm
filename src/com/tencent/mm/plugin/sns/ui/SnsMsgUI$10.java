@@ -2,9 +2,9 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.view.View;
 import android.widget.ListView;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.h.h;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.i.h;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.i.a;
 
 final class SnsMsgUI$10
@@ -12,28 +12,28 @@ final class SnsMsgUI$10
 {
   SnsMsgUI$10(SnsMsgUI paramSnsMsgUI) {}
   
-  public final void Gh()
+  public final void GE()
   {
-    u.v("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "total count:" + dhfU).cyh + " unread:" + ad.azl().DE() + "  showcount:" + dhfU).cVV);
-    if (SnsMsgUI.d(hfU).getCount() == 0)
+    v.v("MicroMsg.SnsMsgUI", "total count:" + dhuL).cvf + " unread:" + ad.aBL().DV() + "  showcount:" + dhuL).cUl);
+    if (SnsMsgUI.d(huL).getCount() == 0)
     {
-      SnsMsgUI.b(hfU).setVisibility(8);
-      SnsMsgUI.c(hfU).setVisibility(0);
-      hfU.bC(false);
+      SnsMsgUI.b(huL).setVisibility(8);
+      SnsMsgUI.c(huL).setVisibility(0);
+      huL.bp(false);
     }
     for (;;)
     {
-      if (((SnsMsgUI.d(hfU).Nv()) && (ad.azl().DE() == 0)) || (ad.azl().DE() == ad.azl().azW())) {
-        SnsMsgUI.e(hfU).setVisibility(8);
+      if (((SnsMsgUI.d(huL).OD()) && (ad.aBL().DV() == 0)) || (ad.aBL().DV() == ad.aBL().aCJ())) {
+        SnsMsgUI.e(huL).setVisibility(8);
       }
       return;
-      SnsMsgUI.b(hfU).setVisibility(0);
-      SnsMsgUI.c(hfU).setVisibility(8);
-      hfU.bC(true);
+      SnsMsgUI.b(huL).setVisibility(0);
+      SnsMsgUI.c(huL).setVisibility(8);
+      huL.bp(true);
     }
   }
   
-  public final void Gi() {}
+  public final void GF() {}
 }
 
 /* Location:

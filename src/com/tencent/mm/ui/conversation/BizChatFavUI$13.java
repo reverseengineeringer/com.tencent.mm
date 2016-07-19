@@ -1,41 +1,21 @@
 package com.tencent.mm.ui.conversation;
 
-import com.tencent.mm.az.g;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
-import com.tencent.mm.t.aj;
-import com.tencent.mm.t.e;
-import java.util.LinkedList;
+import android.view.MenuItem;
+import com.tencent.mm.ui.base.n.d;
 
 final class BizChatFavUI$13
-  implements Runnable
+  implements n.d
 {
-  BizChatFavUI$13(BizChatFavUI paramBizChatFavUI, LinkedList paramLinkedList) {}
+  BizChatFavUI$13(BizChatFavUI paramBizChatFavUI) {}
   
-  public final void run()
+  public final void d(MenuItem paramMenuItem, int paramInt)
   {
-    int j = BizChatFavUI.a(lnW).getCount();
-    com.tencent.mm.sdk.h.d locald = xHaoX;
-    long l = 0L;
-    if ((locald instanceof g)) {
-      l = ((g)locald).dH(Thread.currentThread().getId());
-    }
-    int i = 0;
-    while (i < j)
+    switch (paramMenuItem.getItemId())
     {
-      com.tencent.mm.t.d locald1 = (com.tencent.mm.t.d)BizChatFavUI.a(lnW).getItem(i);
-      if ((locald1 != null) && (field_bizChatServId != null))
-      {
-        if (!lnY.contains(field_bizChatServId)) {
-          field_bitFlag &= 0xFFFFFFF7;
-        }
-        aj.xH().b(locald1);
-      }
-      i += 1;
+    default: 
+      return;
     }
-    if ((locald instanceof g)) {
-      tDbzA.dI(l);
-    }
+    BizChatFavUI.a(lOv, BizChatFavUI.f(lOv));
   }
 }
 

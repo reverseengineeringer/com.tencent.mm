@@ -1,16 +1,16 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.v.a;
-import com.tencent.mm.protocal.v.b;
-import com.tencent.mm.r.h;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.protocal.y.a;
+import com.tencent.mm.protocal.y.b;
+import com.tencent.mm.t.h;
 
 public final class aj
   extends h
 {
-  private final v.a bBn = new v.a();
-  private final v.b bBo = new v.b();
+  private final y.a bus = new y.a();
+  private final y.b but = new y.b();
   
   public final int getType()
   {
@@ -22,14 +22,14 @@ public final class aj
     return "/cgi-bin/micromsg-bin/newreg";
   }
   
-  protected final h.c tW()
+  protected final k.c tX()
   {
-    return bBn;
+    return bus;
   }
   
-  public final h.d tX()
+  public final k.d tY()
   {
-    return bBo;
+    return but;
   }
 }
 

@@ -12,9 +12,9 @@ final class s$3
   public final void run()
   {
     Intent localIntent = new Intent();
-    localIntent.setComponent(new ComponentName(d.e.kjL, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"));
+    localIntent.setComponent(new ComponentName(d.e.kJT, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"));
     localIntent.putExtra("tools_process_action_code_key", "com.tencent.mm.intent.ACTION_START_TOOLS_PROCESS");
-    s.c(krb).sendBroadcast(localIntent);
+    s.c(kQi).sendBroadcast(localIntent);
   }
 }
 

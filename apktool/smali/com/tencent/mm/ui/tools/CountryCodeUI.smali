@@ -4,25 +4,34 @@
 
 
 # instance fields
-.field private aJD:Ljava/lang/String;
+.field private avX:Ljava/lang/String;
 
-.field private bUu:Ljava/lang/String;
+.field private bNV:Ljava/lang/String;
 
-.field private coN:Ljava/lang/String;
+.field private ckb:Ljava/lang/String;
 
-.field private dbC:Lcom/tencent/mm/ui/tools/r;
+.field private dai:Lcom/tencent/mm/ui/tools/r;
 
-.field private eEL:Landroid/widget/ListView;
+.field private eKF:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/ui/tools/d;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private eEr:Ljava/util/List;
+.field private eKI:Z
 
-.field private eEt:Z
+.field private eKZ:Landroid/widget/ListView;
 
-.field private lir:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
+.field private lIC:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
 
-.field private lua:Lcom/tencent/mm/ui/tools/e;
+.field private lVc:Lcom/tencent/mm/ui/tools/e;
 
-.field private lub:Lcom/tencent/mm/ui/base/VerticalScrollBar;
+.field private lVd:Lcom/tencent/mm/ui/base/VerticalScrollBar;
 
 
 # direct methods
@@ -36,12 +45,12 @@
     .line 38
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->coN:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->ckb:Ljava/lang/String;
 
     .line 41
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eEt:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eKI:Z
 
     return-void
 .end method
@@ -51,7 +60,7 @@
 
     .prologue
     .line 29
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->coN:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->ckb:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -61,15 +70,15 @@
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lua:Lcom/tencent/mm/ui/tools/e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lVc:Lcom/tencent/mm/ui/tools/e;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lua:Lcom/tencent/mm/ui/tools/e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lVc:Lcom/tencent/mm/ui/tools/e;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->coN:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->ckb:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/e;->pH(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/e;->qY(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -80,7 +89,7 @@
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eEL:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eKZ:Landroid/widget/ListView;
 
     return-object v0
 .end method
@@ -90,7 +99,7 @@
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lua:Lcom/tencent/mm/ui/tools/e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lVc:Lcom/tencent/mm/ui/tools/e;
 
     return-object v0
 .end method
@@ -100,7 +109,7 @@
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->bUu:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->bNV:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -110,14 +119,14 @@
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->aJD:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->avX:Ljava/lang/String;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final Gb()V
+.method protected final Gy()V
     .locals 11
 
     .prologue
@@ -128,12 +137,12 @@
     const/4 v1, 0x0
 
     .line 124
-    const v0, 0x7f0b03eb
+    const v0, 0x7f080083
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->qb(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->rR(I)V
 
     .line 125
-    const-string/jumbo v0, "!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP"
+    const-string/jumbo v0, "MicroMsg.CountryCodeUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -143,9 +152,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -153,9 +162,9 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f0b0606
+    const v0, 0x7f08058e
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->getString(I)Ljava/lang/String;
 
@@ -171,7 +180,7 @@
 
     move-result-object v2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUz()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZD()Z
 
     move-result v0
 
@@ -202,7 +211,7 @@
 
     if-ge v4, v5, :cond_0
 
-    const-string/jumbo v3, "!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP"
+    const-string/jumbo v3, "MicroMsg.CountryCodeUI"
 
     const-string/jumbo v4, "this country item has problem %s"
 
@@ -212,7 +221,7 @@
 
     aput-object v6, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_1
     add-int/lit8 v0, v0, 0x1
@@ -220,7 +229,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eEr:Ljava/util/List;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eKF:Ljava/util/List;
 
     new-instance v5, Lcom/tencent/mm/ui/tools/d;
 
@@ -243,7 +252,7 @@
     goto :goto_1
 
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eEr:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eKF:Ljava/util/List;
 
     new-instance v2, Lcom/tencent/mm/ui/tools/CountryCodeUI$1;
 
@@ -257,24 +266,24 @@
 
     invoke-direct {v0, v9, v9}, Lcom/tencent/mm/ui/tools/r;-><init>(ZZ)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->dbC:Lcom/tencent/mm/ui/tools/r;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->dai:Lcom/tencent/mm/ui/tools/r;
 
     .line 128
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->dbC:Lcom/tencent/mm/ui/tools/r;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->dai:Lcom/tencent/mm/ui/tools/r;
 
     new-instance v2, Lcom/tencent/mm/ui/tools/CountryCodeUI$3;
 
     invoke-direct {v2, p0}, Lcom/tencent/mm/ui/tools/CountryCodeUI$3;-><init>(Lcom/tencent/mm/ui/tools/CountryCodeUI;)V
 
-    iput-object v2, v0, Lcom/tencent/mm/ui/tools/r;->lxA:Lcom/tencent/mm/ui/tools/r$b;
+    iput-object v2, v0, Lcom/tencent/mm/ui/tools/r;->lYp:Lcom/tencent/mm/ui/tools/r$b;
 
     .line 164
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->dbC:Lcom/tencent/mm/ui/tools/r;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->dai:Lcom/tencent/mm/ui/tools/r;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->a(Lcom/tencent/mm/ui/tools/r;)V
 
     .line 166
-    const v0, 0x7f070166
+    const v0, 0x7f1000f2
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->findViewById(I)Landroid/view/View;
 
@@ -282,38 +291,38 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eEL:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eKZ:Landroid/widget/ListView;
 
     .line 167
     new-instance v0, Lcom/tencent/mm/ui/tools/e;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eEr:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eKF:Ljava/util/List;
 
     invoke-direct {v0, p0, v2}, Lcom/tencent/mm/ui/tools/e;-><init>(Landroid/content/Context;Ljava/util/List;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lua:Lcom/tencent/mm/ui/tools/e;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lVc:Lcom/tencent/mm/ui/tools/e;
 
     .line 168
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lua:Lcom/tencent/mm/ui/tools/e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lVc:Lcom/tencent/mm/ui/tools/e;
 
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eEt:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eKI:Z
 
-    iput-boolean v2, v0, Lcom/tencent/mm/ui/tools/e;->eEt:Z
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/tools/e;->eKI:Z
 
     .line 174
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eEL:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eKZ:Landroid/widget/ListView;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lua:Lcom/tencent/mm/ui/tools/e;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lVc:Lcom/tencent/mm/ui/tools/e;
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 175
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eEL:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eKZ:Landroid/widget/ListView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setVisibility(I)V
 
     .line 176
-    const v0, 0x7f070169
+    const v0, 0x7f1000f5
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->findViewById(I)Landroid/view/View;
 
@@ -321,10 +330,10 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/VerticalScrollBar;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lub:Lcom/tencent/mm/ui/base/VerticalScrollBar;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lVd:Lcom/tencent/mm/ui/base/VerticalScrollBar;
 
     .line 178
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUz()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZD()Z
 
     move-result v0
 
@@ -335,15 +344,15 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/CountryCodeUI$4;-><init>(Lcom/tencent/mm/ui/tools/CountryCodeUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lir:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lIC:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
 
     .line 233
     :goto_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lub:Lcom/tencent/mm/ui/base/VerticalScrollBar;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lVd:Lcom/tencent/mm/ui/base/VerticalScrollBar;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lir:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lIC:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/VerticalScrollBar;->setOnScrollBarTouchListener(Lcom/tencent/mm/ui/base/VerticalScrollBar$a;)V
+    iput-object v1, v0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->ljR:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
 
     .line 234
     new-instance v0, Lcom/tencent/mm/ui/tools/CountryCodeUI$6;
@@ -353,7 +362,7 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 267
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eEL:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eKZ:Landroid/widget/ListView;
 
     new-instance v1, Lcom/tencent/mm/ui/tools/CountryCodeUI$7;
 
@@ -366,7 +375,7 @@
 
     .line 125
     :cond_2
-    const-string/jumbo v0, "!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP"
+    const-string/jumbo v0, "MicroMsg.CountryCodeUI"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -386,7 +395,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -409,11 +418,11 @@
 
     aget-object v4, v3, v9
 
-    invoke-static {v4}, Lcom/tencent/mm/ac/a;->ig(Ljava/lang/String;)I
+    invoke-static {v4}, Lcom/tencent/mm/af/a;->ix(Ljava/lang/String;)I
 
     move-result v4
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eEr:Ljava/util/List;
+    iget-object v5, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eKF:Ljava/util/List;
 
     new-instance v6, Lcom/tencent/mm/ui/tools/d;
 
@@ -432,7 +441,7 @@
     goto :goto_4
 
     :cond_3
-    const-string/jumbo v0, "!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP"
+    const-string/jumbo v0, "MicroMsg.CountryCodeUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -442,9 +451,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -452,9 +461,9 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eEr:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eKF:Ljava/util/List;
 
     new-instance v2, Lcom/tencent/mm/ui/tools/CountryCodeUI$2;
 
@@ -462,7 +471,7 @@
 
     invoke-static {v0, v2}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP"
+    const-string/jumbo v0, "MicroMsg.CountryCodeUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -472,9 +481,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -482,7 +491,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_2
 
@@ -492,7 +501,7 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/CountryCodeUI$5;-><init>(Lcom/tencent/mm/ui/tools/CountryCodeUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lir:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->lIC:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
 
     goto/16 :goto_3
 .end method
@@ -502,21 +511,21 @@
 
     .prologue
     .line 55
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUz()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZD()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 56
-    const v0, 0x7f0a0075
+    const v0, 0x7f030175
 
     .line 58
     :goto_0
     return v0
 
     :cond_0
-    const v0, 0x7f0a00c9
+    const v0, 0x7f030174
 
     goto :goto_0
 .end method
@@ -533,7 +542,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eEr:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eKF:Ljava/util/List;
 
     .line 47
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->getIntent()Landroid/content/Intent;
@@ -548,11 +557,11 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/platformtools/t;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/platformtools/s;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->bUu:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->bNV:Ljava/lang/String;
 
     .line 48
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->getIntent()Landroid/content/Intent;
@@ -567,11 +576,11 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/platformtools/t;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/platformtools/s;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->aJD:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->avX:Ljava/lang/String;
 
     .line 49
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->getIntent()Landroid/content/Intent;
@@ -586,10 +595,10 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eEt:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->eKI:Z
 
     .line 50
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->Gb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->Gy()V
 
     .line 51
     return-void
@@ -612,14 +621,14 @@
     .line 297
     const-string/jumbo v1, "country_name"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->bUu:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->bNV:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 298
     const-string/jumbo v1, "couttry_code"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->aJD:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->avX:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -654,14 +663,14 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
 
     .line 65
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->dbC:Lcom/tencent/mm/ui/tools/r;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->dai:Lcom/tencent/mm/ui/tools/r;
 
     if-eqz v0, :cond_0
 
     .line 66
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->dbC:Lcom/tencent/mm/ui/tools/r;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI;->dai:Lcom/tencent/mm/ui/tools/r;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/r;->biK()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/r;->boG()V
 
     .line 68
     :cond_0

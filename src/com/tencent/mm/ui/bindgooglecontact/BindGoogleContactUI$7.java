@@ -1,21 +1,17 @@
 package com.tencent.mm.ui.bindgooglecontact;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
+import android.content.DialogInterface.OnClickListener;
 
 final class BindGoogleContactUI$7
-  implements DialogInterface.OnCancelListener
+  implements DialogInterface.OnClickListener
 {
   BindGoogleContactUI$7(BindGoogleContactUI paramBindGoogleContactUI) {}
   
-  public final void onCancel(DialogInterface paramDialogInterface)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    BindGoogleContactUI.f(kMQ);
-    if (BindGoogleContactUI.g(kMQ) != null) {
-      ah.tE().c(BindGoogleContactUI.g(kMQ));
-    }
+    BindGoogleContactUI.d(lmf);
+    BindGoogleContactUI.e(lmf);
   }
 }
 

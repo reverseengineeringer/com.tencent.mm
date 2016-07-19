@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.sns.ui;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnGroupClickListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.AnimatedExpandableListView;
 import com.tencent.mm.ui.base.g;
 import java.util.ArrayList;
@@ -15,70 +15,70 @@ final class SnsLabelUI$1
   
   public final boolean onGroupClick(ExpandableListView paramExpandableListView, View paramView, final int paramInt, long paramLong)
   {
-    int i = ahfA).hfF;
-    u.i("!32@/B4Tb64lLpIqN7lHrKT1FHOI7zfnIA1O", "dz[previousGroup: %d    onGroupClick:%d]", new Object[] { Integer.valueOf(i), Integer.valueOf(paramInt) });
+    int i = ahur).huw;
+    v.i("MicroMsg.SnsLabelUI", "dz[previousGroup: %d    onGroupClick:%d]", new Object[] { Integer.valueOf(i), Integer.valueOf(paramInt) });
     if (paramInt > 1)
     {
-      if ((SnsLabelUI.b(hfA) != null) && (SnsLabelUI.b(hfA).size() != 0) && (SnsLabelUI.aCc() == 0))
+      if ((SnsLabelUI.b(hur) != null) && (SnsLabelUI.b(hur).size() != 0) && (SnsLabelUI.aFf() == 0))
       {
-        SnsLabelUI.a(hfA, paramInt);
-        SnsLabelUI.c(hfA);
-        u.i("!32@/B4Tb64lLpIqN7lHrKT1FHOI7zfnIA1O", "dz[previousGroup: need transform]");
+        SnsLabelUI.a(hur, paramInt);
+        SnsLabelUI.c(hur);
+        v.i("MicroMsg.SnsLabelUI", "dz[previousGroup: need transform]");
         return true;
       }
-      if (SnsLabelUI.d(hfA))
+      if (SnsLabelUI.d(hur))
       {
-        SnsLabelUI.e(hfA);
-        SnsLabelUI.a(hfA, paramInt);
-        SnsLabelUI.a(hfA, g.a(hfA, hfA.getString(2131433178), false, null));
-        u.i("!32@/B4Tb64lLpIqN7lHrKT1FHOI7zfnIA1O", "dz[previousGroup: isGettingTagInfo]");
+        SnsLabelUI.e(hur);
+        SnsLabelUI.a(hur, paramInt);
+        SnsLabelUI.a(hur, g.a(hur, hur.getString(2131235464), false, null));
+        v.i("MicroMsg.SnsLabelUI", "dz[previousGroup: isGettingTagInfo]");
         return true;
       }
-      if ((ahfA).hfE == null) || (ahfA).hfE.size() == 0))
+      if ((ahur).huv == null) || (ahur).huv.size() == 0))
       {
-        SnsLabelUI.a(hfA, paramInt);
-        SnsLabelUI.f(hfA);
-        u.i("!32@/B4Tb64lLpIqN7lHrKT1FHOI7zfnIA1O", "dz[previousGroup: gotoCreateNewLabel]");
+        SnsLabelUI.a(hur, paramInt);
+        SnsLabelUI.f(hur);
+        v.i("MicroMsg.SnsLabelUI", "dz[previousGroup: gotoCreateNewLabel]");
         return true;
       }
       if (i == paramInt)
       {
-        if (SnsLabelUI.g(hfA).isGroupExpanded(paramInt)) {
-          SnsLabelUI.g(hfA).qt(paramInt);
+        if (SnsLabelUI.g(hur).isGroupExpanded(paramInt)) {
+          SnsLabelUI.g(hur).sl(paramInt);
         }
         for (;;)
         {
-          ahfA).hfF = paramInt;
+          ahur).huw = paramInt;
           return true;
-          SnsLabelUI.g(hfA).qs(paramInt);
+          SnsLabelUI.g(hur).sk(paramInt);
         }
       }
       if (i == 2)
       {
-        SnsLabelUI.g(hfA).collapseGroup(2);
-        ahfA).hfH.clear();
+        SnsLabelUI.g(hur).collapseGroup(2);
+        ahur).huy.clear();
       }
       for (;;)
       {
-        SnsLabelUI.g(hfA).post(new Runnable()
+        SnsLabelUI.g(hur).post(new Runnable()
         {
           public final void run()
           {
-            SnsLabelUI.g(hfA).qs(paramInt);
+            SnsLabelUI.g(hur).sk(paramInt);
           }
         });
         break;
         if (i == 3)
         {
-          SnsLabelUI.g(hfA).collapseGroup(3);
-          ahfA).hfI.clear();
+          SnsLabelUI.g(hur).collapseGroup(3);
+          ahur).huz.clear();
         }
       }
     }
     if (i > 1) {
-      SnsLabelUI.g(hfA).qt(i);
+      SnsLabelUI.g(hur).sl(i);
     }
-    ahfA).hfF = paramInt;
+    ahur).huw = paramInt;
     return false;
   }
 }

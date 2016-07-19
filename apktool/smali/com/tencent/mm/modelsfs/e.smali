@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private cal:Lcom/tencent/mm/modelsfs/a;
+.field private bTU:Lcom/tencent/mm/modelsfs/a;
 
 
 # direct methods
@@ -20,7 +20,7 @@
 
     invoke-direct {v0, p3, p4}, Lcom/tencent/mm/modelsfs/a;-><init>(J)V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsfs/e;->cal:Lcom/tencent/mm/modelsfs/a;
+    iput-object v0, p0, Lcom/tencent/mm/modelsfs/e;->bTU:Lcom/tencent/mm/modelsfs/a;
 
     .line 16
     return-void
@@ -36,12 +36,12 @@
     invoke-super {p0}, Lcom/tencent/mm/modelsfs/SFSOutputStream;->close()V
 
     .line 32
-    iget-object v0, p0, Lcom/tencent/mm/modelsfs/e;->cal:Lcom/tencent/mm/modelsfs/a;
+    iget-object v0, p0, Lcom/tencent/mm/modelsfs/e;->bTU:Lcom/tencent/mm/modelsfs/a;
 
     if-eqz v0, :cond_0
 
     .line 33
-    iget-object v0, p0, Lcom/tencent/mm/modelsfs/e;->cal:Lcom/tencent/mm/modelsfs/a;
+    iget-object v0, p0, Lcom/tencent/mm/modelsfs/e;->bTU:Lcom/tencent/mm/modelsfs/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/modelsfs/a;->free()V
 
@@ -77,7 +77,7 @@
 
     .prologue
     .line 25
-    iget-object v0, p0, Lcom/tencent/mm/modelsfs/e;->cal:Lcom/tencent/mm/modelsfs/a;
+    iget-object v0, p0, Lcom/tencent/mm/modelsfs/e;->bTU:Lcom/tencent/mm/modelsfs/a;
 
     invoke-virtual {v0, p1, p3}, Lcom/tencent/mm/modelsfs/a;->j([BI)I
 

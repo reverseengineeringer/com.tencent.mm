@@ -7,9 +7,9 @@ final class EmailVerifyUI$2
 {
   EmailVerifyUI$2(EmailVerifyUI paramEmailVerifyUI) {}
   
-  public final void bbz()
+  public final void bgL()
   {
-    ksd.bC(false);
+    kRl.bp(false);
   }
 }
 

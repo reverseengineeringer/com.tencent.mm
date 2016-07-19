@@ -5,9 +5,9 @@ import android.widget.FrameLayout;
 public final class p
   extends FrameLayout
 {
-  public static String lTn = "";
-  public static String lTo = "";
-  static boolean lTp = false;
+  public static String mvf = "";
+  public static String mvg = "";
+  static boolean mvh = false;
 }
 
 /* Location:

@@ -17,7 +17,7 @@
 # instance fields
 .field imagePath:Ljava/lang/String;
 
-.field final synthetic ljp:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
+.field final synthetic lJA:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
 
 
 # direct methods
@@ -25,8 +25,8 @@
     .locals 0
 
     .prologue
-    .line 313
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;->ljp:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
+    .line 316
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;->lJA:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
@@ -39,7 +39,7 @@
     .locals 1
 
     .prologue
-    .line 323
+    .line 326
     const/4 v0, 0x1
 
     return v0
@@ -49,7 +49,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 331
     iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;->imagePath:Ljava/lang/String;
 
     return-object v0
@@ -59,7 +59,7 @@
     .locals 2
 
     .prologue
-    .line 333
+    .line 336
     int-to-long v0, p1
 
     return-wide v0
@@ -69,10 +69,10 @@
     .locals 14
 
     .prologue
-    .line 339
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;->ljp:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
+    .line 342
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;->lJA:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
 
-    const v1, 0x7f0a001d
+    const v1, 0x7f030166
 
     const/4 v2, 0x0
 
@@ -80,8 +80,8 @@
 
     move-result-object v5
 
-    .line 340
-    const v0, 0x7f07002c
+    .line 343
+    const v0, 0x7f100023
 
     invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -89,7 +89,7 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    .line 341
+    .line 344
     new-instance v1, Landroid/widget/Gallery$LayoutParams;
 
     const/4 v2, -0x1
@@ -100,7 +100,7 @@
 
     invoke-virtual {v5, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 342
+    .line 345
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v2, -0x1
@@ -111,12 +111,12 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 343
+    .line 346
     iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;->imagePath:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;->ljp:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;->lJA:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
 
-    invoke-static {v2}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {v2}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v2
 
@@ -126,7 +126,7 @@
 
     if-eqz v6, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;->ljp:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;->lJA:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->e(Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;)Landroid/view/View;
 
@@ -136,7 +136,7 @@
 
     move-result v7
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;->ljp:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$a;->lJA:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->e(Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;)Landroid/view/View;
 
@@ -182,7 +182,7 @@
 
     div-float/2addr v2, v4
 
-    const-string/jumbo v4, "!32@/B4Tb64lLpJ8SVyOn6WIBnf/iMnAMEhc"
+    const-string/jumbo v4, "MicroMsg.ImagePreviewUI"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -208,7 +208,7 @@
 
     move-result-object v10
 
-    invoke-static {v4, v10}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v10}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     const/high16 v4, 0x40000000    # 2.0f
 
@@ -244,11 +244,11 @@
 
     div-float/2addr v2, v3
 
-    float-to-double v3, v1
+    float-to-double v10, v1
 
-    const-wide/high16 v10, 0x3ff0000000000000L    # 1.0
+    const-wide/high16 v12, 0x3ff0000000000000L    # 1.0
 
-    cmpl-double v1, v3, v10
+    cmpl-double v1, v10, v12
 
     if-lez v1, :cond_1
 
@@ -287,15 +287,15 @@
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->bN(II)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->bT(II)V
 
     invoke-virtual {v0, v6}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 345
+    .line 348
     :cond_0
     return-object v5
 
-    .line 343
+    .line 346
     :cond_1
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -354,11 +354,11 @@
 
     div-float/2addr v2, v3
 
-    float-to-double v3, v1
+    float-to-double v10, v1
 
-    const-wide/high16 v10, 0x3ff0000000000000L    # 1.0
+    const-wide/high16 v12, 0x3ff0000000000000L    # 1.0
 
-    cmpl-double v3, v3, v10
+    cmpl-double v3, v10, v12
 
     if-lez v3, :cond_3
 
@@ -393,7 +393,7 @@
 
     int-to-float v1, v1
 
-    const-string/jumbo v2, "!32@/B4Tb64lLpJ8SVyOn6WIBnf/iMnAMEhc"
+    const-string/jumbo v2, "MicroMsg.ImagePreviewUI"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -409,7 +409,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 

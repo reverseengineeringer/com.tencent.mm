@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gDF:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+.field final synthetic gKg:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 371
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f$1;->gDF:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f$1;->gKg:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 375
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f$1;->gDF:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f$1;->gKg:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->a(Lcom/tencent/mm/plugin/sight/encode/ui/f;)Landroid/hardware/Camera$PreviewCallback;
 
@@ -50,7 +50,7 @@
     invoke-interface {v0, p1, p2}, Landroid/hardware/Camera$PreviewCallback;->onPreviewFrame([BLandroid/hardware/Camera;)V
 
     .line 376
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f$1;->gDF:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f$1;->gKg:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->b(Lcom/tencent/mm/plugin/sight/encode/ui/f;)[B
 
@@ -67,7 +67,7 @@
 
     .line 379
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f$1;->gDF:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f$1;->gKg:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->c(Lcom/tencent/mm/plugin/sight/encode/ui/f;)V
 

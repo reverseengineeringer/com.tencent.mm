@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+.field final synthetic lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
-.field final synthetic lmo:Ljava/util/LinkedList;
+.field final synthetic lMD:Ljava/util/LinkedList;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 853
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$5;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    .line 855
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$5;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$5;->lmo:Ljava/util/LinkedList;
+    iput-object p2, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$5;->lMD:Ljava/util/LinkedList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,13 +44,13 @@
     .locals 2
 
     .prologue
-    .line 857
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$5;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    .line 859
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$5;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$5;->lmo:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$5;->lMD:Ljava/util/LinkedList;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/contact/SelectContactUI;->a(Lcom/tencent/mm/ui/contact/SelectContactUI;Ljava/util/LinkedList;)V
 
-    .line 858
+    .line 860
     return-void
 .end method

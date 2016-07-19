@@ -1,8 +1,8 @@
 package com.tencent.mm.ui.chatting.gallery;
 
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.CheckBox;
-import com.tencent.mm.ui.base.MMViewPager;
 
 final class ImageGalleryUI$12
   implements Runnable
@@ -11,24 +11,24 @@ final class ImageGalleryUI$12
   
   public final void run()
   {
-    if (ImageGalleryUI.e(lgM) == null) {}
+    if (ImageGalleryUI.e(lGY) == null) {}
     do
     {
       do
       {
         return;
-        if ((bgAlgc) && (ImageGalleryUI.h(lgM) != null))
+        if ((bmilGp) && (ImageGalleryUI.g(lGY) != null))
         {
-          ImageGalleryUI.h(lgM).setChecked(g.a.bgA().au(ImageGalleryUI.e(lgM).bgo()));
-          ImageGalleryUI.i(lgM).setOnClickListener(lgM);
+          ImageGalleryUI.g(lGY).setChecked(g.a.bmi().aA(ImageGalleryUI.e(lGY).blY()));
+          ImageGalleryUI.h(lGY).setOnClickListener(lGY);
         }
-      } while (lgM.efi.getCurrentItem() != 100000);
-      lgM.bgO();
-      if ((!lgM.lgz) && (!lgM.lgA) && (b.aj(ImageGalleryUI.e(lgM).rq(100000)))) {
-        ImageGalleryUI.e(lgM).ru(100000);
+      } while (lGY.eiK.gc != 100000);
+      lGY.bmw();
+      if ((!lGY.lGL) && (!lGY.lGM) && (b.an(ImageGalleryUI.e(lGY).ts(100000)))) {
+        ImageGalleryUI.e(lGY).tw(100000);
       }
-    } while (!b.ak(ImageGalleryUI.e(lgM).rq(100000)));
-    ImageGalleryUI.e(lgM).ry(100000);
+    } while (!b.ao(ImageGalleryUI.e(lGY).ts(100000)));
+    ImageGalleryUI.e(lGY).tA(100000);
   }
 }
 

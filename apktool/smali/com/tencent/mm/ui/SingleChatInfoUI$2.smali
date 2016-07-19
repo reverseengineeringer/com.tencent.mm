@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic cYT:I
+.field final synthetic cXz:I
 
-.field final synthetic krj:Lcom/tencent/mm/ui/SingleChatInfoUI;
+.field final synthetic kQq:Lcom/tencent/mm/ui/SingleChatInfoUI;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 126
-    iput-object p1, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$2;->krj:Lcom/tencent/mm/ui/SingleChatInfoUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$2;->kQq:Lcom/tencent/mm/ui/SingleChatInfoUI;
 
-    iput p2, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$2;->cYT:I
+    iput p2, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$2;->cXz:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 131
-    iget-object v0, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$2;->krj:Lcom/tencent/mm/ui/SingleChatInfoUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$2;->kQq:Lcom/tencent/mm/ui/SingleChatInfoUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/SingleChatInfoUI;->a(Lcom/tencent/mm/ui/SingleChatInfoUI;)Lcom/tencent/mm/ui/base/preference/f;
 
@@ -53,11 +53,11 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/preference/a;
 
-    iget v1, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$2;->cYT:I
+    iget v1, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$2;->cXz:I
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$2;->krj:Lcom/tencent/mm/ui/SingleChatInfoUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$2;->kQq:Lcom/tencent/mm/ui/SingleChatInfoUI;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/base/preference/MMPreference;->gWB:Landroid/widget/ListView;
+    iget-object v2, v2, Lcom/tencent/mm/ui/base/preference/MMPreference;->eLC:Landroid/widget/ListView;
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/a;->a(ILandroid/widget/ListView;)Landroid/view/View;
 
@@ -67,13 +67,13 @@
     if-eqz v0, :cond_0
 
     .line 134
-    iget-object v1, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$2;->krj:Lcom/tencent/mm/ui/SingleChatInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$2;->kQq:Lcom/tencent/mm/ui/SingleChatInfoUI;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/ui/f/a;->c(Landroid/app/Activity;Landroid/view/View;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/ui/g/a;->b(Landroid/app/Activity;Landroid/view/View;)V
 
     .line 136
     :cond_0

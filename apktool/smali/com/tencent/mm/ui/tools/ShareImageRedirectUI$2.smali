@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxO:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
+.field final synthetic lYD:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 73
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$2;->lxO:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$2;->lYD:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$2;->lxO:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$2;->lYD:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
 
     new-instance v1, Landroid/content/Intent;
 
@@ -52,7 +52,7 @@
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->startActivity(Landroid/content/Intent;)V
 
     .line 77
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$2;->lxO:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$2;->lYD:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->finish()V
 

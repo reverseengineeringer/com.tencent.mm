@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/hb" android:paddingRight="@dimen/hb" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/zf" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/zg" android:background="@drawable/lj" android:paddingLeft="@dimen/hb" android:paddingTop="@dimen/hb" android:paddingRight="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:ellipsize="end" android:id="@id/dq" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/fn" android:maxLines="3" />
+            <TextView android:textSize="@dimen/jc" android:textColor="@color/gn" android:id="@id/ui" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j8" android:layout_marginBottom="@dimen/hb" android:text="@string/fn" />
+            <RelativeLayout android:id="@id/zh" android:layout_width="fill_parent" android:layout_height="135.0dip">
+                <ImageView android:id="@id/zi" android:layout_width="fill_parent" android:layout_height="135.0dip" android:scaleType="centerCrop" />
+                <LinearLayout android:gravity="center_vertical" android:id="@id/zj" android:background="@color/gg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <com.tencent.mm.ui.tools.CustomFitTextView android:textSize="@dimen/cu" android:textColor="@color/ow" android:id="@id/zk" android:padding="2.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fn" android:maxLines="2" />
+                </LinearLayout>
+                <ProgressBar android:layout_gravity="center" android:id="@id/zl" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/largeCustomProgressBar" />
+                <TextView android:gravity="center_vertical" android:id="@id/zm" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ac5" android:drawableLeft="@raw/msg_state_fail_resend" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:id="@id/zn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb" android:text="@string/fn" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/ak" android:id="@id/zo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hf" android:layout_marginBottom="@dimen/hb" android:text="@string/z_" />
+        </LinearLayout>
+        <com.tencent.mm.ui.chatting.ChattingItemFooter android:id="@id/zp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip" android:layout_marginBottom="0.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hb">
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:id="@id/zq" android:background="@drawable/a8" android:layout_marginRight="@dimen/cp" android:text="@string/y1" style="@style/ChattingItemSourceTextView" />
+    </LinearLayout>
+</LinearLayout>

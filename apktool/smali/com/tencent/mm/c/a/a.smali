@@ -4,27 +4,27 @@
 
 # interfaces
 .implements Lcom/tencent/mm/compatible/b/d$a;
-.implements Lcom/tencent/mm/r/f;
+.implements Lcom/tencent/mm/t/f;
 
 
 # instance fields
-.field private api:Lcom/tencent/mm/modelvoice/d;
+.field private aaA:Lcom/tencent/mm/modelvoice/d;
 
-.field apj:Z
+.field aaB:Z
 
-.field private apk:Z
+.field private aaC:Z
 
-.field apl:Lcom/tencent/mm/compatible/util/a;
+.field aaD:Lcom/tencent/mm/compatible/util/a;
 
-.field private apm:I
+.field private aaE:I
 
-.field private apn:Z
+.field private aaF:Z
 
-.field apo:Z
+.field aaG:Z
 
-.field public app:Lcom/tencent/mm/r/f$b;
+.field public aaH:Lcom/tencent/mm/t/f$b;
 
-.field public apq:Lcom/tencent/mm/r/f$a;
+.field public aaI:Lcom/tencent/mm/t/f$a;
 
 .field context:Landroid/content/Context;
 
@@ -34,12 +34,12 @@
     .locals 1
 
     .prologue
-    .line 43
+    .line 44
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/tencent/mm/c/a/a;-><init>(Landroid/content/Context;I)V
 
-    .line 44
+    .line 45
     return-void
 .end method
 
@@ -51,75 +51,75 @@
 
     const/4 v0, 0x0
 
-    .line 46
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
-    iput-object v1, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
-
     .line 31
-    iput-object v1, p0, Lcom/tencent/mm/c/a/a;->context:Landroid/content/Context;
+    iput-object v1, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     .line 32
-    iput-boolean v0, p0, Lcom/tencent/mm/c/a/a;->apj:Z
+    iput-object v1, p0, Lcom/tencent/mm/c/a/a;->context:Landroid/content/Context;
 
     .line 33
-    iput-boolean v0, p0, Lcom/tencent/mm/c/a/a;->apk:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/c/a/a;->aaB:Z
 
-    .line 37
-    iput v0, p0, Lcom/tencent/mm/c/a/a;->apm:I
+    .line 34
+    iput-boolean v0, p0, Lcom/tencent/mm/c/a/a;->aaC:Z
 
-    .line 39
-    iput-boolean v0, p0, Lcom/tencent/mm/c/a/a;->apn:Z
+    .line 38
+    iput v0, p0, Lcom/tencent/mm/c/a/a;->aaE:I
 
     .line 40
-    iput-boolean v0, p0, Lcom/tencent/mm/c/a/a;->apo:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/c/a/a;->aaF:Z
 
-    .line 266
-    iput-object v1, p0, Lcom/tencent/mm/c/a/a;->app:Lcom/tencent/mm/r/f$b;
+    .line 41
+    iput-boolean v0, p0, Lcom/tencent/mm/c/a/a;->aaG:Z
 
-    .line 47
+    .line 280
+    iput-object v1, p0, Lcom/tencent/mm/c/a/a;->aaH:Lcom/tencent/mm/t/f$b;
+
+    .line 48
     iput-object p1, p0, Lcom/tencent/mm/c/a/a;->context:Landroid/content/Context;
 
-    .line 49
+    .line 50
     new-instance v0, Lcom/tencent/mm/compatible/util/a;
 
     invoke-direct {v0, p1}, Lcom/tencent/mm/compatible/util/a;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->apl:Lcom/tencent/mm/compatible/util/a;
-
-    .line 50
-    iput p2, p0, Lcom/tencent/mm/c/a/a;->apm:I
+    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->aaD:Lcom/tencent/mm/compatible/util/a;
 
     .line 51
+    iput p2, p0, Lcom/tencent/mm/c/a/a;->aaE:I
+
+    .line 52
     new-instance v0, Lcom/tencent/mm/c/b/g$b;
 
     invoke-direct {v0}, Lcom/tencent/mm/c/b/g$b;-><init>()V
 
-    .line 52
+    .line 53
     return-void
 .end method
 
-.method private lD()V
+.method private jN()V
     .locals 2
 
     .prologue
-    .line 309
+    .line 323
     new-instance v0, Lcom/tencent/mm/c/a/a$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/c/a/a$2;-><init>(Lcom/tencent/mm/c/a/a;)V
 
-    .line 360
-    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    .line 372
+    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     if-eqz v1, :cond_0
 
-    .line 361
-    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    .line 373
+    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     invoke-interface {v1, v0}, Lcom/tencent/mm/modelvoice/d;->a(Lcom/tencent/mm/modelvoice/d$a;)V
 
-    .line 364
+    .line 376
     :cond_0
     return-void
 .end method
@@ -128,66 +128,116 @@
     .locals 2
 
     .prologue
-    .line 274
+    .line 288
     new-instance v0, Lcom/tencent/mm/c/a/a$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/c/a/a$1;-><init>(Lcom/tencent/mm/c/a/a;)V
 
-    .line 296
-    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    .line 310
+    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     if-eqz v1, :cond_0
 
-    .line 297
-    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    .line 311
+    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     invoke-interface {v1, v0}, Lcom/tencent/mm/modelvoice/d;->a(Lcom/tencent/mm/modelvoice/d$b;)V
 
-    .line 299
+    .line 313
     :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/r/f$a;)V
-    .locals 0
-
-    .prologue
-    .line 305
-    iput-object p1, p0, Lcom/tencent/mm/c/a/a;->apq:Lcom/tencent/mm/r/f$a;
-
-    .line 306
-    return-void
-.end method
-
-.method public final a(Lcom/tencent/mm/r/f$b;)V
-    .locals 0
+.method public final N(Z)V
+    .locals 2
 
     .prologue
     .line 270
-    iput-object p1, p0, Lcom/tencent/mm/c/a/a;->app:Lcom/tencent/mm/r/f$b;
+    iget-boolean v0, p0, Lcom/tencent/mm/c/a/a;->aaB:Z
 
-    .line 271
+    if-ne v0, p1, :cond_0
+
+    .line 278
+    :goto_0
+    return-void
+
+    .line 273
+    :cond_0
+    iput-boolean p1, p0, Lcom/tencent/mm/c/a/a;->aaB:Z
+
+    .line 274
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
+
+    invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d;->isPlaying()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 275
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
+
+    invoke-interface {v0, p1}, Lcom/tencent/mm/modelvoice/d;->N(Z)V
+
+    .line 277
+    :cond_1
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Lcom/tencent/mm/compatible/b/d;->b(ZZ)Z
+
+    goto :goto_0
+.end method
+
+.method public final a(Lcom/tencent/mm/t/f$a;)V
+    .locals 0
+
+    .prologue
+    .line 319
+    iput-object p1, p0, Lcom/tencent/mm/c/a/a;->aaI:Lcom/tencent/mm/t/f$a;
+
+    .line 320
+    return-void
+.end method
+
+.method public final a(Lcom/tencent/mm/t/f$b;)V
+    .locals 0
+
+    .prologue
+    .line 284
+    iput-object p1, p0, Lcom/tencent/mm/c/a/a;->aaH:Lcom/tencent/mm/t/f$b;
+
+    .line 285
     return-void
 .end method
 
 .method public final a(Ljava/lang/String;ZII)Z
-    .locals 7
+    .locals 8
 
     .prologue
-    const/4 v6, 0x2
+    const/4 v7, 0x2
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 127
-    const-string/jumbo v0, "!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A="
+    .line 133
+    const-string/jumbo v0, "MicroMsg.SceneVoicePlayer"
 
-    const-string/jumbo v3, "start file name:[%s] speakerOn:[%b]"
+    const-string/jumbo v3, "start file name:[%s] speakerOn:[%b], isFullPath: %s, type: %s, userType: %s"
 
-    new-array v4, v6, [Ljava/lang/Object;
+    const/4 v4, 0x5
+
+    new-array v4, v4, [Ljava/lang/Object;
 
     aput-object p1, v4, v2
 
@@ -197,122 +247,177 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 128
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    move-result-object v5
+
+    aput-object v5, v4, v7
+
+    const/4 v5, 0x3
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x4
+
+    iget v6, p0, Lcom/tencent/mm/c/a/a;->aaE:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 135
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/tencent/mm/compatible/b/d;->a(Lcom/tencent/mm/compatible/b/d$a;)V
 
-    .line 129
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    .line 136
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nL()I
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->ma()I
 
-    .line 130
+    .line 137
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    if-lez v0, :cond_4
+    if-lez v0, :cond_0
 
     move v0, v1
 
     :goto_0
     invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
 
-    .line 131
+    .line 138
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/FileOp;->aB(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 139
+    const-string/jumbo v0, "MicroMsg.SceneVoicePlayer"
+
+    const-string/jumbo v3, "start, file %s not exist!, fullPath: %s"
+
+    new-array v4, v7, [Ljava/lang/Object;
+
+    aput-object p1, v4, v2
+
+    aput-object p1, v4, v1
+
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 192
+    :goto_1
+    return v2
+
+    :cond_0
+    move v0, v2
+
+    .line 137
+    goto :goto_0
+
+    .line 142
+    :cond_1
     const/4 v0, -0x1
 
-    if-ne p3, v0, :cond_0
+    if-ne p3, v0, :cond_2
 
-    .line 132
-    iget v0, p0, Lcom/tencent/mm/c/a/a;->apm:I
+    .line 143
+    iget v0, p0, Lcom/tencent/mm/c/a/a;->aaE:I
 
     invoke-static {p1, v0, v1}, Lcom/tencent/mm/modelvoice/o;->b(Ljava/lang/String;IZ)I
 
     move-result p3
 
-    .line 134
-    :cond_0
-    if-nez p3, :cond_6
+    .line 145
+    :cond_2
+    if-nez p3, :cond_7
 
-    .line 135
+    .line 146
     iget-object v0, p0, Lcom/tencent/mm/c/a/a;->context:Landroid/content/Context;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
-    .line 136
+    .line 147
     new-instance v0, Lcom/tencent/mm/modelvoice/s;
 
     invoke-direct {v0, v2}, Lcom/tencent/mm/modelvoice/s;-><init>(B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    .line 154
-    :cond_1
-    :goto_1
-    iput-boolean p2, p0, Lcom/tencent/mm/c/a/a;->apj:Z
-
-    .line 155
-    iput-boolean p2, p0, Lcom/tencent/mm/c/a/a;->apn:Z
-
-    .line 157
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nS()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nN()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 158
-    :cond_2
-    iput-boolean v2, p0, Lcom/tencent/mm/c/a/a;->apj:Z
-
-    .line 160
+    .line 165
     :cond_3
-    iget-boolean v0, p0, Lcom/tencent/mm/c/a/a;->apj:Z
+    :goto_2
+    iput-boolean p2, p0, Lcom/tencent/mm/c/a/a;->aaB:Z
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/c/a/a;->ak(Z)V
+    .line 166
+    iput-boolean p2, p0, Lcom/tencent/mm/c/a/a;->aaF:Z
 
-    .line 162
-    invoke-direct {p0}, Lcom/tencent/mm/c/a/a;->lD()V
+    .line 168
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
-    .line 163
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->mi()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->mc()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    .line 169
+    :cond_4
+    iput-boolean v2, p0, Lcom/tencent/mm/c/a/a;->aaB:Z
+
+    .line 171
+    :cond_5
+    iget-boolean v0, p0, Lcom/tencent/mm/c/a/a;->aaB:Z
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/c/a/a;->N(Z)V
+
+    .line 173
+    invoke-direct {p0}, Lcom/tencent/mm/c/a/a;->jN()V
+
+    .line 174
     invoke-direct {p0}, Lcom/tencent/mm/c/a/a;->setError()V
 
-    .line 167
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    .line 178
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     invoke-interface {v0, p1, p2, p4}, Lcom/tencent/mm/modelvoice/d;->c(Ljava/lang/String;ZI)Z
 
     move-result v0
 
-    if-nez v0, :cond_a
+    if-nez v0, :cond_b
 
-    .line 175
-    const-string/jumbo v0, "!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A="
+    .line 186
+    const-string/jumbo v0, "MicroMsg.SceneVoicePlayer"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "Start Record PlayError fileName["
+    const-string/jumbo v3, "start play fileName["
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -340,116 +445,110 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 181
-    :goto_2
-    return v2
+    goto :goto_1
 
-    :cond_4
-    move v0, v2
-
-    .line 130
-    goto :goto_0
-
-    .line 138
-    :cond_5
+    .line 149
+    :cond_6
     new-instance v0, Lcom/tencent/mm/modelvoice/s;
 
     invoke-direct {v0}, Lcom/tencent/mm/modelvoice/s;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 140
-    :cond_6
-    if-ne p3, v1, :cond_8
+    .line 151
+    :cond_7
+    if-ne p3, v1, :cond_9
 
-    .line 141
+    .line 152
     iget-object v0, p0, Lcom/tencent/mm/c/a/a;->context:Landroid/content/Context;
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
-    .line 142
+    .line 153
     new-instance v0, Lcom/tencent/mm/modelvoice/j;
 
     iget-object v3, p0, Lcom/tencent/mm/c/a/a;->context:Landroid/content/Context;
 
     invoke-direct {v0, v3}, Lcom/tencent/mm/modelvoice/j;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 144
-    :cond_7
+    .line 155
+    :cond_8
     new-instance v0, Lcom/tencent/mm/modelvoice/j;
 
     invoke-direct {v0}, Lcom/tencent/mm/modelvoice/j;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 146
-    :cond_8
-    if-ne p3, v6, :cond_1
+    .line 157
+    :cond_9
+    if-ne p3, v7, :cond_3
 
-    .line 147
+    .line 158
     iget-object v0, p0, Lcom/tencent/mm/c/a/a;->context:Landroid/content/Context;
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
-    .line 148
+    .line 159
     new-instance v0, Lcom/tencent/mm/modelvoice/i;
 
     iget-object v3, p0, Lcom/tencent/mm/c/a/a;->context:Landroid/content/Context;
 
     invoke-direct {v0, v3}, Lcom/tencent/mm/modelvoice/i;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
-    .line 150
-    :cond_9
+    .line 161
+    :cond_a
     new-instance v0, Lcom/tencent/mm/modelvoice/i;
 
     invoke-direct {v0}, Lcom/tencent/mm/modelvoice/i;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
-    .line 180
-    :cond_a
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->apl:Lcom/tencent/mm/compatible/util/a;
+    .line 191
+    :cond_b
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaD:Lcom/tencent/mm/compatible/util/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/compatible/util/a;->requestFocus()Z
 
     move v2, v1
 
-    .line 181
-    goto :goto_2
+    .line 192
+    goto/16 :goto_1
 .end method
 
 .method public final a(Ljava/lang/String;ZZI)Z
-    .locals 7
+    .locals 8
 
     .prologue
-    const/4 v6, 0x2
+    const/4 v7, 0x2
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 64
-    const-string/jumbo v0, "!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A="
+    .line 65
+    const-string/jumbo v0, "MicroMsg.SceneVoicePlayer"
 
-    const-string/jumbo v3, "start file name:[%s] speakerOn:[%b]"
+    const-string/jumbo v3, "start file name:[%s] speakerOn:[%b], isFullPath: %s, type: %s, userType: %s"
 
-    new-array v4, v6, [Ljava/lang/Object;
+    const/4 v4, 0x5
+
+    new-array v4, v4, [Ljava/lang/Object;
 
     aput-object p1, v4, v2
 
@@ -459,107 +558,186 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 65
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    move-result-object v5
+
+    aput-object v5, v4, v7
+
+    const/4 v5, 0x3
+
+    invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x4
+
+    iget v6, p0, Lcom/tencent/mm/c/a/a;->aaE:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 67
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/tencent/mm/compatible/b/d;->a(Lcom/tencent/mm/compatible/b/d$a;)V
 
-    .line 66
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    .line 68
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nL()I
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->ma()I
 
-    .line 67
-    iput-boolean v1, p0, Lcom/tencent/mm/c/a/a;->apo:Z
+    .line 69
+    iput-boolean v1, p0, Lcom/tencent/mm/c/a/a;->aaG:Z
 
-    .line 68
+    .line 70
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    if-lez v0, :cond_5
+    if-lez v0, :cond_0
 
     move v0, v1
 
     :goto_0
     invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
 
-    .line 69
-    const/4 v0, -0x1
+    .line 71
+    if-eqz p3, :cond_1
 
-    if-ne p4, v0, :cond_0
+    move-object v0, p1
+
+    :goto_1
+    invoke-static {v0}, Lcom/tencent/mm/modelsfs/FileOp;->aB(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    .line 72
+    const-string/jumbo v0, "MicroMsg.SceneVoicePlayer"
+
+    const-string/jumbo v3, "start, file %s not exist!, fullPath: %s"
+
+    new-array v4, v7, [Ljava/lang/Object;
+
+    aput-object p1, v4, v2
+
+    if-eqz p3, :cond_2
+
+    :goto_2
+    aput-object p1, v4, v1
+
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 128
+    :goto_3
+    return v2
+
+    :cond_0
+    move v0, v2
 
     .line 70
-    iget v0, p0, Lcom/tencent/mm/c/a/a;->apm:I
+    goto :goto_0
+
+    .line 71
+    :cond_1
+    invoke-static {p1}, Lcom/tencent/mm/modelvoice/q;->ic(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    .line 72
+    :cond_2
+    invoke-static {p1}, Lcom/tencent/mm/modelvoice/q;->ic(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_2
+
+    .line 75
+    :cond_3
+    const/4 v0, -0x1
+
+    if-ne p4, v0, :cond_4
+
+    .line 76
+    iget v0, p0, Lcom/tencent/mm/c/a/a;->aaE:I
 
     invoke-static {p1, v0, p3}, Lcom/tencent/mm/modelvoice/o;->b(Ljava/lang/String;IZ)I
 
     move-result p4
 
-    .line 72
-    :cond_0
-    if-nez p4, :cond_7
+    .line 78
+    :cond_4
+    if-nez p4, :cond_a
 
-    .line 73
+    .line 79
     iget-object v0, p0, Lcom/tencent/mm/c/a/a;->context:Landroid/content/Context;
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_9
 
-    .line 74
+    .line 80
     new-instance v0, Lcom/tencent/mm/modelvoice/s;
 
     invoke-direct {v0, v2}, Lcom/tencent/mm/modelvoice/s;-><init>(B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    .line 92
-    :cond_1
-    :goto_1
-    iput-boolean p2, p0, Lcom/tencent/mm/c/a/a;->apj:Z
+    .line 98
+    :cond_5
+    :goto_4
+    iput-boolean p2, p0, Lcom/tencent/mm/c/a/a;->aaB:Z
 
-    .line 93
-    iput-boolean p2, p0, Lcom/tencent/mm/c/a/a;->apn:Z
+    .line 99
+    iput-boolean p2, p0, Lcom/tencent/mm/c/a/a;->aaF:Z
 
-    .line 95
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nS()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    .line 101
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nN()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->mi()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-nez v0, :cond_6
 
-    .line 96
-    :cond_2
-    const-string/jumbo v0, "!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A="
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->mc()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    .line 102
+    :cond_6
+    const-string/jumbo v0, "MicroMsg.SceneVoicePlayer"
 
     const-string/jumbo v3, "headset plugged: %b, bluetoothon: %b"
 
-    new-array v4, v6, [Ljava/lang/Object;
+    new-array v4, v7, [Ljava/lang/Object;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/tencent/mm/compatible/b/d;->nS()Z
+    invoke-virtual {v5}, Lcom/tencent/mm/compatible/b/d;->mi()Z
 
     move-result v5
 
@@ -569,11 +747,11 @@
 
     aput-object v5, v4, v2
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/tencent/mm/compatible/b/d;->nN()Z
+    invoke-virtual {v5}, Lcom/tencent/mm/compatible/b/d;->mc()Z
 
     move-result v5
 
@@ -583,54 +761,54 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 98
-    iput-boolean v2, p0, Lcom/tencent/mm/c/a/a;->apj:Z
+    .line 104
+    iput-boolean v2, p0, Lcom/tencent/mm/c/a/a;->aaB:Z
 
-    .line 101
-    :cond_3
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    .line 107
+    :cond_7
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
-    iget-boolean v3, p0, Lcom/tencent/mm/c/a/a;->apj:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/c/a/a;->aaB:Z
 
     invoke-virtual {v0, v3, v2}, Lcom/tencent/mm/compatible/b/d;->b(ZZ)Z
 
-    .line 103
-    invoke-direct {p0}, Lcom/tencent/mm/c/a/a;->lD()V
+    .line 109
+    invoke-direct {p0}, Lcom/tencent/mm/c/a/a;->jN()V
 
-    .line 104
+    .line 110
     invoke-direct {p0}, Lcom/tencent/mm/c/a/a;->setError()V
 
-    .line 105
+    .line 111
     const/4 v0, 0x0
 
-    .line 106
-    if-eqz p3, :cond_b
+    .line 112
+    if-eqz p3, :cond_e
 
     move-object v0, p1
 
-    .line 111
-    :cond_4
-    :goto_2
-    iget-object v3, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    .line 117
+    :cond_8
+    :goto_5
+    iget-object v3, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    iget-boolean v4, p0, Lcom/tencent/mm/c/a/a;->apj:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/c/a/a;->aaB:Z
 
-    invoke-interface {v3, v0, v4}, Lcom/tencent/mm/modelvoice/d;->s(Ljava/lang/String;Z)Z
+    invoke-interface {v3, v0, v4}, Lcom/tencent/mm/modelvoice/d;->w(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    if-nez v0, :cond_c
+    if-nez v0, :cond_f
 
-    .line 116
-    const-string/jumbo v0, "!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A="
+    .line 122
+    const-string/jumbo v0, "MicroMsg.SceneVoicePlayer"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "Start Record PlayError fileName["
+    const-string/jumbo v3, "start play error fileName["
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -658,121 +836,113 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 122
-    :goto_3
-    return v2
+    goto/16 :goto_3
 
-    :cond_5
-    move v0, v2
-
-    .line 68
-    goto/16 :goto_0
-
-    .line 76
-    :cond_6
+    .line 82
+    :cond_9
     new-instance v0, Lcom/tencent/mm/modelvoice/s;
 
     invoke-direct {v0}, Lcom/tencent/mm/modelvoice/s;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    goto/16 :goto_1
+    goto/16 :goto_4
 
-    .line 78
-    :cond_7
-    if-ne p4, v1, :cond_9
+    .line 84
+    :cond_a
+    if-ne p4, v1, :cond_c
 
-    .line 79
+    .line 85
     iget-object v0, p0, Lcom/tencent/mm/c/a/a;->context:Landroid/content/Context;
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_b
 
-    .line 80
+    .line 86
     new-instance v0, Lcom/tencent/mm/modelvoice/j;
 
     iget-object v3, p0, Lcom/tencent/mm/c/a/a;->context:Landroid/content/Context;
 
     invoke-direct {v0, v3}, Lcom/tencent/mm/modelvoice/j;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    goto/16 :goto_1
+    goto/16 :goto_4
 
-    .line 82
-    :cond_8
+    .line 88
+    :cond_b
     new-instance v0, Lcom/tencent/mm/modelvoice/j;
 
     invoke-direct {v0}, Lcom/tencent/mm/modelvoice/j;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    goto/16 :goto_1
+    goto/16 :goto_4
 
-    .line 84
-    :cond_9
-    if-ne p4, v6, :cond_1
+    .line 90
+    :cond_c
+    if-ne p4, v7, :cond_5
 
-    .line 85
+    .line 91
     iget-object v0, p0, Lcom/tencent/mm/c/a/a;->context:Landroid/content/Context;
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_d
 
-    .line 86
+    .line 92
     new-instance v0, Lcom/tencent/mm/modelvoice/i;
 
     iget-object v3, p0, Lcom/tencent/mm/c/a/a;->context:Landroid/content/Context;
 
     invoke-direct {v0, v3}, Lcom/tencent/mm/modelvoice/i;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    goto/16 :goto_1
+    goto/16 :goto_4
 
-    .line 88
-    :cond_a
+    .line 94
+    :cond_d
     new-instance v0, Lcom/tencent/mm/modelvoice/i;
 
     invoke-direct {v0}, Lcom/tencent/mm/modelvoice/i;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iput-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    goto/16 :goto_1
+    goto/16 :goto_4
 
-    .line 108
-    :cond_b
-    iget v3, p0, Lcom/tencent/mm/c/a/a;->apm:I
+    .line 114
+    :cond_e
+    iget v3, p0, Lcom/tencent/mm/c/a/a;->aaE:I
 
-    if-nez v3, :cond_4
+    if-nez v3, :cond_8
 
-    .line 110
-    invoke-static {p1}, Lcom/tencent/mm/modelvoice/q;->hK(Ljava/lang/String;)Ljava/lang/String;
+    .line 116
+    invoke-static {p1}, Lcom/tencent/mm/modelvoice/q;->ic(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_2
+    goto :goto_5
 
-    .line 121
-    :cond_c
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->apl:Lcom/tencent/mm/compatible/util/a;
+    .line 127
+    :cond_f
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaD:Lcom/tencent/mm/compatible/util/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/compatible/util/a;->requestFocus()Z
 
     move v2, v1
 
-    .line 122
-    goto :goto_3
+    .line 128
+    goto/16 :goto_3
 .end method
 
-.method public final aO(I)V
+.method public final be(I)V
     .locals 6
 
     .prologue
     const/4 v5, 0x0
 
-    .line 384
-    const-string/jumbo v0, "!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A="
+    .line 396
+    const-string/jumbo v0, "MicroMsg.SceneVoicePlayer"
 
     const-string/jumbo v1, "onBluetoothHeadsetStateChange, status: %d, currentSpeaker: %b, bluetoothResumeSpeaker: %b, isRequestStartBluetooth: %b"
 
@@ -788,7 +958,7 @@
 
     const/4 v3, 0x1
 
-    iget-boolean v4, p0, Lcom/tencent/mm/c/a/a;->apj:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/c/a/a;->aaB:Z
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -798,7 +968,7 @@
 
     const/4 v3, 0x2
 
-    iget-boolean v4, p0, Lcom/tencent/mm/c/a/a;->apn:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/c/a/a;->aaF:Z
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -808,7 +978,7 @@
 
     const/4 v3, 0x3
 
-    iget-boolean v4, p0, Lcom/tencent/mm/c/a/a;->apo:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/c/a/a;->aaG:Z
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -816,45 +986,45 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 386
+    .line 398
     packed-switch p1, :pswitch_data_0
 
-    .line 399
+    .line 411
     :goto_0
     return-void
 
-    .line 388
+    .line 400
     :pswitch_0
-    invoke-virtual {p0, v5}, Lcom/tencent/mm/c/a/a;->ak(Z)V
+    invoke-virtual {p0, v5}, Lcom/tencent/mm/c/a/a;->N(Z)V
 
     goto :goto_0
 
-    .line 391
+    .line 403
     :pswitch_1
-    iget-boolean v0, p0, Lcom/tencent/mm/c/a/a;->apn:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/c/a/a;->aaF:Z
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/c/a/a;->ak(Z)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/c/a/a;->N(Z)V
 
-    .line 392
-    iget-boolean v0, p0, Lcom/tencent/mm/c/a/a;->apo:Z
+    .line 404
+    iget-boolean v0, p0, Lcom/tencent/mm/c/a/a;->aaG:Z
 
     if-eqz v0, :cond_0
 
-    .line 393
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    .line 405
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nM()V
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->mb()V
 
-    .line 394
-    iput-boolean v5, p0, Lcom/tencent/mm/c/a/a;->apo:Z
+    .line 406
+    iput-boolean v5, p0, Lcom/tencent/mm/c/a/a;->aaG:Z
 
-    .line 396
+    .line 408
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
@@ -862,7 +1032,7 @@
 
     goto :goto_0
 
-    .line 386
+    .line 398
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -870,59 +1040,11 @@
     .end packed-switch
 .end method
 
-.method public final ak(Z)V
+.method public final f(Ljava/lang/String;Z)Z
     .locals 2
 
     .prologue
-    .line 256
-    iget-boolean v0, p0, Lcom/tencent/mm/c/a/a;->apj:Z
-
-    if-ne v0, p1, :cond_0
-
-    .line 264
-    :goto_0
-    return-void
-
-    .line 259
-    :cond_0
-    iput-boolean p1, p0, Lcom/tencent/mm/c/a/a;->apj:Z
-
-    .line 260
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
-
-    invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d;->isPlaying()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 261
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
-
-    invoke-interface {v0, p1}, Lcom/tencent/mm/modelvoice/d;->ak(Z)V
-
-    .line 263
-    :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Lcom/tencent/mm/compatible/b/d;->b(ZZ)Z
-
-    goto :goto_0
-.end method
-
-.method public final c(Ljava/lang/String;Z)Z
-    .locals 2
-
-    .prologue
-    .line 222
+    .line 237
     const/4 v0, 0x0
 
     const/4 v1, -0x1
@@ -938,20 +1060,20 @@
     .locals 1
 
     .prologue
-    .line 56
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    .line 57
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     if-nez v0, :cond_0
 
-    .line 57
+    .line 58
     const/4 v0, 0x0
 
-    .line 59
+    .line 60
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d;->isPlaying()Z
 
@@ -960,118 +1082,134 @@
     goto :goto_0
 .end method
 
-.method public final lB()Z
-    .locals 2
+.method public final jL()Z
+    .locals 3
 
     .prologue
     const/4 v0, 0x0
 
-    .line 205
-    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    .line 217
+    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     if-nez v1, :cond_0
 
-    .line 217
+    .line 232
     :goto_0
     return v0
 
-    .line 209
+    .line 221
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    const-string/jumbo v1, "MicroMsg.SceneVoicePlayer"
+
+    const-string/jumbo v2, "resume"
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 223
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/compatible/b/d;->nL()I
+    invoke-virtual {v1}, Lcom/tencent/mm/compatible/b/d;->ma()I
 
-    .line 210
+    .line 224
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/tencent/mm/c/a/a;->apo:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/c/a/a;->aaG:Z
 
-    .line 211
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    .line 225
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/compatible/b/d;->nN()Z
+    invoke-virtual {v1}, Lcom/tencent/mm/compatible/b/d;->mc()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 212
-    iput-boolean v0, p0, Lcom/tencent/mm/c/a/a;->apj:Z
+    .line 226
+    iput-boolean v0, p0, Lcom/tencent/mm/c/a/a;->aaB:Z
 
-    .line 214
+    .line 228
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
-    invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d;->lB()Z
+    move-result-object v1
+
+    iget-boolean v2, p0, Lcom/tencent/mm/c/a/a;->aaB:Z
+
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/compatible/b/d;->b(ZZ)Z
+
+    .line 229
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
+
+    invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d;->jL()Z
 
     move-result v0
 
-    .line 216
-    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->apl:Lcom/tencent/mm/compatible/util/a;
+    .line 231
+    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->aaD:Lcom/tencent/mm/compatible/util/a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/compatible/util/a;->requestFocus()Z
 
     goto :goto_0
 .end method
 
-.method public final lC()Z
+.method public final jM()Z
     .locals 1
 
     .prologue
-    .line 227
-    iget-boolean v0, p0, Lcom/tencent/mm/c/a/a;->apk:Z
+    .line 242
+    iget-boolean v0, p0, Lcom/tencent/mm/c/a/a;->aaC:Z
 
     return v0
 .end method
 
-.method public final lE()D
+.method public final jO()D
     .locals 2
 
     .prologue
-    .line 368
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    .line 380
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     if-nez v0, :cond_0
 
-    .line 369
+    .line 381
     const-wide/16 v0, 0x0
 
-    .line 371
+    .line 383
     :goto_0
     return-wide v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d;->lE()D
+    invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d;->jO()D
 
     move-result-wide v0
 
     goto :goto_0
 .end method
 
-.method public final lF()Z
+.method public final jP()Z
     .locals 3
 
     .prologue
     const/4 v0, 0x0
 
-    .line 376
-    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    .line 388
+    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     if-nez v1, :cond_1
 
-    .line 379
+    .line 391
     :cond_0
     :goto_0
     return v0
 
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     invoke-interface {v1}, Lcom/tencent/mm/modelvoice/d;->getStatus()I
 
@@ -1092,18 +1230,25 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 185
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    .line 196
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     if-nez v0, :cond_0
 
-    .line 201
+    .line 213
     :goto_0
     return v1
 
-    .line 190
+    .line 199
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    const-string/jumbo v0, "MicroMsg.SceneVoicePlayer"
+
+    const-string/jumbo v2, "pause"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 202
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d;->isPlaying()Z
 
@@ -1111,45 +1256,45 @@
 
     if-eqz v0, :cond_2
 
-    .line 191
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    .line 203
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d;->pause()Z
 
     move-result v0
 
-    .line 193
+    .line 205
     :goto_1
-    iget-boolean v2, p0, Lcom/tencent/mm/c/a/a;->apo:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/c/a/a;->aaG:Z
 
     if-eqz v2, :cond_1
 
-    .line 194
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    .line 206
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/compatible/b/d;->nM()V
+    invoke-virtual {v2}, Lcom/tencent/mm/compatible/b/d;->mb()V
 
-    .line 195
-    iput-boolean v1, p0, Lcom/tencent/mm/c/a/a;->apo:Z
+    .line 207
+    iput-boolean v1, p0, Lcom/tencent/mm/c/a/a;->aaG:Z
 
-    .line 197
+    .line 209
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
-    .line 200
-    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->apl:Lcom/tencent/mm/compatible/util/a;
+    .line 212
+    iget-object v1, p0, Lcom/tencent/mm/c/a/a;->aaD:Lcom/tencent/mm/compatible/util/a;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/compatible/util/a;->oV()Z
+    invoke-virtual {v1}, Lcom/tencent/mm/compatible/util/a;->nn()Z
 
     move v1, v0
 
-    .line 201
+    .line 213
     goto :goto_0
 
     :cond_2
@@ -1164,18 +1309,18 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 232
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    .line 247
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     if-nez v0, :cond_0
 
-    .line 251
+    .line 265
     :goto_0
     return-void
 
-    .line 235
+    .line 250
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A="
+    const-string/jumbo v0, "MicroMsg.SceneVoicePlayer"
 
     const-string/jumbo v1, "stop, isRequestStartBluetooth: %b, player.isPlaying: %b"
 
@@ -1183,7 +1328,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-boolean v3, p0, Lcom/tencent/mm/c/a/a;->apo:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/c/a/a;->aaG:Z
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1193,7 +1338,7 @@
 
     const/4 v3, 0x1
 
-    iget-object v4, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
+    iget-object v4, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
     invoke-interface {v4}, Lcom/tencent/mm/modelvoice/d;->isPlaying()Z
 
@@ -1205,47 +1350,47 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 240
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->apl:Lcom/tencent/mm/compatible/util/a;
+    .line 255
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaA:Lcom/tencent/mm/modelvoice/d;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/util/a;->oV()Z
+    invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d;->jW()Z
 
-    .line 242
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->api:Lcom/tencent/mm/modelvoice/d;
-
-    invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d;->lv()Z
-
-    .line 243
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    .line 256
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/tencent/mm/compatible/b/d;->b(Lcom/tencent/mm/compatible/b/d$a;)V
 
-    .line 244
-    iget-boolean v0, p0, Lcom/tencent/mm/c/a/a;->apo:Z
+    .line 257
+    iget-boolean v0, p0, Lcom/tencent/mm/c/a/a;->aaG:Z
 
     if-eqz v0, :cond_1
 
-    .line 245
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    .line 258
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nM()V
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->mb()V
 
-    .line 247
+    .line 260
     :cond_1
-    iput-boolean v5, p0, Lcom/tencent/mm/c/a/a;->apo:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/c/a/a;->aaG:Z
 
-    .line 248
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    .line 261
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
     invoke-virtual {v0, v5}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
+
+    .line 262
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a;->aaD:Lcom/tencent/mm/compatible/util/a;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/util/a;->nn()Z
 
     goto :goto_0
 .end method

@@ -1,31 +1,40 @@
 .class final Lcom/tencent/mm/ui/chatting/cz;
-.super Ljava/lang/Object;
+.super Lcom/tencent/mm/ui/chatting/ab$a;
 .source "SourceFile"
 
 
 # instance fields
-.field cVH:Landroid/widget/TextView;
+.field fRM:Landroid/widget/LinearLayout;
 
-.field enn:Landroid/widget/TextView;
+.field lCo:Lcom/tencent/mm/ui/chatting/da;
 
-.field fNj:Landroid/view/View;
+.field lCp:Lcom/tencent/mm/ui/chatting/dn;
 
-.field kRx:Landroid/widget/TextView;
-
-.field lbZ:Landroid/view/View;
-
-.field lca:Landroid/widget/LinearLayout;
-
-.field lcb:Landroid/view/View;
+.field public lqK:Landroid/widget/ImageView;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 1
 
     .prologue
-    .line 664
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 608
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/chatting/ab$a;-><init>(I)V
 
+    .line 603
+    new-instance v0, Lcom/tencent/mm/ui/chatting/da;
+
+    invoke-direct {v0}, Lcom/tencent/mm/ui/chatting/da;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/cz;->lCo:Lcom/tencent/mm/ui/chatting/da;
+
+    .line 604
+    new-instance v0, Lcom/tencent/mm/ui/chatting/dn;
+
+    invoke-direct {v0}, Lcom/tencent/mm/ui/chatting/dn;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/cz;->lCp:Lcom/tencent/mm/ui/chatting/dn;
+
+    .line 609
     return-void
 .end method

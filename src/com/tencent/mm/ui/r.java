@@ -2,12 +2,11 @@ package com.tencent.mm.ui;
 
 import android.util.SparseArray;
 import android.util.SparseIntArray;
-import com.tencent.mm.g.e;
+import com.tencent.mm.h.e;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.q;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -15,28 +14,28 @@ import java.util.Map;
 
 public final class r
 {
-  private static r kqR = null;
-  int kqS = 0;
-  private SparseIntArray kqT = new SparseIntArray();
-  private SparseArray kqU = new SparseArray();
-  private ArrayList kqV = new ArrayList();
-  public SparseArray kqW = new SparseArray();
-  private boolean kqX = false;
+  private static r kPY = null;
+  int kPZ = 0;
+  private SparseIntArray kQa = new SparseIntArray();
+  private SparseArray<s.b> kQb = new SparseArray();
+  private ArrayList<Integer> kQc = new ArrayList();
+  public SparseArray<s.c> kQd = new SparseArray();
+  private boolean kQe = false;
   private long timestamp = 0L;
   
-  public static r bbs()
+  public static r bgE()
   {
-    if (kqR == null) {
-      kqR = new r();
+    if (kPY == null) {
+      kPY = new r();
     }
-    return kqR;
+    return kPY;
   }
   
-  private void bbt()
+  private void bgF()
   {
-    kqT.clear();
-    Object localObject = (String)ah.tD().rn().get(299010, null);
-    if (!ay.kz((String)localObject))
+    kQa.clear();
+    Object localObject = (String)ah.tE().ro().get(299010, null);
+    if (!be.kf((String)localObject))
     {
       localObject = ((String)localObject).split("\\|");
       int i = 0;
@@ -44,170 +43,173 @@ public final class r
       {
         String[] arrayOfString = localObject[i].split("\\:");
         if (arrayOfString.length == 2) {
-          kqT.put(ay.Dr(arrayOfString[0]), ay.Dr(arrayOfString[1]));
+          kQa.put(be.FG(arrayOfString[0]), be.FG(arrayOfString[1]));
         }
         i += 1;
       }
     }
-    kqX = true;
+    kQe = true;
   }
   
-  public final void hn(boolean paramBoolean)
+  public final void hL(boolean paramBoolean)
   {
-    int j = 0;
     if (!paramBoolean) {}
     try
     {
-      if (kqU.size() == 0) {
-        break label806;
+      if (kQb.size() == 0) {
+        break label891;
       }
       if (System.currentTimeMillis() - timestamp <= 3600000L) {
-        break label815;
+        break label900;
       }
     }
     catch (Exception localException)
     {
-      Iterator localIterator;
-      u.printErrStackTrace("!44@/B4Tb64lLpLfQyQg5GrZ4IvjIqJd24psdc20wspQJlI=", localException, "", new Object[0]);
+      Object localObject1;
+      v.printErrStackTrace("MicroMsg.PlusMenaDataManager", localException, "", new Object[0]);
     }
     long l = System.currentTimeMillis();
-    kqU.clear();
-    kqV.clear();
-    localIterator = com.tencent.mm.g.h.pS().dh("TopRightMenu\\d*").iterator();
-    Object localObject2;
+    kQb.clear();
+    kQc.clear();
+    localObject1 = com.tencent.mm.h.h.om().jdMethod_do("TopRightMenu\\d*");
+    v.i("MicroMsg.PlusMenaDataManager", "dynaConfigs size %d", new Object[] { Integer.valueOf(((List)localObject1).size()) });
+    localObject1 = ((List)localObject1).iterator();
+    Object localObject3;
+    int j;
     int i;
-    label284:
-    Object localObject1;
-    while (localIterator.hasNext())
+    label305:
+    Object localObject2;
+    while (((Iterator)localObject1).hasNext())
     {
-      localObject2 = q.J((String)localIterator.next(), "Menu", null);
-      if ((localObject2 != null) && (((Map)localObject2).size() != 0))
+      localObject3 = com.tencent.mm.sdk.platformtools.r.cr((String)((Iterator)localObject1).next(), "Menu");
+      if ((localObject3 != null) && (((Map)localObject3).size() != 0))
       {
-        int k = ay.Dr((String)((Map)localObject2).get(".Menu.$id"));
-        i = ay.Dr((String)((Map)localObject2).get(".Menu.$shownew"));
-        int n = ay.Dr((String)((Map)localObject2).get(".Menu.$seq"));
-        int m = ay.Dr((String)((Map)localObject2).get(".Menu.$order"));
-        kqU.put(k, new s.b(k, i, n, m));
+        j = be.FG((String)((Map)localObject3).get(".Menu.$id"));
+        i = be.FG((String)((Map)localObject3).get(".Menu.$shownew"));
+        int m = be.FG((String)((Map)localObject3).get(".Menu.$seq"));
+        int k = be.FG((String)((Map)localObject3).get(".Menu.$order"));
+        kQb.put(j, new s.b(j, i, m, k));
         i = 0;
-        while ((i < kqV.size()) && (kqU.get(((Integer)kqV.get(i)).intValue())).order <= m)) {
+        while ((i < kQc.size()) && (kQb.get(((Integer)kQc.get(i)).intValue())).order <= k)) {
           i += 1;
         }
-        kqV.add(i, Integer.valueOf(k));
+        kQc.add(i, Integer.valueOf(j));
         continue;
-        kqS = 0;
+        kPZ = 0;
         i = 0;
-        while (i < kqV.size())
+        for (j = 0; i < kQc.size(); j = k)
         {
-          m = ((Integer)kqV.get(i)).intValue();
-          localObject1 = (s.b)kqU.get(m);
-          localObject2 = s.qk(m);
+          m = ((Integer)kQc.get(i)).intValue();
+          localObject2 = (s.b)kQb.get(m);
+          localObject3 = s.sb(m);
           k = j;
-          if (localObject2 != null)
+          if (localObject3 != null)
           {
-            localObject2 = new s.c((s.d)localObject2);
-            kqW.put(j, localObject2);
-            k = kqT.get(m);
-            if ((krc == 1) && (k != ccb))
+            localObject3 = new s.c((s.d)localObject3);
+            kQd.put(j, localObject3);
+            k = kQa.get(m);
+            if ((kQj == 1) && (k != bVQ))
             {
-              kre = true;
-              kqS += 1;
+              kQl = true;
+              kPZ += 1;
             }
             k = j + 1;
           }
           i += 1;
-          j = k;
         }
       }
     }
-    if (kqV.size() == 0)
+    v.i("MicroMsg.PlusMenaDataManager", "dynaMenuOrder size %d", new Object[] { Integer.valueOf(kQc.size()) });
+    if (kQc.size() == 0)
     {
-      kqU.clear();
-      kqV.clear();
-      localObject1 = com.tencent.mm.g.h.pS().getValue("TopRightMenus");
-      if (!ay.kz((String)localObject1))
+      kQb.clear();
+      kQc.clear();
+      localObject2 = com.tencent.mm.h.h.om().getValue("TopRightMenus");
+      if (!be.kf((String)localObject2))
       {
-        localObject2 = q.J((String)localObject1, "TopRightMenus", null);
-        if (localObject2 != null) {
-          break label820;
+        localObject3 = com.tencent.mm.sdk.platformtools.r.cr((String)localObject2, "TopRightMenus");
+        if (localObject3 != null) {
+          break label905;
         }
-        u.e("!44@/B4Tb64lLpLfQyQg5GrZ4IvjIqJd24psdc20wspQJlI=", "TopRightMenus is not right");
+        v.e("MicroMsg.PlusMenaDataManager", "TopRightMenus is not right");
       }
     }
-    label541:
-    label806:
-    label815:
-    label818:
-    label820:
-    label823:
+    label588:
+    label891:
+    label900:
+    label903:
+    label905:
+    label908:
     for (;;)
     {
-      if (kqU.size() != 0) {
-        bbt();
+      if (kQb.size() != 0) {
+        bgF();
       }
       timestamp = System.currentTimeMillis();
-      u.d("!44@/B4Tb64lLpLfQyQg5GrZ4IvjIqJd24psdc20wspQJlI=", "plus menu load data spent time : %s", new Object[] { Long.valueOf(timestamp - l) });
-      break label284;
+      v.d("MicroMsg.PlusMenaDataManager", " plus menu load data spent time : %s", new Object[] { Long.valueOf(timestamp - l) });
+      break label305;
       for (;;)
       {
         if (i >= 100) {
-          break label823;
+          break label908;
         }
-        Object localObject3 = new StringBuilder(".TopRightMenus.Menu");
+        Object localObject4 = new StringBuilder(".TopRightMenus.Menu");
         if (i == 0) {}
-        for (localObject1 = "";; localObject1 = Integer.valueOf(i))
+        for (localObject2 = "";; localObject2 = Integer.valueOf(i))
         {
-          String str = localObject1;
-          localObject1 = (String)((Map)localObject2).get(str + ".$id");
-          if ((localObject1 == null) || (ay.kz((String)localObject1))) {
+          String str = localObject2;
+          localObject2 = (String)((Map)localObject3).get(str + ".$id");
+          if ((localObject2 == null) || (be.kf((String)localObject2))) {
             break;
           }
-          localObject3 = (String)((Map)localObject2).get(str + ".$shownew");
-          str = (String)((Map)localObject2).get(str + ".$seq");
-          u.d("!44@/B4Tb64lLpLfQyQg5GrZ4IvjIqJd24psdc20wspQJlI=", "got plus panel configs : %s %s %s", new Object[] { localObject1, localObject3, str });
-          kqU.put(ay.Dr((String)localObject1), new s.b(ay.Dr((String)localObject1), ay.Dr((String)localObject3), ay.Dr(str)));
-          kqV.add(Integer.valueOf(ay.Dr((String)localObject1)));
+          localObject4 = (String)((Map)localObject3).get(str + ".$shownew");
+          str = (String)((Map)localObject3).get(str + ".$seq");
+          v.d("MicroMsg.PlusMenaDataManager", "got plus panel configs : %s %s %s", new Object[] { localObject2, localObject4, str });
+          kQb.put(be.FG((String)localObject2), new s.b(be.FG((String)localObject2), be.FG((String)localObject4), be.FG(str)));
+          kQc.add(Integer.valueOf(be.FG((String)localObject2)));
           i += 1;
-          break label541;
+          break label588;
         }
-        kqW.put(j, new s.c(s.qk(Integer.MAX_VALUE)));
+        v.i("MicroMsg.PlusMenaDataManager", "dynaMenuOrder.size() %s menuDataMap.size() %s", new Object[] { Integer.valueOf(kQc.size()), Integer.valueOf(kQd.size()) });
+        kQd.put(j, new s.c(s.sb(Integer.MAX_VALUE)));
         return;
         for (i = 1;; i = 0)
         {
           if (i == 0) {
-            break label818;
+            break label903;
           }
           break;
         }
-        break label284;
+        break label305;
         i = 0;
       }
     }
   }
   
-  public final void qj(int paramInt)
+  public final void sa(int paramInt)
   {
-    if (kqU.size() != 0)
+    if (kQb.size() != 0)
     {
-      Object localObject = (s.b)kqU.get(paramInt);
-      if ((localObject != null) && (krc == 1))
+      Object localObject = (s.b)kQb.get(paramInt);
+      if ((localObject != null) && (kQj == 1))
       {
-        kqT.put(id, ccb);
-        kqS -= 1;
-        if (kqX)
+        kQa.put(id, bVQ);
+        kPZ -= 1;
+        if (kQe)
         {
           localObject = new StringBuffer();
           paramInt = 0;
-          while (paramInt < kqT.size())
+          while (paramInt < kQa.size())
           {
-            int i = kqT.keyAt(paramInt);
-            int j = kqT.get(i);
+            int i = kQa.keyAt(paramInt);
+            int j = kQa.get(i);
             ((StringBuffer)localObject).append(i);
             ((StringBuffer)localObject).append(":");
             ((StringBuffer)localObject).append(Integer.valueOf(j));
             ((StringBuffer)localObject).append("|");
             paramInt += 1;
           }
-          ah.tD().rn().set(299010, ((StringBuffer)localObject).toString());
+          ah.tE().ro().set(299010, ((StringBuffer)localObject).toString());
         }
       }
     }

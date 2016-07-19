@@ -9,65 +9,65 @@ import android.view.View;
 import android.view.View.OnKeyListener;
 import android.widget.EditText;
 
-class MMAutoSwitchEditText
+public class MMAutoSwitchEditText
   extends EditText
 {
-  a kDa = new a(this);
+  a lcf = new a(this);
   
   public MMAutoSwitchEditText(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    addTextChangedListener(kDa);
-    setOnKeyListener(kDa);
+    addTextChangedListener(lcf);
+    setOnKeyListener(lcf);
   }
   
   public static final class a
     implements TextWatcher, View.OnKeyListener
   {
-    private String eut;
-    MMAutoSwitchEditText.c kDb;
-    MMAutoSwitchEditText.b kDc;
-    MMAutoSwitchEditText.d kDd;
-    private EditText kDe;
-    int kDf = 4;
+    private String eAL;
+    MMAutoSwitchEditText.c lcg;
+    MMAutoSwitchEditText.b lch;
+    MMAutoSwitchEditText.d lci;
+    private EditText lcj;
+    int lck = 4;
     int mIndex = 0;
     
     public a(EditText paramEditText)
     {
-      kDe = paramEditText;
+      lcj = paramEditText;
     }
     
     public final void afterTextChanged(Editable paramEditable)
     {
       int j = 0;
-      eut = paramEditable.toString();
+      eAL = paramEditable.toString();
       paramEditable = "";
-      if (kDd != null) {
-        kDd.bcw();
+      if (lci != null) {
+        lci.bhL();
       }
       int i = 0;
       int k;
       for (;;)
       {
         k = i;
-        if (j >= eut.length()) {
+        if (j >= eAL.length()) {
           break;
         }
         i += 1;
         k = i;
-        if (i > kDf) {
+        if (i > lck) {
           break;
         }
-        paramEditable = paramEditable + eut.charAt(j);
+        paramEditable = paramEditable + eAL.charAt(j);
         j += 1;
       }
-      if (k > kDf)
+      if (k > lck)
       {
-        kDe.setText(paramEditable);
-        kDe.setSelection(paramEditable.length());
+        lcj.setText(paramEditable);
+        lcj.setSelection(paramEditable.length());
       }
-      if ((k >= kDf) && (kDb != null)) {
-        kDb.qD(mIndex);
+      if ((k >= lck) && (lcg != null)) {
+        lcg.sw(mIndex);
       }
     }
     
@@ -75,8 +75,8 @@ class MMAutoSwitchEditText
     
     public final boolean onKey(View paramView, int paramInt, KeyEvent paramKeyEvent)
     {
-      if ((paramInt == 67) && (kDe.getText().toString().trim().length() == 0) && (kDc != null)) {
-        kDc.qC(mIndex);
+      if ((paramInt == 67) && (lcj.getText().toString().trim().length() == 0) && (lch != null)) {
+        lch.sv(mIndex);
       }
       return false;
     }
@@ -86,17 +86,17 @@ class MMAutoSwitchEditText
   
   public static abstract interface b
   {
-    public abstract void qC(int paramInt);
+    public abstract void sv(int paramInt);
   }
   
   public static abstract interface c
   {
-    public abstract void qD(int paramInt);
+    public abstract void sw(int paramInt);
   }
   
   public static abstract interface d
   {
-    public abstract void bcw();
+    public abstract void bhL();
   }
 }
 

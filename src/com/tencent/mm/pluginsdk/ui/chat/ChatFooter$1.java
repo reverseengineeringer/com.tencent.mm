@@ -9,9 +9,9 @@ final class ChatFooter$1
   
   public final void clear()
   {
-    ChatFooter localChatFooter = iLO;
-    if (eYM != null) {
-      eYM.setText("");
+    ChatFooter localChatFooter = jiL;
+    if (fhg != null) {
+      fhg.setText("");
     }
   }
 }

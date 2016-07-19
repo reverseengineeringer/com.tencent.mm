@@ -3,40 +3,45 @@ package com.tencent.mm.modelsns;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
-import com.tencent.mm.d.a.jn;
+import com.tencent.mm.e.a.js;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 public class SnsAdClick
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  public int asc = 0;
-  public String cbR = "";
-  public long cbS = 0L;
-  public String cbT = "";
-  public int cbU = 0;
-  public long cbV = 0L;
-  public int cbW = 0;
+  public static final Parcelable.Creator<SnsAdClick> CREATOR = new Parcelable.Creator() {};
+  public String bVG = "";
+  public long bVH = 0L;
+  public String bVI = "";
+  public int bVJ = 0;
+  public long bVK = 0L;
+  public int bVL = 0;
+  public int bVM = 0;
+  public int scene = 0;
   
   public SnsAdClick() {}
   
   public SnsAdClick(String paramString1, int paramInt1, long paramLong, String paramString2, int paramInt2)
   {
-    cbR = paramString1;
-    asc = paramInt1;
-    cbS = paramLong;
-    cbT = paramString2;
-    cbW = paramInt2;
-    cbV = System.currentTimeMillis();
+    bVG = paramString1;
+    scene = paramInt1;
+    bVH = paramLong;
+    bVI = paramString2;
+    bVL = paramInt2;
+    bVM = 1;
+    bVK = System.currentTimeMillis();
   }
   
-  public final void dP(int paramInt)
+  public SnsAdClick(String paramString1, int paramInt1, long paramLong, String paramString2, int paramInt2, byte paramByte)
   {
-    jn localjn = new jn();
-    cbU = paramInt;
-    aGf.aGg = this;
-    a.jUF.j(localjn);
+    bVG = paramString1;
+    scene = paramInt1;
+    bVH = paramLong;
+    bVI = paramString2;
+    bVL = paramInt2;
+    bVM = 0;
+    bVK = System.currentTimeMillis();
   }
   
   public int describeContents()
@@ -44,14 +49,23 @@ public class SnsAdClick
     return 0;
   }
   
+  public final void ew(int paramInt)
+  {
+    js localjs = new js();
+    bVJ = paramInt;
+    asl.asm = this;
+    a.kug.y(localjs);
+  }
+  
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeString(cbR);
-    paramParcel.writeInt(asc);
-    paramParcel.writeInt(cbU);
-    paramParcel.writeLong(cbS);
-    paramParcel.writeString(ay.ad(cbT, ""));
-    paramParcel.writeLong(cbV);
+    paramParcel.writeString(bVG);
+    paramParcel.writeInt(scene);
+    paramParcel.writeInt(bVJ);
+    paramParcel.writeLong(bVH);
+    paramParcel.writeString(be.ab(bVI, ""));
+    paramParcel.writeLong(bVK);
+    paramParcel.writeInt(bVM);
   }
 }
 

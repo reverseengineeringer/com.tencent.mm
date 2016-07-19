@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/lf" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|top" android:orientation="vertical" android:background="@color/lf" android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/WalletBody">
+        <LinearLayout android:orientation="vertical" android:id="@id/clm" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="18.0dip" android:textColor="@color/ak" android:gravity="center" android:id="@id/cln" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:layout_marginRight="@dimen/hb" android:layout_marginBottom="20.0dip" android:text="@string/d68" android:shadowColor="#ffededed" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.0" />
+            <TextView android:background="@null" android:layout_marginLeft="@dimen/hb" android:layout_marginRight="@dimen/hb" android:text="@string/d6g" style="@style/WalletElementTips" />
+            <LinearLayout style="@style/WalletBankcardDetailParentItem">
+                <LinearLayout style="@style/WalletBankcardDetailItem">
+                    <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/d6e" style="@style/MMWalletLimitTitle" />
+                    <TextView android:id="@id/clo" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/MMWalletLimitInfo" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout style="@style/WalletBankcardDetailParentItem">
+                <LinearLayout android:background="@null" style="@style/WalletBankcardDetailItem">
+                    <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/d6h" style="@style/MMWalletLimitTitle" />
+                    <TextView android:id="@id/clp" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/MMWalletLimitInfo" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:background="@null" android:layout_marginLeft="@dimen/hb" android:layout_marginRight="@dimen/hb" android:text="@string/d6f" style="@style/WalletElementTips" />
+            <LinearLayout style="@style/WalletBankcardDetailParentItem">
+                <LinearLayout style="@style/WalletBankcardDetailItem">
+                    <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/d6e" style="@style/MMWalletLimitTitle" />
+                    <TextView android:id="@id/clq" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/MMWalletLimitInfo" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout style="@style/WalletBankcardDetailParentItem">
+                <LinearLayout android:background="@null" style="@style/WalletBankcardDetailItem">
+                    <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/d6h" style="@style/MMWalletLimitTitle" />
+                    <TextView android:id="@id/clr" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/MMWalletLimitInfo" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:id="@id/cls" android:background="@null" android:visibility="gone" android:layout_marginLeft="@dimen/hb" android:layout_marginRight="@dimen/hb" android:text="@string/d6b" style="@style/WalletElementTips" />
+            <LinearLayout android:id="@id/clt" android:visibility="gone" style="@style/WalletBankcardDetailParentItem">
+                <TextView android:layout_width="fill_parent" android:layout_height="@dimen/j7" android:layout_marginLeft="@dimen/hb" android:layout_marginRight="@dimen/hb" android:text="@string/d6i" style="@style/MMWalletLimitTitle" />
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:layout_marginRight="@dimen/hb">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/d65" />
+                <TextView android:textSize="13.0dip" android:textColor="@color/q6" android:id="@id/clu" android:paddingLeft="3.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/d66" android:shadowColor="#fff0f0f0" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center|top" android:orientation="vertical" android:id="@id/clv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="15.0dip" android:textColor="#ff868686" android:gravity="bottom|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="52.0dip" android:layout_marginBottom="25.0dip" android:text="@string/d6_" android:shadowColor="@color/ow" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.0" android:drawableTop="@drawable/abi" android:drawablePadding="12.0dip" />
+            <TextView android:id="@id/clw" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/da_" style="@style/MMSolidRedLargeButton" />
+            <TextView android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip">
+                <TextView android:id="@id/clx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/d6a" />
+                <TextView android:textSize="13.0dip" android:textColor="@color/q6" android:id="@id/cly" android:paddingLeft="3.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/d66" android:shadowColor="#fff0f0f0" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center|top" android:orientation="vertical" android:id="@id/clz" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="45.0dip" android:layout_marginBottom="20.0dip" android:src="@drawable/atb" android:scaleType="center" />
+            <TextView android:textSize="18.0dip" android:textColor="@color/ak" android:id="@id/cm0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="@string/d68" android:shadowColor="#ffededed" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.0" />
+            <TextView android:textSize="15.0dip" android:textColor="#ff474747" android:id="@id/cm1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.5dip" android:layout_marginRight="30.0dip" android:text="@string/d6c" android:shadowColor="#ffededed" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.0" android:lineSpacingExtra="6.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

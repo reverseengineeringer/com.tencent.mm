@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.plugin.game.widget.AutoResizeTextView android:textSize="24.0dip" android:textColor="@color/gn" android:gravity="center" android:id="@id/atw" android:layout_width="24.0dip" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:singleLine="true" />
+    <ImageView android:id="@id/atx" android:layout_width="@dimen/iz" android:layout_height="@dimen/iz" android:layout_marginRight="4.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:id="@id/aty" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:singleLine="true" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/ow" android:id="@id/atz" android:background="@drawable/gf" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/i8" android:textColor="@color/gn" android:ellipsize="end" android:id="@id/au0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:singleLine="true" />
+    <com.tencent.mm.plugin.game.ui.GameDetailRankLikeView android:id="@id/au1" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</LinearLayout>

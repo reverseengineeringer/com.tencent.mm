@@ -3,12 +3,23 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/h/f",
+        "<",
+        "Lcom/tencent/mm/storage/a;",
+        ">;"
+    }
+.end annotation
+
+
 # static fields
-.field public static final aoY:[Ljava/lang/String;
+.field public static final bkN:[Ljava/lang/String;
 
 
 # instance fields
-.field private aoX:Lcom/tencent/mm/sdk/h/d;
+.field private bkP:Lcom/tencent/mm/sdk/h/d;
 
 
 # direct methods
@@ -16,14 +27,14 @@
     .locals 4
 
     .prologue
-    .line 19
+    .line 21
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    sget-object v2, Lcom/tencent/mm/storage/a;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v2, Lcom/tencent/mm/storage/a;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v3, "ABTestItem"
 
@@ -33,7 +44,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/storage/b;->aoY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/storage/b;->bkN:[Ljava/lang/String;
 
     return-void
 .end method
@@ -42,8 +53,8 @@
     .locals 3
 
     .prologue
-    .line 26
-    sget-object v0, Lcom/tencent/mm/storage/a;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    .line 28
+    sget-object v0, Lcom/tencent/mm/storage/a;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v1, "ABTestItem"
 
@@ -51,38 +62,38 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/tencent/mm/sdk/h/f;-><init>(Lcom/tencent/mm/sdk/h/d;Lcom/tencent/mm/sdk/h/c$a;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 27
-    iput-object p1, p0, Lcom/tencent/mm/storage/b;->aoX:Lcom/tencent/mm/sdk/h/d;
+    .line 29
+    iput-object p1, p0, Lcom/tencent/mm/storage/b;->bkP:Lcom/tencent/mm/sdk/h/d;
 
-    .line 28
+    .line 30
     return-void
 .end method
 
 
 # virtual methods
-.method public final DN(Ljava/lang/String;)Lcom/tencent/mm/storage/a;
+.method public final Gc(Ljava/lang/String;)Lcom/tencent/mm/storage/a;
     .locals 6
 
     .prologue
     const/4 v5, 0x0
 
-    .line 34
+    .line 36
     new-instance v0, Lcom/tencent/mm/storage/a;
 
     invoke-direct {v0}, Lcom/tencent/mm/storage/a;-><init>()V
 
-    .line 35
+    .line 37
     iput-object p1, v0, Lcom/tencent/mm/storage/a;->field_layerId:Ljava/lang/String;
 
-    .line 36
+    .line 38
     new-array v1, v5, [Ljava/lang/String;
 
     invoke-super {p0, v0, v1}, Lcom/tencent/mm/sdk/h/f;->c(Lcom/tencent/mm/sdk/h/c;[Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 37
-    const-string/jumbo v2, "!32@/B4Tb64lLpJImn5ccegk8yD497yh4Bqw"
+    .line 39
+    const-string/jumbo v2, "MicroMsg.ABTestStorage"
 
     const-string/jumbo v3, "getByLayerId, id: %s, return: %b"
 
@@ -100,20 +111,32 @@
 
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 38
+    .line 40
     return-object v0
 .end method
 
-.method public final DO(Ljava/lang/String;)Ljava/util/Map;
+.method public final Gd(Ljava/lang/String;)Ljava/util/Map;
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/storage/a;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     const/4 v4, 0x0
 
-    .line 45
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 47
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -123,7 +146,7 @@
 
     move-object v1, v0
 
-    .line 48
+    .line 50
     :goto_0
     if-eqz v1, :cond_0
 
@@ -133,24 +156,24 @@
 
     if-nez v0, :cond_3
 
-    .line 49
+    .line 51
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 50
+    .line 52
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 52
+    .line 54
     :cond_1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0, v4}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 65
+    .line 67
     :goto_1
     return-object v0
 
-    .line 45
+    .line 47
     :cond_2
     const-string/jumbo v0, "select * from %s where %s = %s"
 
@@ -186,59 +209,59 @@
 
     goto :goto_0
 
-    .line 55
+    .line 57
     :cond_3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 58
+    .line 60
     :cond_4
     new-instance v2, Lcom/tencent/mm/storage/a;
 
     invoke-direct {v2}, Lcom/tencent/mm/storage/a;-><init>()V
 
-    .line 59
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/storage/a;->c(Landroid/database/Cursor;)V
+    .line 61
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/storage/a;->b(Landroid/database/Cursor;)V
 
-    .line 60
+    .line 62
     iget-object v3, v2, Lcom/tencent/mm/storage/a;->field_layerId:Ljava/lang/String;
 
     invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 61
+    .line 63
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v2
 
     if-nez v2, :cond_4
 
-    .line 63
+    .line 65
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     goto :goto_1
 .end method
 
-.method public final aWg()Ljava/lang/String;
+.method public final bbs()Ljava/lang/String;
     .locals 6
 
     .prologue
-    .line 163
-    invoke-virtual {p0}, Lcom/tencent/mm/storage/b;->Dy()Landroid/database/Cursor;
+    .line 188
+    invoke-virtual {p0}, Lcom/tencent/mm/storage/b;->DO()Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 164
+    .line 189
     if-nez v0, :cond_0
 
-    .line 165
+    .line 190
     const-string/jumbo v0, "null cursor!!"
 
-    .line 181
+    .line 206
     :goto_0
     return-object v0
 
-    .line 167
+    .line 192
     :cond_0
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -246,32 +269,32 @@
 
     if-nez v1, :cond_1
 
-    .line 168
+    .line 193
     const-string/jumbo v0, "cursor empty!!"
 
     goto :goto_0
 
-    .line 170
+    .line 195
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 171
+    .line 196
     new-instance v2, Lcom/tencent/mm/storage/a;
 
     invoke-direct {v2}, Lcom/tencent/mm/storage/a;-><init>()V
 
-    .line 173
+    .line 198
     :cond_2
     const-string/jumbo v3, "============\n"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 174
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/storage/a;->c(Landroid/database/Cursor;)V
+    .line 199
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/storage/a;->b(Landroid/database/Cursor;)V
 
-    .line 175
+    .line 200
     const-string/jumbo v3, "layerId = "
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -288,7 +311,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 176
+    .line 201
     const-string/jumbo v3, "sequence = "
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -305,7 +328,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 177
+    .line 202
     const-string/jumbo v3, "priorityLV = "
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -322,7 +345,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 178
+    .line 203
     const-string/jumbo v3, "expId = "
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -339,14 +362,14 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 179
+    .line 204
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    .line 181
+    .line 206
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -354,27 +377,141 @@
     goto :goto_0
 .end method
 
-.method public final f(Ljava/util/List;I)V
-    .locals 11
+.method public final bbt()Ljava/util/LinkedList;
+    .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/protocal/b/mp;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 82
+    .line 210
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    .line 211
+    invoke-virtual {p0}, Lcom/tencent/mm/storage/b;->DO()Landroid/database/Cursor;
+
+    move-result-object v1
+
+    .line 212
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    .line 229
+    :cond_0
+    :goto_0
+    return-object v0
+
+    .line 216
+    :cond_1
+    new-instance v2, Lcom/tencent/mm/storage/a;
+
+    invoke-direct {v2}, Lcom/tencent/mm/storage/a;-><init>()V
+
+    .line 218
+    :cond_2
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/storage/a;->b(Landroid/database/Cursor;)V
+
+    .line 219
+    new-instance v3, Lcom/tencent/mm/protocal/b/mp;
+
+    invoke-direct {v3}, Lcom/tencent/mm/protocal/b/mp;-><init>()V
+
+    .line 221
+    :try_start_0
+    iget-object v4, v2, Lcom/tencent/mm/storage/a;->field_expId:Ljava/lang/String;
+
+    invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v4
+
+    iput v4, v3, Lcom/tencent/mm/protocal/b/mp;->jIk:I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 225
+    :goto_1
+    iget v4, v2, Lcom/tencent/mm/storage/a;->field_prioritylevel:I
+
+    iput v4, v3, Lcom/tencent/mm/protocal/b/mp;->priority:I
+
+    .line 226
+    invoke-virtual {v0, v3}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    .line 227
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    goto :goto_0
+
+    .line 223
+    :catch_0
+    move-exception v4
+
+    const-string/jumbo v4, "MicroMsg.ABTestStorage"
+
+    const-string/jumbo v5, "expId parse failed, %s"
+
+    const/4 v6, 0x1
+
+    new-array v6, v6, [Ljava/lang/Object;
+
+    const/4 v7, 0x0
+
+    iget-object v8, v2, Lcom/tencent/mm/storage/a;->field_expId:Ljava/lang/String;
+
+    aput-object v8, v6, v7
+
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_1
+.end method
+
+.method public final f(Ljava/util/List;I)V
+    .locals 12
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/storage/a;",
+            ">;I)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 97
     const/4 v1, 0x0
 
-    .line 84
+    .line 99
     if-nez p2, :cond_0
 
-    .line 86
+    .line 101
     new-instance v0, Lcom/tencent/mm/storage/a;
 
     invoke-direct {v0}, Lcom/tencent/mm/storage/a;-><init>()V
 
-    .line 87
+    .line 102
     const/4 v2, 0x1
 
     iput v2, v0, Lcom/tencent/mm/storage/a;->field_prioritylevel:I
 
-    .line 88
+    .line 103
     const/4 v2, 0x0
 
     const/4 v3, 0x1
@@ -389,7 +526,7 @@
 
     invoke-virtual {p0, v0, v2, v3}, Lcom/tencent/mm/storage/b;->a(Lcom/tencent/mm/sdk/h/c;Z[Ljava/lang/String;)Z
 
-    .line 91
+    .line 106
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -408,40 +545,40 @@
 
     check-cast v0, Lcom/tencent/mm/storage/a;
 
-    .line 92
+    .line 107
     if-eqz v0, :cond_1
 
     iget-object v2, v0, Lcom/tencent/mm/storage/a;->field_layerId:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpJImn5ccegk8yD497yh4Bqw"
+    const-string/jumbo v0, "MicroMsg.ABTestStorage"
 
     const-string/jumbo v2, "saveIfNecessary, Invalid item"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    .line 93
+    .line 108
     :goto_1
     if-eqz v0, :cond_9
 
-    .line 94
+    .line 109
     const/4 v0, 0x1
 
     :goto_2
     move v1, v0
 
-    .line 96
+    .line 111
     goto :goto_0
 
-    .line 92
+    .line 107
     :cond_2
     new-instance v4, Lcom/tencent/mm/storage/a;
 
@@ -467,7 +604,7 @@
 
     move-result v2
 
-    const-string/jumbo v4, "!32@/B4Tb64lLpJImn5ccegk8yD497yh4Bqw"
+    const-string/jumbo v4, "MicroMsg.ABTestStorage"
 
     const-string/jumbo v5, "Inserted: %s, Result: %b"
 
@@ -489,18 +626,18 @@
 
     aput-object v7, v6, v0
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v2
 
     goto :goto_1
 
     :cond_3
-    iget-wide v5, v0, Lcom/tencent/mm/storage/a;->field_sequence:J
+    iget-wide v6, v0, Lcom/tencent/mm/storage/a;->field_sequence:J
 
-    iget-wide v7, v4, Lcom/tencent/mm/storage/a;->field_sequence:J
+    iget-wide v8, v4, Lcom/tencent/mm/storage/a;->field_sequence:J
 
-    cmp-long v2, v5, v7
+    cmp-long v2, v6, v8
 
     if-lez v2, :cond_4
 
@@ -528,7 +665,7 @@
 
     move-result v2
 
-    const-string/jumbo v5, "!32@/B4Tb64lLpJImn5ccegk8yD497yh4Bqw"
+    const-string/jumbo v5, "MicroMsg.ABTestStorage"
 
     const-string/jumbo v6, "Updated: %s, Result: %b, Seq: %d, %d, PriorityLV: %d, %d"
 
@@ -552,9 +689,9 @@
 
     const/4 v8, 0x2
 
-    iget-wide v9, v4, Lcom/tencent/mm/storage/a;->field_sequence:J
+    iget-wide v10, v4, Lcom/tencent/mm/storage/a;->field_sequence:J
 
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v9
 
@@ -562,9 +699,9 @@
 
     const/4 v8, 0x3
 
-    iget-wide v9, v0, Lcom/tencent/mm/storage/a;->field_sequence:J
+    iget-wide v10, v0, Lcom/tencent/mm/storage/a;->field_sequence:J
 
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v9
 
@@ -590,14 +727,14 @@
 
     aput-object v0, v7, v4
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v2
 
     goto/16 :goto_1
 
     :cond_6
-    const-string/jumbo v2, "!32@/B4Tb64lLpJImn5ccegk8yD497yh4Bqw"
+    const-string/jumbo v2, "MicroMsg.ABTestStorage"
 
     const-string/jumbo v5, "Ignored: %s, Seq: %d, %d, PriorityLV: %d, %d"
 
@@ -651,22 +788,22 @@
 
     aput-object v0, v6, v4
 
-    invoke-static {v2, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 v0, 0x0
 
     goto/16 :goto_1
 
-    .line 98
+    .line 113
     :cond_7
     if-eqz v1, :cond_8
 
-    .line 99
+    .line 114
     const-string/jumbo v0, "event_updated"
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/b;->DI(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/b;->FX(Ljava/lang/String;)V
 
-    .line 101
+    .line 116
     :cond_8
     return-void
 

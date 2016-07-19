@@ -4,13 +4,24 @@
 
 
 # instance fields
-.field final js:Landroid/support/v7/app/ActionBar$a;
+.field final jJ:Landroid/support/v7/app/ActionBar$a;
 
-.field final jx:Landroid/app/Activity;
+.field final jO:Landroid/app/Activity;
 
-.field final jy:Landroid/app/ActionBar;
+.field final jP:Landroid/app/ActionBar;
 
-.field private jz:Ljava/util/ArrayList;
+.field private jQ:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Ljava/lang/Object;",
+            ">;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -26,20 +37,20 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v7/app/g;->jz:Ljava/util/ArrayList;
+    iput-object v0, p0, Landroid/support/v7/app/g;->jQ:Ljava/util/ArrayList;
 
     .line 40
-    iput-object p1, p0, Landroid/support/v7/app/g;->jx:Landroid/app/Activity;
+    iput-object p1, p0, Landroid/support/v7/app/g;->jO:Landroid/app/Activity;
 
     .line 41
-    iput-object p2, p0, Landroid/support/v7/app/g;->js:Landroid/support/v7/app/ActionBar$a;
+    iput-object p2, p0, Landroid/support/v7/app/g;->jJ:Landroid/support/v7/app/ActionBar$a;
 
     .line 42
     invoke-virtual {p1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iput-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     .line 43
     return-void
@@ -47,14 +58,14 @@
 
 
 # virtual methods
-.method public final aJ()V
+.method public final aI()V
     .locals 2
 
     .prologue
     .line 75
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
-    const v1, 0x7f0a05a6
+    const v1, 0x7f03001e
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setCustomView(I)V
 
@@ -62,14 +73,14 @@
     return-void
 .end method
 
-.method public final aK()V
+.method public final aJ()V
     .locals 2
 
     .prologue
     .line 80
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
-    const v1, 0x7f040002
+    const v1, 0x7f0208c7
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setIcon(I)V
 
@@ -77,12 +88,12 @@
     return-void
 .end method
 
-.method public final aL()V
+.method public final aK()V
     .locals 2
 
     .prologue
     .line 156
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     const/4 v1, 0x0
 
@@ -92,12 +103,27 @@
     return-void
 .end method
 
+.method public final aL()V
+    .locals 2
+
+    .prologue
+    .line 166
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayShowTitleEnabled(Z)V
+
+    .line 167
+    return-void
+.end method
+
 .method public final aM()V
     .locals 2
 
     .prologue
     .line 171
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     const/4 v1, 0x1
 
@@ -112,7 +138,7 @@
 
     .prologue
     .line 181
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     invoke-virtual {v0}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
 
@@ -126,7 +152,7 @@
 
     .prologue
     .line 206
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     invoke-virtual {v0}, Landroid/app/ActionBar;->getDisplayOptions()I
 
@@ -140,7 +166,7 @@
 
     .prologue
     .line 279
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     invoke-virtual {v0}, Landroid/app/ActionBar;->getHeight()I
 
@@ -154,7 +180,7 @@
 
     .prologue
     .line 274
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     invoke-virtual {v0}, Landroid/app/ActionBar;->getThemedContext()Landroid/content/Context;
 
@@ -168,7 +194,7 @@
 
     .prologue
     .line 186
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     invoke-virtual {v0}, Landroid/app/ActionBar;->getTitle()Ljava/lang/CharSequence;
 
@@ -182,7 +208,7 @@
 
     .prologue
     .line 289
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     invoke-virtual {v0}, Landroid/app/ActionBar;->hide()V
 
@@ -195,7 +221,7 @@
 
     .prologue
     .line 294
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     invoke-virtual {v0}, Landroid/app/ActionBar;->isShowing()Z
 
@@ -209,7 +235,7 @@
 
     .prologue
     .line 176
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     invoke-virtual {v0, p1}, Landroid/app/ActionBar;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -222,7 +248,7 @@
 
     .prologue
     .line 61
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     invoke-virtual {v0, p1}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;)V
 
@@ -235,7 +261,7 @@
 
     .prologue
     .line 161
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     invoke-virtual {v0, p1}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
@@ -248,24 +274,11 @@
 
     .prologue
     .line 141
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     invoke-virtual {v0, p1}, Landroid/app/ActionBar;->setDisplayOptions(I)V
 
     .line 142
-    return-void
-.end method
-
-.method public final setDisplayShowTitleEnabled(Z)V
-    .locals 1
-
-    .prologue
-    .line 166
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
-
-    invoke-virtual {v0, p1}, Landroid/app/ActionBar;->setDisplayShowTitleEnabled(Z)V
-
-    .line 167
     return-void
 .end method
 
@@ -274,7 +287,7 @@
 
     .prologue
     .line 95
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     invoke-virtual {v0, p1}, Landroid/app/ActionBar;->setLogo(Landroid/graphics/drawable/Drawable;)V
 
@@ -287,7 +300,7 @@
 
     .prologue
     .line 284
-    iget-object v0, p0, Landroid/support/v7/app/g;->jy:Landroid/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/g;->jP:Landroid/app/ActionBar;
 
     invoke-virtual {v0}, Landroid/app/ActionBar;->show()V
 

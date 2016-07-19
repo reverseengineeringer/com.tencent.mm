@@ -14,7 +14,7 @@
     .line 8
     const/16 v0, 0x11f
 
-    iput v0, p0, Loicq/wlogin_sdk/a/v;->mbE:I
+    iput v0, p0, Loicq/wlogin_sdk/a/v;->mNI:I
 
     .line 9
     return-void
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final bot()Ljava/lang/Boolean;
+.method public final bvr()Ljava/lang/Boolean;
     .locals 2
 
     .prologue
     .line 12
-    iget v0, p0, Loicq/wlogin_sdk/a/v;->mco:I
+    iget v0, p0, Loicq/wlogin_sdk/a/v;->mOs:I
 
     const/16 v1, 0x8
 

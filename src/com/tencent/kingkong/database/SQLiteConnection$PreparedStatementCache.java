@@ -8,7 +8,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 final class SQLiteConnection$PreparedStatementCache
-  extends LruCache
+  extends LruCache<String, SQLiteConnection.PreparedStatement>
 {
   public SQLiteConnection$PreparedStatementCache(SQLiteConnection paramSQLiteConnection, int paramInt)
   {
@@ -23,17 +23,14 @@ final class SQLiteConnection$PreparedStatementCache
     {
       localObject1 = ((Map)localObject1).entrySet().iterator();
       int i = 0;
-      for (;;)
+      while (((Iterator)localObject1).hasNext())
       {
-        if (!((Iterator)localObject1).hasNext()) {
-          return;
-        }
         Object localObject2 = (Map.Entry)((Iterator)localObject1).next();
         SQLiteConnection.PreparedStatement localPreparedStatement = (SQLiteConnection.PreparedStatement)((Map.Entry)localObject2).getValue();
         if (mInCache)
         {
           localObject2 = (String)((Map.Entry)localObject2).getKey();
-          Log.i("MicroMsg.kkdb.SQLiteConnection", "    " + i + ": statementPtr=0x" + Integer.toHexString(mStatementPtr) + ", numParameters=" + mNumParameters + ", type=" + mType + ", readOnly=" + mReadOnly + ", sql=\"" + SQLiteConnection.access$1((String)localObject2) + "\"");
+          Log.i("MicroMsg.kkdb.SQLiteConnection", "    " + i + ": statementPtr=0x" + Integer.toHexString(mStatementPtr) + ", numParameters=" + mNumParameters + ", type=" + mType + ", readOnly=" + mReadOnly + ", sql=\"" + SQLiteConnection.access$300((String)localObject2) + "\"");
         }
         i += 1;
       }
@@ -45,7 +42,7 @@ final class SQLiteConnection$PreparedStatementCache
   {
     mInCache = false;
     if (!mInUse) {
-      SQLiteConnection.access$0(this$0, paramPreparedStatement1);
+      SQLiteConnection.access$200(this$0, paramPreparedStatement1);
     }
   }
 }

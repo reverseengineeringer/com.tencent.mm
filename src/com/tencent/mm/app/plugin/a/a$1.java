@@ -1,7 +1,7 @@
 package com.tencent.mm.app.plugin.a;
 
-import com.tencent.mm.d.a.cj;
-import com.tencent.mm.d.a.gl;
+import com.tencent.mm.e.a.cm;
+import com.tencent.mm.e.a.gw;
 import com.tencent.mm.sdk.c.b;
 import com.tencent.mm.ui.chatting.ChattingUI.a;
 import com.tencent.mm.ui.j;
@@ -14,19 +14,19 @@ final class a$1
   
   public final void run()
   {
-    if (1 == anq)
+    if (1 == aae)
     {
-      localObject = new cj();
-      avQ.op = 0;
-      avQ.ajh = anr.anm.getTalkerUserName();
-      avQ.context = anr.anm.koJ.kpc;
-      com.tencent.mm.sdk.c.a.jUF.j((b)localObject);
+      localObject = new cm();
+      ahH.op = 0;
+      ahH.UX = aaf.aaa.bjO();
+      ahH.context = aaf.aaa.kNN.kOg;
+      com.tencent.mm.sdk.c.a.kug.y((b)localObject);
     }
-    Object localObject = new gl();
-    aBA.auE = anq;
-    aBA.aBC = 1;
-    aBA.aBB = anr.anm.getTalkerUserName();
-    com.tencent.mm.sdk.c.a.jUF.j((b)localObject);
+    Object localObject = new gw();
+    anS.agr = aae;
+    anS.anU = 1;
+    anS.anT = aaf.aaa.bjO();
+    com.tencent.mm.sdk.c.a.kug.y((b)localObject);
   }
 }
 

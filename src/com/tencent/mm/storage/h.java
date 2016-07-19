@@ -3,38 +3,38 @@ package com.tencent.mm.storage;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.os.HandlerThread;
-import com.tencent.mm.az.g;
+import com.tencent.mm.bc.g;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.sdk.h.j;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.an;
-import com.tencent.mm.sdk.platformtools.an.b;
-import com.tencent.mm.sdk.platformtools.an.c;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ar;
+import com.tencent.mm.sdk.platformtools.ar.b;
+import com.tencent.mm.sdk.platformtools.ar.c;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import junit.framework.Assert;
 
 public final class h
   extends j
-  implements an.c
+  implements ar.c<Object, Object>
 {
-  public static final String[] aoY = { "CREATE TABLE IF NOT EXISTS userinfo ( id INTEGER PRIMARY KEY, type INT, value TEXT )", "CREATE TABLE IF NOT EXISTS userinfo2 ( sid TEXT PRIMARY KEY, type INT, value TEXT )" };
-  private g bCw;
-  private long cdW;
-  private an kaf;
-  private an kag;
-  private BlockingQueue kah = new LinkedBlockingQueue();
-  private BlockingQueue kai = new LinkedBlockingQueue();
+  public static final String[] bkN = { "CREATE TABLE IF NOT EXISTS userinfo ( id INTEGER PRIMARY KEY, type INT, value TEXT )", "CREATE TABLE IF NOT EXISTS userinfo2 ( sid TEXT PRIMARY KEY, type INT, value TEXT )" };
+  private long bYX;
+  private g bvG;
+  private ar<Object, Object> kAB;
+  private ar<Object, Object> kAC;
+  private BlockingQueue<Integer> kAD = new LinkedBlockingQueue();
+  private BlockingQueue<String> kAE = new LinkedBlockingQueue();
   
   public h(g paramg)
   {
-    bCw = paramg;
-    kaf = new an(this, tvjVF.getLooper(), 100, 20, 60000L, 1L);
-    kaf.setTag(Integer.valueOf(1));
-    kag = new an(this, tvjVF.getLooper(), 100, 20, 60000L, 1L);
-    kag.setTag(Integer.valueOf(3));
+    bvG = paramg;
+    kAB = new ar(this, twkvy.getLooper(), 100, 20, 60000L, 1L);
+    kAB.setTag(Integer.valueOf(1));
+    kAC = new ar(this, twkvy.getLooper(), 100, 20, 60000L, 1L);
+    kAC.setTag(Integer.valueOf(3));
   }
   
   private static boolean a(String paramString, Object paramObject, boolean paramBoolean)
@@ -44,12 +44,12 @@ public final class h
       return true;
     }
     if (paramBoolean) {
-      u.e("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "checkType failed, input type and value[%s, %s] are not match", new Object[] { paramString, paramObject });
+      v.e("MicroMsg.ConfigStorage", "checkType failed, input type and value[%s, %s] are not match", new Object[] { paramString, paramObject });
     }
     return false;
   }
   
-  private static int ax(Object paramObject)
+  private static int aS(Object paramObject)
   {
     if ((paramObject instanceof Integer)) {
       return 1;
@@ -69,11 +69,11 @@ public final class h
     if ((paramObject instanceof Double)) {
       return 6;
     }
-    u.e("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "unresolve failed, unknown type=" + paramObject.getClass().toString());
+    v.e("MicroMsg.ConfigStorage", "unresolve failed, unknown type=" + paramObject.getClass().toString());
     return -1;
   }
   
-  private static Object h(int paramInt, String paramString)
+  private static Object i(int paramInt, String paramString)
   {
     String str = paramString;
     switch (paramInt)
@@ -89,7 +89,7 @@ public final class h
       }
       catch (Exception paramString)
       {
-        u.e("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "exception:%s", new Object[] { ay.b(paramString) });
+        v.e("MicroMsg.ConfigStorage", "exception:%s", new Object[] { be.f(paramString) });
       }
       return Long.valueOf(paramString);
       return Boolean.valueOf(paramString);
@@ -99,26 +99,26 @@ public final class h
     }
   }
   
-  public final boolean Dp()
+  public final boolean DE()
   {
-    if (bCw.inTransaction())
+    if (bvG.inTransaction())
     {
-      u.i("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "summer preAppend inTransaction return false");
+      v.i("MicroMsg.ConfigStorage", "summer preAppend inTransaction return false");
       return false;
     }
-    cdW = bCw.dH(Thread.currentThread().getId());
-    if (cdW <= 0L)
+    bYX = bvG.dY(Thread.currentThread().getId());
+    if (bYX <= 0L)
     {
-      u.i("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "summer preAppend ticket: " + cdW + " return false");
+      v.i("MicroMsg.ConfigStorage", "summer preAppend ticket: " + bYX + " return false");
       return false;
     }
     return true;
   }
   
-  public final void Dq()
+  public final void DF()
   {
-    if (cdW > 0L) {
-      bCw.dI(cdW);
+    if (bYX > 0L) {
+      bvG.dZ(bYX);
     }
   }
   
@@ -129,7 +129,7 @@ public final class h
     {
       return paramObject;
       parama = parama.name();
-    } while (ay.kz(parama));
+    } while (be.kf(parama));
     Object localObject = parama.split("_");
     String str = localObject[(localObject.length - 1)];
     if (str.equals("SYNC")) {
@@ -139,23 +139,23 @@ public final class h
     {
       parama = parama.substring(0, parama.lastIndexOf(str) + str.length());
       boolean bool;
-      if (bCw != null)
+      if (bvG != null)
       {
         bool = true;
         Assert.assertTrue("db is null", bool);
-        localObject = kag.get(parama);
-        if ((localObject != null) || (kai.contains(parama))) {
+        localObject = kAC.get(parama);
+        if ((localObject != null) || (kAE.contains(parama))) {
           break label257;
         }
         a locala = new a();
-        Cursor localCursor = bCw.query("userinfo2", null, "sid=?", new String[] { parama }, null, null, null);
+        Cursor localCursor = bvG.query("userinfo2", null, "sid=?", new String[] { parama }, null, null, null);
         if (localCursor.getCount() > 0)
         {
           localCursor.moveToFirst();
           type = localCursor.getInt(1);
-          bCF = localCursor.getString(2);
-          localObject = h(type, bCF);
-          kag.i(parama, locala);
+          bvP = localCursor.getString(2);
+          localObject = i(type, bvP);
+          kAC.m(parama, locala);
         }
         localCursor.close();
         parama = (j.a)localObject;
@@ -176,7 +176,7 @@ public final class h
         if ((localObject instanceof a))
         {
           parama = (a)localObject;
-          localObject = h(type, bCF);
+          localObject = i(type, bvP);
           parama = (j.a)localObject;
           if (localObject == null) {
             parama = (j.a)paramObject;
@@ -188,12 +188,12 @@ public final class h
     }
   }
   
-  public final void a(an paraman, an.b paramb)
+  public final void a(ar<Object, Object> paramar, ar.b<Object, Object> paramb)
   {
-    Object localObject1 = iSE;
+    Object localObject1 = jpN;
     Object localObject2 = values;
-    int i = jXq;
-    switch (((Integer)paraman.getTag()).intValue())
+    int i = kxK;
+    switch (((Integer)paramar.getTag()).intValue())
     {
     }
     do
@@ -213,31 +213,31 @@ public final class h
                   break;
                 }
               } while ((localObject2 == null) || (!(localObject2 instanceof a)));
-              paraman = (a)localObject2;
+              paramar = (a)localObject2;
             } while (type == -1);
             localObject1 = new ContentValues();
-            ((ContentValues)localObject1).put("id", (Integer)iSE);
+            ((ContentValues)localObject1).put("id", (Integer)jpN);
             ((ContentValues)localObject1).put("type", Integer.valueOf(type));
-            ((ContentValues)localObject1).put("value", bCF.toString());
-            bCw.replace("userinfo", "id", (ContentValues)localObject1);
+            ((ContentValues)localObject1).put("value", bvP.toString());
+            bvG.replace("userinfo", "id", (ContentValues)localObject1);
             return;
           } while (i != 2);
-          bCw.delete("userinfo", "id=" + localObject1, null);
+          bvG.delete("userinfo", "id=" + localObject1, null);
           return;
           if (i != 1) {
             break;
           }
         } while ((localObject2 == null) || (!(localObject2 instanceof a)));
-        paraman = (a)localObject2;
+        paramar = (a)localObject2;
       } while (type == -1);
       localObject1 = new ContentValues();
-      ((ContentValues)localObject1).put("sid", (String)iSE);
+      ((ContentValues)localObject1).put("sid", (String)jpN);
       ((ContentValues)localObject1).put("type", Integer.valueOf(type));
-      ((ContentValues)localObject1).put("value", bCF.toString());
-      bCw.replace("userinfo2", "id", (ContentValues)localObject1);
+      ((ContentValues)localObject1).put("value", bvP.toString());
+      bvG.replace("userinfo2", "id", (ContentValues)localObject1);
       return;
     } while (i != 2);
-    bCw.delete("userinfo2", "sid=" + localObject1, null);
+    bvG.delete("userinfo2", "sid=" + localObject1, null);
   }
   
   public final void b(j.a parama, Object paramObject)
@@ -250,7 +250,7 @@ public final class h
     {
       return;
       Object localObject = parama.name();
-      if (!ay.kz((String)localObject))
+      if (!be.kf((String)localObject))
       {
         String[] arrayOfString = ((String)localObject).split("_");
         String str = arrayOfString[(arrayOfString.length - 1)];
@@ -268,14 +268,14 @@ public final class h
           boolean bool1;
           if (paramObject == null)
           {
-            bool2 = kag.i(str, null);
+            bool2 = kAC.m(str, null);
             bool1 = bool2;
             if (bool2)
             {
               bool1 = bool2;
-              if (!kai.contains(str))
+              if (!kAE.contains(str))
               {
-                kai.add(str);
+                kAE.add(str);
                 bool1 = bool2;
               }
             }
@@ -291,24 +291,24 @@ public final class h
             if (i == 0) {
               break;
             }
-            gN(true);
+            hn(true);
             return;
             localObject = new a();
-            type = ax(paramObject);
+            type = aS(paramObject);
             if (type == -1) {
               break;
             }
-            bCF = paramObject.toString();
-            bool2 = kag.i(str, localObject);
+            bvP = paramObject.toString();
+            bool2 = kAC.m(str, localObject);
             bool1 = bool2;
             if (!bool2) {
               break label154;
             }
             bool1 = bool2;
-            if (!kai.contains(str)) {
+            if (!kAE.contains(str)) {
               break label154;
             }
-            kai.remove(str);
+            kAE.remove(str);
             bool1 = bool2;
             break label154;
           }
@@ -317,36 +317,28 @@ public final class h
     }
   }
   
-  public final void gN(boolean paramBoolean)
-  {
-    long l = System.currentTimeMillis();
-    kaf.gK(true);
-    kag.gK(true);
-    u.i("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "summer config appendAllToDisk end takes: " + (System.currentTimeMillis() - l) + " ms");
-  }
-  
   public final Object get(int paramInt, Object paramObject)
   {
     boolean bool;
     Object localObject1;
     Object localObject2;
-    if (bCw != null)
+    if (bvG != null)
     {
       bool = true;
       Assert.assertTrue("db is null", bool);
-      localObject1 = kaf.get(Integer.valueOf(paramInt));
-      if ((localObject1 != null) || (kah.contains(Integer.valueOf(paramInt)))) {
+      localObject1 = kAB.get(Integer.valueOf(paramInt));
+      if ((localObject1 != null) || (kAD.contains(Integer.valueOf(paramInt)))) {
         break label188;
       }
       localObject2 = new a();
-      Cursor localCursor = bCw.query("userinfo", null, "id=" + paramInt, null, null, null, null);
+      Cursor localCursor = bvG.query("userinfo", null, "id=" + paramInt, null, null, null, null);
       if (localCursor.getCount() > 0)
       {
         localCursor.moveToFirst();
         type = localCursor.getInt(1);
-        bCF = localCursor.getString(2);
-        localObject1 = h(type, bCF);
-        kaf.i(Integer.valueOf(paramInt), localObject2);
+        bvP = localCursor.getString(2);
+        localObject1 = i(type, bvP);
+        kAB.m(Integer.valueOf(paramInt), localObject2);
       }
       localCursor.close();
       localObject2 = localObject1;
@@ -365,22 +357,30 @@ public final class h
         break label227;
       }
       localObject1 = (a)localObject1;
-      localObject2 = h(type, bCF);
+      localObject2 = i(type, bvP);
     } while (localObject2 == null);
     label227:
     return localObject2;
   }
   
-  public final int pB(int paramInt)
+  public final int getInt(int paramInt1, int paramInt2)
   {
-    Integer localInteger = (Integer)get(paramInt, null);
+    Integer localInteger = (Integer)get(paramInt1, null);
     if (localInteger == null) {
-      return 0;
+      return paramInt2;
     }
     return localInteger.intValue();
   }
   
-  public final long pC(int paramInt)
+  public final void hn(boolean paramBoolean)
+  {
+    long l = System.currentTimeMillis();
+    kAB.hk(paramBoolean);
+    kAC.hk(paramBoolean);
+    v.i("MicroMsg.ConfigStorage", "summer config appendAllToDisk end takes: " + (System.currentTimeMillis() - l) + " ms");
+  }
+  
+  public final long rr(int paramInt)
   {
     Long localLong = (Long)get(paramInt, null);
     if (localLong == null) {
@@ -393,21 +393,21 @@ public final class h
   {
     boolean bool1;
     boolean bool2;
-    if (bCw != null)
+    if (bvG != null)
     {
       bool1 = true;
       Assert.assertTrue("db is null", bool1);
       if (paramObject != null) {
         break label110;
       }
-      bool2 = kaf.i(Integer.valueOf(paramInt), null);
+      bool2 = kAB.m(Integer.valueOf(paramInt), null);
       bool1 = bool2;
       if (bool2)
       {
         bool1 = bool2;
-        if (!kah.contains(Integer.valueOf(paramInt)))
+        if (!kAD.contains(Integer.valueOf(paramInt)))
         {
-          kah.add(Integer.valueOf(paramInt));
+          kAD.add(Integer.valueOf(paramInt));
           bool1 = bool2;
         }
       }
@@ -430,19 +430,19 @@ public final class h
         bool1 = false;
         break;
         locala = new a();
-        type = ax(paramObject);
+        type = aS(paramObject);
       } while (type == -1);
-      bCF = paramObject.toString();
-      bool2 = kaf.i(Integer.valueOf(paramInt), locala);
+      bvP = paramObject.toString();
+      bool2 = kAB.m(Integer.valueOf(paramInt), locala);
       bool1 = bool2;
       if (!bool2) {
         break label82;
       }
       bool1 = bool2;
-      if (!kah.contains(Integer.valueOf(paramInt))) {
+      if (!kAD.contains(Integer.valueOf(paramInt))) {
         break label82;
       }
-      kah.remove(Integer.valueOf(paramInt));
+      kAD.remove(Integer.valueOf(paramInt));
       bool1 = bool2;
       break label82;
     }
@@ -458,18 +458,18 @@ public final class h
     set(paramInt, Long.valueOf(paramLong));
   }
   
-  protected final boolean yv()
+  protected final boolean yH()
   {
     boolean bool = true;
-    if ((bCw == null) || (bCw.aVP())) {
-      if (bCw != null) {
+    if ((bvG == null) || (bvG.bbc())) {
+      if (bvG != null) {
         break label50;
       }
     }
     label50:
-    for (Object localObject = "null";; localObject = Boolean.valueOf(bCw.aVP()))
+    for (Object localObject = "null";; localObject = Boolean.valueOf(bvG.bbc()))
     {
-      u.w("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "shouldProcessEvent db is close :%s", new Object[] { localObject });
+      v.w("MicroMsg.ConfigStorage", "shouldProcessEvent db is close :%s", new Object[] { localObject });
       bool = false;
       return bool;
     }
@@ -477,7 +477,7 @@ public final class h
   
   static final class a
   {
-    public String bCF = null;
+    public String bvP = null;
     public int type = -1;
     
     public final boolean equals(Object paramObject)
@@ -493,12 +493,12 @@ public final class h
           } while (!(paramObject instanceof a));
           paramObject = (a)paramObject;
         } while (type != type);
-        if (bCF != null) {
+        if (bvP != null) {
           break;
         }
-      } while (bCF != null);
+      } while (bvP != null);
       return true;
-      return bCF.equals(bCF);
+      return bvP.equals(bvP);
     }
   }
 }

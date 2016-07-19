@@ -4,7 +4,7 @@ import android.view.View;
 
 public abstract interface MMTextView$a
 {
-  public abstract boolean at(View paramView);
+  public abstract boolean ax(View paramView);
 }
 
 /* Location:

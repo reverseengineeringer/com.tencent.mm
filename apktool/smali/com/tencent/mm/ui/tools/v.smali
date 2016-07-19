@@ -13,15 +13,42 @@
 
 
 # instance fields
-.field eut:Ljava/lang/String;
+.field eAL:Ljava/lang/String;
 
-.field lyp:Ljava/util/List;
+.field lZd:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/ui/tools/v$b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field lyq:Ljava/lang/ref/WeakReference;
+.field lZe:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Landroid/widget/EditText;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field lyr:Ljava/util/ArrayList;
+.field lZf:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field lys:Z
+.field lZg:Z
 
 
 # direct methods
@@ -37,7 +64,7 @@
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/v;->lyq:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/v;->lZe:Ljava/lang/ref/WeakReference;
 
     .line 48
     return-void
@@ -45,6 +72,16 @@
 
 .method static a(Landroid/widget/EditText;Ljava/util/ArrayList;)Z
     .locals 14
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/EditText;",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;)Z"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x1
@@ -66,7 +103,7 @@
     invoke-direct {v4}, Landroid/text/SpannableStringBuilder;-><init>()V
 
     .line 191
-    invoke-static {v3, p1}, Lcom/tencent/mm/ui/tools/v;->i(Ljava/lang/String;Ljava/util/ArrayList;)Ljava/util/List;
+    invoke-static {v3, p1}, Lcom/tencent/mm/ui/tools/v;->h(Ljava/lang/String;Ljava/util/ArrayList;)Ljava/util/List;
 
     move-result-object v0
 
@@ -138,7 +175,7 @@
 
     .line 201
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpLUXKhJDsViwCev5STjmcrT"
+    const-string/jumbo v0, "MicroMsg.WordsChecker"
 
     const-string/jumbo v12, "start : %d, length : %d."
 
@@ -158,13 +195,13 @@
 
     aput-object v10, v13, v1
 
-    invoke-static {v0, v12, v13}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v12, v13}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 204
     :cond_1
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/tools/v$b;->lyB:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/tools/v$b;->lZp:Z
 
     if-eqz v0, :cond_2
 
@@ -246,14 +283,28 @@
     goto :goto_1
 .end method
 
-.method static i(Ljava/lang/String;Ljava/util/ArrayList;)Ljava/util/List;
+.method static h(Ljava/lang/String;Ljava/util/ArrayList;)Ljava/util/List;
     .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/ui/tools/v$b;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     const/4 v2, 0x0
 
     .line 234
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -316,7 +367,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 248
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -420,17 +471,17 @@
 
 
 # virtual methods
-.method final rS(I)Lcom/tencent/mm/ui/tools/v$b;
+.method final tW(I)Lcom/tencent/mm/ui/tools/v$b;
     .locals 4
 
     .prologue
     .line 176
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/v;->lyp:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/v;->lZd:Ljava/util/List;
 
     if-eqz v0, :cond_1
 
     .line 177
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/v;->lyp:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/v;->lZd:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 

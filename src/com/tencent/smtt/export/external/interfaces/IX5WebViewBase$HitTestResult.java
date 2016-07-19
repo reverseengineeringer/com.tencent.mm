@@ -17,13 +17,17 @@ public class IX5WebViewBase$HitTestResult
   public static final int PHONE_TYPE = 2;
   public static final int SRC_ANCHOR_TYPE = 7;
   public static final int SRC_IMAGE_ANCHOR_TYPE = 8;
-  public static final int TEXT_TYPE = 11;
   public static final int UNKNOWN_TYPE = 0;
   private Object mData;
   private String mExtra;
   private boolean mIsFromSinglePress = false;
   private Point mPoint;
   private int mType = 0;
+  
+  protected Bitmap getBitmapData()
+  {
+    return null;
+  }
   
   public Object getData()
   {
@@ -37,7 +41,7 @@ public class IX5WebViewBase$HitTestResult
   
   public Point getHitTestPoint()
   {
-    return mPoint;
+    return new Point(mPoint);
   }
   
   public int getType()
@@ -99,6 +103,11 @@ public class IX5WebViewBase$HitTestResult
     public long mRawDataSize;
     
     public ImageAnchorData() {}
+    
+    public Bitmap getBitmap()
+    {
+      return getBitmapData();
+    }
   }
   
   public class ImageData
@@ -108,6 +117,11 @@ public class IX5WebViewBase$HitTestResult
     public long mRawDataSize;
     
     public ImageData() {}
+    
+    public Bitmap getBitmap()
+    {
+      return getBitmapData();
+    }
   }
 }
 

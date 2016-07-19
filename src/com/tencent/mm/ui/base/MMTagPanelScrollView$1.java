@@ -7,7 +7,7 @@ final class MMTagPanelScrollView$1
   
   public final void run()
   {
-    kHF.scrollTo(0, kHF.getBottom());
+    lgH.scrollTo(0, lgH.getBottom());
   }
 }
 

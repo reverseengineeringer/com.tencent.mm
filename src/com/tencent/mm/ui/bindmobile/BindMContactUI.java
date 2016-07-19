@@ -14,13 +14,13 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.d.a.nk;
+import com.tencent.mm.e.a.nx;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ab.a;
-import com.tencent.mm.sdk.platformtools.ai;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ad.a;
+import com.tencent.mm.sdk.platformtools.al;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMWizardActivity;
 import com.tencent.mm.ui.friend.i;
 import com.tencent.mm.ui.friend.i.a;
@@ -29,42 +29,42 @@ import java.util.Map;
 public class BindMContactUI
   extends MMWizardActivity
 {
-  private String aBH;
-  private String aJD = null;
-  private String bUu = null;
-  private boolean gmc = false;
-  private TextView kOA;
-  private LinearLayout kOB;
-  private boolean kOC = false;
-  private boolean kOq = false;
-  private LinearLayout ksH;
-  private TextView ksI;
-  private String ksK = null;
-  private boolean kxC = false;
-  private boolean kxE = false;
-  private EditText kxk;
-  private TextView kxl;
-  private i kxm;
-  private CheckBox kxq;
+  private String anZ;
+  private String avX = null;
+  private String bNV = null;
+  private boolean gwx = false;
+  private LinearLayout kRP;
+  private TextView kRQ;
+  private String kRS = null;
+  private boolean kWJ = false;
+  private boolean kWL = false;
+  private EditText kWr;
+  private TextView kWs;
+  private i kWt;
+  private CheckBox kWx;
+  private boolean lnG = false;
+  private TextView lnQ;
+  private LinearLayout lnR;
+  private boolean lnS = false;
   
-  private void bdB()
+  private void bji()
   {
-    if ((kxC) || (kOq))
+    if ((kWJ) || (lnG))
     {
-      kqN.clear();
-      bbm();
+      kPS.clear();
+      bgy();
       return;
     }
     int i;
-    if (kOC)
+    if (lnS)
     {
-      i = 2131428681;
-      if (!kOC) {
+      i = 2131231266;
+      if (!lnS) {
         break label70;
       }
     }
     label70:
-    for (int j = 2131428680;; j = 2131428678)
+    for (int j = 2131231268;; j = 2131231267)
     {
       com.tencent.mm.ui.base.g.a(this, i, j, new DialogInterface.OnClickListener()
       {
@@ -74,74 +74,74 @@ public class BindMContactUI
         }
       }, null);
       return;
-      i = 2131428679;
+      i = 2131231265;
       break;
     }
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    kxC = getIntent().getBooleanExtra("is_bind_for_safe_device", false);
-    kOq = getIntent().getBooleanExtra("is_bind_for_contact_sync", false);
-    kxE = getIntent().getBooleanExtra("BIND_FOR_QQ_REG", false);
-    kOC = getIntent().getBooleanExtra("is_bind_for_change_mobile", false);
-    gmc = getIntent().getBooleanExtra("KEnterFromBanner", false);
-    kxk = ((EditText)findViewById(2131167044));
-    ksH = ((LinearLayout)findViewById(2131166998));
-    ksI = ((TextView)findViewById(2131166999));
-    kxl = ((TextView)findViewById(2131167043));
-    kxq = ((CheckBox)findViewById(2131169226));
-    kOB = ((LinearLayout)findViewById(2131169225));
-    kOA = ((TextView)findViewById(2131169224));
+    kWJ = getIntent().getBooleanExtra("is_bind_for_safe_device", false);
+    lnG = getIntent().getBooleanExtra("is_bind_for_contact_sync", false);
+    kWL = getIntent().getBooleanExtra("BIND_FOR_QQ_REG", false);
+    lnS = getIntent().getBooleanExtra("is_bind_for_change_mobile", false);
+    gwx = getIntent().getBooleanExtra("KEnterFromBanner", false);
+    kWr = ((EditText)findViewById(2131755480));
+    kRP = ((LinearLayout)findViewById(2131755477));
+    kRQ = ((TextView)findViewById(2131755479));
+    kWs = ((TextView)findViewById(2131755478));
+    kWx = ((CheckBox)findViewById(2131755515));
+    lnR = ((LinearLayout)findViewById(2131755514));
+    lnQ = ((TextView)findViewById(2131755513));
     String str1;
-    if (kOC)
+    if (lnS)
     {
-      String str2 = (String)ah.tD().rn().get(6, null);
-      if (!ay.kz(str2))
+      String str2 = (String)ah.tE().ro().get(6, null);
+      if (!be.kf(str2))
       {
         if (!str2.startsWith("+")) {
           break label452;
         }
-        str1 = ai.pW(str2);
+        str1 = al.rn(str2);
         str2 = str2.substring(str1.length() + 1);
-        new ai();
-        str1 = ai.formatNumber(str1, str2);
-        kOA.setText(getString(2131428635, new Object[] { str1 }));
+        new al();
+        str1 = al.formatNumber(str1, str2);
+        lnQ.setText(getString(2131231254, new Object[] { str1 }));
       }
     }
-    if ((bUu != null) && (!bUu.equals(""))) {
-      ksI.setText(bUu);
+    if ((bNV != null) && (!bNV.equals(""))) {
+      kRQ.setText(bNV);
     }
-    if ((aJD != null) && (!aJD.equals(""))) {
-      kxl.setText("+" + aJD);
+    if ((avX != null) && (!avX.equals(""))) {
+      kWs.setText("+" + avX);
     }
-    if ((ksK != null) && (!ksK.equals("")))
+    if ((kRS != null) && (!kRS.equals("")))
     {
-      kxk.setText(ksK);
-      kxk.setSelection(ksK.length());
+      kWr.setText(kRS);
+      kWr.setSelection(kRS.length());
     }
     for (;;)
     {
-      if (com.tencent.mm.ac.b.AL())
+      if (com.tencent.mm.af.b.AX())
       {
-        kOB.setVisibility(4);
-        kxq.setChecked(true);
+        lnR.setVisibility(4);
+        kWx.setChecked(true);
       }
-      a(0, getString(2131430895), new MenuItem.OnMenuItemClickListener()
+      a(0, getString(2131230965), new MenuItem.OnMenuItemClickListener()
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
         {
-          BindMContactUI.a(BindMContactUI.this, BindMContactUI.d(BindMContactUI.this).getText().toString().trim() + ay.qf(BindMContactUI.b(BindMContactUI.this).getText().toString()));
-          if ((!com.tencent.mm.pluginsdk.a.zo(BindMContactUI.e(BindMContactUI.this))) || (ay.qf(BindMContactUI.b(BindMContactUI.this).getText().toString()).length() <= 0))
+          BindMContactUI.a(BindMContactUI.this, BindMContactUI.d(BindMContactUI.this).getText().toString().trim() + be.rv(BindMContactUI.b(BindMContactUI.this).getText().toString()));
+          if ((!com.tencent.mm.pluginsdk.a.Bk(BindMContactUI.e(BindMContactUI.this))) || (be.rv(BindMContactUI.b(BindMContactUI.this).getText().toString()).length() <= 0))
           {
-            com.tencent.mm.ui.base.g.e(BindMContactUI.this, 2131428611, 2131430877);
+            com.tencent.mm.ui.base.g.f(BindMContactUI.this, 2131231278, 2131231028);
             return true;
           }
           BindMContactUI.b(BindMContactUI.this, BindMContactUI.e(BindMContactUI.this));
           return true;
         }
       });
-      kxk.requestFocus();
+      kWr.requestFocus();
       b(new MenuItem.OnMenuItemClickListener()
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
@@ -150,44 +150,44 @@ public class BindMContactUI
           return true;
         }
       });
-      ksH.setOnClickListener(new View.OnClickListener()
+      kRP.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
           paramAnonymousView = new Intent();
           paramAnonymousView.putExtra("country_name", BindMContactUI.g(BindMContactUI.this));
           paramAnonymousView.putExtra("couttry_code", BindMContactUI.c(BindMContactUI.this));
-          com.tencent.mm.plugin.a.a.coa.b(paramAnonymousView, BindMContactUI.this);
+          com.tencent.mm.plugin.a.a.cjo.b(paramAnonymousView, BindMContactUI.this);
         }
       });
       return;
       label452:
       str1 = "86";
       break;
-      ah.tv().a(new ab.a()
+      ah.tw().a(new ad.a()
       {
-        String daR;
+        String cZx;
         
         public final String toString()
         {
           return super.toString() + "|initView";
         }
         
-        public final boolean vd()
+        public final boolean vf()
         {
-          daR = com.tencent.mm.modelsimple.c.v(BindMContactUI.this, BindMContactUI.c(BindMContactUI.this));
+          cZx = com.tencent.mm.modelsimple.c.w(BindMContactUI.this, BindMContactUI.c(BindMContactUI.this));
           return true;
         }
         
-        public final boolean ve()
+        public final boolean vg()
         {
-          if (ay.kz(BindMContactUI.b(BindMContactUI.this).getText().trim()))
+          if (be.kf(BindMContactUI.b(BindMContactUI.this).getText().trim()))
           {
-            if (ay.kz(daR)) {
+            if (be.kf(cZx)) {
               break label75;
             }
-            BindMContactUI.b(BindMContactUI.this).setText(daR);
-            BindMContactUI.b(BindMContactUI.this).setSelection(daR.length());
+            BindMContactUI.b(BindMContactUI.this).setText(cZx);
+            BindMContactUI.b(BindMContactUI.this).setSelection(cZx.length());
           }
           for (;;)
           {
@@ -202,7 +202,7 @@ public class BindMContactUI
   
   protected final int getLayoutId()
   {
-    return 2131363110;
+    return 2130903147;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
@@ -214,32 +214,32 @@ public class BindMContactUI
     do
     {
       return;
-      bUu = ay.ad(paramIntent.getStringExtra("country_name"), "");
-      aJD = ay.ad(paramIntent.getStringExtra("couttry_code"), "");
-      if (!bUu.equals("")) {
-        ksI.setText(bUu);
+      bNV = be.ab(paramIntent.getStringExtra("country_name"), "");
+      avX = be.ab(paramIntent.getStringExtra("couttry_code"), "");
+      if (!bNV.equals("")) {
+        kRQ.setText(bNV);
       }
-    } while (aJD.equals(""));
-    kxl.setText("+" + aJD);
+    } while (avX.equals(""));
+    kWs.setText("+" + avX);
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    qb(2131428610);
-    bUu = ay.ad(getIntent().getStringExtra("country_name"), "");
-    aJD = ay.ad(getIntent().getStringExtra("couttry_code"), "");
-    ksK = ay.ad(getIntent().getStringExtra("bindmcontact_shortmobile"), "");
-    Gb();
+    rR(2131231287);
+    bNV = be.ab(getIntent().getStringExtra("country_name"), "");
+    avX = be.ab(getIntent().getStringExtra("couttry_code"), "");
+    kRS = be.ab(getIntent().getStringExtra("bindmcontact_shortmobile"), "");
+    Gy();
   }
   
   public void onDestroy()
   {
     super.onDestroy();
-    if (kxm != null)
+    if (kWt != null)
     {
-      getContentResolver().unregisterContentObserver(kxm);
-      kxm.recycle();
+      getContentResolver().unregisterContentObserver(kWt);
+      kWt.recycle();
     }
   }
   
@@ -247,7 +247,7 @@ public class BindMContactUI
   {
     if (paramInt == 4)
     {
-      bdB();
+      bji();
       return true;
     }
     return super.onKeyDown(paramInt, paramKeyEvent);
@@ -255,15 +255,27 @@ public class BindMContactUI
   
   public void onRequestPermissionsResult(int paramInt, String[] paramArrayOfString, int[] paramArrayOfInt)
   {
-    u.d("!32@/B4Tb64lLpJ7jzBwffYq6Py9Ymp9J5pb", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
-    switch (paramInt)
-    {
+    int i;
+    if ((paramArrayOfInt == null) || (paramArrayOfInt.length <= 0)) {
+      if (paramArrayOfInt == null)
+      {
+        i = -1;
+        v.w("MicroMsg.BindMContactUI", "summerper onRequestPermissionsResult, grantResults length is:%d requestCode:%d, permissions:%s, stack:%s", new Object[] { Integer.valueOf(i), Integer.valueOf(paramInt), paramArrayOfString, be.baX() });
+      }
     }
     do
     {
       return;
-    } while ((paramArrayOfInt[0] != 0) || (kxm == null));
-    kxm.bbZ();
+      i = paramArrayOfInt.length;
+      break;
+      v.d("MicroMsg.BindMContactUI", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
+      switch (paramInt)
+      {
+      default: 
+        return;
+      }
+    } while ((paramArrayOfInt[0] != 0) || (kWt == null));
+    kWt.bhl();
   }
 }
 

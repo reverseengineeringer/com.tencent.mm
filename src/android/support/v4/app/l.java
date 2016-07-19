@@ -13,20 +13,20 @@ import android.support.v4.content.b;
 
 public final class l
 {
-  private static final a cz = new b();
+  private static final a cP = new b();
   
   static
   {
     if (Build.VERSION.SDK_INT >= 16)
     {
-      cz = new c();
+      cP = new c();
       return;
     }
   }
   
   public static Intent a(Activity paramActivity)
   {
-    return cz.a(paramActivity);
+    return cP.a(paramActivity);
   }
   
   public static Intent a(Context paramContext, ComponentName paramComponentName)
@@ -44,7 +44,7 @@ public final class l
   
   public static boolean a(Activity paramActivity, Intent paramIntent)
   {
-    return cz.a(paramActivity, paramIntent);
+    return cP.a(paramActivity, paramIntent);
   }
   
   public static String b(Activity paramActivity)
@@ -63,12 +63,12 @@ public final class l
   public static String b(Context paramContext, ComponentName paramComponentName)
   {
     paramComponentName = paramContext.getPackageManager().getActivityInfo(paramComponentName, 128);
-    return cz.a(paramContext, paramComponentName);
+    return cP.a(paramContext, paramComponentName);
   }
   
   public static void b(Activity paramActivity, Intent paramIntent)
   {
-    cz.b(paramActivity, paramIntent);
+    cP.b(paramActivity, paramIntent);
   }
   
   static abstract interface a

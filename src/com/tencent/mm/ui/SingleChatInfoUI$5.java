@@ -8,16 +8,16 @@ final class SingleChatInfoUI$5
 {
   SingleChatInfoUI$5(SingleChatInfoUI paramSingleChatInfoUI, ProgressDialog paramProgressDialog) {}
   
-  public final void uh()
+  public final void ui()
   {
-    if (cYO != null) {
-      cYO.dismiss();
+    if (cXy != null) {
+      cXy.dismiss();
     }
   }
   
-  public final boolean ui()
+  public final boolean uj()
   {
-    return SingleChatInfoUI.bbv();
+    return SingleChatInfoUI.bgH();
   }
 }
 

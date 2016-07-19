@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$c;
 
 
 # annotations
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 135
+    .line 126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,34 +30,47 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final c(Lcom/tencent/mm/plugin/sns/i/k;)V
+    .locals 1
 
     .prologue
-    .line 138
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    .line 130
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/abtest/a;->azQ()Landroid/content/Context;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-static {v0, p1}, Lcom/tencent/mm/plugin/sns/abtest/a;->a(Landroid/content/Context;Lcom/tencent/mm/plugin/sns/i/k;)V
 
-    if-eqz v0, :cond_0
+    .line 131
+    return-void
+.end method
 
-    .line 139
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+.method public final d(Lcom/tencent/mm/plugin/sns/i/k;)V
+    .locals 1
+
+    .prologue
+    .line 135
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/abtest/a;->azQ()Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-static {v0, p1}, Lcom/tencent/mm/plugin/sns/abtest/a;->b(Landroid/content/Context;Lcom/tencent/mm/plugin/sns/i/k;)V
 
+    .line 136
+    return-void
+.end method
+
+.method public final e(Lcom/tencent/mm/plugin/sns/i/k;)V
+    .locals 1
+
+    .prologue
     .line 140
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/abtest/a;->azQ()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {p1, v1, v0}, Lcom/tencent/mm/plugin/sns/abtest/a;->a(Landroid/view/View;Landroid/content/Context;Lcom/tencent/mm/plugin/sns/h/k;)V
+    invoke-static {v0, p1}, Lcom/tencent/mm/plugin/sns/abtest/a;->c(Landroid/content/Context;Lcom/tencent/mm/plugin/sns/i/k;)V
 
-    .line 143
-    :cond_0
+    .line 141
     return-void
 .end method

@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/AnnotationDefault;
     value = .subannotation Lcom/tencent/mm/app/plugin/URISpanHandlerSet$a;
-        lh = .enum Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;->NORMAL:Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;
+        jI = .enum Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;->NORMAL:Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;
     .end subannotation
 .end annotation
 
@@ -34,5 +34,5 @@
 
 
 # virtual methods
-.method public abstract lh()Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;
+.method public abstract jI()Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;
 .end method

@@ -7,17 +7,17 @@ import java.io.OutputStream;
 
 public final class a
 {
-  public String jwt;
-  public String mdB;
-  public String mdC;
-  public String mdD = "oob";
-  public b.a.a.a.a mdE;
-  public h mdF = h.mdX;
-  public OutputStream mdG = null;
+  public String jVb;
+  public String mPF;
+  public String mPG;
+  public String mPH = "oob";
+  public b.a.a.a.a mPI;
+  public h mPJ = h.mQb;
+  public OutputStream mPK = null;
   
-  public static b.a.a.a.a j(Class paramClass)
+  public static b.a.a.a.a m(Class<? extends b.a.a.a.a> paramClass)
   {
-    d.c(paramClass, "Api class cannot be null");
+    d.d(paramClass, "Api class cannot be null");
     try
     {
       paramClass = (b.a.a.a.a)paramClass.newInstance();

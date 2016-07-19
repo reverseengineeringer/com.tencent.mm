@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.plugin.game.ui.GameInfoView android:id="@id/as4" android:background="@color/ow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/as5" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="305.0dip" android:scaleType="fitXY" />
+        <ImageView android:layout_gravity="bottom" android:id="@id/as6" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="120.0dip" android:scaleType="fitXY" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="@color/nl" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+                <RelativeLayout android:gravity="center" android:id="@id/as7" android:background="@drawable/g3" android:paddingTop="@dimen/cp" android:paddingBottom="@dimen/ct" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <RelativeLayout android:id="@id/as8" android:layout_width="34.0dip" android:layout_height="36.0dip" android:layout_marginRight="@dimen/cp">
+                        <ImageView android:id="@id/as9" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_alignParentBottom="true" />
+                        <TextView android:textSize="11.0dip" android:textStyle="bold" android:textColor="@color/ow" android:gravity="center" android:id="@id/as_" android:background="@drawable/ow" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                    <TextView android:textSize="@dimen/i8" android:textColor="@color/ak" android:gravity="center" android:id="@id/asa" android:layout_width="wrap_content" android:layout_height="28.0dip" android:text="@string/b0p" android:layout_toRightOf="@id/as8" android:layout_alignBottom="@id/as8" />
+                </RelativeLayout>
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/arf" android:layout_width="1.0px" android:layout_height="20.0dip" android:src="@color/fc" />
+                <RelativeLayout android:gravity="center" android:id="@id/asb" android:background="@drawable/g3" android:paddingTop="@dimen/cp" android:paddingBottom="@dimen/ct" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <RelativeLayout android:id="@id/asc" android:layout_width="34.0dip" android:layout_height="36.0dip" android:layout_marginRight="@dimen/cp">
+                        <ImageView android:id="@id/asd" android:layout_width="28.0dip" android:layout_height="28.0dip" android:src="@drawable/zp" android:layout_alignParentBottom="true" />
+                    </RelativeLayout>
+                    <LinearLayout android:id="@id/ase" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/asc" android:layout_alignBottom="@id/asc">
+                        <TextView android:textSize="@dimen/i8" android:textColor="@color/ak" android:gravity="center" android:id="@id/asf" android:layout_width="wrap_content" android:layout_height="28.0dip" android:text="@string/b0o" />
+                        <ImageView android:layout_gravity="center_vertical" android:id="@id/asg" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/cp" android:src="@drawable/oy" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.tencent.mm.plugin.game.ui.GameInfoView>
+</LinearLayout>

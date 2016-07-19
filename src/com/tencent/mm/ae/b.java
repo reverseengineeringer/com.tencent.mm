@@ -1,143 +1,159 @@
 package com.tencent.mm.ae;
 
-import com.tencent.mm.a.c;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.adt;
-import com.tencent.mm.protocal.b.alh;
-import com.tencent.mm.protocal.b.ali;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.a.c;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.j.b;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.q;
-import java.io.File;
+import android.graphics.Bitmap;
+import com.tencent.mm.cache.a.a;
+import com.tencent.mm.sdk.i.e;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.d;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.HashMap;
 
 public final class b
-  extends j
-  implements r
 {
-  private d apI;
-  private com.tencent.mm.q.a apJ;
-  public String bIz;
-  private String bsE;
-  private int bsm;
-  private int bsn;
-  private String clientId;
-  private String username;
+  private HashMap<String, c> bJl = new HashMap();
   
-  private b(String paramString)
+  public static void e(String paramString, Bitmap paramBitmap)
   {
-    username = paramString;
-    bsm = 0;
-    bsn = 0;
-    clientId = (tluin + System.currentTimeMillis());
-  }
-  
-  public b(String paramString1, String paramString2)
-  {
-    this(paramString1);
-    bsE = paramString2;
-  }
-  
-  public final int a(m paramm, d paramd)
-  {
-    apI = paramd;
-    if ((bsE == null) || (bsE.length() == 0))
+    if ((paramString == null) || (paramString.length() == 0))
     {
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvjY2DyX+fP1K/57DHO42Izw=", "imgPath is null or length = 0");
-      return -1;
-    }
-    if (!c.az(bsE))
-    {
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvjY2DyX+fP1K/57DHO42Izw=", "The img does not exist, imgPath = " + bsE);
-      return -1;
-    }
-    if (bsm == 0) {
-      bsm = ((int)new File(bsE).length());
-    }
-    paramd = new a.a();
-    bsW = new alh();
-    bsX = new ali();
-    uri = "/cgi-bin/micromsg-bin/uploadcardimg";
-    bsV = 575;
-    bsY = 0;
-    bsZ = 0;
-    apJ = paramd.vh();
-    int i = Math.min(bsm - bsn, 32768);
-    paramd = c.c(bsE, bsn, i);
-    if (paramd == null)
-    {
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvjY2DyX+fP1K/57DHO42Izw=", "readFromFile error");
-      return -1;
-    }
-    t.i("!44@/B4Tb64lLpK+IBX8XDgnvjY2DyX+fP1K/57DHO42Izw=", "doScene uploadLen:%d, total: %d", new Object[] { Integer.valueOf(paramd.length), Integer.valueOf(bsm) });
-    alh localalh = (alh)apJ.bsT.btb;
-    hrW = username;
-    hjV = bsm;
-    hjW = bsn;
-    hlA = new adt().aA(paramd);
-    hjX = hlA.hLZ;
-    hiI = clientId;
-    return a(paramm, apJ, this);
-  }
-  
-  protected final int a(w paramw)
-  {
-    if ((bsE == null) || (bsE.length() == 0)) {
-      return j.b.btA;
-    }
-    return j.b.btz;
-  }
-  
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
-  {
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvjY2DyX+fP1K/57DHO42Izw=", "onGYNetEnd:%s, %s", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
-    if ((paramInt2 != 0) || (paramInt3 != 0))
-    {
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvjY2DyX+fP1K/57DHO42Izw=", "upload card img error");
-      apI.a(paramInt2, paramInt3, paramString, this);
+      v.e("MicroMsg.CdnImageService", "push fail, key is null");
       return;
     }
-    paramw = (ali)bsU.btb;
-    bIz = hHe;
-    bsn = hjW;
-    if (bsn < bsm)
+    a.a.a("local_cdn_img_cache", paramString, paramBitmap);
+  }
+  
+  public static Bitmap hW(String paramString)
+  {
+    if ((paramString == null) || (paramString.length() == 0))
     {
-      if (a(btk, apI) < 0)
-      {
-        t.e("!44@/B4Tb64lLpK+IBX8XDgnvjY2DyX+fP1K/57DHO42Izw=", "doScene again failed");
-        apI.a(3, -1, "", this);
+      v.e("MicroMsg.CdnImageService", "get fail, key is null");
+      return null;
+    }
+    return (Bitmap)a.a.s("local_cdn_img_cache", paramString);
+  }
+  
+  public final void a(String paramString, c paramc)
+  {
+    if (be.kf(paramString)) {
+      v.w("MicroMsg.CdnImageService", "do load fail, url is empty");
+    }
+    Bitmap localBitmap;
+    do
+    {
+      return;
+      localBitmap = hW(paramString);
+      if ((localBitmap == null) || (localBitmap.isRecycled())) {
+        break;
       }
-      t.d("!44@/B4Tb64lLpK+IBX8XDgnvjY2DyX+fP1K/57DHO42Izw=", "doScene again");
+      v.i("MicroMsg.CdnImageService", "do load ok, url[%s], bitmap exists", new Object[] { paramString });
+    } while (paramc == null);
+    paramc.h(localBitmap);
+    return;
+    if (localBitmap == null) {}
+    for (boolean bool = true;; bool = false)
+    {
+      v.w("MicroMsg.CdnImageService", "try to download: url[%s], src bitmap is null[%B]", new Object[] { paramString, Boolean.valueOf(bool) });
+      if (!bJl.containsKey(paramString)) {
+        break;
+      }
+      v.w("MicroMsg.CdnImageService", "contains url[%s]", new Object[] { paramString });
       return;
     }
-    if (!bn.iW(bIz))
+    bJl.put(paramString, paramc);
+    e.a(new b(paramString, bJl), "CdnImageService_download");
+  }
+  
+  protected final void finalize()
+  {
+    super.finalize();
+  }
+  
+  public final void hX(String paramString)
+  {
+    if (be.kf(paramString))
     {
-      paramw = ax.tl().ri().yM(username);
-      if ((paramw != null) && ((int)bkE > 0) && (com.tencent.mm.h.a.cd(field_type)))
+      v.w("MicroMsg.CdnImageService", "stop load fail, url is empty");
+      return;
+    }
+    bJl.remove(paramString);
+  }
+  
+  static final class a
+    implements Runnable
+  {
+    private HashMap<String, b.c> bJl;
+    private Bitmap bJm;
+    private String url;
+    
+    public a(String paramString, Bitmap paramBitmap, HashMap<String, b.c> paramHashMap)
+    {
+      url = paramString;
+      bJm = paramBitmap;
+      bJl = paramHashMap;
+    }
+    
+    public final void run()
+    {
+      n.Ax();
+      b.e(url, bJm);
+      if (bJl != null)
       {
-        paramw.bX(bIz);
-        ax.tl().ri().a(username, paramw);
+        localObject = (b.c)bJl.remove(url);
+        if (localObject != null) {
+          ((b.c)localObject).h(bJm);
+        }
+      }
+      if (url == null) {}
+      for (Object localObject = "null";; localObject = url)
+      {
+        v.i("MicroMsg.CdnImageService", "finish download post job, url[%s]", new Object[] { localObject });
+        return;
       }
     }
-    apI.a(paramInt2, paramInt3, paramString, this);
   }
   
-  public final int getType()
+  static final class b
+    implements Runnable
   {
-    return 575;
+    private HashMap<String, b.c> bJl;
+    private String url;
+    
+    b(String paramString, HashMap<String, b.c> paramHashMap)
+    {
+      url = paramString;
+      bJl = paramHashMap;
+    }
+    
+    public final void run()
+    {
+      Object localObject1 = be.FJ(url);
+      if (localObject1 == null)
+      {
+        v.w("MicroMsg.CdnImageService", "download fail: url[%s] data is null", new Object[] { url });
+        return;
+      }
+      try
+      {
+        localObject1 = d.aX((byte[])localObject1);
+        v.i("MicroMsg.CdnImageService", "download finish, url[%s], do post job", new Object[] { url });
+        ad.k(new b.a(url, (Bitmap)localObject1, bJl));
+        return;
+      }
+      catch (Exception localException)
+      {
+        for (;;)
+        {
+          v.w("MicroMsg.CdnImageService", "download fail: url[%s] decode bitmap error[%s]", new Object[] { url, localException.getLocalizedMessage() });
+          Object localObject2 = null;
+        }
+      }
+    }
   }
   
-  protected final int lP()
+  public static abstract interface c
   {
-    return 100;
+    public abstract void h(Bitmap paramBitmap);
   }
 }
 

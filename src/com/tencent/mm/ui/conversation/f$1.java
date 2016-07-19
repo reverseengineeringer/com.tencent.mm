@@ -1,26 +1,28 @@
 package com.tencent.mm.ui.conversation;
 
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.network.m.a;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class f$1
-  implements DialogInterface.OnClickListener
+  extends m.a
 {
-  f$1(SharedPreferences paramSharedPreferences, Context paramContext) {}
-  
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  private final ah lQO = new ah(new ah.a()
   {
-    lqA.edit().putInt("show_rating_flag", 1).commit();
-    if (paramDialogInterface != null) {
-      paramDialogInterface.dismiss();
+    public final boolean jK()
+    {
+      f.a(lQP);
+      return false;
     }
-    f.bhW();
-    f.eu(val$context);
-    u.d("!56@/B4Tb64lLpKfk9dhVjv2t13FMeWGyuWHyNH8f+koYe5udsWe+5WrMg==", "[oneliang]show rating dialog from enjoy app dialog.");
+  }, false);
+  
+  f$1(f paramf) {}
+  
+  public final void bc(int paramInt)
+  {
+    if (lQO != null) {
+      lQO.dJ(10L);
+    }
   }
 }
 

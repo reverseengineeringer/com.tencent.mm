@@ -2,43 +2,43 @@ package com.tencent.mm.svg.b;
 
 import android.annotation.TargetApi;
 import android.util.LongSparseArray;
-import com.tencent.mm.svg.d.c;
+import com.tencent.mm.svg.c.c;
 
 @TargetApi(16)
-public final class e$c
-  extends LongSparseArray
+public final class e$c<T>
+  extends LongSparseArray<T>
 {
-  public static boolean kiv = false;
-  LongSparseArray kio = null;
+  public static boolean kIT = false;
+  LongSparseArray<T> kIM = null;
   
   public final void clear()
   {
     super.clear();
-    c.e("!44@/B4Tb64lLpJckM7c+vhG/jcgEUqr3+h3BV5ANN/TXgU=", "Found u! clear.", new Object[0]);
+    c.e("MicroMsg.SVGLongSparseArray", "Found u! clear.", new Object[0]);
   }
   
   public final void delete(long paramLong)
   {
     super.delete(paramLong);
-    c.e("!44@/B4Tb64lLpJckM7c+vhG/jcgEUqr3+h3BV5ANN/TXgU=", "Found u! delete key %s", new Object[] { Long.valueOf(paramLong) });
+    c.e("MicroMsg.SVGLongSparseArray", "Found u! delete key %s", new Object[] { Long.valueOf(paramLong) });
   }
   
-  public final Object get(long paramLong, Object paramObject)
+  public final T get(long paramLong, T paramT)
   {
-    if (kio.indexOfKey(paramLong) >= 0)
+    if (kIM.indexOfKey(paramLong) >= 0)
     {
-      if (!e.nV()) {
-        e.aYW();
+      if (!e.ml()) {
+        e.bep();
       }
-      return kio.get(paramLong, paramObject);
+      return (T)kIM.get(paramLong, paramT);
     }
-    return super.get(paramLong, paramObject);
+    return (T)super.get(paramLong, paramT);
   }
   
   public final void remove(long paramLong)
   {
     super.remove(paramLong);
-    c.e("!44@/B4Tb64lLpJckM7c+vhG/jcgEUqr3+h3BV5ANN/TXgU=", "Found u! remove key %s", new Object[] { Long.valueOf(paramLong) });
+    c.e("MicroMsg.SVGLongSparseArray", "Found u! remove key %s", new Object[] { Long.valueOf(paramLong) });
   }
 }
 

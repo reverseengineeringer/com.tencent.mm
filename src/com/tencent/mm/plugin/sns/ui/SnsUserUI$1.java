@@ -7,8 +7,8 @@ final class SnsUserUI$1
   
   public final void run()
   {
-    SnsUserUI.a(hme).aCl();
-    SnsUserUI.a(hme).aCk();
+    SnsUserUI.a(hCj).addSize();
+    SnsUserUI.a(hCj).aDX();
   }
 }
 

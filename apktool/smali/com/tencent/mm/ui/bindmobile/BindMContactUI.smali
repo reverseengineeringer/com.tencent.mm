@@ -4,39 +4,39 @@
 
 
 # instance fields
-.field private aBH:Ljava/lang/String;
+.field private anZ:Ljava/lang/String;
 
-.field private aJD:Ljava/lang/String;
+.field private avX:Ljava/lang/String;
 
-.field private bUu:Ljava/lang/String;
+.field private bNV:Ljava/lang/String;
 
-.field private gmc:Z
+.field private gwx:Z
 
-.field private kOA:Landroid/widget/TextView;
+.field private kRP:Landroid/widget/LinearLayout;
 
-.field private kOB:Landroid/widget/LinearLayout;
+.field private kRQ:Landroid/widget/TextView;
 
-.field private kOC:Z
+.field private kRS:Ljava/lang/String;
 
-.field private kOq:Z
+.field private kWJ:Z
 
-.field private ksH:Landroid/widget/LinearLayout;
+.field private kWL:Z
 
-.field private ksI:Landroid/widget/TextView;
+.field private kWr:Landroid/widget/EditText;
 
-.field private ksK:Ljava/lang/String;
+.field private kWs:Landroid/widget/TextView;
 
-.field private kxC:Z
+.field private kWt:Lcom/tencent/mm/ui/friend/i;
 
-.field private kxE:Z
+.field private kWx:Landroid/widget/CheckBox;
 
-.field private kxk:Landroid/widget/EditText;
+.field private lnG:Z
 
-.field private kxl:Landroid/widget/TextView;
+.field private lnQ:Landroid/widget/TextView;
 
-.field private kxm:Lcom/tencent/mm/ui/friend/i;
+.field private lnR:Landroid/widget/LinearLayout;
 
-.field private kxq:Landroid/widget/CheckBox;
+.field private lnS:Z
 
 
 # direct methods
@@ -52,28 +52,28 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMWizardActivity;-><init>()V
 
     .line 57
-    iput-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bUu:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bNV:Ljava/lang/String;
 
     .line 58
-    iput-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->aJD:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->avX:Ljava/lang/String;
 
     .line 59
-    iput-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->ksK:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kRS:Ljava/lang/String;
 
     .line 61
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxC:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWJ:Z
 
     .line 62
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOq:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnG:Z
 
     .line 63
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxE:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWL:Z
 
     .line 64
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOC:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnS:Z
 
     .line 65
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->gmc:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->gwx:Z
 
     return-void
 .end method
@@ -83,7 +83,7 @@
 
     .prologue
     .line 45
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->aBH:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->anZ:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -93,7 +93,7 @@
 
     .prologue
     .line 45
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bbm()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bgy()V
 
     return-void
 .end method
@@ -103,7 +103,7 @@
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxk:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWr:Landroid/widget/EditText;
 
     return-object v0
 .end method
@@ -115,17 +115,17 @@
     const/4 v1, 0x1
 
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxm:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWt:Lcom/tencent/mm/ui/friend/i;
 
     if-nez v0, :cond_1
 
-    sget v0, Lcom/tencent/mm/ui/friend/i$b;->lsK:I
+    sget v0, Lcom/tencent/mm/ui/friend/i$b;->lTo:I
 
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOC:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnS:Z
 
     if-eqz v2, :cond_0
 
-    sget v0, Lcom/tencent/mm/ui/friend/i$b;->lsL:I
+    sget v0, Lcom/tencent/mm/ui/friend/i$b;->lTp:I
 
     :cond_0
     new-instance v2, Lcom/tencent/mm/ui/friend/i;
@@ -136,7 +136,7 @@
 
     invoke-direct {v2, v0, p0, v3}, Lcom/tencent/mm/ui/friend/i;-><init>(ILandroid/content/Context;Lcom/tencent/mm/ui/friend/i$a;)V
 
-    iput-object v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxm:Lcom/tencent/mm/ui/friend/i;
+    iput-object v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWt:Lcom/tencent/mm/ui/friend/i;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -148,29 +148,29 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxm:Lcom/tencent/mm/ui/friend/i;
+    iget-object v3, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWt:Lcom/tencent/mm/ui/friend/i;
 
     invoke-virtual {v0, v2, v1, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     :cond_1
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxm:Lcom/tencent/mm/ui/friend/i;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWt:Lcom/tencent/mm/ui/friend/i;
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxC:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWJ:Z
 
     if-nez v0, :cond_2
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOq:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnG:Z
 
     if-nez v0, :cond_2
 
     move v0, v1
 
     :goto_0
-    iput-boolean v0, v2, Lcom/tencent/mm/ui/friend/i;->lsG:Z
+    iput-boolean v0, v2, Lcom/tencent/mm/ui/friend/i;->lTk:Z
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxm:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWt:Lcom/tencent/mm/ui/friend/i;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/friend/i;->Hv(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/friend/i;->JK(Ljava/lang/String;)V
 
     return-void
 
@@ -180,27 +180,27 @@
     goto :goto_0
 .end method
 
-.method private bdB()V
+.method private bji()V
     .locals 4
 
     .prologue
     .line 100
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxC:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWJ:Z
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOq:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnG:Z
 
     if-eqz v0, :cond_1
 
     .line 101
     :cond_0
-    sget-object v0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kqN:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kPS:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     .line 102
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bbm()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bgy()V
 
     .line 115
     :goto_0
@@ -208,18 +208,18 @@
 
     .line 105
     :cond_1
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOC:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnS:Z
 
     if-eqz v0, :cond_2
 
-    const v0, 0x7f0b0549
+    const v0, 0x7f080222
 
     :goto_1
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOC:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnS:Z
 
     if-eqz v1, :cond_3
 
-    const v1, 0x7f0b0548
+    const v1, 0x7f080224
 
     :goto_2
     new-instance v2, Lcom/tencent/mm/ui/bindmobile/BindMContactUI$1;
@@ -233,12 +233,12 @@
     goto :goto_0
 
     :cond_2
-    const v0, 0x7f0b0547
+    const v0, 0x7f080221
 
     goto :goto_1
 
     :cond_3
-    const v1, 0x7f0b0546
+    const v1, 0x7f080223
 
     goto :goto_2
 .end method
@@ -248,7 +248,7 @@
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->aJD:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->avX:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -258,7 +258,7 @@
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxl:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWs:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -268,7 +268,7 @@
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->aBH:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->anZ:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -278,7 +278,7 @@
 
     .prologue
     .line 45
-    invoke-direct {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bdB()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bji()V
 
     return-void
 .end method
@@ -288,7 +288,7 @@
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bUu:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bNV:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -298,7 +298,7 @@
 
     .prologue
     .line 45
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxC:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWJ:Z
 
     return v0
 .end method
@@ -308,7 +308,7 @@
 
     .prologue
     .line 45
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bbm()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bgy()V
 
     return-void
 .end method
@@ -318,7 +318,7 @@
 
     .prologue
     .line 45
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOC:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnS:Z
 
     return v0
 .end method
@@ -328,7 +328,7 @@
 
     .prologue
     .line 45
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->gmc:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->gwx:Z
 
     return v0
 .end method
@@ -338,7 +338,7 @@
 
     .prologue
     .line 45
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOq:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnG:Z
 
     return v0
 .end method
@@ -348,7 +348,7 @@
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxq:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWx:Landroid/widget/CheckBox;
 
     return-object v0
 .end method
@@ -358,14 +358,14 @@
 
     .prologue
     .line 45
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxE:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWL:Z
 
     return v0
 .end method
 
 
 # virtual methods
-.method protected final Gb()V
+.method protected final Gy()V
     .locals 7
 
     .prologue
@@ -384,7 +384,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxC:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWJ:Z
 
     .line 120
     invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->getIntent()Landroid/content/Intent;
@@ -397,7 +397,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOq:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnG:Z
 
     .line 121
     invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->getIntent()Landroid/content/Intent;
@@ -410,7 +410,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxE:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWL:Z
 
     .line 122
     invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->getIntent()Landroid/content/Intent;
@@ -423,7 +423,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOC:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnS:Z
 
     .line 123
     invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->getIntent()Landroid/content/Intent;
@@ -436,10 +436,10 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->gmc:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->gwx:Z
 
     .line 125
-    const v0, 0x7f070744
+    const v0, 0x7f1001d8
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->findViewById(I)Landroid/view/View;
 
@@ -447,10 +447,10 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxk:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWr:Landroid/widget/EditText;
 
     .line 126
-    const v0, 0x7f070716
+    const v0, 0x7f1001d5
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->findViewById(I)Landroid/view/View;
 
@@ -458,10 +458,10 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->ksH:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kRP:Landroid/widget/LinearLayout;
 
     .line 127
-    const v0, 0x7f070717
+    const v0, 0x7f1001d7
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->findViewById(I)Landroid/view/View;
 
@@ -469,10 +469,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->ksI:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kRQ:Landroid/widget/TextView;
 
     .line 128
-    const v0, 0x7f070743
+    const v0, 0x7f1001d6
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->findViewById(I)Landroid/view/View;
 
@@ -480,10 +480,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxl:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWs:Landroid/widget/TextView;
 
     .line 129
-    const v0, 0x7f070fca
+    const v0, 0x7f1001fb
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->findViewById(I)Landroid/view/View;
 
@@ -491,10 +491,10 @@
 
     check-cast v0, Landroid/widget/CheckBox;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxq:Landroid/widget/CheckBox;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWx:Landroid/widget/CheckBox;
 
     .line 130
-    const v0, 0x7f070fc9
+    const v0, 0x7f1001fa
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->findViewById(I)Landroid/view/View;
 
@@ -502,10 +502,10 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOB:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnR:Landroid/widget/LinearLayout;
 
     .line 131
-    const v0, 0x7f070fc8
+    const v0, 0x7f1001f9
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->findViewById(I)Landroid/view/View;
 
@@ -513,19 +513,19 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOA:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnQ:Landroid/widget/TextView;
 
     .line 133
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOC:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnS:Z
 
     if-eqz v0, :cond_0
 
     .line 134
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -540,7 +540,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 135
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -556,7 +556,7 @@
     if-eqz v1, :cond_4
 
     .line 138
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ai;->pW(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/al;->rn(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -579,19 +579,19 @@
 
     .line 144
     :goto_0
-    new-instance v2, Lcom/tencent/mm/sdk/platformtools/ai;
+    new-instance v2, Lcom/tencent/mm/sdk/platformtools/al;
 
-    invoke-direct {v2}, Lcom/tencent/mm/sdk/platformtools/ai;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/sdk/platformtools/al;-><init>()V
 
     .line 145
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ai;->formatNumber(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/al;->formatNumber(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 146
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOA:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnQ:Landroid/widget/TextView;
 
-    const v2, 0x7f0b051b
+    const v2, 0x7f080216
 
     new-array v3, v5, [Ljava/lang/Object;
 
@@ -605,11 +605,11 @@
 
     .line 150
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bUu:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bNV:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bUu:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bNV:Ljava/lang/String;
 
     const-string/jumbo v1, ""
 
@@ -620,19 +620,19 @@
     if-nez v0, :cond_1
 
     .line 151
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->ksI:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kRQ:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bUu:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bNV:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 153
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->aJD:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->avX:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->aJD:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->avX:Ljava/lang/String;
 
     const-string/jumbo v1, ""
 
@@ -643,7 +643,7 @@
     if-nez v0, :cond_2
 
     .line 154
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxl:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWs:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -651,7 +651,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->aJD:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->avX:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -665,11 +665,11 @@
 
     .line 156
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->ksK:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kRS:Ljava/lang/String;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->ksK:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kRS:Ljava/lang/String;
 
     const-string/jumbo v1, ""
 
@@ -680,16 +680,16 @@
     if-nez v0, :cond_5
 
     .line 157
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxk:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWr:Landroid/widget/EditText;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->ksK:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kRS:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 158
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxk:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWr:Landroid/widget/EditText;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->ksK:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kRS:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -699,27 +699,27 @@
 
     .line 191
     :goto_1
-    invoke-static {}, Lcom/tencent/mm/ac/b;->AL()Z
+    invoke-static {}, Lcom/tencent/mm/af/b;->AX()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
     .line 192
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kOB:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->lnR:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 193
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxq:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWx:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, v5}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 196
     :cond_3
-    const v0, 0x7f0b0def
+    const v0, 0x7f0800f5
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->getString(I)Ljava/lang/String;
 
@@ -732,7 +732,7 @@
     invoke-virtual {p0, v4, v0, v1}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 212
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxk:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWr:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
@@ -744,7 +744,7 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 223
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->ksH:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kRP:Landroid/widget/LinearLayout;
 
     new-instance v1, Lcom/tencent/mm/ui/bindmobile/BindMContactUI$5;
 
@@ -769,7 +769,7 @@
 
     .line 160
     :cond_5
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tw()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v0
 
@@ -777,7 +777,7 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI$2;-><init>(Lcom/tencent/mm/ui/bindmobile/BindMContactUI;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ab;->a(Lcom/tencent/mm/sdk/platformtools/ab$a;)I
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ad;->a(Lcom/tencent/mm/sdk/platformtools/ad$a;)I
 
     goto :goto_1
 .end method
@@ -787,7 +787,7 @@
 
     .prologue
     .line 327
-    const v0, 0x7f0a0526
+    const v0, 0x7f03006b
 
     return v0
 .end method
@@ -817,11 +817,11 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bUu:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bNV:Ljava/lang/String;
 
     .line 241
     const-string/jumbo v0, "couttry_code"
@@ -832,14 +832,14 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->aJD:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->avX:Ljava/lang/String;
 
     .line 242
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bUu:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bNV:Ljava/lang/String;
 
     const-string/jumbo v1, ""
 
@@ -850,15 +850,15 @@
     if-nez v0, :cond_1
 
     .line 243
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->ksI:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kRQ:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bUu:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bNV:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 245
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->aJD:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->avX:Ljava/lang/String;
 
     const-string/jumbo v1, ""
 
@@ -869,7 +869,7 @@
     if-nez v0, :cond_0
 
     .line 246
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxl:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWs:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -877,7 +877,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->aJD:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->avX:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -906,9 +906,9 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMWizardActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 73
-    const v0, 0x7f0b0502
+    const v0, 0x7f080237
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->qb(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->rR(I)V
 
     .line 74
     invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->getIntent()Landroid/content/Intent;
@@ -923,11 +923,11 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bUu:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bNV:Ljava/lang/String;
 
     .line 75
     invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->getIntent()Landroid/content/Intent;
@@ -942,11 +942,11 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->aJD:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->avX:Ljava/lang/String;
 
     .line 76
     invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->getIntent()Landroid/content/Intent;
@@ -961,14 +961,14 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->ksK:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kRS:Ljava/lang/String;
 
     .line 77
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->Gb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->Gy()V
 
     .line 78
     return-void
@@ -982,7 +982,7 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMWizardActivity;->onDestroy()V
 
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxm:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWt:Lcom/tencent/mm/ui/friend/i;
 
     if-eqz v0, :cond_0
 
@@ -991,12 +991,12 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxm:Lcom/tencent/mm/ui/friend/i;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWt:Lcom/tencent/mm/ui/friend/i;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxm:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWt:Lcom/tencent/mm/ui/friend/i;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/friend/i;->recycle()V
 
@@ -1015,7 +1015,7 @@
     if-ne p1, v0, :cond_0
 
     .line 93
-    invoke-direct {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bdB()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->bji()V
 
     .line 94
     const/4 v0, 0x1
@@ -1033,19 +1033,79 @@
 .end method
 
 .method public onRequestPermissionsResult(I[Ljava/lang/String;[I)V
-    .locals 7
+    .locals 8
 
     .prologue
+    const/4 v5, 0x3
+
+    const/4 v7, 0x2
+
+    const/4 v4, 0x1
+
     const/4 v6, 0x0
 
     .line 331
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ7jzBwffYq6Py9Ymp9J5pb"
+    if-eqz p3, :cond_0
+
+    array-length v0, p3
+
+    if-gtz v0, :cond_3
+
+    .line 332
+    :cond_0
+    const-string/jumbo v1, "MicroMsg.BindMContactUI"
+
+    const-string/jumbo v2, "summerper onRequestPermissionsResult, grantResults length is:%d requestCode:%d, permissions:%s, stack:%s"
+
+    const/4 v0, 0x4
+
+    new-array v3, v0, [Ljava/lang/Object;
+
+    if-nez p3, :cond_2
+
+    const/4 v0, -0x1
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v3, v6
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v3, v4
+
+    aput-object p2, v3, v7
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->baX()Lcom/tencent/mm/sdk/platformtools/af;
+
+    move-result-object v0
+
+    aput-object v0, v3, v5
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 350
+    :cond_1
+    :goto_1
+    return-void
+
+    .line 332
+    :cond_2
+    array-length v0, p3
+
+    goto :goto_0
+
+    .line 336
+    :cond_3
+    const-string/jumbo v0, "MicroMsg.BindMContactUI"
 
     const-string/jumbo v1, "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]"
 
-    const/4 v2, 0x3
-
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v2, v5, [Ljava/lang/Object;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1053,63 +1113,54 @@
 
     aput-object v3, v2, v6
 
-    const/4 v3, 0x1
+    aget v3, p3, v6
 
-    aget v4, p3, v6
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v3
 
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x2
+    aput-object v3, v2, v4
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v4}, Ljava/lang/Thread;->getId()J
+    invoke-virtual {v3}, Ljava/lang/Thread;->getId()J
 
     move-result-wide v4
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v4
+    move-result-object v3
 
-    aput-object v4, v2, v3
+    aput-object v3, v2, v7
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 332
+    .line 337
     packed-switch p1, :pswitch_data_0
 
-    .line 345
-    :cond_0
-    :goto_0
-    return-void
+    goto :goto_1
 
-    .line 334
+    .line 339
     :pswitch_0
     aget v0, p3, v6
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    .line 335
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxm:Lcom/tencent/mm/ui/friend/i;
+    .line 340
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWt:Lcom/tencent/mm/ui/friend/i;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 336
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kxm:Lcom/tencent/mm/ui/friend/i;
+    .line 341
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactUI;->kWt:Lcom/tencent/mm/ui/friend/i;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/friend/i;->bbZ()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/friend/i;->bhl()V
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 332
-    nop
-
+    .line 337
     :pswitch_data_0
     .packed-switch 0x800
         :pswitch_0

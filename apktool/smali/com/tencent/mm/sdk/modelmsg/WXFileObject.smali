@@ -9,7 +9,7 @@
 # static fields
 .field private static final CONTENT_LENGTH_LIMIT:I = 0xa00000
 
-.field private static final TAG:Ljava/lang/String; = "!44@/B4Tb64lLpISsBeGklBKOYzdO14BK4vr5Asj6Oq15NY="
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXFileObject"
 
 
 # instance fields
@@ -160,11 +160,11 @@
 
     .line 99
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpISsBeGklBKOYzdO14BK4vr5Asj6Oq15NY="
+    const-string/jumbo v1, "MicroMsg.SDK.WXFileObject"
 
     const-string/jumbo v2, "checkArgs fail, both arguments is null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 113
     :goto_0
@@ -185,11 +185,11 @@
     if-le v1, v2, :cond_3
 
     .line 104
-    const-string/jumbo v1, "!44@/B4Tb64lLpISsBeGklBKOYzdO14BK4vr5Asj6Oq15NY="
+    const-string/jumbo v1, "MicroMsg.SDK.WXFileObject"
 
     const-string/jumbo v2, "checkArgs fail, fileData is too large"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -210,11 +210,11 @@
     if-le v1, v2, :cond_4
 
     .line 109
-    const-string/jumbo v1, "!44@/B4Tb64lLpISsBeGklBKOYzdO14BK4vr5Asj6Oq15NY="
+    const-string/jumbo v1, "MicroMsg.SDK.WXFileObject"
 
     const-string/jumbo v2, "checkArgs fail, fileSize is too large"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 

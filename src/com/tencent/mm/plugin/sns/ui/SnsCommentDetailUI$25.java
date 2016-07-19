@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.plugin.sns.h.k;
+import com.tencent.mm.plugin.sns.i.k;
 import com.tencent.mm.plugin.sns.lucky.b.w;
 import com.tencent.mm.plugin.sns.lucky.ui.b;
 import com.tencent.mm.ui.MMActivity;
@@ -15,14 +15,14 @@ final class SnsCommentDetailUI$25
   
   public final void onClick(View paramView)
   {
-    if (!w.ut(hdb.aAl()))
+    if (!w.vy(hrO.aCX()))
     {
-      b.d(hda.koJ.kpc, hda.hcX.lW(0));
+      b.d(hrN.kNN.kOg, hrN.hrK.nl(0));
       return;
     }
-    SnsCommentDetailUI.c(hda).fc(true);
-    SnsCommentDetailUI.v(hda).setVisibility(8);
-    SnsCommentDetailUI.r(hda);
+    SnsCommentDetailUI.c(hrN).fl(true);
+    SnsCommentDetailUI.v(hrN).setVisibility(8);
+    SnsCommentDetailUI.r(hrN);
   }
 }
 

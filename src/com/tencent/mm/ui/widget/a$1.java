@@ -11,23 +11,23 @@ final class a$1
   public final boolean onFling(MotionEvent paramMotionEvent1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
   {
     int i;
-    if ((a.a(lDf)) && (a.b(lDf)))
+    if ((a.a(mdV)) && (a.b(mdV)))
     {
-      i = a.c(lDf).getWidth() / 5;
-      if (paramFloat1 <= a.d(lDf)) {
+      i = a.c(mdV).getWidth() / 5;
+      if (paramFloat1 <= a.d(mdV)) {
         break label81;
       }
-      if (a.e(lDf) > -i) {
-        a.c(lDf).F(paramFloat1);
+      if (a.e(mdV) > -i) {
+        a.c(mdV).E(paramFloat1);
       }
     }
     for (;;)
     {
-      a.f(lDf);
+      a.f(mdV);
       return false;
       label81:
-      if ((paramFloat1 < -a.d(lDf)) && (a.e(lDf) < i)) {
-        a.c(lDf).F(paramFloat1);
+      if ((paramFloat1 < -a.d(mdV)) && (a.e(mdV) < i)) {
+        a.c(mdV).E(paramFloat1);
       }
     }
   }

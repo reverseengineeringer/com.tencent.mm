@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/MMFriendListItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/b3z" android:background="@raw/default_avatar" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="8.0dip" android:paddingRight="@dimen/j8" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:ellipsize="end" android:id="@id/b40" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MMFontPreferenceLarge" />
+            <TextView android:ellipsize="end" android:id="@id/b41" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MMFontPreferenceSummary" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:textSize="16.0sp" android:textColor="@color/ha" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/b42" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60.0dip" android:minHeight="30.0dip" android:text="@string/awv" />
+    </LinearLayout>
+</LinearLayout>

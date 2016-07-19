@@ -14,22 +14,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-import com.tencent.mm.d.a.fm;
-import com.tencent.mm.d.a.fm.b;
-import com.tencent.mm.d.a.fn;
-import com.tencent.mm.d.a.fn.a;
+import com.tencent.mm.e.a.fs;
+import com.tencent.mm.e.a.fs.b;
+import com.tencent.mm.e.a.ft;
+import com.tencent.mm.e.a.ft.a;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.modelfriend.v;
+import com.tencent.mm.modelfriend.u;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.eo;
-import com.tencent.mm.protocal.j.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
+import com.tencent.mm.protocal.b.er;
+import com.tencent.mm.protocal.m.b;
 import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -39,15 +39,15 @@ public final class i
   extends ContentObserver
   implements d
 {
-  private String aBH;
-  private boolean bGj = false;
-  private ContentResolver hXb;
-  private boolean hXc = false;
-  private boolean hXd = false;
-  private String[] hXg;
-  private ProgressBar kuI;
-  private com.tencent.mm.ui.base.h kuJ = null;
-  private aa kuK = new aa()
+  private String anZ;
+  private boolean bzu = false;
+  private ContentResolver iqI;
+  private boolean iqJ = false;
+  private boolean iqK = false;
+  private String[] iqN;
+  private ProgressBar kTP;
+  private com.tencent.mm.ui.base.h kTQ = null;
+  private ac kTR = new ac()
   {
     public final void handleMessage(Message paramAnonymousMessage)
     {
@@ -71,34 +71,34 @@ public final class i
       i.h(i.this);
     }
   };
-  private com.tencent.mm.modelfriend.u kvn;
-  private String kyT;
-  private v lsA;
-  private com.tencent.mm.modelfriend.u lsB;
-  private String lsC;
-  private boolean lsD = false;
-  private View lsE;
-  private String lsF = null;
-  public boolean lsG = true;
-  private int lsH;
-  private final a lsy;
-  private v lsz;
+  private u kUu;
+  private String kYa;
+  private final a lTc;
+  private com.tencent.mm.modelfriend.v lTd;
+  private com.tencent.mm.modelfriend.v lTe;
+  private u lTf;
+  private String lTg;
+  private boolean lTh = false;
+  private View lTi;
+  private String lTj = null;
+  public boolean lTk = true;
+  private int lTl;
   private Context mContext;
   private int progress = 0;
   
   public i(int paramInt, Context paramContext, a parama)
   {
-    super(aa.fetchFreeHandler());
-    lsH = paramInt;
-    lsD = false;
+    super(ac.fetchFreeHandler());
+    lTl = paramInt;
+    lTh = false;
     mContext = paramContext;
-    hXg = mContext.getResources().getStringArray(2131558413);
-    lsE = ((LayoutInflater)mContext.getSystemService("layout_inflater")).inflate(2131363167, null);
-    kuI = ((ProgressBar)lsE.findViewById(2131167136));
-    lsy = parama;
+    iqN = mContext.getResources().getStringArray(2131296304);
+    lTi = ((LayoutInflater)mContext.getSystemService("layout_inflater")).inflate(2130904189, null);
+    kTP = ((ProgressBar)lTi.findViewById(2131758478));
+    lTc = parama;
   }
   
-  private boolean ah(int paramInt, String paramString)
+  private boolean ar(int paramInt, String paramString)
   {
     boolean bool = true;
     switch (paramInt)
@@ -120,301 +120,203 @@ public final class i
         do
         {
           return bool;
-          Toast.makeText(mContext, 2131427526, 0).show();
+          Toast.makeText(mContext, 2131230907, 0).show();
           return true;
-          Toast.makeText(mContext, 2131428663, 0).show();
+          Toast.makeText(mContext, 2131231262, 0).show();
           return true;
-          com.tencent.mm.sdk.platformtools.u.e("!44@/B4Tb64lLpLG44Zw+vFLqfFvvjnlzlCK2Wk4qIHRlkI=", "dealErrCodeBindMobile");
-          bGj = true;
-          if ((b.lsK == lsH) || (lsH == b.lsL))
+          com.tencent.mm.sdk.platformtools.v.e("MicroMsg.SmsBindMobileObserver", "dealErrCodeBindMobile");
+          bzu = true;
+          if ((b.lTo == lTl) || (lTl == b.lTp))
           {
-            ah.tD().rn().set(4097, "");
-            ah.tD().rn().set(6, aBH);
+            ah.tE().ro().set(4097, "");
+            ah.tE().ro().set(6, anZ);
             mContext.getApplicationContext();
-            com.tencent.mm.modelfriend.a.yc();
+            com.tencent.mm.modelfriend.a.yo();
           }
-          qo(1);
-          Toast.makeText(mContext, 2131428664, 0).show();
+          sg(1);
+          Toast.makeText(mContext, 2131231259, 0).show();
           return true;
-          paramString = com.tencent.mm.e.a.cV(paramString);
+          paramString = com.tencent.mm.f.a.dc(paramString);
         } while (paramString == null);
         paramString.a(mContext, null, null);
         return true;
-        Toast.makeText(mContext, 2131428668, 0).show();
+        Toast.makeText(mContext, 2131231261, 0).show();
         return true;
-        if (lsH == b.lsJ)
+        if (lTl == b.lTn)
         {
-          qo(3);
+          sg(3);
           return true;
         }
-        g.a(mContext, 2131428669, 2131428671, new DialogInterface.OnClickListener()
+        g.a(mContext, 2131231260, 2131231311, new DialogInterface.OnClickListener()
         {
           public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
         });
         return true;
-        Toast.makeText(mContext, 2131428667, 0).show();
+        Toast.makeText(mContext, 2131231264, 0).show();
         return true;
-        g.a(mContext, 2131428665, 2131430877, null);
+        g.a(mContext, 2131231263, 2131231028, null);
         return true;
-      } while (!lsD);
-      qo(6);
+      } while (!lTh);
+      sg(6);
       return true;
     }
-    g.a(mContext, 2131428666, 2131430877, null);
+    g.a(mContext, 2131231258, 2131231028, null);
     return true;
   }
   
-  private String bic()
+  private String bnY()
   {
     String str = "( ";
     int i = 0;
-    if (i < hXg.length)
+    if (i < iqN.length)
     {
-      if (i == hXg.length - 1) {}
-      for (str = str + " body like \"%" + hXg[i] + "%\" ) ";; str = str + "body like \"%" + hXg[i] + "%\" or ")
+      if (i == iqN.length - 1) {}
+      for (str = str + " body like \"%" + iqN[i] + "%\" ) ";; str = str + "body like \"%" + iqN[i] + "%\" or ")
       {
         i += 1;
         break;
       }
     }
     str = str + " and date > " + (System.currentTimeMillis() - 300000L) + " ";
-    com.tencent.mm.sdk.platformtools.u.v("!44@/B4Tb64lLpLG44Zw+vFLqfFvvjnlzlCK2Wk4qIHRlkI=", "sql where:" + str);
+    com.tencent.mm.sdk.platformtools.v.v("MicroMsg.SmsBindMobileObserver", "sql where:" + str);
     return str;
   }
   
-  private void g(int paramInt1, int paramInt2, String paramString, j paramj)
+  private void f(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    switch (((v)paramj).va())
+    switch (((com.tencent.mm.modelfriend.v)paramj).vc())
     {
     default: 
       return;
     }
-    if (((((v)paramj).va() == 2) || (((v)paramj).va() == 19)) && (kuJ != null)) {
-      kuJ.dismiss();
+    if (((((com.tencent.mm.modelfriend.v)paramj).vc() == 2) || (((com.tencent.mm.modelfriend.v)paramj).vc() == 19)) && (kTQ != null)) {
+      kTQ.dismiss();
     }
     if ((paramInt1 == 0) && (paramInt2 == 0))
     {
-      if ((((v)paramj).va() == 2) || (((v)paramj).va() == 19))
+      if ((((com.tencent.mm.modelfriend.v)paramj).vc() == 2) || (((com.tencent.mm.modelfriend.v)paramj).vc() == 19))
       {
-        if (lsG)
+        if (lTk)
         {
           mContext.getApplicationContext();
-          com.tencent.mm.modelfriend.a.yc();
+          com.tencent.mm.modelfriend.a.yo();
         }
-        qo(1);
+        sg(1);
         return;
       }
-      if ((((v)paramj).va() == 1) || (((v)paramj).va() == 18))
+      if ((((com.tencent.mm.modelfriend.v)paramj).vc() == 1) || (((com.tencent.mm.modelfriend.v)paramj).vc() == 18))
       {
-        com.tencent.mm.sdk.platformtools.u.v("!44@/B4Tb64lLpLG44Zw+vFLqfFvvjnlzlCK2Wk4qIHRlkI=", "mobile:" + aBH);
+        com.tencent.mm.sdk.platformtools.v.v("MicroMsg.SmsBindMobileObserver", "mobile:" + anZ);
         return;
       }
     }
-    if (ah(paramInt2, paramString))
+    if (ar(paramInt2, paramString))
     {
-      if (kuJ != null) {
-        kuJ.dismiss();
+      if (kTQ != null) {
+        kTQ.dismiss();
       }
-      bGj = true;
+      bzu = true;
       return;
     }
-    if (((v)paramj).va() == 2)
+    if (((com.tencent.mm.modelfriend.v)paramj).vc() == 2)
     {
-      if (kuJ != null) {
-        kuJ.dismiss();
+      if (kTQ != null) {
+        kTQ.dismiss();
       }
-      bGj = true;
-      qo(2);
+      bzu = true;
+      sg(2);
       return;
     }
-    bGj = true;
-    if (kuJ != null) {
-      kuJ.dismiss();
+    bzu = true;
+    if (kTQ != null) {
+      kTQ.dismiss();
     }
-    paramString = com.tencent.mm.e.a.cV(paramString);
-    if ((paramString != null) && (asN != 4))
+    paramString = com.tencent.mm.f.a.dc(paramString);
+    if (paramString != null)
     {
       paramString.a(mContext, null, null);
       return;
     }
-    Toast.makeText(mContext, mContext.getString(2131428616, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
+    Toast.makeText(mContext, mContext.getString(2131231304, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
   }
   
-  private void qo(int paramInt)
+  private void sg(int paramInt)
   {
-    if ((lsH == b.lsK) || (lsH == b.lsL)) {
-      ah.tE().a(132, this);
+    if ((lTl == b.lTo) || (lTl == b.lTp)) {
+      ah.tF().a(132, this);
     }
     for (;;)
     {
-      if (lsy != null) {
-        lsy.qo(paramInt);
+      if (lTc != null) {
+        lTc.sg(paramInt);
       }
       return;
-      ah.tE().a(145, this);
+      ah.tF().a(145, this);
     }
   }
   
-  public final void Hv(String paramString)
+  public final void JK(String paramString)
   {
     int i;
-    if ((lsH == b.lsK) || (lsH == b.lsL))
+    if ((lTl == b.lTo) || (lTl == b.lTp))
     {
-      ah.tE().a(132, this);
-      aBH = paramString;
-      hXc = false;
-      hXd = false;
-      lsC = "";
-      bGj = false;
-      if ((lsH != b.lsK) && (lsH != b.lsL)) {
-        break label200;
+      ah.tF().a(132, this);
+      anZ = paramString;
+      iqJ = false;
+      iqK = false;
+      lTg = "";
+      bzu = false;
+      if ((lTl != b.lTo) && (lTl != b.lTp)) {
+        break label201;
       }
       i = 1;
-      if (lsH == b.lsL) {
+      if (lTl == b.lTp) {
         i = 18;
       }
-      lsA = new v(aBH, i, "", 0, "");
-      ah.tE().d(lsA);
-      if (kuJ != null) {
-        break label252;
+      lTe = new com.tencent.mm.modelfriend.v(anZ, i, "", 0, "");
+      ah.tF().a(lTe, 0);
+      if (kTQ != null) {
+        break label254;
       }
-      kuJ = g.a(mContext, false, mContext.getString(2131428614), lsE, "", "", null, null);
+      kTQ = g.a(mContext, false, mContext.getString(2131231300), lTi, "", "", null, null);
     }
     for (;;)
     {
       progress = 0;
-      kuI.setIndeterminate(false);
-      kuK.sendEmptyMessage(1000);
+      kTP.setIndeterminate(false);
+      kTR.sendEmptyMessage(1000);
       return;
-      ah.tE().a(145, this);
+      ah.tF().a(145, this);
       break;
-      label200:
-      paramString = aBH;
-      if (lsD) {}
+      label201:
+      paramString = anZ;
+      if (lTh) {}
       for (i = 8;; i = 5)
       {
-        kvn = new com.tencent.mm.modelfriend.u(paramString, i, "", 0, "");
-        ah.tE().d(kvn);
+        kUu = new u(paramString, i, "", 0, "");
+        ah.tF().a(kUu, 0);
         break;
       }
-      label252:
-      kuJ.show();
+      label254:
+      kTQ.show();
     }
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void bhl()
   {
-    com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpLG44Zw+vFLqfFvvjnlzlCK2Wk4qIHRlkI=", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
-    if ((!paramj.equals(lsz)) && (!paramj.equals(lsA)) && (!paramj.equals(lsB)) && (!paramj.equals(kvn))) {
-      com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpLG44Zw+vFLqfFvvjnlzlCK2Wk4qIHRlkI=", "onSceneEnd, doScene is not called by this class");
-    }
-    int i;
-    do
-    {
-      do
-      {
-        return;
-      } while (bGj);
-      if ((paramInt1 == 1) || (paramInt1 == 2))
-      {
-        com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpLG44Zw+vFLqfFvvjnlzlCK2Wk4qIHRlkI=", "error net");
-        if (kuJ != null) {
-          kuJ.dismiss();
-        }
-        qo(4);
-        return;
-      }
-      if ((b.lsK == lsH) && (paramj.getType() == 132))
-      {
-        g(paramInt1, paramInt2, paramString, paramj);
-        return;
-      }
-      if ((b.lsL == lsH) && (paramj.getType() == 132))
-      {
-        g(paramInt1, paramInt2, paramString, paramj);
-        return;
-      }
-      if ((b.lsJ != lsH) || (paramj.getType() != 145)) {
-        break label705;
-      }
-      switch (((com.tencent.mm.modelfriend.u)paramj).va())
-      {
-      case 7: 
-      default: 
-        return;
-      }
-      if (((((com.tencent.mm.modelfriend.u)paramj).va() == 6) || (((com.tencent.mm.modelfriend.u)paramj).va() == 9)) && (kuJ != null)) {
-        kuJ.dismiss();
-      }
-      i = bGh.tX()).iUQ.jbB;
-      if (((paramInt1 != 0) || (paramInt2 != 0)) && ((paramInt2 != -35) || (i != 1))) {
-        break;
-      }
-      if (((com.tencent.mm.modelfriend.u)paramj).va() == 6)
-      {
-        lsF = ((com.tencent.mm.modelfriend.u)paramj).yN();
-        com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpLG44Zw+vFLqfFvvjnlzlCK2Wk4qIHRlkI=", "NetSceneBindOpMobileForReg ticket: " + lsF);
-        qo(1);
-        return;
-      }
-      if (((com.tencent.mm.modelfriend.u)paramj).va() == 9)
-      {
-        lsF = ((com.tencent.mm.modelfriend.u)paramj).yN();
-        com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpLG44Zw+vFLqfFvvjnlzlCK2Wk4qIHRlkI=", "NetSceneBindOpMobileForReg ticket: " + lsF);
-        ((com.tencent.mm.modelfriend.u)paramj).getUsername();
-        ((com.tencent.mm.modelfriend.u)paramj).yM();
-        return;
-      }
-      if ((((com.tencent.mm.modelfriend.u)paramj).va() != 5) && (((com.tencent.mm.modelfriend.u)paramj).va() != 8)) {
-        break;
-      }
-      com.tencent.mm.sdk.platformtools.u.v("!44@/B4Tb64lLpLG44Zw+vFLqfFvvjnlzlCK2Wk4qIHRlkI=", "mobile:" + aBH);
-    } while ((((com.tencent.mm.modelfriend.u)paramj).va() != 5) || (paramInt2 != -35) || (i != 1));
-    lsD = true;
-    qo(5);
-    return;
-    if ((((com.tencent.mm.modelfriend.u)paramj).va() == 6) || (((com.tencent.mm.modelfriend.u)paramj).va() == 9))
-    {
-      if (kuJ != null) {
-        kuJ.dismiss();
-      }
-      bGj = true;
-      qo(2);
-      return;
-    }
-    if (ah(paramInt2, paramString))
-    {
-      if (kuJ != null) {
-        kuJ.dismiss();
-      }
-      bGj = true;
-      return;
-    }
-    bGj = true;
-    if (kuJ != null) {
-      kuJ.dismiss();
-    }
-    Toast.makeText(mContext, mContext.getString(2131428616, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
-    return;
-    label705:
-    Assert.assertTrue("code path should not be here!", false);
-  }
-  
-  public final void bbZ()
-  {
-    com.tencent.mm.sdk.platformtools.u.v("!44@/B4Tb64lLpLG44Zw+vFLqfFvvjnlzlCK2Wk4qIHRlkI=", "sms number:" + lsC);
-    if ((hXc) || (bGj) || (hXd)) {}
+    com.tencent.mm.sdk.platformtools.v.v("MicroMsg.SmsBindMobileObserver", "sms number:" + lTg);
+    if ((iqJ) || (bzu) || (iqK)) {}
     Object localObject2;
     for (;;)
     {
       return;
       Object localObject1 = Uri.parse("content://sms/inbox");
-      hXb = mContext.getContentResolver();
-      localObject3 = bic();
+      iqI = mContext.getContentResolver();
+      localObject3 = bnY();
       if ((localObject3 != null) && (!((String)localObject3).equals(""))) {
         try
         {
-          localObject1 = hXb.query((Uri)localObject1, new String[] { "body", "_id", "date" }, (String)localObject3, null, null);
+          localObject1 = iqI.query((Uri)localObject1, new String[] { "body", "_id", "date" }, (String)localObject3, null, null);
           if (localObject1 != null)
           {
             i = -1;
@@ -434,17 +336,17 @@ public final class i
         {
           for (;;)
           {
-            com.tencent.mm.sdk.platformtools.u.e("!44@/B4Tb64lLpLG44Zw+vFLqfFvvjnlzlCK2Wk4qIHRlkI=", "get sms failed");
+            com.tencent.mm.sdk.platformtools.v.e("MicroMsg.SmsBindMobileObserver", "get sms failed");
             localObject2 = null;
           }
-          kyT = null;
+          kYa = null;
           if (i < 0) {
-            break label419;
+            break label420;
           }
         }
       }
     }
-    hXd = true;
+    iqK = true;
     ((Cursor)localObject2).moveToPosition(i);
     Object localObject3 = ((Cursor)localObject2).getString(((Cursor)localObject2).getColumnIndex("body"));
     localObject3 = Pattern.compile("\\d{4,8}").matcher((CharSequence)localObject3);
@@ -452,41 +354,41 @@ public final class i
     if (((Matcher)localObject3).find())
     {
       localObject3 = ((Matcher)localObject3).group();
-      kyT = ((String)localObject3);
-      if (kuJ != null) {
-        kuJ.setCancelable(true);
+      kYa = ((String)localObject3);
+      if (kTQ != null) {
+        kTQ.setCancelable(true);
       }
-      if ((lsH != b.lsK) && (lsH != b.lsL)) {
-        break label433;
+      if ((lTl != b.lTo) && (lTl != b.lTp)) {
+        break label434;
       }
-      localObject3 = new fm();
-      aAm.context = mContext;
-      com.tencent.mm.sdk.c.a.jUF.j((b)localObject3);
-      localObject3 = aAn.aAo;
-      localObject4 = new fn();
-      com.tencent.mm.sdk.c.a.jUF.j((b)localObject4);
-      localObject4 = aAp.aAq;
-      if (lsH != b.lsL) {
-        break label490;
+      localObject3 = new fs();
+      ams.context = mContext;
+      com.tencent.mm.sdk.c.a.kug.y((b)localObject3);
+      localObject3 = amt.amu;
+      localObject4 = new ft();
+      com.tencent.mm.sdk.c.a.kug.y((b)localObject4);
+      localObject4 = amv.amw;
+      if (lTl != b.lTp) {
+        break label492;
       }
     }
-    label419:
-    label433:
-    label490:
+    label420:
+    label434:
+    label492:
     for (int i = 19;; i = 2)
     {
-      lsz = new v(aBH, i, kyT, "", (String)localObject3, (String)localObject4);
-      ah.tE().d(lsz);
+      lTd = new com.tencent.mm.modelfriend.v(anZ, i, kYa, "", (String)localObject3, (String)localObject4);
+      ah.tF().a(lTd, 0);
       ((Cursor)localObject2).close();
       return;
       localObject3 = null;
       break;
-      localObject3 = aBH;
-      if (lsD) {}
+      localObject3 = anZ;
+      if (lTh) {}
       for (i = 9;; i = 6)
       {
-        lsB = new com.tencent.mm.modelfriend.u((String)localObject3, i, kyT, 0, "");
-        ah.tE().d(lsB);
+        lTf = new u((String)localObject3, i, kYa, 0, "");
+        ah.tF().a(lTf, 0);
         break;
       }
     }
@@ -497,29 +399,127 @@ public final class i
     super.onChange(paramBoolean);
     if ((mContext instanceof Activity))
     {
-      paramBoolean = com.tencent.mm.pluginsdk.g.a.a((Activity)mContext, "android.permission.READ_SMS", 2048, "", "");
-      com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpLG44Zw+vFLqfFvvjnlzlCK2Wk4qIHRlkI=", "summerper checkPermission checkSMS[%b], stack[%s], activity[%s]", new Object[] { Boolean.valueOf(paramBoolean), ay.aVJ(), mContext });
+      paramBoolean = com.tencent.mm.pluginsdk.h.a.a((Activity)mContext, "android.permission.READ_SMS", 2048, "", "");
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.SmsBindMobileObserver", "summerper checkPermission checkSMS[%b], stack[%s], activity[%s]", new Object[] { Boolean.valueOf(paramBoolean), be.baX(), mContext });
       if (!paramBoolean) {
         return;
       }
     }
-    bbZ();
+    bhl();
+  }
+  
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.SmsBindMobileObserver", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+    if ((!paramj.equals(lTd)) && (!paramj.equals(lTe)) && (!paramj.equals(lTf)) && (!paramj.equals(kUu))) {
+      com.tencent.mm.sdk.platformtools.v.i("MicroMsg.SmsBindMobileObserver", "onSceneEnd, doScene is not called by this class");
+    }
+    int i;
+    do
+    {
+      do
+      {
+        return;
+      } while (bzu);
+      if ((paramInt1 == 1) || (paramInt1 == 2))
+      {
+        com.tencent.mm.sdk.platformtools.v.d("MicroMsg.SmsBindMobileObserver", "error net");
+        if (kTQ != null) {
+          kTQ.dismiss();
+        }
+        sg(4);
+        return;
+      }
+      if ((b.lTo == lTl) && (paramj.getType() == 132))
+      {
+        f(paramInt1, paramInt2, paramString, paramj);
+        return;
+      }
+      if ((b.lTp == lTl) && (paramj.getType() == 132))
+      {
+        f(paramInt1, paramInt2, paramString, paramj);
+        return;
+      }
+      if ((b.lTn != lTl) || (paramj.getType() != 145)) {
+        break label705;
+      }
+      switch (((u)paramj).vc())
+      {
+      case 7: 
+      default: 
+        return;
+      }
+      if (((((u)paramj).vc() == 6) || (((u)paramj).vc() == 9)) && (kTQ != null)) {
+        kTQ.dismiss();
+      }
+      i = bzs.tY()).jsn.jzh;
+      if (((paramInt1 != 0) || (paramInt2 != 0)) && ((paramInt2 != -35) || (i != 1))) {
+        break;
+      }
+      if (((u)paramj).vc() == 6)
+      {
+        lTj = ((u)paramj).za();
+        com.tencent.mm.sdk.platformtools.v.d("MicroMsg.SmsBindMobileObserver", "NetSceneBindOpMobileForReg ticket: " + lTj);
+        sg(1);
+        return;
+      }
+      if (((u)paramj).vc() == 9)
+      {
+        lTj = ((u)paramj).za();
+        com.tencent.mm.sdk.platformtools.v.d("MicroMsg.SmsBindMobileObserver", "NetSceneBindOpMobileForReg ticket: " + lTj);
+        ((u)paramj).getUsername();
+        ((u)paramj).yZ();
+        return;
+      }
+      if ((((u)paramj).vc() != 5) && (((u)paramj).vc() != 8)) {
+        break;
+      }
+      com.tencent.mm.sdk.platformtools.v.v("MicroMsg.SmsBindMobileObserver", "mobile:" + anZ);
+    } while ((((u)paramj).vc() != 5) || (paramInt2 != -35) || (i != 1));
+    lTh = true;
+    sg(5);
+    return;
+    if ((((u)paramj).vc() == 6) || (((u)paramj).vc() == 9))
+    {
+      if (kTQ != null) {
+        kTQ.dismiss();
+      }
+      bzu = true;
+      sg(2);
+      return;
+    }
+    if (ar(paramInt2, paramString))
+    {
+      if (kTQ != null) {
+        kTQ.dismiss();
+      }
+      bzu = true;
+      return;
+    }
+    bzu = true;
+    if (kTQ != null) {
+      kTQ.dismiss();
+    }
+    Toast.makeText(mContext, mContext.getString(2131231304, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
+    return;
+    label705:
+    Assert.assertTrue("code path should not be here!", false);
   }
   
   public final void recycle()
   {
-    ah.tE().b(132, this);
-    ah.tE().b(145, this);
+    ah.tF().b(132, this);
+    ah.tF().b(145, this);
     mContext = null;
-    bGj = true;
-    if (kuJ != null) {
-      kuJ.dismiss();
+    bzu = true;
+    if (kTQ != null) {
+      kTQ.dismiss();
     }
   }
   
   public static abstract interface a
   {
-    public abstract void qo(int paramInt);
+    public abstract void sg(int paramInt);
   }
   
   public static enum b {}

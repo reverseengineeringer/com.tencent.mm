@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;->aBF()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;->aEu()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hbY:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
+.field final synthetic hqK:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 346
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$4;->hbY:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$4;->hqK:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,29 +36,31 @@
 
 
 # virtual methods
-.method public final j(IIII)V
+.method public final i(IIII)V
     .locals 2
 
     .prologue
     .line 350
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$4;->hbY:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$4;->hqK:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->getGallery()Landroid/widget/Gallery;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     if-eqz v0, :cond_0
 
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x12
+
+    if-lt v0, v1, :cond_0
+
     .line 351
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$4;->hbY:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$4;->hqK:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->getGallery()Landroid/widget/Gallery;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     new-instance v1, Landroid/graphics/Rect;
 

@@ -1,19 +1,28 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.view.MenuItem;
-import com.tencent.mm.d.a.ay;
-import com.tencent.mm.d.a.ay.a;
-import com.tencent.mm.d.a.ay.b;
+import com.tencent.mm.e.a.bb;
+import com.tencent.mm.e.a.bb.a;
+import com.tencent.mm.e.a.bb.b;
+import com.tencent.mm.e.a.lu;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.h.l;
-import com.tencent.mm.r.m;
+import com.tencent.mm.plugin.sns.a.a.i.c;
+import com.tencent.mm.plugin.sns.a.a.i.d;
+import com.tencent.mm.plugin.sns.a.a.i.e;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.plugin.sns.i.l;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.je;
 import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
+import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.n.d;
+import java.util.LinkedList;
 
 final class SnsSightPlayerUI$3
   implements n.d
@@ -22,61 +31,84 @@ final class SnsSightPlayerUI$3
   
   public final void d(MenuItem paramMenuItem, int paramInt)
   {
-    Object localObject;
     switch (paramMenuItem.getItemId())
     {
-    default: 
-    case 2: 
+    }
+    label362:
+    do
+    {
       do
       {
         return;
-        paramMenuItem = ad.azi().vo(SnsSightPlayerUI.c(his));
+        paramMenuItem = ad.aBI().wA(SnsSightPlayerUI.d(hxh));
       } while (paramMenuItem == null);
-      localObject = new ay();
-      if (com.tencent.mm.plugin.sns.i.a.a((ay)localObject, paramMenuItem))
+      localObject = new bb();
+      if (com.tencent.mm.plugin.sns.j.a.a((bb)localObject, paramMenuItem))
       {
-        com.tencent.mm.sdk.c.a.jUF.j((b)localObject);
-        if (aue.ret == 0) {
-          com.tencent.mm.ui.base.g.ba(his, his.getResources().getString(2131431055));
+        com.tencent.mm.sdk.c.a.kug.y((b)localObject);
+        if (afR.ret == 0) {
+          com.tencent.mm.ui.snackbar.a.a(17, hxh, hxh.getString(2131232638), hxh.getString(2131232583), null);
         }
       }
-      while (SnsSightPlayerUI.i(his))
+      for (;;)
       {
-        paramMenuItem = new com.tencent.mm.plugin.sns.a.a.c(paramMenuItem.aAu(), 11, 5, "", 2);
-        ah.tE().d(paramMenuItem);
+        if (SnsSightPlayerUI.i(hxh))
+        {
+          localObject = new com.tencent.mm.plugin.sns.a.a.c(paramMenuItem.aDg(), 11, 5, "", 2);
+          ah.tF().a((j)localObject, 0);
+          com.tencent.mm.plugin.sns.a.a.i.a(i.d.gOd, i.c.gNY, i.e.gOk, 0, paramMenuItem);
+        }
+        if (SnsSightPlayerUI.e(hxh) != 0) {
+          break;
+        }
+        localObject = new lu();
+        aul.agV = paramMenuItem.aCX();
+        aul.auk = com.tencent.mm.plugin.sns.data.i.g(paramMenuItem);
+        com.tencent.mm.sdk.c.a.kug.y((b)localObject);
         return;
-        com.tencent.mm.ui.base.g.e(his, aud.type, 0);
+        g.f(hxh, afQ.type, 0);
       }
-    case 1: 
       localObject = new Intent();
-      ((Intent)localObject).putExtra("k_expose_scene", 33);
-      k localk = ad.azi().vo(SnsSightPlayerUI.c(his));
+      k localk = ad.aBI().wA(SnsSightPlayerUI.d(hxh));
       if (localk != null) {
-        u.i("!44@/B4Tb64lLpLAQNo3yhYAsqDk1iee7Bh2S7FW+l6OQsk=", "expose id " + localk.aAf());
+        v.i("MicroMsg.SnsSightPlayerUI", "expose id " + localk.aCE());
       }
       if (localk == null)
       {
         paramMenuItem = Integer.valueOf(0);
         ((Intent)localObject).putExtra("k_expose_msg_id", paramMenuItem);
         if (localk != null) {
-          break label280;
+          break label362;
         }
       }
-      label280:
       for (paramMenuItem = "";; paramMenuItem = field_userName)
       {
         ((Intent)localObject).putExtra("k_username", paramMenuItem);
-        com.tencent.mm.plugin.sns.b.a.coa.c(his, (Intent)localObject);
+        ((Intent)localObject).putExtra("showShare", false);
+        ((Intent)localObject).putExtra("rawUrl", "https://weixin110.qq.com/security/readtemplate?t=weixin_report/w_type&scene=33");
+        com.tencent.mm.av.c.c(hxh, "webview", ".ui.tools.WebViewUI", (Intent)localObject);
         return;
-        paramMenuItem = localk.aAf();
+        paramMenuItem = localk.aCE();
         break;
       }
+      SnsSightPlayerUI.n(hxh);
+      paramMenuItem = new Intent();
+      paramMenuItem.putExtra("Select_Conv_Type", 3);
+      paramMenuItem.putExtra("select_is_ret", true);
+      com.tencent.mm.av.c.a(hxh, ".ui.transmit.SelectConversationUI", paramMenuItem, 4097);
+      return;
+      paramMenuItem = ad.aBI().wA(SnsSightPlayerUI.d(hxh));
+    } while (paramMenuItem == null);
+    Object localObject = new Intent();
+    if ((aCDkli.jFu == 15) && ((adw)aCDkli.jFv.get(0) == null))
+    {
+      v.w("MicroMsg.SnsSightPlayerUI", "send sight fail, mediaObj is null");
+      return;
     }
-    SnsSightPlayerUI.n(his);
-    paramMenuItem = new Intent();
-    paramMenuItem.putExtra("Select_Conv_Type", 3);
-    paramMenuItem.putExtra("select_is_ret", true);
-    com.tencent.mm.ar.c.a(his, ".ui.transmit.SelectConversationUI", paramMenuItem, 4097);
+    ((Intent)localObject).putExtra("exdevice_open_scene_type", 2);
+    ((Intent)localObject).putExtra("sns_local_id", SnsSightPlayerUI.d(hxh));
+    ((Intent)localObject).putExtra("sns_send_data_ui_activity", true);
+    com.tencent.mm.av.c.a(hxh, ".ui.chatting.ChattingSendDataToDeviceUI", (Intent)localObject);
   }
 }
 

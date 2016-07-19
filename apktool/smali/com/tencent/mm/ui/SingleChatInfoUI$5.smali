@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic cYO:Landroid/app/ProgressDialog;
+.field final synthetic cXy:Landroid/app/ProgressDialog;
 
-.field final synthetic krj:Lcom/tencent/mm/ui/SingleChatInfoUI;
+.field final synthetic kQq:Lcom/tencent/mm/ui/SingleChatInfoUI;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 415
-    iput-object p1, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$5;->krj:Lcom/tencent/mm/ui/SingleChatInfoUI;
+    .line 413
+    iput-object p1, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$5;->kQq:Lcom/tencent/mm/ui/SingleChatInfoUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$5;->cYO:Landroid/app/ProgressDialog;
+    iput-object p2, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$5;->cXy:Landroid/app/ProgressDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,31 +40,31 @@
 
 
 # virtual methods
-.method public final uh()V
+.method public final ui()V
     .locals 1
 
     .prologue
-    .line 424
-    iget-object v0, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$5;->cYO:Landroid/app/ProgressDialog;
+    .line 422
+    iget-object v0, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$5;->cXy:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
-    .line 425
-    iget-object v0, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$5;->cYO:Landroid/app/ProgressDialog;
+    .line 423
+    iget-object v0, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$5;->cXy:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 428
+    .line 426
     :cond_0
     return-void
 .end method
 
-.method public final ui()Z
+.method public final uj()Z
     .locals 1
 
     .prologue
-    .line 419
-    invoke-static {}, Lcom/tencent/mm/ui/SingleChatInfoUI;->bbv()Z
+    .line 417
+    invoke-static {}, Lcom/tencent/mm/ui/SingleChatInfoUI;->bgH()Z
 
     move-result v0
 

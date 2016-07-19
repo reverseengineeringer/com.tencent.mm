@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic dLE:Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;
+.field final synthetic dNl:Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 33
-    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI$1;->dLE:Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI$1;->dNl:Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI$1;->dLE:Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI$1;->dNl:Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->VC()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->Xk()Z
 
     .line 37
     return-void

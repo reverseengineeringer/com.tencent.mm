@@ -1,14 +1,14 @@
 package com.tencent.mm.modelvoice;
 
-import com.tencent.mm.az.g.b;
-import com.tencent.mm.storage.as;
+import com.tencent.mm.bc.g.b;
+import com.tencent.mm.storage.au;
 
 final class m$3
   implements g.b
 {
-  public final String[] lr()
+  public final String[] kE()
   {
-    return as.aoY;
+    return au.bkN;
   }
 }
 

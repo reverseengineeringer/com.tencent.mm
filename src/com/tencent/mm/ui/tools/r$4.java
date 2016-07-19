@@ -11,8 +11,8 @@ final class r$4
   
   public final boolean onEditorAction(TextView paramTextView, int paramInt, KeyEvent paramKeyEvent)
   {
-    if ((3 == paramInt) && (lxI.lxA != null)) {
-      return lxI.lxA.kE(lxI.getSearchContent());
+    if ((3 == paramInt) && (lYx.lYp != null)) {
+      return lYx.lYp.ln(lYx.aVM());
     }
     return false;
   }

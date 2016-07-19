@@ -15,128 +15,128 @@ import android.view.accessibility.AccessibilityEvent;
 final class d$a
   implements Window.Callback
 {
-  final Window.Callback iX;
+  final Window.Callback jo;
   
   public d$a(d paramd, Window.Callback paramCallback)
   {
-    iX = paramCallback;
+    jo = paramCallback;
   }
   
   public final boolean dispatchGenericMotionEvent(MotionEvent paramMotionEvent)
   {
-    return iX.dispatchGenericMotionEvent(paramMotionEvent);
+    return jo.dispatchGenericMotionEvent(paramMotionEvent);
   }
   
   public final boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
   {
-    return iX.dispatchKeyEvent(paramKeyEvent);
+    return jo.dispatchKeyEvent(paramKeyEvent);
   }
   
   public final boolean dispatchKeyShortcutEvent(KeyEvent paramKeyEvent)
   {
-    return iX.dispatchKeyShortcutEvent(paramKeyEvent);
+    return jo.dispatchKeyShortcutEvent(paramKeyEvent);
   }
   
   public final boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent paramAccessibilityEvent)
   {
-    return iX.dispatchPopulateAccessibilityEvent(paramAccessibilityEvent);
+    return jo.dispatchPopulateAccessibilityEvent(paramAccessibilityEvent);
   }
   
   public final boolean dispatchTouchEvent(MotionEvent paramMotionEvent)
   {
-    return iX.dispatchTouchEvent(paramMotionEvent);
+    return jo.dispatchTouchEvent(paramMotionEvent);
   }
   
   public final boolean dispatchTrackballEvent(MotionEvent paramMotionEvent)
   {
-    return iX.dispatchTrackballEvent(paramMotionEvent);
+    return jo.dispatchTrackballEvent(paramMotionEvent);
   }
   
   public final void onActionModeFinished(ActionMode paramActionMode)
   {
-    iX.onActionModeFinished(paramActionMode);
-    iY.onActionModeFinished(paramActionMode);
+    jo.onActionModeFinished(paramActionMode);
+    jp.onActionModeFinished(paramActionMode);
   }
   
   public final void onActionModeStarted(ActionMode paramActionMode)
   {
-    iX.onActionModeStarted(paramActionMode);
-    iY.onActionModeStarted(paramActionMode);
+    jo.onActionModeStarted(paramActionMode);
+    jp.onActionModeStarted(paramActionMode);
   }
   
   public final void onAttachedToWindow()
   {
-    iX.onAttachedToWindow();
+    jo.onAttachedToWindow();
   }
   
   public final void onContentChanged()
   {
-    iX.onContentChanged();
+    jo.onContentChanged();
   }
   
   public final boolean onCreatePanelMenu(int paramInt, Menu paramMenu)
   {
-    return iX.onCreatePanelMenu(paramInt, paramMenu);
+    return jo.onCreatePanelMenu(paramInt, paramMenu);
   }
   
   public final View onCreatePanelView(int paramInt)
   {
-    return iX.onCreatePanelView(paramInt);
+    return jo.onCreatePanelView(paramInt);
   }
   
   public final void onDetachedFromWindow()
   {
-    iX.onDetachedFromWindow();
+    jo.onDetachedFromWindow();
   }
   
   public final boolean onMenuItemSelected(int paramInt, MenuItem paramMenuItem)
   {
-    return iX.onMenuItemSelected(paramInt, paramMenuItem);
+    return jo.onMenuItemSelected(paramInt, paramMenuItem);
   }
   
   public final boolean onMenuOpened(int paramInt, Menu paramMenu)
   {
-    return iX.onMenuOpened(paramInt, paramMenu);
+    return jo.onMenuOpened(paramInt, paramMenu);
   }
   
   public final void onPanelClosed(int paramInt, Menu paramMenu)
   {
-    iX.onPanelClosed(paramInt, paramMenu);
+    jo.onPanelClosed(paramInt, paramMenu);
   }
   
   public final boolean onPreparePanel(int paramInt, View paramView, Menu paramMenu)
   {
-    return iX.onPreparePanel(paramInt, paramView, paramMenu);
+    return jo.onPreparePanel(paramInt, paramView, paramMenu);
   }
   
   public final boolean onSearchRequested()
   {
-    return iX.onSearchRequested();
+    return jo.onSearchRequested();
   }
   
   public final boolean onSearchRequested(SearchEvent paramSearchEvent)
   {
-    return iX.onSearchRequested(paramSearchEvent);
+    return jo.onSearchRequested(paramSearchEvent);
   }
   
   public final void onWindowAttributesChanged(WindowManager.LayoutParams paramLayoutParams)
   {
-    iX.onWindowAttributesChanged(paramLayoutParams);
+    jo.onWindowAttributesChanged(paramLayoutParams);
   }
   
   public final void onWindowFocusChanged(boolean paramBoolean)
   {
-    iX.onWindowFocusChanged(paramBoolean);
+    jo.onWindowFocusChanged(paramBoolean);
   }
   
   public final ActionMode onWindowStartingActionMode(ActionMode.Callback paramCallback)
   {
-    return iX.onWindowStartingActionMode(paramCallback);
+    return jo.onWindowStartingActionMode(paramCallback);
   }
   
   public final ActionMode onWindowStartingActionMode(ActionMode.Callback paramCallback, int paramInt)
   {
-    return iX.onWindowStartingActionMode(paramCallback, paramInt);
+    return jo.onWindowStartingActionMode(paramCallback, paramInt);
   }
 }
 

@@ -16,9 +16,19 @@
     name = "c"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/tencent/mm/plugin/sns/i/k;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic hei:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+.field final synthetic hsT:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
 
 
 # direct methods
@@ -26,8 +36,8 @@
     .locals 0
 
     .prologue
-    .line 408
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$c;->hei:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+    .line 409
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$c;->hsT:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,14 +50,14 @@
     .locals 2
 
     .prologue
-    .line 408
-    check-cast p1, Lcom/tencent/mm/plugin/sns/h/k;
+    .line 409
+    check-cast p1, Lcom/tencent/mm/plugin/sns/i/k;
 
-    check-cast p2, Lcom/tencent/mm/plugin/sns/h/k;
+    check-cast p2, Lcom/tencent/mm/plugin/sns/i/k;
 
-    iget v0, p1, Lcom/tencent/mm/plugin/sns/h/k;->field_createTime:I
+    iget v0, p1, Lcom/tencent/mm/plugin/sns/i/k;->field_createTime:I
 
-    iget v1, p2, Lcom/tencent/mm/plugin/sns/h/k;->field_createTime:I
+    iget v1, p2, Lcom/tencent/mm/plugin/sns/i/k;->field_createTime:I
 
     if-le v0, v1, :cond_0
 

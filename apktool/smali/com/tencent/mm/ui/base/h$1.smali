@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic kCR:Landroid/content/DialogInterface$OnClickListener;
+.field final synthetic lbW:Landroid/content/DialogInterface$OnClickListener;
 
-.field final synthetic kCS:Z
+.field final synthetic lbX:Z
 
-.field final synthetic kCT:Lcom/tencent/mm/ui/base/h;
+.field final synthetic lbY:Lcom/tencent/mm/ui/base/h;
 
 
 # direct methods
@@ -31,11 +31,11 @@
 
     .prologue
     .line 239
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/h$1;->kCT:Lcom/tencent/mm/ui/base/h;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/h$1;->lbY:Lcom/tencent/mm/ui/base/h;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/base/h$1;->kCR:Landroid/content/DialogInterface$OnClickListener;
+    iput-object p2, p0, Lcom/tencent/mm/ui/base/h$1;->lbW:Landroid/content/DialogInterface$OnClickListener;
 
-    iput-boolean p3, p0, Lcom/tencent/mm/ui/base/h$1;->kCS:Z
+    iput-boolean p3, p0, Lcom/tencent/mm/ui/base/h$1;->lbX:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,14 +49,14 @@
 
     .prologue
     .line 243
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/h$1;->kCR:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/h$1;->lbW:Landroid/content/DialogInterface$OnClickListener;
 
     if-eqz v0, :cond_0
 
     .line 244
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/h$1;->kCR:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/h$1;->lbW:Landroid/content/DialogInterface$OnClickListener;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/h$1;->kCT:Lcom/tencent/mm/ui/base/h;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/h$1;->lbY:Lcom/tencent/mm/ui/base/h;
 
     const/4 v2, -0x1
 
@@ -64,12 +64,12 @@
 
     .line 246
     :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/h$1;->kCS:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/h$1;->lbX:Z
 
     if-eqz v0, :cond_1
 
     .line 247
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/h$1;->kCT:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/h$1;->lbY:Lcom/tencent/mm/ui/base/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->dismiss()V
 

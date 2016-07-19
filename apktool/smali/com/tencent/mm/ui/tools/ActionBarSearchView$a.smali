@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract bil()V
+.method public abstract boi()V
 .end method

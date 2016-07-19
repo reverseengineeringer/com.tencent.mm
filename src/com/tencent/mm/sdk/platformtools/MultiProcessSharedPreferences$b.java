@@ -7,8 +7,8 @@ import java.util.Map;
 public final class MultiProcessSharedPreferences$b
   implements SharedPreferences.Editor
 {
-  private final Map jWx = new HashMap();
-  private boolean jWy = false;
+  private final Map<String, Object> kwC = new HashMap();
+  private boolean kwD = false;
   
   public MultiProcessSharedPreferences$b(MultiProcessSharedPreferences paramMultiProcessSharedPreferences) {}
   
@@ -17,47 +17,47 @@ public final class MultiProcessSharedPreferences$b
   {
     // Byte code:
     //   0: aload_0
-    //   1: getfield 19	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWv	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
-    //   4: invokestatic 36	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:c	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Z
+    //   1: getfield 20	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwR	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    //   4: invokestatic 37	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:c	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Z
     //   7: ifeq +5 -> 12
     //   10: iconst_0
     //   11: ireturn
     //   12: aload_0
-    //   13: getfield 19	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWv	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    //   13: getfield 20	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwR	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
     //   16: astore 4
     //   18: aload 4
     //   20: monitorenter
     //   21: aload_0
-    //   22: getfield 19	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWv	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    //   22: getfield 20	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwR	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
     //   25: aload_0
-    //   26: getfield 19	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWv	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
-    //   29: invokestatic 40	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:d	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Landroid/content/Context;
-    //   32: invokestatic 44	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:a	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;Landroid/content/Context;)V
+    //   26: getfield 20	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwR	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    //   29: invokestatic 41	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:d	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Landroid/content/Context;
+    //   32: invokestatic 45	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:a	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;Landroid/content/Context;)V
     //   35: aload_0
-    //   36: getfield 19	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWv	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
-    //   39: invokestatic 48	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:e	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)I
+    //   36: getfield 20	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwR	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    //   39: invokestatic 49	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:e	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)I
     //   42: istore_2
     //   43: aload_0
-    //   44: getfield 29	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWy	Z
+    //   44: getfield 30	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwD	Z
     //   47: istore_3
     //   48: aload_0
     //   49: monitorenter
-    //   50: invokestatic 52	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:aVh	()Landroid/net/Uri;
+    //   50: invokestatic 53	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:baq	()Landroid/net/Uri;
     //   53: aload_0
-    //   54: getfield 19	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWv	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
-    //   57: invokestatic 55	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:a	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Ljava/lang/String;
-    //   60: invokestatic 61	android/net/Uri:withAppendedPath	(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
+    //   54: getfield 20	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwR	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    //   57: invokestatic 56	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:a	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Ljava/lang/String;
+    //   60: invokestatic 62	android/net/Uri:withAppendedPath	(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
     //   63: aload_1
-    //   64: invokestatic 61	android/net/Uri:withAppendedPath	(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
+    //   64: invokestatic 62	android/net/Uri:withAppendedPath	(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
     //   67: astore_1
     //   68: aload_0
-    //   69: getfield 27	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWx	Ljava/util/Map;
-    //   72: checkcast 24	java/util/HashMap
-    //   75: invokestatic 67	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$c:f	(Ljava/util/HashMap;)Landroid/content/ContentValues;
+    //   69: getfield 28	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwC	Ljava/util/Map;
+    //   72: checkcast 25	java/util/HashMap
+    //   75: invokestatic 67	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$c:d	(Ljava/util/HashMap;)Landroid/content/ContentValues;
     //   78: astore 5
     //   80: aload_0
-    //   81: getfield 19	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWv	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
-    //   84: invokestatic 40	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:d	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Landroid/content/Context;
+    //   81: getfield 20	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwR	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    //   84: invokestatic 41	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:d	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Landroid/content/Context;
     //   87: invokevirtual 73	android/content/Context:getContentResolver	()Landroid/content/ContentResolver;
     //   90: aload_1
     //   91: aload 5
@@ -125,7 +125,7 @@ public final class MultiProcessSharedPreferences$b
   {
     try
     {
-      jWy = true;
+      kwD = true;
       return this;
     }
     finally {}
@@ -140,7 +140,7 @@ public final class MultiProcessSharedPreferences$b
   {
     try
     {
-      jWx.put(paramString, Boolean.valueOf(paramBoolean));
+      kwC.put(paramString, Boolean.valueOf(paramBoolean));
       return this;
     }
     finally {}
@@ -150,7 +150,7 @@ public final class MultiProcessSharedPreferences$b
   {
     try
     {
-      jWx.put(paramString, Float.valueOf(paramFloat));
+      kwC.put(paramString, Float.valueOf(paramFloat));
       return this;
     }
     finally {}
@@ -160,7 +160,7 @@ public final class MultiProcessSharedPreferences$b
   {
     try
     {
-      jWx.put(paramString, Integer.valueOf(paramInt));
+      kwC.put(paramString, Integer.valueOf(paramInt));
       return this;
     }
     finally {}
@@ -170,7 +170,7 @@ public final class MultiProcessSharedPreferences$b
   {
     try
     {
-      jWx.put(paramString, Long.valueOf(paramLong));
+      kwC.put(paramString, Long.valueOf(paramLong));
       return this;
     }
     finally {}
@@ -180,20 +180,20 @@ public final class MultiProcessSharedPreferences$b
   {
     try
     {
-      jWx.put(paramString1, paramString2);
+      kwC.put(paramString1, paramString2);
       return this;
     }
     finally {}
   }
   
   /* Error */
-  public final SharedPreferences.Editor putStringSet(String paramString, java.util.Set paramSet)
+  public final SharedPreferences.Editor putStringSet(String paramString, java.util.Set<String> paramSet)
   {
     // Byte code:
     //   0: aload_0
     //   1: monitorenter
     //   2: aload_0
-    //   3: getfield 27	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWx	Ljava/util/Map;
+    //   3: getfield 28	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwC	Ljava/util/Map;
     //   6: astore_3
     //   7: aload_2
     //   8: ifnonnull +18 -> 26
@@ -223,7 +223,7 @@ public final class MultiProcessSharedPreferences$b
     //   start	length	slot	name	signature
     //   0	43	0	this	b
     //   0	43	1	paramString	String
-    //   0	43	2	paramSet	java.util.Set
+    //   0	43	2	paramSet	java.util.Set<String>
     //   6	8	3	localMap	Map
     // Exception table:
     //   from	to	target	type
@@ -237,7 +237,7 @@ public final class MultiProcessSharedPreferences$b
   {
     try
     {
-      jWx.put(paramString, null);
+      kwC.put(paramString, null);
       return this;
     }
     finally {}

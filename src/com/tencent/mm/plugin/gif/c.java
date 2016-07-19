@@ -12,19 +12,25 @@ import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.os.Looper;
 import android.os.SystemClock;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class c
   extends Drawable
   implements Animatable
 {
-  private int cFj;
-  private final Paint cZX = new Paint(6);
-  private aa dsf = new aa(Looper.getMainLooper());
-  int dve = 0;
-  private long ewD = 0L;
-  private final Runnable ewJ = new Runnable()
+  private int cCm;
+  private final Paint cYD = new Paint(6);
+  private int dqk;
+  private ac dsv = new ac(Looper.getMainLooper());
+  public int dvw = 0;
+  private volatile boolean eCG = false;
+  private float eCK = 1.0F;
+  private float eCL = 1.0F;
+  private boolean eCM;
+  private final Rect eCN = new Rect();
+  private long eCW = 0L;
+  private final Runnable eDc = new Runnable()
   {
     public final void run()
     {
@@ -33,7 +39,7 @@ public final class c
       }
     }
   };
-  private final Runnable ewK = new Runnable()
+  private final Runnable eDd = new Runnable()
   {
     public final void run()
     {
@@ -42,139 +48,133 @@ public final class c
       }
     }
   };
-  private int ewU;
-  private int ewV;
-  private int[] ewW;
-  private Bitmap ewX = null;
-  private int ewY;
-  private boolean ewZ = false;
-  private volatile boolean ewn = false;
-  private float ewr = 1.0F;
-  private float ews = 1.0F;
-  private boolean ewt;
-  private final Rect ewu = new Rect();
-  boolean exa = true;
-  private String exb;
-  int exc = 0;
-  private d exd;
-  private Resources lL;
+  private int eDn;
+  private int eDo;
+  private int[] eDp;
+  private Bitmap eDq = null;
+  private boolean eDr = false;
+  public boolean eDs = true;
+  private String eDt;
+  public int eDu = 0;
+  private d eDv;
   private Context mContext;
+  private Resources mb;
   
   public c(Context paramContext, boolean paramBoolean1, boolean paramBoolean2, int paramInt, int[] paramArrayOfInt, String paramString)
   {
     mContext = paramContext;
-    lL = mContext.getResources();
-    ewZ = false;
-    exa = paramBoolean2;
-    exb = paramString;
-    ewV = paramInt;
-    ewW = paramArrayOfInt;
+    mb = mContext.getResources();
+    eDr = false;
+    eDs = paramBoolean2;
+    eDt = paramString;
+    eDo = paramInt;
+    eDp = paramArrayOfInt;
     if (!paramBoolean2)
     {
-      ewX = hD(pr(paramString));
-      ewY = ewX.getWidth();
-      cFj = ewX.getHeight();
-      if (ewW.length != 3) {
+      eDq = iJ(qI(paramString));
+      dqk = eDq.getWidth();
+      cCm = eDq.getHeight();
+      if (eDp.length != 3) {
         break label234;
       }
     }
     label234:
-    for (ewU = 300;; ewU = 100)
+    for (eDn = 300;; eDn = 100)
     {
-      exc = 0;
+      eDu = 0;
       return;
-      ewX = hD(ewW[0]);
+      eDq = iJ(eDp[0]);
       break;
     }
   }
   
   private void c(Runnable paramRunnable, long paramLong)
   {
-    ewD = (SystemClock.uptimeMillis() + paramLong);
-    if (dsf != null) {
-      dsf.postDelayed(paramRunnable, paramLong);
+    eCW = (SystemClock.uptimeMillis() + paramLong);
+    if (dsv != null) {
+      dsv.postDelayed(paramRunnable, paramLong);
     }
   }
   
-  private Bitmap hD(int paramInt)
+  private Bitmap iJ(int paramInt)
   {
-    return BitmapFactory.decodeResource(lL, paramInt);
+    return BitmapFactory.decodeResource(mb, paramInt);
   }
   
-  private int pr(String paramString)
+  private int qI(String paramString)
   {
     paramString = paramString.split("\\.")[0];
-    return lL.getIdentifier(paramString, "drawable", mContext.getPackageName());
+    return mb.getIdentifier(paramString, "drawable", mContext.getPackageName());
   }
   
   public final void draw(Canvas paramCanvas)
   {
-    if (ewt)
+    if (eCM)
     {
-      ewu.set(getBounds());
-      ewr = (ewu.width() / ewY);
-      ews = (ewu.height() / cFj);
-      ewt = false;
+      eCN.set(getBounds());
+      eCK = (eCN.width() / dqk);
+      eCL = (eCN.height() / cCm);
+      eCM = false;
     }
-    if (cZX.getShader() == null)
+    if (cYD.getShader() == null)
     {
-      paramCanvas.scale(ewr, ews);
-      if (ewZ)
+      paramCanvas.scale(eCK, eCL);
+      if (eDr)
       {
-        ewX = hD(ewV);
-        if ((ewX != null) && (!ewX.isRecycled())) {
-          paramCanvas.drawBitmap(ewX, 0.0F, 0.0F, cZX);
+        eDq = iJ(eDo);
+        if ((eDq != null) && (!eDq.isRecycled())) {
+          paramCanvas.drawBitmap(eDq, 0.0F, 0.0F, cYD);
         }
       }
       do
       {
         return;
-        if (exa) {
+        if (eDs) {
           break;
         }
-        ewX = hD(pr(exb));
-      } while ((ewX == null) || (ewX.isRecycled()));
-      paramCanvas.drawBitmap(ewX, 0.0F, 0.0F, cZX);
+        eDq = iJ(qI(eDt));
+      } while ((eDq == null) || (eDq.isRecycled()));
+      paramCanvas.drawBitmap(eDq, 0.0F, 0.0F, cYD);
       return;
-      u.i("!44@/B4Tb64lLpISAcxqEoGUAY5+K6tJ20pwMLxGN0upkhA=", "mCurrentIndex:%d mNextInvaliteTime:%d mLoop:%d", new Object[] { Integer.valueOf(dve), Integer.valueOf(ewU), Integer.valueOf(exc) });
-      ewX = hD(ewW[dve]);
-      if ((ewX != null) && (!ewX.isRecycled())) {
-        paramCanvas.drawBitmap(ewX, 0.0F, 0.0F, cZX);
+      v.i("MicroMsg.GIF.MMGIFGameDrawable", "mCurrentIndex:%d mNextInvaliteTime:%d mLoop:%d", new Object[] { Integer.valueOf(dvw), Integer.valueOf(eDn), Integer.valueOf(eDu) });
+      eDq = iJ(eDp[dvw]);
+      if ((eDq != null) && (!eDq.isRecycled())) {
+        paramCanvas.drawBitmap(eDq, 0.0F, 0.0F, cYD);
       }
-      dve += 1;
-      if (exc < 3)
+      dvw += 1;
+      if (eDu < 3)
       {
-        if (dve >= ewW.length)
+        if (dvw >= eDp.length)
         {
-          dve = 0;
-          exc += 1;
+          dvw = 0;
+          eDu += 1;
         }
-        c(ewK, ewU);
+        c(eDd, eDn);
         return;
       }
-      exa = false;
-      c(ewK, ewU);
-      c(ewJ, 0L);
+      eDs = false;
+      c(eDd, eDn);
+      c(eDc, 0L);
       return;
     }
-    u.i("!44@/B4Tb64lLpISAcxqEoGUAY5+K6tJ20pwMLxGN0upkhA=", "shader is not null.");
-    paramCanvas.drawRect(ewu, cZX);
+    v.i("MicroMsg.GIF.MMGIFGameDrawable", "shader is not null.");
+    paramCanvas.drawRect(eCN, cYD);
   }
   
   protected final void finalize()
   {
-    exd = null;
+    eDv = null;
     super.finalize();
   }
   
   public final int getIntrinsicHeight()
   {
-    return cFj;
+    return cCm;
   }
   
   public final int getIntrinsicWidth()
   {
-    return ewY;
+    return dqk;
   }
   
   public final int getOpacity()
@@ -184,34 +184,34 @@ public final class c
   
   public final boolean isRunning()
   {
-    return ewn;
+    return eCG;
   }
   
   protected final void onBoundsChange(Rect paramRect)
   {
     super.onBoundsChange(paramRect);
-    ewt = true;
+    eCM = true;
   }
   
   public final void setAlpha(int paramInt)
   {
-    cZX.setAlpha(paramInt);
+    cYD.setAlpha(paramInt);
   }
   
   public final void setColorFilter(ColorFilter paramColorFilter)
   {
-    cZX.setColorFilter(paramColorFilter);
+    cYD.setColorFilter(paramColorFilter);
   }
   
   public final void start()
   {
-    ewn = true;
-    dsf.post(ewK);
+    eCG = true;
+    dsv.post(eDd);
   }
   
   public final void stop()
   {
-    ewn = false;
+    eCG = false;
   }
 }
 

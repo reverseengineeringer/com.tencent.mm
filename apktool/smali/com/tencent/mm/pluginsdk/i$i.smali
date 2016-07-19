@@ -18,17 +18,17 @@
 .method public abstract a(Lcom/tencent/mm/pluginsdk/wallet/PayInfo;)Z
 .end method
 
-.method public abstract ac(Landroid/content/Context;Ljava/lang/String;)V
+.method public abstract af(Landroid/content/Context;Ljava/lang/String;)V
 .end method
 
-.method public abstract agV()Z
+.method public abstract ajA()Z
 .end method
 
-.method public abstract agW()Z
+.method public abstract ajB()Z
 .end method
 
-.method public abstract agX()Z
+.method public abstract ajC()Z
 .end method
 
-.method public abstract agY()Z
+.method public abstract ajD()Z
 .end method

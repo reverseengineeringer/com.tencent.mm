@@ -10,7 +10,7 @@ final class LoginHistoryUI$26
   
   public final void onClick(View paramView)
   {
-    ktx.Zi();
+    kSF.aby();
   }
 }
 

@@ -16,7 +16,7 @@ final class WelcomeSelectView$1
     paramView = new Intent();
     paramView.putExtra("not_auth_setting", true);
     paramView.putExtra("from_login_history", true);
-    a.coa.s(paramView, kwS.getContext());
+    a.cjo.s(paramView, kVZ.getContext());
   }
 }
 

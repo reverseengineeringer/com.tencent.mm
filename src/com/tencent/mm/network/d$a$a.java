@@ -13,7 +13,7 @@ final class d$a$a
     mRemote = paramIBinder;
   }
   
-  public final int A(byte[] paramArrayOfByte)
+  public final int F(byte[] paramArrayOfByte)
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -33,7 +33,7 @@ final class d$a$a
     }
   }
   
-  public final void F(byte[] paramArrayOfByte)
+  public final void L(byte[] paramArrayOfByte)
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -52,7 +52,7 @@ final class d$a$a
     }
   }
   
-  public final void G(byte[] paramArrayOfByte)
+  public final void M(byte[] paramArrayOfByte)
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -71,7 +71,7 @@ final class d$a$a
     }
   }
   
-  public final void aN(boolean paramBoolean)
+  public final void as(boolean paramBoolean)
   {
     int i = 0;
     Parcel localParcel1 = Parcel.obtain();
@@ -99,7 +99,7 @@ final class d$a$a
     return mRemote;
   }
   
-  public final void ba(int paramInt)
+  public final void bq(int paramInt)
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -108,6 +108,26 @@ final class d$a$a
       localParcel1.writeInterfaceToken("com.tencent.mm.network.IAccInfo_AIDL");
       localParcel1.writeInt(paramInt);
       mRemote.transact(3, localParcel1, localParcel2, 0);
+      localParcel2.readException();
+      return;
+    }
+    finally
+    {
+      localParcel2.recycle();
+      localParcel1.recycle();
+    }
+  }
+  
+  public final void g(String paramString, byte[] paramArrayOfByte)
+  {
+    Parcel localParcel1 = Parcel.obtain();
+    Parcel localParcel2 = Parcel.obtain();
+    try
+    {
+      localParcel1.writeInterfaceToken("com.tencent.mm.network.IAccInfo_AIDL");
+      localParcel1.writeString(paramString);
+      localParcel1.writeByteArray(paramArrayOfByte);
+      mRemote.transact(13, localParcel1, localParcel2, 0);
       localParcel2.readException();
       return;
     }
@@ -137,7 +157,7 @@ final class d$a$a
     }
   }
   
-  public final byte[] gf(String paramString)
+  public final byte[] gs(String paramString)
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -149,26 +169,6 @@ final class d$a$a
       localParcel2.readException();
       paramString = localParcel2.createByteArray();
       return paramString;
-    }
-    finally
-    {
-      localParcel2.recycle();
-      localParcel1.recycle();
-    }
-  }
-  
-  public final void h(String paramString, byte[] paramArrayOfByte)
-  {
-    Parcel localParcel1 = Parcel.obtain();
-    Parcel localParcel2 = Parcel.obtain();
-    try
-    {
-      localParcel1.writeInterfaceToken("com.tencent.mm.network.IAccInfo_AIDL");
-      localParcel1.writeString(paramString);
-      localParcel1.writeByteArray(paramArrayOfByte);
-      mRemote.transact(13, localParcel1, localParcel2, 0);
-      localParcel2.readException();
-      return;
     }
     finally
     {
@@ -197,7 +197,7 @@ final class d$a$a
     }
   }
   
-  public final void kj(String paramString)
+  public final void kT(String paramString)
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -234,7 +234,7 @@ final class d$a$a
     }
   }
   
-  public final int rg()
+  public final int rf()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -272,7 +272,7 @@ final class d$a$a
     }
   }
   
-  public final byte[] tq()
+  public final byte[] tr()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -291,7 +291,7 @@ final class d$a$a
     }
   }
   
-  public final byte[] vR()
+  public final byte[] vT()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -310,7 +310,7 @@ final class d$a$a
     }
   }
   
-  public final boolean vS()
+  public final boolean vU()
   {
     boolean bool = false;
     Parcel localParcel1 = Parcel.obtain();
@@ -333,7 +333,7 @@ final class d$a$a
     }
   }
   
-  public final byte[] vT()
+  public final byte[] vV()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -352,7 +352,7 @@ final class d$a$a
     }
   }
   
-  public final boolean vU()
+  public final boolean vW()
   {
     boolean bool = false;
     Parcel localParcel1 = Parcel.obtain();
@@ -375,7 +375,7 @@ final class d$a$a
     }
   }
   
-  public final byte[] vV()
+  public final byte[] vX()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -394,7 +394,7 @@ final class d$a$a
     }
   }
   
-  public final String wo()
+  public final String wq()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();

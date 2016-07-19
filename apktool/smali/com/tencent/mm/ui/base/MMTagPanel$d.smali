@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public kHB:Ljava/lang/String;
+.field public lgD:Ljava/lang/String;
 
-.field public kHC:Landroid/widget/TextView;
+.field public lgE:Landroid/widget/TextView;
 
 
 # direct methods

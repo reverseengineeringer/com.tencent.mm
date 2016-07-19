@@ -8,14 +8,50 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/plugin/report/service/BroadCastData;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field fTY:Ljava/util/ArrayList;
+.field gds:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field fTZ:Ljava/util/ArrayList;
+.field gdt:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field fUa:Ljava/util/ArrayList;
+.field gdu:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -45,21 +81,21 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fTY:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gds:Ljava/util/ArrayList;
 
     .line 146
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fTZ:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gdt:Ljava/util/ArrayList;
 
     .line 147
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fUa:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gdu:Ljava/util/ArrayList;
 
     .line 149
     return-void
@@ -77,38 +113,38 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fTY:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gds:Ljava/util/ArrayList;
 
     .line 146
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fTZ:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gdt:Ljava/util/ArrayList;
 
     .line 147
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fUa:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gdu:Ljava/util/ArrayList;
 
     .line 161
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fTY:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gds:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readTypedList(Ljava/util/List;Landroid/os/Parcelable$Creator;)V
 
     .line 162
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fTZ:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gdt:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readTypedList(Ljava/util/List;Landroid/os/Parcelable$Creator;)V
 
     .line 163
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fUa:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gdu:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -130,21 +166,21 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fTY:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gds:Ljava/util/ArrayList;
 
     .line 146
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fTZ:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gdt:Ljava/util/ArrayList;
 
     .line 147
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fUa:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gdu:Ljava/util/ArrayList;
 
     .line 152
     if-nez p1, :cond_0
@@ -157,29 +193,29 @@
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v1, p1, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fTY:Ljava/util/ArrayList;
+    iget-object v1, p1, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gds:Ljava/util/ArrayList;
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fTY:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gds:Ljava/util/ArrayList;
 
     .line 156
     new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v1, p1, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fTZ:Ljava/util/ArrayList;
+    iget-object v1, p1, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gdt:Ljava/util/ArrayList;
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fTZ:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gdt:Ljava/util/ArrayList;
 
     .line 157
     new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v1, p1, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fUa:Ljava/util/ArrayList;
+    iget-object v1, p1, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gdu:Ljava/util/ArrayList;
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fUa:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gdu:Ljava/util/ArrayList;
 
     goto :goto_0
 .end method
@@ -201,17 +237,17 @@
 
     .prologue
     .line 219
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fTY:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gds:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
     .line 220
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fTZ:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gdt:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
     .line 221
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->fUa:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/BroadCastData;->gdu:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 

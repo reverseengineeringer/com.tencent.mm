@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center|left" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="60.0dip" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:mm="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="@color/pt" android:id="@android:id/title" android:layout_width="73.0dip" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:singleLine="true" style="@style/MMFontPreferenceLarge" />
+    <com.tencent.mm.ui.base.MaskLayout android:id="@id/bip" android:visibility="gone" android:layout_width="42.0dip" android:layout_height="42.0dip" android:layout_marginRight="3.0dip" mm:foreground="@drawable/w7">
+        <ImageView android:id="@id/g6" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.tencent.mm.ui.base.MaskLayout>
+    <com.tencent.mm.ui.base.MaskLayout android:id="@id/bir" android:visibility="gone" android:layout_width="42.0dip" android:layout_height="42.0dip" android:layout_marginRight="3.0dip" mm:foreground="@drawable/w7">
+        <ImageView android:id="@id/g6" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.tencent.mm.ui.base.MaskLayout>
+    <com.tencent.mm.ui.base.MaskLayout android:id="@id/bit" android:visibility="gone" android:layout_width="42.0dip" android:layout_height="42.0dip" android:layout_marginRight="3.0dip" mm:foreground="@drawable/w7">
+        <ImageView android:id="@id/g6" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.tencent.mm.ui.base.MaskLayout>
+    <com.tencent.mm.ui.base.MaskLayout android:id="@id/biv" android:visibility="gone" android:layout_width="42.0dip" android:layout_height="42.0dip" android:layout_marginRight="3.0dip" mm:foreground="@drawable/w7">
+        <ImageView android:id="@id/g6" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.tencent.mm.ui.base.MaskLayout>
+</LinearLayout>

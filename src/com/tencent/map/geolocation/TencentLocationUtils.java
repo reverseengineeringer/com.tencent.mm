@@ -2,7 +2,7 @@ package com.tencent.map.geolocation;
 
 import android.content.Context;
 import ct.b.a;
-import ct.cz;
+import ct.cu;
 
 public class TencentLocationUtils
 {
@@ -53,8 +53,8 @@ public class TencentLocationUtils
     if (paramContext == null) {
       throw new NullPointerException();
     }
-    cz.a();
-    return (cz.a(paramContext) & 0x10) == 0;
+    cu.a();
+    return (cu.a(paramContext) & 0x10) == 0;
   }
 }
 

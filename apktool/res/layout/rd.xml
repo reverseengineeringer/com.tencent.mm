@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/ana" android:background="@drawable/t5" android:padding="@dimen/cy" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/alt" android:layout_width="@dimen/gv" android:layout_height="@dimen/gv" android:scaleType="fitXY" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:contentDescription="@string/fn" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/avu" android:paddingLeft="@dimen/hr" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hr">
+                <TextView android:textSize="@dimen/gz" android:textColor="@color/ff" android:ellipsize="end" android:id="@id/a_o" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/gz" android:textColor="@color/f4" android:ellipsize="end" android:id="@id/alx" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/gz" android:textColor="@color/f4" android:ellipsize="end" android:id="@id/avv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hr" android:maxLines="2" android:drawablePadding="@dimen/cp" />
+            <LinearLayout android:id="@id/avw" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hr">
+                <com.tencent.mm.plugin.game.ui.GameIconGridView android:id="@id/avx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:horizontalSpacing="@dimen/cp" android:verticalSpacing="@dimen/cp" android:stretchMode="none" android:columnWidth="@dimen/h1" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/avy" android:background="@drawable/g5" android:layout_width="fill_parent" android:layout_height="47.0dip" android:layout_marginBottom="@dimen/hr">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/avz" android:background="@color/ey" android:visibility="gone" android:layout_width="@dimen/gd" android:layout_height="@dimen/gd" android:layout_marginLeft="@dimen/cp" />
+                <TextView android:enabled="true" android:textSize="@dimen/gz" android:textColor="@color/f4" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/aw0" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/cy" android:layout_marginRight="@dimen/cy" android:maxLines="2" />
+            </LinearLayout>
+            <ImageView android:id="@id/aw1" android:background="@color/ey" android:visibility="gone" android:layout_width="245.0dip" android:layout_height="90.0dip" android:layout_marginBottom="@dimen/hr" android:scaleType="fitXY" />
+            <LinearLayout android:descendantFocusability="blocksDescendants" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@id/aw2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/cy" style="@style/MMGameCenterMsgTimeFont" />
+                <TextView android:id="@id/aw3" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/gr" style="@style/MMGameCenterMsgGameNameFont" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

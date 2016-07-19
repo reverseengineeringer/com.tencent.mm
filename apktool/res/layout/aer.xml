@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <TextView android:text="@string/dc8" style="@style/WalletElementTips" />
+    <com.tencent.mm.wallet_core.ui.formview.WalletFormView android:id="@id/cnl" wallet:layoutRes="@layout/ady" wallet:infoIvVisibility="bb" wallet:titleTvVisibility="bb" wallet:contentText="@string/dal" style="@style/ClickableWalletFormStyle" />
+    <TextView android:text="@string/dc7" style="@style/WalletElementTips" />
+</LinearLayout>

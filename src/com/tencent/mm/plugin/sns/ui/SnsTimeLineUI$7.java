@@ -1,31 +1,14 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.e.a.lx;
+import com.tencent.mm.sdk.c.c;
 
 final class SnsTimeLineUI$7
-  implements TestTimeForSns.a
+  extends c<lx>
 {
-  SnsTimeLineUI$7(SnsTimeLineUI paramSnsTimeLineUI) {}
-  
-  public final void kw()
+  SnsTimeLineUI$7(SnsTimeLineUI paramSnsTimeLineUI)
   {
-    u.i("!32@/B4Tb64lLpIApwzsVfw/GSpHowATRrWf", "sns has drawed");
-    SnsTimeLineUI.s(hkJ).post(new Runnable()
-    {
-      public final void run()
-      {
-        if ((SnsTimeLineUI.b(hkJ) == null) || (SnsTimeLineUI.s(hkJ) == null))
-        {
-          u.i("!32@/B4Tb64lLpIApwzsVfw/GSpHowATRrWf", "onViewDrawed is error");
-          return;
-        }
-        bhkJ).hjv = true;
-        SnsTimeLineUI.s(hkJ).setListener(null);
-        SnsTimeLineUI.a(hkJ, SnsTimeLineUI.t(hkJ));
-        hkJ.aBq();
-        SnsTimeLineUI.a(hkJ, false);
-      }
-    });
+    kum = lx.class.getName().hashCode();
   }
 }
 

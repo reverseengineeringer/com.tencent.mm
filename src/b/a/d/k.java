@@ -8,7 +8,7 @@ public final class k
   
   public k(String paramString)
   {
-    d.c(paramString, "Must provide a valid string as verifier");
+    d.d(paramString, "Must provide a valid string as verifier");
     value = paramString;
   }
 }

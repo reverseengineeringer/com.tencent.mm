@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.tencent.mm.ui.base.MMPullDownView android:id="@id/bfx" android:background="@color/ce" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:id="@id/bfy" android:paddingLeft="@dimen/hb" android:paddingRight="@dimen/hb" style="@style/MMList" />
+        </com.tencent.mm.ui.base.MMPullDownView>
+        <ScrollView android:id="@id/bfz" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_width="@dimen/hd" android:layout_height="@dimen/hd" android:layout_marginTop="@dimen/h6" android:src="@raw/mass_send_icon" />
+                <TextView android:gravity="center" android:layout_marginLeft="@dimen/iy" android:layout_marginTop="@dimen/he" android:layout_marginRight="@dimen/iy" android:text="@string/biq" android:lineSpacingExtra="4.0dip" style="@style/MMBriefText" />
+                <Button android:id="@id/bg0" android:layout_marginLeft="@dimen/iy" android:layout_marginTop="@dimen/hf" android:layout_marginRight="@dimen/iy" android:text="@string/bik" style="@style/MMSolidGreenLargeButton" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/bg1" android:background="@drawable/aei" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/bg2" android:layout_margin="@dimen/j8" android:text="@string/bik" style="@style/MMSolidGreenSmallButton" />
+    </LinearLayout>
+</LinearLayout>

@@ -18,8 +18,8 @@
 .method public abstract a(Z[Ljava/lang/String;J)V
 .end method
 
-.method public abstract aRk()V
+.method public abstract aVW()V
 .end method
 
-.method public abstract aRl()V
+.method public abstract aVX()V
 .end method

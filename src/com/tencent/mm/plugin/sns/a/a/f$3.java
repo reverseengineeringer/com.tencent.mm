@@ -9,12 +9,12 @@ final class f$3
   
   public final void run()
   {
-    if (gGJ.bU(gGI))
+    if (gNl.ck(gNk))
     {
-      f localf = gGJ;
-      long l = gGM;
-      if (!gGy.contains(Long.valueOf(l))) {
-        gGy.add(Long.valueOf(l));
+      f localf = gNl;
+      long l = gNn;
+      if (!gNa.contains(Long.valueOf(l))) {
+        gNa.add(Long.valueOf(l));
       }
     }
   }

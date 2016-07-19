@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field private cRn:Landroid/view/View;
+.field private cOS:Landroid/view/View;
 
-.field public cTk:Landroid/widget/BaseAdapter;
+.field public cQB:Landroid/widget/BaseAdapter;
 
-.field private cUz:Landroid/widget/ListView;
+.field private cSm:Landroid/widget/ListView;
 
-.field public iRx:Landroid/widget/AdapterView$OnItemClickListener;
+.field public joG:Landroid/widget/AdapterView$OnItemClickListener;
 
-.field private km:Ljava/lang/CharSequence;
+.field private kD:Ljava/lang/CharSequence;
 
 .field private mContext:Landroid/content/Context;
 
@@ -25,7 +25,7 @@
     const/4 v2, 0x0
 
     .line 32
-    const v0, 0x7f06019d
+    const v0, 0x7f0c026b
 
     invoke-direct {p0, p1, v0}, Landroid/app/AlertDialog;-><init>(Landroid/content/Context;I)V
 
@@ -35,7 +35,7 @@
     .line 34
     iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/tencent/mm/aw/a;->da(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/tencent/mm/az/a;->cY(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -43,18 +43,18 @@
 
     iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0a058c
+    const v1, 0x7f0303a5
 
     invoke-static {v0, v1, v2}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/k;->cRn:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/k;->cOS:Landroid/view/View;
 
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->cRn:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->cOS:Landroid/view/View;
 
-    const v1, 0x7f070101
+    const v1, 0x7f100625
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -62,7 +62,7 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/k;->cUz:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/k;->cSm:Landroid/widget/ListView;
 
     .line 35
     return-void
@@ -71,13 +71,13 @@
     :cond_0
     iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0a05bd
+    const v1, 0x7f0303a4
 
     invoke-static {v0, v1, v2}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/k;->cRn:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/k;->cOS:Landroid/view/View;
 
     goto :goto_0
 .end method
@@ -103,7 +103,7 @@
     move-exception v0
 
     .line 95
-    const-string/jumbo v1, "!32@/B4Tb64lLpL18YAaU+LIVl5n0KRiRLyV"
+    const-string/jumbo v1, "MicroMsg.MMListDialog"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -123,7 +123,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -136,7 +136,7 @@
     invoke-super {p0, p1}, Landroid/app/AlertDialog;->onCreate(Landroid/os/Bundle;)V
 
     .line 40
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->cRn:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->cOS:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/k;->setContentView(Landroid/view/View;)V
 
@@ -152,7 +152,7 @@
     if-eqz p1, :cond_0
 
     .line 57
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/k;->km:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/k;->kD:Ljava/lang/CharSequence;
 
     .line 61
     :goto_0
@@ -162,7 +162,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/k;->km:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/k;->kD:Ljava/lang/CharSequence;
 
     goto :goto_0
 .end method
@@ -172,37 +172,37 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->km:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->kD:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->km:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->kD:Ljava/lang/CharSequence;
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
     .line 81
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->iRx:Landroid/widget/AdapterView$OnItemClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->joG:Landroid/widget/AdapterView$OnItemClickListener;
 
     if-eqz v0, :cond_1
 
     .line 82
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->cUz:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->cSm:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/k;->iRx:Landroid/widget/AdapterView$OnItemClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/k;->joG:Landroid/widget/AdapterView$OnItemClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 84
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->cTk:Landroid/widget/BaseAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->cQB:Landroid/widget/BaseAdapter;
 
     if-eqz v0, :cond_2
 
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->cUz:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/k;->cSm:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/k;->cTk:Landroid/widget/BaseAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/k;->cQB:Landroid/widget/BaseAdapter;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 

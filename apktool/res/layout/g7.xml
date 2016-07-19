@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/ChattingUIContent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/chatting_item_avatar_from" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/gv" android:visibility="gone" style="@style/ChattingUISenderText" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/a0s" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/a1f" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <ImageView android:id="@id/a16" android:background="@drawable/cc" android:layout_width="@dimen/l9" android:layout_height="@dimen/l8" />
+                <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/a2d" android:background="@drawable/agx" android:paddingLeft="15.0dip" android:paddingRight="@dimen/hr" android:paddingBottom="@dimen/cp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/jf" android:textColor="@color/ow" android:id="@id/a2e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/jf" android:textColor="@color/ow" android:gravity="right" android:id="@id/a2f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="center" android:id="@id/a2b" android:background="@null" android:layout_width="52.0dip" android:layout_height="52.0dip" />
+                <com.tencent.mm.ui.widget.MMPinProgressBtn android:layout_gravity="center" android:id="@id/a2g" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" app:innerSize="36.0dip" />
+            </FrameLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/hr">
+                <ImageView android:id="@id/a17" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/kz" />
+                <ImageView android:id="@id/a18" android:background="@drawable/o1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:id="@id/zq" android:background="@drawable/a8" android:text="@string/y1" style="@style/ChattingItemSourceTextView" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -2,12 +2,12 @@ package com.tencent.mm.plugin.sns.ui;
 
 final class LocationWidget$b
 {
-  String cKD = "";
-  long fiT = -1L;
-  long fiU = -1L;
-  long fiV = -1L;
-  int fiW = 0;
-  int fjc = 0;
+  String cHG = "";
+  long frR = -1L;
+  long frS = -1L;
+  long frT = -1L;
+  int frU = 0;
+  int frZ = 0;
   int index;
   
   LocationWidget$b(LocationWidget paramLocationWidget) {}

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/LauncherUI;->ha(Z)V
+    value = Lcom/tencent/mm/ui/LauncherUI;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,20 @@
 
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic coh:I
+
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/LauncherUI;)V
+.method constructor <init>(Lcom/tencent/mm/ui/LauncherUI;I)V
     .locals 0
 
     .prologue
-    .line 3711
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$26;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 4171
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$26;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    iput p2, p0, Lcom/tencent/mm/ui/LauncherUI$26;->coh:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,98 +40,27 @@
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
+.method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
     .prologue
-    .line 3730
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
+    .line 4177
+    :try_start_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$26;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    move-result-object v0
+    iget v1, p0, Lcom/tencent/mm/ui/LauncherUI$26;->coh:I
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->aUY()V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ak;->J(Landroid/content/Context;I)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3731
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->pq(I)V
-
-    .line 3732
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$26;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->B(Lcom/tencent/mm/ui/LauncherUI;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 3733
-    const-string/jumbo v0, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
-
-    const-string/jumbo v1, "start  setAppTagUnreadNow"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 3734
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$26;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/LauncherUI;->bai()V
-
-    .line 3736
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$26;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->t(Lcom/tencent/mm/ui/LauncherUI;)V
-
-    .line 3737
-    const-string/jumbo v0, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
-
-    const-string/jumbo v1, "klem pop out onAnimationEnd"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 3738
+    .line 4180
+    :goto_0
     return-void
-.end method
 
-.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
+    .line 4179
+    :catch_0
+    move-exception v0
 
-    .prologue
-    .line 3725
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 2
-
-    .prologue
-    .line 3715
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->aUV()V
-
-    .line 3716
-    const/4 v0, -0x8
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->pq(I)V
-
-    .line 3717
-    const-string/jumbo v0, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
-
-    const-string/jumbo v1, "klem pop out onAnimationStart"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 3719
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$26;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->c(Lcom/tencent/mm/ui/LauncherUI;Z)V
-
-    .line 3720
-    return-void
+    goto :goto_0
 .end method

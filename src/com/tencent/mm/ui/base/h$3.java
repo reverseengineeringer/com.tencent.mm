@@ -7,7 +7,7 @@ final class h$3
   
   public final void run()
   {
-    kCT.dismiss();
+    lbY.dismiss();
   }
 }
 

@@ -4,33 +4,28 @@ import android.content.Context;
 import android.text.ClipboardManager;
 import android.util.AttributeSet;
 import android.widget.EditText;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 public class PasterEditText
   extends EditText
 {
   private Context context;
-  private ClipboardManager hdU = null;
-  private int hdV = 0;
+  private ClipboardManager hsF = null;
+  public int hsG = 0;
   
   public PasterEditText(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
     context = paramContext;
-    hdU = ((ClipboardManager)context.getSystemService("clipboard"));
-  }
-  
-  public int getPasterLen()
-  {
-    return hdV;
+    hsF = ((ClipboardManager)context.getSystemService("clipboard"));
   }
   
   public boolean onTextContextMenuItem(int paramInt)
   {
     if (paramInt == 16908322)
     {
-      if ((hdU != null) && (hdU.getText() != null) && ((hdU.getText() instanceof String)) && (!ay.kz((String)hdU.getText()))) {
-        hdV += hdU.getText().length();
+      if ((hsF != null) && (hsF.getText() != null) && ((hsF.getText() instanceof String)) && (!be.kf((String)hsF.getText()))) {
+        hsG += hsF.getText().length();
       }
       return super.onTextContextMenuItem(paramInt);
     }

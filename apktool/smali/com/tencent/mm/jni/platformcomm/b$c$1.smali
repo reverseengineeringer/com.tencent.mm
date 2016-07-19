@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/jni/platformcomm/b$c;->qW()V
+    value = Lcom/tencent/mm/jni/platformcomm/b$c;->pL()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -37,7 +37,7 @@
     move-result-object v0
 
     .line 187
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -69,17 +69,17 @@
     move-result-object v2
 
     .line 197
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-static {v3, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->d(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v3, v1}, Lcom/tencent/mm/sdk/platformtools/be;->f(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -103,34 +103,34 @@
 
     invoke-virtual {p2, v3, v4, v5}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
-    move-result-wide v3
+    move-result-wide v4
 
     .line 205
-    const-string/jumbo v5, "com.tencent.mm.ACTION.note_tracemsg_lock"
+    const-string/jumbo v3, "com.tencent.mm.ACTION.note_tracemsg_lock"
 
-    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v3
 
-    if-eqz v5, :cond_2
+    if-eqz v3, :cond_2
 
     .line 206
-    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/jni/platformcomm/b$c;->d(Ljava/lang/String;Ljava/lang/String;J)V
+    invoke-static {v2, v1, v4, v5}, Lcom/tencent/mm/jni/platformcomm/b$c;->c(Ljava/lang/String;Ljava/lang/String;J)V
 
     goto :goto_0
 
     .line 209
     :cond_2
-    const-string/jumbo v5, "com.tencent.mm.ACTION.note_tracemsg_unlock"
+    const-string/jumbo v3, "com.tencent.mm.ACTION.note_tracemsg_unlock"
 
-    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 210
-    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/jni/platformcomm/b$c;->e(Ljava/lang/String;Ljava/lang/String;J)V
+    invoke-static {v2, v1, v4, v5}, Lcom/tencent/mm/jni/platformcomm/b$c;->d(Ljava/lang/String;Ljava/lang/String;J)V
 
     goto :goto_0
 .end method

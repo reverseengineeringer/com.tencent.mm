@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lvn:Lcom/tencent/mm/ui/tools/DisasterUI;
+.field final synthetic lWp:Lcom/tencent/mm/ui/tools/DisasterUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 38
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/DisasterUI$2;->lvn:Lcom/tencent/mm/ui/tools/DisasterUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/DisasterUI$2;->lWp:Lcom/tencent/mm/ui/tools/DisasterUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/DisasterUI$2;->lvn:Lcom/tencent/mm/ui/tools/DisasterUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/DisasterUI$2;->lWp:Lcom/tencent/mm/ui/tools/DisasterUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/DisasterUI;->finish()V
 

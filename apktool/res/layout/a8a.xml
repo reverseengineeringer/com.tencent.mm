@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/cf" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/he">
+            <View android:layout_width="0.0dip" android:layout_height="@dimen/d5" android:layout_weight="1.0" />
+            <com.tencent.mm.ui.base.MMTextView android:id="@id/c45" android:background="@drawable/da" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="215.0dip" android:minHeight="@dimen/d5" android:text="@string/bu0" style="@style/ChattingUIText" />
+            <ImageView android:id="@id/c46" android:layout_marginRight="@dimen/j8" style="@style/ChattingUIAvatarTo" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/he">
+            <ImageView android:layout_marginLeft="@dimen/j8" android:src="@drawable/icon" style="@style/ChattingUIAvatarFrom" />
+            <com.tencent.mm.ui.base.MMTextView android:id="@id/c47" android:background="@drawable/cm" android:maxWidth="225.0dip" android:minHeight="@dimen/d5" android:text="@string/cbt" style="@style/ChattingUIText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/he">
+            <ImageView android:layout_marginLeft="@dimen/j8" android:src="@drawable/icon" style="@style/ChattingUIAvatarFrom" />
+            <com.tencent.mm.ui.base.MMTextView android:id="@id/c48" android:background="@drawable/cm" android:maxWidth="225.0dip" android:minHeight="@dimen/d5" android:text="@string/cbr" style="@style/ChattingUIText" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.tencent.mm.plugin.setting.ui.widget.FontSelectorView android:id="@id/c49" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

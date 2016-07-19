@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/sa" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8" android:layout_marginTop="@dimen/j8" android:layout_marginRight="@dimen/j8"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/wk" android:layout_width="fill_parent" android:layout_height="57.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/wl" android:background="@drawable/afb" android:layout_width="fill_parent" android:layout_height="57.0dip" android:layout_centerInParent="true">
+            <ImageView android:id="@id/wm" android:visibility="visible" android:layout_width="@dimen/l1" android:layout_height="@dimen/l1" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/hr" android:src="@raw/actionbar_particular_icon" android:scaleType="fitXY" />
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/bj" android:ellipsize="end" android:gravity="left" android:id="@id/wn" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/bj" android:ellipsize="end" android:gravity="center" android:id="@id/wo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/i7" android:singleLine="true" />
+        </LinearLayout>
+        <ImageView android:id="@id/wp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/hi" android:src="@drawable/afq" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:id="@id/ry" android:background="@drawable/dw" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/hr" android:layout_marginRight="@dimen/hr" android:layout_marginBottom="0.0dip" android:layout_alignBottom="@id/wl" android:layerType="software" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/wq" android:background="@drawable/afa" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.tencent.mm.ui.base.MMSmoothHorizontalScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:overScrollMode="never">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/wr" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.tencent.mm.ui.base.MMSmoothHorizontalScrollView>
+    </LinearLayout>
+</LinearLayout>

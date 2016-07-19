@@ -11,13 +11,13 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.PopupWindow;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class o
   extends PopupWindow
 {
-  private View.OnTouchListener kFz;
+  private View.OnTouchListener leD;
   private Context mContext = null;
   
   public o(Context paramContext)
@@ -54,7 +54,7 @@ public class o
     }
     catch (Exception localException)
     {
-      u.e("!32@/B4Tb64lLpLKmnl4Jnfl+pqhp+Z26Rpq", "dismiss exception, e = " + localException.getMessage());
+      v.e("MicroMsg.MMPopupWindow", "dismiss exception, e = " + localException.getMessage());
     }
   }
   
@@ -78,7 +78,7 @@ public class o
         return;
       }
       if (mContext != null) {}
-      for (localObject1 = mContext;; localObject1 = y.getContext())
+      for (localObject1 = mContext;; localObject1 = aa.getContext())
       {
         localObject1 = new a((Context)localObject1);
         ((a)localObject1).setBackgroundDrawable(paramDrawable);
@@ -138,7 +138,7 @@ public class o
   
   public void setTouchInterceptor(View.OnTouchListener paramOnTouchListener)
   {
-    kFz = paramOnTouchListener;
+    leD = paramOnTouchListener;
   }
   
   private final class a

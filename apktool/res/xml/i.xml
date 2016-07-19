@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator android:label="@string/fn" android:icon="@drawable/icon" android:accountType="com.tencent.mm.account" android:smallIcon="@drawable/icon" android:accountPreferences="@xml/a"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic gPj:J
+.field final synthetic gXl:J
 
-.field final synthetic iCh:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+.field final synthetic iYR:Lcom/tencent/mm/pluginsdk/model/downloader/a;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 139
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/a$7;->iCh:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/a$7;->iYR:Lcom/tencent/mm/pluginsdk/model/downloader/a;
 
-    iput-wide p2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/a$7;->gPj:J
+    iput-wide p2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/a$7;->gXl:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,14 +45,14 @@
 
     .prologue
     .line 142
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->aQa()Ljava/util/Vector;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->aUJ()Ljava/util/Vector;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 143
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->aQa()Ljava/util/Vector;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->aUJ()Ljava/util/Vector;
 
     move-result-object v0
 
@@ -74,9 +74,9 @@
     check-cast v0, Lcom/tencent/mm/pluginsdk/model/downloader/k;
 
     .line 144
-    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/a$7;->gPj:J
+    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/a$7;->gXl:J
 
-    invoke-interface {v0, v2, v3}, Lcom/tencent/mm/pluginsdk/model/downloader/k;->bu(J)V
+    invoke-interface {v0, v2, v3}, Lcom/tencent/mm/pluginsdk/model/downloader/k;->bF(J)V
 
     goto :goto_0
 

@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.wallet;
 
 public abstract interface a
 {
-  public abstract void z(int paramInt, String paramString);
+  public abstract void F(int paramInt, String paramString);
 }
 
 /* Location:

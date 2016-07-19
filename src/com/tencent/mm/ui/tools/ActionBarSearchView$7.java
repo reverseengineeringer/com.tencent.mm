@@ -1,7 +1,6 @@
 package com.tencent.mm.ui.tools;
 
 import android.widget.EditText;
-import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.widget.AutoMatchKeywordEditText.a;
 import java.lang.ref.WeakReference;
 
@@ -12,12 +11,12 @@ final class ActionBarSearchView$7
   
   public final void a(EditText paramEditText, int paramInt1, int paramInt2)
   {
-    u.d("!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE=", "start : %d, stop : %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-    Object localObject = ActionBarSearchView.b(ltH);
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.ActionBarSearchView", "start : %d, stop : %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    Object localObject = ActionBarSearchView.b(lUJ);
     EditText localEditText;
-    if (lys)
+    if (lZg)
     {
-      localEditText = (EditText)lyq.get();
+      localEditText = (EditText)lZe.get();
       if ((localEditText != null) && (paramEditText == localEditText)) {
         break label67;
       }
@@ -38,18 +37,18 @@ final class ActionBarSearchView$7
         if (paramInt2 != i) {
           break;
         }
-        localObject = ((v)localObject).rS(paramInt2);
-      } while ((localObject == null) || (!lyB));
+        localObject = ((v)localObject).tW(paramInt2);
+      } while ((localObject == null) || (!lZp));
       localEditText.setTextKeepState(paramEditText);
       paramInt1 = start;
       localEditText.setSelection(length + paramInt1);
       return;
-      v.b localb = ((v)localObject).rS(paramInt2);
+      v.b localb = ((v)localObject).tW(paramInt2);
       paramInt1 = paramInt2;
       if (localb != null)
       {
         paramInt1 = paramInt2;
-        if (lyB) {
+        if (lZp) {
           paramInt1 = start + length;
         }
       }
@@ -59,8 +58,8 @@ final class ActionBarSearchView$7
         localEditText.setSelection(paramInt1);
         return;
       }
-      localObject = ((v)localObject).rS(i);
-    } while ((localObject == null) || (!lyB));
+      localObject = ((v)localObject).tW(i);
+    } while ((localObject == null) || (!lZp));
     paramInt2 = start;
     localEditText.setTextKeepState(paramEditText);
     localEditText.setSelection(paramInt1, paramInt2);

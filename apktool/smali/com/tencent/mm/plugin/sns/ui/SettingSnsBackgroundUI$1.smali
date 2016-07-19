@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic haX:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
+.field final synthetic hoo:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 137
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$1;->haX:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$1;->hoo:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,8 +36,8 @@
 
 
 # virtual methods
-.method public final vP(Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
+.method public final xc(Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
 
     .prologue
     .line 140
@@ -45,7 +45,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$1;->haX:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$1;->hoo:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
 
     iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->filePath:Ljava/lang/String;
 
@@ -55,9 +55,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -78,7 +78,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayW()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBx()Ljava/lang/String;
 
     move-result-object v2
 

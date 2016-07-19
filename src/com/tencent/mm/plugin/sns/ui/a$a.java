@@ -1,18 +1,9 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.view.View;
+import android.annotation.TargetApi;
 
-final class a$a
-{
-  View gFN = null;
-  String gRB;
-  
-  public a$a(a parama, String paramString, View paramView)
-  {
-    gRB = paramString;
-    gFN = paramView;
-  }
-}
+@TargetApi(18)
+public abstract interface a$a {}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.plugin.sns.ui.a.a

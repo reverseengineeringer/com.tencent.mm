@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hdQ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
+.field final synthetic hsD:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 113
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$1;->hdQ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$1;->hsD:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

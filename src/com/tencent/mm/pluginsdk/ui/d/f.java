@@ -7,27 +7,27 @@ import android.text.SpannableString;
 public final class f
   implements GetChars, Spannable, CharSequence
 {
-  private SpannableString iPJ = null;
+  private SpannableString jmQ = null;
   
   public f()
   {
-    iPJ = new SpannableString("");
+    jmQ = new SpannableString("");
   }
   
   public f(SpannableString paramSpannableString)
   {
-    iPJ = paramSpannableString;
+    jmQ = paramSpannableString;
   }
   
   public f(CharSequence paramCharSequence)
   {
-    iPJ = new SpannableString(paramCharSequence);
+    jmQ = new SpannableString(paramCharSequence);
   }
   
   private void a(Object paramObject, int paramInt1, int paramInt2, int paramInt3)
   {
-    if ((paramInt1 >= 0) && (paramInt2 <= iPJ.length())) {
-      iPJ.setSpan(paramObject, paramInt1, paramInt2, paramInt3);
+    if ((paramInt1 >= 0) && (paramInt2 <= jmQ.length())) {
+      jmQ.setSpan(paramObject, paramInt1, paramInt2, paramInt3);
     }
   }
   
@@ -38,7 +38,7 @@ public final class f
   
   public final char charAt(int paramInt)
   {
-    return iPJ.charAt(paramInt);
+    return jmQ.charAt(paramInt);
   }
   
   public final void e(Object paramObject, CharSequence paramCharSequence)
@@ -48,42 +48,42 @@ public final class f
   
   public final void getChars(int paramInt1, int paramInt2, char[] paramArrayOfChar, int paramInt3)
   {
-    iPJ.getChars(paramInt1, paramInt2, paramArrayOfChar, paramInt3);
+    jmQ.getChars(paramInt1, paramInt2, paramArrayOfChar, paramInt3);
   }
   
   public final int getSpanEnd(Object paramObject)
   {
-    return iPJ.getSpanEnd(paramObject);
+    return jmQ.getSpanEnd(paramObject);
   }
   
   public final int getSpanFlags(Object paramObject)
   {
-    return iPJ.getSpanFlags(paramObject);
+    return jmQ.getSpanFlags(paramObject);
   }
   
   public final int getSpanStart(Object paramObject)
   {
-    return iPJ.getSpanStart(paramObject);
+    return jmQ.getSpanStart(paramObject);
   }
   
-  public final Object[] getSpans(int paramInt1, int paramInt2, Class paramClass)
+  public final <T> T[] getSpans(int paramInt1, int paramInt2, Class<T> paramClass)
   {
-    return iPJ.getSpans(paramInt1, paramInt2, paramClass);
+    return jmQ.getSpans(paramInt1, paramInt2, paramClass);
   }
   
   public final int length()
   {
-    return iPJ.length();
+    return jmQ.length();
   }
   
   public final int nextSpanTransition(int paramInt1, int paramInt2, Class paramClass)
   {
-    return iPJ.nextSpanTransition(paramInt1, paramInt2, paramClass);
+    return jmQ.nextSpanTransition(paramInt1, paramInt2, paramClass);
   }
   
   public final void removeSpan(Object paramObject)
   {
-    iPJ.removeSpan(paramObject);
+    jmQ.removeSpan(paramObject);
   }
   
   public final void setSpan(Object paramObject, int paramInt1, int paramInt2, int paramInt3)
@@ -93,12 +93,12 @@ public final class f
   
   public final CharSequence subSequence(int paramInt1, int paramInt2)
   {
-    return iPJ.subSequence(paramInt1, paramInt2);
+    return jmQ.subSequence(paramInt1, paramInt2);
   }
   
   public final String toString()
   {
-    return iPJ.toString();
+    return jmQ.toString();
   }
 }
 

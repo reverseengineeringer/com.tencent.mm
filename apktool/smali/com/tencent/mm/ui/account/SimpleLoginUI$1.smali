@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+.field final synthetic kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 116
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$1;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$1;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 120
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$1;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$1;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/SimpleLoginUI;->a(Lcom/tencent/mm/ui/account/SimpleLoginUI;)V
 

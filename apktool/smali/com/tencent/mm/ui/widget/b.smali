@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private fh:I
+.field fE:I
 
 
 # direct methods
@@ -18,7 +18,7 @@
     .line 26
     const/16 v0, 0x30
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/b;->fh:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/b;->fE:I
 
     .line 32
     new-instance v0, Landroid/widget/AbsListView$LayoutParams;
@@ -37,16 +37,6 @@
 
 
 # virtual methods
-.method public getGravity()I
-    .locals 1
-
-    .prologue
-    .line 44
-    iget v0, p0, Lcom/tencent/mm/ui/widget/b;->fh:I
-
-    return v0
-.end method
-
 .method protected onLayout(ZIIII)V
     .locals 5
 
@@ -67,7 +57,7 @@
 
     .line 55
     :cond_0
-    iget v1, p0, Lcom/tencent/mm/ui/widget/b;->fh:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/b;->fE:I
 
     const/16 v2, 0x30
 
@@ -193,15 +183,4 @@
     move-result v0
 
     goto :goto_1
-.end method
-
-.method public setGravity(I)V
-    .locals 0
-
-    .prologue
-    .line 40
-    iput p1, p0, Lcom/tencent/mm/ui/widget/b;->fh:I
-
-    .line 41
-    return-void
 .end method

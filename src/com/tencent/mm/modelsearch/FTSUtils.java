@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class FTSUtils
 {
-  public static String D(List paramList)
+  public static String I(List<Long> paramList)
   {
     StringBuilder localStringBuilder = new StringBuilder(32);
     localStringBuilder.append('(');
@@ -21,7 +21,15 @@ public class FTSUtils
     return localStringBuilder.toString();
   }
   
-  public static int a(Map paramMap, int paramInt1, int paramInt2)
+  public static int a(SQLiteDatabase paramSQLiteDatabase, byte[] paramArrayOfByte)
+  {
+    int i = paramSQLiteDatabase.acquireNativeConnectionHandle(false, false);
+    int j = nativeInitFts(i, paramArrayOfByte);
+    paramSQLiteDatabase.releaseNativeConnection(i);
+    return j;
+  }
+  
+  public static int a(Map<Integer, Integer> paramMap, int paramInt1, int paramInt2)
   {
     int i = Integer.MAX_VALUE;
     if (paramInt1 == paramInt2) {
@@ -45,7 +53,7 @@ public class FTSUtils
     }
   }
   
-  public static List a(List paramList, Map paramMap, int paramInt1, int paramInt2)
+  public static List<m.g> a(List<m.g> paramList, Map<Integer, Integer> paramMap, int paramInt1, int paramInt2)
   {
     paramMap = new Comparator() {};
     m.g localg = new m.g();
@@ -89,7 +97,7 @@ public class FTSUtils
     }
   }
   
-  public static int b(int[] paramArrayOfInt, int paramInt1, int paramInt2)
+  public static int c(int[] paramArrayOfInt, int paramInt1, int paramInt2)
   {
     int i = Integer.MAX_VALUE;
     if (paramInt1 == paramInt2) {
@@ -128,7 +136,7 @@ public class FTSUtils
     return localStringBuilder.toString();
   }
   
-  public static int[] g(String[] paramArrayOfString)
+  public static int[] f(String[] paramArrayOfString)
   {
     int[] arrayOfInt = new int[paramArrayOfString.length];
     if (paramArrayOfString.length > 0)
@@ -144,7 +152,7 @@ public class FTSUtils
     return arrayOfInt;
   }
   
-  public static String iA(String paramString)
+  public static String iR(String paramString)
   {
     if (paramString != null) {
       return paramString.replace('*', ' ').trim();
@@ -152,7 +160,7 @@ public class FTSUtils
     return null;
   }
   
-  public static native int initFts(SQLiteDatabase paramSQLiteDatabase, byte[] paramArrayOfByte);
+  private static native int nativeInitFts(int paramInt, byte[] paramArrayOfByte);
   
   public static native int stringCompareUtfBinary(String paramString1, String paramString2);
 }

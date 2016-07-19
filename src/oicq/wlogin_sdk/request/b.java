@@ -10,100 +10,100 @@ import oicq.wlogin_sdk.tools.util;
 public final class b
 {
   private Context mContext = null;
-  public i mbc = new i();
-  private j mbd = new j(mbc);
-  private f mbe = new f(mbc);
-  private g mbf = new g(mbc);
-  private h mbg = new h(mbc);
-  private e mbh = new e(mbc);
-  public d mbi = null;
-  private int mbj = 66560;
-  private int mbk = 1404;
+  public i mNg = new i();
+  private j mNh = new j(mNg);
+  private f mNi = new f(mNg);
+  private g mNj = new g(mNg);
+  private h mNk = new h(mNg);
+  private e mNl = new e(mNg);
+  public d mNm = null;
+  private int mNn = 66560;
+  private int mNo = 1404;
   
   public b(Context paramContext, int paramInt)
   {
     mContext = paramContext;
-    i locali = mbc;
-    mbq = paramContext;
-    mbR = paramInt;
-    mcl = new c(paramContext);
+    i locali = mNg;
+    mNu = paramContext;
+    mNV = paramInt;
+    mOp = new c(paramContext);
     paramContext = new byte[16];
-    mbI.nextBytes(paramContext);
-    System.arraycopy(paramContext, 0, mbL, 0, 16);
-    bom();
+    mNM.nextBytes(paramContext);
+    System.arraycopy(paramContext, 0, mNP, 0, 16);
+    bvk();
   }
   
-  private int bom()
+  private int bvk()
   {
     for (;;)
     {
       try
       {
-        Object localObject1 = util.gU(mContext);
+        Object localObject1 = util.hq(mContext);
         if ((localObject1 == null) || (localObject1.length <= 0))
         {
-          localObject1 = util.gN(mContext);
+          localObject1 = util.hj(mContext);
           if ((localObject1 == null) || (localObject1.length <= 0))
           {
             localObject1 = new String("%4;7t>;28<fc.5*6").getBytes();
-            mbc.mce = 0;
+            mNg.mOi = 0;
             util.b(mContext, (byte[])localObject1);
-            mbc.mcd = 1;
-            mbc.mcf = 1;
-            mbc.mbS = new byte[localObject1.length];
-            System.arraycopy(localObject1, 0, mbc.mbS, 0, localObject1.length);
+            mNg.mOh = 1;
+            mNg.mOj = 1;
+            mNg.mNW = new byte[localObject1.length];
+            System.arraycopy(localObject1, 0, mNg.mNW, 0, localObject1.length);
             Object localObject3 = new byte[localObject1.length + 1];
             localObject3[0] = 35;
             System.arraycopy(localObject1, 0, localObject3, 1, localObject1.length);
-            mbc.mbJ = util.bv((byte[])localObject3);
-            i.mbT = (byte[])mbc.mbS.clone();
-            mbc.mbU = util.gO(mContext);
-            i = util.gQ(mContext);
-            mbc.mbV = util.gP(mContext);
-            if (i != mbc.mbV)
+            mNg.mNN = util.bD((byte[])localObject3);
+            i.mNX = (byte[])mNg.mNW.clone();
+            mNg.mNY = util.hk(mContext);
+            i = util.hm(mContext);
+            mNg.mNZ = util.hl(mContext);
+            if (i != mNg.mNZ)
             {
-              util.gR(mContext);
-              util.U(mContext, mbc.mbV);
+              util.hn(mContext);
+              util.X(mContext, mNg.mNZ);
             }
-            mbc.mbX = util.gS(mContext).getBytes();
-            mbc.mcg = util.gT(mContext);
-            mbc.mbW = util.gV(mContext);
-            mbc.mbZ = util.bu(mContext, new String(mbc.mbW));
-            mbc.mca = util.bv(mContext, new String(mbc.mbW));
+            mNg.mOb = util.ho(mContext).getBytes();
+            mNg.mOk = util.hp(mContext);
+            mNg.mOa = util.hr(mContext);
+            mNg.mOd = util.bv(mContext, new String(mNg.mOa));
+            mNg.mOe = util.bw(mContext, new String(mNg.mOa));
             localObject1 = Build.MODEL;
             if (localObject1 != null) {
               break label475;
             }
-            mbc.mcb = new byte[0];
+            mNg.mOf = new byte[0];
             if ((util.isFileExist("/system/bin/su")) || (util.isFileExist("/system/xbin/su")) || (util.isFileExist("/sbin/su"))) {
               break label489;
             }
             i = 0;
-            localObject1 = mbc;
+            localObject1 = mNg;
             if (i == 0) {
               break label494;
             }
             i = 1;
-            mcc = i;
+            mOg = i;
             localObject3 = Build.VERSION.RELEASE;
             localObject1 = localObject3;
             if (localObject3 == null) {
               localObject1 = "";
             }
-            util.IN("WtloginHelper init ok: android version:" + (String)localObject1 + " release time:" + util.boC());
+            util.Lo("WtloginHelper init ok: android version:" + (String)localObject1 + " release time:" + util.bvA());
             return 0;
           }
-          mbc.mce = 1;
+          mNg.mOi = 1;
           continue;
         }
-        mbc.mce = 1;
+        mNg.mOi = 1;
       }
       finally {}
-      mbc.mcd = 0;
-      mbc.mcf = 0;
+      mNg.mOh = 0;
+      mNg.mOj = 0;
       continue;
       label475:
-      mbc.mcb = ((String)localObject2).getBytes();
+      mNg.mOf = ((String)localObject2).getBytes();
       continue;
       label489:
       int i = 1;
@@ -115,14 +115,14 @@ public final class b
   
   public final byte[] a(long paramLong, a parama, String paramString)
   {
-    util.IN("wtlogin login with GetStWithPasswd:user:" + paramLong + " appid:522017402 dwSigMap:8256" + " ...");
+    util.Lo("wtlogin login with GetStWithPasswd:user:" + paramLong + " appid:522017402 dwSigMap:8256" + " ...");
     String str = paramString;
     if (paramString.length() > 16) {
       str = paramString.substring(0, 16);
     }
     try
     {
-      switch (bon()[parama.ordinal()])
+      switch (bvl()[parama.ordinal()])
       {
       case 1: 
         return null;
@@ -131,27 +131,27 @@ public final class b
     finally {}
     if ((str == null) || (str.length() == 0))
     {
-      util.IN("USER_WITH_PWD userPasswd null");
+      util.Lo("USER_WITH_PWD userPasswd null");
       return null;
     }
-    parama = oicq.wlogin_sdk.tools.c.IL(str);
+    parama = oicq.wlogin_sdk.tools.c.Lm(str);
     for (int i = 0;; i = 1)
     {
-      mbc.mbV = util.gP(mContext);
-      mbc.mbX = util.gS(mContext).getBytes();
-      mbc._uin = paramLong;
-      mbc.mbO = 522017402L;
-      mbc.mbP = 8256;
-      mbc.mbM = new oicq.wlogin_sdk.a.f();
-      mbi = mbd;
+      mNg.mNZ = util.hl(mContext);
+      mNg.mOb = util.ho(mContext).getBytes();
+      mNg._uin = paramLong;
+      mNg.mNS = 522017402L;
+      mNg.mNT = 8256;
+      mNg.mNQ = new oicq.wlogin_sdk.a.f();
+      mNm = mNh;
       if (i != 0) {}
-      for (parama = mbd.a(522017402L, paramLong, mbc.mcj, parama, mbk, mbj, 8256, mbc.mcg);; parama = mbd.a(522017402L, paramLong, mbc.mcj, paramString, parama, mbk, mbj, 8256, mbc.mcg))
+      for (parama = mNh.a(522017402L, paramLong, mNg.mOn, parama, mNo, mNn, 8256, mNg.mOk);; parama = mNh.a(522017402L, paramLong, mNg.mOn, paramString, parama, mNo, mNn, 8256, mNg.mOk))
       {
-        util.IN("wtlogin login with GetStWithPasswd:user:" + paramLong + " appid:522017402 dwSigMap:8256" + " end");
+        util.Lo("wtlogin login with GetStWithPasswd:user:" + paramLong + " appid:522017402 dwSigMap:8256" + " end");
         return parama;
         if ((str == null) || (str.length() == 0))
         {
-          util.IN("USER_WITH_MD5 userPasswd null");
+          util.Lo("USER_WITH_MD5 userPasswd null");
           return null;
         }
         try
@@ -163,65 +163,81 @@ public final class b
         {
           return null;
         }
-        parama = mbc.q(paramLong, 522017402L);
+        parama = mNg.s(paramLong, 522017402L);
         if ((parama == null) || (_en_A1 == null) || (_en_A1.length <= 0)) {
-          util.IN("userAccount:" + paramLong + " appid:522017402" + " GetA1ByAccount return: null");
+          util.Lo("userAccount:" + paramLong + " appid:522017402" + " GetA1ByAccount return: null");
         }
         for (parama = null; (parama == null) || (parama.length < 16); parama = (byte[])_en_A1.clone())
         {
-          util.IN("USER_WITH_A1 tmp_pwd null");
+          util.Lo("USER_WITH_A1 tmp_pwd null");
           return null;
-          util.IN("userAccount:" + paramLong + " appid:522017402" + " GetA1ByAccount return: not null");
+          util.Lo("userAccount:" + paramLong + " appid:522017402" + " GetA1ByAccount return: not null");
         }
         paramString = new byte[4];
-        util.c(paramString, 0, i.boq());
+        util.c(paramString, 0, i.bvo());
       }
       break;
     }
   }
   
+  public final byte[] e(long paramLong, byte[] paramArrayOfByte)
+  {
+    if ((paramArrayOfByte == null) || (paramArrayOfByte.length == 0)) {
+      return null;
+    }
+    util.Lo("user:" + paramLong + " CheckPicture ...");
+    try
+    {
+      mNm = mNj;
+      paramArrayOfByte = mNj.bv(paramArrayOfByte);
+      util.Lo("user:" + paramLong + " CheckPicture end");
+      return paramArrayOfByte;
+    }
+    finally {}
+  }
+  
   /* Error */
-  public final byte[] dZ(long paramLong)
+  public final byte[] ew(long paramLong)
   {
     // Byte code:
     //   0: aload_0
     //   1: monitorenter
     //   2: aload_0
-    //   3: getfield 38	oicq/wlogin_sdk/request/b:mbc	Loicq/wlogin_sdk/request/i;
-    //   6: getfield 391	oicq/wlogin_sdk/request/i:mbN	Loicq/wlogin_sdk/a/g;
+    //   3: getfield 38	oicq/wlogin_sdk/request/b:mNg	Loicq/wlogin_sdk/request/i;
+    //   6: getfield 402	oicq/wlogin_sdk/request/i:mNR	Loicq/wlogin_sdk/a/g;
     //   9: astore_3
     //   10: aload_3
-    //   11: getfield 396	oicq/wlogin_sdk/a/g:mcy	I
+    //   11: getfield 407	oicq/wlogin_sdk/a/g:mOC	I
     //   14: newarray <illegal type>
     //   16: astore 4
     //   18: aload_3
-    //   19: getfield 396	oicq/wlogin_sdk/a/g:mcy	I
+    //   19: getfield 407	oicq/wlogin_sdk/a/g:mOC	I
     //   22: ifgt +40 -> 62
     //   25: aload_0
     //   26: monitorexit
-    //   27: new 251	java/lang/StringBuilder
+    //   27: new 252	java/lang/StringBuilder
     //   30: dup
-    //   31: ldc_w 398
-    //   34: invokespecial 254	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   31: ldc_w 390
+    //   34: invokespecial 255	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   37: lload_1
-    //   38: invokevirtual 301	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
-    //   41: ldc_w 400
-    //   44: invokevirtual 258	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   38: invokevirtual 302	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
+    //   41: ldc_w 409
+    //   44: invokevirtual 259	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   47: aload 4
     //   49: arraylength
-    //   50: invokevirtual 403	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   53: invokevirtual 267	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   56: invokestatic 270	oicq/wlogin_sdk/tools/util:IN	(Ljava/lang/String;)V
+    //   50: invokevirtual 412	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   53: invokevirtual 268	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   56: invokestatic 271	oicq/wlogin_sdk/tools/util:Lo	(Ljava/lang/String;)V
     //   59: aload 4
     //   61: areturn
     //   62: aload_3
-    //   63: getfield 406	oicq/wlogin_sdk/a/g:mby	[B
+    //   63: getfield 415	oicq/wlogin_sdk/a/g:mNC	[B
     //   66: aload_3
-    //   67: getfield 409	oicq/wlogin_sdk/a/g:mcA	I
+    //   67: getfield 418	oicq/wlogin_sdk/a/g:mOE	I
     //   70: aload 4
     //   72: iconst_0
     //   73: aload_3
-    //   74: getfield 396	oicq/wlogin_sdk/a/g:mcy	I
+    //   74: getfield 407	oicq/wlogin_sdk/a/g:mOC	I
     //   77: invokestatic 109	java/lang/System:arraycopy	(Ljava/lang/Object;ILjava/lang/Object;II)V
     //   80: goto -55 -> 25
     //   83: astore_3
@@ -244,26 +260,10 @@ public final class b
     //   84	86	83	finally
   }
   
-  public final byte[] e(long paramLong, byte[] paramArrayOfByte)
+  public final void ex(long paramLong)
   {
-    if ((paramArrayOfByte == null) || (paramArrayOfByte.length == 0)) {
-      return null;
-    }
-    util.IN("user:" + paramLong + " CheckPicture ...");
-    try
-    {
-      mbi = mbf;
-      paramArrayOfByte = mbf.bn(paramArrayOfByte);
-      util.IN("user:" + paramLong + " CheckPicture end");
-      return paramArrayOfByte;
-    }
-    finally {}
-  }
-  
-  public final void ea(long paramLong)
-  {
-    util.IN("user:" + paramLong + " ClearUserSigInfo");
-    mbc.g(Long.valueOf(paramLong));
+    util.Lo("user:" + paramLong + " ClearUserSigInfo");
+    mNg.g(Long.valueOf(paramLong));
   }
   
   public static enum a {}

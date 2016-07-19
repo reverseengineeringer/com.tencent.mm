@@ -1,22 +1,22 @@
 package com.tencent.mm.ui.tools;
 
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.t;
-import com.tencent.mm.r.m;
+import com.tencent.mm.modelsimple.r;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.applet.SecurityImage.b;
 
 final class j
   extends SecurityImage.b
 {
-  protected String ktL = "";
-  protected String ktM = "";
-  protected byte[] ktN = null;
-  protected int ktO = 0;
+  protected String kSS = "";
+  protected String kST = "";
+  protected byte[] kSU = null;
+  protected int kSV = 0;
   
-  public final void bby()
+  public final void bgK()
   {
-    t localt = new t(ktO, "", ktL, ktM);
-    ah.tE().d(localt);
+    r localr = new r(kSV, "", kSS, kST);
+    ah.tF().a(localr, 0);
   }
 }
 

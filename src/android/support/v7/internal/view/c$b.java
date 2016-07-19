@@ -11,35 +11,35 @@ import java.lang.reflect.Constructor;
 
 final class c$b
 {
-  Menu jJ;
-  int jK;
-  int jL;
-  int jM;
-  int jN;
-  boolean jO;
-  boolean jP;
-  boolean jQ;
-  int jR;
-  int jS;
-  CharSequence jT;
-  CharSequence jU;
-  int jV;
-  char jW;
-  char jX;
-  int jY;
-  boolean jZ;
-  boolean ka;
-  boolean kb;
+  Menu ka;
+  int kb;
   int kc;
   int kd;
-  String ke;
-  String kf;
-  String kg;
-  d kh;
+  int ke;
+  boolean kf;
+  boolean kg;
+  boolean kh;
+  int ki;
+  int kj;
+  CharSequence kk;
+  CharSequence kl;
+  int km;
+  char kn;
+  char ko;
+  int kp;
+  boolean kq;
+  boolean kr;
+  boolean ks;
+  int kt;
+  int ku;
+  String kv;
+  String kw;
+  String kx;
+  d ky;
   
   public c$b(c paramc, Menu paramMenu)
   {
-    jJ = paramMenu;
+    ka = paramMenu;
     bb();
   }
   
@@ -53,53 +53,53 @@ final class c$b
   
   public final void bb()
   {
-    jK = 0;
-    jL = 0;
-    jM = 0;
-    jN = 0;
-    jO = true;
-    jP = true;
+    kb = 0;
+    kc = 0;
+    kd = 0;
+    ke = 0;
+    kf = true;
+    kg = true;
   }
   
   final void e(MenuItem paramMenuItem)
   {
     int i = 1;
-    Object localObject = paramMenuItem.setChecked(jZ).setVisible(ka).setEnabled(kb);
-    if (jY > 0) {}
+    Object localObject = paramMenuItem.setChecked(kq).setVisible(kr).setEnabled(ks);
+    if (kp > 0) {}
     for (boolean bool = true;; bool = false)
     {
-      ((MenuItem)localObject).setCheckable(bool).setTitleCondensed(jU).setIcon(jV).setAlphabeticShortcut(jW).setNumericShortcut(jX);
-      if (kc >= 0) {
-        g.a(paramMenuItem, kc);
+      ((MenuItem)localObject).setCheckable(bool).setTitleCondensed(kl).setIcon(km).setAlphabeticShortcut(kn).setNumericShortcut(ko);
+      if (kt >= 0) {
+        g.a(paramMenuItem, kt);
       }
-      if (kg == null) {
+      if (kx == null) {
         break label161;
       }
-      if (!c.a(ki).isRestricted()) {
+      if (!c.a(kz).isRestricted()) {
         break;
       }
       throw new IllegalStateException("The android:onClick attribute cannot be used within a restricted context");
     }
-    paramMenuItem.setOnMenuItemClickListener(new c.a(c.b(ki), kg));
+    paramMenuItem.setOnMenuItemClickListener(new c.a(c.b(kz), kx));
     label161:
     if ((paramMenuItem instanceof h))
     {
       localObject = (h)paramMenuItem;
-      if ((localObject != null) && (jY >= 2)) {
-        ((h)localObject).t(true);
+      if ((localObject != null) && (kp >= 2)) {
+        ((h)localObject).s(true);
       }
-      if (ke == null) {
+      if (kv == null) {
         break label269;
       }
-      g.a(paramMenuItem, (View)newInstance(ke, c.ba(), c.c(ki)));
+      g.a(paramMenuItem, (View)newInstance(kv, c.ba(), c.c(kz)));
     }
     for (;;)
     {
-      if ((kd > 0) && (i == 0)) {
-        g.b(paramMenuItem, kd);
+      if ((ku > 0) && (i == 0)) {
+        g.b(paramMenuItem, ku);
       }
-      if (kh != null) {
-        g.a(paramMenuItem, kh);
+      if (ky != null) {
+        g.a(paramMenuItem, ky);
       }
       return;
       localObject = null;
@@ -109,11 +109,11 @@ final class c$b
     }
   }
   
-  final Object newInstance(String paramString, Class[] paramArrayOfClass, Object[] paramArrayOfObject)
+  final <T> T newInstance(String paramString, Class<?>[] paramArrayOfClass, Object[] paramArrayOfObject)
   {
     try
     {
-      paramString = c.a(ki).getClassLoader().loadClass(paramString).getConstructor(paramArrayOfClass).newInstance(paramArrayOfObject);
+      paramString = c.a(kz).getClassLoader().loadClass(paramString).getConstructor(paramArrayOfClass).newInstance(paramArrayOfObject);
       return paramString;
     }
     catch (Exception paramString) {}

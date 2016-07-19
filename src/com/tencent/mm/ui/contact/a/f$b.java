@@ -18,13 +18,13 @@ public final class f$b
   
   public final View a(Context paramContext, ViewGroup paramViewGroup)
   {
-    paramContext = LayoutInflater.from(paramContext).inflate(2131363057, paramViewGroup, false);
-    paramViewGroup = (f.a)lne.lnd;
-    czS = ((ImageView)paramContext.findViewById(2131165293));
-    cHk = ((TextView)paramContext.findViewById(2131165340));
-    cOd = ((TextView)paramContext.findViewById(2131165341));
-    cOd.setVisibility(8);
-    czW = ((CheckBox)paramContext.findViewById(2131165695));
+    paramContext = LayoutInflater.from(paramContext).inflate(2130904323, paramViewGroup, false);
+    paramViewGroup = (f.a)lNz.lNy;
+    cui = ((ImageView)paramContext.findViewById(2131755444));
+    cEo = ((TextView)paramContext.findViewById(2131755331));
+    cuk = ((TextView)paramContext.findViewById(2131755333));
+    cuk.setVisibility(8);
+    cul = ((CheckBox)paramContext.findViewById(2131755446));
     paramContext.setTag(paramViewGroup);
     return paramContext;
   }
@@ -33,27 +33,27 @@ public final class f$b
   {
     paramContext = (f)parama1;
     parama = (f.a)parama;
-    com.tencent.mm.modelsearch.f.a(cKS, cHk);
-    com.tencent.mm.pluginsdk.ui.a.b.b(czS, username);
-    if (lne.lkT)
+    com.tencent.mm.modelsearch.f.a(cHV, cEo);
+    com.tencent.mm.pluginsdk.ui.a.b.a(cui, username);
+    if (lNz.lLe)
     {
       if (paramBoolean1)
       {
-        czW.setChecked(true);
-        czW.setEnabled(false);
+        cul.setChecked(true);
+        cul.setEnabled(false);
       }
       for (;;)
       {
-        czW.setVisibility(0);
+        cul.setVisibility(0);
         return;
-        czW.setChecked(paramBoolean2);
-        czW.setEnabled(true);
+        cul.setChecked(paramBoolean2);
+        cul.setEnabled(true);
       }
     }
-    czW.setVisibility(8);
+    cul.setVisibility(8);
   }
   
-  public final boolean bhz()
+  public final boolean bnp()
   {
     return false;
   }

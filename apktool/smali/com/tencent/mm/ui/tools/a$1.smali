@@ -13,23 +13,34 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/os/AsyncTask",
+        "<",
+        "Ljava/lang/Integer;",
+        "Ljava/lang/Integer;",
+        "Ljava/lang/Integer;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic ao:I
+.field final synthetic P:I
 
-.field final synthetic eYZ:Landroid/content/Intent;
+.field final synthetic fhw:Landroid/content/Intent;
 
 .field private filePath:Ljava/lang/String;
 
-.field private ltP:Landroid/app/ProgressDialog;
+.field private lUR:Landroid/app/ProgressDialog;
 
-.field private ltQ:Z
+.field private lUS:Z
 
-.field final synthetic ltR:Lcom/tencent/mm/ui/o;
+.field final synthetic lUT:Ljava/lang/String;
 
-.field final synthetic ltS:Ljava/lang/String;
+.field final synthetic lUU:Lcom/tencent/mm/ui/tools/a$a;
 
-.field final synthetic ltT:Lcom/tencent/mm/ui/tools/a$a;
+.field final synthetic lsy:Lcom/tencent/mm/ui/o;
 
 .field private uri:Landroid/net/Uri;
 
@@ -42,21 +53,21 @@
 
     .prologue
     .line 57
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/a$1;->eYZ:Landroid/content/Intent;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/a$1;->fhw:Landroid/content/Intent;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/tools/a$1;->ltR:Lcom/tencent/mm/ui/o;
+    iput-object p2, p0, Lcom/tencent/mm/ui/tools/a$1;->lsy:Lcom/tencent/mm/ui/o;
 
-    iput-object p3, p0, Lcom/tencent/mm/ui/tools/a$1;->ltS:Ljava/lang/String;
+    iput-object p3, p0, Lcom/tencent/mm/ui/tools/a$1;->lUT:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->ltT:Lcom/tencent/mm/ui/tools/a$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->lUU:Lcom/tencent/mm/ui/tools/a$a;
 
     iput-object p5, p0, Lcom/tencent/mm/ui/tools/a$1;->val$intent:Landroid/content/Intent;
 
     const/16 v0, 0xcb
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/a$1;->ao:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/a$1;->P:I
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
@@ -70,12 +81,12 @@
     .line 57
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/a$1;->ltQ:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/a$1;->lUS:Z
 
     return v0
 .end method
 
-.method private varargs bis()Ljava/lang/Integer;
+.method private varargs bop()Ljava/lang/Integer;
     .locals 3
 
     .prologue
@@ -95,14 +106,14 @@
     :cond_0
     iget-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->uri:Landroid/net/Uri;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/d;->o(Landroid/net/Uri;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/d;->k(Landroid/net/Uri;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     .line 92
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/a$1;->ltS:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/a$1;->lUT:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/ui/tools/a;->v(Ljava/lang/String;Landroid/graphics/Bitmap;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lcom/tencent/mm/ui/tools/a;->s(Ljava/lang/String;Landroid/graphics/Bitmap;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -125,7 +136,7 @@
 
     .prologue
     .line 57
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/a$1;->bis()Ljava/lang/Integer;
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/a$1;->bop()Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -137,19 +148,19 @@
 
     .prologue
     .line 57
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/a$1;->ltQ:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/a$1;->lUS:Z
 
     if-nez v0, :cond_1
 
     iget-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->filePath:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->ltT:Lcom/tencent/mm/ui/tools/a$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->lUU:Lcom/tencent/mm/ui/tools/a$a;
 
     if-eqz v0, :cond_0
 
@@ -157,11 +168,11 @@
 
     const-string/jumbo v1, "CropImage_OutputPath"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/a$1;->ltT:Lcom/tencent/mm/ui/tools/a$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/a$1;->lUU:Lcom/tencent/mm/ui/tools/a$a;
 
     iget-object v3, p0, Lcom/tencent/mm/ui/tools/a$1;->filePath:Ljava/lang/String;
 
-    invoke-interface {v2, v3}, Lcom/tencent/mm/ui/tools/a$a;->vP(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v2, v3}, Lcom/tencent/mm/ui/tools/a$a;->xc(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -176,16 +187,16 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->ltR:Lcom/tencent/mm/ui/o;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->lsy:Lcom/tencent/mm/ui/o;
 
     iget-object v1, p0, Lcom/tencent/mm/ui/tools/a$1;->val$intent:Landroid/content/Intent;
 
-    iget v2, p0, Lcom/tencent/mm/ui/tools/a$1;->ao:I
+    iget v2, p0, Lcom/tencent/mm/ui/tools/a$1;->P:I
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/o;->startActivityForResult(Landroid/content/Intent;I)V
 
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->ltP:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->lUR:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
@@ -198,7 +209,7 @@
     .prologue
     .line 68
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->eYZ:Landroid/content/Intent;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->fhw:Landroid/content/Intent;
 
     invoke-virtual {v0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -209,24 +220,24 @@
     .line 70
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/a$1;->ltQ:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/a$1;->lUS:Z
 
     .line 71
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->ltR:Lcom/tencent/mm/ui/o;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->lsy:Lcom/tencent/mm/ui/o;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, v0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/a$1;->ltR:Lcom/tencent/mm/ui/o;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/a$1;->lsy:Lcom/tencent/mm/ui/o;
 
-    const v2, 0x7f0b0ddd
+    const v2, 0x7f080134
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/o;->getString(I)Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/a$1;->ltR:Lcom/tencent/mm/ui/o;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/a$1;->lsy:Lcom/tencent/mm/ui/o;
 
-    const v2, 0x7f0b0e6f
+    const v2, 0x7f0800d8
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/o;->getString(I)Ljava/lang/String;
 
@@ -242,7 +253,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->ltP:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/a$1;->lUR:Landroid/app/ProgressDialog;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

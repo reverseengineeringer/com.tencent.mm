@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable.Creator;
 
 final class SFSContext$Builder$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<SFSContext.Builder>
 {
   public final SFSContext.Builder createFromParcel(Parcel paramParcel)
   {

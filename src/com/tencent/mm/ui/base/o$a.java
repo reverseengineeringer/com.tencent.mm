@@ -40,7 +40,7 @@ final class o$a
         localDispatcherState = getKeyDispatcherState();
         if ((localDispatcherState != null) && (localDispatcherState.isTracking(paramKeyEvent)) && (!paramKeyEvent.isCanceled()))
         {
-          kFA.dismiss();
+          leE.dismiss();
           return true;
         }
       }
@@ -51,7 +51,7 @@ final class o$a
   
   public final boolean dispatchTouchEvent(MotionEvent paramMotionEvent)
   {
-    if ((o.a(kFA) != null) && (o.a(kFA).onTouch(this, paramMotionEvent))) {
+    if ((o.a(leE) != null) && (o.a(leE).onTouch(this, paramMotionEvent))) {
       return true;
     }
     return super.dispatchTouchEvent(paramMotionEvent);
@@ -68,12 +68,12 @@ final class o$a
     int j = (int)paramMotionEvent.getY();
     if ((paramMotionEvent.getAction() == 0) && ((i < 0) || (i >= getWidth()) || (j < 0) || (j >= getHeight())))
     {
-      kFA.dismiss();
+      leE.dismiss();
       return true;
     }
     if (paramMotionEvent.getAction() == 4)
     {
-      kFA.dismiss();
+      leE.dismiss();
       return true;
     }
     return super.onTouchEvent(paramMotionEvent);

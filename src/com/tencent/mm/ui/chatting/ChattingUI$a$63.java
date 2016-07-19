@@ -1,18 +1,21 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.sdk.h.g.a;
-import com.tencent.mm.sdk.h.i;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ChattingUI$a$63
-  implements g.a
+  implements Runnable
 {
   ChattingUI$a$63(ChattingUI.a parama) {}
   
-  public final void a(String paramString, i parami)
+  public final void run()
   {
-    u.v("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "app attach info watcher notify");
-    laF.kSE.a(null, null);
+    if ((ChattingUI.a.B(lAY)) || (ChattingUI.a.C(lAY) != 0))
+    {
+      v.w("MicroMsg.ChattingUI", "error state user has touch listview, not need to scroll to last. userTouched: %s state: %s", new Object[] { Boolean.valueOf(ChattingUI.a.B(lAY)), Integer.valueOf(ChattingUI.a.C(lAY)) });
+      return;
+    }
+    v.i("MicroMsg.ChattingUI", "first time in, scroll to last");
+    ChattingUI.a.a(lAY, true, null);
   }
 }
 

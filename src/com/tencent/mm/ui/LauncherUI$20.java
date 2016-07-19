@@ -1,9 +1,10 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.ui.chatting.ChattingUI.a;
-import com.tencent.mm.ui.tools.TestTimeForChatting;
+import android.content.Intent;
+import com.tencent.mm.ah.a;
+import com.tencent.mm.aq.v;
+import com.tencent.mm.av.c;
+import com.tencent.mm.plugin.report.service.g;
 
 final class LauncherUI$20
   implements Runnable
@@ -12,18 +13,15 @@ final class LauncherUI$20
   
   public final void run()
   {
-    ah.tv().aUY();
-    ab.pq(0);
-    LauncherUI.p(knl).biP();
-    hknl).ePD = true;
-    LauncherUI.h(knl).bfc();
-    LauncherUI.h(knl).hN(false);
-    LauncherUI.t(knl);
-  }
-  
-  public final String toString()
-  {
-    return super.toString() + "|chattingView_onAnimationEnd";
+    if ((v.bb(kMs)) || (a.aN(kMs))) {
+      return;
+    }
+    Intent localIntent = new Intent();
+    localIntent.putExtra("BaseScanUI_select_scan_mode", 1);
+    localIntent.putExtra("GetFriendQRCodeUI.INTENT_FROM_ACTIVITY", 0);
+    localIntent.setFlags(65536);
+    g.gdY.h(11409, new Object[0]);
+    c.c(kMs, "scanner", ".ui.BaseScanUI", localIntent);
   }
 }
 

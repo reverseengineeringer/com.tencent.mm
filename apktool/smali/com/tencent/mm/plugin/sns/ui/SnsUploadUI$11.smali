@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+.field final synthetic hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 469
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$11;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    .line 487
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$11;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,12 +40,12 @@
     .locals 1
 
     .prologue
-    .line 473
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$11;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    .line 491
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$11;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->h(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)V
 
-    .line 474
+    .line 492
     const/4 v0, 0x0
 
     return v0

@@ -23,7 +23,7 @@
     iput v0, p0, Lcom/tencent/mm/svg/a/a/xf;->width:I
 
     .line 16
-    const/16 v0, 0x31
+    const/16 v0, 0x2c
 
     iput v0, p0, Lcom/tencent/mm/svg/a/a/xf;->height:I
 
@@ -32,14 +32,14 @@
 
 
 # virtual methods
-.method protected final varargs h(I[Ljava/lang/Object;)I
-    .locals 11
+.method protected final varargs i(I[Ljava/lang/Object;)I
+    .locals 13
 
     .prologue
     .line 19
     packed-switch p1, :pswitch_data_0
 
-    .line 96
+    .line 108
     :goto_0
     const/4 v0, 0x0
 
@@ -54,7 +54,7 @@
 
     .line 23
     :pswitch_1
-    const/16 v0, 0x31
+    const/16 v0, 0x2c
 
     goto :goto_1
 
@@ -78,17 +78,17 @@
     check-cast v8, Landroid/os/Looper;
 
     .line 28
-    invoke-static {v8}, Lcom/tencent/mm/svg/c;->e(Landroid/os/Looper;)Landroid/graphics/Matrix;
+    invoke-static {v8}, Lcom/tencent/mm/svg/c;->d(Landroid/os/Looper;)Landroid/graphics/Matrix;
 
     move-result-object v9
 
     .line 29
-    invoke-static {v8}, Lcom/tencent/mm/svg/c;->d(Landroid/os/Looper;)[F
+    invoke-static {v8}, Lcom/tencent/mm/svg/c;->c(Landroid/os/Looper;)[F
 
     move-result-object v0
 
     .line 30
-    invoke-static {v8}, Lcom/tencent/mm/svg/c;->h(Landroid/os/Looper;)Landroid/graphics/Paint;
+    invoke-static {v8}, Lcom/tencent/mm/svg/c;->g(Landroid/os/Looper;)Landroid/graphics/Paint;
 
     move-result-object v1
 
@@ -103,7 +103,7 @@
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 33
-    invoke-static {v8}, Lcom/tencent/mm/svg/c;->h(Landroid/os/Looper;)Landroid/graphics/Paint;
+    invoke-static {v8}, Lcom/tencent/mm/svg/c;->g(Landroid/os/Looper;)Landroid/graphics/Paint;
 
     move-result-object v2
 
@@ -150,33 +150,152 @@
     .line 42
     invoke-static {v2, v8}, Lcom/tencent/mm/svg/c;->a(Landroid/graphics/Paint;Landroid/os/Looper;)Landroid/graphics/Paint;
 
-    move-result-object v3
+    move-result-object v2
 
     .line 43
-    invoke-virtual {v3, v2}, Landroid/graphics/Paint;->set(Landroid/graphics/Paint;)V
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
     .line 44
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    invoke-virtual {v3, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    .line 45
-    invoke-virtual {v7}, Landroid/graphics/Canvas;->save()I
-
-    .line 46
     invoke-static {v1, v8}, Lcom/tencent/mm/svg/c;->a(Landroid/graphics/Paint;Landroid/os/Looper;)Landroid/graphics/Paint;
 
     move-result-object v10
 
-    .line 47
-    invoke-virtual {v10, v1}, Landroid/graphics/Paint;->set(Landroid/graphics/Paint;)V
-
-    .line 48
-    const v1, -0x616161
+    .line 45
+    const v1, -0x39393a
 
     invoke-virtual {v10, v1}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 46
+    invoke-virtual {v7}, Landroid/graphics/Canvas;->save()I
+
+    .line 47
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    const/4 v2, 0x0
+
+    const/high16 v3, 0x41500000    # 13.0f
+
+    const/4 v4, 0x0
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/svg/c;->a([FFFFFFF)[F
+
+    move-result-object v11
+
+    .line 48
+    invoke-virtual {v9}, Landroid/graphics/Matrix;->reset()V
+
     .line 49
+    invoke-virtual {v9, v11}, Landroid/graphics/Matrix;->setValues([F)V
+
+    .line 50
+    invoke-virtual {v7, v9}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
+
+    .line 51
+    invoke-virtual {v7}, Landroid/graphics/Canvas;->save()I
+
+    .line 52
+    invoke-static {v10, v8}, Lcom/tencent/mm/svg/c;->a(Landroid/graphics/Paint;Landroid/os/Looper;)Landroid/graphics/Paint;
+
+    move-result-object v12
+
+    .line 53
+    invoke-static {v8}, Lcom/tencent/mm/svg/c;->h(Landroid/os/Looper;)Landroid/graphics/Path;
+
+    move-result-object v0
+
+    .line 54
+    const v1, 0x411aaa74
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->moveTo(FF)V
+
+    .line 55
+    const v1, 0x4135f764
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
+
+    .line 56
+    const v1, 0x419a71ea
+
+    const v2, 0x3ca48f56
+
+    const v3, 0x41c63090
+
+    const v4, 0x411bb8a3
+
+    const v5, 0x41a41a9b
+
+    const v6, 0x41842da1
+
+    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
+
+    .line 57
+    const v1, 0x4186689b
+
+    const v2, 0x41beac95
+
+    const v3, 0x40a50189
+
+    const v4, 0x41be9803
+
+    const v5, 0x3fbb7407
+
+    const v6, 0x4184047e
+
+    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
+
+    .line 58
+    const v1, -0x3fdc5dfc
+
+    const v2, 0x411f93ff
+
+    const v3, 0x400cfbd3
+
+    const v4, 0x3f5fb2d9
+
+    const v5, 0x411aaa74
+
+    const/4 v6, 0x0
+
+    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
+
+    .line 59
+    const v1, 0x411aaa74
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
+
+    .line 60
+    invoke-virtual {v0}, Landroid/graphics/Path;->close()V
+
+    .line 61
+    const/4 v1, 0x2
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/svg/WeChatSVGRenderC2Java;->setFillType(Landroid/graphics/Path;I)V
+
+    .line 62
+    invoke-virtual {v7, v0, v12}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+
+    .line 63
+    invoke-virtual {v7}, Landroid/graphics/Canvas;->restore()V
+
+    .line 64
+    invoke-virtual {v7}, Landroid/graphics/Canvas;->restore()V
+
+    .line 65
+    invoke-virtual {v7}, Landroid/graphics/Canvas;->save()I
+
+    .line 66
     const/high16 v1, 0x3f800000    # 1.0f
 
     const/4 v2, 0x0
@@ -187,405 +306,298 @@
 
     const/high16 v5, 0x3f800000    # 1.0f
 
-    const/high16 v6, 0x3f800000    # 1.0f
+    const/high16 v6, 0x41b00000    # 22.0f
+
+    move-object v0, v11
 
     invoke-static/range {v0 .. v6}, Lcom/tencent/mm/svg/c;->a([FFFFFFF)[F
 
-    move-result-object v0
+    move-result-object v11
 
-    .line 50
+    .line 67
     invoke-virtual {v9}, Landroid/graphics/Matrix;->reset()V
 
-    .line 51
-    invoke-virtual {v9, v0}, Landroid/graphics/Matrix;->setValues([F)V
+    .line 68
+    invoke-virtual {v9, v11}, Landroid/graphics/Matrix;->setValues([F)V
 
-    .line 52
+    .line 69
     invoke-virtual {v7, v9}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
 
-    .line 53
+    .line 70
     invoke-virtual {v7}, Landroid/graphics/Canvas;->save()I
 
-    .line 54
+    .line 71
     invoke-static {v10, v8}, Lcom/tencent/mm/svg/c;->a(Landroid/graphics/Paint;Landroid/os/Looper;)Landroid/graphics/Paint;
 
-    move-result-object v9
+    move-result-object v12
 
-    .line 55
-    invoke-virtual {v9, v10}, Landroid/graphics/Paint;->set(Landroid/graphics/Paint;)V
-
-    .line 56
-    invoke-static {v8}, Lcom/tencent/mm/svg/c;->i(Landroid/os/Looper;)Landroid/graphics/Path;
+    .line 72
+    invoke-static {v8}, Lcom/tencent/mm/svg/c;->h(Landroid/os/Looper;)Landroid/graphics/Path;
 
     move-result-object v0
 
-    .line 57
-    const/high16 v1, 0x41d00000    # 26.0f
+    .line 73
+    const v1, 0x40c51346
 
-    const/4 v2, 0x0
+    const v2, 0x3f9193ab
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 58
-    const v1, 0x41ddbac0
+    .line 74
+    const v1, 0x4140c366
 
-    const v2, -0x4138ab00
+    const v2, -0x3fffe61d    # -2.00158f
 
-    const v3, 0x41e831c2
+    const v3, 0x41a0436f
 
-    const v4, 0x3f3f7963
+    const v4, 0x3fd7f3bf
 
-    const/high16 v5, 0x41f00000    # 30.0f
+    const v5, 0x41aca3f8
 
-    const/high16 v6, 0x40000000    # 2.0f
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
-    .line 59
-    const v1, 0x420cf0f6
-
-    const v2, 0x40e06992
-
-    const v3, 0x4221a19f
-
-    const v4, 0x414334e9
-
-    const/high16 v5, 0x42380000    # 46.0f
-
-    const/high16 v6, 0x41880000    # 17.0f
+    const v6, 0x41027a4b
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 60
-    const v1, 0x423adff5
+    .line 75
+    const v1, 0x41bbcffc
 
-    const v2, 0x419499cb
+    const v2, 0x4166ec27
 
-    const v3, 0x4241aa3e
+    const v3, 0x4195902f
 
-    const v4, 0x419ea816
+    const v4, 0x41a90add
 
-    const/high16 v5, 0x42400000    # 48.0f
+    const v5, 0x41458ded
 
     const/high16 v6, 0x41b00000    # 22.0f
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 61
-    const v1, 0x423cb651
-
-    const v2, 0x41ba1c50
-
-    const v3, 0x4237333d    # 45.800037f
-
-    const v4, 0x41c2e3b6
-
-    const/high16 v5, 0x42340000    # 45.0f
-
-    const/high16 v6, 0x41d00000    # 26.0f
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
-    .line 62
-    const v1, 0x4214ee01
-
-    const v2, 0x42031fb1
-
-    const v3, 0x41f10fc1
-
-    const v4, 0x42214a91
-
-    const/high16 v5, 0x41b80000    # 23.0f
-
-    const/high16 v6, 0x423c0000    # 47.0f
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
-    .line 63
-    const v1, 0x418fd796
-
-    const v2, 0x42426963
-
-    const v3, 0x414e0ad5
-
-    const v4, 0x423e42fb
-
-    const/high16 v5, 0x41000000    # 8.0f
-
-    const/high16 v6, 0x42400000    # 48.0f
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
-    .line 64
-    const v1, 0x40af4e9a
-
-    const v2, 0x423e760f
-
-    const v3, 0x3fc5a2ea
-
-    const v4, 0x4243f7ca
-
-    const/4 v5, 0x0
-
-    const/high16 v6, 0x42380000    # 46.0f
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
-    .line 65
-    const v1, -0x42693684
-
-    const v2, 0x421d2429
-
-    const v3, -0x427da9d3
-
-    const v4, 0x42025d99
-
-    const/4 v5, 0x0
-
-    const/high16 v6, 0x41d00000    # 26.0f
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
-    .line 66
-    const v1, 0x40bb7311
-
-    const v2, 0x419b398f
-
-    const v3, 0x4146b165
-
-    const v4, 0x415a0825
-
-    const/high16 v5, 0x41900000    # 18.0f
-
-    const/high16 v6, 0x40e00000    # 7.0f
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
-    .line 67
-    const v1, 0x41a834f7
-
-    const v2, 0x409fed69
-
-    const v3, 0x41b961ce
-
-    const v4, 0x4006b328
-
-    const/high16 v5, 0x41d00000    # 26.0f
-
-    const/4 v6, 0x0
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
-    .line 68
-    const/high16 v1, 0x41d00000    # 26.0f
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
-
-    .line 69
-    invoke-virtual {v0}, Landroid/graphics/Path;->close()V
-
-    .line 70
-    const/high16 v1, 0x40800000    # 4.0f
-
-    const/high16 v2, 0x41d80000    # 27.0f
-
-    invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->moveTo(FF)V
-
-    .line 71
-    const v1, 0x4080a20d
-
-    const v2, 0x42032fe5
-
-    const v3, 0x40805106
-
-    const v4, 0x421992e3
-
-    const/high16 v5, 0x40800000    # 4.0f
-
-    const/high16 v6, 0x42300000    # 44.0f
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
-    .line 72
-    const v1, 0x410f201e
-
-    const v2, 0x422ff5e0
-
-    const v3, 0x415e17b9
-
-    const v4, 0x422febc0
-
-    const/high16 v5, 0x41980000    # 19.0f
-
-    const/high16 v6, 0x42300000    # 44.0f
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
-    .line 73
-    const v1, 0x41d47c34
-
-    const v2, 0x421204ee
-
-    const v3, 0x4209241d
-
-    const v4, 0x41e7d6f7
-
-    const/high16 v5, 0x42280000    # 42.0f
-
-    const/high16 v6, 0x41a80000    # 21.0f
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
-    .line 74
-    const v1, 0x42136d69
-
-    const v2, 0x41826d62
-
-    const v3, 0x41fda162
-
-    const v4, 0x41326d62
-
-    const/high16 v5, 0x41d80000    # 27.0f
-
-    const/high16 v6, 0x40c00000    # 6.0f
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
-    .line 75
-    const v1, 0x4198454c
-
-    const v2, 0x41511eb6    # 13.069998f
-
-    const v3, 0x41381cc9
-
-    const v4, 0x41a0f635
-
-    const/high16 v5, 0x40800000    # 4.0f
-
-    const/high16 v6, 0x41d80000    # 27.0f
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
     .line 76
-    const/high16 v1, 0x40800000    # 4.0f
+    const v1, 0x411ebf08
 
-    const/high16 v2, 0x41d80000    # 27.0f
+    const/high16 v2, 0x41b00000    # 22.0f
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
 
     .line 77
-    invoke-virtual {v0}, Landroid/graphics/Path;->close()V
+    const v1, 0x4094866f
+
+    const v2, 0x41ab33a2
+
+    const v3, 0x3eb7fac2
+
+    const v4, 0x4187ef1e
+
+    const/4 v5, 0x0
+
+    const v6, 0x413ac728
+
+    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
     .line 78
+    const/4 v1, 0x0
+
+    const v2, 0x411e25e4
+
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
+
+    .line 79
+    const v1, 0x3f1e6d44
+
+    const v2, 0x40c78977
+
+    const v3, 0x402dc229
+
+    const v4, 0x402f270a
+
+    const v5, 0x40c51346
+
+    const v6, 0x3f9193ab
+
+    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
+
+    .line 80
+    const v1, 0x40c51346
+
+    const v2, 0x3f9193ab
+
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
+
+    .line 81
+    invoke-virtual {v0}, Landroid/graphics/Path;->close()V
+
+    .line 82
     const/4 v1, 0x2
 
     invoke-static {v0, v1}, Lcom/tencent/mm/svg/WeChatSVGRenderC2Java;->setFillType(Landroid/graphics/Path;I)V
 
-    .line 79
-    invoke-virtual {v7, v0, v9}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+    .line 83
+    invoke-virtual {v7, v0, v12}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 80
+    .line 84
     invoke-virtual {v7}, Landroid/graphics/Canvas;->restore()V
 
-    .line 81
+    .line 85
+    invoke-virtual {v7}, Landroid/graphics/Canvas;->restore()V
+
+    .line 86
     invoke-virtual {v7}, Landroid/graphics/Canvas;->save()I
 
-    .line 82
+    .line 87
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    const/4 v2, 0x0
+
+    const/high16 v3, 0x41d00000    # 26.0f
+
+    const/4 v4, 0x0
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    const/high16 v6, 0x41b00000    # 22.0f
+
+    move-object v0, v11
+
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/svg/c;->a([FFFFFFF)[F
+
+    move-result-object v0
+
+    .line 88
+    invoke-virtual {v9}, Landroid/graphics/Matrix;->reset()V
+
+    .line 89
+    invoke-virtual {v9, v0}, Landroid/graphics/Matrix;->setValues([F)V
+
+    .line 90
+    invoke-virtual {v7, v9}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
+
+    .line 91
+    invoke-virtual {v7}, Landroid/graphics/Canvas;->save()I
+
+    .line 92
     invoke-static {v10, v8}, Lcom/tencent/mm/svg/c;->a(Landroid/graphics/Paint;Landroid/os/Looper;)Landroid/graphics/Paint;
 
     move-result-object v9
 
-    .line 83
-    invoke-virtual {v9, v10}, Landroid/graphics/Paint;->set(Landroid/graphics/Paint;)V
-
-    .line 84
-    invoke-static {v8}, Lcom/tencent/mm/svg/c;->i(Landroid/os/Looper;)Landroid/graphics/Path;
+    .line 93
+    invoke-static {v8}, Lcom/tencent/mm/svg/c;->h(Landroid/os/Looper;)Landroid/graphics/Path;
 
     move-result-object v0
 
-    .line 85
-    const/high16 v1, 0x41400000    # 12.0f
+    .line 94
+    const v1, 0x3d8ed26c
 
-    const/high16 v2, 0x41f80000    # 31.0f
+    const v2, 0x413f1d78
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 86
-    const v1, 0x41649865
+    .line 95
+    const v1, -0x40c524c5
 
-    const v2, 0x41ef5421
+    const v2, 0x40ad0c42
 
-    const v3, 0x418dd0f6
+    const v3, 0x40af4657
 
-    const v4, 0x42023014
+    const v4, -0x40b87b8c
 
-    const/high16 v5, 0x41880000    # 17.0f
+    const v5, 0x41403b1f
 
-    const/high16 v6, 0x420c0000    # 35.0f
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
-    .line 87
-    const v1, 0x4182d791
-
-    const v2, 0x4217b13c
-
-    const v3, 0x414c271d
-
-    const v4, 0x421baf78
-
-    const/high16 v5, 0x41300000    # 11.0f
-
-    const/high16 v6, 0x42140000    # 37.0f
+    const v6, 0x3da451a3
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 88
-    const v1, 0x41159d49
+    .line 96
+    const v1, 0x41892323
 
-    const v2, 0x420dc04c
+    const v2, 0x3eccd7e0    # 0.4000845f
 
-    const v3, 0x411d4359
+    const v3, 0x41a9c345
 
-    const v4, 0x4202057c
+    const v4, 0x409841f2
 
-    const/high16 v5, 0x41400000    # 12.0f
+    const/high16 v5, 0x41b00000    # 22.0f
 
-    const/high16 v6, 0x41f80000    # 31.0f
+    const v6, 0x411b4ab6
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 89
-    const/high16 v1, 0x41400000    # 12.0f
+    .line 97
+    const/high16 v1, 0x41b00000    # 22.0f
 
-    const/high16 v2, 0x41f80000    # 31.0f
+    const v2, 0x4140b6e1
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 90
+    .line 98
+    const v1, 0x41ab85a1
+
+    const v2, 0x418937d6
+
+    const v3, 0x418aa816
+
+    const v4, 0x41aa1530
+
+    const v5, 0x41448c8d
+
+    const/high16 v6, 0x41b00000    # 22.0f
+
+    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
+
+    .line 99
+    const v1, 0x41203ec2
+
+    const/high16 v2, 0x41b00000    # 22.0f
+
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
+
+    .line 100
+    const v1, 0x409c1552
+
+    const v2, 0x41ab85a8
+
+    const v3, 0x3ec25ae4
+
+    const v4, 0x418989b8
+
+    const v5, 0x3d8ed26c
+
+    const v6, 0x413f1d78
+
+    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
+
+    .line 101
+    const v1, 0x3d8ed26c
+
+    const v2, 0x413f1d78
+
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
+
+    .line 102
     invoke-virtual {v0}, Landroid/graphics/Path;->close()V
 
-    .line 91
+    .line 103
     const/4 v1, 0x2
 
     invoke-static {v0, v1}, Lcom/tencent/mm/svg/WeChatSVGRenderC2Java;->setFillType(Landroid/graphics/Path;I)V
 
-    .line 92
+    .line 104
     invoke-virtual {v7, v0, v9}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 93
+    .line 105
     invoke-virtual {v7}, Landroid/graphics/Canvas;->restore()V
 
-    .line 94
+    .line 106
     invoke-virtual {v7}, Landroid/graphics/Canvas;->restore()V
 
-    .line 95
-    invoke-static {v8}, Lcom/tencent/mm/svg/c;->g(Landroid/os/Looper;)V
+    .line 107
+    invoke-static {v8}, Lcom/tencent/mm/svg/c;->f(Landroid/os/Looper;)V
 
     goto/16 :goto_0
 
     .line 19
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

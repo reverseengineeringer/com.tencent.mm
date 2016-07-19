@@ -55,80 +55,80 @@ public final class SQLiteSession
     //   0: aload 4
     //   2: ifnull +8 -> 10
     //   5: aload 4
-    //   7: invokevirtual 74	com/tencent/kingkong/support/CancellationSignal:throwIfCanceled	()V
+    //   7: invokevirtual 76	com/tencent/kingkong/support/CancellationSignal:throwIfCanceled	()V
     //   10: aload_0
-    //   11: getfield 76	com/tencent/kingkong/database/SQLiteSession:mTransactionStack	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
+    //   11: getfield 78	com/tencent/kingkong/database/SQLiteSession:mTransactionStack	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
     //   14: ifnonnull +11 -> 25
     //   17: aload_0
     //   18: aconst_null
     //   19: iload_3
     //   20: aload 4
-    //   22: invokespecial 78	com/tencent/kingkong/database/SQLiteSession:acquireConnection	(Ljava/lang/String;ILcom/tencent/kingkong/support/CancellationSignal;)V
+    //   22: invokespecial 80	com/tencent/kingkong/database/SQLiteSession:acquireConnection	(Ljava/lang/String;ILcom/tencent/kingkong/support/CancellationSignal;)V
     //   25: aload_0
-    //   26: getfield 76	com/tencent/kingkong/database/SQLiteSession:mTransactionStack	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
+    //   26: getfield 78	com/tencent/kingkong/database/SQLiteSession:mTransactionStack	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
     //   29: ifnonnull +39 -> 68
     //   32: iload_1
     //   33: tableswitch	default:+143->176, 1:+77->110, 2:+106->139
     //   56: aload_0
-    //   57: getfield 53	com/tencent/kingkong/database/SQLiteSession:mConnection	Lcom/tencent/kingkong/database/SQLiteConnection;
-    //   60: ldc 80
+    //   57: getfield 55	com/tencent/kingkong/database/SQLiteSession:mConnection	Lcom/tencent/kingkong/database/SQLiteConnection;
+    //   60: ldc 82
     //   62: aconst_null
     //   63: aload 4
-    //   65: invokevirtual 86	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   65: invokevirtual 88	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   68: aload_2
     //   69: ifnull +9 -> 78
     //   72: aload_2
-    //   73: invokeinterface 91 1 0
+    //   73: invokeinterface 93 1 0
     //   78: aload_0
     //   79: iload_1
     //   80: aload_2
-    //   81: invokespecial 95	com/tencent/kingkong/database/SQLiteSession:obtainTransaction	(ILcom/tencent/kingkong/database/SQLiteTransactionListener;)Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
+    //   81: invokespecial 97	com/tencent/kingkong/database/SQLiteSession:obtainTransaction	(ILcom/tencent/kingkong/database/SQLiteTransactionListener;)Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
     //   84: astore_2
     //   85: aload_2
     //   86: aload_0
-    //   87: getfield 76	com/tencent/kingkong/database/SQLiteSession:mTransactionStack	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
-    //   90: putfield 98	com/tencent/kingkong/database/SQLiteSession$Transaction:mParent	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
+    //   87: getfield 78	com/tencent/kingkong/database/SQLiteSession:mTransactionStack	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
+    //   90: putfield 100	com/tencent/kingkong/database/SQLiteSession$Transaction:mParent	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
     //   93: aload_0
     //   94: aload_2
-    //   95: putfield 76	com/tencent/kingkong/database/SQLiteSession:mTransactionStack	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
+    //   95: putfield 78	com/tencent/kingkong/database/SQLiteSession:mTransactionStack	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
     //   98: aload_0
-    //   99: getfield 76	com/tencent/kingkong/database/SQLiteSession:mTransactionStack	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
+    //   99: getfield 78	com/tencent/kingkong/database/SQLiteSession:mTransactionStack	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
     //   102: ifnonnull +7 -> 109
     //   105: aload_0
-    //   106: invokespecial 101	com/tencent/kingkong/database/SQLiteSession:releaseConnection	()V
+    //   106: invokevirtual 103	com/tencent/kingkong/database/SQLiteSession:releaseConnection	()V
     //   109: return
     //   110: aload_0
-    //   111: getfield 53	com/tencent/kingkong/database/SQLiteSession:mConnection	Lcom/tencent/kingkong/database/SQLiteConnection;
-    //   114: ldc 103
+    //   111: getfield 55	com/tencent/kingkong/database/SQLiteSession:mConnection	Lcom/tencent/kingkong/database/SQLiteConnection;
+    //   114: ldc 105
     //   116: aconst_null
     //   117: aload 4
-    //   119: invokevirtual 86	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   119: invokevirtual 88	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   122: goto -54 -> 68
     //   125: astore_2
     //   126: aload_0
-    //   127: getfield 76	com/tencent/kingkong/database/SQLiteSession:mTransactionStack	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
+    //   127: getfield 78	com/tencent/kingkong/database/SQLiteSession:mTransactionStack	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
     //   130: ifnonnull +7 -> 137
     //   133: aload_0
-    //   134: invokespecial 101	com/tencent/kingkong/database/SQLiteSession:releaseConnection	()V
+    //   134: invokevirtual 103	com/tencent/kingkong/database/SQLiteSession:releaseConnection	()V
     //   137: aload_2
     //   138: athrow
     //   139: aload_0
-    //   140: getfield 53	com/tencent/kingkong/database/SQLiteSession:mConnection	Lcom/tencent/kingkong/database/SQLiteConnection;
-    //   143: ldc 105
+    //   140: getfield 55	com/tencent/kingkong/database/SQLiteSession:mConnection	Lcom/tencent/kingkong/database/SQLiteConnection;
+    //   143: ldc 107
     //   145: aconst_null
     //   146: aload 4
-    //   148: invokevirtual 86	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   148: invokevirtual 88	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   151: goto -83 -> 68
     //   154: astore_2
     //   155: aload_0
-    //   156: getfield 76	com/tencent/kingkong/database/SQLiteSession:mTransactionStack	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
+    //   156: getfield 78	com/tencent/kingkong/database/SQLiteSession:mTransactionStack	Lcom/tencent/kingkong/database/SQLiteSession$Transaction;
     //   159: ifnonnull +15 -> 174
     //   162: aload_0
-    //   163: getfield 53	com/tencent/kingkong/database/SQLiteSession:mConnection	Lcom/tencent/kingkong/database/SQLiteConnection;
-    //   166: ldc 107
+    //   163: getfield 55	com/tencent/kingkong/database/SQLiteSession:mConnection	Lcom/tencent/kingkong/database/SQLiteConnection;
+    //   166: ldc 109
     //   168: aconst_null
     //   169: aload 4
-    //   171: invokevirtual 86	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   171: invokevirtual 88	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   174: aload_2
     //   175: athrow
     //   176: goto -120 -> 56
@@ -268,24 +268,6 @@ public final class SQLiteSession
     mTransactionPool = paramTransaction;
   }
   
-  private void releaseConnection()
-  {
-    assert (mConnection != null);
-    assert (mConnectionUseCount > 0);
-    int i = mConnectionUseCount - 1;
-    mConnectionUseCount = i;
-    if (i == 0) {}
-    try
-    {
-      mConnectionPool.releaseConnection(mConnection);
-      return;
-    }
-    finally
-    {
-      mConnection = null;
-    }
-  }
-  
   private void throwIfNestedTransaction()
   {
     if (hasNestedTransaction()) {
@@ -330,6 +312,18 @@ public final class SQLiteSession
     {
       for (;;) {}
     }
+  }
+  
+  final SQLiteConnection acquireConnectionForNativeHandle(int paramInt)
+  {
+    if (mConnection == null)
+    {
+      assert (mConnectionUseCount == 0);
+      mConnection = mConnectionPool.acquireConnection(null, paramInt, null);
+      mConnectionFlags = paramInt;
+    }
+    mConnectionUseCount += 1;
+    return mConnection;
   }
   
   public final void beginTransaction(int paramInt1, SQLiteTransactionListener paramSQLiteTransactionListener, int paramInt2, CancellationSignal paramCancellationSignal)
@@ -413,7 +407,7 @@ public final class SQLiteSession
     if (executeSpecial(paramString, paramArrayOfObject, paramInt1, null))
     {
       if (paramb != null) {
-        paramb.qE();
+        paramb.pi();
       }
       return 0;
     }
@@ -546,6 +540,24 @@ public final class SQLiteSession
     finally
     {
       releaseConnection();
+    }
+  }
+  
+  final void releaseConnection()
+  {
+    assert (mConnection != null);
+    assert (mConnectionUseCount > 0);
+    int i = mConnectionUseCount - 1;
+    mConnectionUseCount = i;
+    if (i == 0) {}
+    try
+    {
+      mConnectionPool.releaseConnection(mConnection);
+      return;
+    }
+    finally
+    {
+      mConnection = null;
     }
   }
   

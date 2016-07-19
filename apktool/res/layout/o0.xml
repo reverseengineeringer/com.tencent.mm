@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/alr" android:background="@color/d3" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/als" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+    <com.tencent.mm.ui.MMImageView android:id="@id/alt" android:layout_width="@dimen/hd" android:layout_height="@dimen/hd" android:layout_marginTop="@dimen/h6" android:src="@drawable/yn" android:scaleType="centerCrop" android:layout_centerHorizontal="true" android:contentDescription="@string/d_" />
+    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/a5e" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/cp" android:layout_marginTop="@dimen/he" android:layout_marginRight="@dimen/cp" android:text="{name}" android:maxLines="2" android:layout_below="@id/alt" android:layout_centerHorizontal="true" style="@style/MMTextView" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/if" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/a5e">
+        <TextView android:id="@id/alu" android:layout_width="wrap_content" android:layout_marginTop="@dimen/hj" style="@style/MMBriefText" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hf">
+            <ProgressBar android:id="@id/ig" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="?android:attr/progressBarStyleHorizontal" />
+            <ImageView android:id="@id/ih" android:background="@drawable/kz" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/os" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:id="@id/alv" android:layout_width="fill_parent" android:layout_marginTop="@dimen/hf" android:text="@string/ann" android:layout_below="@id/a5e" android:layout_centerHorizontal="true" style="@style/MMSolidGreenLargeButton" />
+    <Button android:id="@id/alw" android:layout_width="fill_parent" android:layout_marginTop="@dimen/ct" android:text="@string/anm" android:layout_below="@id/alv" android:layout_centerHorizontal="true" style="@style/MMSolidGreenLargeButton" />
+    <TextView android:id="@id/alx" android:layout_width="wrap_content" android:layout_marginTop="@dimen/ct" android:text="@string/ank" android:layout_below="@id/alw" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/MMBriefText" />
+    <Button android:id="@id/a3a" android:layout_width="fill_parent" android:layout_marginTop="@dimen/hf" android:text="@string/anl" android:layout_below="@id/a5e" android:layout_centerHorizontal="true" style="@style/MMSolidGreenLargeButton" />
+    <include layout="@layout/sight_player_tip" />
+</RelativeLayout>

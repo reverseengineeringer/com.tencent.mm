@@ -1,19 +1,19 @@
 package com.tencent.mm.console;
 
 import android.content.Context;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public abstract class b$a
 {
-  protected String[] bvb;
-  protected int bvc = 1;
+  protected String[] ajd;
+  protected int bjL = 1;
   
-  public abstract boolean aG(Context paramContext);
+  public abstract boolean aD(Context paramContext);
   
   public final void parse(String paramString)
   {
-    bvb = paramString.split(" ");
-    u.d("!44@/B4Tb64lLpJLD/TSzHAWHSAf/GG2c9mYEhKZ1EHpY7c=", "parsed command: %s with %d arg(s)", new Object[] { bvb[0], Integer.valueOf(bvb.length - 1) });
+    ajd = paramString.split(" ");
+    v.d("MicroMsg.CommandProcessor", "parsed command: %s with %d arg(s)", new Object[] { ajd[0], Integer.valueOf(ajd.length - 1) });
   }
 }
 

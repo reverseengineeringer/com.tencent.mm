@@ -4,45 +4,45 @@
 
 
 # instance fields
-.field gFA:Z
+.field gLK:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$c;
 
-.field gFB:Landroid/widget/AbsoluteLayout;
+.field gLP:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;
 
-.field gFC:Z
+.field gLQ:Landroid/view/ViewGroup;
 
-.field gFD:Z
+.field gLR:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$b;
 
-.field gFi:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$c;
+.field gLS:Landroid/view/animation/Animation;
 
-.field gFn:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;
+.field gLT:Landroid/view/animation/Animation;
 
-.field gFo:Landroid/view/ViewGroup;
+.field private gLU:Landroid/view/animation/Animation;
 
-.field gFp:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$b;
+.field private gLV:Landroid/view/animation/Animation;
 
-.field gFq:Landroid/view/animation/Animation;
+.field gLW:I
 
-.field gFr:Landroid/view/animation/Animation;
+.field gLX:I
 
-.field private gFs:Landroid/view/animation/Animation;
+.field gLY:I
 
-.field private gFt:Landroid/view/animation/Animation;
+.field gLZ:I
 
-.field gFu:I
+.field gMa:I
 
-.field gFv:I
+.field gMb:I
 
-.field gFw:I
+.field gMc:Z
 
-.field gFx:I
+.field gMd:Landroid/widget/AbsoluteLayout;
 
-.field gFy:I
+.field gMe:Z
 
-.field gFz:I
+.field gMf:Z
 
 .field mScreenHeight:I
 
-.field nA:I
+.field nQ:I
 
 
 # direct methods
@@ -66,84 +66,84 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/abtest/b$1;-><init>(Lcom/tencent/mm/plugin/sns/abtest/b;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFp:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLR:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$b;
 
     .line 41
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFq:Landroid/view/animation/Animation;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLS:Landroid/view/animation/Animation;
 
     .line 42
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFr:Landroid/view/animation/Animation;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLT:Landroid/view/animation/Animation;
 
     .line 43
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFs:Landroid/view/animation/Animation;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLU:Landroid/view/animation/Animation;
 
     .line 44
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFt:Landroid/view/animation/Animation;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLV:Landroid/view/animation/Animation;
 
     .line 46
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFu:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLW:I
 
     .line 47
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->nA:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->nQ:I
 
     .line 48
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFv:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLX:I
 
     .line 49
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFw:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLY:I
 
     .line 50
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFx:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLZ:I
 
     .line 51
     iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->mScreenHeight:I
 
     .line 52
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFy:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gMa:I
 
     .line 53
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFz:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gMb:I
 
     .line 55
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFA:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gMc:Z
 
     .line 57
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFB:Landroid/widget/AbsoluteLayout;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gMd:Landroid/widget/AbsoluteLayout;
 
     .line 59
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFC:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gMe:Z
 
     .line 61
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFD:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gMf:Z
 
     .line 64
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFo:Landroid/view/ViewGroup;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLQ:Landroid/view/ViewGroup;
 
     .line 66
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f020055
+    const v1, 0x7f040019
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFq:Landroid/view/animation/Animation;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLS:Landroid/view/animation/Animation;
 
     .line 67
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFq:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLS:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v3}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFq:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLS:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v4, v5}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFq:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLS:Landroid/view/animation/Animation;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/abtest/b$2;
 
@@ -152,30 +152,30 @@
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 90
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f02005f
+    const v1, 0x7f04001c
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFr:Landroid/view/animation/Animation;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLT:Landroid/view/animation/Animation;
 
     .line 91
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFr:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLT:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v3}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
     .line 92
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFr:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLT:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v4, v5}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 93
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFr:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLT:Landroid/view/animation/Animation;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/abtest/b$3;
 
@@ -184,30 +184,30 @@
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 115
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f02004b
+    const v1, 0x7f04001a
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFs:Landroid/view/animation/Animation;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLU:Landroid/view/animation/Animation;
 
     .line 116
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFs:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLU:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v3}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
     .line 117
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFs:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLU:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v4, v5}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 118
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFs:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLU:Landroid/view/animation/Animation;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/abtest/b$4;
 
@@ -216,30 +216,30 @@
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 142
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f02005e
+    const v1, 0x7f04001b
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFt:Landroid/view/animation/Animation;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLV:Landroid/view/animation/Animation;
 
     .line 143
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFt:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLV:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v3}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
     .line 144
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFt:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLV:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v4, v5}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 145
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFt:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLV:Landroid/view/animation/Animation;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/abtest/b$5;
 
@@ -253,49 +253,49 @@
 
 
 # virtual methods
-.method public final axr()V
+.method public final azT()V
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
     .line 172
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFB:Landroid/widget/AbsoluteLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gMd:Landroid/widget/AbsoluteLayout;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFo:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLQ:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFn:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLP:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;
 
     if-eqz v0, :cond_0
 
     .line 173
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFB:Landroid/widget/AbsoluteLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gMd:Landroid/widget/AbsoluteLayout;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFn:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLP:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;
 
     invoke-virtual {v0, v1}, Landroid/widget/AbsoluteLayout;->removeView(Landroid/view/View;)V
 
     .line 174
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFo:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLQ:Landroid/view/ViewGroup;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFB:Landroid/widget/AbsoluteLayout;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gMd:Landroid/widget/AbsoluteLayout;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     .line 175
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFB:Landroid/widget/AbsoluteLayout;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gMd:Landroid/widget/AbsoluteLayout;
 
     .line 176
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFn:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gLP:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;
 
     .line 177
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFA:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b;->gMc:Z
 
     .line 179
     :cond_0

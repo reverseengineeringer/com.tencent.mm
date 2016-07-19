@@ -4,15 +4,15 @@
 
 
 # static fields
-.field static final nC:[I
+.field static final nS:[I
 
 
 # instance fields
-.field private iH:Landroid/support/v7/app/ActionBar;
+.field public iY:Landroid/support/v7/app/ActionBar;
 
-.field private nA:I
+.field private nQ:I
 
-.field private final nB:Landroid/graphics/Rect;
+.field private final nR:Landroid/graphics/Rect;
 
 
 # direct methods
@@ -27,11 +27,11 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f010094
+    const v2, 0x7f010002
 
     aput v2, v0, v1
 
-    sput-object v0, Landroid/support/v7/internal/widget/ActionBarOverlayLayout;->nC:[I
+    sput-object v0, Landroid/support/v7/internal/widget/ActionBarOverlayLayout;->nS:[I
 
     return-void
 .end method
@@ -50,7 +50,7 @@
 
     invoke-direct {v0, v2, v2, v2, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    iput-object v0, p0, Landroid/support/v7/internal/widget/ActionBarOverlayLayout;->nB:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroid/support/v7/internal/widget/ActionBarOverlayLayout;->nR:Landroid/graphics/Rect;
 
     .line 57
     invoke-virtual {p0}, Landroid/support/v7/internal/widget/ActionBarOverlayLayout;->getContext()Landroid/content/Context;
@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    sget-object v1, Landroid/support/v7/internal/widget/ActionBarOverlayLayout;->nC:[I
+    sget-object v1, Landroid/support/v7/internal/widget/ActionBarOverlayLayout;->nS:[I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
 
@@ -71,23 +71,10 @@
 
     move-result v1
 
-    iput v1, p0, Landroid/support/v7/internal/widget/ActionBarOverlayLayout;->nA:I
+    iput v1, p0, Landroid/support/v7/internal/widget/ActionBarOverlayLayout;->nQ:I
 
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 58
-    return-void
-.end method
-
-
-# virtual methods
-.method public setActionBar(Landroid/support/v7/app/ActionBar;)V
-    .locals 0
-
-    .prologue
-    .line 67
-    iput-object p1, p0, Landroid/support/v7/internal/widget/ActionBarOverlayLayout;->iH:Landroid/support/v7/app/ActionBar;
-
-    .line 68
     return-void
 .end method

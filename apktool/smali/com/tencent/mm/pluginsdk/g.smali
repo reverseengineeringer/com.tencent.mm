@@ -48,28 +48,25 @@
 .method public abstract a(Lcom/tencent/mm/ui/MMWizardActivity;Landroid/content/Intent;)V
 .end method
 
-.method public abstract a(ZZLandroid/content/Context;Ljava/lang/String;II)V
+.method public abstract a(Ljava/lang/String;Landroid/content/Context;)V
 .end method
 
-.method public abstract a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Z
+.method public abstract a(ZZLandroid/content/Context;Ljava/lang/String;II)V
 .end method
 
 .method public varargs abstract a(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/Object;)Z
 .end method
 
-.method public abstract aj(Landroid/content/Context;)Lcom/tencent/mm/ui/base/h;
+.method public abstract af(Landroid/content/Context;)Lcom/tencent/mm/ui/base/h;
 .end method
 
-.method public abstract ak(Landroid/content/Context;)Landroid/content/Intent;
+.method public abstract ag(Landroid/content/Context;)Landroid/content/Intent;
 .end method
 
-.method public abstract al(Landroid/content/Context;)V
+.method public abstract ah(Landroid/content/Context;)V
 .end method
 
-.method public abstract am(Landroid/content/Context;)V
-.end method
-
-.method public abstract b(Landroid/content/Context;Landroid/content/Intent;)V
+.method public abstract ai(Landroid/content/Context;)V
 .end method
 
 .method public abstract b(Landroid/content/Intent;Landroid/app/Activity;)V
@@ -81,7 +78,7 @@
 .method public abstract b(Lcom/tencent/mm/ui/MMWizardActivity;Landroid/content/Intent;)V
 .end method
 
-.method public abstract b(Ljava/lang/String;Landroid/content/Context;)V
+.method public abstract b(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Z
 .end method
 
 .method public abstract c(Landroid/content/Context;Landroid/content/Intent;)V
@@ -135,13 +132,13 @@
 .method public abstract j(Landroid/content/Intent;Landroid/content/Context;)V
 .end method
 
+.method public abstract jl()V
+.end method
+
 .method public abstract k(Landroid/content/Context;Landroid/content/Intent;)V
 .end method
 
 .method public abstract k(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
-
-.method public abstract kL()V
 .end method
 
 .method public abstract l(Landroid/content/Context;Landroid/content/Intent;)V
@@ -153,10 +150,10 @@
 .method public abstract m(Landroid/content/Intent;Landroid/content/Context;)V
 .end method
 
-.method public abstract n(Landroid/content/Context;Ljava/lang/String;)V
+.method public abstract n(Landroid/content/Intent;Landroid/content/Context;)V
 .end method
 
-.method public abstract n(Landroid/content/Intent;Landroid/content/Context;)V
+.method public abstract o(Landroid/content/Context;Ljava/lang/String;)V
 .end method
 
 .method public abstract o(Landroid/content/Intent;Landroid/content/Context;)V

@@ -3,21 +3,23 @@ package com.tencent.mm.pluginsdk;
 import android.content.Context;
 import android.content.Intent;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.modelsimple.l;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 
 final class d$1
-  implements com.tencent.mm.r.d
+  implements com.tencent.mm.t.d
 {
   d$1(Context paramContext, int paramInt, String paramString1, String paramString2, d.a parama) {}
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    ah.tE().b(233, this);
-    u.i("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", "[oneliang][doDeepLink][onSceneEnd]:errType:%s,errCode:%s,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
+    ah.tF().b(233, this);
+    v.i("MicroMsg.DeepLinkHelper", "[oneliang][doDeepLink][onSceneEnd]:errType:%s,errCode:%s,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
     boolean bool2 = false;
     boolean bool3 = false;
     boolean bool1 = bool3;
@@ -25,13 +27,13 @@ final class d$1
     if (paramj != null)
     {
       bool1 = bool3;
-      if ((paramj instanceof com.tencent.mm.modelsimple.m))
+      if ((paramj instanceof l))
       {
-        localObject = (com.tencent.mm.modelsimple.m)paramj;
-        u.d("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", "bitset:" + ((com.tencent.mm.modelsimple.m)localObject).Cu());
-        long l = ((com.tencent.mm.modelsimple.m)localObject).Cu();
-        localObject = ((com.tencent.mm.modelsimple.m)localObject).Co();
-        if (!d.t((String)localObject, l)) {
+        localObject = (l)paramj;
+        v.d("MicroMsg.DeepLinkHelper", "bitset:" + ((l)localObject).CB());
+        long l = ((l)localObject).CB();
+        localObject = ((l)localObject).Cv();
+        if (!d.x((String)localObject, l)) {
           break label316;
         }
       }
@@ -40,33 +42,33 @@ final class d$1
     {
       try
       {
-        u.i("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", "[oneliang] uri: %s", new Object[] { localObject });
+        v.i("MicroMsg.DeepLinkHelper", "[oneliang] uri: %s", new Object[] { localObject });
         bool1 = bool2;
-        bool2 = d.aF(val$context, (String)localObject);
+        bool2 = d.aE(val$context, (String)localObject);
         bool1 = bool2;
-        h.fUJ.g(11405, new Object[] { localObject, Integer.valueOf(1), Integer.valueOf(cmr), bDO, ay.ky(val$url) });
+        g.gdY.h(11405, new Object[] { localObject, Integer.valueOf(1), Integer.valueOf(bXA), bwZ, be.li(val$url) });
         bool1 = bool2;
       }
       catch (Exception localException)
       {
         for (;;)
         {
-          u.printErrStackTrace("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", localException, "", new Object[] { "" });
-          h.fUJ.g(11405, new Object[] { localObject, Integer.valueOf(0), Integer.valueOf(cmr), bDO, ay.ky(val$url) });
+          v.printErrStackTrace("MicroMsg.DeepLinkHelper", localException, "", new Object[] { "" });
+          g.gdY.h(11405, new Object[] { localObject, Integer.valueOf(0), Integer.valueOf(bXA), bwZ, be.li(val$url) });
         }
       }
-      if (iyB != null) {
-        iyB.a(paramInt1, paramInt2, paramString, paramj, bool1);
+      if (iUU != null) {
+        iUU.a(paramInt1, paramInt2, paramString, paramj, bool1);
       }
       return;
       label316:
-      u.i("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", "[oneliang] no permission");
+      v.i("MicroMsg.DeepLinkHelper", "[oneliang] no permission");
       Intent localIntent = new Intent();
       localIntent.setFlags(268435456);
-      localIntent.setClassName(y.getContext(), "com.tencent.mm.plugin.webview.ui.tools.WebViewUI");
+      localIntent.setClassName(aa.getContext(), "com.tencent.mm.plugin.webview.ui.tools.WebViewUI");
       localIntent.putExtra("rawUrl", "https://support.weixin.qq.com/deeplink/noaccess#wechat_redirect");
-      y.getContext().startActivity(localIntent);
-      h.fUJ.g(11405, new Object[] { localObject, Integer.valueOf(0), Integer.valueOf(cmr), bDO, ay.ky(val$url) });
+      aa.getContext().startActivity(localIntent);
+      g.gdY.h(11405, new Object[] { localObject, Integer.valueOf(0), Integer.valueOf(bXA), bwZ, be.li(val$url) });
     }
   }
 }

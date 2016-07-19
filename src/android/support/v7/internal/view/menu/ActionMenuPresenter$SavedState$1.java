@@ -3,7 +3,7 @@ package android.support.v7.internal.view.menu;
 import android.os.Parcelable.Creator;
 
 final class ActionMenuPresenter$SavedState$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<ActionMenuPresenter.SavedState>
 {}
 
 /* Location:

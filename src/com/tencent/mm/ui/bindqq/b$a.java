@@ -2,9 +2,9 @@ package com.tencent.mm.ui.bindqq;
 
 public abstract interface b$a
 {
-  public abstract void bdF();
+  public abstract void bjm();
   
-  public abstract boolean r(int paramInt1, int paramInt2, String paramString);
+  public abstract boolean p(int paramInt1, int paramInt2, String paramString);
 }
 
 /* Location:

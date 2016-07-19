@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/i9" android:paddingLeft="@dimen/cy" android:paddingRight="@dimen/cy" style="@style/MMListItem">
+        <com.tencent.mm.ui.base.MaskLayout android:id="@id/a51" android:layout_width="@dimen/i1" android:layout_height="wrap_content">
+            <ImageView android:id="@id/g6" android:layout_width="@dimen/hz" android:layout_height="@dimen/hz" android:src="@raw/default_avatar" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/a52" android:visibility="gone" android:layout_width="25.0dip" android:layout_height="wrap_content" android:src="@drawable/a7s" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </com.tencent.mm.ui.base.MaskLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:ellipsize="end" android:gravity="center|left" android:id="@id/a53" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/cp" android:text="{nick}" android:singleLine="true" style="@style/MMFontTitleInList" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/kl" android:ellipsize="end" android:gravity="center|left" android:id="@id/a54" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/cp" android:singleLine="true" style="@style/MMFontTitleInList" />
+        </LinearLayout>
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="3.0" />
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/a55" android:background="@null" android:focusableInTouchMode="false" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@raw/big_selecter_unselected_icon" />
+    </LinearLayout>
+</merge>

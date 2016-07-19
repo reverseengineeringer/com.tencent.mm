@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/LoginIndepPass;->m(IILjava/lang/String;)Z
+    value = Lcom/tencent/mm/ui/account/LoginIndepPass;->k(IILjava/lang/String;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+.field final synthetic kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 572
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$6;->ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+    .line 550
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$6;->kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,6 +40,6 @@
     .locals 0
 
     .prologue
-    .line 577
+    .line 555
     return-void
 .end method

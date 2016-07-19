@@ -13,16 +13,17 @@ import com.tencent.mm.compatible.util.d;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.modelsfs.FileOp;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.am;
-import com.tencent.mm.plugin.sns.d.as;
-import com.tencent.mm.plugin.sns.d.at;
-import com.tencent.mm.plugin.sns.h.i;
+import com.tencent.mm.plugin.sns.data.h;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.al;
+import com.tencent.mm.plugin.sns.e.ar;
+import com.tencent.mm.plugin.sns.e.as;
+import com.tencent.mm.plugin.sns.i.i;
 import com.tencent.mm.pluginsdk.ui.tools.k;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.preference.MMPreference;
 import com.tencent.mm.ui.base.preference.Preference;
@@ -34,28 +35,28 @@ import java.util.List;
 public class SettingSnsBackgroundUI
   extends MMPreference
 {
-  private SharedPreferences bxg;
-  private com.tencent.mm.ui.base.preference.f cpb;
+  private SharedPreferences bpi;
+  private com.tencent.mm.ui.base.preference.f ckp;
   protected String filePath;
   
-  private void Kr()
+  private void Lb()
   {
-    if (!k.d(this, d.buk, "microMsg." + System.currentTimeMillis() + ".jpg", 2)) {
-      Toast.makeText(this, getString(2131427546), 1).show();
+    if (!k.d(this, d.biK, "microMsg." + System.currentTimeMillis() + ".jpg", 2)) {
+      Toast.makeText(this, getString(2131234856), 1).show();
     }
   }
   
   private void b(int paramInt, Intent paramIntent)
   {
-    if (ah.tG()) {
-      ah.tJ();
+    if (ah.tH()) {
+      ah.tK();
     }
     switch (paramInt)
     {
     case 3: 
     case 4: 
     default: 
-      u.e("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", "onActivityResult: not found this requestCode");
+      v.e("MicroMsg.SettingSnsBackgroundUI", "onActivityResult: not found this requestCode");
     }
     do
     {
@@ -68,79 +69,84 @@ public class SettingSnsBackgroundUI
             do
             {
               return;
-              u.d("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", "onActivityResult CONTEXT_MENU_TAKE_PICTURE");
-              filePath = k.a(getApplicationContext(), paramIntent, ad.ayW());
+              v.d("MicroMsg.SettingSnsBackgroundUI", "onActivityResult CONTEXT_MENU_TAKE_PICTURE");
+              filePath = k.a(getApplicationContext(), paramIntent, ad.aBx());
             } while (filePath == null);
             paramIntent = new Intent();
             paramIntent.putExtra("CropImageMode", 1);
             paramIntent.putExtra("CropImage_ImgPath", filePath);
-            localObject1 = com.tencent.mm.a.g.m((filePath + System.currentTimeMillis()).getBytes());
-            paramIntent.putExtra("CropImage_OutputPath", ad.ayW() + (String)localObject1);
-            com.tencent.mm.plugin.sns.b.a.coa.a(this, paramIntent, 6);
+            localObject1 = com.tencent.mm.a.g.j((filePath + System.currentTimeMillis()).getBytes());
+            paramIntent.putExtra("CropImage_OutputPath", ad.aBx() + (String)localObject1);
+            com.tencent.mm.plugin.sns.b.a.cjo.a(this, paramIntent, 6);
             return;
-            u.d("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", "onActivityResult CONTEXT_MENU_IMAGE_BROUND");
+            v.d("MicroMsg.SettingSnsBackgroundUI", "onActivityResult CONTEXT_MENU_IMAGE_BROUND");
           } while (paramIntent == null);
-          filePath = k.a(getApplicationContext(), paramIntent, ad.ayW());
+          filePath = k.a(getApplicationContext(), paramIntent, ad.aBx());
         } while (filePath == null);
         localObject1 = new Intent();
         ((Intent)localObject1).putExtra("CropImageMode", 1);
         ((Intent)localObject1).putExtra("CropImage_ImgPath", filePath);
-        com.tencent.mm.plugin.sns.b.a.coa.a(this, paramIntent, (Intent)localObject1, ad.ayW(), 6, new a.a()
+        com.tencent.mm.plugin.sns.b.a.cjo.a(this, paramIntent, (Intent)localObject1, ad.aBx(), 6, new a.a()
         {
-          public final String vP(String paramAnonymousString)
+          public final String xc(String paramAnonymousString)
           {
-            paramAnonymousString = com.tencent.mm.a.g.m((filePath + System.currentTimeMillis()).getBytes());
-            return ad.ayW() + paramAnonymousString;
+            paramAnonymousString = com.tencent.mm.a.g.j((filePath + System.currentTimeMillis()).getBytes());
+            return ad.aBx() + paramAnonymousString;
           }
         });
         return;
-        u.d("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", "onActivityResult REQUEST_CODE_IMAGE_BROUND_SEND_COMFIRM");
-        new aa(Looper.getMainLooper()).post(new Runnable()
+        v.d("MicroMsg.SettingSnsBackgroundUI", "onActivityResult REQUEST_CODE_IMAGE_BROUND_SEND_COMFIRM");
+        new ac(Looper.getMainLooper()).post(new Runnable()
         {
           public final void run()
           {
-            com.tencent.mm.plugin.sns.b.a.cob.kI();
+            com.tencent.mm.plugin.sns.b.a.cjp.ji();
           }
         });
       } while (paramIntent == null);
       filePath = paramIntent.getStringExtra("CropImage_OutputPath");
     } while (filePath == null);
-    u.d("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", "REQUEST_CODE_IMAGE_BROUND_SEND_COMFIRM   " + filePath);
-    Object localObject1 = ad.azf();
+    v.d("MicroMsg.SettingSnsBackgroundUI", "REQUEST_CODE_IMAGE_BROUND_SEND_COMFIRM   " + filePath);
+    Object localObject1 = ad.aBF();
     paramIntent = filePath;
-    new LinkedList().add(new com.tencent.mm.plugin.sns.data.g(paramIntent, 2));
-    if ((((as)localObject1).ayN() != null) && (!((as)localObject1).ayN().equals("")))
+    new LinkedList().add(new h(paramIntent, 2));
+    if ((((ar)localObject1).aBo() != null) && (!((ar)localObject1).aBo().equals("")))
     {
-      Object localObject2 = am.bp(ad.ayV(), ((as)localObject1).ayN());
-      FileOp.iO((String)localObject2);
-      FileOp.deleteFile((String)localObject2 + ((as)localObject1).ayN() + "bg_");
-      FileOp.o(paramIntent, (String)localObject2 + ((as)localObject1).ayN() + "bg_");
-      localObject2 = ad.azk();
-      i locali = ((com.tencent.mm.plugin.sns.h.j)localObject2).vr(((as)localObject1).ayN());
+      Object localObject2 = al.bx(ad.aBw(), ((ar)localObject1).aBo());
+      FileOp.jf((String)localObject2);
+      FileOp.deleteFile((String)localObject2 + ((ar)localObject1).aBo() + "bg_");
+      FileOp.n(paramIntent, (String)localObject2 + ((ar)localObject1).aBo() + "bg_");
+      localObject2 = ad.aBK();
+      i locali = ((com.tencent.mm.plugin.sns.i.j)localObject2).wD(((ar)localObject1).aBo());
       field_bgId = "";
-      ((com.tencent.mm.plugin.sns.h.j)localObject2).c(locali);
+      ((com.tencent.mm.plugin.sns.i.j)localObject2).c(locali);
     }
-    ((as)localObject1).azG();
-    ((as)localObject1).ayN();
-    localObject1 = new at(7);
-    ((at)localObject1).bt(paramIntent, "");
-    ((at)localObject1).lF(1);
-    ((at)localObject1).commit();
+    ((ar)localObject1).aCh();
+    ((ar)localObject1).aBo();
+    localObject1 = new as(7);
+    ((as)localObject1).bB(paramIntent, "");
+    ((as)localObject1).mP(1);
+    ((as)localObject1).commit();
     setResult(-1);
     finish();
   }
   
-  protected final void Gb()
+  public final int GK()
   {
-    qb(2131433083);
-    SnsArtistPreference localSnsArtistPreference = (SnsArtistPreference)cpb.GB("settings_sns_bg_select_bg");
+    return 2131099729;
+  }
+  
+  protected final void Gy()
+  {
+    rR(2131235141);
+    SnsArtistPreference localSnsArtistPreference = (SnsArtistPreference)ckp.IR("settings_sns_bg_select_bg");
     if (localSnsArtistPreference != null)
     {
-      String str = bxg.getString("artist_name", "");
-      u.d("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", "artistName" + str);
-      hbD = str;
-      localSnsArtistPreference.aBA();
-      cpb.notifyDataSetChanged();
+      String str = bpi.getString("artist_name", "");
+      v.d("MicroMsg.SettingSnsBackgroundUI", "artistName" + str);
+      hqt = str;
+      localSnsArtistPreference.aEx();
+      ckp.notifyDataSetChanged();
     }
     b(new MenuItem.OnMenuItemClickListener()
     {
@@ -152,18 +158,13 @@ public class SettingSnsBackgroundUI
     });
   }
   
-  public final int Gn()
-  {
-    return 2131296261;
-  }
-  
   public final boolean a(com.tencent.mm.ui.base.preference.f paramf, Preference paramPreference)
   {
-    paramf = cln;
-    u.i("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", paramf + " item has been clicked!");
+    paramf = cgq;
+    v.i("MicroMsg.SettingSnsBackgroundUI", paramf + " item has been clicked!");
     if (paramf.equals("settings_sns_bg_select_from_album")) {
-      if (!ah.tD().isSDCardAvailable()) {
-        s.em(this);
+      if (!ah.tE().isSDCardAvailable()) {
+        s.ep(this);
       }
     }
     do
@@ -177,15 +178,15 @@ public class SettingSnsBackgroundUI
         if (!paramf.equals("settings_sns_bg_take_photo")) {
           break;
         }
-        if (!ah.tD().isSDCardAvailable())
+        if (!ah.tE().isSDCardAvailable())
         {
-          s.em(this);
+          s.ep(this);
           return false;
         }
-        bool = com.tencent.mm.pluginsdk.g.a.a(koJ.kpc, "android.permission.CAMERA", 256, "", "");
-        u.d("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", "summerper checkPermission checkCamera[%b], stack[%s], activity[%s]", new Object[] { Boolean.valueOf(bool), ay.aVJ(), koJ.kpc });
+        bool = com.tencent.mm.pluginsdk.h.a.a(kNN.kOg, "android.permission.CAMERA", 256, "", "");
+        v.d("MicroMsg.SettingSnsBackgroundUI", "summerper checkPermission checkCamera[%b], stack[%s], activity[%s]", new Object[] { Boolean.valueOf(bool), be.baX(), kNN.kOg });
       } while (!bool);
-      Kr();
+      Lb();
       return true;
     } while (!paramf.equals("settings_sns_bg_select_bg"));
     startActivity(new Intent(this, ArtistUI.class));
@@ -194,24 +195,24 @@ public class SettingSnsBackgroundUI
   
   protected void onActivityResult(final int paramInt1, final int paramInt2, final Intent paramIntent)
   {
-    u.i("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", "onAcvityResult requestCode:" + paramInt1 + " " + paramInt2);
+    v.i("MicroMsg.SettingSnsBackgroundUI", "onAcvityResult requestCode:" + paramInt1 + " " + paramInt2);
     if (paramInt2 != -1)
     {
       if ((paramInt1 == 2) || (paramInt1 == 5) || (paramInt1 == 6)) {
-        new aa(Looper.getMainLooper()).post(new Runnable()
+        new ac(Looper.getMainLooper()).post(new Runnable()
         {
           public final void run()
           {
-            com.tencent.mm.plugin.sns.b.a.cob.kI();
+            com.tencent.mm.plugin.sns.b.a.cjp.ji();
           }
         });
       }
       return;
     }
-    u.d("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", "result ok " + ah.rh());
-    if (ad.ayQ())
+    v.d("MicroMsg.SettingSnsBackgroundUI", "result ok " + ah.rg());
+    if (ad.aBr())
     {
-      new aa(Looper.myLooper()).postDelayed(new Runnable()
+      new ac(Looper.myLooper()).postDelayed(new Runnable()
       {
         public final void run()
         {
@@ -220,28 +221,28 @@ public class SettingSnsBackgroundUI
       }, 2000L);
       return;
     }
-    u.d("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", "isInValid ok");
+    v.d("MicroMsg.SettingSnsBackgroundUI", "isInValid ok");
     b(paramInt1, paramIntent);
   }
   
   public void onCreate(Bundle paramBundle)
   {
-    u.d("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", "onCreate");
+    v.d("MicroMsg.SettingSnsBackgroundUI", "onCreate");
     super.onCreate(paramBundle);
-    cpb = kLL;
-    bxg = getSharedPreferences(y.aUK(), 0);
-    Gb();
+    ckp = lla;
+    bpi = getSharedPreferences(aa.aZO(), 0);
+    Gy();
   }
   
   protected void onDestroy()
   {
     super.onDestroy();
-    u.d("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", "onDestroy");
+    v.d("MicroMsg.SettingSnsBackgroundUI", "onDestroy");
   }
   
   protected void onNewIntent(Intent paramIntent)
   {
-    u.d("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", "onNewIntent");
+    v.d("MicroMsg.SettingSnsBackgroundUI", "onNewIntent");
     super.onNewIntent(paramIntent);
     setIntent(paramIntent);
     setResult(-1);
@@ -250,7 +251,7 @@ public class SettingSnsBackgroundUI
   
   public void onRequestPermissionsResult(int paramInt, String[] paramArrayOfString, int[] paramArrayOfInt)
   {
-    u.d("!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno=", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
+    v.d("MicroMsg.SettingSnsBackgroundUI", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
     switch (paramInt)
     {
     default: 
@@ -258,10 +259,10 @@ public class SettingSnsBackgroundUI
     }
     if (paramArrayOfInt[0] == 0)
     {
-      Kr();
+      Lb();
       return;
     }
-    com.tencent.mm.ui.base.g.a(this, getString(2131429597), getString(2131429588), getString(2131429589), getString(2131430409), false, new DialogInterface.OnClickListener()
+    com.tencent.mm.ui.base.g.a(this, getString(2131234136), getString(2131234146), getString(2131233448), getString(2131231427), false, new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
@@ -273,8 +274,8 @@ public class SettingSnsBackgroundUI
   public void onResume()
   {
     super.onResume();
-    if (cpb != null) {
-      cpb.notifyDataSetChanged();
+    if (ckp != null) {
+      ckp.notifyDataSetChanged();
     }
   }
 }

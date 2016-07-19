@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic kXM:[I
+.field static final synthetic lyc:[I
 
 
 # direct methods
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->kXM:[I
+    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->lyc:[I
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->kXM:[I
+    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->lyc:[I
 
-    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXN:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->lyd:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->kXM:[I
+    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->lyc:[I
 
-    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXO:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->lye:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->ordinal()I
 
@@ -67,9 +67,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->kXM:[I
+    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->lyc:[I
 
-    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXP:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->lyf:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->ordinal()I
 

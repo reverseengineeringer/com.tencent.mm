@@ -9,7 +9,7 @@ final class ChattingUI$a$a$2
   
   public final void run()
   {
-    lbL.laF.faQ.i(lbM, -1, false);
+    lCc.lAY.fjo.i(lCd, -1, false);
   }
 }
 

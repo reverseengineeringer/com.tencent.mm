@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract f(Ljava/lang/Boolean;)V
+.method public abstract e(Ljava/lang/Boolean;)V
 .end method

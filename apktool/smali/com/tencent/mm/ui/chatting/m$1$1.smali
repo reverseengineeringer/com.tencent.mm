@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/m$1;->a(Lcom/tencent/mm/sdk/c/b;)Z
+    value = Lcom/tencent/mm/ui/chatting/m$1;->fg(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kRs:Lcom/tencent/mm/ui/chatting/m$1;
+.field final synthetic lrb:Lcom/tencent/mm/ui/chatting/m$1;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 77
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/m$1$1;->kRs:Lcom/tencent/mm/ui/chatting/m$1;
+    .line 149
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/m$1$1;->lrb:Lcom/tencent/mm/ui/chatting/m$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,26 +36,23 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final onCancel(Landroid/content/DialogInterface;)V
+    .locals 3
 
     .prologue
-    .line 79
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/m$1$1;->kRs:Lcom/tencent/mm/ui/chatting/m$1;
+    .line 153
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/m$1;->kRr:Lcom/tencent/mm/ui/chatting/m;
+    move-result-object v0
 
-    const/4 v1, 0x0
+    const/16 v1, 0x406
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/chatting/m;->hH(Z)V
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/m$1$1;->lrb:Lcom/tencent/mm/ui/chatting/m$1;
 
-    .line 80
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/m$1$1;->kRs:Lcom/tencent/mm/ui/chatting/m$1;
+    iget-object v2, v2, Lcom/tencent/mm/ui/chatting/m$1;->lra:Lcom/tencent/mm/ui/chatting/m;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/m$1;->kRr:Lcom/tencent/mm/ui/chatting/m;
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/m;->bdM()V
-
-    .line 81
+    .line 154
     return-void
 .end method

@@ -3,35 +3,37 @@ package com.tencent.mm.c.b;
 import com.tencent.mm.modelvoice.m;
 import com.tencent.mm.modelvoice.p;
 import com.tencent.mm.modelvoice.q;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.modelvoice.u;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class h$1
-  implements af.a
+  implements ah.a
 {
   h$1(h paramh) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    String str = ars.mFileName;
+    String str = acL.mFileName;
     p localp;
     if (str != null)
     {
-      localp = m.Ew().ki(str);
+      localp = m.EQ().kS(str);
       if (localp != null) {
         break label80;
       }
-      com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJ8Slstt+7LKuK5M7+Z4yd6", "startSend null record : " + str);
+      v.d("MicroMsg.VoiceLogic", "startSend null record : " + str);
     }
     for (;;)
     {
-      m.Ey().run();
-      com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpJjyqE6YDnApwOwHOAz5sGPSEN1mjztZrA=", "Start Send fileName :" + ars.mFileName);
+      m.ES().run();
+      v.d("MicroMsg.SceneVoice.Recorder", "Start Send fileName :" + acL.mFileName);
       return false;
       label80:
       if (status == 1)
       {
         status = 2;
-        aou = 64;
+        aqQ = 64;
         q.a(localp);
       }
     }

@@ -5,14 +5,14 @@ import android.hardware.Camera;
 final class d
   implements c.a
 {
-  public static c.a.a oh()
+  public static c.a.a mx()
   {
     c.a.a locala = new c.a.a();
     try
     {
-      brz = Camera.open();
-      brw = 0;
-      if (brz == null) {
+      bfz = Camera.open();
+      bfw = 0;
+      if (bfz == null) {
         return null;
       }
       return locala;

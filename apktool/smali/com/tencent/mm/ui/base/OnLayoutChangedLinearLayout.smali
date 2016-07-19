@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field public kKf:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
+.field public ljv:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
 
 
 # direct methods
@@ -51,27 +51,16 @@
     invoke-super/range {p0 .. p5}, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->onLayout(ZIIII)V
 
     .line 44
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout;->kKf:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout;->ljv:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
 
     if-eqz v0, :cond_0
 
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout;->kKf:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout;->ljv:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;->baH()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;->bfV()V
 
     .line 47
     :cond_0
-    return-void
-.end method
-
-.method public setOnChattingLayoutChangedListener(Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;)V
-    .locals 0
-
-    .prologue
-    .line 34
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout;->kKf:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
-
-    .line 35
     return-void
 .end method

@@ -11,8 +11,8 @@ final class g$5$2
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    if (iPP.iPL != null) {
-      iPP.iPL.onDismiss(null);
+    if (jmW.jmS != null) {
+      jmW.jmS.onDismiss(null);
     }
   }
 }

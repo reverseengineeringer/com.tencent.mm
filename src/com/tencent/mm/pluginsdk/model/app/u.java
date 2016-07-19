@@ -4,42 +4,42 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.p;
 
 public final class u
   implements s
 {
-  j auF;
-  public p coc;
-  public a iBc;
+  j ags;
+  public p cjq;
+  public a iXI;
   public Context mContext;
   
   public u(Context paramContext, a parama)
   {
     mContext = paramContext;
-    iBc = parama;
+    iXI = parama;
   }
   
   public final void a(int paramInt1, int paramInt2, String paramString, v paramv)
   {
-    com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpIw1vCoUyRMKQjZ1dpQIMvamblCzn1RUg4=", "OnScenEnd, errType = %d, errCode = %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-    aj.abv().b(7, this);
-    if ((coc != null) && (coc.isShowing()))
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.LoadAppInfoAfterLogin", "OnScenEnd, errType = %d, errCode = %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    al.adP().b(7, this);
+    if ((cjq != null) && (cjq.isShowing()))
     {
-      coc.dismiss();
-      coc = null;
+      cjq.dismiss();
+      cjq = null;
     }
-    if (iBc != null) {
-      iBc.aEY();
+    if (iXI != null) {
+      iXI.oq();
     }
-    g.aPG();
+    g.aUn();
   }
   
   public static abstract interface a
   {
-    public abstract void aEY();
+    public abstract void oq();
   }
 }
 

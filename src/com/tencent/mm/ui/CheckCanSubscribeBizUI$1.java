@@ -7,12 +7,12 @@ final class CheckCanSubscribeBizUI$1
 {
   CheckCanSubscribeBizUI$1(CheckCanSubscribeBizUI paramCheckCanSubscribeBizUI) {}
   
-  public final void f(String paramString, boolean paramBoolean)
+  public final void i(String paramString, boolean paramBoolean)
   {
     if (!paramBoolean)
     {
-      CheckCanSubscribeBizUI.a(kjH);
-      CheckCanSubscribeBizUI.b(kjH);
+      CheckCanSubscribeBizUI.a(kJP);
+      CheckCanSubscribeBizUI.b(kJP);
     }
   }
 }

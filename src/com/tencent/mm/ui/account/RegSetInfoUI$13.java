@@ -10,7 +10,7 @@ final class RegSetInfoUI$13
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    RegSetInfoUI.F(kwh);
+    RegSetInfoUI.F(kVo);
   }
 }
 

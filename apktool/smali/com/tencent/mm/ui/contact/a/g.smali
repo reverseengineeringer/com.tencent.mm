@@ -13,11 +13,11 @@
 
 
 # instance fields
-.field public lnf:Ljava/lang/String;
+.field public lNA:Ljava/lang/String;
 
-.field private lnh:Lcom/tencent/mm/ui/contact/a/g$b;
+.field private lNB:Lcom/tencent/mm/ui/contact/a/g$b;
 
-.field lni:Lcom/tencent/mm/ui/contact/a/g$a;
+.field lNC:Lcom/tencent/mm/ui/contact/a/g$a;
 
 
 # direct methods
@@ -35,14 +35,14 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/a/g$b;-><init>(Lcom/tencent/mm/ui/contact/a/g;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/a/g;->lnh:Lcom/tencent/mm/ui/contact/a/g$b;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/a/g;->lNB:Lcom/tencent/mm/ui/contact/a/g$b;
 
     .line 70
     new-instance v0, Lcom/tencent/mm/ui/contact/a/g$a;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/a/g$a;-><init>(Lcom/tencent/mm/ui/contact/a/g;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/a/g;->lni:Lcom/tencent/mm/ui/contact/a/g$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/a/g;->lNC:Lcom/tencent/mm/ui/contact/a/g$a;
 
     .line 22
     return-void
@@ -50,27 +50,27 @@
 
 
 # virtual methods
-.method public final ajt()Lcom/tencent/mm/ui/contact/a/a$b;
+.method public final amb()Lcom/tencent/mm/ui/contact/a/a$b;
     .locals 1
 
     .prologue
     .line 67
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/g;->lnh:Lcom/tencent/mm/ui/contact/a/g$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/g;->lNB:Lcom/tencent/mm/ui/contact/a/g$b;
 
     return-object v0
 .end method
 
-.method protected final awR()Lcom/tencent/mm/ui/contact/a/a$a;
+.method protected final azo()Lcom/tencent/mm/ui/contact/a/a$a;
     .locals 1
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/g;->lni:Lcom/tencent/mm/ui/contact/a/g$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/g;->lNC:Lcom/tencent/mm/ui/contact/a/g$a;
 
     return-object v0
 .end method
 
-.method public final er(Landroid/content/Context;)V
+.method public final eu(Landroid/content/Context;)V
     .locals 0
 
     .prologue

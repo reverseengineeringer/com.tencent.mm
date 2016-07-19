@@ -1,27 +1,13 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.t.aj;
-import com.tencent.mm.t.l;
-import com.tencent.mm.t.n;
-import com.tencent.mm.t.r;
-
 final class ChattingUI$a$81
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
   ChattingUI$a$81(ChattingUI.a parama) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void run()
   {
-    MlaF).field_hadAlert = 1;
-    paramDialogInterface = ChattingUI.a.M(laF);
-    if (paramDialogInterface != null)
-    {
-      field_brandFlag &= 0xFFFFFFFB;
-      n.f(paramDialogInterface);
-    }
-    aj.xM().hd(laF.getTalkerUserName());
+    lAY.a(true, false, null);
   }
 }
 

@@ -13,7 +13,7 @@
 
 .field private static final PATH_LENGTH_LIMIT:I = 0x2800
 
-.field private static final TAG:Ljava/lang/String; = "!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI="
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXAppExtendObject"
 
 
 # instance fields
@@ -162,11 +162,11 @@
 
     .line 133
     :cond_2
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI="
+    const-string/jumbo v1, "MicroMsg.SDK.WXAppExtendObject"
 
     const-string/jumbo v2, "checkArgs fail, all arguments is null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 157
     :goto_0
@@ -189,11 +189,11 @@
     if-le v1, v2, :cond_4
 
     .line 138
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI="
+    const-string/jumbo v1, "MicroMsg.SDK.WXAppExtendObject"
 
     const-string/jumbo v2, "checkArgs fail, extInfo is invalid"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -214,11 +214,11 @@
     if-le v1, v2, :cond_5
 
     .line 143
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI="
+    const-string/jumbo v1, "MicroMsg.SDK.WXAppExtendObject"
 
     const-string/jumbo v2, "checkArgs fail, filePath is invalid"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -237,11 +237,11 @@
     if-le v1, v3, :cond_6
 
     .line 148
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI="
+    const-string/jumbo v1, "MicroMsg.SDK.WXAppExtendObject"
 
     const-string/jumbo v2, "checkArgs fail, fileSize is too large"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -258,11 +258,11 @@
     if-le v1, v3, :cond_7
 
     .line 153
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI="
+    const-string/jumbo v1, "MicroMsg.SDK.WXAppExtendObject"
 
     const-string/jumbo v2, "checkArgs fail, fileData is too large"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 

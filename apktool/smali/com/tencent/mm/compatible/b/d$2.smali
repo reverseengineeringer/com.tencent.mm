@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bpB:Lcom/tencent/mm/compatible/b/d;
+.field final synthetic bdB:Lcom/tencent/mm/compatible/b/d;
 
 
 # direct methods
@@ -23,8 +23,8 @@
     .locals 0
 
     .prologue
-    .line 103
-    iput-object p1, p0, Lcom/tencent/mm/compatible/b/d$2;->bpB:Lcom/tencent/mm/compatible/b/d;
+    .line 104
+    iput-object p1, p0, Lcom/tencent/mm/compatible/b/d$2;->bdB:Lcom/tencent/mm/compatible/b/d;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -37,25 +37,25 @@
     .locals 2
 
     .prologue
-    .line 107
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 108
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v1, "dkbt onReceive action[ BluetoothDevice.ACTION_ACL_CONNECTED ] "
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 108
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Lcom/tencent/mm/compatible/b/d;->ax(Z)Z
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 109
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d$2;->bpB:Lcom/tencent/mm/compatible/b/d;
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Lcom/tencent/mm/compatible/b/d;->aa(Z)Z
+
+    .line 110
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d$2;->bdB:Lcom/tencent/mm/compatible/b/d;
 
     const/4 v1, 0x3
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/compatible/b/d;->bN(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/compatible/b/d;->cf(I)V
 
-    .line 110
+    .line 111
     return-void
 .end method

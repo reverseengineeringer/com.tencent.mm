@@ -1,60 +1,60 @@
 package com.tencent.mm.pluginsdk.wallet;
 
-import com.tencent.mm.d.a.ik;
-import com.tencent.mm.d.a.ik.a;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.e.a.ip;
+import com.tencent.mm.e.a.ip.a;
+import com.tencent.mm.sdk.platformtools.be;
 import java.util.Map;
 
 public final class c
 {
-  public String aEf;
-  public String aEg;
-  public String aEh;
-  public String aEi;
-  public String aEj;
-  public String aEk;
-  public String aEl;
-  public int aEm;
-  public int aEn;
-  public int aEo;
   public String appId;
+  public String aqj;
+  public String aqk;
+  public String aql;
+  public String aqm;
+  public String aqn;
+  public String aqo;
+  public String aqp;
+  public int aqq;
+  public int aqr;
+  public int aqs;
   public String extInfo;
-  public int iTJ = 0;
+  public int jrc = 0;
   public String url;
   
-  public c(ik paramik)
+  public c(ip paramip)
   {
-    if ((paramik == null) || (aEe == null)) {
+    if ((paramip == null) || (aqi == null)) {
       return;
     }
-    appId = aEe.appId;
-    aEf = aEe.aEf;
-    aEg = aEe.aEg;
-    aEh = aEe.aEh;
-    aEi = aEe.aEi;
-    aEj = aEe.aEj;
-    aEk = aEe.aEk;
-    url = aEe.url;
-    aEl = aEe.aEl;
-    aEm = aEe.aEm;
-    aEo = aEe.aEo;
-    aEn = aEe.aEn;
+    appId = aqi.appId;
+    aqj = aqi.aqj;
+    aqk = aqi.aqk;
+    aql = aqi.aql;
+    aqm = aqi.aqm;
+    aqn = aqi.aqn;
+    aqo = aqi.aqo;
+    url = aqi.url;
+    aqp = aqi.aqp;
+    aqq = aqi.aqq;
+    aqs = aqi.aqs;
+    aqr = aqi.aqr;
   }
   
-  public c(Map paramMap)
+  public c(Map<String, Object> paramMap)
   {
     appId = ((String)paramMap.get("appId"));
-    aEf = ((String)paramMap.get("partnerId"));
-    aEg = ((String)paramMap.get("signType"));
-    aEh = ((String)paramMap.get("nonceStr"));
-    aEi = ((String)paramMap.get("timeStamp"));
-    aEj = ((String)paramMap.get("package"));
-    aEk = ((String)paramMap.get("paySign"));
+    aqj = ((String)paramMap.get("partnerId"));
+    aqk = ((String)paramMap.get("signType"));
+    aql = ((String)paramMap.get("nonceStr"));
+    aqm = ((String)paramMap.get("timeStamp"));
+    aqn = ((String)paramMap.get("package"));
+    aqo = ((String)paramMap.get("paySign"));
     url = ((String)paramMap.get("url"));
-    aEl = ((String)paramMap.get("src_username"));
-    aEm = ay.getInt((String)paramMap.get("scene"), 0);
-    aEo = ay.getInt((String)paramMap.get("pay_channel"), 0);
-    extInfo = ay.ky((String)paramMap.get("ext_info"));
+    aqp = ((String)paramMap.get("src_username"));
+    aqq = be.getInt((String)paramMap.get("scene"), 0);
+    aqs = be.getInt((String)paramMap.get("pay_channel"), 0);
+    extInfo = be.li((String)paramMap.get("ext_info"));
   }
 }
 

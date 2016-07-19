@@ -7,8 +7,8 @@ final class bd$1
   
   public final void run()
   {
-    if (bCY.bCU != null) {
-      bCY.bCU.aX(bCX);
+    if (bwi.bwe != null) {
+      bwi.bwe.bc(bwh);
     }
   }
 }

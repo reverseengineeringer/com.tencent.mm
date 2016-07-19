@@ -3,333 +3,326 @@
 .source "SourceFile"
 
 
-# static fields
-.field static final en:Ljava/lang/Object;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
 
 
 # instance fields
-.field btu:[J
+.field private bhH:Z
 
-.field eo:Z
+.field public bhI:Ljava/lang/reflect/Field;
 
-.field eq:[Ljava/lang/Object;
+.field private classname:Ljava/lang/String;
 
-.field mSize:I
+.field private fieldName:Ljava/lang/String;
+
+.field public obj:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 2
 
     .prologue
     .line 13
-    new-instance v0, Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 14
+    if-nez p1, :cond_0
 
-    sput-object v0, Lcom/tencent/mm/compatible/loader/c;->en:Ljava/lang/Object;
+    .line 15
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
+    const-string/jumbo v1, "obj cannot be null"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 17
+    :cond_0
+    iput-object p1, p0, Lcom/tencent/mm/compatible/loader/c;->obj:Ljava/lang/Object;
+
+    .line 18
+    iput-object p2, p0, Lcom/tencent/mm/compatible/loader/c;->fieldName:Ljava/lang/String;
+
+    .line 19
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->classname:Ljava/lang/String;
+
+    .line 20
     return-void
 .end method
 
-.method static a([JIJ)I
-    .locals 5
+.method private prepare()V
+    .locals 7
 
     .prologue
-    .line 318
-    add-int/lit8 v2, p1, 0x0
+    const/4 v1, 0x1
 
-    const/4 v0, -0x1
+    .line 23
+    iget-boolean v0, p0, Lcom/tencent/mm/compatible/loader/c;->bhH:Z
 
-    move v1, v0
+    if-eqz v0, :cond_1
 
-    move v0, v2
-
-    .line 320
-    :goto_0
-    sub-int v2, v0, v1
-
-    const/4 v3, 0x1
-
-    if-le v2, v3, :cond_1
-
-    .line 321
-    add-int v2, v0, v1
-
-    div-int/lit8 v2, v2, 0x2
-
-    .line 323
-    aget-wide v3, p0, v2
-
-    cmp-long v3, v3, p2
-
-    if-gez v3, :cond_0
-
-    move v1, v2
-
-    .line 324
-    goto :goto_0
-
+    .line 56
     :cond_0
-    move v0, v2
+    :goto_0
+    return-void
 
-    .line 326
+    .line 26
+    :cond_1
+    iput-boolean v1, p0, Lcom/tencent/mm/compatible/loader/c;->bhH:Z
+
+    .line 28
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->obj:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    .line 29
+    :goto_1
+    if-eqz v1, :cond_0
+
+    .line 31
+    :try_start_0
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->fieldName:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    .line 32
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+
+    .line 33
+    iput-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->bhI:Ljava/lang/reflect/Field;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 53
+    invoke-virtual {v1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
+
     goto :goto_0
 
-    .line 329
-    :cond_1
-    add-int/lit8 v1, p1, 0x0
+    :catch_0
+    move-exception v0
 
-    if-ne v0, v1, :cond_3
+    .line 38
+    :try_start_1
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->classname:Ljava/lang/String;
 
-    .line 330
-    add-int/lit8 v0, p1, 0x0
+    if-eqz v0, :cond_2
 
-    xor-int/lit8 v0, v0, -0x1
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->classname:Ljava/lang/String;
 
-    .line 334
+    const-string/jumbo v2, ""
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 39
+    invoke-virtual {v1}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
+
+    move-result-object v2
+
+    .line 40
+    array-length v3, v2
+
+    const/4 v0, 0x0
+
+    :goto_2
+    if-ge v0, v3, :cond_2
+
+    aget-object v4, v2, v0
+
+    .line 41
+    invoke-virtual {v4}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    iget-object v6, p0, Lcom/tencent/mm/compatible/loader/c;->classname:Ljava/lang/String;
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    .line 42
+    const/4 v0, 0x1
+
+    invoke-virtual {v4, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+
+    .line 43
+    iput-object v4, p0, Lcom/tencent/mm/compatible/loader/c;->bhI:Ljava/lang/reflect/Field;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 53
     :cond_2
-    :goto_1
-    return v0
+    :goto_3
+    invoke-virtual {v1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
-    .line 331
-    :cond_3
-    aget-wide v1, p0, v0
+    move-result-object v0
 
-    cmp-long v1, v1, p2
+    move-object v1, v0
 
-    if-eqz v1, :cond_2
-
-    .line 334
-    xor-int/lit8 v0, v0, -0x1
-
+    .line 54
     goto :goto_1
+
+    .line 40
+    :cond_3
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_2
+
+    .line 53
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
+
+    throw v0
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_3
 .end method
 
 
 # virtual methods
-.method public final put(JLjava/lang/Object;)V
-    .locals 9
+.method public final get()Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
 
     .prologue
-    const/4 v2, 0x0
+    .line 59
+    invoke-direct {p0}, Lcom/tencent/mm/compatible/loader/c;->prepare()V
 
-    .line 137
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
+    .line 61
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->bhI:Ljava/lang/reflect/Field;
 
-    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
+    if-nez v0, :cond_0
 
-    invoke-static {v0, v1, p1, p2}, Lcom/tencent/mm/compatible/loader/c;->a([JIJ)I
+    .line 62
+    new-instance v0, Ljava/lang/NoSuchFieldException;
 
-    move-result v0
+    invoke-direct {v0}, Ljava/lang/NoSuchFieldException;-><init>()V
 
-    .line 139
-    if-ltz v0, :cond_0
+    throw v0
 
-    .line 140
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
-
-    aput-object p3, v1, v0
-
-    .line 183
-    :goto_0
-    return-void
-
-    .line 142
+    .line 66
     :cond_0
-    xor-int/lit8 v0, v0, -0x1
+    :try_start_0
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->bhI:Ljava/lang/reflect/Field;
 
-    .line 144
-    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
+    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->obj:Ljava/lang/Object;
 
-    if-ge v0, v1, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
+    move-result-object v0
 
-    aget-object v1, v1, v0
+    .line 67
+    return-object v0
 
-    sget-object v3, Lcom/tencent/mm/compatible/loader/c;->en:Ljava/lang/Object;
+    .line 69
+    :catch_0
+    move-exception v0
 
-    if-ne v1, v3, :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    .line 145
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
+    const-string/jumbo v1, "unable to cast object"
 
-    aput-wide p1, v1, v0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 146
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
+    throw v0
+.end method
 
-    aput-object p3, v1, v0
+.method public final nf()Z
+    .locals 1
+
+    .prologue
+    .line 83
+    invoke-direct {p0}, Lcom/tencent/mm/compatible/loader/c;->prepare()V
+
+    .line 85
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->bhI:Ljava/lang/reflect/Field;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
+.end method
 
-    .line 150
-    :cond_1
-    iget-boolean v1, p0, Lcom/tencent/mm/compatible/loader/c;->eo:Z
+.method public final set(Ljava/lang/Object;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
 
-    if-eqz v1, :cond_5
+    .prologue
+    .line 74
+    invoke-direct {p0}, Lcom/tencent/mm/compatible/loader/c;->prepare()V
 
-    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->bhI:Ljava/lang/reflect/Field;
 
-    iget-object v3, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
+    if-nez v0, :cond_0
 
-    array-length v3, v3
+    .line 77
+    new-instance v0, Ljava/lang/NoSuchFieldException;
 
-    if-lt v1, v3, :cond_5
+    invoke-direct {v0}, Ljava/lang/NoSuchFieldException;-><init>()V
 
-    .line 151
-    iget v3, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
+    throw v0
 
-    iget-object v4, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
+    .line 79
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->bhI:Ljava/lang/reflect/Field;
 
-    iget-object v5, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
+    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->obj:Ljava/lang/Object;
 
-    move v1, v2
+    invoke-virtual {v0, v1, p1}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    move v0, v2
-
-    :goto_1
-    if-ge v1, v3, :cond_4
-
-    aget-object v6, v5, v1
-
-    sget-object v7, Lcom/tencent/mm/compatible/loader/c;->en:Ljava/lang/Object;
-
-    if-eq v6, v7, :cond_3
-
-    if-eq v1, v0, :cond_2
-
-    aget-wide v7, v4, v1
-
-    aput-wide v7, v4, v0
-
-    aput-object v6, v5, v0
-
-    :cond_2
-    add-int/lit8 v0, v0, 0x1
-
-    :cond_3
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_4
-    iput-boolean v2, p0, Lcom/tencent/mm/compatible/loader/c;->eo:Z
-
-    iput v0, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
-
-    .line 155
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
-
-    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
-
-    invoke-static {v0, v1, p1, p2}, Lcom/tencent/mm/compatible/loader/c;->a([JIJ)I
-
-    move-result v0
-
-    xor-int/lit8 v0, v0, -0x1
-
-    .line 158
-    :cond_5
-    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
-
-    iget-object v3, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
-
-    array-length v3, v3
-
-    if-lt v1, v3, :cond_6
-
-    .line 159
-    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-static {v1}, Lcom/tencent/mm/compatible/loader/a;->m(I)I
-
-    move-result v1
-
-    .line 161
-    new-array v3, v1, [J
-
-    .line 162
-    new-array v1, v1, [Ljava/lang/Object;
-
-    .line 166
-    iget-object v4, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
-
-    iget-object v5, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
-
-    array-length v5, v5
-
-    invoke-static {v4, v2, v3, v2, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 167
-    iget-object v4, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
-
-    iget-object v5, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
-
-    array-length v5, v5
-
-    invoke-static {v4, v2, v1, v2, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 169
-    iput-object v3, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
-
-    .line 170
-    iput-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
-
-    .line 173
-    :cond_6
-    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
-
-    sub-int/2addr v1, v0
-
-    if-eqz v1, :cond_7
-
-    .line 175
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
-
-    iget-object v2, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
-
-    add-int/lit8 v3, v0, 0x1
-
-    iget v4, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
-
-    sub-int/2addr v4, v0
-
-    invoke-static {v1, v0, v2, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 176
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
-
-    iget-object v2, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
-
-    add-int/lit8 v3, v0, 0x1
-
-    iget v4, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
-
-    sub-int/2addr v4, v0
-
-    invoke-static {v1, v0, v2, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 179
-    :cond_7
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
-
-    aput-wide p1, v1, v0
-
-    .line 180
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
-
-    aput-object p3, v1, v0
-
-    .line 181
-    iget v0, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
-
-    goto/16 :goto_0
+    .line 80
+    return-void
 .end method

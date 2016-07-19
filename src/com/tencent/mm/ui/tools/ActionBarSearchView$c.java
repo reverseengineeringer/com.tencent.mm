@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.tools;
 
 final class ActionBarSearchView$c
-  extends Enum
+  extends Enum<c>
 {}
 
 /* Location:

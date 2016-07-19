@@ -1,20 +1,18 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.c.c;
-
 final class SnsTimeLineUI$1
-  extends c
+  implements Runnable
 {
-  SnsTimeLineUI$1(SnsTimeLineUI paramSnsTimeLineUI)
-  {
-    super(0);
-  }
+  SnsTimeLineUI$1(SnsTimeLineUI paramSnsTimeLineUI) {}
   
-  public final boolean a(b paramb)
+  public final void run()
   {
-    SnsTimeLineUI.a(hkJ);
-    return false;
+    ar localar = SnsTimeLineUI.a(hzE);
+    if (localar != null)
+    {
+      mVending.addSize();
+      mVending.notifyVendingDataChange();
+    }
   }
 }
 

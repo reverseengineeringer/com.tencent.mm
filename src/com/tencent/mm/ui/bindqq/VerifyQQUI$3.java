@@ -10,7 +10,7 @@ final class VerifyQQUI$3
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    VerifyQQUI.f(kPK);
+    VerifyQQUI.f(loZ);
   }
 }
 

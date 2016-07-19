@@ -1,6 +1,7 @@
 package android.support.v4.app;
 
 import android.content.Context;
+import android.os.Parcelable;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,12 +29,12 @@ final class m
     return localm;
   }
   
-  protected final void dispatchRestoreInstanceState(SparseArray paramSparseArray)
+  protected final void dispatchRestoreInstanceState(SparseArray<Parcelable> paramSparseArray)
   {
     dispatchThawSelfOnly(paramSparseArray);
   }
   
-  protected final void dispatchSaveInstanceState(SparseArray paramSparseArray)
+  protected final void dispatchSaveInstanceState(SparseArray<Parcelable> paramSparseArray)
   {
     dispatchFreezeSelfOnly(paramSparseArray);
   }

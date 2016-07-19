@@ -18,7 +18,7 @@
 # instance fields
 .field private context:Landroid/content/Context;
 
-.field private lrB:Lcom/tencent/mm/ui/friend/c$a;
+.field private lSf:Lcom/tencent/mm/ui/friend/c$a;
 
 
 # direct methods
@@ -33,7 +33,7 @@
     iput-object p1, p0, Lcom/tencent/mm/ui/friend/c;->context:Landroid/content/Context;
 
     .line 16
-    iput-object p2, p0, Lcom/tencent/mm/ui/friend/c;->lrB:Lcom/tencent/mm/ui/friend/c$a;
+    iput-object p2, p0, Lcom/tencent/mm/ui/friend/c;->lSf:Lcom/tencent/mm/ui/friend/c$a;
 
     .line 17
     return-void
@@ -44,7 +44,7 @@
 
     .prologue
     .line 9
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/c;->lrB:Lcom/tencent/mm/ui/friend/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/c;->lSf:Lcom/tencent/mm/ui/friend/c$a;
 
     return-object v0
 .end method
@@ -63,7 +63,7 @@
     check-cast v0, Lcom/tencent/mm/ui/friend/c$b;
 
     .line 22
-    iget-object v1, v0, Lcom/tencent/mm/ui/friend/c$b;->lrD:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/ui/friend/c$b;->lSh:Ljava/lang/String;
 
     .line 23
     iget v0, v0, Lcom/tencent/mm/ui/friend/c$b;->position:I
@@ -75,7 +75,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v1}, Lcom/tencent/mm/a/o;->aF(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/a/o;->aK(Ljava/lang/String;)I
 
     move-result v1
 

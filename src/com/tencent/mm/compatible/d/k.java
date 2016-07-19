@@ -9,10 +9,10 @@ import java.util.Map;
 
 public final class k
 {
-  private static k bsw = null;
-  private boolean bsv = false;
+  private static k bgA = null;
+  private boolean bgz = false;
   private String filePath = "";
-  private Map values;
+  private Map<Integer, Object> values;
   
   private k(String paramString)
   {
@@ -36,7 +36,7 @@ public final class k
         values = new HashMap();
         continue;
       }
-      bsv = false;
+      bgz = false;
       return;
       paramString = new FileInputStream(paramString);
       localObjectInputStream = new ObjectInputStream(paramString);
@@ -46,46 +46,46 @@ public final class k
     }
   }
   
-  public static k oi()
+  public static k my()
   {
     try
     {
-      if (bsw == null) {
-        bsw = new k(d.bxa + "CompatibleInfo.cfg");
+      if (bgA == null) {
+        bgA = new k(d.bpc + "CompatibleInfo.cfg");
       }
-      k localk = bsw;
+      k localk = bgA;
       return localk;
     }
     finally {}
   }
   
   /* Error */
-  private void oj()
+  private void mz()
   {
     // Byte code:
     //   0: aload_0
     //   1: monitorenter
-    //   2: new 95	java/io/FileOutputStream
+    //   2: new 96	java/io/FileOutputStream
     //   5: dup
     //   6: aload_0
-    //   7: getfield 29	com/tencent/mm/compatible/d/k:filePath	Ljava/lang/String;
-    //   10: invokespecial 96	java/io/FileOutputStream:<init>	(Ljava/lang/String;)V
+    //   7: getfield 30	com/tencent/mm/compatible/d/k:filePath	Ljava/lang/String;
+    //   10: invokespecial 97	java/io/FileOutputStream:<init>	(Ljava/lang/String;)V
     //   13: astore_1
-    //   14: new 98	java/io/ObjectOutputStream
+    //   14: new 99	java/io/ObjectOutputStream
     //   17: dup
     //   18: aload_1
-    //   19: invokespecial 101	java/io/ObjectOutputStream:<init>	(Ljava/io/OutputStream;)V
+    //   19: invokespecial 102	java/io/ObjectOutputStream:<init>	(Ljava/io/OutputStream;)V
     //   22: astore_2
     //   23: aload_2
     //   24: aload_0
-    //   25: getfield 49	com/tencent/mm/compatible/d/k:values	Ljava/util/Map;
-    //   28: invokevirtual 105	java/io/ObjectOutputStream:writeObject	(Ljava/lang/Object;)V
+    //   25: getfield 50	com/tencent/mm/compatible/d/k:values	Ljava/util/Map;
+    //   28: invokevirtual 106	java/io/ObjectOutputStream:writeObject	(Ljava/lang/Object;)V
     //   31: aload_2
-    //   32: invokevirtual 106	java/io/ObjectOutputStream:close	()V
+    //   32: invokevirtual 107	java/io/ObjectOutputStream:close	()V
     //   35: aload_1
-    //   36: invokevirtual 109	java/io/FileOutputStream:flush	()V
+    //   36: invokevirtual 110	java/io/FileOutputStream:flush	()V
     //   39: aload_1
-    //   40: invokevirtual 110	java/io/FileOutputStream:close	()V
+    //   40: invokevirtual 111	java/io/FileOutputStream:close	()V
     //   43: aload_0
     //   44: monitorexit
     //   45: return
@@ -109,7 +109,7 @@ public final class k
     //   2	43	51	java/io/IOException
   }
   
-  public final Object bR(int paramInt)
+  public final Object cj(int paramInt)
   {
     Object localObject2 = values.get(Integer.valueOf(paramInt));
     Object localObject1 = localObject2;
@@ -129,8 +129,8 @@ public final class k
     try
     {
       values.put(Integer.valueOf(paramInt), paramObject);
-      if (!bsv) {
-        oj();
+      if (!bgz) {
+        mz();
       }
       return;
     }

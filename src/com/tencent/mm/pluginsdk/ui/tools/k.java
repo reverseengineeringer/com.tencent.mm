@@ -9,12 +9,10 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
-import com.tencent.mm.an.r;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.compatible.util.d;
-import com.tencent.mm.d.a.mu;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.a.e;
+import com.tencent.mm.av.c;
+import com.tencent.mm.e.a.nh;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.j;
 import com.tencent.mm.ui.o;
 import java.io.File;
@@ -23,25 +21,25 @@ public final class k
 {
   private static String filePath = null;
   
-  public static String FD()
+  public static String FY()
   {
-    return com.tencent.mm.platformtools.e.FD();
+    return com.tencent.mm.platformtools.d.FY();
   }
   
-  public static boolean P(Activity paramActivity)
+  public static boolean L(Activity paramActivity)
   {
-    mu localmu = new mu();
-    aJg.aJh = true;
-    com.tencent.mm.sdk.c.a.jUF.j(localmu);
+    nh localnh = new nh();
+    avA.avB = true;
+    com.tencent.mm.sdk.c.a.kug.y(localnh);
     b(paramActivity, 1, 0, 3, null);
     return true;
   }
   
-  public static boolean Q(Activity paramActivity)
+  public static boolean M(Activity paramActivity)
   {
-    mu localmu = new mu();
-    aJg.aJh = true;
-    com.tencent.mm.sdk.c.a.jUF.j(localmu);
+    nh localnh = new nh();
+    avA.avB = true;
+    com.tencent.mm.sdk.c.a.kug.y(localnh);
     a(paramActivity, 2, 1, 5, null);
     return true;
   }
@@ -51,10 +49,10 @@ public final class k
     if (filePath == null) {
       filePath = paramContext.getSharedPreferences("system_config_prefs", 0).getString("camera_file_path", null);
     }
-    if ((filePath == null) || (!com.tencent.mm.a.e.ax(filePath))) {
+    if ((filePath == null) || (!e.aB(filePath))) {
       filePath = com.tencent.mm.ui.tools.a.b(paramContext, paramIntent, paramString);
     }
-    com.tencent.mm.platformtools.e.d(filePath, paramContext);
+    com.tencent.mm.platformtools.d.c(filePath, paramContext);
     return filePath;
   }
   
@@ -70,7 +68,7 @@ public final class k
     c.a(paramActivity, "gallery", ".ui.GalleryEntryUI", localIntent, paramInt1);
   }
   
-  public static void a(Activity paramActivity, String paramString, int paramInt1, int paramInt2, int paramInt3, int paramInt4, boolean paramBoolean)
+  public static void a(Activity paramActivity, String paramString, int paramInt1, int paramInt2, int paramInt3, boolean paramBoolean)
   {
     paramString = new File(paramString);
     if (paramString.exists()) {
@@ -78,16 +76,13 @@ public final class k
     }
     Intent localIntent = new Intent();
     localIntent.putExtra("output", Uri.fromFile(paramString));
-    localIntent.putExtra("android.intent.extra.videoQuality", paramInt4);
+    localIntent.putExtra("android.intent.extra.videoQuality", paramInt3);
     if (paramBoolean) {}
-    for (paramInt4 = 1;; paramInt4 = 0)
+    for (paramInt3 = 1;; paramInt3 = 0)
     {
-      localIntent.putExtra("android.intent.extras.CAMERA_FACING", paramInt4);
+      localIntent.putExtra("android.intent.extras.CAMERA_FACING", paramInt3);
       if (paramInt2 > 0) {
         localIntent.putExtra("android.intent.extra.durationLimit", paramInt2);
-      }
-      if (paramInt3 > 0) {
-        localIntent.putExtra("android.intent.extra.sizeLimit", paramInt3);
       }
       localIntent.setAction("android.media.action.VIDEO_CAPTURE");
       localIntent.addCategory("android.intent.category.DEFAULT");
@@ -99,7 +94,7 @@ public final class k
   private static void a(Fragment paramFragment, int paramInt1, int paramInt2, int paramInt3, int paramInt4, String paramString1, String paramString2)
   {
     Intent localIntent = new Intent();
-    if (!ay.kz(paramString2))
+    if (!be.kf(paramString2))
     {
       localIntent.putExtra("GalleryUI_FromUser", paramString1);
       localIntent.putExtra("GalleryUI_ToUser", paramString2);
@@ -123,9 +118,9 @@ public final class k
   
   public static boolean a(Activity paramActivity, int paramInt, Intent paramIntent)
   {
-    mu localmu = new mu();
-    aJg.aJh = true;
-    com.tencent.mm.sdk.c.a.jUF.j(localmu);
+    nh localnh = new nh();
+    avA.avB = true;
+    com.tencent.mm.sdk.c.a.kug.y(localnh);
     a(paramActivity, paramInt, 1, 0, paramIntent);
     return true;
   }
@@ -135,22 +130,22 @@ public final class k
     boolean bool = a(paramo, paramString1, paramString2, 201);
     if (bool)
     {
-      paramo = new mu();
-      aJg.aJh = true;
-      com.tencent.mm.sdk.c.a.jUF.j(paramo);
+      paramo = new nh();
+      avA.avB = true;
+      com.tencent.mm.sdk.c.a.kug.y(paramo);
     }
-    u.i("!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp", "takePhoto(), dir = [%s], filename = [%s], cmd = [%s], result = [%s]", new Object[] { paramString1, paramString2, Integer.valueOf(201), Boolean.valueOf(bool) });
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.TakePhotoUtil", "takePhoto(), dir = [%s], filename = [%s], cmd = [%s], result = [%s]", new Object[] { paramString1, paramString2, Integer.valueOf(201), Boolean.valueOf(bool) });
     return bool;
   }
   
   private static boolean a(o paramo, String paramString1, String paramString2, int paramInt)
   {
-    if ((r.be(koJ.kpc)) || (com.tencent.mm.ae.a.aR(koJ.kpc))) {
+    if ((com.tencent.mm.aq.v.bb(kNN.kOg)) || (com.tencent.mm.ah.a.aN(kNN.kOg))) {
       return false;
     }
     filePath = paramString1 + paramString2;
-    u.i("!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp", "takePhotoFromSys(), filePath = " + filePath);
-    aS(koJ.kpc, filePath);
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.TakePhotoUtil", "takePhotoFromSys(), filePath = " + filePath);
+    aQ(kNN.kOg, filePath);
     paramString2 = new Intent("android.media.action.IMAGE_CAPTURE");
     File localFile = new File(paramString1);
     if (!localFile.exists()) {}
@@ -159,7 +154,7 @@ public final class k
       localFile.mkdirs();
       if (!localFile.exists())
       {
-        u.e("!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp", "takePhotoFromSys(), dir not exist. " + paramString1);
+        com.tencent.mm.sdk.platformtools.v.e("MicroMsg.TakePhotoUtil", "takePhotoFromSys(), dir not exist. " + paramString1);
         return false;
       }
       paramString2.putExtra("output", Uri.fromFile(new File(filePath)));
@@ -170,7 +165,7 @@ public final class k
       }
       catch (ActivityNotFoundException paramo)
       {
-        u.e("!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp", "takePhotoFromSys(), " + paramo.getMessage());
+        com.tencent.mm.sdk.platformtools.v.e("MicroMsg.TakePhotoUtil", "takePhotoFromSys(), " + paramo.getMessage());
         return false;
       }
     }
@@ -180,7 +175,7 @@ public final class k
     }
   }
   
-  private static void aS(Context paramContext, String paramString)
+  private static void aQ(Context paramContext, String paramString)
   {
     paramContext = paramContext.getSharedPreferences("system_config_prefs", 0).edit();
     paramContext.putString("camera_file_path", paramString);
@@ -188,9 +183,9 @@ public final class k
   }
   
   @TargetApi(8)
-  public static String aSR()
+  public static String aXK()
   {
-    return d.buk;
+    return com.tencent.mm.compatible.util.d.biK;
   }
   
   public static void b(Activity paramActivity, int paramInt1, int paramInt2, int paramInt3, Intent paramIntent)
@@ -212,9 +207,9 @@ public final class k
     c.a(paramActivity, "gallery", ".ui.GalleryEntryUI", paramIntent, 4);
   }
   
-  public static void d(String paramString, Context paramContext)
+  public static void c(String paramString, Context paramContext)
   {
-    com.tencent.mm.platformtools.e.d(paramString, paramContext);
+    com.tencent.mm.platformtools.d.c(paramString, paramContext);
   }
   
   public static boolean d(Activity paramActivity, String paramString1, String paramString2, int paramInt)
@@ -222,22 +217,22 @@ public final class k
     boolean bool = e(paramActivity, paramString1, paramString2, paramInt);
     if (bool)
     {
-      paramActivity = new mu();
-      aJg.aJh = true;
-      com.tencent.mm.sdk.c.a.jUF.j(paramActivity);
+      paramActivity = new nh();
+      avA.avB = true;
+      com.tencent.mm.sdk.c.a.kug.y(paramActivity);
     }
-    u.i("!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp", "takePhoto(), dir = [%s], filename = [%s], cmd = [%s], result = [%s]", new Object[] { paramString1, paramString2, Integer.valueOf(paramInt), Boolean.valueOf(bool) });
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.TakePhotoUtil", "takePhoto(), dir = [%s], filename = [%s], cmd = [%s], result = [%s]", new Object[] { paramString1, paramString2, Integer.valueOf(paramInt), Boolean.valueOf(bool) });
     return bool;
   }
   
   private static boolean e(Activity paramActivity, String paramString1, String paramString2, int paramInt)
   {
-    if ((r.be(paramActivity)) || (com.tencent.mm.ae.a.aR(paramActivity))) {
+    if ((com.tencent.mm.aq.v.bb(paramActivity)) || (com.tencent.mm.ah.a.aN(paramActivity))) {
       return false;
     }
     filePath = paramString1 + paramString2;
-    u.i("!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp", "takePhotoFromSys(), filePath = " + filePath);
-    aS(paramActivity, filePath);
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.TakePhotoUtil", "takePhotoFromSys(), filePath = " + filePath);
+    aQ(paramActivity, filePath);
     paramString2 = new Intent("android.media.action.IMAGE_CAPTURE");
     File localFile = new File(paramString1);
     if (!localFile.exists()) {}
@@ -246,7 +241,7 @@ public final class k
       localFile.mkdirs();
       if (!localFile.exists())
       {
-        u.e("!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp", "takePhotoFromSys(), dir not exist. " + paramString1);
+        com.tencent.mm.sdk.platformtools.v.e("MicroMsg.TakePhotoUtil", "takePhotoFromSys(), dir not exist. " + paramString1);
         return false;
       }
       paramString2.putExtra("output", Uri.fromFile(new File(filePath)));
@@ -257,7 +252,7 @@ public final class k
       }
       catch (Exception paramActivity)
       {
-        u.e("!32@/B4Tb64lLpJDfbPMEgfq4ZraojIE8LWp", "takePhotoFromSys(), " + paramActivity.getMessage());
+        com.tencent.mm.sdk.platformtools.v.e("MicroMsg.TakePhotoUtil", "takePhotoFromSys(), " + paramActivity.getMessage());
         return false;
       }
     }
@@ -269,21 +264,21 @@ public final class k
   
   public static void h(String paramString, Context paramContext)
   {
-    com.tencent.mm.platformtools.e.a(paramString, paramContext, true);
+    com.tencent.mm.platformtools.d.a(paramString, paramContext, true);
   }
   
-  public static boolean j(Fragment paramFragment)
+  public static boolean i(Fragment paramFragment)
   {
-    mu localmu = new mu();
-    aJg.aJh = true;
-    com.tencent.mm.sdk.c.a.jUF.j(localmu);
+    nh localnh = new nh();
+    avA.avB = true;
+    com.tencent.mm.sdk.c.a.kug.y(localnh);
     a(paramFragment, 200, 1, 0, 1, "", "");
     return true;
   }
   
-  public static String kt(String paramString)
+  public static String lc(String paramString)
   {
-    return com.tencent.mm.platformtools.e.kt(paramString);
+    return com.tencent.mm.platformtools.d.lc(paramString);
   }
 }
 

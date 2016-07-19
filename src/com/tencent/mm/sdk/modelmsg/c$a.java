@@ -6,14 +6,14 @@ import com.tencent.mm.sdk.e.a;
 public final class c$a
   extends a
 {
-  public int asc;
-  public WXMediaMessage jUS;
+  public WXMediaMessage kuy;
+  public int scene;
   
   public c$a() {}
   
   public c$a(Bundle paramBundle)
   {
-    m(paramBundle);
+    o(paramBundle);
   }
   
   public final int getType()
@@ -21,18 +21,18 @@ public final class c$a
     return 2;
   }
   
-  public final void l(Bundle paramBundle)
+  public final void n(Bundle paramBundle)
   {
-    super.l(paramBundle);
-    paramBundle.putAll(WXMediaMessage.a.b(jUS));
-    paramBundle.putInt("_wxapi_sendmessagetowx_req_scene", asc);
+    super.n(paramBundle);
+    paramBundle.putAll(WXMediaMessage.a.b(kuy));
+    paramBundle.putInt("_wxapi_sendmessagetowx_req_scene", scene);
   }
   
-  public final void m(Bundle paramBundle)
+  public final void o(Bundle paramBundle)
   {
-    super.m(paramBundle);
-    jUS = WXMediaMessage.a.J(paramBundle);
-    asc = paramBundle.getInt("_wxapi_sendmessagetowx_req_scene");
+    super.o(paramBundle);
+    kuy = WXMediaMessage.a.P(paramBundle);
+    scene = paramBundle.getInt("_wxapi_sendmessagetowx_req_scene");
   }
 }
 

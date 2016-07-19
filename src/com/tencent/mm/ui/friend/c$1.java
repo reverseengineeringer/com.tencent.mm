@@ -7,7 +7,7 @@ final class c$1
   
   public final void g(boolean paramBoolean, String paramString)
   {
-    c.a(lrC).ib(paramBoolean);
+    c.a(lSg).iF(paramBoolean);
   }
 }
 

@@ -2,17 +2,17 @@ package com.tencent.kingkong.database;
 
 import com.tencent.kingkong.support.CancellationSignal.OnCancelListener;
 
-final class SQLiteConnectionPool$1
+class SQLiteConnectionPool$1
   implements CancellationSignal.OnCancelListener
 {
   SQLiteConnectionPool$1(SQLiteConnectionPool paramSQLiteConnectionPool, SQLiteConnectionPool.ConnectionWaiter paramConnectionWaiter, int paramInt) {}
   
-  public final void onCancel()
+  public void onCancel()
   {
-    synchronized (SQLiteConnectionPool.access$0(this$0))
+    synchronized (SQLiteConnectionPool.access$000(this$0))
     {
       if (val$waiter.mNonce == val$nonce) {
-        SQLiteConnectionPool.access$1(this$0, val$waiter);
+        SQLiteConnectionPool.access$100(this$0, val$waiter);
       }
       return;
     }

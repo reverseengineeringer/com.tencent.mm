@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bBf:Lcom/tencent/mm/model/ah;
+.field final synthetic buk:Lcom/tencent/mm/model/ah;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1345
-    iput-object p1, p0, Lcom/tencent/mm/model/ah$5;->bBf:Lcom/tencent/mm/model/ah;
+    .line 1356
+    iput-object p1, p0, Lcom/tencent/mm/model/ah$5;->buk:Lcom/tencent/mm/model/ah;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,10 +40,10 @@
     .locals 0
 
     .prologue
-    .line 1349
+    .line 1360
     if-nez p1, :cond_0
 
-    .line 1352
+    .line 1363
     :cond_0
     return-void
 .end method

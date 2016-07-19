@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+.field final synthetic ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 2046
-    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$FeedbackUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 2048
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$FeedbackUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BaseUriSpanHandler;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)V
 
@@ -44,14 +44,14 @@
 
     const/4 v1, 0x0
 
-    .line 2069
+    .line 2071
     iget v2, p1, Lcom/tencent/mm/pluginsdk/ui/applet/g;->type:I
 
     const/16 v3, 0x22
 
     if-ne v2, v3, :cond_0
 
-    .line 2070
+    .line 2072
     iget-object v2, p1, Lcom/tencent/mm/pluginsdk/ui/applet/g;->url:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -66,8 +66,8 @@
 
     move-result-object v2
 
-    .line 2071
-    const-string/jumbo v3, "!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4="
+    .line 2073
+    const-string/jumbo v3, "MicroMsg.URISpanHandlerSet"
 
     const-string/jumbo v4, "FeedbackUriSpanHandler, url:%s, content:%s"
 
@@ -81,26 +81,26 @@
 
     aput-object v2, v5, v0
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2072
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 2074
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
-    move-result-object v1
+    move-result-object v3
 
-    new-instance v3, Lcom/tencent/mm/pluginsdk/model/k;
+    new-instance v4, Lcom/tencent/mm/pluginsdk/model/k;
 
-    invoke-static {}, Lcom/tencent/mm/compatible/d/p;->oL()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/compatible/d/p;->nb()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    const/16 v5, 0x8
+    const/16 v6, 0x8
 
-    invoke-direct {v3, v4, v2, v5}, Lcom/tencent/mm/pluginsdk/model/k;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v4, v5, v2, v6}, Lcom/tencent/mm/pluginsdk/model/k;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
-    invoke-virtual {v1, v3}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v3, v4, v1}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
-    .line 2076
+    .line 2078
     :goto_0
     return v0
 
@@ -114,19 +114,19 @@
     .locals 1
 
     .prologue
-    .line 2081
+    .line 2083
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method final bb(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
+.method final bg(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
     .locals 3
 
     .prologue
     const/4 v1, 0x0
 
-    .line 2050
+    .line 2052
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -139,14 +139,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 2051
+    .line 2053
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     const/16 v2, 0x22
 
     invoke-direct {v0, p1, v2, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 2054
+    .line 2056
     :goto_0
     return-object v0
 
@@ -156,11 +156,11 @@
     goto :goto_0
 .end method
 
-.method final lg()[I
+.method final jH()[I
     .locals 3
 
     .prologue
-    .line 2064
+    .line 2066
     const/4 v0, 0x1
 
     new-array v0, v0, [I

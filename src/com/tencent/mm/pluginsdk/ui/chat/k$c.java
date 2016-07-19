@@ -2,8 +2,8 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 public final class k$c
 {
-  public String aFT;
   public String appId;
+  public String arZ;
 }
 
 /* Location:

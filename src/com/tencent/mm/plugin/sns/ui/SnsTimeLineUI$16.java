@@ -1,13 +1,26 @@
 package com.tencent.mm.plugin.sns.ui;
 
+import com.tencent.mm.kiss.app.Interactor;
+import com.tencent.mm.kiss.d.b;
+
 final class SnsTimeLineUI$16
-  implements Runnable
+  implements b
 {
-  SnsTimeLineUI$16(SnsTimeLineUI paramSnsTimeLineUI) {}
+  SnsTimeLineUI$16(SnsTimeLineUI paramSnsTimeLineUI, boolean paramBoolean1, boolean paramBoolean2) {}
   
-  public final void run()
+  public final Object pX()
   {
-    hkJ.aAV();
+    jhzE).hBq = hzJ;
+    if (hzJ) {
+      SnsTimeLineUI.j(hzE).ff(false);
+    }
+    for (;;)
+    {
+      return null;
+      if (hzK) {
+        hzE.pT().immediateCall("doNpList", new Object[] { "@__weixintimtline", Boolean.valueOf(SnsTimeLineUI.n(hzE)), Boolean.valueOf(SnsTimeLineUI.r(hzE)), Integer.valueOf(0) });
+      }
+    }
   }
 }
 

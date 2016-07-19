@@ -9,8 +9,8 @@ final class SightCameraView$3
   
   public final void run()
   {
-    if (gEp.gEc != null) {
-      gEp.gEd.cancel();
+    if (gKQ.gKC != null) {
+      gKQ.gKD.cancel();
     }
   }
   

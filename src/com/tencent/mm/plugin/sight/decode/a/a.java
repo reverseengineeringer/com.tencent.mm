@@ -7,47 +7,47 @@ import android.widget.TextView;
 
 public abstract interface a
 {
-  public abstract void P(String paramString, boolean paramBoolean);
+  public abstract void T(View paramView);
   
-  public abstract void avF();
+  public abstract void V(String paramString, boolean paramBoolean);
   
-  public abstract boolean avG();
+  public abstract void a(b.e parame);
   
-  public abstract void bc(int paramInt1, int paramInt2);
+  public abstract void a(b.f paramf);
+  
+  public abstract void aF(Object paramObject);
+  
+  public abstract String axW();
+  
+  public abstract void axX();
+  
+  public abstract Object axY();
+  
+  public abstract Context axZ();
+  
+  public abstract boolean aya();
+  
+  public abstract void ayb();
+  
+  public abstract void ayc();
+  
+  public abstract void bg(int paramInt1, int paramInt2);
+  
+  public abstract void c(TextView paramTextView);
   
   public abstract void clear();
   
-  public abstract void eD(boolean paramBoolean);
+  public abstract void er(boolean paramBoolean);
   
-  public abstract Object getTagObject();
+  public abstract void es(boolean paramBoolean);
   
-  public abstract Context getUIContext();
+  public abstract void fY(int paramInt);
   
-  public abstract String getVideoPath();
+  public abstract void lX(int paramInt);
   
-  public abstract void setCanPlay(boolean paramBoolean);
+  public abstract void lY(int paramInt);
   
-  public abstract void setDrawableWidth(int paramInt);
-  
-  public abstract void setForceRecordState(boolean paramBoolean);
-  
-  public abstract void setMaskID(int paramInt);
-  
-  public abstract void setOnCompletionListener(b.e parame);
-  
-  public abstract void setOnDecodeDurationListener(b.f paramf);
-  
-  public abstract void setOnSightCompletionAction(b.g paramg);
-  
-  public abstract void setPosition(int paramInt);
-  
-  public abstract void setSightInfoView(TextView paramTextView);
-  
-  public abstract void setTagObject(Object paramObject);
-  
-  public abstract void setThumbBgView(View paramView);
-  
-  public abstract void setThumbBmp(Bitmap paramBitmap);
+  public abstract void o(Bitmap paramBitmap);
 }
 
 /* Location:

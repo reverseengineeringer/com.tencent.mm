@@ -1,17 +1,18 @@
 package com.tencent.mm.ui.conversation;
 
-import android.view.View;
-import android.widget.ListView;
-import com.tencent.mm.ui.base.MMSlideDelView.g;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.base.MMSlideDelView.e;
 
 final class BizChatConversationUI$a$17
-  implements MMSlideDelView.g
+  implements MMSlideDelView.e
 {
   BizChatConversationUI$a$17(BizChatConversationUI.a parama) {}
   
-  public final void j(View paramView, int paramInt)
+  public final void at(Object paramObject)
   {
-    BizChatConversationUI.a.d(lnN).performItemClick(paramView, paramInt, 0L);
+    if (paramObject == null) {
+      v.e("MicroMsg.BizChatConversationFmUI", "onItemDel object null");
+    }
   }
 }
 

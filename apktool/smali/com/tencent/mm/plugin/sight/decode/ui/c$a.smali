@@ -13,33 +13,80 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/kk;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field gyK:Ljava/lang/ref/WeakReference;
+.field gFj:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/tencent/mm/plugin/sight/decode/ui/c;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 1
 
     .prologue
-    .line 82
+    .line 78
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
+
+    .line 80
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$a;->gFj:Ljava/lang/ref/WeakReference;
 
-    .line 79
-    const/4 v0, 0x0
+    const-class v0, Lcom/tencent/mm/e/a/kk;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$a;->gyK:Ljava/lang/ref/WeakReference;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    .line 83
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$a;->kum:I
+
     return-void
 .end method
 
+.method synthetic constructor <init>(B)V
+    .locals 1
 
-# virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+    .prologue
+    .line 78
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/c$a;-><init>()V
+
+    const-class v0, Lcom/tencent/mm/e/a/kk;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$a;->kum:I
+
+    return-void
+.end method
+
+.method private a(Lcom/tencent/mm/e/a/kk;)Z
     .locals 9
 
     .prologue
@@ -49,74 +96,71 @@
 
     const/4 v6, 0x0
 
-    .line 91
-    instance-of v0, p1, Lcom/tencent/mm/d/a/ke;
+    .line 88
+    instance-of v0, p1, Lcom/tencent/mm/e/a/kk;
 
     if-nez v0, :cond_0
 
-    .line 92
-    const-string/jumbo v0, "!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk="
+    .line 89
+    const-string/jumbo v0, "MicroMsg.VideoPopupHelper"
 
     const-string/jumbo v1, "can not be here"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 142
+    .line 139
     :goto_0
     return v6
 
-    .line 95
+    .line 93
     :cond_0
-    check-cast p1, Lcom/tencent/mm/d/a/ke;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/kk;->asN:Lcom/tencent/mm/e/a/kk$a;
 
-    .line 96
-    iget-object v0, p1, Lcom/tencent/mm/d/a/ke;->aGE:Lcom/tencent/mm/d/a/ke$a;
+    iget-wide v0, v0, Lcom/tencent/mm/e/a/kk$a;->agU:J
 
-    iget-wide v0, v0, Lcom/tencent/mm/d/a/ke$a;->avg:J
-
-    .line 97
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 94
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/aj;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0, v1}, Lcom/tencent/mm/storage/ah;->dz(J)Lcom/tencent/mm/storage/ag;
+    invoke-virtual {v2, v0, v1}, Lcom/tencent/mm/storage/aj;->dQ(J)Lcom/tencent/mm/storage/ai;
 
     move-result-object v0
 
-    .line 98
-    iget-wide v1, v0, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+    .line 95
+    iget-wide v2, v0, Lcom/tencent/mm/e/b/bj;->field_msgId:J
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-gtz v1, :cond_1
 
-    .line 99
-    iget-object v0, p1, Lcom/tencent/mm/d/a/ke;->aGE:Lcom/tencent/mm/d/a/ke$a;
+    .line 96
+    iget-object v0, p1, Lcom/tencent/mm/e/a/kk;->asN:Lcom/tencent/mm/e/a/kk$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/ke$a;->aGG:Lcom/tencent/mm/storage/ag;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/kk$a;->asP:Lcom/tencent/mm/storage/ai;
 
-    .line 101
+    .line 98
     :cond_1
     const/16 v1, 0x3e
 
-    iget v2, v0, Lcom/tencent/mm/d/b/bg;->field_type:I
+    iget v2, v0, Lcom/tencent/mm/e/b/bj;->field_type:I
 
     if-eq v1, v2, :cond_2
 
-    .line 102
-    const-string/jumbo v1, "!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk="
+    .line 99
+    const-string/jumbo v1, "MicroMsg.VideoPopupHelper"
 
     const-string/jumbo v2, "not short video type !!! cur type %d"
 
     new-array v3, v7, [Ljava/lang/Object;
 
-    iget v0, v0, Lcom/tencent/mm/d/b/bg;->field_type:I
+    iget v0, v0, Lcom/tencent/mm/e/b/bj;->field_type:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -124,31 +168,31 @@
 
     aput-object v0, v3, v6
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 106
+    .line 103
     :cond_2
-    iget-object v0, v0, Lcom/tencent/mm/d/b/bg;->field_imgPath:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/bj;->field_imgPath:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/an/o;->jV(Ljava/lang/String;)Lcom/tencent/mm/an/m;
+    invoke-static {v0}, Lcom/tencent/mm/aq/s;->kC(Ljava/lang/String;)Lcom/tencent/mm/aq/q;
 
     move-result-object v0
 
-    .line 108
+    .line 105
     if-eqz v0, :cond_3
 
-    .line 110
+    .line 107
     const-string/jumbo v1, "downvideo"
 
-    iget-wide v2, v0, Lcom/tencent/mm/an/m;->cfW:J
+    iget-wide v2, v0, Lcom/tencent/mm/aq/q;->cbi:J
 
-    invoke-virtual {v0}, Lcom/tencent/mm/an/m;->Ei()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/aq/q;->Ez()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lcom/tencent/mm/an/m;->getFileName()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/aq/q;->getFileName()Ljava/lang/String;
 
     move-result-object v5
 
@@ -156,16 +200,16 @@
 
     move-result-object v1
 
-    .line 113
+    .line 110
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/modelcdntran/e;->xW()Lcom/tencent/mm/modelcdntran/b;
+    invoke-static {}, Lcom/tencent/mm/modelcdntran/e;->xZ()Lcom/tencent/mm/modelcdntran/b;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/modelcdntran/b;->hk(Ljava/lang/String;)Z
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/modelcdntran/b;->hB(Ljava/lang/String;)Z
 
-    .line 114
-    const-string/jumbo v1, "!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk="
+    .line 111
+    const-string/jumbo v1, "MicroMsg.VideoPopupHelper"
 
     const-string/jumbo v2, "[oneliang][revokeMsgVideo] cancel result:%s"
 
@@ -183,52 +227,52 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 115
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 112
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
     const/16 v2, 0x96
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/r/m;->cancel(I)V
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/t/m;->cancel(I)V
 
-    .line 116
-    invoke-static {}, Lcom/tencent/mm/an/j;->Ea()Lcom/tencent/mm/an/n;
+    .line 113
+    invoke-static {}, Lcom/tencent/mm/aq/n;->Es()Lcom/tencent/mm/aq/r;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcom/tencent/mm/an/m;->getFileName()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/aq/q;->getFileName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/an/n;->jK(Ljava/lang/String;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/aq/r;->kn(Ljava/lang/String;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 123
+    .line 120
     :cond_3
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$a;->gyK:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$a;->gFj:Ljava/lang/ref/WeakReference;
 
     if-nez v0, :cond_4
 
-    .line 124
-    const-string/jumbo v0, "!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk="
+    .line 121
+    const-string/jumbo v0, "MicroMsg.VideoPopupHelper"
 
     const-string/jumbo v1, "popup view ref is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 117
+    .line 114
     :catch_0
     move-exception v0
 
-    .line 118
-    const-string/jumbo v1, "!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk="
+    .line 115
+    const-string/jumbo v1, "MicroMsg.VideoPopupHelper"
 
     const-string/jumbo v2, "[oneliang][revokeMsgVideo] chatting item video,cancel failure:%s"
 
@@ -240,13 +284,13 @@
 
     aput-object v4, v3, v6
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 127
+    .line 124
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$a;->gyK:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$a;->gFj:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -254,33 +298,33 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
-    .line 128
+    .line 125
     if-nez v0, :cond_5
 
-    .line 129
-    const-string/jumbo v0, "!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk="
+    .line 126
+    const-string/jumbo v0, "MicroMsg.VideoPopupHelper"
 
     const-string/jumbo v1, "popup view is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 130
-    iput-object v8, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$a;->gyK:Ljava/lang/ref/WeakReference;
+    .line 127
+    iput-object v8, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$a;->gFj:Ljava/lang/ref/WeakReference;
 
     goto/16 :goto_0
 
-    .line 133
+    .line 130
     :cond_5
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/c;->a(Lcom/tencent/mm/plugin/sight/decode/ui/c;)V
 
-    .line 134
+    .line 131
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/c;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v2, p1, Lcom/tencent/mm/d/a/ke;->aGE:Lcom/tencent/mm/d/a/ke$a;
+    iget-object v2, p1, Lcom/tencent/mm/e/a/kk;->asN:Lcom/tencent/mm/e/a/kk$a;
 
-    iget-object v2, v2, Lcom/tencent/mm/d/a/ke$a;->aGF:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/e/a/kk$a;->asO:Ljava/lang/String;
 
     const-string/jumbo v3, ""
 
@@ -290,8 +334,24 @@
 
     invoke-static {v1, v2, v3, v6, v4}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
-    .line 141
-    iput-object v8, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$a;->gyK:Ljava/lang/ref/WeakReference;
+    .line 138
+    iput-object v8, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$a;->gFj:Ljava/lang/ref/WeakReference;
 
     goto/16 :goto_0
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 1
+
+    .prologue
+    .line 78
+    check-cast p1, Lcom/tencent/mm/e/a/kk;
+
+    invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sight/decode/ui/c$a;->a(Lcom/tencent/mm/e/a/kk;)Z
+
+    move-result v0
+
+    return v0
 .end method

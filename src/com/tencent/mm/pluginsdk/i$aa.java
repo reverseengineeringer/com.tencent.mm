@@ -6,19 +6,19 @@ public abstract interface i$aa
 {
   public abstract void a(i.z paramz);
   
-  public abstract void a(String paramString1, LinkedList paramLinkedList, double paramDouble1, double paramDouble2, String paramString2, String paramString3, String paramString4);
+  public abstract void a(String paramString1, LinkedList<String> paramLinkedList, double paramDouble1, double paramDouble2, String paramString2, String paramString3, String paramString4);
   
-  public abstract boolean aS(String paramString1, String paramString2);
+  public abstract boolean ahV();
   
-  public abstract boolean afr();
-  
-  public abstract String afs();
+  public abstract String ahW();
   
   public abstract void b(i.z paramz);
   
-  public abstract LinkedList qr(String paramString);
+  public abstract boolean ba(String paramString1, String paramString2);
   
-  public abstract boolean qt(String paramString);
+  public abstract LinkedList<String> rH(String paramString);
+  
+  public abstract boolean rJ(String paramString);
 }
 
 /* Location:

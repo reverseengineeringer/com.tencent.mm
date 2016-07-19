@@ -11,10 +11,10 @@ final class j$2
   
   public final void onClick(View paramView)
   {
-    if (SystemClock.elapsedRealtime() - j.k(kpx) < 300L) {
-      kpy.run();
+    if (SystemClock.elapsedRealtime() - j.k(kOB) < 300L) {
+      kOC.run();
     }
-    j.a(kpx, SystemClock.elapsedRealtime());
+    j.a(kOB, SystemClock.elapsedRealtime());
   }
 }
 

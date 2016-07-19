@@ -12,14 +12,14 @@ final class SnsSightUploadSayFooter$1
   public final void onClick(View paramView)
   {
     int i = 0;
-    if (hiw.getVisibility() == 8) {
-      hiw.setVisibility(0);
+    if (hxl.getVisibility() == 8) {
+      hxl.setVisibility(0);
     }
-    if (hiw.eYO.getVisibility() == 0) {
+    if (hxl.fhi.getVisibility() == 0) {
       i = 1;
     }
     if (i != 0) {
-      SnsSightUploadSayFooter.a(hiw);
+      SnsSightUploadSayFooter.a(hxl);
     }
   }
 }

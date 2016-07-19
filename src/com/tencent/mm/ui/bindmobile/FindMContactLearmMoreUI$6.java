@@ -12,7 +12,7 @@ final class FindMContactLearmMoreUI$6
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface.dismiss();
-    kPd.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    lot.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
   }
 }
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lGT:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;
+.field final synthetic mih:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 462
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2$1;->lGT:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;
+    iput-object p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2$1;->mih:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
     .prologue
     .line 466
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2$1;->lGT:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2$1;->mih:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;->lGS:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;->mig:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;->lGQ:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;->mie:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;->lGP:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;->mid:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->g(Lcom/tencent/mm/ui/widget/SwipeBackLayout;)Lcom/tencent/mm/ui/widget/SwipeBackLayout$a;
 
@@ -56,41 +56,41 @@
     if-eqz v0, :cond_0
 
     .line 467
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2$1;->lGT:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2$1;->mih:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;->lGS:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;->mig:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;->lGQ:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;->mie:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;->lGP:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;->mid:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->g(Lcom/tencent/mm/ui/widget/SwipeBackLayout;)Lcom/tencent/mm/ui/widget/SwipeBackLayout$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/widget/SwipeBackLayout$a;->aNg()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/widget/SwipeBackLayout$a;->aEs()V
 
     .line 468
-    const-string/jumbo v0, "!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4="
+    const-string/jumbo v0, "MicroMsg.SwipeBackLayout"
 
     const-string/jumbo v1, "ashutest:: on onSwipeBack"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 472
     :cond_0
     const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/widget/f;->I(F)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/widget/f;->H(F)V
 
     .line 474
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2$1;->lGT:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2$1;->mih:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;->lGS:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;->mig:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;->lGQ:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;->mie:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;->lGP:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;->mid:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
     const/4 v1, 0x0
 

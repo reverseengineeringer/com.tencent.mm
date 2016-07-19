@@ -3,26 +3,26 @@ package com.tencent.mm.modelsfs;
 public final class d
   extends SFSInputStream
 {
-  private a cal;
+  private a bTU;
   
   public d(long paramLong1, long paramLong2)
   {
     super(paramLong1);
-    cal = new a(paramLong2);
+    bTU = new a(paramLong2);
   }
   
   public final void close()
   {
     super.close();
-    if (cal != null) {
-      cal.free();
+    if (bTU != null) {
+      bTU.free();
     }
   }
   
   public final void mark(int paramInt)
   {
     super.mark(paramInt);
-    cal.Cf();
+    bTU.Cm();
   }
   
   public final int read()
@@ -36,20 +36,20 @@ public final class d
     if (paramInt1 < 0) {
       return paramInt1;
     }
-    cal.j(paramArrayOfByte, paramInt2);
+    bTU.j(paramArrayOfByte, paramInt2);
     return paramInt1;
   }
   
   public final void reset()
   {
     super.reset();
-    cal.reset();
+    bTU.reset();
   }
   
   public final long skip(long paramLong)
   {
     long l = super.skip(paramLong);
-    cal.seek(paramLong);
+    bTU.seek(paramLong);
     return l;
   }
 }

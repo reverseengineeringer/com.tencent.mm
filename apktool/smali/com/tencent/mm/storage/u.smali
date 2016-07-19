@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field protected final kfm:J
+.field protected final kFt:J
 
-.field private kfn:Lcom/tencent/mm/storage/t;
+.field private kFu:Lcom/tencent/mm/storage/t;
 
 
 # direct methods
@@ -16,27 +16,27 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 3294
+    .line 3358
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3290
+    .line 3354
     const-wide/32 v0, 0x15180
 
-    iput-wide v0, p0, Lcom/tencent/mm/storage/u;->kfm:J
+    iput-wide v0, p0, Lcom/tencent/mm/storage/u;->kFt:J
 
-    .line 3292
+    .line 3356
     new-instance v0, Lcom/tencent/mm/storage/t;
 
     invoke-direct {v0}, Lcom/tencent/mm/storage/t;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iput-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    .line 3295
+    .line 3359
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
@@ -62,49 +62,49 @@
 
     move-result-object v0
 
-    .line 3296
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->J([B)Z
+    .line 3360
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 3298
+    .line 3362
     :try_start_0
-    iget-object v1, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v1, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/t;->am([B)Lcom/tencent/mm/at/a;
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/t;->au([B)Lcom/tencent/mm/ax/a;
 
-    .line 3299
-    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->aWQ()Z
+    .line 3363
+    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->bce()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3300
-    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->aWP()V
+    .line 3364
+    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->bcd()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3307
+    .line 3371
     :cond_0
     :goto_0
     return-void
 
-    .line 3302
+    .line 3366
     :catch_0
     move-exception v0
 
-    .line 3303
-    const-string/jumbo v1, "!32@/B4Tb64lLpIeyFFi+7ORKM25zAgrDjCa"
+    .line 3367
+    const-string/jumbo v1, "MicroMsg.DelSvrIdMgr"
 
     const-string/jumbo v2, "DelSvrIDs parse Error"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3304
-    const-string/jumbo v1, "!32@/B4Tb64lLpIeyFFi+7ORKM25zAgrDjCa"
+    .line 3368
+    const-string/jumbo v1, "MicroMsg.DelSvrIdMgr"
 
     const-string/jumbo v2, "exception:%s"
 
@@ -112,56 +112,56 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method private aWP()V
+.method private bcd()V
     .locals 5
 
     .prologue
-    .line 3311
+    .line 3375
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfi:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
-
-    .line 3312
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
-
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfh:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFp:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
-    .line 3313
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    .line 3376
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfg:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFo:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
-    .line 3314
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    .line 3377
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
+
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFn:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
+
+    .line 3378
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
     invoke-virtual {v0}, Lcom/tencent/mm/storage/t;->toByteArray()[B
 
     move-result-object v0
 
-    .line 3315
+    .line 3379
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
@@ -187,16 +187,16 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3319
+    .line 3383
     :goto_0
     return-void
 
-    .line 3316
+    .line 3380
     :catch_0
     move-exception v0
 
-    .line 3317
-    const-string/jumbo v1, "!32@/B4Tb64lLpIeyFFi+7ORKM25zAgrDjCa"
+    .line 3381
+    const-string/jumbo v1, "MicroMsg.DelSvrIdMgr"
 
     const-string/jumbo v2, "exception:%s"
 
@@ -206,18 +206,18 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method private aWQ()Z
+.method private bce()Z
     .locals 7
 
     .prologue
@@ -225,8 +225,8 @@
 
     const/4 v1, 0x1
 
-    .line 3370
-    const-string/jumbo v2, "!32@/B4Tb64lLpIeyFFi+7ORKM25zAgrDjCa"
+    .line 3434
+    const-string/jumbo v2, "MicroMsg.DelSvrIdMgr"
 
     const-string/jumbo v3, "checkOldData todayIndex:%d, t0Size:%d, t1Size:%d, t2Size:%d"
 
@@ -234,9 +234,9 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v5, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget v5, v5, Lcom/tencent/mm/storage/t;->kff:I
+    iget v5, v5, Lcom/tencent/mm/storage/t;->kFm:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -244,9 +244,9 @@
 
     aput-object v5, v4, v0
 
-    iget-object v5, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v5, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v5, v5, Lcom/tencent/mm/storage/t;->kfj:Ljava/util/LinkedList;
+    iget-object v5, v5, Lcom/tencent/mm/storage/t;->kFq:Ljava/util/LinkedList;
 
     invoke-virtual {v5}, Ljava/util/LinkedList;->size()I
 
@@ -260,9 +260,9 @@
 
     const/4 v5, 0x2
 
-    iget-object v6, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v6, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v6, v6, Lcom/tencent/mm/storage/t;->kfk:Ljava/util/LinkedList;
+    iget-object v6, v6, Lcom/tencent/mm/storage/t;->kFr:Ljava/util/LinkedList;
 
     invoke-virtual {v6}, Ljava/util/LinkedList;->size()I
 
@@ -276,9 +276,9 @@
 
     const/4 v5, 0x3
 
-    iget-object v6, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v6, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v6, v6, Lcom/tencent/mm/storage/t;->kfl:Ljava/util/LinkedList;
+    iget-object v6, v6, Lcom/tencent/mm/storage/t;->kFs:Ljava/util/LinkedList;
 
     invoke-virtual {v6}, Ljava/util/LinkedList;->size()I
 
@@ -290,10 +290,10 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3371
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FR()J
+    .line 3435
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Go()J
 
     move-result-wide v2
 
@@ -303,110 +303,110 @@
 
     long-to-int v2, v2
 
-    .line 3372
-    iget-object v3, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    .line 3436
+    iget-object v3, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget v3, v3, Lcom/tencent/mm/storage/t;->kff:I
+    iget v3, v3, Lcom/tencent/mm/storage/t;->kFm:I
 
     sub-int v3, v2, v3
 
-    .line 3373
-    iget-object v4, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    .line 3437
+    iget-object v4, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iput v2, v4, Lcom/tencent/mm/storage/t;->kff:I
+    iput v2, v4, Lcom/tencent/mm/storage/t;->kFm:I
 
-    .line 3374
+    .line 3438
     packed-switch v3, :pswitch_data_0
 
-    .line 3388
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    .line 3452
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfl:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
-
-    .line 3389
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
-
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfk:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFs:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
-    .line 3390
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    .line 3453
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfj:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFr:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
+
+    .line 3454
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
+
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFq:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
     move v0, v1
 
-    .line 3391
+    .line 3455
     :goto_0
     :pswitch_0
     return v0
 
-    .line 3378
+    .line 3442
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v2, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v2, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v2, v2, Lcom/tencent/mm/storage/t;->kfk:Ljava/util/LinkedList;
+    iget-object v2, v2, Lcom/tencent/mm/storage/t;->kFr:Ljava/util/LinkedList;
 
-    iput-object v2, v0, Lcom/tencent/mm/storage/t;->kfl:Ljava/util/LinkedList;
+    iput-object v2, v0, Lcom/tencent/mm/storage/t;->kFs:Ljava/util/LinkedList;
 
-    .line 3379
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    .line 3443
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v2, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v2, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v2, v2, Lcom/tencent/mm/storage/t;->kfj:Ljava/util/LinkedList;
+    iget-object v2, v2, Lcom/tencent/mm/storage/t;->kFq:Ljava/util/LinkedList;
 
-    iput-object v2, v0, Lcom/tencent/mm/storage/t;->kfk:Ljava/util/LinkedList;
+    iput-object v2, v0, Lcom/tencent/mm/storage/t;->kFr:Ljava/util/LinkedList;
 
-    .line 3380
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    .line 3444
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfj:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFq:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
     move v0, v1
 
-    .line 3381
+    .line 3445
     goto :goto_0
 
-    .line 3383
+    .line 3447
     :pswitch_2
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v2, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v2, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v2, v2, Lcom/tencent/mm/storage/t;->kfj:Ljava/util/LinkedList;
+    iget-object v2, v2, Lcom/tencent/mm/storage/t;->kFq:Ljava/util/LinkedList;
 
-    iput-object v2, v0, Lcom/tencent/mm/storage/t;->kfl:Ljava/util/LinkedList;
+    iput-object v2, v0, Lcom/tencent/mm/storage/t;->kFs:Ljava/util/LinkedList;
 
-    .line 3384
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    .line 3448
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfk:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFr:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
-    .line 3385
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    .line 3449
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfj:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFq:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
     move v0, v1
 
-    .line 3386
+    .line 3450
     goto :goto_0
 
-    .line 3374
+    .line 3438
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -418,29 +418,29 @@
 
 # virtual methods
 .method protected final a(IJJZ)V
-    .locals 5
+    .locals 6
 
     .prologue
-    .line 3334
+    .line 3398
     const-wide/16 v0, 0x0
 
     cmp-long v0, p2, v0
 
     if-nez v0, :cond_1
 
-    .line 3357
+    .line 3421
     :cond_0
     :goto_0
     return-void
 
-    .line 3337
+    .line 3401
     :cond_1
     if-eqz p6, :cond_2
 
-    .line 3338
-    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->aWQ()Z
+    .line 3402
+    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->bce()Z
 
-    .line 3340
+    .line 3404
     :cond_2
     const-wide/32 v0, 0x15180
 
@@ -450,11 +450,11 @@
 
     sub-int v0, p1, v0
 
-    .line 3341
+    .line 3405
     packed-switch v0, :pswitch_data_0
 
-    .line 3352
-    const-string/jumbo v1, "!32@/B4Tb64lLpIeyFFi+7ORKM25zAgrDjCa"
+    .line 3416
+    const-string/jumbo v1, "MicroMsg.DelSvrIdMgr"
 
     const-string/jumbo v2, "should not add to thease lists, dayIndex:%d"
 
@@ -470,22 +470,22 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3354
+    .line 3418
     :goto_1
     if-eqz p6, :cond_0
 
-    .line 3355
-    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->aWP()V
+    .line 3419
+    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->bcd()V
 
     goto :goto_0
 
-    .line 3343
+    .line 3407
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfj:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFq:Ljava/util/LinkedList;
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -495,11 +495,11 @@
 
     goto :goto_1
 
-    .line 3346
+    .line 3410
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfk:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFr:Ljava/util/LinkedList;
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -509,11 +509,11 @@
 
     goto :goto_1
 
-    .line 3349
+    .line 3413
     :pswitch_2
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfl:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFs:Ljava/util/LinkedList;
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -523,7 +523,7 @@
 
     goto :goto_1
 
-    .line 3341
+    .line 3405
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -533,10 +533,10 @@
 .end method
 
 .method protected final b(IJJ)V
-    .locals 7
+    .locals 8
 
     .prologue
-    .line 3330
+    .line 3394
     const/4 v6, 0x1
 
     move-object v0, p0
@@ -549,18 +549,31 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/tencent/mm/storage/u;->a(IJJZ)V
 
-    .line 3331
+    .line 3395
     return-void
 .end method
 
 .method protected final d(Ljava/util/List;Ljava/util/List;)V
     .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Long;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     const/4 v6, 0x0
 
-    .line 3360
-    const-string/jumbo v0, "!32@/B4Tb64lLpIeyFFi+7ORKM25zAgrDjCa"
+    .line 3424
+    const-string/jumbo v0, "MicroMsg.DelSvrIdMgr"
 
     const-string/jumbo v1, "add size:%d"
 
@@ -578,13 +591,13 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3361
-    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->aWQ()Z
+    .line 3425
+    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->bce()Z
 
-    .line 3362
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FR()J
+    .line 3426
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Go()J
 
     move-result-wide v0
 
@@ -596,7 +609,7 @@
 
     move v7, v6
 
-    .line 3363
+    .line 3427
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -604,7 +617,7 @@
 
     if-ge v7, v0, :cond_0
 
-    .line 3364
+    .line 3428
     invoke-interface {p1, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -631,54 +644,40 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/tencent/mm/storage/u;->a(IJJZ)V
 
-    .line 3363
+    .line 3427
     add-int/lit8 v0, v7, 0x1
 
     move v7, v0
 
     goto :goto_0
 
-    .line 3366
+    .line 3430
     :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->aWP()V
+    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->bcd()V
 
-    .line 3367
+    .line 3431
     return-void
 .end method
 
-.method protected final dw(J)Z
-    .locals 2
+.method protected final dN(J)Z
+    .locals 3
 
     .prologue
-    .line 3322
-    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->aWQ()Z
+    .line 3386
+    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->bce()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3323
-    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->aWP()V
+    .line 3387
+    invoke-direct {p0}, Lcom/tencent/mm/storage/u;->bcd()V
 
-    .line 3326
+    .line 3390
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfj:Ljava/util/LinkedList;
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
-
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfk:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFq:Ljava/util/LinkedList;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -690,9 +689,23 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kfn:Lcom/tencent/mm/storage/t;
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kfl:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFr:Ljava/util/LinkedList;
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/tencent/mm/storage/u;->kFu:Lcom/tencent/mm/storage/t;
+
+    iget-object v0, v0, Lcom/tencent/mm/storage/t;->kFs:Ljava/util/LinkedList;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 

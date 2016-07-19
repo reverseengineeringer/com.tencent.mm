@@ -12,7 +12,7 @@ final class MMAppMgr$3
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface.dismiss();
-    MMAppMgr.b(cms, true);
+    MMAppMgr.a(chx, true);
   }
 }
 

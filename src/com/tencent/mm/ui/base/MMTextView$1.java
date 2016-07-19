@@ -10,10 +10,10 @@ final class MMTextView$1
   
   public final boolean onDoubleTap(MotionEvent paramMotionEvent)
   {
-    if (MMTextView.a(kHK) == null) {
+    if (MMTextView.a(lgM) == null) {
       return false;
     }
-    return MMTextView.a(kHK).at(kHK);
+    return MMTextView.a(lgM).ax(lgM);
   }
 }
 

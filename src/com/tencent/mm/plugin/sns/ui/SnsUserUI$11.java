@@ -1,15 +1,18 @@
 package com.tencent.mm.plugin.sns.ui;
 
 final class SnsUserUI$11
-  implements Runnable
+  implements ad.a
 {
   SnsUserUI$11(SnsUserUI paramSnsUserUI) {}
   
-  public final void run()
+  public final void YE()
   {
-    SnsUserUI.e(hme);
-    SnsUserUI.c(hme);
-    SnsUserUI.f(hme).aBk();
+    SnsUserUI.i(hCj);
+  }
+  
+  public final void aEo()
+  {
+    SnsUserUI.j(hCj);
   }
 }
 

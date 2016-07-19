@@ -6,11 +6,11 @@ import com.tencent.mm.ui.AddressView;
 
 public final class a$b
 {
-  public TextView czT;
-  public TextView eEv;
-  public AddressView eId;
-  public TextView lhQ;
-  public View lhR;
+  public TextView cwP;
+  public TextView eKK;
+  public AddressView ePT;
+  public TextView lIb;
+  public View lIc;
 }
 
 /* Location:

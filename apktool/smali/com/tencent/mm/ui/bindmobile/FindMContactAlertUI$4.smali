@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;->bdC()V
+    value = Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;->bjj()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+.field final synthetic lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 205
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$4;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$4;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 209
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -64,7 +64,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v1
 
@@ -78,7 +78,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$4;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$4;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -100,7 +100,7 @@
 
     const-string/jumbo v1, "R300_200_phone"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v1
 
@@ -118,10 +118,10 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kD(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->lm(Ljava/lang/String;)V
 
     .line 214
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$4;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$4;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;->d(Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;)V
 

@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kCs:Lcom/tencent/mm/ui/base/HorizontalListView;
+.field final synthetic lby:Lcom/tencent/mm/ui/base/HorizontalListView;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 61
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->kCs:Lcom/tencent/mm/ui/base/HorizontalListView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->lby:Lcom/tencent/mm/ui/base/HorizontalListView;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
@@ -38,13 +38,13 @@
 
     .prologue
     .line 65
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->kCs:Lcom/tencent/mm/ui/base/HorizontalListView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->lby:Lcom/tencent/mm/ui/base/HorizontalListView;
 
     monitor-enter v1
 
     .line 66
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->kCs:Lcom/tencent/mm/ui/base/HorizontalListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->lby:Lcom/tencent/mm/ui/base/HorizontalListView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/HorizontalListView;->a(Lcom/tencent/mm/ui/base/HorizontalListView;)Z
 
@@ -54,12 +54,12 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->kCs:Lcom/tencent/mm/ui/base/HorizontalListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->lby:Lcom/tencent/mm/ui/base/HorizontalListView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/HorizontalListView;->invalidate()V
 
     .line 69
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->kCs:Lcom/tencent/mm/ui/base/HorizontalListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->lby:Lcom/tencent/mm/ui/base/HorizontalListView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/HorizontalListView;->requestLayout()V
 
@@ -83,17 +83,17 @@
 
     .prologue
     .line 74
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->kCs:Lcom/tencent/mm/ui/base/HorizontalListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->lby:Lcom/tencent/mm/ui/base/HorizontalListView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/HorizontalListView;->b(Lcom/tencent/mm/ui/base/HorizontalListView;)V
 
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->kCs:Lcom/tencent/mm/ui/base/HorizontalListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->lby:Lcom/tencent/mm/ui/base/HorizontalListView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/HorizontalListView;->invalidate()V
 
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->kCs:Lcom/tencent/mm/ui/base/HorizontalListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView$1;->lby:Lcom/tencent/mm/ui/base/HorizontalListView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/HorizontalListView;->requestLayout()V
 

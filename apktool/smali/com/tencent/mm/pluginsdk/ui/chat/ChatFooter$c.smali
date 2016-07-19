@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract gz(Z)Z
+.method public abstract gX(Z)Z
 .end method

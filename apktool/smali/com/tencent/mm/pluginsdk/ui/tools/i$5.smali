@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic iSN:Lcom/tencent/mm/pluginsdk/ui/tools/i$a;
+.field final synthetic jpZ:Lcom/tencent/mm/pluginsdk/ui/tools/i$a;
 
-.field final synthetic iSO:I
+.field final synthetic jqa:I
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 105
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/i$5;->iSN:Lcom/tencent/mm/pluginsdk/ui/tools/i$a;
+    .line 106
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/i$5;->jpZ:Lcom/tencent/mm/pluginsdk/ui/tools/i$a;
 
-    iput p2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/i$5;->iSO:I
+    iput p2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/i$5;->jqa:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,13 +44,13 @@
     .locals 2
 
     .prologue
-    .line 108
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/i$5;->iSN:Lcom/tencent/mm/pluginsdk/ui/tools/i$a;
-
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/i$5;->iSO:I
-
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/i$a;->jL(I)V
-
     .line 109
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/i$5;->jpZ:Lcom/tencent/mm/pluginsdk/ui/tools/i$a;
+
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/i$5;->jqa:I
+
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/i$a;->kY(I)V
+
+    .line 110
     return-void
 .end method

@@ -10,7 +10,7 @@ final class SayHiEditUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    llS.finish();
+    lMh.finish();
     return true;
   }
 }

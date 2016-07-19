@@ -13,65 +13,64 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import b.a.d.i;
-import com.tencent.mm.ac.b;
-import com.tencent.mm.d.a.dz;
-import com.tencent.mm.d.a.dz.b;
+import com.tencent.mm.af.b;
+import com.tencent.mm.e.a.ed;
+import com.tencent.mm.e.a.ed.b;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.protocal.b.aby;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.ui.h.a.a;
-import com.tencent.mm.ui.h.a.b;
-import com.tencent.mm.ui.h.a.c;
+import com.tencent.mm.protocal.b.acn;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.ui.i.a.a;
+import com.tencent.mm.ui.i.a.b;
+import com.tencent.mm.ui.i.a.c;
 import com.tencent.mm.ui.p;
 
 public class SnsUploadConfigView
   extends LinearLayout
   implements d, a.a, a.b
 {
-  private static String alS = "com.tencent.mm";
+  private static String YH = "com.tencent.mm";
   private Context context;
-  boolean hhQ = false;
-  ImageView hlA;
-  ImageView hlB;
-  private boolean hlC = false;
-  boolean hlD = false;
-  boolean hlE = false;
-  private boolean hlF = false;
-  private boolean hlG = true;
-  private boolean hlH = false;
-  aby hlI = new aby();
-  com.tencent.mm.ui.h.a hlJ = new com.tencent.mm.ui.h.a();
-  private ProgressDialog hlK = null;
-  ImageView hlz;
+  private ProgressDialog eMF = null;
+  ImageView hBC;
+  ImageView hBD;
+  ImageView hBE;
+  private boolean hBF = false;
+  boolean hBG = false;
+  boolean hBH = false;
+  private boolean hBI = false;
+  private boolean hBJ = true;
+  private boolean hBK = false;
+  acn hBL = new acn();
+  com.tencent.mm.ui.i.a hBM = new com.tencent.mm.ui.i.a();
+  boolean hwF = false;
   
   public SnsUploadConfigView(final Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
     context = paramContext;
     context = paramContext;
-    paramAttributeSet = p.ee(paramContext).inflate(2131362834, this, true);
-    hlz = ((ImageView)paramAttributeSet.findViewById(2131168552));
-    hlA = ((ImageView)paramAttributeSet.findViewById(2131168553));
-    hlB = ((ImageView)paramAttributeSet.findViewById(2131168551));
-    if (!b.AH()) {
-      hlB.setVisibility(8);
+    paramAttributeSet = p.ef(paramContext).inflate(2130904500, this, true);
+    hBC = ((ImageView)paramAttributeSet.findViewById(2131759287));
+    hBD = ((ImageView)paramAttributeSet.findViewById(2131759288));
+    hBE = ((ImageView)paramAttributeSet.findViewById(2131759286));
+    if (!b.AT()) {
+      hBE.setVisibility(8);
     }
-    if (!b.AL()) {
-      hlA.setVisibility(8);
+    if (!b.AX()) {
+      hBD.setVisibility(8);
     }
-    if (!com.tencent.mm.model.h.sA()) {
-      hlz.setVisibility(8);
+    if (!com.tencent.mm.model.h.sC()) {
+      hBC.setVisibility(8);
     }
-    hlB.setOnClickListener(new View.OnClickListener()
+    hBE.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
         if ((!SnsUploadConfigView.a(SnsUploadConfigView.this)) && (SnsUploadConfigView.b(SnsUploadConfigView.this)))
         {
-          com.tencent.mm.ui.base.g.e(paramContext, 2131433143, 2131430877);
+          com.tencent.mm.ui.base.g.f(paramContext, 2131235560, 2131231028);
           return;
         }
         paramAnonymousView = SnsUploadConfigView.this;
@@ -84,7 +83,7 @@ public class SnsUploadConfigView
         }
       }
     });
-    hlz.setOnClickListener(new View.OnClickListener()
+    hBC.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
@@ -101,7 +100,7 @@ public class SnsUploadConfigView
         }
       }
     });
-    hlA.setOnClickListener(new View.OnClickListener()
+    hBD.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
@@ -120,9 +119,9 @@ public class SnsUploadConfigView
     });
   }
   
-  private void mj(int paramInt)
+  private void jb(int paramInt)
   {
-    com.tencent.mm.ui.base.g.a(getContext(), paramInt, 2131430877, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    com.tencent.mm.ui.base.g.a(getContext(), paramInt, 2131231028, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
     }, new DialogInterface.OnClickListener()
@@ -131,55 +130,50 @@ public class SnsUploadConfigView
     });
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
-  {
-    if ((paramInt1 == 0) && (paramInt2 == 0) && (paramj == null)) {}
-  }
-  
   public final void a(a.c paramc)
   {
-    if (hlK != null) {
-      hlK.cancel();
+    if (eMF != null) {
+      eMF.cancel();
     }
-    switch (6.hlN[paramc.ordinal()])
+    switch (6.eNd[paramc.ordinal()])
     {
     }
     for (;;)
     {
-      aCQ();
+      aFV();
       return;
-      hlE = true;
-      mj(2131427637);
+      hBH = true;
+      jb(2131235731);
       continue;
-      hlE = false;
+      hBH = false;
       continue;
-      hlE = false;
-      mj(2131427638);
+      hBH = false;
+      jb(2131235730);
     }
   }
   
-  public final void aCO()
+  public final void aFT()
   {
-    hlC = false;
-    hlD = false;
-    hlE = false;
-    hlF = false;
-    hlB.setImageResource(2130903278);
-    hlz.setImageResource(2130903294);
-    hlA.setImageResource(2130903325);
+    hBF = false;
+    hBG = false;
+    hBH = false;
+    hBI = false;
+    hBE.setImageResource(2131165862);
+    hBC.setImageResource(2131165854);
+    hBD.setImageResource(2131165864);
   }
   
-  final void aCP()
+  final void aFU()
   {
-    if (hlF)
+    if (hBI)
     {
-      int i = ay.d((Integer)ah.tD().rn().get(9, null));
+      int i = be.f((Integer)ah.tE().ro().get(9, null));
       if (i == 0) {
-        com.tencent.mm.ui.base.g.a(getContext(), 2131428043, 2131430877, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+        com.tencent.mm.ui.base.g.a(getContext(), 2131235197, 2131231028, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
         {
           public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
           {
-            com.tencent.mm.plugin.sns.b.a.coa.h(new Intent(), SnsUploadConfigView.i(SnsUploadConfigView.this));
+            com.tencent.mm.plugin.sns.b.a.cjo.h(new Intent(), SnsUploadConfigView.i(SnsUploadConfigView.this));
           }
         }, new DialogInterface.OnClickListener()
         {
@@ -191,32 +185,32 @@ public class SnsUploadConfigView
         if (i != 0) {
           break label80;
         }
-        hlF = false;
+        hBI = false;
         return;
         if (i == 0) {
           break;
         }
       }
       label80:
-      hlB.setImageResource(2130903297);
+      hBE.setImageResource(2131165863);
       return;
     }
-    hlB.setImageResource(2130903278);
+    hBE.setImageResource(2131165862);
   }
   
-  final void aCQ()
+  final void aFV()
   {
-    if (hlE)
+    if (hBH)
     {
-      if (!hlJ.bjs()) {
-        com.tencent.mm.ui.base.g.a(getContext(), 2131428045, 2131430877, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+      if (!hBM.bpq()) {
+        com.tencent.mm.ui.base.g.a(getContext(), 2131235169, 2131231028, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
         {
           public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
           {
             paramAnonymousDialogInterface = SnsUploadConfigView.this;
             Context localContext = getContext();
-            getContext().getString(2131430877);
-            SnsUploadConfigView.a(paramAnonymousDialogInterface, com.tencent.mm.ui.base.g.a(localContext, getContext().getString(2131427636), true, new DialogInterface.OnCancelListener()
+            getContext().getString(2131231028);
+            SnsUploadConfigView.a(paramAnonymousDialogInterface, com.tencent.mm.ui.base.g.a(localContext, getContext().getString(2131235729), true, new DialogInterface.OnCancelListener()
             {
               public final void onCancel(DialogInterface paramAnonymous2DialogInterface) {}
             }));
@@ -229,81 +223,68 @@ public class SnsUploadConfigView
       }
       for (int i = 0; i == 0; i = 1)
       {
-        hlE = false;
+        hBH = false;
         return;
       }
-      hlA.setImageResource(2130903277);
+      hBD.setImageResource(2131165865);
       return;
     }
-    hlA.setImageResource(2130903325);
+    hBD.setImageResource(2131165864);
   }
   
-  public final void b(a.c paramc)
-  {
-    switch (6.hlN[paramc.ordinal()])
-    {
-    }
-    for (;;)
-    {
-      aCQ();
-      return;
-      hlE = false;
-    }
-  }
-  
-  public int getPrivated()
+  public final int aFW()
   {
     int i = 0;
-    if (hhQ) {
+    if (hwF) {
       i = 1;
     }
     return i;
   }
   
-  public int getSyncFlag()
+  public final int aFX()
   {
     int j = 0;
-    if (hlC) {
+    if (hBF) {
       j = 1;
     }
     int i = j;
-    if (hlD) {
+    if (hBG) {
       i = j | 0x2;
     }
     j = i;
-    if (hlE) {
+    if (hBH) {
       j = i | 0x8;
     }
     i = j;
-    if (hlF) {
+    if (hBI) {
       i = j | 0x4;
     }
     return i;
   }
   
-  public i getTwitterAccessToken()
+  public final void b(a.c paramc)
   {
-    return hlJ.lBL;
-  }
-  
-  public void setPrivated(boolean paramBoolean)
-  {
-    hhQ = paramBoolean;
-    if (paramBoolean) {
-      aCO();
+    switch (6.eNd[paramc.ordinal()])
+    {
+    }
+    for (;;)
+    {
+      aFV();
+      return;
+      hBH = false;
     }
   }
   
-  void setSyncFacebook(boolean paramBoolean)
+  final void fp(boolean paramBoolean)
   {
-    if (hlD)
+    if (hBG)
     {
-      if (!com.tencent.mm.model.h.sC()) {
-        com.tencent.mm.ui.base.g.a(getContext(), 2131428044, 2131430877, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+      if (!com.tencent.mm.model.h.sE()) {
+        com.tencent.mm.ui.base.g.a(getContext(), 2131234994, 2131231028, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
         {
           public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
           {
-            com.tencent.mm.ar.c.a(getContext(), ".ui.account.FacebookAuthUI", new Intent().putExtra("shake_music", true));
+            com.tencent.mm.av.c.a(getContext(), ".ui.account.FacebookAuthUI", new Intent().putExtra("shake_music", true));
           }
         }, new DialogInterface.OnClickListener()
         {
@@ -312,27 +293,40 @@ public class SnsUploadConfigView
       }
       for (int i = 0; i == 0; i = 1)
       {
-        hlD = false;
+        hBG = false;
         return;
       }
-      if ((!paramBoolean) && (!hlH) && (com.tencent.mm.model.h.sC()))
+      if ((!paramBoolean) && (!hBK) && (com.tencent.mm.model.h.sE()))
       {
-        final dz localdz = new dz();
-        aID = new Runnable()
+        final ed localed = new ed();
+        auX = new Runnable()
         {
           public final void run()
           {
-            if (!localdzayb.atR) {
+            if (!localedakd.afB) {
               SnsUploadConfigView.k(SnsUploadConfigView.this);
             }
           }
         };
-        com.tencent.mm.sdk.c.a.jUF.a(localdz, Looper.myLooper());
+        com.tencent.mm.sdk.c.a.kug.a(localed, Looper.myLooper());
       }
-      hlz.setImageResource(2130903317);
+      hBC.setImageResource(2131165855);
       return;
     }
-    hlz.setImageResource(2130903294);
+    hBC.setImageResource(2131165854);
+  }
+  
+  public final void fq(boolean paramBoolean)
+  {
+    hwF = paramBoolean;
+    if (paramBoolean) {
+      aFT();
+    }
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    if ((paramInt1 == 0) && (paramInt2 == 0) && (paramj == null)) {}
   }
 }
 

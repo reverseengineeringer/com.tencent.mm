@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.base;
 
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -9,14 +9,14 @@ final class MMAutoSwitchEditTextView$c
 {
   private MMAutoSwitchEditTextView$c(MMAutoSwitchEditTextView paramMMAutoSwitchEditTextView) {}
   
-  public final void bcw()
+  public final void bhL()
   {
     String str = "";
-    Iterator localIterator = MMAutoSwitchEditTextView.a(kDn).iterator();
+    Iterator localIterator = MMAutoSwitchEditTextView.a(lcs).iterator();
     if (localIterator.hasNext())
     {
       MMAutoSwitchEditText localMMAutoSwitchEditText = (MMAutoSwitchEditText)localIterator.next();
-      if (ay.kz(localMMAutoSwitchEditText.getText().toString().trim())) {
+      if (be.kf(localMMAutoSwitchEditText.getText().toString().trim())) {
         break label103;
       }
       str = str + localMMAutoSwitchEditText.getText().toString().trim();
@@ -25,33 +25,33 @@ final class MMAutoSwitchEditTextView$c
     for (;;)
     {
       break;
-      if (MMAutoSwitchEditTextView.e(kDn) != null) {
-        MMAutoSwitchEditTextView.e(kDn).bbz();
+      if (MMAutoSwitchEditTextView.e(lcs) != null) {
+        MMAutoSwitchEditTextView.e(lcs).bgL();
       }
       return;
     }
   }
   
-  public final void qC(int paramInt)
+  public final void sv(int paramInt)
   {
-    if ((MMAutoSwitchEditTextView.a(kDn) == null) || (paramInt >= MMAutoSwitchEditTextView.a(kDn).size()) || (paramInt == 0)) {}
+    if ((MMAutoSwitchEditTextView.a(lcs) == null) || (paramInt >= MMAutoSwitchEditTextView.a(lcs).size()) || (paramInt == 0)) {}
     MMAutoSwitchEditText localMMAutoSwitchEditText;
     do
     {
       return;
-      localMMAutoSwitchEditText = (MMAutoSwitchEditText)MMAutoSwitchEditTextView.a(kDn).get(paramInt - 1);
+      localMMAutoSwitchEditText = (MMAutoSwitchEditText)MMAutoSwitchEditTextView.a(lcs).get(paramInt - 1);
     } while (localMMAutoSwitchEditText == null);
     localMMAutoSwitchEditText.requestFocus();
   }
   
-  public final void qD(int paramInt)
+  public final void sw(int paramInt)
   {
     Object localObject = "";
-    Iterator localIterator = MMAutoSwitchEditTextView.a(kDn).iterator();
+    Iterator localIterator = MMAutoSwitchEditTextView.a(lcs).iterator();
     if (localIterator.hasNext())
     {
       MMAutoSwitchEditText localMMAutoSwitchEditText = (MMAutoSwitchEditText)localIterator.next();
-      if (ay.kz(localMMAutoSwitchEditText.getText().toString().trim())) {
+      if (be.kf(localMMAutoSwitchEditText.getText().toString().trim())) {
         break label211;
       }
       localObject = (String)localObject + localMMAutoSwitchEditText.getText().toString().trim();
@@ -60,9 +60,9 @@ final class MMAutoSwitchEditTextView$c
     for (;;)
     {
       break;
-      if ((!ay.kz((String)localObject)) && (((String)localObject).length() == MMAutoSwitchEditTextView.b(kDn) * MMAutoSwitchEditTextView.c(kDn))) {
-        if (MMAutoSwitchEditTextView.d(kDn) != null) {
-          MMAutoSwitchEditTextView.d(kDn).Go((String)localObject);
+      if ((!be.kf((String)localObject)) && (((String)localObject).length() == MMAutoSwitchEditTextView.b(lcs) * MMAutoSwitchEditTextView.c(lcs))) {
+        if (MMAutoSwitchEditTextView.d(lcs) != null) {
+          MMAutoSwitchEditTextView.d(lcs).ID((String)localObject);
         }
       }
       do
@@ -70,11 +70,11 @@ final class MMAutoSwitchEditTextView$c
         do
         {
           return;
-          if (MMAutoSwitchEditTextView.e(kDn) != null) {
-            MMAutoSwitchEditTextView.e(kDn).bbz();
+          if (MMAutoSwitchEditTextView.e(lcs) != null) {
+            MMAutoSwitchEditTextView.e(lcs).bgL();
           }
-        } while ((MMAutoSwitchEditTextView.a(kDn) == null) || (paramInt >= MMAutoSwitchEditTextView.a(kDn).size() - 1));
-        localObject = (MMAutoSwitchEditText)MMAutoSwitchEditTextView.a(kDn).get(paramInt + 1);
+        } while ((MMAutoSwitchEditTextView.a(lcs) == null) || (paramInt >= MMAutoSwitchEditTextView.a(lcs).size() - 1));
+        localObject = (MMAutoSwitchEditText)MMAutoSwitchEditTextView.a(lcs).get(paramInt + 1);
       } while (localObject == null);
       ((MMAutoSwitchEditText)localObject).requestFocus();
       return;

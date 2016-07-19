@@ -4,28 +4,28 @@ import android.app.ProgressDialog;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.a.b;
 import com.tencent.mm.modelfriend.ac;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MobileFriendUI$10
   implements a.b
 {
   MobileFriendUI$10(MobileFriendUI paramMobileFriendUI) {}
   
-  public final void aU(boolean paramBoolean)
+  public final void aA(boolean paramBoolean)
   {
-    u.i("!32@/B4Tb64lLpLFDma4Qh7ELOVLkIWClC8Q", "syncAddrBookAndUpload onSyncEnd suc:%b", new Object[] { Boolean.valueOf(paramBoolean) });
+    v.i("MicroMsg.MobileFriendUI", "syncAddrBookAndUpload onSyncEnd suc:%b", new Object[] { Boolean.valueOf(paramBoolean) });
     if (!paramBoolean)
     {
-      if (MobileFriendUI.b(kPt) != null)
+      if (MobileFriendUI.b(loJ) != null)
       {
-        MobileFriendUI.b(kPt).dismiss();
-        MobileFriendUI.c(kPt);
+        MobileFriendUI.b(loJ).dismiss();
+        MobileFriendUI.c(loJ);
       }
       return;
     }
     System.currentTimeMillis();
-    ac localac = new ac(com.tencent.mm.modelfriend.m.yK(), com.tencent.mm.modelfriend.m.yJ());
-    ah.tE().d(localac);
+    ac localac = new ac(com.tencent.mm.modelfriend.m.yX(), com.tencent.mm.modelfriend.m.yW());
+    ah.tF().a(localac, 0);
   }
 }
 

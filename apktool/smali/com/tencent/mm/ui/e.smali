@@ -14,39 +14,79 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "T::",
+        "Lcom/tencent/mm/dbsupport/newcursor/a;",
+        ">",
+        "Landroid/widget/BaseAdapter;"
+    }
+.end annotation
+
 
 # instance fields
 .field public TAG:Ljava/lang/String;
 
-.field private bvB:I
+.field private bku:I
 
 .field public context:Landroid/content/Context;
 
-.field private eKM:I
+.field private eSH:I
 
-.field public kjN:Z
+.field public kJV:Z
 
-.field private kjO:Lcom/tencent/mm/ui/e$c;
+.field private kJW:Lcom/tencent/mm/ui/e$c;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/tencent/mm/ui/e",
+            "<TK;TT;>.c;"
+        }
+    .end annotation
+.end field
 
-.field private kjP:Ljava/util/HashMap;
+.field private kJX:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<TK;",
+            "Lcom/tencent/mm/ui/e$b",
+            "<TK;TT;>;>;"
+        }
+    .end annotation
+.end field
 
-.field protected kjQ:Lcom/tencent/mm/ui/e$a;
+.field protected kJY:Lcom/tencent/mm/ui/e$a;
 
-.field public kjR:I
+.field public kJZ:I
 
-.field public kjS:I
+.field public kKa:I
 
-.field public kjT:Z
+.field public kKb:Z
 
-.field kjU:I
+.field kKc:I
 
-.field private kjV:Z
+.field private kKd:Z
 
-.field private kjW:Z
+.field private kKe:Z
 
-.field private kjX:Lcom/tencent/mm/ui/e$e;
+.field private kKf:Lcom/tencent/mm/ui/e$e;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/tencent/mm/ui/e",
+            "<TK;TT;>.e;"
+        }
+    .end annotation
+.end field
 
-.field public kjY:Ljava/lang/Object;
+.field public kKg:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TK;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -62,7 +102,7 @@
     invoke-direct {p0, v2, p1}, Lcom/tencent/mm/ui/e;-><init>(ZLandroid/content/Context;)V
 
     .line 161
-    iput v4, p0, Lcom/tencent/mm/ui/e;->bvB:I
+    iput v4, p0, Lcom/tencent/mm/ui/e;->bku:I
 
     iget-object v0, p0, Lcom/tencent/mm/ui/e;->TAG:Ljava/lang/String;
 
@@ -78,7 +118,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 162
     return-void
@@ -111,54 +151,54 @@
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     .line 36
-    const-string/jumbo v0, "!44@/B4Tb64lLpJ+mcb97U9hxtX6gGooumjq7DJ96+X83HQ="
+    const-string/jumbo v0, "MicroMsg.CursorDataAdapter"
 
     iput-object v0, p0, Lcom/tencent/mm/ui/e;->TAG:Ljava/lang/String;
 
     .line 42
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/e;->kjN:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/e;->kJV:Z
 
     .line 70
     const/16 v0, 0x3e8
 
-    iput v0, p0, Lcom/tencent/mm/ui/e;->kjR:I
+    iput v0, p0, Lcom/tencent/mm/ui/e;->kJZ:I
 
     .line 72
     const/16 v0, 0xbb8
 
-    iput v0, p0, Lcom/tencent/mm/ui/e;->kjS:I
+    iput v0, p0, Lcom/tencent/mm/ui/e;->kKa:I
 
     .line 80
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/e;->kjT:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/e;->kKb:Z
 
     .line 84
-    iput v1, p0, Lcom/tencent/mm/ui/e;->eKM:I
+    iput v1, p0, Lcom/tencent/mm/ui/e;->eSH:I
 
     .line 100
-    iput v1, p0, Lcom/tencent/mm/ui/e;->kjU:I
+    iput v1, p0, Lcom/tencent/mm/ui/e;->kKc:I
 
     .line 140
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e;->kjY:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e;->kKg:Ljava/lang/Object;
 
     .line 173
     iput-object p1, p0, Lcom/tencent/mm/ui/e;->context:Landroid/content/Context;
 
     .line 174
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/e;->kjV:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/e;->kKd:Z
 
     .line 175
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/e;->kjW:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/e;->kKe:Z
 
     .line 176
     const/16 v0, 0x320
 
-    iput v0, p0, Lcom/tencent/mm/ui/e;->kjR:I
+    iput v0, p0, Lcom/tencent/mm/ui/e;->kJZ:I
 
     const/16 v0, 0x7d0
 
-    iput v0, p0, Lcom/tencent/mm/ui/e;->kjS:I
+    iput v0, p0, Lcom/tencent/mm/ui/e;->kKa:I
 
     .line 177
     return-void
@@ -176,42 +216,42 @@
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     .line 36
-    const-string/jumbo v0, "!44@/B4Tb64lLpJ+mcb97U9hxtX6gGooumjq7DJ96+X83HQ="
+    const-string/jumbo v0, "MicroMsg.CursorDataAdapter"
 
     iput-object v0, p0, Lcom/tencent/mm/ui/e;->TAG:Ljava/lang/String;
 
     .line 42
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/e;->kjN:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/e;->kJV:Z
 
     .line 70
     const/16 v0, 0x3e8
 
-    iput v0, p0, Lcom/tencent/mm/ui/e;->kjR:I
+    iput v0, p0, Lcom/tencent/mm/ui/e;->kJZ:I
 
     .line 72
     const/16 v0, 0xbb8
 
-    iput v0, p0, Lcom/tencent/mm/ui/e;->kjS:I
+    iput v0, p0, Lcom/tencent/mm/ui/e;->kKa:I
 
     .line 80
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/e;->kjT:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/e;->kKb:Z
 
     .line 84
-    iput v2, p0, Lcom/tencent/mm/ui/e;->eKM:I
+    iput v2, p0, Lcom/tencent/mm/ui/e;->eSH:I
 
     .line 100
-    iput v2, p0, Lcom/tencent/mm/ui/e;->kjU:I
+    iput v2, p0, Lcom/tencent/mm/ui/e;->kKc:I
 
     .line 140
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e;->kjY:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e;->kKg:Ljava/lang/Object;
 
     .line 167
     iput-object p2, p0, Lcom/tencent/mm/ui/e;->context:Landroid/content/Context;
 
     .line 168
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/e;->kjV:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/e;->kKd:Z
 
     .line 169
     return-void
@@ -222,37 +262,44 @@
 
     .prologue
     .line 33
-    iget v0, p0, Lcom/tencent/mm/ui/e;->bvB:I
+    iget v0, p0, Lcom/tencent/mm/ui/e;->bku:I
 
     return v0
 .end method
 
 .method private a(Lcom/tencent/mm/dbsupport/newcursor/e;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/tencent/mm/dbsupport/newcursor/e",
+            "<TK;>;)V"
+        }
+    .end annotation
 
     .prologue
     .line 213
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/e;->gV(Z)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/e;->hv(Z)V
 
     .line 214
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
-    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/k;->bvI:Lcom/tencent/mm/dbsupport/newcursor/e;
+    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/k;->bkB:Lcom/tencent/mm/dbsupport/newcursor/e;
 
     if-eq v0, p1, :cond_2
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->isClosed()Z
 
@@ -260,26 +307,26 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->close()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     :cond_1
     new-instance v0, Lcom/tencent/mm/ui/e$c;
 
     invoke-direct {v0, p0, p1}, Lcom/tencent/mm/ui/e$c;-><init>(Lcom/tencent/mm/ui/e;Lcom/tencent/mm/dbsupport/newcursor/e;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->getCount()I
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->aZE()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->bfc()V
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/e;->notifyDataSetChanged()V
 
@@ -290,23 +337,30 @@
 
 .method private a(Lcom/tencent/mm/ui/e$c;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/tencent/mm/ui/e",
+            "<TK;TT;>.c;)V"
+        }
+    .end annotation
 
     .prologue
     .line 206
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/e;->gV(Z)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/e;->hv(Z)V
 
     .line 207
-    iput-object p1, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     .line 208
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->getCount()I
 
     .line 209
-    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->aZE()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->bfc()V
 
     .line 210
     return-void
@@ -314,37 +368,44 @@
 
 .method private a(Lcom/tencent/mm/ui/e$c;ZZ)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/tencent/mm/ui/e",
+            "<TK;TT;>.c;ZZ)V"
+        }
+    .end annotation
 
     .prologue
     .line 802
     if-eqz p2, :cond_1
 
     .line 803
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$e;->aZQ()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$e;->bfo()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 804
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$e;->aZO()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$e;->bfm()V
 
     .line 806
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
     if-eqz v0, :cond_1
 
     .line 807
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
@@ -380,42 +441,42 @@
     move-result-wide v0
 
     .line 726
-    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kjQ:Lcom/tencent/mm/ui/e$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kJY:Lcom/tencent/mm/ui/e$a;
 
     if-eqz v2, :cond_0
 
     .line 727
-    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kjQ:Lcom/tencent/mm/ui/e$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kJY:Lcom/tencent/mm/ui/e$a;
 
-    invoke-interface {v2}, Lcom/tencent/mm/ui/e$a;->Gi()V
+    invoke-interface {v2}, Lcom/tencent/mm/ui/e$a;->GF()V
 
     .line 729
     :cond_0
-    invoke-interface {p1}, Lcom/tencent/mm/ui/e$d;->aZL()V
+    invoke-interface {p1}, Lcom/tencent/mm/ui/e$d;->bfj()V
 
     .line 732
     invoke-virtual {p0}, Lcom/tencent/mm/ui/e;->notifyDataSetChanged()V
 
     .line 733
-    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kjQ:Lcom/tencent/mm/ui/e$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kJY:Lcom/tencent/mm/ui/e$a;
 
     if-eqz v2, :cond_1
 
     .line 734
-    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kjQ:Lcom/tencent/mm/ui/e$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kJY:Lcom/tencent/mm/ui/e$a;
 
-    invoke-interface {v2}, Lcom/tencent/mm/ui/e$a;->Gh()V
+    invoke-interface {v2}, Lcom/tencent/mm/ui/e$a;->GE()V
 
     .line 736
     :cond_1
-    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
     if-eqz v2, :cond_2
 
     .line 737
-    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/e$e;->aZR()V
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/e$e;->bfp()V
 
     .line 739
     :cond_2
@@ -441,7 +502,7 @@
 
     aput-object v0, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 740
     return-void
@@ -497,14 +558,14 @@
 
     if-eqz v0, :cond_1
 
-    iget v3, v0, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iget v3, v0, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     const/4 v4, 0x5
 
     if-ne v3, v4, :cond_2
 
     :cond_1
-    iget-object v3, p0, Lcom/tencent/mm/ui/e;->kjY:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/tencent/mm/ui/e;->kKg:Ljava/lang/Object;
 
     if-ne v0, v3, :cond_0
 
@@ -520,7 +581,17 @@
     goto :goto_0
 .end method
 
-.method private aZE()V
+.method static synthetic b(Lcom/tencent/mm/ui/e;)Ljava/util/HashMap;
+    .locals 1
+
+    .prologue
+    .line 33
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
+
+    return-object v0
+.end method
+
+.method private bfc()V
     .locals 6
 
     .prologue
@@ -529,14 +600,14 @@
     const/4 v1, 0x1
 
     .line 273
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/e;->kjV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/e;->kKd:Z
 
     if-eqz v0, :cond_2
 
     .line 274
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->qG()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->pk()Z
 
     move-result v0
 
@@ -546,22 +617,22 @@
 
     .line 275
     :goto_0
-    iget v2, p0, Lcom/tencent/mm/ui/e;->kjU:I
+    iget v2, p0, Lcom/tencent/mm/ui/e;->kKc:I
 
     if-eq v0, v2, :cond_1
 
-    iget v2, p0, Lcom/tencent/mm/ui/e;->kjU:I
+    iget v2, p0, Lcom/tencent/mm/ui/e;->kKc:I
 
     if-eqz v2, :cond_1
 
     .line 276
-    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v2, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/e$e;->aZQ()Z
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/e$e;->bfo()Z
 
     move-result v2
 
@@ -570,7 +641,7 @@
     .line 277
     new-instance v2, Lcom/tencent/mm/ui/e$c;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/e;->aZG()Lcom/tencent/mm/dbsupport/newcursor/e;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/e;->bfe()Lcom/tencent/mm/dbsupport/newcursor/e;
 
     move-result-object v3
 
@@ -592,11 +663,11 @@
 
     aput-object v4, v1, v5
 
-    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 281
     :cond_1
-    iput v0, p0, Lcom/tencent/mm/ui/e;->kjU:I
+    iput v0, p0, Lcom/tencent/mm/ui/e;->kKc:I
 
     .line 283
     :cond_2
@@ -609,19 +680,19 @@
     goto :goto_0
 .end method
 
-.method private aZI()V
+.method private bfg()V
     .locals 3
 
     .prologue
     .line 447
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
     .line 448
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/e;->kjY:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/tencent/mm/ui/e;->kKg:Ljava/lang/Object;
 
     const/4 v2, 0x0
 
@@ -631,16 +702,16 @@
     return-void
 .end method
 
-.method private aZJ()I
+.method private bfh()I
     .locals 2
 
     .prologue
     .line 550
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
 
@@ -658,9 +729,9 @@
 
     .line 553
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/e;->kjY:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/tencent/mm/ui/e;->kKg:Ljava/lang/Object;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -680,16 +751,16 @@
     goto :goto_0
 .end method
 
-.method private aZK()V
+.method private bfi()V
     .locals 2
 
     .prologue
     .line 743
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->isClosed()Z
 
@@ -698,7 +769,7 @@
     if-nez v0, :cond_0
 
     .line 744
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
 
@@ -711,7 +782,7 @@
 
     const-string/jumbo v1, "events size is 0  "
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 798
     :goto_0
@@ -728,22 +799,12 @@
     goto :goto_0
 .end method
 
-.method static synthetic b(Lcom/tencent/mm/ui/e;)Ljava/util/HashMap;
-    .locals 1
-
-    .prologue
-    .line 33
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
-
-    return-object v0
-.end method
-
 .method static synthetic c(Lcom/tencent/mm/ui/e;)Lcom/tencent/mm/ui/e$c;
     .locals 1
 
     .prologue
     .line 33
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     return-object v0
 .end method
@@ -753,46 +814,19 @@
 
     .prologue
     .line 33
-    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->aZK()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->bfi()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final V(Ljava/lang/Object;)Lcom/tencent/mm/dbsupport/newcursor/a;
-    .locals 1
-
-    .prologue
-    .line 357
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    .line 358
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
-
-    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/k;->bvI:Lcom/tencent/mm/dbsupport/newcursor/e;
-
-    invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->V(Ljava/lang/Object;)Lcom/tencent/mm/dbsupport/newcursor/a;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
 .method public final a(Lcom/tencent/mm/ui/e$a;)V
     .locals 0
 
     .prologue
     .line 146
-    iput-object p1, p0, Lcom/tencent/mm/ui/e;->kjQ:Lcom/tencent/mm/ui/e$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/e;->kJY:Lcom/tencent/mm/ui/e$a;
 
     .line 147
     return-void
@@ -800,14 +834,21 @@
 
 .method public final a([Landroid/util/SparseArray;)V
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([",
+            "Landroid/util/SparseArray",
+            "<TK;>;)V"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x0
 
     .line 1066
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->qH()[Landroid/util/SparseArray;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->pl()[Landroid/util/SparseArray;
 
     move-result-object v3
 
@@ -864,29 +905,145 @@
 .end method
 
 .method public abstract a(Ljava/util/HashSet;[Landroid/util/SparseArray;)[Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/HashSet",
+            "<",
+            "Lcom/tencent/mm/ui/e$b",
+            "<TK;TT;>;>;[",
+            "Landroid/util/SparseArray",
+            "<TK;>;)[",
+            "Landroid/util/SparseArray",
+            "<TK;>;"
+        }
+    .end annotation
 .end method
 
-.method public final aZD()V
+.method public final ag(Ljava/lang/Object;)Lcom/tencent/mm/dbsupport/newcursor/a;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;)TT;"
+        }
+    .end annotation
+
+    .prologue
+    .line 357
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    .line 358
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
+
+    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/k;->bkB:Lcom/tencent/mm/dbsupport/newcursor/e;
+
+    invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->ag(Ljava/lang/Object;)Lcom/tencent/mm/dbsupport/newcursor/a;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final az(Ljava/lang/String;Z)V
+    .locals 6
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 324
+    iget v0, p0, Lcom/tencent/mm/ui/e;->eSH:I
+
+    if-nez v0, :cond_2
+
+    move v0, v1
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/e;->kKb:Z
+
+    or-int/2addr v0, p2
+
+    if-eqz v0, :cond_1
+
+    .line 325
+    if-nez p2, :cond_0
+
+    .line 326
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->TAG:Ljava/lang/String;
+
+    const-string/jumbo v3, "newcursor cache needRefresh : needRefreshInfront :%b from : %s %s"
+
+    const/4 v4, 0x3
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    iget-boolean v5, p0, Lcom/tencent/mm/ui/e;->kKb:Z
+
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    aput-object v5, v4, v2
+
+    aput-object p1, v4, v1
+
+    const/4 v1, 0x2
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->baX()Lcom/tencent/mm/sdk/platformtools/af;
+
+    move-result-object v5
+
+    aput-object v5, v4, v1
+
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 327
+    :cond_0
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/e;->hu(Z)V
+
+    .line 329
+    :cond_1
+    return-void
+
+    :cond_2
+    move v0, v2
+
+    .line 324
+    goto :goto_0
+.end method
+
+.method public final bfb()V
     .locals 1
 
     .prologue
     .line 150
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e;->kjQ:Lcom/tencent/mm/ui/e$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e;->kJY:Lcom/tencent/mm/ui/e$a;
 
     .line 151
     return-void
 .end method
 
-.method public final aZF()I
+.method public final bfd()I
     .locals 3
 
     .prologue
     const/4 v1, 0x0
 
     .line 305
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     if-nez v0, :cond_0
 
@@ -897,9 +1054,9 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
-    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/k;->bvI:Lcom/tencent/mm/dbsupport/newcursor/e;
+    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/k;->bkB:Lcom/tencent/mm/dbsupport/newcursor/e;
 
     if-nez v0, :cond_1
 
@@ -914,7 +1071,7 @@
 
     check-cast v0, Lcom/tencent/mm/dbsupport/newcursor/f;
 
-    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/f;->bvx:[Lcom/tencent/mm/dbsupport/newcursor/e;
+    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/f;->bkq:[Lcom/tencent/mm/dbsupport/newcursor/e;
 
     aget-object v0, v0, v1
 
@@ -934,17 +1091,31 @@
     throw v0
 .end method
 
-.method public abstract aZG()Lcom/tencent/mm/dbsupport/newcursor/e;
+.method public abstract bfe()Lcom/tencent/mm/dbsupport/newcursor/e;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/tencent/mm/dbsupport/newcursor/e",
+            "<TK;>;"
+        }
+    .end annotation
 .end method
 
-.method public final aZH()[Landroid/util/SparseArray;
+.method public final bff()[Landroid/util/SparseArray;
     .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()[",
+            "Landroid/util/SparseArray",
+            "<TK;>;"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x0
 
     .line 386
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     if-nez v0, :cond_0
 
@@ -957,9 +1128,9 @@
 
     .line 389
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->qH()[Landroid/util/SparseArray;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->pl()[Landroid/util/SparseArray;
 
     move-result-object v4
 
@@ -1024,90 +1195,24 @@
     goto :goto_0
 .end method
 
-.method public final ap(Ljava/lang/String;Z)V
+.method public final cJ(I)Lcom/tencent/mm/dbsupport/newcursor/a;
     .locals 6
-
-    .prologue
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    .line 324
-    iget v0, p0, Lcom/tencent/mm/ui/e;->eKM:I
-
-    if-nez v0, :cond_2
-
-    move v0, v1
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/e;->kjT:Z
-
-    or-int/2addr v0, p2
-
-    if-eqz v0, :cond_1
-
-    .line 325
-    if-nez p2, :cond_0
-
-    .line 326
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->TAG:Ljava/lang/String;
-
-    const-string/jumbo v3, "newcursor cache needRefresh : needRefreshInfront :%b from : %s %s"
-
-    const/4 v4, 0x3
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    iget-boolean v5, p0, Lcom/tencent/mm/ui/e;->kjT:Z
-
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v5
-
-    aput-object v5, v4, v2
-
-    aput-object p1, v4, v1
-
-    const/4 v1, 0x2
-
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVJ()Lcom/tencent/mm/sdk/platformtools/ad;
-
-    move-result-object v5
-
-    aput-object v5, v4, v1
-
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 327
-    :cond_0
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/e;->gU(Z)V
-
-    .line 329
-    :cond_1
-    return-void
-
-    :cond_2
-    move v0, v2
-
-    .line 324
-    goto :goto_0
-.end method
-
-.method public final cj(I)Lcom/tencent/mm/dbsupport/newcursor/a;
-    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)TT;"
+        }
+    .end annotation
 
     .prologue
     const/4 v5, 0x0
 
     .line 334
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     if-nez v0, :cond_0
 
     .line 335
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/e;->aZG()Lcom/tencent/mm/dbsupport/newcursor/e;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/e;->bfe()Lcom/tencent/mm/dbsupport/newcursor/e;
 
     move-result-object v0
 
@@ -1117,21 +1222,21 @@
     :cond_0
     const-string/jumbo v0, "getItem"
 
-    invoke-virtual {p0, v0, v5}, Lcom/tencent/mm/ui/e;->ap(Ljava/lang/String;Z)V
+    invoke-virtual {p0, v0, v5}, Lcom/tencent/mm/ui/e;->az(Ljava/lang/String;Z)V
 
     .line 338
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
-    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/k;->bvI:Lcom/tencent/mm/dbsupport/newcursor/e;
+    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/k;->bkB:Lcom/tencent/mm/dbsupport/newcursor/e;
 
     invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->moveToPosition(I)Z
 
     .line 339
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
-    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/k;->bvI:Lcom/tencent/mm/dbsupport/newcursor/e;
+    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/k;->bkB:Lcom/tencent/mm/dbsupport/newcursor/e;
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->cj(I)Lcom/tencent/mm/dbsupport/newcursor/a;
+    invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/e;->cJ(I)Lcom/tencent/mm/dbsupport/newcursor/a;
 
     move-result-object v0
 
@@ -1139,7 +1244,7 @@
     if-eqz v0, :cond_1
 
     .line 342
-    invoke-interface {v0}, Lcom/tencent/mm/dbsupport/newcursor/a;->qC()V
+    invoke-interface {v0}, Lcom/tencent/mm/dbsupport/newcursor/a;->pg()V
 
     .line 346
     :goto_0
@@ -1161,15 +1266,106 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public abstract d(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+.method public abstract e(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<TK;>;)",
+            "Ljava/util/ArrayList",
+            "<TT;>;"
+        }
+    .end annotation
 .end method
 
-.method public final gU(Z)V
+.method public getCount()I
+    .locals 8
+
+    .prologue
+    const/4 v5, 0x0
+
+    .line 296
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
+
+    if-nez v0, :cond_0
+
+    .line 297
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/e;->bfe()Lcom/tencent/mm/dbsupport/newcursor/e;
+
+    move-result-object v2
+
+    invoke-direct {p0, v2}, Lcom/tencent/mm/ui/e;->a(Lcom/tencent/mm/dbsupport/newcursor/e;)V
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/e;->TAG:Ljava/lang/String;
+
+    const-string/jumbo v3, "newcursor createCursor last : %d"
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    sub-long v0, v6, v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    aput-object v0, v4, v5
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 299
+    :cond_0
+    const-string/jumbo v0, "getcount"
+
+    invoke-virtual {p0, v0, v5}, Lcom/tencent/mm/ui/e;->az(Ljava/lang/String;Z)V
+
+    .line 300
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->getCount()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public synthetic getItem(I)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 33
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/e;->cJ(I)Lcom/tencent/mm/dbsupport/newcursor/a;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getItemId(I)J
+    .locals 2
+
+    .prologue
+    .line 351
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final hu(Z)V
     .locals 9
 
     .prologue
@@ -1180,7 +1376,7 @@
     const/4 v2, 0x0
 
     .line 529
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/e;->kjW:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/e;->kKe:Z
 
     if-nez v0, :cond_0
 
@@ -1188,20 +1384,20 @@
 
     .line 530
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$e;->aZQ()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$e;->bfo()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     :cond_1
-    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->aZJ()I
+    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->bfh()I
 
     move-result v0
 
@@ -1213,17 +1409,17 @@
     :goto_0
     if-eqz v0, :cond_4
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->aZJ()I
+    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->bfh()I
 
     move-result v1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
     if-eqz v0, :cond_b
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$e;->aZS()I
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$e;->bfq()I
 
     move-result v0
 
@@ -1239,13 +1435,13 @@
 
     aput-object v7, v6, v2
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     if-eqz v0, :cond_3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v4, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
-    invoke-virtual {v4}, Lcom/tencent/mm/ui/e$e;->aZO()V
+    invoke-virtual {v4}, Lcom/tencent/mm/ui/e$e;->bfm()V
 
     :cond_3
     if-eq v1, v8, :cond_b
@@ -1263,15 +1459,15 @@
 
     aput-object v6, v5, v2
 
-    invoke-static {v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput v2, p0, Lcom/tencent/mm/ui/e;->eKM:I
+    iput v2, p0, Lcom/tencent/mm/ui/e;->eSH:I
 
     if-ne v0, v8, :cond_6
 
     new-instance v0, Lcom/tencent/mm/ui/e$c;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/e;->aZG()Lcom/tencent/mm/dbsupport/newcursor/e;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/e;->bfe()Lcom/tencent/mm/dbsupport/newcursor/e;
 
     move-result-object v1
 
@@ -1282,7 +1478,7 @@
     .line 545
     :cond_4
     :goto_2
-    iput v2, p0, Lcom/tencent/mm/ui/e;->eKM:I
+    iput v2, p0, Lcom/tencent/mm/ui/e;->eSH:I
 
     .line 546
     :goto_3
@@ -1295,13 +1491,13 @@
     goto :goto_0
 
     :cond_6
-    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->aZK()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->bfi()V
 
     goto :goto_2
 
     .line 532
     :cond_7
-    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->aZJ()I
+    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->bfh()I
 
     move-result v0
 
@@ -1313,7 +1509,7 @@
 
     const-string/jumbo v1, "newcursor need not change "
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -1326,16 +1522,16 @@
 
     const-string/jumbo v3, "newcursor enqueueMessage resetcursor "
 
-    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 538
-    iget-object v1, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
     .line 540
     :cond_9
-    iget-object v1, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v1, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
     if-nez v1, :cond_a
 
@@ -1344,13 +1540,13 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/ui/e$e;-><init>(Lcom/tencent/mm/ui/e;)V
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iput-object v1, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
     .line 543
     :cond_a
-    iget-object v1, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v1, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/e$e;->pT(I)V
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/e$e;->rI(I)V
 
     goto :goto_2
 
@@ -1360,7 +1556,7 @@
     goto :goto_1
 .end method
 
-.method public final gV(Z)V
+.method public final hv(Z)V
     .locals 3
 
     .prologue
@@ -1369,41 +1565,41 @@
     const/4 v2, 0x0
 
     .line 1100
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     if-eqz v0, :cond_0
 
     .line 1101
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->close()V
 
     .line 1102
-    iput-object v1, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iput-object v1, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     .line 1105
     :cond_0
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
     if-eqz v0, :cond_1
 
     .line 1106
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/e$e;->quit()V
 
     .line 1107
-    iput-object v1, p0, Lcom/tencent/mm/ui/e;->kjX:Lcom/tencent/mm/ui/e$e;
+    iput-object v1, p0, Lcom/tencent/mm/ui/e;->kKf:Lcom/tencent/mm/ui/e$e;
 
     .line 1108
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
     if-eqz v0, :cond_1
 
     .line 1109
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
@@ -1412,103 +1608,26 @@
 
     const-string/jumbo v1, "newcursor closeCursor,clear events"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1113
     :cond_1
-    iput v2, p0, Lcom/tencent/mm/ui/e;->eKM:I
+    iput v2, p0, Lcom/tencent/mm/ui/e;->eSH:I
 
     .line 1114
-    iput v2, p0, Lcom/tencent/mm/ui/e;->kjU:I
+    iput v2, p0, Lcom/tencent/mm/ui/e;->kKc:I
 
     .line 1115
     return-void
 .end method
 
-.method public getCount()I
-    .locals 8
-
-    .prologue
-    const/4 v7, 0x0
-
-    .line 296
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
-
-    if-nez v0, :cond_0
-
-    .line 297
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/e;->aZG()Lcom/tencent/mm/dbsupport/newcursor/e;
-
-    move-result-object v2
-
-    invoke-direct {p0, v2}, Lcom/tencent/mm/ui/e;->a(Lcom/tencent/mm/dbsupport/newcursor/e;)V
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/e;->TAG:Ljava/lang/String;
-
-    const-string/jumbo v3, "newcursor createCursor last : %d"
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v5
-
-    sub-long v0, v5, v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    aput-object v0, v4, v7
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 299
-    :cond_0
-    const-string/jumbo v0, "getcount"
-
-    invoke-virtual {p0, v0, v7}, Lcom/tencent/mm/ui/e;->ap(Ljava/lang/String;Z)V
-
-    .line 300
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->getCount()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public synthetic getItem(I)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 33
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/e;->cj(I)Lcom/tencent/mm/dbsupport/newcursor/a;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getItemId(I)J
-    .locals 2
-
-    .prologue
-    .line 351
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public h(Ljava/lang/Object;I)V
+.method public i(Ljava/lang/Object;I)V
     .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;I)V"
+        }
+    .end annotation
 
     .prologue
     const/4 v6, 0x5
@@ -1522,11 +1641,11 @@
     const/4 v2, 0x1
 
     .line 564
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
 
@@ -1534,12 +1653,12 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/e;->kjY:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/tencent/mm/ui/e;->kKg:Ljava/lang/Object;
 
     invoke-virtual {v0, v3}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -1547,7 +1666,7 @@
 
     if-eq p2, v6, :cond_1
 
-    iget-boolean v3, p0, Lcom/tencent/mm/ui/e;->kjV:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/ui/e;->kKd:Z
 
     if-eqz v3, :cond_1
 
@@ -1556,7 +1675,7 @@
     :cond_1
     if-eq p2, v6, :cond_4
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->aZI()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->bfg()V
 
     :cond_2
     :goto_0
@@ -1572,16 +1691,16 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v2
 
     :goto_1
-    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->aZJ()I
+    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->bfh()I
 
     move-result v3
 
-    iput v3, p0, Lcom/tencent/mm/ui/e;->eKM:I
+    iput v3, p0, Lcom/tencent/mm/ui/e;->eSH:I
 
     iget-object v4, p0, Lcom/tencent/mm/ui/e;->TAG:Ljava/lang/String;
 
@@ -1589,7 +1708,7 @@
 
     new-array v6, v8, [Ljava/lang/Object;
 
-    iget v3, p0, Lcom/tencent/mm/ui/e;->eKM:I
+    iget v3, p0, Lcom/tencent/mm/ui/e;->eSH:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1597,7 +1716,7 @@
 
     aput-object v3, v6, v1
 
-    iget v3, p0, Lcom/tencent/mm/ui/e;->kjU:I
+    iget v3, p0, Lcom/tencent/mm/ui/e;->kKc:I
 
     if-ne v3, v2, :cond_e
 
@@ -1616,7 +1735,7 @@
 
     aput-object v3, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     if-eqz v0, :cond_f
 
@@ -1624,9 +1743,9 @@
 
     const-string/jumbo v1, "newcursor event is refresh sync "
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/e;->gU(Z)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/e;->hu(Z)V
 
     .line 565
     :cond_3
@@ -1637,7 +1756,7 @@
     :cond_4
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
     new-instance v3, Lcom/tencent/mm/ui/e$b;
 
@@ -1656,18 +1775,18 @@
 
     const-string/jumbo v1, "newcursor need reset ,return "
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
     :cond_6
-    iget v0, p0, Lcom/tencent/mm/ui/e;->kjU:I
+    iget v0, p0, Lcom/tencent/mm/ui/e;->kKc:I
 
     if-ne v0, v2, :cond_d
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/e$c;->T(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/e$c;->ae(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1676,7 +1795,7 @@
     if-ne p2, v7, :cond_c
 
     :cond_7
-    iget-object v4, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v4, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
     new-instance v5, Lcom/tencent/mm/ui/e$b;
 
@@ -1684,21 +1803,21 @@
 
     invoke-direct {v5, p1, p2, v0}, Lcom/tencent/mm/ui/e$b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget v0, v5, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iget v0, v5, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     if-ne v0, v7, :cond_8
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
-    iget-object v3, v5, Lcom/tencent/mm/ui/e$b;->gB:Ljava/lang/Object;
+    iget-object v3, v5, Lcom/tencent/mm/ui/e$b;->gW:Ljava/lang/Object;
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/e$c;->T(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/e$c;->ae(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    iput v8, v5, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iput v8, v5, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     :cond_8
     invoke-virtual {v4, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1716,32 +1835,32 @@
 
     invoke-virtual {v4, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget v3, v5, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iget v3, v5, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     packed-switch v3, :pswitch_data_0
 
     :pswitch_0
-    iget v0, v0, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iget v0, v0, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     packed-switch v0, :pswitch_data_1
 
     :goto_5
     :pswitch_1
-    iput v8, v5, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iput v8, v5, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     :goto_6
     invoke-virtual {v4, p1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_7
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->size()I
 
     move-result v3
 
-    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/k;->bvI:Lcom/tencent/mm/dbsupport/newcursor/e;
+    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/k;->bkB:Lcom/tencent/mm/dbsupport/newcursor/e;
 
-    invoke-interface {v0, v3}, Lcom/tencent/mm/dbsupport/newcursor/e;->cl(I)Z
+    invoke-interface {v0, v3}, Lcom/tencent/mm/dbsupport/newcursor/e;->cL(I)Z
 
     move-result v0
 
@@ -1763,11 +1882,11 @@
 
     aput-object v6, v5, v1
 
-    invoke-static {v0, v3, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     invoke-virtual {v4}, Ljava/util/HashMap;->clear()V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjY:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kKg:Ljava/lang/Object;
 
     const/4 v3, 0x0
 
@@ -1781,7 +1900,7 @@
 
     new-array v4, v2, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/e;->kjP:Ljava/util/HashMap;
+    iget-object v5, p0, Lcom/tencent/mm/ui/e;->kJX:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->size()I
 
@@ -1793,7 +1912,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -1805,12 +1924,12 @@
     goto :goto_4
 
     :pswitch_3
-    iget v0, v0, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iget v0, v0, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     packed-switch v0, :pswitch_data_2
 
     :pswitch_4
-    iput v6, v5, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iput v6, v5, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     goto :goto_6
 
@@ -1819,14 +1938,14 @@
 
     const-string/jumbo v3, "newcursor processEvent last delete, now delete, impossible"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput v6, v5, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iput v6, v5, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     goto :goto_6
 
     :pswitch_6
-    iget v0, v0, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iget v0, v0, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     packed-switch v0, :pswitch_data_3
 
@@ -1835,14 +1954,14 @@
 
     const-string/jumbo v3, "newcursor processEvent last update, now insert, impossible"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput v7, v5, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iput v7, v5, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     goto :goto_6
 
     :pswitch_8
-    iput v8, v5, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iput v8, v5, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     goto :goto_6
 
@@ -1851,9 +1970,9 @@
 
     const-string/jumbo v3, "newcursor processEvent last insert, now insert, impossible"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput v7, v5, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iput v7, v5, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     goto :goto_6
 
@@ -1862,12 +1981,12 @@
 
     const-string/jumbo v3, "newcursor processEvent last delete, now update, impossible"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_5
 
     :pswitch_b
-    iput v7, v5, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iput v7, v5, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     goto/16 :goto_6
 
@@ -1881,14 +2000,14 @@
 
     const-string/jumbo v3, "newcursor event pass "
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
     goto/16 :goto_1
 
     :cond_d
-    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->aZI()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/e;->bfg()V
 
     move v0, v1
 
@@ -1900,15 +2019,15 @@
     goto/16 :goto_2
 
     :cond_f
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/e;->kjN:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/e;->kJV:Z
 
     if-eqz v0, :cond_3
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/e;->kjT:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/e;->kKb:Z
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/e;->gU(Z)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/e;->hu(Z)V
 
     goto/16 :goto_3
 
@@ -1952,28 +2071,33 @@
     .line 720
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/e;->kjN:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/e;->kJV:Z
 
     .line 721
     iget-object v0, p0, Lcom/tencent/mm/ui/e;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "new cursor pasue"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 722
     return-void
 .end method
 
-.method public abstract qD()Lcom/tencent/mm/dbsupport/newcursor/a;
+.method public abstract ph()Lcom/tencent/mm/dbsupport/newcursor/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
 .end method
 
-.method public qG()Z
+.method public pk()Z
     .locals 1
 
     .prologue
     .line 287
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
     if-nez v0, :cond_0
 
@@ -1984,9 +2108,9 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kjO:Lcom/tencent/mm/ui/e$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e;->kJW:Lcom/tencent/mm/ui/e$c;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->qG()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/e$c;->pk()Z
 
     move-result v0
 

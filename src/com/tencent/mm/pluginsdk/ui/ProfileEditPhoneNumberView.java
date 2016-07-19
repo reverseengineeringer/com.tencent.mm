@@ -10,8 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.az.a;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.ui.base.g;
 import java.util.ArrayList;
@@ -20,12 +20,12 @@ public class ProfileEditPhoneNumberView
   extends ProfileItemView
   implements MMPhoneNumberEditText.a
 {
-  public String iHm;
-  public String iHn;
-  public String[] iHo;
-  private LinearLayout iHp;
-  private boolean iHq = false;
-  public a iHr;
+  public String jeh;
+  public String jei;
+  public String[] jej;
+  private LinearLayout jek;
+  private boolean jel = false;
+  public a jem;
   
   public ProfileEditPhoneNumberView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -37,87 +37,114 @@ public class ProfileEditPhoneNumberView
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  private void aRd()
+  private void aVP()
   {
-    if (iHr != null) {
-      iHr.KH();
+    if (jem != null) {
+      jem.Lt();
     }
   }
   
-  private void ak(String paramString, boolean paramBoolean)
+  private void at(String paramString, boolean paramBoolean)
   {
-    MMPhoneNumberEditText localMMPhoneNumberEditText = (MMPhoneNumberEditText)LayoutInflater.from(getContext()).inflate(2131363073, null);
+    MMPhoneNumberEditText localMMPhoneNumberEditText = (MMPhoneNumberEditText)LayoutInflater.from(getContext()).inflate(2130904179, null);
     if (paramBoolean)
     {
-      iGR = true;
-      iGP = localMMPhoneNumberEditText.getResources().getDrawable(2130903516);
-      iGP.setBounds(0, 0, iGP.getIntrinsicWidth(), iGP.getIntrinsicHeight());
+      jdM = true;
+      jdK = localMMPhoneNumberEditText.getResources().getDrawable(2131165527);
+      jdK.setBounds(0, 0, jdK.getIntrinsicWidth(), jdK.getIntrinsicHeight());
       localMMPhoneNumberEditText.setFocusable(false);
-      localMMPhoneNumberEditText.aQW();
+      localMMPhoneNumberEditText.aVG();
     }
-    localMMPhoneNumberEditText.setCallback(this);
+    jdL = this;
     localMMPhoneNumberEditText.setText(paramString);
     paramString = new LinearLayout.LayoutParams(-1, -2);
     paramString.setMargins(0, a.fromDPToPix(getContext(), 12), 0, 0);
-    iHp.addView(localMMPhoneNumberEditText, paramString);
+    jek.addView(localMMPhoneNumberEditText, paramString);
   }
   
   private void h(MMPhoneNumberEditText paramMMPhoneNumberEditText)
   {
-    iHp.removeView(paramMMPhoneNumberEditText);
-    iHp.getChildAt(iHp.getChildCount() - 1).requestFocus();
+    jek.removeView(paramMMPhoneNumberEditText);
+    jek.getChildAt(jek.getChildCount() - 1).requestFocus();
   }
   
   public final boolean G(k paramk)
   {
-    dsm = paramk;
+    dsC = paramk;
     return true;
   }
   
-  public final void aQY()
+  public final void aVI()
   {
-    if (iHp.getChildCount() - 1 < 5) {
-      ak(null, false);
+    if (jek.getChildCount() - 1 < 5) {
+      at(null, false);
     }
     for (;;)
     {
-      aRd();
+      aVP();
       return;
-      iHq = true;
+      jel = true;
     }
   }
   
-  public final boolean ant()
+  public final ArrayList<String> aVO()
+  {
+    int j = jek.getChildCount();
+    if (j == 1) {
+      return null;
+    }
+    ArrayList localArrayList = new ArrayList(j - 1);
+    int i = 1;
+    while (i < j)
+    {
+      String str = ((MMPhoneNumberEditText)jek.getChildAt(i)).getText().toString();
+      if (!be.kf(str)) {
+        localArrayList.add(str);
+      }
+      i += 1;
+    }
+    if (!be.kf(jeh)) {
+      localArrayList.remove(0);
+    }
+    return localArrayList;
+  }
+  
+  public final int aqj()
+  {
+    return 2130904180;
+  }
+  
+  public final boolean aqk()
   {
     int j;
-    if (!ay.kz(iHm))
+    if (!be.kf(jeh))
     {
-      ak(iHm, true);
+      at(jeh, true);
       j = 1;
     }
     for (int i = 1;; i = 0)
     {
       int k = i;
-      if (!ay.kz(iHn))
+      if (!be.kf(jei))
       {
-        iHo = iHn.split(",");
+        jej = jei.split(",");
         for (;;)
         {
           k = i;
-          if (i >= iHo.length + j) {
+          if (i >= jej.length + j) {
             break;
           }
-          ak(iHo[(i - j)].trim(), false);
+          at(jej[(i - j)].trim(), false);
           i += 1;
         }
       }
       if (k < 5)
       {
-        ak(null, false);
-        iHq = false;
+        at(null, false);
+        jel = false;
         return false;
       }
-      iHq = true;
+      jel = true;
       return false;
       j = 0;
     }
@@ -126,23 +153,23 @@ public class ProfileEditPhoneNumberView
   public void clearFocus()
   {
     int i = 1;
-    while (i < iHp.getChildCount())
+    while (i < jek.getChildCount())
     {
-      iHp.getChildAt(i).clearFocus();
+      jek.getChildAt(i).clearFocus();
       i += 1;
     }
   }
   
   public final void f(final MMPhoneNumberEditText paramMMPhoneNumberEditText)
   {
-    if (iGR)
+    if (jdM)
     {
-      g.a(getContext(), 2131428444, 0, 2131428446, 2131428445, new DialogInterface.OnClickListener()
+      g.a(getContext(), 2131233270, 0, 2131233269, 2131233268, new DialogInterface.OnClickListener()
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
         {
-          iHm = "";
-          iHr.aRe();
+          jeh = "";
+          jem.aVQ();
           ProfileEditPhoneNumberView.a(ProfileEditPhoneNumberView.this, paramMMPhoneNumberEditText);
           if (!ProfileEditPhoneNumberView.a(ProfileEditPhoneNumberView.this)) {
             ProfileEditPhoneNumberView.b(ProfileEditPhoneNumberView.this);
@@ -152,64 +179,37 @@ public class ProfileEditPhoneNumberView
       return;
     }
     h(paramMMPhoneNumberEditText);
-    if (iHq)
+    if (jel)
     {
-      ak(null, false);
-      iHq = false;
+      at(null, false);
+      jel = false;
     }
-    aRd();
+    aVP();
   }
   
   public final void g(MMPhoneNumberEditText paramMMPhoneNumberEditText)
   {
-    if (iHp.getChildCount() - 1 == 1) {
+    if (jek.getChildCount() - 1 == 1) {
       return;
     }
     h(paramMMPhoneNumberEditText);
-    if (iHq) {
-      ak(null, false);
+    if (jel) {
+      at(null, false);
     }
-    iHq = false;
-    aRd();
-  }
-  
-  public int getLayout()
-  {
-    return 2131363064;
-  }
-  
-  public ArrayList getPhoneNumberList()
-  {
-    int j = iHp.getChildCount();
-    if (j == 1) {
-      return null;
-    }
-    ArrayList localArrayList = new ArrayList(j - 1);
-    int i = 1;
-    while (i < j)
-    {
-      String str = ((MMPhoneNumberEditText)iHp.getChildAt(i)).getText().toString();
-      if (!ay.kz(str)) {
-        localArrayList.add(str);
-      }
-      i += 1;
-    }
-    if (!ay.kz(iHm)) {
-      localArrayList.remove(0);
-    }
-    return localArrayList;
+    jel = false;
+    aVP();
   }
   
   public final void init()
   {
-    iHp = ((LinearLayout)findViewById(2131169105));
+    jek = ((LinearLayout)findViewById(2131758468));
   }
   
   public static abstract interface a
   {
-    public abstract void KH();
+    public abstract void Lt();
     
-    public abstract void aRe();
+    public abstract void aVQ();
   }
 }
 

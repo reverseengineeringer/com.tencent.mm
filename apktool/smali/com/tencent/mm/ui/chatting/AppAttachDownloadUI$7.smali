@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kQa:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
+.field final synthetic lpP:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 614
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$7;->kQa:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
+    .line 646
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$7;->lpP:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,16 +40,16 @@
     .locals 1
 
     .prologue
-    .line 618
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$7;->kQa:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
+    .line 650
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$7;->lpP:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->o(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Z
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->p(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Z
 
-    .line 619
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$7;->kQa:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
+    .line 651
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$7;->lpP:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->p(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->q(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
 
-    .line 620
+    .line 652
     return-void
 .end method

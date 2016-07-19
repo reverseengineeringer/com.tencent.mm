@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/widget/AbsListView$OnScrollListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/conversation/BizChatFavUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/ui/conversation/BizChatFavUI;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,16 @@
 
 
 # instance fields
-.field final synthetic aoT:Lcom/tencent/mm/r/j;
-
-.field final synthetic lnW:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
+.field final synthetic lOv:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/conversation/BizChatFavUI;Lcom/tencent/mm/r/j;)V
+.method constructor <init>(Lcom/tencent/mm/ui/conversation/BizChatFavUI;)V
     .locals 0
 
     .prologue
-    .line 603
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$8;->lnW:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
-
-    iput-object p2, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$8;->aoT:Lcom/tencent/mm/r/j;
+    .line 187
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$8;->lOv:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,136 +36,25 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 10
+.method public final onScroll(Landroid/widget/AbsListView;III)V
+    .locals 0
 
     .prologue
-    const/4 v6, 0x1
-
-    const/4 v9, 0x0
-
-    .line 606
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    .line 607
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$8;->aoT:Lcom/tencent/mm/r/j;
-
-    check-cast v0, Lcom/tencent/mm/t/w;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/t/w;->xu()Lcom/tencent/mm/protocal/b/jc;
-
-    move-result-object v0
-
-    .line 608
-    if-eqz v0, :cond_0
-
-    iget-object v3, v0, Lcom/tencent/mm/protocal/b/jc;->jhF:Lcom/tencent/mm/protocal/b/ajo;
-
-    if-eqz v3, :cond_0
-
-    iget-object v3, v0, Lcom/tencent/mm/protocal/b/jc;->jhF:Lcom/tencent/mm/protocal/b/ajo;
-
-    iget v3, v3, Lcom/tencent/mm/protocal/b/ajo;->ret:I
-
-    if-eqz v3, :cond_2
-
-    .line 609
-    :cond_0
-    if-eqz v0, :cond_1
-
-    iget-object v1, v0, Lcom/tencent/mm/protocal/b/jc;->jhF:Lcom/tencent/mm/protocal/b/ajo;
-
-    if-eqz v1, :cond_1
-
-    .line 610
-    const-string/jumbo v1, "!32@/B4Tb64lLpKy3Chyc6XXOebcOF43B0Yg"
-
-    const-string/jumbo v2, "willen onSceneEnd err:code:%s"
-
-    new-array v3, v6, [Ljava/lang/Object;
-
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/jc;->jhF:Lcom/tencent/mm/protocal/b/ajo;
-
-    iget v0, v0, Lcom/tencent/mm/protocal/b/ajo;->ret:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v3, v9
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 635
-    :goto_0
+    .line 196
     return-void
+.end method
 
-    .line 612
-    :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpKy3Chyc6XXOebcOF43B0Yg"
+.method public final onScrollStateChanged(Landroid/widget/AbsListView;I)V
+    .locals 1
 
-    const-string/jumbo v1, "willen onSceneEnd err:resp == null"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 616
-    :cond_2
-    iget-object v3, v0, Lcom/tencent/mm/protocal/b/jc;->jhE:Lcom/tencent/mm/protocal/b/oi;
-
-    invoke-static {}, Lcom/tencent/mm/ui/conversation/BizChatFavUI;->JT()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Lcom/tencent/mm/t/f;->a(Lcom/tencent/mm/protocal/b/oi;Ljava/lang/String;)Z
-
-    move-result v3
-
-    .line 617
-    const-string/jumbo v4, "!32@/B4Tb64lLpKy3Chyc6XXOebcOF43B0Yg"
-
-    const-string/jumbo v5, "willen test handleFullBizChatInfo use time:%s"
-
-    new-array v6, v6, [Ljava/lang/Object;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v7
-
-    sub-long v1, v7, v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    aput-object v1, v6, v9
-
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 618
-    invoke-static {}, Lcom/tencent/mm/t/aj;->xH()Lcom/tencent/mm/t/e;
-
-    move-result-object v1
-
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/jc;->jhE:Lcom/tencent/mm/protocal/b/oi;
-
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/oi;->jof:Lcom/tencent/mm/protocal/b/fa;
-
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/fa;->jcu:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/t/e;->go(Ljava/lang/String;)Lcom/tencent/mm/t/d;
+    .prologue
+    .line 191
+    invoke-static {}, Lcom/tencent/mm/ae/n;->AC()Lcom/tencent/mm/ae/a/a;
 
     move-result-object v0
 
-    .line 619
-    new-instance v1, Lcom/tencent/mm/ui/conversation/BizChatFavUI$8$1;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ae/a/a;->ee(I)V
 
-    invoke-direct {v1, p0, v0, v3}, Lcom/tencent/mm/ui/conversation/BizChatFavUI$8$1;-><init>(Lcom/tencent/mm/ui/conversation/BizChatFavUI$8;Lcom/tencent/mm/t/d;Z)V
-
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
-
-    goto :goto_0
+    .line 192
+    return-void
 .end method

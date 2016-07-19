@@ -14,31 +14,31 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.ax.e;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.az.a;
+import com.tencent.mm.ba.e;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class p
 {
-  public static final int[] kqH = { 16843087, 16843088, 16843379 };
-  public static final int[] kqI = { 16843379 };
+  public static final int[] kPM = { 16843087, 16843088, 16843379 };
+  public static final int[] kPN = { 16843379 };
   
   public static LayoutInflater a(LayoutInflater paramLayoutInflater)
   {
-    a.cY(paramLayoutInflater.getContext());
+    a.cW(paramLayoutInflater.getContext());
     paramLayoutInflater = paramLayoutInflater.cloneInContext(paramLayoutInflater.getContext());
     a locala = new a((byte)0);
-    kqJ = paramLayoutInflater;
+    kPO = paramLayoutInflater;
     paramLayoutInflater.setFactory(locala);
     return paramLayoutInflater;
   }
   
-  public static LayoutInflater ee(Context paramContext)
+  public static LayoutInflater ef(Context paramContext)
   {
-    a.cY(paramContext);
+    a.cW(paramContext);
     paramContext = LayoutInflater.from(paramContext).cloneInContext(paramContext);
     a locala = new a((byte)0);
-    kqJ = paramContext;
+    kPO = paramContext;
     paramContext.setFactory(locala);
     return paramContext;
   }
@@ -46,13 +46,13 @@ public final class p
   private static final class a
     implements LayoutInflater.Factory
   {
-    LayoutInflater kqJ;
+    LayoutInflater kPO;
     
     private View createView(String paramString1, String paramString2, AttributeSet paramAttributeSet)
     {
       try
       {
-        paramString1 = kqJ.createView(paramString1, paramString2, paramAttributeSet);
+        paramString1 = kPO.createView(paramString1, paramString2, paramAttributeSet);
         return paramString1;
       }
       catch (ClassNotFoundException paramString1)
@@ -72,14 +72,14 @@ public final class p
       Object localObject1;
       label113:
       float f;
-      label747:
+      label764:
       int j;
-      label911:
-      label955:
-      label970:
-      label1087:
-      label1481:
-      label1756:
+      label928:
+      label972:
+      label987:
+      label1104:
+      label1498:
+      label1773:
       do
       {
         do
@@ -95,7 +95,7 @@ public final class p
                   localObject2 = localObject4;
                   localObject3 = localObject5;
                   if (!paramString.equals("WebView")) {
-                    break label2179;
+                    break label2196;
                   }
                   localObject2 = localObject4;
                   localObject3 = localObject5;
@@ -109,12 +109,12 @@ public final class p
                     localObject2 = localObject1;
                   }
                   if (localObject2 != null) {
-                    break label2172;
+                    break label2189;
                   }
                   localObject2 = localObject4;
                   localObject3 = localObject5;
                 }
-                for (localObject1 = createView(paramString, "android.view.", paramAttributeSet);; localObject1 = kqJ.createView(paramString, null, paramAttributeSet))
+                for (localObject1 = createView(paramString, "android.view.", paramAttributeSet);; localObject1 = kPO.createView(paramString, null, paramAttributeSet))
                 {
                   localObject2 = localObject1;
                   localObject3 = localObject1;
@@ -126,11 +126,11 @@ public final class p
                     {
                       localObject2 = localObject1;
                       localObject3 = localObject1;
-                      ((ViewStub)localObject1).setLayoutInflater(kqJ);
+                      ((ViewStub)localObject1).setLayoutInflater(kPO);
                     }
                   }
                   if (localObject1 == null) {
-                    break label2140;
+                    break label2157;
                   }
                   localObject2 = localObject1;
                   localObject3 = localObject1;
@@ -229,10 +229,15 @@ public final class p
                                                                 if (!paramString.equals("com.tencent.mm.plugin.sns.ui.MaskTextView"))
                                                                 {
                                                                   localObject2 = localObject1;
-                                                                  localObject4 = localObject1;
                                                                   localObject3 = localObject1;
-                                                                  if (!paramString.equals("com.tencent.mm.plugin.sns.ui.SnsEditText")) {
-                                                                    break label911;
+                                                                  if (!paramString.equals("com.tencent.mm.plugin.sns.ui.SnsEditText"))
+                                                                  {
+                                                                    localObject2 = localObject1;
+                                                                    localObject4 = localObject1;
+                                                                    localObject3 = localObject1;
+                                                                    if (!paramString.equals("com.tencent.mm.kiss.widget.textview.PLSysTextView")) {
+                                                                      break label928;
+                                                                    }
                                                                   }
                                                                 }
                                                               }
@@ -260,7 +265,7 @@ public final class p
                   }
                   localObject2 = localObject1;
                   localObject3 = localObject1;
-                  f = a.cY(paramContext);
+                  f = a.cW(paramContext);
                   localObject2 = localObject1;
                   localObject3 = localObject1;
                   if (!paramString.equals("TextView"))
@@ -268,7 +273,7 @@ public final class p
                     localObject2 = localObject1;
                     localObject3 = localObject1;
                     if (!paramString.equals("com.tencent.mm.ui.base.MMTextView")) {
-                      break label970;
+                      break label987;
                     }
                   }
                   localObject2 = localObject1;
@@ -283,39 +288,39 @@ public final class p
                   localObject2 = localObject1;
                   localObject4 = localObject1;
                   localObject3 = localObject1;
-                  if (!e.aTH()) {
-                    break label911;
+                  if (!e.aYE()) {
+                    break label928;
                   }
                   localObject2 = localObject1;
                   localObject3 = localObject1;
-                  paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, p.kqH);
+                  paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, p.kPM);
                   i = 0;
                   localObject2 = localObject1;
                   localObject3 = localObject1;
-                  if (i >= p.kqH.length) {
-                    break label955;
+                  if (i >= p.kPM.length) {
+                    break label972;
                   }
                   localObject2 = localObject1;
                   localObject3 = localObject1;
                   j = paramAttributeSet.getResourceId(i, 0);
                   if (j == 0) {
-                    break label2185;
+                    break label2202;
                   }
                   localObject2 = localObject1;
                   localObject3 = localObject1;
-                  if (p.kqH[i] != 16843379) {
+                  if (p.kPM[i] != 16843379) {
                     break;
                   }
                   localObject2 = localObject1;
                   localObject3 = localObject1;
                   ((TextView)localObject5).setContentDescription(paramContext.getString(j));
-                  break label2185;
+                  break label2202;
                   localObject2 = localObject4;
                   localObject3 = localObject5;
                 }
                 localObject2 = localObject1;
                 localObject3 = localObject1;
-                if (p.kqH[i] == 16843088)
+                if (p.kPM[i] == 16843088)
                 {
                   localObject2 = localObject1;
                   localObject3 = localObject1;
@@ -324,7 +329,7 @@ public final class p
               }
               catch (ClassNotFoundException paramContext)
               {
-                u.w("!44@/B4Tb64lLpLCvsNADamW+r1BiimaWqA8nTkjwpfB0XE=", "[cpan] class not found. name:%s. Use default Inflate.", new Object[] { paramString });
+                v.w("MicroMsg.MMLayoutInflater", "[cpan] class not found. name:%s. Use default Inflate.", new Object[] { paramString });
                 localObject4 = localObject2;
                 return (View)localObject4;
                 localObject2 = localObject1;
@@ -333,7 +338,7 @@ public final class p
               }
               catch (InflateException paramContext)
               {
-                u.w("!44@/B4Tb64lLpLCvsNADamW+r1BiimaWqA8nTkjwpfB0XE=", "[cpan] Inflate failed. name:%s. Use default Inflate.", new Object[] { paramString });
+                v.w("MicroMsg.MMLayoutInflater", "[cpan] Inflate failed. name:%s. Use default Inflate.", new Object[] { paramString });
                 return (View)localObject3;
               }
               localObject2 = localObject1;
@@ -357,43 +362,43 @@ public final class p
               localObject2 = localObject1;
               localObject4 = localObject1;
               localObject3 = localObject1;
-            } while (!e.aTH());
+            } while (!e.aYE());
             localObject2 = localObject1;
             localObject3 = localObject1;
-            paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, p.kqH);
+            paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, p.kPM);
             i = 0;
             localObject2 = localObject1;
             localObject3 = localObject1;
-            if (i < p.kqH.length)
+            if (i < p.kPM.length)
             {
               localObject2 = localObject1;
               localObject3 = localObject1;
               j = paramAttributeSet.getResourceId(i, 0);
               if (j == 0) {
-                break label2194;
+                break label2211;
               }
               localObject2 = localObject1;
               localObject3 = localObject1;
-              if (p.kqH[i] == 16843379)
+              if (p.kPM[i] == 16843379)
               {
                 localObject2 = localObject1;
                 localObject3 = localObject1;
                 ((Button)localObject5).setContentDescription(paramContext.getString(j));
-                break label2194;
+                break label2211;
               }
               localObject2 = localObject1;
               localObject3 = localObject1;
-              if (p.kqH[i] == 16843088)
+              if (p.kPM[i] == 16843088)
               {
                 localObject2 = localObject1;
                 localObject3 = localObject1;
                 ((Button)localObject5).setHint(paramContext.getString(j));
-                break label2194;
+                break label2211;
               }
               localObject2 = localObject1;
               localObject3 = localObject1;
               ((Button)localObject5).setText(paramContext.getString(j));
-              break label2194;
+              break label2211;
             }
             localObject2 = localObject1;
             localObject3 = localObject1;
@@ -451,43 +456,43 @@ public final class p
             localObject2 = localObject1;
             localObject4 = localObject1;
             localObject3 = localObject1;
-          } while (!e.aTH());
+          } while (!e.aYE());
           localObject2 = localObject1;
           localObject3 = localObject1;
-          paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, p.kqH);
+          paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, p.kPM);
           i = 0;
           localObject2 = localObject1;
           localObject3 = localObject1;
-          if (i < p.kqH.length)
+          if (i < p.kPM.length)
           {
             localObject2 = localObject1;
             localObject3 = localObject1;
             j = paramAttributeSet.getResourceId(i, 0);
             if (j == 0) {
-              break label2203;
+              break label2220;
             }
             localObject2 = localObject1;
             localObject3 = localObject1;
-            if (p.kqH[i] == 16843379)
+            if (p.kPM[i] == 16843379)
             {
               localObject2 = localObject1;
               localObject3 = localObject1;
               ((EditText)localObject5).setContentDescription(paramContext.getString(j));
-              break label2203;
+              break label2220;
             }
             localObject2 = localObject1;
             localObject3 = localObject1;
-            if (p.kqH[i] == 16843088)
+            if (p.kPM[i] == 16843088)
             {
               localObject2 = localObject1;
               localObject3 = localObject1;
               ((EditText)localObject5).setHint(paramContext.getString(j));
-              break label2203;
+              break label2220;
             }
             localObject2 = localObject1;
             localObject3 = localObject1;
             ((EditText)localObject5).setText(paramContext.getString(j));
-            break label2203;
+            break label2220;
           }
           localObject2 = localObject1;
           localObject3 = localObject1;
@@ -510,43 +515,43 @@ public final class p
           localObject2 = localObject1;
           localObject4 = localObject1;
           localObject3 = localObject1;
-        } while (!e.aTH());
+        } while (!e.aYE());
         localObject2 = localObject1;
         localObject3 = localObject1;
-        paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, p.kqH);
+        paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, p.kPM);
         i = 0;
         localObject2 = localObject1;
         localObject3 = localObject1;
-        if (i < p.kqH.length)
+        if (i < p.kPM.length)
         {
           localObject2 = localObject1;
           localObject3 = localObject1;
           j = paramAttributeSet.getResourceId(i, 0);
           if (j == 0) {
-            break label2212;
+            break label2229;
           }
           localObject2 = localObject1;
           localObject3 = localObject1;
-          if (p.kqH[i] == 16843379)
+          if (p.kPM[i] == 16843379)
           {
             localObject2 = localObject1;
             localObject3 = localObject1;
             ((CheckBox)localObject5).setContentDescription(paramContext.getString(j));
-            break label2212;
+            break label2229;
           }
           localObject2 = localObject1;
           localObject3 = localObject1;
-          if (p.kqH[i] == 16843088)
+          if (p.kPM[i] == 16843088)
           {
             localObject2 = localObject1;
             localObject3 = localObject1;
             ((CheckBox)localObject5).setHint(paramContext.getString(j));
-            break label2212;
+            break label2229;
           }
           localObject2 = localObject1;
           localObject3 = localObject1;
           ((CheckBox)localObject5).setText(paramContext.getString(j));
-          break label2212;
+          break label2229;
         }
         localObject2 = localObject1;
         localObject3 = localObject1;
@@ -566,16 +571,16 @@ public final class p
         localObject2 = localObject1;
         localObject4 = localObject1;
         localObject3 = localObject1;
-      } while (!e.aTH());
+      } while (!e.aYE());
       localObject2 = localObject1;
       localObject3 = localObject1;
-      paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, p.kqI);
+      paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, p.kPN);
       int i = 0;
       for (;;)
       {
         localObject2 = localObject1;
         localObject3 = localObject1;
-        if (i < p.kqI.length)
+        if (i < p.kPN.length)
         {
           localObject2 = localObject1;
           localObject3 = localObject1;
@@ -584,7 +589,7 @@ public final class p
           {
             localObject2 = localObject1;
             localObject3 = localObject1;
-            if (p.kqI[i] == 16843379)
+            if (p.kPN[i] == 16843379)
             {
               localObject2 = localObject1;
               localObject3 = localObject1;
@@ -605,29 +610,29 @@ public final class p
           localObject3 = localObject1;
           paramContext.setTextSize(1, f * paramContext.getTextSize() / a.getDensity(paramContext.getContext()));
           return (View)localObject1;
-          label2140:
+          label2157:
           localObject2 = localObject1;
           localObject3 = localObject1;
-          u.w("!44@/B4Tb64lLpLCvsNADamW+r1BiimaWqA8nTkjwpfB0XE=", "Inflate view, ClassNotFound " + paramString);
+          v.w("MicroMsg.MMLayoutInflater", "Inflate view, ClassNotFound " + paramString);
           return (View)localObject1;
-          label2172:
+          label2189:
           localObject1 = localObject2;
           break label113;
-          label2179:
+          label2196:
           localObject1 = null;
           break;
-          label2185:
+          label2202:
           i += 1;
-          break label747;
-          label2194:
+          break label764;
+          label2211:
           i += 1;
-          break label1087;
-          label2203:
+          break label1104;
+          label2220:
           i += 1;
-          break label1481;
-          label2212:
+          break label1498;
+          label2229:
           i += 1;
-          break label1756;
+          break label1773;
         }
         i += 1;
       }

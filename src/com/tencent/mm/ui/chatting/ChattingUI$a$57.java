@@ -1,16 +1,19 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.model.z.c.a;
+import com.tencent.mm.sdk.h.g.a;
+import com.tencent.mm.sdk.h.i;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ChattingUI$a$57
-  implements z.c.a
+  implements g.a
 {
   ChattingUI$a$57(ChattingUI.a parama) {}
   
-  public final void f(String paramString, boolean paramBoolean)
+  public final void a(String paramString, i parami)
   {
-    if (paramBoolean) {
-      laF.kSE.a(null, null);
+    v.d("MicroMsg.ChattingUI", "onBGChange event:%s", new Object[] { paramString });
+    if ((paramString != null) && ((paramString.equals(lAY.bjO())) || (paramString.equals("*")))) {
+      ChattingUI.a.A(lAY);
     }
   }
 }

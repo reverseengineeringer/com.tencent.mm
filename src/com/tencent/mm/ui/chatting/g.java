@@ -1,40 +1,50 @@
 package com.tencent.mm.ui.chatting;
 
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import com.tencent.mm.pluginsdk.ui.emoji.RTChattingEmojiView;
 
 final class g
-  extends aa.a
+  extends ab.a
 {
-  protected View dTx;
-  protected TextView dVa;
-  protected ImageView edJ;
-  protected ImageView edM;
-  protected TextView kQD;
-  protected TextView kQE;
-  protected ImageView kQF;
+  ProgressBar fPG;
+  RTChattingEmojiView lqp;
+  ImageView lqq;
+  ImageView lqr;
+  ImageView lqs;
   
   public g(int paramInt)
   {
     super(paramInt);
   }
   
-  public final g ax(View paramView)
+  public final ab.a f(View paramView, boolean paramBoolean)
   {
-    super.aC(paramView);
-    edJ = ((ImageView)paramView.findViewById(2131165404));
-    dVa = ((TextView)paramView.findViewById(2131165410));
-    kQD = ((TextView)paramView.findViewById(2131165409));
-    dTx = paramView.findViewById(2131165408);
-    kQE = ((TextView)paramView.findViewById(2131165432));
-    gjr = ((TextView)paramView.findViewById(2131165268));
-    kQF = ((ImageView)paramView.findViewById(2131165457));
-    edK = ((CheckBox)paramView.findViewById(2131165186));
-    dMC = paramView.findViewById(2131165187);
-    edM = ((ImageView)paramView.findViewById(2131165430));
-    return this;
+    super.aG(paramView);
+    dXd = ((TextView)paramView.findViewById(2131755018));
+    lqp = ((RTChattingEmojiView)paramView.findViewById(2131756045));
+    ehl = ((CheckBox)paramView.findViewById(2131755013));
+    dOk = paramView.findViewById(2131755017);
+    lqr = ((ImageView)paramView.findViewById(2131756046));
+    if (paramBoolean) {
+      type = 14;
+    }
+    for (;;)
+    {
+      if (lqq != null) {
+        ((ViewGroup)lqq.getParent()).setBackgroundDrawable(null);
+      }
+      gtM = ((TextView)paramView.findViewById(2131755288));
+      return this;
+      fPG = ((ProgressBar)paramView.findViewById(2131756116));
+      lqA = ((ImageView)paramView.findViewById(2131756089));
+      type = 15;
+      lqs = ((ImageView)paramView.findViewById(2131756117));
+    }
   }
 }
 

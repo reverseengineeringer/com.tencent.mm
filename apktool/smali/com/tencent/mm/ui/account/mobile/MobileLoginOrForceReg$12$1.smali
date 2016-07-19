@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kyu:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$12;
+.field final synthetic kXB:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$12;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 215
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$12$1;->kyu:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$12;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$12$1;->kXB:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$12;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 219
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$12$1;->kyu:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$12;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$12$1;->kXB:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$12;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$12;->kyq:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$12;->kXx:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
 
-    iput-object p1, v0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;->coM:Landroid/app/ProgressDialog;
+    iput-object p1, v0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;->cka:Landroid/app/ProgressDialog;
 
     .line 221
     return-void

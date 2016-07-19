@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->setVideoTotalTime(I)V
+    value = Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->mb(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+.field final synthetic gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
-.field final synthetic gyq:I
+.field final synthetic gEN:I
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 166
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$2;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$2;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
-    iput p2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$2;->gyq:I
+    iput p2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$2;->gEN:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,11 +45,11 @@
 
     .prologue
     .line 169
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$2;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$2;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$2;->gyq:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$2;->gEN:I
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->setVideoTotalTime(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->mb(I)V
 
     .line 170
     return-void

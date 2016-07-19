@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.preference;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.plugin.report.service.g;
 import com.tencent.mm.pluginsdk.i.n;
 
 final class AccountInfoPreference$1
@@ -12,10 +12,10 @@ final class AccountInfoPreference$1
   
   public final void onClick(View paramView)
   {
-    if (AccountInfoPreference.a(iOb) != null)
+    if (AccountInfoPreference.a(jlg) != null)
     {
-      h.fUJ.g(11264, new Object[] { Integer.valueOf(1) });
-      AccountInfoPreference.a(iOb).show();
+      g.gdY.h(11264, new Object[] { Integer.valueOf(1) });
+      AccountInfoPreference.a(jlg).show();
     }
   }
 }

@@ -1,109 +1,153 @@
 package com.tencent.mm.v;
 
-import android.database.Cursor;
-import com.tencent.mm.az.g;
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.d.b.t;
-import com.tencent.mm.model.c;
-import com.tencent.mm.model.i;
-import com.tencent.mm.pointers.PInt;
-import com.tencent.mm.pointers.PString;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
-import com.tencent.mm.storage.r;
-import com.tencent.mm.storage.s.b;
+import com.tencent.mm.e.b.i;
+import com.tencent.mm.sdk.h.c.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import java.lang.reflect.Field;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public final class d
-  extends com.tencent.mm.model.s
+  extends i
 {
-  public final boolean cy(int paramInt)
+  protected static c.a bjR;
+  private Map<String, k> bAo = new HashMap();
+  private List<String> bAp;
+  
+  static
   {
-    return (paramInt != 0) && (paramInt < 604372991);
+    c.a locala = new c.a();
+    bZI = new Field[14];
+    aZx = new String[15];
+    StringBuilder localStringBuilder = new StringBuilder();
+    aZx[0] = "bizChatLocalId";
+    kyU.put("bizChatLocalId", "LONG PRIMARY KEY ");
+    localStringBuilder.append(" bizChatLocalId LONG PRIMARY KEY ");
+    localStringBuilder.append(", ");
+    kyT = "bizChatLocalId";
+    aZx[1] = "bizChatServId";
+    kyU.put("bizChatServId", "TEXT");
+    localStringBuilder.append(" bizChatServId TEXT");
+    localStringBuilder.append(", ");
+    aZx[2] = "brandUserName";
+    kyU.put("brandUserName", "TEXT default '' ");
+    localStringBuilder.append(" brandUserName TEXT default '' ");
+    localStringBuilder.append(", ");
+    aZx[3] = "chatType";
+    kyU.put("chatType", "INTEGER");
+    localStringBuilder.append(" chatType INTEGER");
+    localStringBuilder.append(", ");
+    aZx[4] = "headImageUrl";
+    kyU.put("headImageUrl", "TEXT");
+    localStringBuilder.append(" headImageUrl TEXT");
+    localStringBuilder.append(", ");
+    aZx[5] = "chatName";
+    kyU.put("chatName", "TEXT default '' ");
+    localStringBuilder.append(" chatName TEXT default '' ");
+    localStringBuilder.append(", ");
+    aZx[6] = "chatNamePY";
+    kyU.put("chatNamePY", "TEXT default '' ");
+    localStringBuilder.append(" chatNamePY TEXT default '' ");
+    localStringBuilder.append(", ");
+    aZx[7] = "chatVersion";
+    kyU.put("chatVersion", "INTEGER default '-1' ");
+    localStringBuilder.append(" chatVersion INTEGER default '-1' ");
+    localStringBuilder.append(", ");
+    aZx[8] = "needToUpdate";
+    kyU.put("needToUpdate", "INTEGER default 'true' ");
+    localStringBuilder.append(" needToUpdate INTEGER default 'true' ");
+    localStringBuilder.append(", ");
+    aZx[9] = "bitFlag";
+    kyU.put("bitFlag", "INTEGER default '0' ");
+    localStringBuilder.append(" bitFlag INTEGER default '0' ");
+    localStringBuilder.append(", ");
+    aZx[10] = "maxMemberCnt";
+    kyU.put("maxMemberCnt", "INTEGER default '0' ");
+    localStringBuilder.append(" maxMemberCnt INTEGER default '0' ");
+    localStringBuilder.append(", ");
+    aZx[11] = "ownerUserId";
+    kyU.put("ownerUserId", "TEXT");
+    localStringBuilder.append(" ownerUserId TEXT");
+    localStringBuilder.append(", ");
+    aZx[12] = "userList";
+    kyU.put("userList", "TEXT");
+    localStringBuilder.append(" userList TEXT");
+    localStringBuilder.append(", ");
+    aZx[13] = "addMemberUrl";
+    kyU.put("addMemberUrl", "TEXT");
+    localStringBuilder.append(" addMemberUrl TEXT");
+    aZx[14] = "rowid";
+    kyV = localStringBuilder.toString();
+    bjR = locala;
   }
   
-  public final String getTag()
+  public final boolean dA(int paramInt)
   {
-    return "!56@/B4Tb64lLpJN/RyYD3u7HF8juPJa6nglxXMYkxC4P3qVkLeQLye5rQ==";
+    return (field_bitFlag & paramInt) != 0;
   }
   
-  public final void transfer(int paramInt)
+  public final String ej(String paramString)
   {
-    u.d("!56@/B4Tb64lLpJN/RyYD3u7HF8juPJa6nglxXMYkxC4P3qVkLeQLye5rQ==", "the previous version is %d", new Object[] { Integer.valueOf(paramInt) });
-    Object localObject1;
-    Object localObject2;
-    Object localObject3;
-    Object localObject4;
-    if ((paramInt != 0) && (paramInt < 604372991))
-    {
-      localObject1 = tDbzA;
-      localObject2 = new StringBuilder();
-      ((StringBuilder)localObject2).append("select rconversation.username").append(" from rconversation, rcontact").append(", bizinfo where rconversation").append(".username = rcontact").append(".username and rconversation").append(".username = bizinfo").append(".username and ( rcontact").append(".verifyFlag & 8").append(" ) != 0 ");
-      localObject2 = ((StringBuilder)localObject2).toString();
-      u.d("!56@/B4Tb64lLpJN/RyYD3u7HF8juPJa6nglxXMYkxC4P3qVkLeQLye5rQ==", "select sql %s", new Object[] { localObject2 });
-      localObject2 = ((g)localObject1).rawQuery((String)localObject2, null);
-      if ((localObject2 == null) || (!((Cursor)localObject2).moveToFirst())) {
-        break label516;
-      }
-      localObject3 = new StringBuilder();
-      ((StringBuilder)localObject3).append("Update rconversation set parentRef").append(" = 'officialaccounts' where 1 !=1 ");
-      do
-      {
-        localObject4 = ((Cursor)localObject2).getString(0);
-        if (!i.eH((String)localObject4)) {
-          ((StringBuilder)localObject3).append(" or username = '").append((String)localObject4).append("'");
-        }
-      } while (((Cursor)localObject2).moveToNext());
-      ((Cursor)localObject2).close();
-      localObject3 = ((StringBuilder)localObject3).toString();
-      u.d("!56@/B4Tb64lLpJN/RyYD3u7HF8juPJa6nglxXMYkxC4P3qVkLeQLye5rQ==", "changed[%B] exec sql[%s]", new Object[] { Boolean.valueOf(true), localObject3 });
-      ((g)localObject1).cj("rconversation", (String)localObject3);
-      localObject1 = com.tencent.mm.model.ah.tD().rt().EA("officialaccounts");
-      if (localObject1 != null) {
-        break label536;
-      }
-      localObject1 = new r("officialaccounts");
-      ((r)localObject1).wr();
-      com.tencent.mm.model.ah.tD().rt().d((r)localObject1);
+    paramString = gA(paramString);
+    if (paramString == null) {
+      return "";
     }
-    label516:
-    label536:
-    for (;;)
+    return be.ab(field_userName, "");
+  }
+  
+  public final k gA(String paramString)
+  {
+    if ((!bAo.containsKey(paramString)) || (bAo.get(paramString) == null))
     {
-      localObject3 = com.tencent.mm.model.ah.tD().rt().aWN();
-      if (ay.kz((String)localObject3)) {
-        u.w("!56@/B4Tb64lLpJN/RyYD3u7HF8juPJa6nglxXMYkxC4P3qVkLeQLye5rQ==", "last convBiz is null");
+      long l = System.currentTimeMillis();
+      k localk = an.xL().gP(paramString);
+      if (localk != null) {
+        bAo.put(field_userId, localk);
       }
-      do
-      {
-        return;
-        localObject3 = com.tencent.mm.model.ah.tD().rs().EX((String)localObject3);
-        if ((localObject3 == null) || (field_msgId == 0L))
-        {
-          u.w("!56@/B4Tb64lLpJN/RyYD3u7HF8juPJa6nglxXMYkxC4P3qVkLeQLye5rQ==", "last biz msg is error");
-          return;
-        }
-        ((r)localObject1).z((ag)localObject3);
-        ((r)localObject1).setContent(field_talker + ":" + field_content);
-        ((r)localObject1).cd(Integer.toString(field_type));
-        localObject4 = tDrtkfb;
-        if (localObject4 != null)
-        {
-          PString localPString1 = new PString();
-          PString localPString2 = new PString();
-          PInt localPInt = new PInt();
-          ((ag)localObject3).setTalker("officialaccounts");
-          ((ag)localObject3).setContent(field_content);
-          ((s.b)localObject4).a((ag)localObject3, localPString1, localPString2, localPInt, false);
-          ((r)localObject1).ce(value);
-          ((r)localObject1).cf(value);
-          ((r)localObject1).bm(value);
-        }
-        com.tencent.mm.model.ah.tD().rt().a((r)localObject1, field_username, true);
-      } while ((localObject2 == null) || (((Cursor)localObject2).isClosed()));
-      ((Cursor)localObject2).close();
-      return;
+      v.d("MicroMsg.BaseBizChatInfo", "willen get userInfo use time:%s", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
     }
+    if (bAo.containsKey(paramString)) {
+      return (k)bAo.get(paramString);
+    }
+    return null;
+  }
+  
+  protected final c.a ou()
+  {
+    return bjR;
+  }
+  
+  public final List<String> wu()
+  {
+    if (bAp != null) {
+      return bAp;
+    }
+    String str = field_userList;
+    if (be.kf(str)) {
+      return new LinkedList();
+    }
+    bAp = be.g(str.split(";"));
+    return bAp;
+  }
+  
+  public final boolean wv()
+  {
+    if (field_bizChatServId == null) {
+      return false;
+    }
+    return field_bizChatServId.endsWith("@qy_g");
+  }
+  
+  public final boolean ww()
+  {
+    if (field_needToUpdate) {}
+    while (((wv()) && (be.kf(field_userList))) || ((be.kf(field_chatNamePY)) && (!be.kf(field_chatName)))) {
+      return true;
+    }
+    return false;
   }
 }
 

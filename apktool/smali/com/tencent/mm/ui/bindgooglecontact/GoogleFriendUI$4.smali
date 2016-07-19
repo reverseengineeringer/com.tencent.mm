@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+.field final synthetic lmA:Lcom/tencent/mm/modelfriend/o;
 
-.field final synthetic kNk:Ljava/util/ArrayList;
+.field final synthetic lmy:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
-.field final synthetic kNl:Lcom/tencent/mm/modelfriend/o;
+.field final synthetic lmz:Ljava/util/ArrayList;
 
 
 # direct methods
@@ -31,11 +31,11 @@
 
     .prologue
     .line 503
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$4;->kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$4;->lmy:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$4;->kNk:Ljava/util/ArrayList;
+    iput-object p2, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$4;->lmz:Ljava/util/ArrayList;
 
-    iput-object p3, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$4;->kNl:Lcom/tencent/mm/modelfriend/o;
+    iput-object p3, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$4;->lmA:Lcom/tencent/mm/modelfriend/o;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,7 +44,7 @@
 
 
 # virtual methods
-.method public final aq(II)V
+.method public final av(II)V
     .locals 3
 
     .prologue
@@ -54,9 +54,9 @@
     if-eq p2, v0, :cond_0
 
     .line 508
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$4;->kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$4;->lmy:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$4;->kNk:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$4;->lmz:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -64,7 +64,7 @@
 
     check-cast v0, Lcom/tencent/mm/modelfriend/o;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$4;->kNl:Lcom/tencent/mm/modelfriend/o;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$4;->lmA:Lcom/tencent/mm/modelfriend/o;
 
     invoke-static {v1, v0, v2}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;->a(Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;Lcom/tencent/mm/modelfriend/o;Lcom/tencent/mm/modelfriend/o;)V
 

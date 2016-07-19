@@ -1,64 +1,64 @@
 package com.tencent.mm.model;
 
 import com.tencent.mm.a.e;
-import com.tencent.mm.at.b;
-import com.tencent.mm.protocal.b.aej;
-import com.tencent.mm.protocal.b.aly;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.ax.b;
+import com.tencent.mm.protocal.b.afc;
+import com.tencent.mm.protocal.b.amj;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.storage.RegionCodeDecoder;
 import com.tencent.mm.storage.h;
 
 public final class ax
 {
-  public String aJD = "";
-  public int aSD = 0;
-  public String aSE = "";
-  public String aSJ = "";
-  public int aSu = 0;
-  private String bCB = "";
-  private String bCC = "";
-  public String bCD = "";
-  public String bCE = "";
+  public int aFd = 0;
+  public int aFm = 0;
+  public String aFn = "";
+  public String aFs = "";
+  public String avX = "";
+  private String bvL = "";
+  private String bvM = "";
+  public String bvN = "";
+  public String bvO = "";
   
-  public static aej a(ax paramax)
+  public static afc a(ax paramax)
   {
-    ah.tD().rn().set(12289, Integer.valueOf(aSD));
-    ah.tD().rn().set(12290, Integer.valueOf(aSu));
-    if (a.J((String)ah.tD().rn().get(12293, null), paramax.getProvince())) {
-      ah.tD().rn().set(12293, paramax.getProvince());
+    ah.tE().ro().set(12289, Integer.valueOf(aFm));
+    ah.tE().ro().set(12290, Integer.valueOf(aFd));
+    if (a.G((String)ah.tE().ro().get(12293, null), paramax.getProvince())) {
+      ah.tE().ro().set(12293, paramax.getProvince());
     }
-    if (a.J((String)ah.tD().rn().get(12292, null), paramax.getCity())) {
-      ah.tD().rn().set(12292, paramax.getCity());
+    if (a.G((String)ah.tE().ro().get(12292, null), paramax.getCity())) {
+      ah.tE().ro().set(12292, paramax.getCity());
     }
-    if (a.J((String)ah.tD().rn().get(12291, null), aSE)) {
-      ah.tD().rn().set(12291, aSE);
+    if (a.G((String)ah.tE().ro().get(12291, null), aFn)) {
+      ah.tE().ro().set(12291, aFn);
     }
-    if (a.J((String)ah.tD().rn().get(12307, null), aSJ)) {
-      ah.tD().rn().set(12307, aSJ);
+    if (a.G((String)ah.tE().ro().get(12307, null), aFs)) {
+      ah.tE().ro().set(12307, aFs);
     }
-    if (a.J((String)ah.tD().rn().get(12324, null), aJD)) {
-      ah.tD().rn().set(12324, aJD);
+    if (a.G((String)ah.tE().ro().get(12324, null), avX)) {
+      ah.tE().ro().set(12324, avX);
     }
-    if (a.J((String)ah.tD().rn().get(12325, null), bCE)) {
-      ah.tD().rn().set(12325, bCE);
+    if (a.G((String)ah.tE().ro().get(12325, null), bvO)) {
+      ah.tE().ro().set(12325, bvO);
     }
-    if (a.J((String)ah.tD().rn().get(12326, null), bCD)) {
-      ah.tD().rn().set(12326, bCD);
+    if (a.G((String)ah.tE().ro().get(12326, null), bvN)) {
+      ah.tE().ro().set(12326, bvN);
     }
-    aej localaej = new aej();
-    jBd = 128;
-    jhS = new aly().Cr("");
-    jwg = new aly().Cr("");
-    iVX = 0;
-    jBe = new aly().Cr("");
-    jBf = new aly().Cr("");
-    cqT = 0;
+    afc localafc = new afc();
+    jZP = 128;
+    jFX = new amj().EF("");
+    jUO = new amj().EF("");
+    jty = 0;
+    jZQ = new amj().EF("");
+    jZR = new amj().EF("");
+    cmu = 0;
     byte[] arrayOfByte2 = e.c("", 0, -1);
     byte[] arrayOfByte1;
     if (arrayOfByte2 == null)
     {
       arrayOfByte1 = new byte[0];
-      jBb = new b(arrayOfByte1);
+      jZN = new b(arrayOfByte1);
       if (arrayOfByte2 != null) {
         break label588;
       }
@@ -66,103 +66,103 @@ public final class ax
     label588:
     for (int i = 0;; i = arrayOfByte2.length)
     {
-      jBa = i;
-      bLM = aSu;
-      bLQ = aSD;
-      bLP = ay.ky(aSE);
-      bLO = ay.ky(bCD);
-      bLN = ay.ky(bCE);
-      iWa = 0;
-      jxi = ay.ky(aSJ);
-      jBk = 0;
-      bLR = "";
-      jxk = 0;
-      jxj = "";
-      bLV = ay.ky(aJD);
-      return localaej;
+      jZM = i;
+      bFg = aFd;
+      bFk = aFm;
+      bFj = be.li(aFn);
+      bFi = be.li(bvN);
+      bFh = be.li(bvO);
+      jtB = 0;
+      jVO = be.li(aFs);
+      jZW = 0;
+      bFl = "";
+      jVQ = 0;
+      jVP = "";
+      bFp = be.li(avX);
+      return localafc;
       arrayOfByte1 = arrayOfByte2;
       break;
     }
   }
   
-  public static ax uC()
+  public static ax uE()
   {
     ax localax = new ax();
-    aSD = 1;
-    aSu = ay.b((Integer)ah.tD().rn().get(12290, null), 0);
-    bCB = ((String)ah.tD().rn().get(12293, null));
-    bCC = ((String)ah.tD().rn().get(12292, null));
-    aSE = ((String)ah.tD().rn().get(12291, null));
-    aSJ = ((String)ah.tD().rn().get(12307, null));
-    aJD = ((String)ah.tD().rn().get(12324, null));
-    bCE = ((String)ah.tD().rn().get(12325, null));
-    bCD = ((String)ah.tD().rn().get(12326, null));
+    aFm = 1;
+    aFd = be.b((Integer)ah.tE().ro().get(12290, null), 0);
+    bvL = ((String)ah.tE().ro().get(12293, null));
+    bvM = ((String)ah.tE().ro().get(12292, null));
+    aFn = ((String)ah.tE().ro().get(12291, null));
+    aFs = ((String)ah.tE().ro().get(12307, null));
+    avX = ((String)ah.tE().ro().get(12324, null));
+    bvO = ((String)ah.tE().ro().get(12325, null));
+    bvN = ((String)ah.tE().ro().get(12326, null));
     return localax;
   }
   
-  public static ax uD()
+  public static ax uF()
   {
-    if (ay.b((Integer)ah.tD().rn().get(12289, null), 0) == 0) {
+    if (be.b((Integer)ah.tE().ro().get(12289, null), 0) == 0) {
       return null;
     }
-    return uC();
+    return uE();
   }
   
   public final String getCity()
   {
-    if (!ay.kz(aJD))
+    if (!be.kf(avX))
     {
-      if (ay.kz(bCE)) {
+      if (be.kf(bvO)) {
         break label91;
       }
-      if (!ay.kz(bCD)) {
+      if (!be.kf(bvN)) {
         break label66;
       }
-      bCC = RegionCodeDecoder.aXU().cq(aJD, bCE);
+      bvM = RegionCodeDecoder.bdm().cE(avX, bvO);
     }
-    while (ay.kz(bCC))
+    while (be.kf(bvM))
     {
-      return ay.ky(bCD);
+      return be.li(bvN);
       label66:
-      bCC = RegionCodeDecoder.aXU().N(aJD, bCE, bCD);
+      bvM = RegionCodeDecoder.bdm().P(avX, bvO, bvN);
       continue;
       label91:
-      bCC = "";
+      bvM = "";
     }
-    return bCC;
+    return bvM;
   }
   
   public final String getProvince()
   {
-    if (!ay.kz(aJD)) {
-      if ((ay.kz(bCE)) || (ay.kz(bCD)) || (!RegionCodeDecoder.Fz(aJD))) {
+    if (!be.kf(avX)) {
+      if ((be.kf(bvO)) || (be.kf(bvN)) || (!RegionCodeDecoder.HP(avX))) {
         break label76;
       }
     }
     label76:
-    for (bCB = RegionCodeDecoder.aXU().cq(aJD, bCE); ay.kz(bCB); bCB = RegionCodeDecoder.aXU().FA(aJD)) {
-      return ay.ky(bCE);
+    for (bvL = RegionCodeDecoder.bdm().cE(avX, bvO); be.kf(bvL); bvL = RegionCodeDecoder.bdm().HQ(avX)) {
+      return be.li(bvO);
     }
-    return bCB;
+    return bvL;
   }
   
   private static final class a
   {
-    public static boolean J(String paramString1, String paramString2)
+    public static boolean G(String paramString1, String paramString2)
     {
-      if (ay.kz(paramString1)) {}
+      if (be.kf(paramString1)) {}
       do
       {
         return true;
         paramString1 = decode(encode(paramString1));
-      } while ((ay.kz(paramString1)) || (!paramString1.equals(paramString2)));
+      } while ((be.kf(paramString1)) || (!paramString1.equals(paramString2)));
       return false;
     }
     
     private static String decode(String paramString)
     {
       Object localObject;
-      if ((ay.kz(paramString)) || (paramString.length() % 2 != 0)) {
+      if ((be.kf(paramString)) || (paramString.length() % 2 != 0)) {
         localObject = "";
       }
       for (;;)

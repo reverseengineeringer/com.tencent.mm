@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.ui.NoDrawingCacheLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/g9" android:paddingLeft="@dimen/cy" android:paddingRight="@dimen/co" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MMListCatalog" />
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/m_" android:paddingLeft="@dimen/cy" android:paddingRight="@dimen/co" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/gm" android:background="@drawable/t5" android:layout_width="fill_parent" android:layout_height="@dimen/dn">
+            <TextView android:id="@id/ge" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="signature" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/ContactSignature" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/n" android:id="@id/gn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/i7" android:text="@string/ba" android:layout_toLeftOf="@id/ge" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <com.tencent.mm.ui.AddressView android:id="@id/go" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/gn" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.tencent.mm.ui.NoDrawingCacheLinearLayout>

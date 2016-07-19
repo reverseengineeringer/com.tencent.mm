@@ -1,6 +1,6 @@
 package com.tencent.mm.plugin.sight.encode.ui;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MainSightContainerBottomView$1
   implements Runnable
@@ -9,11 +9,11 @@ final class MainSightContainerBottomView$1
   
   public final void run()
   {
-    if ((MainSightContainerBottomView.a(gBT)) && (gBS != 0) && (MainSightContainerBottomView.b(gBT).getVisibility() != 0))
+    if ((MainSightContainerBottomView.a(gIv)) && (gIu != 0) && (MainSightContainerBottomView.b(gIv).getVisibility() != 0))
     {
-      u.d("!56@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVn2U9ljI4aZRiYFDVPO9gEg==", "change layout");
-      MainSightContainerBottomView.b(gBT).setIsTouchShow(true);
-      MainSightContainerBottomView.b(gBT).setVisibility(0);
+      v.d("MicroMsg.MainSightContainerBottomView", "change layout");
+      bgIv).gIj = true;
+      MainSightContainerBottomView.b(gIv).setVisibility(0);
     }
   }
 }

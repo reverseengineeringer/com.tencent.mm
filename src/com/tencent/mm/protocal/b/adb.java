@@ -1,37 +1,45 @@
 package com.tencent.mm.protocal.b;
 
 public final class adb
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public int dzC;
-  public String eiq;
+  public String aez;
+  public String jXo;
+  public int juL;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (eiq != null) {
-        paramVarArgs.d(1, eiq);
+      if (jXo != null) {
+        paramVarArgs.e(1, jXo);
       }
-      paramVarArgs.ci(2, dzC);
+      if (aez != null) {
+        paramVarArgs.e(2, aez);
+      }
+      paramVarArgs.cw(3, juL);
       return 0;
     }
     if (paramInt == 1) {
-      if (eiq == null) {
-        break label212;
+      if (jXo == null) {
+        break label269;
       }
     }
-    label212:
-    for (paramInt = a.a.a.b.b.a.e(1, eiq) + 0;; paramInt = 0)
+    label269:
+    for (paramInt = a.a.a.b.b.a.f(1, jXo) + 0;; paramInt = 0)
     {
-      return paramInt + a.a.a.a.cg(2, dzC);
+      int i = paramInt;
+      if (aez != null) {
+        i = paramInt + a.a.a.b.b.a.f(2, aez);
+      }
+      return i + a.a.a.a.cu(3, juL);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
         break;
@@ -45,10 +53,13 @@ public final class adb
         default: 
           return -1;
         case 1: 
-          eiq = maU.readString();
+          jXo = mMY.readString();
+          return 0;
+        case 2: 
+          aez = mMY.readString();
           return 0;
         }
-        dzC = maU.jC();
+        juL = mMY.id();
         return 0;
       }
       return -1;

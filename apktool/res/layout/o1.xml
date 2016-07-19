@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/ea" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/FavDetailBody">
+        <include layout="@layout/fav_detail_title_view" />
+        <include layout="@layout/favorite_tag_entrence" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/aly" android:paddingTop="@dimen/hb" android:paddingBottom="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include layout="@layout/fav_detail_footer_view" />
+    </LinearLayout>
+</ScrollView>

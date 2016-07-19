@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic hiS:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;
+.field final synthetic hxH:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;
 
 
 # direct methods
@@ -23,8 +23,8 @@
     .locals 1
 
     .prologue
-    .line 469
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a$2;->hiS:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;
+    .line 470
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a$2;->hxH:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;
 
     const/4 v0, 0x0
 
@@ -39,12 +39,12 @@
     .locals 3
 
     .prologue
-    .line 473
+    .line 474
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 474
+    .line 475
     const-string/jumbo v1, "Contact_User"
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -57,10 +57,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 475
-    sget-object v1, Lcom/tencent/mm/plugin/sns/b/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    .line 476
+    sget-object v1, Lcom/tencent/mm/plugin/sns/b/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a$2;->hiS:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a$2;->hxH:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;->a(Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;)Landroid/app/Activity;
 
@@ -68,6 +68,6 @@
 
     invoke-interface {v1, v0, v2}, Lcom/tencent/mm/pluginsdk/g;->d(Landroid/content/Intent;Landroid/content/Context;)V
 
-    .line 478
+    .line 479
     return-void
 .end method

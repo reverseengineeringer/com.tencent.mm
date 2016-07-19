@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/chatting/bf$a;
-.super Lcom/tencent/mm/ui/chatting/aa$a;
+.super Lcom/tencent/mm/ui/chatting/ab$a;
 .source "SourceFile"
 
 
@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field protected bMr:Landroid/widget/ImageView;
+.field protected bFL:Landroid/widget/ImageView;
 
-.field protected kUu:Landroid/widget/TextView;
+.field protected luy:Lcom/tencent/mm/ui/base/NoMeasuredTextView;
 
-.field final synthetic kUv:Lcom/tencent/mm/ui/chatting/bf;
+.field final synthetic luz:Lcom/tencent/mm/ui/chatting/bf;
 
 
 # direct methods
@@ -27,27 +27,27 @@
     .locals 0
 
     .prologue
-    .line 143
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/bf$a;->kUv:Lcom/tencent/mm/ui/chatting/bf;
+    .line 160
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/bf$a;->luz:Lcom/tencent/mm/ui/chatting/bf;
 
-    .line 144
-    invoke-direct {p0, p2}, Lcom/tencent/mm/ui/chatting/aa$a;-><init>(I)V
+    .line 161
+    invoke-direct {p0, p2}, Lcom/tencent/mm/ui/chatting/ab$a;-><init>(I)V
 
-    .line 145
+    .line 162
     return-void
 .end method
 
 
 # virtual methods
-.method public final aG(Landroid/view/View;)Lcom/tencent/mm/ui/chatting/bf$a;
+.method public final aJ(Landroid/view/View;)Lcom/tencent/mm/ui/chatting/bf$a;
     .locals 1
 
     .prologue
-    .line 148
-    invoke-super {p0, p1}, Lcom/tencent/mm/ui/chatting/aa$a;->aC(Landroid/view/View;)V
+    .line 165
+    invoke-super {p0, p1}, Lcom/tencent/mm/ui/chatting/ab$a;->aG(Landroid/view/View;)V
 
-    .line 153
-    const v0, 0x7f070002
+    .line 169
+    const v0, 0x7f100005
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -55,10 +55,10 @@
 
     check-cast v0, Landroid/widget/CheckBox;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/bf$a;->edK:Landroid/widget/CheckBox;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/bf$a;->ehl:Landroid/widget/CheckBox;
 
-    .line 154
-    const v0, 0x7f0701a7
+    .line 170
+    const v0, 0x7f10043f
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -66,19 +66,19 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/bf$a;->bMr:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/bf$a;->bFL:Landroid/widget/ImageView;
 
-    .line 155
-    const v0, 0x7f070085
+    .line 171
+    const v0, 0x7f100441
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    check-cast v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/bf$a;->kUu:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/bf$a;->luy:Lcom/tencent/mm/ui/base/NoMeasuredTextView;
 
-    .line 157
+    .line 173
     return-object p0
 .end method

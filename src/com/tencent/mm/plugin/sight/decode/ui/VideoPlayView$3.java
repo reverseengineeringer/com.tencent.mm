@@ -15,15 +15,15 @@ final class VideoPlayView$3
   public final void run()
   {
     DisplayMetrics localDisplayMetrics = new DisplayMetrics();
-    if ((gzd.getContext() instanceof MMActivity))
+    if ((gFG.getContext() instanceof MMActivity))
     {
-      ((MMActivity)gzd.getContext()).getWindowManager().getDefaultDisplay().getMetrics(localDisplayMetrics);
-      if ((VideoPlayView.a(gzd) instanceof VideoSightView)) {
-        ((VideoSightView)VideoPlayView.a(gzd)).setDrawableWidth(widthPixels);
+      ((MMActivity)gFG.getContext()).getWindowManager().getDefaultDisplay().getMetrics(localDisplayMetrics);
+      if ((VideoPlayView.a(gFG) instanceof VideoSightView)) {
+        ((VideoSightView)VideoPlayView.a(gFG)).lY(widthPixels);
       }
     }
-    ((View)VideoPlayView.a(gzd)).requestLayout();
-    ((View)VideoPlayView.a(gzd)).postInvalidate();
+    ((View)VideoPlayView.a(gFG)).requestLayout();
+    ((View)VideoPlayView.a(gFG)).postInvalidate();
   }
 }
 

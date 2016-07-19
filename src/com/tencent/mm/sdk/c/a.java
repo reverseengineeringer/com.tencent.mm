@@ -1,132 +1,119 @@
 package com.tencent.mm.sdk.c;
 
 import android.os.Looper;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedList;
 import junit.framework.Assert;
 
 public final class a
 {
-  public static a jUF = new a();
-  private final HashMap jUG = new HashMap();
+  public static a kug = new a();
+  private final HashMap<Integer, LinkedList<c>> kuh = new HashMap();
   
-  private void a(LinkedList paramLinkedList, b paramb)
+  private void a(LinkedList<c> paramLinkedList, b paramb)
   {
-    if (jUI) {
+    if (kuk) {
       Collections.sort(paramLinkedList, new Comparator() {});
     }
     c[] arrayOfc = new c[paramLinkedList.size()];
     paramLinkedList.toArray(arrayOfc);
     int j = arrayOfc.length;
     int i = 0;
-    while ((i < j) && ((!arrayOfc[i].a(paramb)) || (!jUI))) {
+    while ((i < j) && ((!arrayOfc[i].a(paramb)) || (!kuk))) {
       i += 1;
     }
-    if (aID != null) {
-      aID.run();
+    if (auX != null) {
+      auX.run();
     }
-  }
-  
-  public final boolean Cz(String paramString)
-  {
-    u.v("!32@/B4Tb64lLpIA8N9k9Noauc0XyOaqccJI", "hasListener %s", new Object[] { paramString });
-    Assert.assertNotNull("EventPoolImpl.hasListener", paramString);
-    paramString = (LinkedList)jUG.get(paramString);
-    return (paramString != null) && (paramString.size() > 0);
   }
   
   public final void a(final b paramb, Looper paramLooper)
   {
-    u.v("!32@/B4Tb64lLpIA8N9k9Noauc0XyOaqccJI", "publish %s", new Object[] { id });
     Assert.assertNotNull("EventPoolImpl.asyncPublish event", paramb);
     Assert.assertNotNull("EventPoolImpl.asyncPublish looper", paramLooper);
-    new aa(paramLooper).post(new Runnable()
+    v.v("MicroMsg.EventCenter", "publish %s(%d)", new Object[] { paramb, Integer.valueOf(paramb.aZq()) });
+    new ac(paramLooper).post(new Runnable()
     {
       public final void run()
       {
-        a.jUF.j(paramb);
+        a.kug.y(paramb);
       }
     });
   }
   
-  public final boolean b(String paramString, c paramc)
-  {
-    for (;;)
-    {
-      Object localObject;
-      try
-      {
-        u.v("!32@/B4Tb64lLpIA8N9k9Noauc0XyOaqccJI", "addListener %s", new Object[] { paramString });
-        Assert.assertNotNull("EventPoolImpl.add", paramc);
-        localObject = (LinkedList)jUG.get(paramString);
-        if (localObject == null)
-        {
-          HashMap localHashMap = jUG;
-          localObject = new LinkedList();
-          localHashMap.put(paramString, localObject);
-          paramString = (String)localObject;
-          localObject = paramString.iterator();
-          if (((Iterator)localObject).hasNext())
-          {
-            if ((c)((Iterator)localObject).next() != paramc) {
-              continue;
-            }
-            return true;
-          }
-          boolean bool = paramString.add(paramc);
-          return bool;
-        }
-      }
-      finally {}
-      paramString = (String)localObject;
-    }
-  }
-  
-  public final boolean c(String paramString, c paramc)
+  public final boolean d(c paramc)
   {
     try
     {
-      u.v("!32@/B4Tb64lLpIA8N9k9Noauc0XyOaqccJI", "removeListener %s", new Object[] { paramString });
-      Assert.assertNotNull("EventPoolImpl.remove", paramc);
-      paramString = (LinkedList)jUG.get(paramString);
-      if (paramString == null) {
-        return false;
+      Assert.assertNotNull("EventPoolImpl.add", paramc);
+      v.v("MicroMsg.EventCenter", "addListener %s(%d)", new Object[] { paramc, Integer.valueOf(paramc.aZq()) });
+      Object localObject2 = (LinkedList)kuh.get(Integer.valueOf(paramc.aZq()));
+      Object localObject1 = localObject2;
+      if (localObject2 == null)
+      {
+        localObject2 = kuh;
+        int i = paramc.aZq();
+        localObject1 = new LinkedList();
+        ((HashMap)localObject2).put(Integer.valueOf(i), localObject1);
       }
-      boolean bool = paramString.remove(paramc);
+      if (((LinkedList)localObject1).contains(paramc)) {
+        return true;
+      }
+      boolean bool = ((LinkedList)localObject1).add(paramc);
       return bool;
     }
     finally {}
   }
   
-  public final boolean d(String paramString, c paramc)
+  public final boolean e(c paramc)
   {
-    Assert.assertNotNull("EventPoolImpl.containListener[arg0:eventId]", paramString);
-    Assert.assertNotNull("EventPoolImpl.containListener[arg1:listener]", paramc);
-    paramString = (LinkedList)jUG.get(paramString);
-    return (paramString != null) && (!paramString.isEmpty()) && (paramString.contains(paramc));
-  }
-  
-  public final boolean j(b paramb)
-  {
-    u.v("!32@/B4Tb64lLpIA8N9k9Noauc0XyOaqccJI", "publish %s", new Object[] { id });
-    Assert.assertNotNull("EventPoolImpl.publish", paramb);
     try
     {
-      Object localObject = id;
-      LinkedList localLinkedList = (LinkedList)jUG.get(localObject);
-      if (localLinkedList == null)
-      {
-        u.w("!32@/B4Tb64lLpIA8N9k9Noauc0XyOaqccJI", "No listener for this event %s, Stack: %s.", new Object[] { localObject, ay.aVJ() });
+      Assert.assertNotNull("EventPoolImpl.remove", paramc);
+      v.v("MicroMsg.EventCenter", "removeListener %s(%d)", new Object[] { paramc, Integer.valueOf(paramc.aZq()) });
+      LinkedList localLinkedList = (LinkedList)kuh.get(Integer.valueOf(paramc.aZq()));
+      if (localLinkedList == null) {
         return false;
       }
-      localObject = new LinkedList(localLinkedList);
-      a((LinkedList)localObject, paramb);
+      boolean bool = localLinkedList.remove(paramc);
+      return bool;
+    }
+    finally {}
+  }
+  
+  public final boolean e(Class<? extends b> paramClass)
+  {
+    Assert.assertNotNull("EventPoolImpl.hasListener", paramClass);
+    paramClass = (LinkedList)kuh.get(Integer.valueOf(paramClass.getName().hashCode()));
+    return (paramClass != null) && (paramClass.size() > 0);
+  }
+  
+  public final boolean f(c paramc)
+  {
+    Assert.assertNotNull("EventPoolImpl.hadListened", paramc);
+    LinkedList localLinkedList = (LinkedList)kuh.get(Integer.valueOf(paramc.aZq()));
+    return (localLinkedList != null) && (!localLinkedList.isEmpty()) && (localLinkedList.contains(paramc));
+  }
+  
+  public final boolean y(b paramb)
+  {
+    Assert.assertNotNull("EventPoolImpl.publish", paramb);
+    v.v("MicroMsg.EventCenter", "publish %s(%d)", new Object[] { paramb, Integer.valueOf(paramb.aZq()) });
+    try
+    {
+      int i = paramb.aZq();
+      LinkedList localLinkedList = (LinkedList)kuh.get(Integer.valueOf(i));
+      if (localLinkedList == null)
+      {
+        v.w("MicroMsg.EventCenter", "No listener for this event %s(%d), Stack: %s.", new Object[] { paramb, Integer.valueOf(i), "" });
+        return false;
+      }
+      localLinkedList = new LinkedList(localLinkedList);
+      a(localLinkedList, paramb);
       return true;
     }
     finally {}

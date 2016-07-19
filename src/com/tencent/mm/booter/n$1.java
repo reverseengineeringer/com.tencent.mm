@@ -5,10 +5,12 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Process;
 import com.tencent.mm.compatible.d.p;
-import com.tencent.mm.network.s;
+import com.tencent.mm.network.b;
+import com.tencent.mm.protocal.c;
+import com.tencent.mm.sdk.platformtools.aa;
 import com.tencent.mm.sdk.platformtools.f;
 import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.v;
 import java.net.HttpURLConnection;
 
 public final class n$1
@@ -19,22 +21,22 @@ public final class n$1
   public final void run()
   {
     Object localObject1 = null;
-    long l = com.tencent.mm.platformtools.t.FS();
+    long l = com.tencent.mm.platformtools.s.Gp();
     Process.setThreadPriority(10);
-    localObject2 = bnl;
-    int i = f.akC;
-    Object localObject3 = p.ox();
-    int j = com.tencent.mm.protocal.b.iUf;
-    Object localObject4 = com.tencent.mm.sdk.platformtools.t.aUB();
-    int k = context.getSharedPreferences(y.aUK(), 0).getInt("last_reportdevice_channel", 0);
-    int m = context.getSharedPreferences(y.aUK(), 0).getInt("last_reportdevice_clientversion", 0);
+    localObject2 = baS;
+    int i = f.Xv;
+    Object localObject3 = p.mN();
+    int j = c.jry;
+    Object localObject4 = u.aZF();
+    int k = context.getSharedPreferences(aa.aZO(), 0).getInt("last_reportdevice_channel", 0);
+    int m = context.getSharedPreferences(aa.aZO(), 0).getInt("last_reportdevice_clientversion", 0);
     if ((k == 0) && (m == 0))
     {
       i = 0;
-      localObject2 = "http://support.weixin.qq.com/cgi-bin/mmsupport-bin/reportdevice?channel=" + f.akC + "&deviceid=" + (String)localObject3 + "&clientversion=" + j + "&platform=" + "0" + "&lang=" + (String)localObject4 + "&installtype=" + i;
+      localObject2 = "http://support.weixin.qq.com/cgi-bin/mmsupport-bin/reportdevice?channel=" + f.Xv + "&deviceid=" + (String)localObject3 + "&clientversion=" + j + "&platform=" + "0" + "&lang=" + (String)localObject4 + "&installtype=" + i;
       label159:
-      u.i("!32@/B4Tb64lLpJ/45nhhxB3sW7Az8rKLsSk", "tryReport thread:%s pri:%d  Url[%s] ", new Object[] { Thread.currentThread().getName(), Integer.valueOf(Process.getThreadPriority(Process.myTid())), localObject2 });
-      if (!com.tencent.mm.platformtools.t.kz((String)localObject2)) {
+      v.i("MicroMsg.StartupReport", "tryReport thread:%s pri:%d  Url[%s] ", new Object[] { Thread.currentThread().getName(), Integer.valueOf(Process.getThreadPriority(Process.myTid())), localObject2 });
+      if (!com.tencent.mm.platformtools.s.kf((String)localObject2)) {
         break label227;
       }
     }
@@ -51,43 +53,43 @@ public final class n$1
       break;
       try
       {
-        localObject3 = com.tencent.mm.network.b.a((String)localObject2, null);
+        localObject3 = b.a((String)localObject2, null);
         localObject1 = localObject3;
-        ((s)localObject3).setConnectTimeout(10000);
+        ((com.tencent.mm.network.s)localObject3).setConnectTimeout(10000);
         localObject1 = localObject3;
-        ((s)localObject3).setReadTimeout(10000);
+        ((com.tencent.mm.network.s)localObject3).setReadTimeout(10000);
         localObject1 = localObject3;
-        ((s)localObject3).connect();
+        ((com.tencent.mm.network.s)localObject3).connect();
         localObject1 = localObject3;
-        i = ((s)localObject3).getResponseCode();
+        i = ((com.tencent.mm.network.s)localObject3).getResponseCode();
         if (i == 200)
         {
           localObject1 = localObject3;
-          localObject4 = bnl;
+          localObject4 = baS;
           localObject1 = localObject3;
-          j = f.akC;
+          j = f.Xv;
           localObject1 = localObject3;
-          k = com.tencent.mm.protocal.b.iUf;
+          k = c.jry;
           localObject1 = localObject3;
-          localObject4 = context.getSharedPreferences(y.aUK(), 0);
+          localObject4 = context.getSharedPreferences(aa.aZO(), 0);
           localObject1 = localObject3;
           ((SharedPreferences)localObject4).edit().putInt("last_reportdevice_channel", j).commit();
           localObject1 = localObject3;
           ((SharedPreferences)localObject4).edit().putInt("last_reportdevice_clientversion", k).commit();
         }
         localObject1 = localObject3;
-        u.d("!32@/B4Tb64lLpJ/45nhhxB3sW7Az8rKLsSk", "report FIN time:%d resp:%d url[%s]", new Object[] { Long.valueOf(com.tencent.mm.platformtools.t.an(l)), Integer.valueOf(i), localObject2 });
+        v.d("MicroMsg.StartupReport", "report FIN time:%d resp:%d url[%s]", new Object[] { Long.valueOf(com.tencent.mm.platformtools.s.au(l)), Integer.valueOf(i), localObject2 });
         localObject1 = localObject3;
       }
       catch (Exception localException)
       {
         for (;;)
         {
-          u.e("!32@/B4Tb64lLpJ/45nhhxB3sW7Az8rKLsSk", "tryReport error url[%s]", new Object[] { localObject2 });
+          v.e("MicroMsg.StartupReport", "tryReport error url[%s]", new Object[] { localObject2 });
         }
       }
     } while (localObject1 == null);
-    cjv.disconnect();
+    ceM.disconnect();
   }
 }
 

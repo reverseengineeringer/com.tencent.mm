@@ -10,7 +10,7 @@ final class MobileInputUI$6
   
   public final void onClick(View paramView)
   {
-    MobileInputUI.d(kyc);
+    MobileInputUI.d(kXj);
   }
 }
 

@@ -38,23 +38,23 @@
     return v0
 .end method
 
-.method public final l(Landroid/os/Bundle;)V
+.method public final n(Landroid/os/Bundle;)V
     .locals 0
 
     .prologue
     .line 162
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/b;->l(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/b;->n(Landroid/os/Bundle;)V
 
     .line 163
     return-void
 .end method
 
-.method public final m(Landroid/os/Bundle;)V
+.method public final o(Landroid/os/Bundle;)V
     .locals 0
 
     .prologue
     .line 157
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/b;->m(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/b;->o(Landroid/os/Bundle;)V
 
     .line 158
     return-void

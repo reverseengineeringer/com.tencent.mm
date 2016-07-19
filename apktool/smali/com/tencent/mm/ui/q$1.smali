@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/m/a$a;
+.implements Lcom/tencent/mm/o/a$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kqP:Lcom/tencent/mm/ui/q;
+.field final synthetic kPU:Lcom/tencent/mm/ui/q;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 56
-    iput-object p1, p0, Lcom/tencent/mm/ui/q$1;->kqP:Lcom/tencent/mm/ui/q;
+    .line 64
+    iput-object p1, p0, Lcom/tencent/mm/ui/q$1;->kPU:Lcom/tencent/mm/ui/q;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,29 +36,24 @@
 
 
 # virtual methods
-.method public final cn(I)V
+.method public final a(Lcom/tencent/mm/storage/j$a;)V
     .locals 1
 
     .prologue
-    .line 60
-    const v0, 0x40001
+    .line 87
+    sget-object v0, Lcom/tencent/mm/storage/j$a;->kBU:Lcom/tencent/mm/storage/j$a;
 
     if-ne p1, v0, :cond_1
 
-    .line 61
-    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kqP:Lcom/tencent/mm/ui/q;
+    .line 88
+    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kPU:Lcom/tencent/mm/ui/q;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/q;->a(Lcom/tencent/mm/ui/q;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/q;->e(Lcom/tencent/mm/ui/q;)V
 
-    .line 62
-    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kqP:Lcom/tencent/mm/ui/q;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/q;->b(Lcom/tencent/mm/ui/q;)V
-
-    .line 70
+    .line 93
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kqP:Lcom/tencent/mm/ui/q;
+    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kPU:Lcom/tencent/mm/ui/q;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/q;->f(Lcom/tencent/mm/ui/q;)Lcom/tencent/mm/ui/base/preference/f;
 
@@ -66,53 +61,100 @@
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/base/preference/f;->notifyDataSetChanged()V
 
-    .line 71
+    .line 94
     return-void
 
-    .line 63
+    .line 89
     :cond_1
-    const v0, 0x40003
-
-    if-ne p1, v0, :cond_2
-
-    .line 64
-    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kqP:Lcom/tencent/mm/ui/q;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/q;->c(Lcom/tencent/mm/ui/q;)V
-
-    goto :goto_0
-
-    .line 65
-    :cond_2
-    const v0, 0x4000c
-
-    if-ne p1, v0, :cond_3
-
-    .line 66
-    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kqP:Lcom/tencent/mm/ui/q;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/q;->d(Lcom/tencent/mm/ui/q;)V
-
-    goto :goto_0
-
-    .line 67
-    :cond_3
-    const v0, 0x40008
+    sget-object v0, Lcom/tencent/mm/storage/j$a;->kBV:Lcom/tencent/mm/storage/j$a;
 
     if-ne p1, v0, :cond_0
 
-    .line 68
-    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kqP:Lcom/tencent/mm/ui/q;
+    .line 90
+    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kPU:Lcom/tencent/mm/ui/q;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/q;->e(Lcom/tencent/mm/ui/q;)V
 
     goto :goto_0
 .end method
 
-.method public final co(I)V
+.method public final cN(I)V
+    .locals 1
+
+    .prologue
+    .line 68
+    const v0, 0x40001
+
+    if-ne p1, v0, :cond_1
+
+    .line 69
+    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kPU:Lcom/tencent/mm/ui/q;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/q;->a(Lcom/tencent/mm/ui/q;)V
+
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kPU:Lcom/tencent/mm/ui/q;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/q;->b(Lcom/tencent/mm/ui/q;)V
+
+    .line 78
+    :cond_0
+    :goto_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kPU:Lcom/tencent/mm/ui/q;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/q;->f(Lcom/tencent/mm/ui/q;)Lcom/tencent/mm/ui/base/preference/f;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/tencent/mm/ui/base/preference/f;->notifyDataSetChanged()V
+
+    .line 79
+    return-void
+
+    .line 71
+    :cond_1
+    const v0, 0x40003
+
+    if-ne p1, v0, :cond_2
+
+    .line 72
+    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kPU:Lcom/tencent/mm/ui/q;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/q;->c(Lcom/tencent/mm/ui/q;)V
+
+    goto :goto_0
+
+    .line 73
+    :cond_2
+    const v0, 0x4000c
+
+    if-ne p1, v0, :cond_3
+
+    .line 74
+    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kPU:Lcom/tencent/mm/ui/q;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/q;->d(Lcom/tencent/mm/ui/q;)V
+
+    goto :goto_0
+
+    .line 75
+    :cond_3
+    const v0, 0x40008
+
+    if-ne p1, v0, :cond_0
+
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/ui/q$1;->kPU:Lcom/tencent/mm/ui/q;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/q;->e(Lcom/tencent/mm/ui/q;)V
+
+    goto :goto_0
+.end method
+
+.method public final cO(I)V
     .locals 0
 
     .prologue
-    .line 75
+    .line 83
     return-void
 .end method

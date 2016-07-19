@@ -13,17 +13,26 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/tencent/mm/modelfriend/m$a;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final enum bMA:Lcom/tencent/mm/modelfriend/m$a;
+.field public static final enum bFT:Lcom/tencent/mm/modelfriend/m$a;
 
-.field public static final enum bMB:Lcom/tencent/mm/modelfriend/m$a;
+.field public static final enum bFU:Lcom/tencent/mm/modelfriend/m$a;
 
-.field public static final enum bMC:Lcom/tencent/mm/modelfriend/m$a;
+.field public static final enum bFV:Lcom/tencent/mm/modelfriend/m$a;
 
-.field private static final synthetic bMD:[Lcom/tencent/mm/modelfriend/m$a;
+.field public static final enum bFW:Lcom/tencent/mm/modelfriend/m$a;
 
-.field public static final enum bMz:Lcom/tencent/mm/modelfriend/m$a;
+.field private static final synthetic bFX:[Lcom/tencent/mm/modelfriend/m$a;
 
 
 # direct methods
@@ -46,7 +55,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/modelfriend/m$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/m$a;->bMz:Lcom/tencent/mm/modelfriend/m$a;
+    sput-object v0, Lcom/tencent/mm/modelfriend/m$a;->bFT:Lcom/tencent/mm/modelfriend/m$a;
 
     new-instance v0, Lcom/tencent/mm/modelfriend/m$a;
 
@@ -54,7 +63,7 @@
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/modelfriend/m$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/m$a;->bMA:Lcom/tencent/mm/modelfriend/m$a;
+    sput-object v0, Lcom/tencent/mm/modelfriend/m$a;->bFU:Lcom/tencent/mm/modelfriend/m$a;
 
     new-instance v0, Lcom/tencent/mm/modelfriend/m$a;
 
@@ -62,7 +71,7 @@
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/mm/modelfriend/m$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/m$a;->bMB:Lcom/tencent/mm/modelfriend/m$a;
+    sput-object v0, Lcom/tencent/mm/modelfriend/m$a;->bFV:Lcom/tencent/mm/modelfriend/m$a;
 
     new-instance v0, Lcom/tencent/mm/modelfriend/m$a;
 
@@ -70,36 +79,41 @@
 
     invoke-direct {v0, v1, v5}, Lcom/tencent/mm/modelfriend/m$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/m$a;->bMC:Lcom/tencent/mm/modelfriend/m$a;
+    sput-object v0, Lcom/tencent/mm/modelfriend/m$a;->bFW:Lcom/tencent/mm/modelfriend/m$a;
 
     .line 36
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/tencent/mm/modelfriend/m$a;
 
-    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bMz:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bFT:Lcom/tencent/mm/modelfriend/m$a;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bMA:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bFU:Lcom/tencent/mm/modelfriend/m$a;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bMB:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bFV:Lcom/tencent/mm/modelfriend/m$a;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bMC:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bFW:Lcom/tencent/mm/modelfriend/m$a;
 
     aput-object v1, v0, v5
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/m$a;->bMD:[Lcom/tencent/mm/modelfriend/m$a;
+    sput-object v0, Lcom/tencent/mm/modelfriend/m$a;->bFX:[Lcom/tencent/mm/modelfriend/m$a;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
     .line 36
@@ -129,7 +143,7 @@
 
     .prologue
     .line 36
-    sget-object v0, Lcom/tencent/mm/modelfriend/m$a;->bMD:[Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v0, Lcom/tencent/mm/modelfriend/m$a;->bFX:[Lcom/tencent/mm/modelfriend/m$a;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/modelfriend/m$a;->clone()Ljava/lang/Object;
 

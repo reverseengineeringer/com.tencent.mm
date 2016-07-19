@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <PreferenceSmallCategory />
+    <com.tencent.mm.pluginsdk.ui.applet.ContactListExpandPreference android:key="roominfo_contact_anchor" />
+    <PreferenceSmallCategory />
+    <com.tencent.mm.pluginsdk.ui.preference.SignaturePreference android:layout="@layout/yk" android:title="@string/c48" android:key="room_name" />
+    <Preference android:layout="@layout/yk" android:title="@string/c4l" android:key="room_qr_code" android:widgetLayout="@layout/zx" />
+    <Preference android:layout="@layout/yk" android:title="@string/c5s" android:key="room_upgrade_entry" />
+    <Preference android:layout="@layout/yk" android:title="@string/c2q" android:key="room_chatting_images" />
+    <PreferenceSmallCategory />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/c4k" android:key="room_placed_to_the_top" android:widgetLayout="@layout/yq" />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/c45" android:key="room_notify_new_msg" />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/c56" android:key="room_save_to_contact" android:widgetLayout="@layout/yq" />
+    <PreferenceSmallCategory />
+    <com.tencent.mm.pluginsdk.ui.preference.SignaturePreference android:layout="@layout/yk" android:title="@string/c47" android:key="room_nickname" />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/c46" android:key="room_msg_show_username" />
+    <PreferenceSmallCategory />
+    <Preference android:layout="@layout/yk" android:title="@string/c5h" android:key="room_set_chatting_background" />
+    <Preference android:layout="@layout/yk" android:title="@string/c5c" android:key="room_search_chatting_content" />
+    <PreferenceSmallCategory />
+    <Preference android:layout="@layout/yk" android:title="@string/c2r" android:key="room_clear_chatting_history" />
+    <PreferenceSmallCategory />
+    <Preference android:layout="@layout/yk" android:title="@string/c4u" android:key="room_report_it" />
+    <PreferenceSmallCategory />
+    <Preference android:layout="@layout/uy" android:title="@string/c2v" android:key="room_del_quit" />
+    <PreferenceCategory />
+</PreferenceScreen>

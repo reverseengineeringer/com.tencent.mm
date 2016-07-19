@@ -18,7 +18,7 @@ public class SQLiteQueryBuilder
   private static final Pattern sLimitPattern = Pattern.compile("\\s*\\d+\\s*(,\\s*\\d+\\s*)?");
   private boolean mDistinct = false;
   private SQLiteDatabase.CursorFactory mFactory = null;
-  private Map mProjectionMap = null;
+  private Map<String, String> mProjectionMap = null;
   private boolean mStrict;
   private String mTables = "";
   private StringBuilder mWhereClause = null;
@@ -36,13 +36,8 @@ public class SQLiteQueryBuilder
   {
     int j = paramArrayOfString.length;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j)
-      {
-        paramStringBuilder.append(' ');
-        return;
-      }
       String str = paramArrayOfString[i];
       if (str != null)
       {
@@ -53,6 +48,7 @@ public class SQLiteQueryBuilder
       }
       i += 1;
     }
+    paramStringBuilder.append(' ');
   }
   
   public static String buildQueryString(boolean paramBoolean, String paramString1, String[] paramArrayOfString, String paramString2, String paramString3, String paramString4, String paramString5, String paramString6)
@@ -98,28 +94,27 @@ public class SQLiteQueryBuilder
         localObject1 = new String[paramArrayOfString.length];
         int j = paramArrayOfString.length;
         i = 0;
-        if (i < j) {}
-      }
-      else
-      {
-        return (String[])localObject1;
-      }
-      localObject2 = paramArrayOfString[i];
-      String str = (String)mProjectionMap.get(localObject2);
-      if (str != null) {
-        localObject1[i] = str;
-      }
-      for (;;)
-      {
-        i += 1;
-        break;
-        if ((mStrict) || ((!((String)localObject2).contains(" AS ")) && (!((String)localObject2).contains(" as ")))) {
-          break label114;
+        if (i < j)
+        {
+          localObject2 = paramArrayOfString[i];
+          String str = (String)mProjectionMap.get(localObject2);
+          if (str != null) {
+            localObject1[i] = str;
+          }
+          for (;;)
+          {
+            i += 1;
+            break;
+            if ((mStrict) || ((!((String)localObject2).contains(" AS ")) && (!((String)localObject2).contains(" as ")))) {
+              break label111;
+            }
+            localObject1[i] = localObject2;
+          }
+          label111:
+          throw new IllegalArgumentException("Invalid column " + paramArrayOfString[i]);
         }
-        localObject1[i] = localObject2;
       }
-      label114:
-      throw new IllegalArgumentException("Invalid column " + paramArrayOfString[i]);
+      return (String[])localObject1;
     }
     if (mProjectionMap != null)
     {
@@ -206,57 +201,51 @@ public class SQLiteQueryBuilder
   {
     StringBuilder localStringBuilder = new StringBuilder(128);
     int j = paramArrayOfString.length;
-    String str;
-    int i;
-    if (mDistinct)
+    if (mDistinct) {}
+    for (String str = " UNION ";; str = " UNION ALL ")
     {
-      str = " UNION ";
-      i = 0;
-    }
-    for (;;)
-    {
-      if (i >= j)
+      int i = 0;
+      while (i < j)
       {
-        appendClause(localStringBuilder, " ORDER BY ", paramString1);
-        appendClause(localStringBuilder, " LIMIT ", paramString2);
-        return localStringBuilder.toString();
-        str = " UNION ALL ";
-        break;
+        if (i > 0) {
+          localStringBuilder.append(str);
+        }
+        localStringBuilder.append(paramArrayOfString[i]);
+        i += 1;
       }
-      if (i > 0) {
-        localStringBuilder.append(str);
-      }
-      localStringBuilder.append(paramArrayOfString[i]);
-      i += 1;
     }
+    appendClause(localStringBuilder, " ORDER BY ", paramString1);
+    appendClause(localStringBuilder, " LIMIT ", paramString2);
+    return localStringBuilder.toString();
   }
   
-  public String buildUnionSubQuery(String paramString1, String[] paramArrayOfString, Set paramSet, int paramInt, String paramString2, String paramString3, String paramString4, String paramString5)
+  public String buildUnionSubQuery(String paramString1, String[] paramArrayOfString, Set<String> paramSet, int paramInt, String paramString2, String paramString3, String paramString4, String paramString5)
   {
     int j = paramArrayOfString.length;
     String[] arrayOfString = new String[j];
     int i = 0;
-    if (i >= j) {
-      return buildQuery(arrayOfString, paramString3, paramString4, paramString5, null, null);
-    }
-    String str = paramArrayOfString[i];
-    if (str.equals(paramString1)) {
-      arrayOfString[i] = ("'" + paramString2 + "' AS " + paramString1);
-    }
-    for (;;)
+    if (i < j)
     {
-      i += 1;
-      break;
-      if ((i <= paramInt) || (paramSet.contains(str))) {
-        arrayOfString[i] = str;
-      } else {
-        arrayOfString[i] = ("NULL AS " + str);
+      String str = paramArrayOfString[i];
+      if (str.equals(paramString1)) {
+        arrayOfString[i] = ("'" + paramString2 + "' AS " + paramString1);
+      }
+      for (;;)
+      {
+        i += 1;
+        break;
+        if ((i <= paramInt) || (paramSet.contains(str))) {
+          arrayOfString[i] = str;
+        } else {
+          arrayOfString[i] = ("NULL AS " + str);
+        }
       }
     }
+    return buildQuery(arrayOfString, paramString3, paramString4, paramString5, null, null);
   }
   
   @Deprecated
-  public String buildUnionSubQuery(String paramString1, String[] paramArrayOfString1, Set paramSet, int paramInt, String paramString2, String paramString3, String[] paramArrayOfString2, String paramString4, String paramString5)
+  public String buildUnionSubQuery(String paramString1, String[] paramArrayOfString1, Set<String> paramSet, int paramInt, String paramString2, String paramString3, String[] paramArrayOfString2, String paramString4, String paramString5)
   {
     return buildUnionSubQuery(paramString1, paramArrayOfString1, paramSet, paramInt, paramString2, paramString3, paramString4, paramString5);
   }
@@ -299,7 +288,7 @@ public class SQLiteQueryBuilder
     mDistinct = paramBoolean;
   }
   
-  public void setProjectionMap(Map paramMap)
+  public void setProjectionMap(Map<String, String> paramMap)
   {
     mProjectionMap = paramMap;
   }

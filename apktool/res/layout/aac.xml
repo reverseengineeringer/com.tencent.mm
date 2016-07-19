@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.ui.KeyboardLinearLayout android:orientation="vertical" android:background="@color/ak" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:orientation="vertical" android:background="@color/ak" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ImageView android:id="@id/cay" android:layout_width="fill_parent" android:layout_height="375.0dip" android:src="@drawable/a2d" android:maxHeight="375.0dip" android:layout_centerVertical="true" />
+        <ImageView android:gravity="center" android:id="@id/cbg" android:layout_width="85.0dip" android:layout_height="85.0dip" android:layout_marginTop="200.0dip" android:src="@drawable/a2k" android:maxHeight="85.0dip" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/ow" android:id="@id/cbh" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginTop="295.0dip" android:text="照片只有一次机会查看" android:includeFontPadding="false" android:layout_alignBottom="@id/b7v" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="24.0dip" android:textColor="@color/ow" android:id="@id/cbi" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginTop="190.0dip" android:text="红包及照片已被抢完" android:includeFontPadding="false" android:layout_alignBottom="@id/b7v" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="16.0dip" android:textColor="#ff808080" android:id="@id/cbj" android:paddingBottom="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginTop="240.0dip" android:text="你可以发一个拜年红包，获得查看照片的权利" android:includeFontPadding="false" android:layout_alignBottom="@id/b7v" android:layout_centerHorizontal="true" />
+        <LinearLayout android:gravity="center" android:background="@color/nl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="160.0dip" android:layout_alignParentBottom="true">
+            <Button android:textSize="@dimen/n0" android:textColor="@color/ow" android:id="@id/cbk" android:background="@drawable/i6" android:layout_width="@dimen/nb" android:layout_height="@dimen/n_" android:text="看一下" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.tencent.mm.ui.KeyboardLinearLayout>

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lsw:Lcom/tencent/mm/ui/friend/h;
+.field final synthetic lTa:Lcom/tencent/mm/ui/friend/h;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 126
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/h$3;->lsw:Lcom/tencent/mm/ui/friend/h;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/h$3;->lTa:Lcom/tencent/mm/ui/friend/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
     .prologue
     .line 130
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h$3;->lsw:Lcom/tencent/mm/ui/friend/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h$3;->lTa:Lcom/tencent/mm/ui/friend/h;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/friend/h;->lsv:Lcom/tencent/mm/ui/friend/h$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/friend/h;->lSZ:Lcom/tencent/mm/ui/friend/h$a;
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/friend/h$a;->ic(Z)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/friend/h$a;->iG(Z)V
 
     .line 131
     return-void

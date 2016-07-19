@@ -30,7 +30,7 @@
     const/4 v4, 0x1
 
     .line 317
-    const-string/jumbo v0, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v0, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v1, "share video path %s, thumb path %s"
 
@@ -44,17 +44,17 @@
 
     aput-object p1, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 318
-    invoke-static {p1}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/a/e;->aB(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 320
-    invoke-static {p2}, Lcom/tencent/mm/plugin/sight/base/c;->tV(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {p2}, Lcom/tencent/mm/plugin/sight/base/c;->vb(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -98,26 +98,40 @@
     invoke-virtual {v0, v1, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 337
+    const-string/jumbo v1, "KSnsPostManu"
+
+    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 338
+    const-string/jumbo v1, "KTouchCameraTime"
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Go()J
+
+    move-result-wide v2
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    .line 339
     const-string/jumbo v1, "sns"
 
     const-string/jumbo v2, ".ui.SightUploadUI"
 
     const/16 v3, 0x1761
 
-    invoke-static {p0, v1, v2, v0, v3}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {p0, v1, v2, v0, v3}, Lcom/tencent/mm/av/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
 
-    .line 339
+    .line 341
     return-void
 
     .line 326
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v0, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v1, "save bitmap to image error"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -139,7 +153,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/tencent/mm/plugin/sight/encode/a/g$1;-><init>(Lcom/tencent/mm/plugin/sight/encode/a/g$a;I)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     goto :goto_0
 .end method
@@ -154,11 +168,11 @@
     if-nez p0, :cond_0
 
     .line 44
-    const-string/jumbo v0, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v0, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v1, "save thumb fail, thumb yuv is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 63
     :goto_0
@@ -257,18 +271,18 @@
     const/4 v7, -0x1
 
     .line 132
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 133
-    const-string/jumbo v0, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v0, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v1, "remux and send sight error: in path is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 134
     invoke-static {p5, v7}, Lcom/tencent/mm/plugin/sight/encode/a/g;->a(Lcom/tencent/mm/plugin/sight/encode/a/g$a;I)V
@@ -280,18 +294,18 @@
 
     .line 137
     :cond_1
-    invoke-static {p4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 138
-    const-string/jumbo v0, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v0, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v1, "remux and send sight error: toUser null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 139
     invoke-static {p5, v7}, Lcom/tencent/mm/plugin/sight/encode/a/g;->a(Lcom/tencent/mm/plugin/sight/encode/a/g$a;I)V
@@ -300,13 +314,13 @@
 
     .line 142
     :cond_2
-    invoke-static {p1}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/a/e;->aB(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    invoke-static {p1}, Lcom/tencent/mm/a/e;->aw(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/tencent/mm/a/e;->aA(Ljava/lang/String;)I
 
     move-result v0
 
@@ -314,39 +328,39 @@
 
     .line 143
     :cond_3
-    const-string/jumbo v0, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v0, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v1, "file not exist or file size error"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 144
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0b0c74
+    const v2, 0x7f081200
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->aZ(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
 
     goto :goto_0
 
     .line 148
     :cond_4
-    invoke-static {p1}, Lcom/tencent/mm/a/g;->aC(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/a/g;->aH(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 149
-    const-string/jumbo v1, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v1, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v2, "do share to friends, check md5 target[%s] current[%s]"
 
@@ -362,12 +376,12 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 150
     const-string/jumbo v1, ""
 
-    invoke-static {p3, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -378,11 +392,11 @@
     if-nez v0, :cond_5
 
     .line 151
-    const-string/jumbo v0, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v0, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v1, "error md5, return"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 152
     invoke-static {p5, v7}, Lcom/tencent/mm/plugin/sight/encode/a/g;->a(Lcom/tencent/mm/plugin/sight/encode/a/g$a;I)V
@@ -391,7 +405,7 @@
 
     .line 156
     :cond_5
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tw()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v6
 
@@ -409,7 +423,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/plugin/sight/encode/a/g$3;-><init>(Lcom/tencent/mm/plugin/sight/encode/a/g;Ljava/lang/String;Lcom/tencent/mm/plugin/sight/encode/a/g$a;Ljava/lang/String;I)V
 
-    invoke-virtual {v6, v0}, Lcom/tencent/mm/sdk/platformtools/ab;->r(Ljava/lang/Runnable;)I
+    invoke-virtual {v6, v0}, Lcom/tencent/mm/sdk/platformtools/ad;->t(Ljava/lang/Runnable;)I
 
     move-result v0
 
@@ -417,11 +431,11 @@
     if-gez v0, :cond_0
 
     .line 213
-    const-string/jumbo v0, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v0, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v1, "post short video encoder error"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 214
     invoke-static {p5, v7}, Lcom/tencent/mm/plugin/sight/encode/a/g;->a(Lcom/tencent/mm/plugin/sight/encode/a/g$a;I)V
@@ -431,23 +445,37 @@
 
 .method public final a(Ljava/lang/String;ILjava/lang/String;Ljava/util/List;Lcom/tencent/mm/plugin/sight/encode/a/g$a;)V
     .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Lcom/tencent/mm/plugin/sight/encode/a/g$a;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
     const/4 v8, -0x1
 
     .line 220
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 221
-    const-string/jumbo v0, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v0, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v1, "remux and send sight error: in path is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 222
     invoke-static {p5, v8}, Lcom/tencent/mm/plugin/sight/encode/a/g;->a(Lcom/tencent/mm/plugin/sight/encode/a/g$a;I)V
@@ -469,11 +497,11 @@
 
     .line 226
     :cond_2
-    const-string/jumbo v0, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v0, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v1, "remux and send sight error: toUser list empty"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 227
     invoke-static {p5, v8}, Lcom/tencent/mm/plugin/sight/encode/a/g;->a(Lcom/tencent/mm/plugin/sight/encode/a/g$a;I)V
@@ -482,13 +510,13 @@
 
     .line 230
     :cond_3
-    invoke-static {p1}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/a/e;->aB(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    invoke-static {p1}, Lcom/tencent/mm/a/e;->aw(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/tencent/mm/a/e;->aA(Ljava/lang/String;)I
 
     move-result v0
 
@@ -496,39 +524,39 @@
 
     .line 231
     :cond_4
-    const-string/jumbo v0, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v0, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v1, "file not exist or file size error"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 232
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0b0c74
+    const v2, 0x7f081200
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->aZ(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
 
     goto :goto_0
 
     .line 236
     :cond_5
-    invoke-static {p1}, Lcom/tencent/mm/a/g;->aC(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/a/g;->aH(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 237
-    const-string/jumbo v1, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v1, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v2, "do share to friends, check md5 target[%s] current[%s]"
 
@@ -544,12 +572,12 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 238
     const-string/jumbo v1, ""
 
-    invoke-static {p3, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -560,11 +588,11 @@
     if-nez v0, :cond_6
 
     .line 239
-    const-string/jumbo v0, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v0, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v1, "error md5, return"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 240
     invoke-static {p5, v8}, Lcom/tencent/mm/plugin/sight/encode/a/g;->a(Lcom/tencent/mm/plugin/sight/encode/a/g$a;I)V
@@ -573,7 +601,7 @@
 
     .line 244
     :cond_6
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tw()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v7
 
@@ -593,7 +621,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/plugin/sight/encode/a/g$4;-><init>(Lcom/tencent/mm/plugin/sight/encode/a/g;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lcom/tencent/mm/plugin/sight/encode/a/g$a;I)V
 
-    invoke-virtual {v7, v0}, Lcom/tencent/mm/sdk/platformtools/ab;->r(Ljava/lang/Runnable;)I
+    invoke-virtual {v7, v0}, Lcom/tencent/mm/sdk/platformtools/ad;->t(Ljava/lang/Runnable;)I
 
     move-result v0
 
@@ -601,11 +629,11 @@
     if-gez v0, :cond_0
 
     .line 309
-    const-string/jumbo v0, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v0, "MicroMsg.SightRecorderHelper"
 
     const-string/jumbo v1, "post short video encoder error"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 310
     invoke-static {p5, v8}, Lcom/tencent/mm/plugin/sight/encode/a/g;->a(Lcom/tencent/mm/plugin/sight/encode/a/g$a;I)V

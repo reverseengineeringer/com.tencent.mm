@@ -6,7 +6,7 @@ import java.io.InputStream;
 public class SFSInputStream
   extends InputStream
 {
-  private long cam = 0L;
+  private long bTV = 0L;
   private long mNativePtr;
   
   public SFSInputStream(long paramLong)
@@ -62,7 +62,7 @@ public class SFSInputStream
     if (mNativePtr == 0L) {
       return;
     }
-    cam = nativeSeek(mNativePtr, 0L, 1);
+    bTV = nativeSeek(mNativePtr, 0L, 1);
   }
   
   public boolean markSupported()
@@ -110,10 +110,10 @@ public class SFSInputStream
     if (mNativePtr == 0L) {
       throw new IOException("Stream already closed.");
     }
-    if (cam < 0L) {
+    if (bTV < 0L) {
       throw new IOException("Previous call to mark() failed.");
     }
-    if (nativeSeek(mNativePtr, cam, 0) != cam) {
+    if (nativeSeek(mNativePtr, bTV, 0) != bTV) {
       throw new IOException("Seeking to previous position failed.");
     }
   }

@@ -13,7 +13,12 @@ final class m$a$a
     mRemote = paramIBinder;
   }
   
-  public final void aK(int paramInt)
+  public final IBinder asBinder()
+  {
+    return mRemote;
+  }
+  
+  public final void bc(int paramInt)
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -30,11 +35,6 @@ final class m$a$a
       localParcel2.recycle();
       localParcel1.recycle();
     }
-  }
-  
-  public final IBinder asBinder()
-  {
-    return mRemote;
   }
 }
 
